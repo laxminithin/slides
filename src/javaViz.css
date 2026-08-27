@@ -1,0 +1,485 @@
+/* ============================================================================
+   JAVA LIVING-VISUAL KIT — styles + motion   (V2.2 "Living Software")
+   Pairs with src/components/JavaLivingViz.jsx. Scoped to .java-deck.
+   Motion = GPU-friendly transform/opacity only. Structure always painted.
+   Reduced-motion + revisit-restart handled at the bottom.
+   ========================================================================== */
+
+/* ---- signature "living" scene: copy + execution stage --------------------- */
+.java-live-scene {
+  height: 100%;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: clamp(60px, 7vh, 86px) clamp(44px, 4.4vw, 76px) clamp(30px, 3.4vh, 46px);
+  display: grid;
+  grid-template-columns: minmax(0, .74fr) minmax(0, 1.26fr);   /* stage ~63% */
+  align-items: center;
+  gap: clamp(26px, 3.4vw, 56px);
+}
+
+.java-live-copy { min-width: 0; }
+
+.java-live-copy .java-kicker { color: var(--java-red-ink); }
+
+.java-live-copy h2 {
+  margin: 0;
+  color: var(--java-ink);
+  font-family: var(--display);
+  font-size: clamp(1.95rem, 3.2vw, 3.9rem);
+  line-height: .99;
+  letter-spacing: -.015em;
+}
+
+.java-live-copy > p {
+  margin: 16px 0 0;
+  color: var(--java-body);
+  font-size: clamp(1rem, 1.3vw, 1.34rem);
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 34ch;
+}
+
+.java-live-legend { display: grid; gap: 10px; margin-top: 24px; }
+.java-live-legend b {
+  display: flex;
+  align-items: baseline;
+  gap: 11px;
+  color: var(--java-ink);
+  font-size: clamp(.86rem, 1vw, 1.08rem);
+  font-weight: 700;
+}
+.java-live-legend b::before {
+  content: "";
+  flex: 0 0 auto;
+  align-self: center;
+  width: 11px; height: 11px;
+  border-radius: 4px;
+  background: var(--java-red);
+}
+.java-live-legend b:nth-child(2)::before { background: #2f6fd6; }
+.java-live-legend b:nth-child(3)::before { background: var(--java-teal); }
+.java-live-legend b small { color: var(--java-muted); font-weight: 500; }
+
+/* compact code window paired with a living visual */
+.java-live-code {
+  margin-top: 20px;
+  overflow: hidden;
+  background: var(--java-code-bg);
+  border: 1px solid rgba(22, 35, 60, .5);
+  border-radius: 14px;
+  box-shadow: 0 24px 54px rgba(14, 22, 38, .28);
+}
+.java-live-code header {
+  display: flex; justify-content: space-between; gap: 10px;
+  padding: 10px 14px;
+  color: #aeb9cc; background: #0a1120;
+  border-bottom: 1px solid rgba(148, 163, 184, .16);
+  font-size: clamp(.66rem, .8vw, .82rem); font-weight: 700;
+}
+.java-live-code header b { color: var(--java-red); }
+.java-live-code pre {
+  margin: 0; padding: 16px 18px;
+  color: #dbe6f7;
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: clamp(.82rem, 1vw, 1.08rem); line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* the stage that frames the SVG — a subtle inset canvas, fills its cell */
+.java-live-stage {
+  position: relative;
+  align-self: stretch;
+  min-height: min(64vh, 560px);
+  border-radius: 20px;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(255, 255, 255, .8), transparent 60%),
+    linear-gradient(180deg, #fffdf9, #f6f1e7);
+  border: 1px solid rgba(22, 35, 60, .08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9), var(--java-shadow-md);
+  overflow: hidden;
+  display: grid;
+}
+
+.jlv-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* ---- shared SVG primitives ------------------------------------------------ */
+.jlv-grid { fill: none; }   /* the visible blueprint grid is the ::before below */
+
+/* blueprint grid drawn with a repeating pattern via stroke on a rect group */
+.java-live-stage::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(22, 35, 60, .04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 35, 60, .04) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at 50% 42%, #000 0%, transparent 82%);
+}
+
+.jlv-shadow { fill: rgba(22, 35, 60, .12); }
+
+.jlv-plane-label {
+  fill: var(--java-muted);
+  font-family: var(--display);
+  font-size: 14px; font-weight: 800; letter-spacing: .12em;
+}
+.jlv-plane-label.dark { fill: var(--java-ink-2); }
+
+/* extruded glass slabs */
+.jlv-slab-face { fill: #ffffff; stroke: rgba(22, 35, 60, .12); stroke-width: 1.2; }
+.jlv-slab-top  { fill: rgba(255, 255, 255, .96); stroke: rgba(22, 35, 60, .1); stroke-width: 1; }
+.jlv-slab-side { fill: rgba(22, 35, 60, .06); stroke: rgba(22, 35, 60, .08); stroke-width: 1; }
+
+.jlv-slab-blueprint .jlv-slab-face { fill: url(#jlvBlueGrad); stroke: rgba(47, 111, 214, .34); }
+.jlv-slab-blueprint .jlv-slab-top  { fill: #e6eefb; stroke: rgba(47, 111, 214, .28); }
+.jlv-slab-blueprint .jlv-slab-side { fill: rgba(47, 111, 214, .12); }
+
+.jlv-slab-object .jlv-slab-face { fill: url(#jlvHeapObjGrad); stroke: rgba(194, 59, 48, .34); }
+.jlv-slab-object .jlv-slab-top  { fill: #fdece9; stroke: rgba(194, 59, 48, .26); }
+.jlv-slab-object .jlv-slab-side { fill: rgba(194, 59, 48, .12); }
+
+.jlv-slab-frame .jlv-slab-face { fill: #fbfcfe; stroke: rgba(22, 35, 60, .16); }
+.jlv-slab-ref .jlv-slab-face { fill: #16233d; stroke: rgba(255, 255, 255, .12); }
+.jlv-slab-ref .jlv-slab-top  { fill: #223350; }
+.jlv-slab-ref .jlv-slab-side { fill: #0e1830; }
+.jlv-slab-active .jlv-slab-face { fill: #eef8f6; stroke: rgba(15, 118, 110, .4); }
+.jlv-slab-active .jlv-slab-top  { fill: #dff1ee; }
+.jlv-slab-active .jlv-slab-side { fill: rgba(15, 118, 110, .12); }
+
+.jlv-slab-source .jlv-slab-face  { fill: #eef4ff; stroke: rgba(47, 111, 214, .3); }
+.jlv-slab-amber  .jlv-slab-face  { fill: #fdf3e2; stroke: rgba(189, 122, 26, .34); }
+.jlv-slab-teal   .jlv-slab-face  { fill: #e9f6f3; stroke: rgba(15, 118, 110, .34); }
+.jlv-slab-navy   .jlv-slab-face  { fill: #ffffff; stroke: rgba(22, 35, 60, .16); }
+.jlv-slab-core   .jlv-slab-face  { fill: #fff3f2; stroke: rgba(194, 59, 48, .5); stroke-width: 1.6; }
+.jlv-slab-core   .jlv-slab-top   { fill: #ffe4e1; }
+.jlv-slab-core   .jlv-slab-side  { fill: rgba(194, 59, 48, .16); }
+
+.jlv-slab-title { fill: var(--java-ink); font-family: var(--display); font-size: 17px; font-weight: 800; }
+.jlv-slab-title.dark { fill: var(--java-ink); }
+.jlv-rule { stroke: rgba(22, 35, 60, .16); stroke-width: 1.2; }
+.jlv-rule.dash { stroke-dasharray: 3 4; stroke: rgba(22, 35, 60, .22); }
+
+.jlv-field { fill: var(--java-ink-2); font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 15px; }
+.jlv-field.blueprint { fill: #2f5fb0; }
+.jlv-field.mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+.jlv-field.val { fill: var(--java-ink); font-weight: 600; }
+.jlv-field.val.small { font-size: 12px; fill: var(--java-teal); font-weight: 700; }
+.jlv-field.dark { fill: var(--java-ink); }
+.jlv-id-chip { fill: var(--java-red-ink); font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight: 700; }
+
+.jlv-cap { fill: var(--java-muted); font-family: var(--display); font-size: 12px; font-weight: 700; letter-spacing: .02em; }
+.jlv-cap.blueprint { fill: #5a7fc0; }
+.jlv-cap.light { fill: rgba(255, 255, 255, .74); }
+.jlv-note { fill: var(--java-muted); font-family: var(--display); font-size: 16px; font-weight: 600; }
+.jlv-note.strong { fill: var(--java-red-ink); font-weight: 800; }
+
+/* chips */
+.jlv-chip text { fill: var(--java-ink-2); font-family: var(--display); font-size: 12px; font-weight: 800; letter-spacing: .02em; }
+.jlv-chip-ghost rect { fill: #fff; stroke: rgba(22, 35, 60, .16); }
+.jlv-chip-blueprint rect { fill: rgba(47, 111, 214, .12); stroke: rgba(47, 111, 214, .32); }
+.jlv-chip-blueprint text { fill: #245bbf; }
+.jlv-chip-ref rect { fill: var(--java-navy); stroke: none; }
+.jlv-chip-ref text { fill: #fff; }
+
+/* method-invoke sub-panel inside the object */
+.jlv-method-invoke rect { fill: rgba(15, 118, 110, .08); stroke: rgba(15, 118, 110, .3); stroke-width: 1; }
+
+/* heap / plane geometry */
+.jlv-heap-face { fill: rgba(194, 59, 48, .045); stroke: rgba(194, 59, 48, .2); stroke-width: 1.2; stroke-dasharray: 6 6; }
+.jlv-stackheap .jlv-heap-face { fill: rgba(22, 35, 60, .035); stroke: rgba(22, 35, 60, .18); }
+
+.jlv-frame-name { fill: var(--java-ink); font-family: var(--display); font-size: 15px; font-weight: 800; }
+.jlv-ref-dot { fill: var(--java-navy); }
+.jlv-grow-arrow { stroke: rgba(22, 35, 60, .28); stroke-width: 1.4; fill: none; marker-end: url(#jlvArrowHead); stroke-dasharray: 4 5; }
+.jlv-grow-label { fill: var(--java-muted); font-size: 11px; font-weight: 700; letter-spacing: .04em; }
+
+/* beams / rails / arrows / reference lines */
+.jlv-beam { stroke: rgba(47, 111, 214, .5); stroke-width: 2; fill: none; stroke-dasharray: 5 5; }
+.jlv-beam-label { fill: #245bbf; font-family: "JetBrains Mono", monospace; font-size: 13px; font-weight: 700; }
+.jlv-rail { stroke: rgba(22, 35, 60, .18); stroke-width: 2; }
+.jlv-arrow { stroke: rgba(22, 35, 60, .5); stroke-width: 2; fill: none; }
+.jlv-ref-line { stroke: var(--java-red); stroke-width: 2.2; fill: none; marker-end: url(#jlvRefHead); }
+
+.jlv-stage-k { fill: var(--java-ink); font-family: var(--display); font-size: 16px; font-weight: 800; }
+.jlv-stage-k.big { fill: var(--java-red-ink); font-size: 22px; }
+.jlv-stage-s { fill: var(--java-muted); font-size: 11px; font-weight: 700; letter-spacing: .02em; }
+
+/* packets */
+.jlv-packet-ctor rect { fill: #2f6fd6; }
+.jlv-packet-ctor text { fill: #fff; font-family: var(--display); font-size: 11px; font-weight: 800; }
+.jlv-byte rect { fill: var(--java-navy); }
+.jlv-byte text { fill: #d7e2f4; font-family: "JetBrains Mono", monospace; font-size: 10px; font-weight: 700; }
+
+/* ==========================================================================
+   MOTION  — cinematic entry cascade + restrained continuous micro-motion
+   ========================================================================== */
+
+/* one-shot reveal cascade (opacity only where an element is positioned) */
+.jlv-reveal { opacity: 0; animation: jlvFade .6s var(--java-ease, ease) both; }
+.jlv-reveal.r1 { animation-delay: .10s; }
+.jlv-reveal.r2 { animation-delay: .45s; }
+.jlv-reveal.r3 { animation-delay: .70s; }
+.jlv-reveal.r4 { animation-delay: 1.05s; }
+.jlv-reveal.r5 { animation-delay: 1.30s; }
+.jlv-reveal.r6 { animation-delay: 1.65s; }
+.jlv-reveal.r7 { animation-delay: 2.00s; }
+.jlv-reveal.r-heap { animation-delay: .55s; }
+
+/* materialize: scale about the element's own centre (fill-box avoids the
+   positioning-transform collision) */
+.jlv-pop { transform-box: fill-box; transform-origin: center; animation: jlvPop .7s var(--java-ease, ease) both; animation-delay: 1.05s; }
+.jlv-stackheap .jlv-pop { animation-delay: .55s; }
+
+/* constructor packet flies blueprint -> heap, then fades */
+.jlv-packet-ctor { transform: translate(292px, 250px); opacity: 0; animation: jlvCtorFly 1.1s var(--java-ease, ease) .70s both; }
+
+/* reference line draws in, then pulses gently */
+.jlv-ref-line {
+  stroke-dasharray: 260; stroke-dashoffset: 260;
+  animation: jlvDraw .7s var(--java-ease, ease) 1.65s both, jlvRefPulse 3.2s ease-in-out 2.6s infinite;
+}
+.jlv-stackheap .jlv-ref-line { animation: jlvDraw .7s var(--java-ease, ease) both; animation-delay: calc(1s + var(--i) * .3s); }
+
+/* JVM stages rise in sequence */
+.jlv-jvm .jlv-stage { opacity: 0; animation: jlvStageIn .55s var(--java-ease, ease) both; animation-delay: calc(.15s + var(--i) * .12s); }
+.jlv-jvm-core .jlv-slab-face { animation: jlvHeart 2.6s ease-in-out 1.6s infinite; transform-box: fill-box; transform-origin: center; }
+
+/* bytecode stream: packets travel the rail after the pipeline is built */
+.jlv-byte { offset-path: none; opacity: 0; transform: translate(126px, 204px); animation: jlvByteFlow 7s linear infinite; animation-delay: var(--d); }
+
+/* stack frames push up */
+.jlv-stackheap .jlv-frame { animation: jlvFrameIn .55s var(--java-ease, ease) both; animation-delay: calc(.35s + var(--i) * .35s); }
+
+@keyframes jlvFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes jlvPop {
+  0% { opacity: 0; transform: scale(.6); }
+  60% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes jlvStageIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes jlvFrameIn { from { opacity: 0; transform: translateY(18px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes jlvDraw { from { stroke-dashoffset: 260; } to { stroke-dashoffset: 0; } }
+@keyframes jlvRefPulse { 0%, 100% { stroke-opacity: 1; } 50% { stroke-opacity: .5; } }
+@keyframes jlvHeart {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+@keyframes jlvCtorFly {
+  0% { transform: translate(292px, 250px); opacity: 0; }
+  12% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translate(452px, 250px); opacity: 0; }
+}
+@keyframes jlvByteFlow {
+  0% { transform: translate(126px, 204px); opacity: 0; }
+  6% { opacity: 1; }
+  94% { opacity: 1; }
+  100% { transform: translate(842px, 204px); opacity: 0; }
+}
+
+/* ==========================================================================
+   INHERITANCE (structure + reuse + override)
+   ========================================================================== */
+.jlv-isa { stroke: rgba(90, 127, 192, .6); stroke-width: 1.8; fill: none; }
+.jlv-isa-label {
+  fill: #5a7fc0; font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight: 700;
+  paint-order: stroke; stroke: #fdfaf3; stroke-width: 4px;
+}
+.jlv-inherit-packet { fill: #5a7fc0; animation: jlvInheritFlow 2.6s ease-in-out infinite; }
+
+.jlv-mrow-bg { fill: #f5f7fb; stroke: rgba(22, 35, 60, .1); stroke-width: 1; }
+.jlv-mrow-bar { fill: #9aa7bd; }
+.jlv-mrow-text { fill: var(--java-ink-2); font-family: "JetBrains Mono", monospace; font-size: 14px; font-weight: 600; }
+.jlv-mrow-tag { fill: var(--java-muted); font-family: var(--display); font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+
+.jlv-mrow-inherited .jlv-mrow-bg { fill: #f4f6fa; stroke-dasharray: 4 4; }
+.jlv-mrow-inherited .jlv-mrow-text { fill: #8792a6; }
+
+.jlv-mrow-override .jlv-mrow-bg { fill: #fdeeeb; stroke: rgba(194, 59, 48, .28); }
+.jlv-mrow-override .jlv-mrow-bar { fill: var(--java-red); }
+.jlv-mrow-override .jlv-mrow-text { fill: var(--java-red-ink); }
+.jlv-mrow-override .jlv-mrow-tag { fill: var(--java-red-ink); }
+
+.jlv-mrow-added .jlv-mrow-bg { fill: #e9f6f3; stroke: rgba(15, 118, 110, .28); }
+.jlv-mrow-added .jlv-mrow-bar { fill: var(--java-teal); }
+.jlv-mrow-added .jlv-mrow-text { fill: #0c6a61; }
+.jlv-mrow-added .jlv-mrow-tag { fill: #0c6a61; }
+
+/* ==========================================================================
+   POLYMORPHISM (runtime dynamic dispatch)
+   ========================================================================== */
+.jlv-poly-src { fill: var(--java-ink-2); font-family: "JetBrains Mono", monospace; font-size: 16px; font-weight: 700; }
+.jlv-poly-src.dim { fill: var(--java-muted); font-size: 13px; font-weight: 600; }
+.jlv-poly-ref { fill: #fff; font-family: var(--display); font-size: 30px; font-weight: 800; }
+.jlv-poly-obj { fill: var(--java-ink); font-family: "JetBrains Mono", monospace; font-size: 16px; font-weight: 700; }
+
+.jlv-dispatch-beam { stroke: rgba(124, 70, 214, .28); stroke-width: 2; fill: none; stroke-dasharray: 5 5; }
+.jlv-dispatch-beam.hi { stroke: #7c46d6; stroke-width: 3; stroke-dasharray: none; }
+
+.jlv-poly-outbase rect { fill: #f1f3f7; stroke: rgba(22, 35, 60, .12); }
+.jlv-poly-outbase text { fill: var(--java-muted); font-family: var(--display); font-size: 17px; font-weight: 800; }
+
+.jlv-poly-out text { fill: #fff; font-family: var(--display); font-size: 17px; font-weight: 800; }
+.jlv-poly-out-blue rect { fill: #2f6fd6; }
+.jlv-poly-out-purple rect { fill: #7c46d6; }
+.jlv-poly-out-teal rect { fill: #0f857a; }
+
+.jlv-poly-ring { fill: none; stroke: #7c46d6; stroke-width: 2.6; }
+.jlv-poly-aref { fill: #7c46d6; font-family: "JetBrains Mono", monospace; font-size: 13px; font-weight: 700; }
+
+.jlv-poly-hi { opacity: 0; animation: jlvPolyWin 5.1s ease-in-out infinite; animation-delay: var(--d); }
+
+@keyframes jlvInheritFlow {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(52px); opacity: 0; }
+}
+@keyframes jlvPolyWin {
+  0% { opacity: 0; } 3% { opacity: 1; } 30% { opacity: 1; } 34% { opacity: 0; } 100% { opacity: 0; }
+}
+
+/* ==========================================================================
+   ENCAPSULATION
+   ========================================================================== */
+.jlv-shell { fill: rgba(15, 118, 110, .05); stroke: rgba(15, 118, 110, .34); stroke-width: 2; }
+.jlv-shell-inner { fill: #ffffff; stroke: rgba(15, 118, 110, .18); stroke-width: 1; stroke-dasharray: 3 5; }
+.jlv-encap-title { fill: var(--java-ink); font-family: var(--display); font-size: 17px; font-weight: 800; }
+.jlv-encap-caller { fill: #fff; font-family: var(--display); font-size: 20px; font-weight: 800; }
+
+.jlv-vault { fill: #fdeeeb; stroke: rgba(194, 59, 48, .32); stroke-width: 1.4; }
+.jlv-vault-label { fill: var(--java-red-ink); font-family: var(--display); font-size: 12px; font-weight: 800; letter-spacing: .1em; }
+.jlv-vault-note { fill: var(--java-muted); font-family: var(--display); font-size: 13px; font-weight: 600; }
+.jlv-vault-note.strong { fill: #0c6a61; font-weight: 800; font-size: 15px; }
+.jlv-lock { fill: var(--java-red); }
+.jlv-lock-shackle { fill: none; stroke: var(--java-red); stroke-width: 3; }
+
+.jlv-gate { fill: #e9f6f3; stroke: var(--java-teal); stroke-width: 1.6; }
+.jlv-gate-label { fill: #0c6a61; font-family: "JetBrains Mono", monospace; font-size: 14px; font-weight: 700; }
+.jlv-gate-cap { fill: var(--java-teal); font-family: var(--display); font-size: 12px; font-weight: 700; }
+
+.jlv-block-line { stroke: var(--java-red); stroke-width: 2.4; fill: none; stroke-dasharray: 6 5; }
+.jlv-block-x circle { fill: #fdeeeb; stroke: var(--java-red); stroke-width: 2; }
+.jlv-block-x path { stroke: var(--java-red); stroke-width: 2.6; }
+.jlv-block-x { animation: jlvBlockPulse 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.jlv-block-label { fill: var(--java-ink-2); font-family: "JetBrains Mono", monospace; font-size: 13px; font-weight: 700; }
+.jlv-block-label.sub { fill: var(--java-red-ink); }
+
+.jlv-ok-line { stroke: var(--java-teal); stroke-width: 2.4; fill: none; }
+.jlv-ok-label { fill: #0c6a61; font-family: "JetBrains Mono", monospace; font-size: 13px; font-weight: 700; }
+.jlv-ok-label.small { font-size: 11px; }
+.jlv-flow-packet { fill: var(--java-teal); animation: jlvFlowIn 2.6s ease-in-out infinite; }
+
+@keyframes jlvBlockPulse { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+@keyframes jlvFlowIn {
+  0% { transform: translateX(0); opacity: 0; }
+  15% { opacity: 1; } 70% { opacity: 1; }
+  100% { transform: translateX(96px); opacity: 0; }
+}
+
+/* ==========================================================================
+   EXCEPTIONS
+   ========================================================================== */
+.jlv-unwind-arrow { stroke: rgba(194, 59, 48, .45); stroke-width: 1.6; fill: none; stroke-dasharray: 4 5; }
+.jlv-exc-note { fill: var(--java-muted); font-family: "JetBrains Mono", monospace; font-size: 12px; }
+.jlv-exc-throw .jlv-exc-note { fill: var(--java-red-ink); }
+.jlv-exc-catch .jlv-exc-note { fill: #0c6a61; font-weight: 700; }
+.jlv-exc-mark { font-family: var(--display); font-size: 20px; font-weight: 800; }
+.jlv-exc-mark-throw { fill: var(--java-red); }
+.jlv-exc-mark-unwind { fill: var(--java-muted); }
+.jlv-exc-mark-catch { fill: var(--java-teal); }
+.jlv-exc-unwind .jlv-slab-face { opacity: .7; }
+
+.jlv-exc-token circle { fill: var(--java-red); }
+.jlv-exc-token text { fill: #fff; font-family: var(--display); font-size: 12px; font-weight: 800; }
+.jlv-exc-token { transform: translate(374px, 158px); animation: jlvExcToken 4.2s ease-in-out 0.9s infinite; }
+
+.jlv-exc-block { fill: #ffffff; stroke: rgba(22, 35, 60, .14); stroke-width: 1.2; }
+.jlv-exc-block.catch { fill: #eef8f5; stroke: rgba(15, 118, 110, .34); }
+.jlv-exc-block.finally { fill: #fdf3e2; stroke: rgba(189, 122, 26, .34); }
+.jlv-exc-block-t { fill: var(--java-ink); font-family: "JetBrains Mono", monospace; font-size: 14px; font-weight: 700; }
+.jlv-exc-block-t.amber { fill: #a86f13; }
+.jlv-exc-block-s { fill: var(--java-body); font-family: var(--display); font-size: 12px; font-weight: 500; }
+.jlv-exc-recover { fill: #0c6a61; font-family: var(--display); font-size: 15px; font-weight: 800; }
+
+@keyframes jlvExcToken {
+  0% { transform: translate(374px, 158px); opacity: 0; }
+  10% { opacity: 1; }
+  55% { transform: translate(374px, 350px); opacity: 1; }
+  70% { transform: translate(374px, 350px); opacity: 0; }
+  100% { transform: translate(374px, 158px); opacity: 0; }
+}
+
+/* ==========================================================================
+   MULTITHREADING — lifecycle + scheduler
+   ========================================================================== */
+.jlv-state-box { fill: #ffffff; stroke: rgba(22, 35, 60, .14); stroke-width: 1.2; }
+.jlv-state-box.is-running { fill: #eef8f5; stroke: rgba(15, 118, 110, .4); stroke-width: 1.8; }
+.jlv-state-label { fill: var(--java-ink-2); font-family: var(--display); font-size: 14px; font-weight: 800; letter-spacing: .04em; }
+.jlv-trans-arrow { stroke: rgba(22, 35, 60, .5); stroke-width: 1.8; fill: none; }
+.jlv-trans-cap { fill: var(--java-muted); font-family: "JetBrains Mono", monospace; font-size: 11px; font-weight: 700; }
+.jlv-sched { fill: #fff3f2; stroke: rgba(194, 59, 48, .34); stroke-width: 1.4; }
+.jlv-sched-t { fill: var(--java-red-ink); font-family: var(--display); font-size: 13px; font-weight: 800; }
+.jlv-sched-arrow { stroke: rgba(194, 59, 48, .5); stroke-width: 1.6; fill: none; }
+
+.jlv-thread-token text { fill: #fff; font-family: var(--display); font-size: 14px; font-weight: 800; }
+.jlv-tt-blue circle { fill: #2f6fd6; }
+.jlv-tt-purple circle { fill: #7c46d6; }
+.jlv-tt-teal circle { fill: #0f857a; }
+.jlv-tt-run { opacity: 0; animation: jlvThreadRun 4.8s ease-in-out infinite; animation-delay: var(--d); }
+.jlv-tt-wait { opacity: 1; animation: jlvThreadWait 4.8s ease-in-out infinite; animation-delay: var(--d); }
+
+@keyframes jlvThreadRun { 0% { opacity: 0; } 4% { opacity: 1; } 29% { opacity: 1; } 33% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes jlvThreadWait { 0% { opacity: 1; } 4% { opacity: 0; } 29% { opacity: 0; } 33% { opacity: 1; } 100% { opacity: 1; } }
+
+/* ==========================================================================
+   RACE CONDITION & SYNCHRONIZATION
+   ========================================================================== */
+.jlv-race-h { font-family: var(--display); font-size: 14px; font-weight: 800; letter-spacing: .04em; }
+.jlv-race-h.bad { fill: var(--java-red-ink); }
+.jlv-race-h.good { fill: #0c6a61; }
+.jlv-race-panel { fill: #ffffff; stroke-width: 1.4; }
+.jlv-race-panel.bad { fill: #fdf0ee; stroke: rgba(194, 59, 48, .3); }
+.jlv-race-panel.good { fill: #eef8f5; stroke: rgba(15, 118, 110, .32); }
+.jlv-shared { fill: #16233d; }
+.jlv-shared-t { fill: #fff; font-family: "JetBrains Mono", monospace; font-size: 14px; font-weight: 700; }
+.jlv-tlabel { font-family: var(--display); font-size: 16px; font-weight: 800; }
+.jlv-tlabel.blue { fill: #2f6fd6; }
+.jlv-tlabel.purple { fill: #7c46d6; }
+.jlv-race-op { fill: var(--java-ink-2); font-family: "JetBrains Mono", monospace; font-size: 13px; font-weight: 600; }
+.jlv-race-op.good { fill: #0c6a61; }
+.jlv-race-op.good.sub { fill: var(--java-muted); font-size: 12px; font-weight: 500; }
+.jlv-race-interleave { fill: var(--java-red-ink); font-family: var(--display); font-size: 13px; font-weight: 700; animation: jlvBlockPulse 2.6s ease-in-out infinite; }
+.jlv-lock-gate { fill: rgba(15, 118, 110, .08); stroke: var(--java-teal); stroke-width: 1.4; stroke-dasharray: 5 4; }
+.jlv-lock-label { fill: #0c6a61; font-family: "JetBrains Mono", monospace; font-size: 13px; font-weight: 700; }
+.jlv-result { stroke-width: 1.6; }
+.jlv-result.bad { fill: #fdeeeb; stroke: var(--java-red); }
+.jlv-result.good { fill: #e9f6f3; stroke: var(--java-teal); }
+.jlv-result-t { font-family: var(--display); font-size: 20px; font-weight: 800; }
+.jlv-result-t.bad { fill: var(--java-red-ink); }
+.jlv-result-t.good { fill: #0c6a61; }
+
+/* responsive: single column on short/narrow */
+@media (max-width: 980px), (max-height: 680px) {
+  .java-live-scene { grid-template-columns: 1fr; gap: 14px; padding: 52px 24px 22px; }
+  .java-live-stage { min-height: 40vh; }
+  .java-live-code { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jlv-reveal, .jlv-pop, .jlv-ref-line, .jlv-jvm .jlv-stage, .jlv-jvm-core .jlv-slab-face,
+  .jlv-stackheap .jlv-frame, .jlv-poly-hi, .jlv-block-x, .jlv-race-interleave, .jlv-tt-wait {
+    animation: none !important;
+    opacity: 1 !important;
+    stroke-dashoffset: 0 !important;
+    transform: none !important;
+  }
+  /* moving packets / indicators: freeze and hide when motion is off */
+  .jlv-packet-ctor, .jlv-byte, .jlv-inherit-packet, .jlv-flow-packet,
+  .jlv-exc-token, .jlv-tt-run {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+}

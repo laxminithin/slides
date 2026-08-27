@@ -1,0 +1,129 @@
+/* =============================================================================
+   HadoopViz — reusable living SVG architecture components (Module 2)
+   -----------------------------------------------------------------------------
+   Instructional motion only: packets = data flow, dashes = active links,
+   LEDs = healthy nodes, red = failure, ring = recovery. Structure is ALWAYS
+   painted (pause-safe: a frozen frame still reads correctly). Reduced-motion
+   hides motion-only packets and keeps the full static diagram.
+   ========================================================================== */
+
+.hv-svg {
+  --hv-blue: #2f6bff;
+  --hv-teal: #0f9d94;
+  --hv-purple: #7c5cff;
+  --hv-orange: #f08a24;
+  --hv-green: #17a06b;
+  --hv-red: #e23b52;
+  --hv-ink: #16233b;
+  --hv-muted: #5b6b82;
+  --hv-line: #c8d3e4;
+  --hv-surface: #ffffff;
+  width: 100%;
+  height: auto;
+  /* small screens are width-limited (well under this); the ceiling only binds
+     on very tall displays so diagrams scale up instead of floating tiny. */
+  max-height: min(60vh, 720px);
+  display: block;
+  overflow: visible;
+  font-family: var(--display, "Plus Jakarta Sans", system-ui, sans-serif);
+}
+
+/* --- static building blocks --- */
+.hv-box { fill: var(--hv-surface); stroke: var(--hv-line); stroke-width: 1.5; }
+.hv-box.hv-nn { fill: #eef3ff; stroke: #b9ccff; }
+.hv-box.hv-rm { fill: #f1ecff; stroke: #cabfff; }
+.hv-box.hv-rack { fill: rgba(20, 29, 46, 0.03); stroke: #d7e0ee; stroke-dasharray: 4 4; }
+.hv-title { fill: var(--hv-ink); font-weight: 800; }
+.hv-sub { fill: var(--hv-muted); font-weight: 600; }
+.hv-tag { fill: #eef3ff; stroke: #cddcff; }
+.hv-tag-t { fill: var(--hv-blue); font-weight: 800; }
+.hv-conn { stroke: var(--hv-line); stroke-width: 2; fill: none; }
+
+/* --- active link: marching dashes show a live connection --- */
+.hv-flow { stroke-dasharray: 7 7; animation: hvDash 0.9s linear infinite; }
+@keyframes hvDash { to { stroke-dashoffset: -28; } }
+
+/* --- packet: a data unit travelling a straight segment (--dx/--dy in user units) --- */
+.hv-packet {
+  animation: hvPacket var(--dur, 2.4s) linear infinite;
+  animation-delay: var(--delay, 0s);
+  will-change: transform, opacity;
+}
+@keyframes hvPacket {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  12%  { opacity: 1; }
+  88%  { opacity: 1; }
+  100% { transform: translate(var(--dx, 0px), var(--dy, 0px)); opacity: 0; }
+}
+
+/* --- healthy-node LED blink --- */
+.hv-led { fill: var(--hv-green); animation: hvLed 1.7s ease-in-out infinite; animation-delay: var(--delay, 0s); }
+@keyframes hvLed { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+
+/* --- soft breathing highlight for the "brain" node --- */
+.hv-pulse { animation: hvPulse 3.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes hvPulse { 0%, 100% { opacity: 0.85; } 50% { opacity: 1; } }
+
+/* --- recovery / attention ring --- */
+.hv-ring { fill: none; stroke: var(--hv-green); stroke-width: 2.5; opacity: 0; animation: hvRing var(--dur, 2.6s) ease-out infinite; animation-delay: var(--delay, 0s); transform-box: fill-box; transform-origin: center; }
+@keyframes hvRing { 0% { opacity: 0.8; transform: scale(0.5); } 70% { opacity: 0; transform: scale(1.3); } 100% { opacity: 0; transform: scale(1.3); } }
+
+/* --- dimming for stages not yet reached (structure still visible) --- */
+.hv-dim { opacity: 0.34; }
+
+/* --- node failure: goes red + faded, LED dark, X shows --- */
+.hv-fail { animation: hvFail var(--dur, 6s) ease-in-out infinite; }
+@keyframes hvFail {
+  0%, 24% { opacity: 1; }
+  34%, 62% { opacity: 0.4; }
+  72%, 100% { opacity: 1; }
+}
+.hv-fail-box { animation: hvFailBox var(--dur, 6s) ease-in-out infinite; }
+@keyframes hvFailBox {
+  0%, 24% { stroke: var(--hv-line); }
+  34%, 62% { stroke: var(--hv-red); }
+  72%, 100% { stroke: var(--hv-line); }
+}
+.hv-fail-x { opacity: 0; animation: hvFailX var(--dur, 6s) ease-in-out infinite; }
+@keyframes hvFailX { 0%, 26% { opacity: 0; } 36%, 60% { opacity: 1; } 70%, 100% { opacity: 0; } }
+/* recovery replica appears after the failure window */
+.hv-recover { opacity: 0; animation: hvRecover var(--dur, 6s) ease-in-out infinite; }
+@keyframes hvRecover { 0%, 62% { opacity: 0; } 74%, 96% { opacity: 1; } 100% { opacity: 0; } }
+
+/* --- Spark task states --- */
+.hv-task-active { fill: #eafaf2; stroke: #17a06b; }
+.hv-task-wait   { fill: #f4f7fb; stroke: #c8d3e4; }
+.hv-task-done   { fill: #eef3ff; stroke: #2f6bff; }
+.hv-task-fail   { fill: #fdeef0; stroke: #e23b52; }
+
+/* --- PageRank rank glow: soft halo whose opacity breathes with rank --- */
+.hv-rank-glow { animation: hvRankGlow 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes hvRankGlow { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.6; } }
+
+/* --- MongoDB CRUD op cycle: highlights each operation in turn --- */
+.hv-op { animation: hvOp 8s linear infinite; }
+@keyframes hvOp { 0% { opacity: 0.34; } 5% { opacity: 1; } 20% { opacity: 1; } 26%, 100% { opacity: 0.34; } }
+
+/* --- in-memory cache reuse pulse --- */
+.hv-cache { animation: hvCache 3s ease-in-out infinite; }
+@keyframes hvCache { 0%, 100% { opacity: 0.65; } 50% { opacity: 1; } }
+
+/* --- stage caption chip highlight --- */
+.hv-cap { fill: var(--hv-muted); font-weight: 700; }
+.hv-cap.is-on { fill: var(--hv-ink); }
+.hv-cap-dot { fill: var(--hv-line); }
+.hv-cap-dot.is-on { fill: var(--hv-blue); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hv-svg .hv-packet,
+  .hv-svg .hv-ring,
+  .hv-svg .hv-fail-x { display: none; }
+  .hv-svg .hv-flow { animation: none; }
+  .hv-svg .hv-led { animation: none; opacity: 1; }
+  .hv-svg .hv-pulse { animation: none; opacity: 1; }
+  .hv-svg .hv-rank-glow { animation: none; opacity: 0.45; }
+  .hv-svg .hv-cache { animation: none; opacity: 1; }
+  .hv-svg .hv-op { animation: none; opacity: 1; }
+  .hv-svg .hv-fail,
+  .hv-svg .hv-fail-box { animation: none; }
+}

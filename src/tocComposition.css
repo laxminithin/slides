@@ -1,0 +1,106 @@
+/* =============================================================================
+   TOC V2.0 — Composition rhythm
+   -----------------------------------------------------------------------------
+   Scoped to `.toc-deck`. Cycle variants so consecutive slides never feel
+   templated. Does not change redesign tokens or story-rail chrome.
+   ========================================================================== */
+
+.toc-deck .slide-body {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+  min-height: 0;
+}
+
+.toc-deck .slide-body > * {
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+  align-self: stretch;
+}
+
+/* ---- composition variants on .toc-board ---- */
+.toc-deck .toc-comp-hero .toc-visual,
+.toc-deck .toc-comp-visual-first .toc-visual,
+.toc-deck .toc-comp-tree .toc-visual,
+.toc-deck .toc-comp-radial .toc-visual,
+.toc-deck .toc-comp-timeline .toc-visual,
+.toc-deck .toc-comp-blueprint .toc-visual {
+  /* visual bias handled via grid column weights below */
+}
+
+.toc-deck .toc-comp-hero {
+  grid-template-columns: minmax(96px, 0.11fr) minmax(260px, 0.78fr) minmax(460px, 1.28fr);
+}
+.toc-deck .toc-comp-visual-first {
+  grid-template-columns: minmax(96px, 0.11fr) minmax(260px, 0.78fr) minmax(460px, 1.28fr);
+}
+.toc-deck .toc-comp-reverse {
+  grid-template-columns: minmax(108px, 0.13fr) minmax(420px, 1.15fr) minmax(300px, 0.85fr);
+}
+.toc-deck .toc-comp-reverse .toc-copy { grid-column: 3; }
+.toc-deck .toc-comp-reverse .toc-visual { grid-column: 2; grid-row: 1; }
+
+.toc-deck .toc-comp-timeline {
+  grid-template-columns: minmax(96px, 0.11fr) minmax(280px, 0.82fr) minmax(460px, 1.25fr);
+}
+.toc-deck .toc-comp-tree {
+  grid-template-columns: minmax(96px, 0.11fr) minmax(250px, 0.72fr) minmax(480px, 1.35fr);
+}
+.toc-deck .toc-comp-radial {
+  grid-template-columns: minmax(96px, 0.11fr) minmax(250px, 0.75fr) minmax(470px, 1.3fr);
+}
+.toc-deck .toc-comp-blueprint {
+  grid-template-columns: minmax(108px, 0.12fr) minmax(300px, 0.9fr) minmax(430px, 1.12fr);
+}
+.toc-deck .toc-comp-compare {
+  grid-template-columns: minmax(108px, 0.12fr) minmax(340px, 0.95fr) minmax(400px, 1.05fr);
+}
+.toc-deck .toc-comp-quiet .toc-visual {
+  opacity: 0.98;
+  box-shadow: var(--toc-shadow-sm);
+}
+.toc-deck .toc-comp-minimal {
+  grid-template-columns: minmax(0, 1fr);
+}
+.toc-deck .toc-comp-minimal .toc-story,
+.toc-deck .toc-comp-minimal .toc-takeaway { display: none; }
+.toc-deck .toc-comp-minimal .toc-copy {
+  grid-column: 1;
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+.toc-deck .toc-comp-minimal .toc-visual { display: none; }
+
+/* hero visual scale */
+.toc-deck .toc-comp-hero .tv-svg,
+.toc-deck .toc-comp-visual-first .tv-svg,
+.toc-deck .toc-comp-tree .tv-svg,
+.toc-deck .toc-comp-radial .tv-svg,
+.toc-deck .toc-comp-timeline .tv-svg {
+  max-height: min(58vh, 420px);
+}
+
+.toc-deck .toc-divider-visual .tv-svg {
+  max-height: min(60vh, 440px);
+}
+
+.toc-deck .toc-open-layer {
+  width: 100%;
+  animation: toc-open-in 0.7s ease both;
+  animation-delay: var(--d, 0s);
+}
+@keyframes toc-open-in {
+  from { transform: translateY(10px); }
+  to { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toc-deck .toc-open-layer {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}

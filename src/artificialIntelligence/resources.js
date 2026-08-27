@@ -1,0 +1,93 @@
+export const aiResources = {
+  'module-1': {
+    notes: [
+      ['What is AI?', 'Not just understanding intelligence — building entities that perceive, reason, learn and act. Four cells: thinking/acting × human/rational. This syllabus follows acting rationally.'],
+      ['Turing Test', 'Written interrogation (1950). Needs NLP, knowledge representation, automated reasoning, machine learning. Total test adds computer vision and robotics.'],
+      ['Rational agent', 'For each percept sequence, select the action expected to maximise the performance measure, given the evidence and built-in knowledge. Rational ≠ omniscient.'],
+      ['PEAS', 'Performance, Environment, Actuators, Sensors. Taxi: safety/time/law/profit; roads/traffic; steer/brake; cameras/GPS.'],
+      ['Environment properties', 'Observable, single/multi, deterministic/stochastic, episodic/sequential, static/dynamic, discrete/continuous, known/unknown. Known ≠ fully observable.'],
+      ['Agent structures', 'Simple reflex (condition–action), model-based (internal state), goal-based (search/plan), utility-based (rank states), learning agent (performance, critic, learning, problem generator).'],
+    ],
+    questions: [
+      'Define AI using the four-approach grid. Why does this course emphasise rational agents?',
+      'State the Turing Test and the capabilities required. What extra is needed for the total Turing Test?',
+      'Define a rational agent. Distinguish omniscience, rationality and autonomy with the vacuum example.',
+      'Write PEAS for an automated taxi. Sketch the agent–environment diagram.',
+      'List seven task-environment properties with one example each.',
+      'Compare simple reflex, model-based, goal-based and utility-based agents. When does a reflex agent loop?',
+      'Name the four components of a learning agent.',
+    ],
+  },
+  'module-2': {
+    notes: [
+      ['Problem-solving agent', 'Goal formulation → problem formulation → search → execution. A problem is initial state, ACTIONS, RESULT, goal test, path cost.'],
+      ['Abstraction', 'Drop irrelevant detail (radio, weather) while remaining valid and useful. Romania: In(Arad).'],
+      ['Toys', 'Vacuum: 8 states. 8-puzzle: 181,440 reachable. 8-queens: naive 1.8×10¹⁴ vs 2,057. Knuth: infinite space from 4.'],
+      ['BFS', 'FIFO. Complete. Optimal if equal step costs. Time/space O(b^d). Goal test on generation.'],
+      ['DFS', 'LIFO. Cheap memory. Not complete in infinite spaces, not optimal. Time O(b^m).'],
+      ['UCS / DLS / IDS / Bi', 'UCS: lowest g, test on expansion, Sibiu→Bucharest 278. DLS: cutoff vs failure. IDS: O(b^d) time, O(bd) space. Bidirectional: O(b^{d/2}) if both BFS.'],
+    ],
+    questions: [
+      'Formulate the Romania problem with five components. What is abstraction?',
+      'Give vacuum, 8-puzzle and 8-queens formulations. Why is the better queens formulation smaller?',
+      'Trace BFS and DFS on the same tree. Compare completeness, optimality, time, space.',
+      'Work uniform-cost search from Sibiu to Bucharest.',
+      'Explain depth-limited search’s two failure values. How does iterative deepening combine BFS and DFS?',
+      'State bidirectional-search complexity assuming BFS on both sides.',
+    ],
+  },
+  'module-3': {
+    notes: [
+      ['Greedy best-first', 'f = h. Romania with hSLD: Arad–Sibiu–Fagaras–Bucharest, 32 miles longer than optimal.'],
+      ['A*', 'f = g + h. Optimal if h admissible (tree search) or consistent (graph search). Optimally efficient. Memory-bound.'],
+      ['Heuristics', '8-puzzle h1 = misplaced (8), h2 = Manhattan (18). h2 dominates h1. Effective branching factor b*. Relaxed problems build heuristics.'],
+      ['Memory-bounded', 'IDA* uses f-cutoffs. RBFS linear space with backed-up f. SMA* drops the worst leaf when memory is full.'],
+      ['KB agents', 'TELL / ASK / infer. Declarative sentences. Sound inference preserves truth.'],
+      ['Wumpus', '+1000 gold, −1000 death, −1/action, −10 arrow. 4×4, stench/breeze/glitter/bump/scream. Partially observable, deterministic, static, discrete, single-agent.'],
+    ],
+    questions: [
+      'Define informed search and h(n). Trace greedy best-first on the Romania map.',
+      'State A* and the conditions for optimality. What does optimally efficient mean?',
+      'Compute h1 and h2 for a given 8-puzzle. Why is h2 admissible? What is dominance?',
+      'Compare IDA*, RBFS and SMA*.',
+      'Define KB, TELL, ASK. Give the Wumpus PEAS description.',
+      'Define syntax, semantics, model, entailment. How does truth-table inference work?',
+    ],
+  },
+  'module-4': {
+    notes: [
+      ['FOL vs PL', 'Objects, functions, predicates, quantifiers. One axiom replaces a grid of propositional symbols.'],
+      ['Quantifiers', '∀x∃y Loves(x,y) ≠ ∃y∀x Loves(x,y). Negation flips quantifiers.'],
+      ['KE process', 'Task → assemble knowledge → vocabulary → encode axioms → test queries. Circuits domain.'],
+      ['Unification', 'UNIFY returns the most general substitution that makes two expressions identical, or fail. Occur check. Standardize apart.'],
+      ['Forward chaining', 'Definite clauses. Colonel West: two iterations to Criminal(West). Sound GMP, complete for definite clauses.'],
+      ['Efficient FC', 'Conjunct ordering, incremental matching (new fact on iteration t−1), magic sets for the query constant.'],
+    ],
+    questions: [
+      'Contrast propositional and first-order representation with a Wumpus breeze axiom.',
+      'Give the syntax of FOL. Show how quantifier order changes meaning.',
+      'Outline the knowledge-engineering process. Encode a simple circuit axiom.',
+      'Compute UNIFY(Knows(John,x), Knows(John,Jane)). What is an MGU? Why the occur check?',
+      'Encode the West crime story and trace FOL-FC-ASK for two iterations.',
+      'Explain incremental forward chaining and magic sets.',
+    ],
+  },
+  'module-5': {
+    notes: [
+      ['Backward chaining', 'Goal list, unify heads, push bodies, facts solve a goal. AND/OR proof tree. Opposite control to FC.'],
+      ['Prolog', 'DFS backward chaining. head :- body. Negation as failure. No occur check. Choice points + trail. WAM. OR vs AND parallelism.'],
+      ['Resolution', 'CNF. Complementary literals cancel. Empty clause = KB ⊨ query. CNF conversion pipeline including Skolemization.'],
+      ['PDDL', 'Factored fluents, action schemas with PRECOND/EFFECT. Fly(p,from,to). Closed world, unique names. Air cargo At vs In.'],
+      ['Planning search', 'PlanSAT / Bounded PlanSAT (PSPACE). Progression vs regression. Irrelevant Buy(isbn) example.'],
+      ['Planning graphs', 'Proposition/action layers + mutex. Reachability sketch; GraphPlan extracts a plan when goals appear mutex-free.'],
+    ],
+    questions: [
+      'Trace backward chaining on Criminal(West). Draw the AND/OR tree.',
+      'How does Prolog execute a query? What is negation as failure? What is a choice point?',
+      'Convert a FOL sentence to CNF. Resolve to the empty clause. What does □ mean?',
+      'Write the Fly action schema. Why does cargo cease to be At while In a plane?',
+      'Compare progression and regression. Why was forward search considered hopeless before heuristics?',
+      'Explain planning-graph layers and mutex. How does GraphPlan know a goal might be reachable?',
+    ],
+  },
+}

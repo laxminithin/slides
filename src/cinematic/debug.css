@@ -1,0 +1,185 @@
+/* =============================================================================
+   PRESENTATION ENGINE V6 — Debug / Timeline / Perf inspector chrome
+   ========================================================================== */
+
+.engine-debug {
+  position: fixed;
+  right: var(--space-sm, 16px);
+  bottom: calc(var(--space-sm, 16px) + 56px);
+  z-index: 80;
+  width: min(360px, calc(100vw - 24px));
+  max-height: min(52vh, 520px);
+  overflow: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--ink-strong, #172033);
+  background: color-mix(in srgb, var(--surface, #fff) 92%, transparent);
+  border: 1px solid var(--border-subtle, rgba(30, 50, 80, 0.12));
+  border-radius: var(--radius-sm, 12px);
+  box-shadow: var(--shadow-focus, 0 12px 40px rgba(20, 35, 60, 0.12));
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.engine-debug:not(.is-open) {
+  max-height: none;
+  overflow: visible;
+  width: auto;
+}
+
+.engine-debug-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-subtle, rgba(30, 50, 80, 0.08));
+  position: sticky;
+  top: 0;
+  background: inherit;
+  z-index: 1;
+}
+
+.engine-debug:not(.is-open) .engine-debug-header {
+  border-bottom: none;
+}
+
+.engine-debug-toggle,
+.engine-debug-tabs button {
+  appearance: none;
+  border: 1px solid var(--border-subtle, rgba(30, 50, 80, 0.12));
+  background: var(--surface-muted, #faf8f3);
+  color: inherit;
+  border-radius: var(--radius-xs, 8px);
+  padding: 4px 8px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.engine-debug-tabs {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.engine-debug-tabs button.active {
+  background: color-mix(in srgb, var(--highlight, #c9a227) 22%, white);
+  border-color: color-mix(in srgb, var(--highlight, #c9a227) 40%, transparent);
+}
+
+.engine-debug-grid {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 4px 8px;
+  margin: 0;
+  padding: 10px;
+}
+
+.engine-debug-grid dt {
+  margin: 0;
+  color: var(--ink-muted, #7a8495);
+  font-weight: 600;
+}
+
+.engine-debug-grid dd {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.engine-debug-timeline,
+.engine-debug-qa {
+  padding: 10px;
+}
+
+.engine-debug-timeline ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.engine-debug-timeline li {
+  display: grid;
+  grid-template-columns: 36px 88px 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.engine-debug-timeline li[data-active="true"] .t-label {
+  color: color-mix(in srgb, var(--highlight, #c9a227) 80%, #172033);
+  font-weight: 700;
+}
+
+.engine-debug-timeline .t-at {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-muted, #7a8495);
+}
+
+.engine-debug-timeline .t-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--highlight, #c9a227) 70%, transparent) var(--t, 0%),
+    var(--border-subtle, rgba(30, 50, 80, 0.08)) var(--t, 0%)
+  );
+}
+
+.engine-debug-hint {
+  margin: 0 0 8px;
+  color: var(--ink-muted, #7a8495);
+}
+
+.engine-debug-hint.ok {
+  color: var(--success, #0f766e);
+}
+
+.engine-debug-hint.bad {
+  color: var(--danger, #dc2626);
+}
+
+.engine-debug-qa ul {
+  margin: 0;
+  padding-left: 16px;
+  display: grid;
+  gap: 6px;
+}
+
+.engine-debug-qa li[data-sev="error"] {
+  color: var(--danger, #dc2626);
+}
+
+.engine-debug-qa li[data-sev="warn"] {
+  color: var(--warn, #d97706);
+}
+
+.engine-debug-qa li.ok {
+  color: var(--success, #0f766e);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .engine-debug {
+    backdrop-filter: none;
+  }
+}
+
+/* Hero tier intensity hooks — subjects opt in via data-hero-tier */
+.deck.living-engine [data-hero-tier="1"] {
+  --hero-intensity: var(--hero-tier-1-scale, 1);
+}
+
+.deck.living-engine [data-hero-tier="2"] {
+  --hero-intensity: var(--hero-tier-2-scale, 0.82);
+}
+
+.deck.living-engine [data-hero-tier="3"] {
+  --hero-intensity: var(--hero-tier-3-scale, 0.62);
+}
+
+.deck.living-engine [data-hero-tier="none"] {
+  --hero-intensity: var(--hero-tier-none-scale, 0.45);
+}

@@ -1,0 +1,314 @@
+/* =============================================================================
+   LIVING PRESENTATION ENGINE — V7.0 platform lockdown (API frozen)
+   Focus · Lecturer · Revision · Memory · Tokens · Motion · Tiers · Insights
+   Contracts: stable.js · SDK: sdk.js · Quality: quality.js · Showcase: IB
+   ========================================================================== */
+
+.deck.living-engine {
+  --living-duration-scale: 1;
+  --living-reveal: 4;
+}
+
+.deck.living-engine .slide-frame {
+  --ib-line-dur-scale: var(--living-duration-scale, 1);
+}
+
+.deck.living-engine[data-living-paused="true"] .ib-scene *,
+.deck.living-engine[data-living-paused="true"] .film-continuity * {
+  animation-play-state: paused !important;
+}
+
+.deck.living-engine[data-living-mode="revision"] .ib-living-bg,
+.deck.living-engine[data-living-mode="revision"] .ib-eye-guide,
+.deck.living-engine[data-living-mode="revision"] .ib-visual-scan,
+.deck.living-engine[data-living-mode="revision"] .ib-scene-veil,
+.deck.living-engine[data-hide-decorative="true"] .ib-living-bg,
+.deck.living-engine[data-hide-decorative="true"] .ib-eye-guide,
+.deck.living-engine[data-hide-decorative="true"] .ib-visual-scan,
+.deck.living-engine[data-hide-decorative="true"] .film-continuity {
+  opacity: 0 !important;
+  animation: none !important;
+}
+
+/* Revisit / compact / compressed budgets shorten choreography */
+.deck.living-engine[data-motion-budget="compact"] .ib-scene,
+.deck.living-engine[data-motion-budget="compressed"] .ib-scene,
+.deck.living-engine[data-motion-budget="restrained"] .ib-scene {
+  --ib-line-dur: calc(0.62s * var(--living-duration-scale, 1));
+  --ib-line-stagger: calc(0.05s * var(--living-duration-scale, 1));
+}
+
+.deck.living-engine[data-motion-budget="compact"] .ib-scene .ib-world .route,
+.deck.living-engine[data-motion-budget="compressed"] .ib-scene .ib-world .route {
+  animation-duration: 0.7s, 1.2s !important;
+}
+
+.deck.living-engine[data-motion-budget="compressed"] .ib-source-line:not(.title-line):not([data-line-role="takeaway"]):not([data-line-role="lead"]) {
+  opacity: 0.55;
+}
+
+.deck.living-engine[data-motion-budget="compressed"] .ib-source-line[data-line-role="meta"] {
+  display: none;
+}
+
+.deck.living-engine[data-motion-budget="guided"] .ib-kw {
+  animation-duration: 1.05s;
+}
+
+/* Focus mode — guide attention without interaction */
+.deck.living-engine[data-focus-mode="true"] .ib-scene [data-motion-role="tertiary"],
+.deck.living-engine[data-focus-mode="true"] .ib-living-bg,
+.deck.living-engine[data-focus-mode="true"] .ib-scene-veil {
+  opacity: 0.28 !important;
+  filter: saturate(0.7);
+  transition: opacity 0.9s ease, filter 0.9s ease;
+}
+
+.deck.living-engine[data-focus-mode="true"] .ib-scene [data-motion-role="secondary"] {
+  opacity: 0.62;
+  transition: opacity 0.9s ease;
+}
+
+.deck.living-engine[data-focus-mode="true"] .ib-scene [data-motion-role="primary"],
+.deck.living-engine[data-focus-mode="true"] .ib-source-line.title-line,
+.deck.living-engine[data-focus-mode="true"] .ib-source-line[data-line-role="takeaway"],
+.deck.living-engine[data-focus-mode="true"] .living-memory-anchor {
+  opacity: 1 !important;
+  filter: none;
+  transition: opacity 0.9s ease;
+}
+
+.deck.living-engine[data-focus-mode="true"] .ib-source-line:not(.title-line):not([data-line-role="takeaway"]):not([data-line-role="lead"]) {
+  opacity: 0.42;
+  transition: opacity 0.9s ease;
+}
+
+/* Lecturer stepped reveal */
+.deck.living-engine[data-living-mode="lecturer"] .ib-scene [data-beat="establish"],
+.deck.living-engine[data-living-mode="lecturer"] .ib-scene [data-beat="focus"],
+.deck.living-engine[data-living-mode="lecturer"] .ib-scene [data-beat="narrative"],
+.deck.living-engine[data-living-mode="lecturer"] .ib-scene [data-beat="climax"],
+.deck.living-engine[data-living-mode="lecturer"] .ib-scene [data-beat="settle"] {
+  transition: opacity 0.35s ease, filter 0.35s ease;
+}
+
+.deck.living-engine[data-living-mode="lecturer"][data-reveal-step="0"] .ib-scene [data-beat="focus"],
+.deck.living-engine[data-living-mode="lecturer"][data-reveal-step="0"] .ib-scene [data-beat="narrative"],
+.deck.living-engine[data-living-mode="lecturer"][data-reveal-step="0"] .ib-scene [data-beat="climax"],
+.deck.living-engine[data-living-mode="lecturer"][data-reveal-step="0"] .ib-scene [data-beat="settle"] {
+  opacity: 0.12 !important;
+  filter: blur(2px);
+}
+
+.deck.living-engine[data-living-mode="lecturer"][data-reveal-step="1"] .ib-scene [data-beat="narrative"],
+.deck.living-engine[data-living-mode="lecturer"][data-reveal-step="1"] .ib-scene [data-beat="climax"],
+.deck.living-engine[data-living-mode="lecturer"][data-reveal-step="1"] .ib-scene [data-beat="settle"] {
+  opacity: 0.12 !important;
+  filter: blur(2px);
+}
+
+.deck.living-engine[data-living-mode="lecturer"][data-reveal-step="2"] .ib-scene [data-beat="climax"],
+.deck.living-engine[data-living-mode="lecturer"][data-reveal-step="2"] .ib-scene [data-beat="settle"] {
+  opacity: 0.18 !important;
+  filter: blur(1px);
+}
+
+.deck.living-engine[data-living-mode="lecturer"][data-reveal-step="3"] .ib-scene [data-beat="settle"] {
+  opacity: 0.35 !important;
+}
+
+/* Teaching controls */
+.living-controls {
+  position: absolute;
+  z-index: 12;
+  left: 50%;
+  bottom: 52px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs, 10px);
+  align-items: center;
+  justify-content: center;
+  max-width: min(920px, calc(100% - 24px));
+  padding: var(--space-xs, 8px) var(--space-sm, 10px);
+  border: 1px solid var(--border-subtle, rgba(19, 42, 74, 0.12));
+  border-radius: var(--radius-sm, 14px);
+  background: color-mix(in srgb, var(--surface-muted, #fbfaf7) 92%, transparent);
+  box-shadow: var(--shadow-focus, 0 16px 40px rgba(12, 26, 46, 0.12));
+  backdrop-filter: blur(10px);
+}
+
+.living-mode-switch,
+.living-actions {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.living-controls button {
+  appearance: none;
+  border: 1px solid var(--border-subtle, rgba(19, 42, 74, 0.12));
+  background: color-mix(in srgb, var(--surface, #fff) 75%, transparent);
+  color: var(--ink-strong, #132a4a);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 6px 9px;
+  border-radius: var(--radius-xs, 8px);
+  cursor: pointer;
+  transition: background var(--motion-fast, 280ms) var(--motion-ease-standard),
+    border-color var(--motion-fast, 280ms) var(--motion-ease-standard);
+}
+
+.living-controls button.active,
+.living-controls button:hover {
+  border-color: color-mix(in srgb, var(--highlight, #b8923a) 45%, transparent);
+  background: var(--highlight-soft, rgba(184, 146, 58, 0.12));
+}
+
+.living-status {
+  display: flex;
+  gap: 6px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #5c6b7e;
+  font-weight: 700;
+}
+
+.living-status .is-revisit,
+.living-status .is-focus {
+  color: #1a4f8b;
+}
+
+/* Memory anchors — recognizable every time */
+.living-memory-anchor {
+  position: absolute;
+  z-index: 5;
+  left: clamp(14px, 1.6vw, 24px);
+  bottom: clamp(14px, 1.6vw, 24px);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(26, 79, 139, 0.22);
+  background: rgba(251, 250, 247, 0.9);
+  box-shadow: 0 10px 28px rgba(12, 26, 46, 0.08);
+  pointer-events: none;
+}
+
+.living-memory-anchor strong {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #132a4a;
+}
+
+.living-anchor-glyph {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid #1a4f8b;
+  background: radial-gradient(circle at 40% 40%, rgba(184, 146, 58, 0.45), transparent 65%);
+}
+
+.living-memory-anchor.id-porter .living-anchor-glyph,
+.living-memory-map .id-porter .living-anchor-glyph {
+  clip-path: polygon(50% 8%, 92% 50%, 50% 92%, 8% 50%);
+  border-radius: 0;
+  background: rgba(138, 107, 47, 0.35);
+  border-color: #8a6b2f;
+}
+
+.living-memory-anchor.id-wto .living-anchor-glyph,
+.living-memory-anchor.id-imf .living-anchor-glyph,
+.living-memory-anchor.id-unctad .living-anchor-glyph,
+.living-memory-map .id-wto .living-anchor-glyph,
+.living-memory-map .id-imf .living-anchor-glyph,
+.living-memory-map .id-unctad .living-anchor-glyph {
+  border-radius: 3px;
+  border-color: #3a4d6b;
+}
+
+.living-memory-anchor.id-mnc .living-anchor-glyph,
+.living-memory-map .id-mnc .living-anchor-glyph {
+  border-radius: 4px;
+  border-color: #1f3d6e;
+}
+
+.living-memory-anchor.id-globalization .living-anchor-glyph,
+.living-memory-anchor.id-tradeRoute .living-anchor-glyph,
+.living-memory-map .id-globalization .living-anchor-glyph,
+.living-memory-map .id-tradeRoute .living-anchor-glyph {
+  border-color: #1a4f8b;
+  box-shadow: 0 0 0 3px rgba(26, 79, 139, 0.1);
+}
+
+.living-memory-map {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(19, 42, 74, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.living-memory-map > p {
+  margin: 0 0 8px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5c6b7e;
+  font-weight: 700;
+}
+
+.living-memory-map ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.living-memory-map li {
+  display: grid;
+  grid-template-columns: 16px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  color: #132a4a;
+}
+
+.living-memory-map em {
+  font-style: normal;
+  color: #5c6b7e;
+  font-size: 11px;
+}
+
+.ib-close-copy .living-memory-map,
+.ib-payoff-copy .living-memory-map {
+  max-width: 420px;
+}
+
+@media (max-width: 900px) {
+  .living-controls {
+    bottom: 44px;
+    padding: 6px;
+  }
+
+  .living-status {
+    display: none;
+  }
+
+  .living-memory-anchor strong {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deck.living-engine[data-focus-mode="true"] .ib-scene [data-motion-role="tertiary"],
+  .deck.living-engine[data-focus-mode="true"] .ib-source-line {
+    transition: none !important;
+  }
+}

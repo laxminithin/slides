@@ -1,0 +1,110 @@
+/* ==========================================================================
+   pcComposition.css — composition rhythm for Parallel Computing M3–M5.
+   Composition variants ONLY. Does NOT change locked cream/blue tokens,
+   story-rail, or parallelRedesign.css board chrome.
+   Cycle variants so consecutive teaching slides do not feel templated.
+   ========================================================================== */
+
+.parallel-deck .pc-opening-scene {
+  display: grid;
+  gap: 10px;
+  align-content: center;
+  justify-items: center;
+  width: 100%;
+}
+.parallel-deck .pc-open-caption {
+  margin: 0;
+  max-width: 42rem;
+  text-align: center;
+  color: #5b6472;
+  font-size: clamp(0.78rem, 1.05vw, 0.95rem);
+  font-weight: 750;
+  line-height: 1.35;
+}
+.parallel-deck .pc-open-layer {
+  width: 100%;
+  animation: pc-open-in 0.7s ease both;
+  animation-delay: var(--d, 0s);
+}
+@keyframes pc-open-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ---- shared composition contracts for M3/M4/M5 ---- */
+.parallel-deck .pc-comp-hero .pc-m3-visual,
+.parallel-deck .pc-comp-hero .pc-m4-visual,
+.parallel-deck .pc-comp-hero .pc-m5-visual,
+.parallel-deck .pc-comp-visual-first .pc-m3-visual,
+.parallel-deck .pc-comp-visual-first .pc-m4-visual,
+.parallel-deck .pc-comp-visual-first .pc-m5-visual,
+.parallel-deck .pc-comp-exploded .pc-m3-visual,
+.parallel-deck .pc-comp-exploded .pc-m4-visual,
+.parallel-deck .pc-comp-exploded .pc-m5-visual {
+  flex: 1.35;
+  min-width: 0;
+}
+.parallel-deck .pc-comp-hero .pc-m3-copy,
+.parallel-deck .pc-comp-hero .pc-m4-copy,
+.parallel-deck .pc-comp-hero .pc-m5-copy,
+.parallel-deck .pc-comp-visual-first .pc-m3-copy,
+.parallel-deck .pc-comp-visual-first .pc-m4-copy,
+.parallel-deck .pc-comp-visual-first .pc-m5-copy {
+  flex: 0.85;
+}
+
+.parallel-deck .pc-comp-reverse .pc-m3-body,
+.parallel-deck .pc-comp-reverse .pc-m4-body,
+.parallel-deck .pc-comp-reverse .pc-m5-body {
+  flex-direction: row-reverse;
+}
+
+.parallel-deck .pc-comp-timeline .pc-m3-visual .gv-svg,
+.parallel-deck .pc-comp-timeline .pc-m4-visual .gv-svg,
+.parallel-deck .pc-comp-timeline .pc-m5-visual .gv-svg,
+.parallel-deck .pc-comp-timeline .pc-m3-visual .pv-svg,
+.parallel-deck .pc-comp-timeline .pc-m4-visual .pv-svg,
+.parallel-deck .pc-comp-timeline .pc-m5-visual .pv-svg,
+.parallel-deck .pc-comp-hero .pc-m3-visual .gv-svg,
+.parallel-deck .pc-comp-hero .pc-m4-visual .gv-svg,
+.parallel-deck .pc-comp-hero .pc-m5-visual .gv-svg,
+.parallel-deck .pc-comp-hero .pc-m3-visual .pv-svg,
+.parallel-deck .pc-comp-hero .pc-m4-visual .pv-svg,
+.parallel-deck .pc-comp-hero .pc-m5-visual .pv-svg,
+.parallel-deck .pc-comp-exploded .pc-m3-visual .gv-svg,
+.parallel-deck .pc-comp-exploded .pc-m4-visual .gv-svg,
+.parallel-deck .pc-comp-exploded .pc-m5-visual .gv-svg,
+.parallel-deck .pc-comp-exploded .pc-m3-visual .pv-svg,
+.parallel-deck .pc-comp-exploded .pc-m4-visual .pv-svg,
+.parallel-deck .pc-comp-exploded .pc-m5-visual .pv-svg {
+  max-height: min(58vh, 420px);
+}
+
+.parallel-deck .pc-comp-dashboard .pc-m3-visual,
+.parallel-deck .pc-comp-dashboard .pc-m4-visual,
+.parallel-deck .pc-comp-dashboard .pc-m5-visual {
+  align-items: stretch;
+}
+
+.parallel-deck .pc-comp-quiet .pc-m3-visual,
+.parallel-deck .pc-comp-quiet .pc-m4-visual,
+.parallel-deck .pc-comp-quiet .pc-m5-visual {
+  opacity: 0.98;
+}
+
+.parallel-deck .pc-m3-divider .pv-svg,
+.parallel-deck .pc-m4-divider .pv-svg,
+.parallel-deck .pc-m5-divider .pv-svg,
+.parallel-deck .pc-m3-divider .gv-svg,
+.parallel-deck .pc-m4-divider .gv-svg,
+.parallel-deck .pc-m5-divider .gv-svg {
+  max-height: min(60vh, 440px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallel-deck .pc-open-layer {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}

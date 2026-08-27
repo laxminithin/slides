@@ -1,0 +1,867 @@
+/* =============================================================================
+   INTERNATIONAL BUSINESS — CHAPTER 1 · VISUAL MASTERPIECE & CINEMATIC GLAMOUR
+   -----------------------------------------------------------------------------
+   Presentation-only pass over Module 1. Content, IDs, notes and the frozen V7
+   engine are untouched. Distinct compositions are driven by
+   `.slide-frame[data-composition="…"]` and palette rhythm by tone classes
+   (`.ib-scene-dark`, `.ib-scene-editorial`, `.ib-scene-graphite`,
+   `.ib-scene-emerald`) — both authored via slide metadata (see src/ib/kit.jsx).
+   Chapter arc: local → possibility → connection → trade → expansion → global.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------- PALETTE ---
+   Executive glamour = boardroom luxury, not nightclub. Tones vary the canvas
+   while preserving the Ivory · Navy · Graphite · Gold · Emerald identity. */
+
+/* Dark scene — used sparingly (opener, finale, one climax) for impact. */
+.international-business-deck .slide-frame.ib-scene-dark {
+  background:
+    radial-gradient(ellipse at 78% 18%, rgba(184, 146, 58, 0.16), transparent 46%),
+    radial-gradient(ellipse at 12% 88%, rgba(47, 107, 87, 0.16), transparent 44%),
+    linear-gradient(155deg, #0b1e38 0%, #0c2140 52%, #0a1830 100%);
+}
+.ib-scene-dark .slide-kicker,
+.ib-scene-dark .ib-section-label { color: #d8bd7e; }
+.ib-scene-dark .slide-title,
+.ib-scene-dark .ib-story-panel h2,
+.ib-scene-dark .ib-hero-title,
+.ib-scene-dark .ib-v9-hook-q { color: #f6f1e6; }
+.ib-scene-dark .ib-story-panel > p,
+.ib-scene-dark .slide-subtitle { color: rgba(240, 236, 226, 0.82); }
+.ib-scene-dark .slide-footer { color: rgba(230, 226, 216, 0.5); }
+.ib-scene-dark .ib-takeaway {
+  background: rgba(184, 146, 58, 0.14);
+  color: #f3ead6;
+}
+.ib-scene-dark .ib-section-label::after { background: #d8bd7e; }
+
+/* Editorial white — crisp gallery white for quiet statements. */
+.international-business-deck .slide-frame.ib-scene-editorial {
+  background:
+    radial-gradient(ellipse at 88% 6%, rgba(26, 79, 139, 0.05), transparent 40%),
+    linear-gradient(180deg, #ffffff 0%, #fbfbfa 100%);
+}
+
+/* Graphite executive — boardroom gravity for decision/pressure slides. */
+.international-business-deck .slide-frame.ib-scene-graphite {
+  background:
+    radial-gradient(ellipse at 82% 8%, rgba(184, 146, 58, 0.1), transparent 44%),
+    linear-gradient(160deg, #d7dee8 0%, #ccd5e1 52%, #d9e0ea 100%);
+}
+.ib-scene-graphite .ib-section-label { color: #3f5678; }
+
+/* Emerald tint — value/accumulation (advantages, importance). */
+.international-business-deck .slide-frame.ib-scene-emerald {
+  background:
+    radial-gradient(ellipse at 84% 12%, rgba(47, 107, 87, 0.16), transparent 48%),
+    linear-gradient(165deg, #e8f2ea 0%, #dcedE1 58%, #e6f1e9 100%);
+}
+.ib-scene-emerald .ib-section-label { color: #2f6b57; }
+.ib-scene-emerald .ib-section-label::after { background: #2f6b57; }
+
+/* ------------------------------------------------------------ COMPOSITIONS --
+   Each composition re-proportions the .ib-chapter two-panel grid and adjusts
+   type + accents to express the slide's idea. Panels keep min-height:0 so the
+   overflow-safe geometry is preserved. */
+
+/* QUIET STATEMENT — roomy, large voice, controlled whitespace (the hook). */
+.international-business-deck .slide-frame[data-composition="quiet"] .ib-chapter {
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.92fr);
+  align-items: center;
+  gap: clamp(28px, 3.4vw, 56px);
+}
+.slide-frame[data-composition="quiet"] .ib-story-panel h2,
+.slide-frame[data-composition="quiet"] .ib-v9-hook-q {
+  font-size: clamp(34px, 4.1vw, 66px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+.slide-frame[data-composition="quiet"] .ib-story-panel > p {
+  margin-top: clamp(16px, 2vh, 26px);
+  max-width: 44ch;
+  font-size: clamp(15px, 1.15vw, 20px);
+  line-height: 1.5;
+}
+
+/* DEFINITION — spotlight glow focuses the key concept. */
+.slide-frame[data-composition="definition"] .ib-story-panel {
+  position: relative;
+  overflow: clip; /* contain the ambient glow so it never extends scroll width */
+}
+.slide-frame[data-composition="definition"] .ib-story-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 62%;
+  background: radial-gradient(ellipse at 26% 40%, rgba(184, 146, 58, 0.16), transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+  animation: ib1Glow 6s ease-in-out infinite;
+}
+
+/* Explain (meaning) reads as editorial labelled notes, not a card grid. */
+.slide-frame[data-composition="definition"] .ib-v9-explain { align-content: center; gap: 14px 20px; }
+.slide-frame[data-composition="definition"] .ib-v9-explain article {
+  padding: 4px 0 6px 16px;
+  border: 0;
+  border-left: 2px solid var(--ib-gold);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  animation: ibRise 0.6s ease both;
+  animation-delay: calc(var(--i) * 0.09s);
+}
+.slide-frame[data-composition="definition"] .ib-v9-explain span { color: var(--ib-blue); }
+
+/* TIMELINE — hand the stage to the timeline; narrow the copy. */
+.international-business-deck .slide-frame[data-composition="timeline"] .ib-chapter {
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.42fr);
+}
+.slide-frame[data-composition="timeline"] .ib-v9-node {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--ib-navy);
+  background: #fff;
+  border: 2px solid var(--ib-gold);
+  box-shadow: 0 0 0 3px rgba(184, 146, 58, 0.15);
+}
+
+/* EDITORIAL — asymmetric, oversized serif headline, wide gold rule. */
+.international-business-deck .slide-frame[data-composition="editorial"] .ib-chapter {
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.26fr);
+}
+.slide-frame[data-composition="editorial"] .ib-story-panel h2 {
+  font-size: clamp(30px, 3.5vw, 54px);
+  line-height: 1.05;
+}
+.slide-frame[data-composition="editorial"] .ib-section-label::after { width: 64px; }
+
+/* WORLD CANVAS — the world dominates; copy is a caption beside it. */
+.international-business-deck .slide-frame[data-composition="world-canvas"] .ib-chapter {
+  grid-template-columns: minmax(0, 0.66fr) minmax(0, 1.55fr);
+}
+
+/* When definition + explain sit beside a map, keep explain notes compact. */
+.slide-frame[data-composition="world-canvas"] .ib-v9-explain {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  margin-top: 8px;
+  height: auto;
+  align-content: start;
+}
+.slide-frame[data-composition="world-canvas"] .ib-v9-explain article {
+  padding: 2px 0 4px 12px;
+  border: 0;
+  border-left: 2px solid var(--ib-gold);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.slide-frame[data-composition="world-canvas"] .ib-v9-explain p {
+  font-size: clamp(11px, 0.82vw, 13px);
+  line-height: 1.25;
+}
+.slide-frame[data-composition="world-canvas"] .ib-v9-explain span {
+  font-size: clamp(10px, 0.75vw, 11px);
+}
+
+/* FRAMEWORK — balanced, vertically centred conceptual system. */
+.international-business-deck .slide-frame[data-composition="framework"] .ib-chapter {
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.2fr);
+  align-items: center;
+}
+
+/* Orbit → a system radiating from a strong hub (fills the dead centre so the
+   forces read as a framework, not scattered labels). Scoped to Ch1 by
+   composition, so Modules 2-6 orbits are untouched. */
+.slide-frame[data-composition="framework"] .ib-orbit::after,
+.slide-frame[data-composition="world-canvas"] .ib-orbit::after {
+  content: "";
+  position: absolute;
+  inset: 4%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(26, 79, 139, 0.09), transparent 58%),
+    conic-gradient(from 0deg, rgba(26, 79, 139, 0.05) 0 2deg, transparent 2deg 30deg,
+      rgba(26, 79, 139, 0.05) 30deg 32deg, transparent 32deg 60deg,
+      rgba(26, 79, 139, 0.05) 60deg 62deg, transparent 62deg 90deg,
+      rgba(26, 79, 139, 0.05) 90deg 92deg, transparent 92deg 120deg,
+      rgba(26, 79, 139, 0.05) 120deg 122deg, transparent 122deg 150deg,
+      rgba(26, 79, 139, 0.05) 150deg 152deg, transparent 152deg 180deg,
+      rgba(26, 79, 139, 0.05) 180deg 182deg, transparent 182deg 210deg,
+      rgba(26, 79, 139, 0.05) 210deg 212deg, transparent 212deg 240deg,
+      rgba(26, 79, 139, 0.05) 240deg 242deg, transparent 242deg 270deg,
+      rgba(26, 79, 139, 0.05) 270deg 272deg, transparent 272deg 300deg,
+      rgba(26, 79, 139, 0.05) 300deg 302deg, transparent 302deg 330deg,
+      rgba(26, 79, 139, 0.05) 330deg 332deg, transparent 332deg 360deg);
+  pointer-events: none;
+  z-index: 0;
+  animation: ibRotateSoft 60s linear infinite;
+}
+.slide-frame[data-composition="framework"] .orbit-center,
+.slide-frame[data-composition="world-canvas"] .orbit-center {
+  z-index: 2;
+  width: 172px;
+  height: 172px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 26%, #2a5f9e, var(--ib-navy) 72%);
+  box-shadow: 0 24px 60px rgba(12, 26, 46, 0.28), 0 0 0 10px rgba(26, 79, 139, 0.06);
+}
+.slide-frame[data-composition="framework"] .ib-orbit span,
+.slide-frame[data-composition="world-canvas"] .ib-orbit span {
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 30px rgba(12, 26, 46, 0.12);
+}
+
+/* BOARDROOM — executive gravity: gold rule under the title, graphite calm. */
+.slide-frame[data-composition="boardroom"] .ib-story-panel h2 {
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(184, 146, 58, 0.5);
+}
+
+/* SPLIT CONTRAST — two opposing worlds, equal weight. */
+.international-business-deck .slide-frame[data-composition="split"] .ib-chapter {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+.slide-frame[data-composition="split"] .ib-v8-compare { gap: 14px; }
+
+/* CORRIDOR — perspective progression through stages. */
+.international-business-deck .slide-frame[data-composition="corridor"] .ib-chapter {
+  grid-template-columns: minmax(0, 0.74fr) minmax(0, 1.4fr);
+}
+
+/* CASE — warm dossier framing distinct from theory (works with MiniCase). */
+.slide-frame[data-composition="case"] .ib-story-panel::after {
+  content: "CASE FILE";
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: rgba(184, 146, 58, 0.7);
+}
+.slide-frame[data-composition="case"] .ib-story-panel { position: relative; }
+
+/* EXECUTIVE SUMMARY — dense but calm (ExamPack). */
+.international-business-deck .slide-frame[data-composition="summary"] .ib-chapter {
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
+}
+
+/* FINALE / OPENER — dark hero canvas; centre the message. */
+.slide-frame[data-composition="finale"] .ib-story-panel { align-content: center; }
+.slide-frame[data-composition="finale"] .ib-story-panel h2 {
+  font-size: clamp(32px, 3.8vw, 60px);
+  line-height: 1.04;
+}
+/* Recap cards fill the visual column as a calm 2×2 on the dark canvas. */
+.international-business-deck .slide-frame[data-composition="finale"] .ib-visual-panel .ib-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-content: center;
+}
+.slide-frame[data-composition="finale"] .ib-visual-panel .ib-card-grid article {
+  min-height: 140px;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+/* ------------------------------------------------------------------ MOTION --
+   Composition-scoped ambient motion. Base content entrances (ibRise etc.) are
+   left intact; these are additive atmospheres only. */
+
+@keyframes ib1Glow {
+  0%, 100% { opacity: 0.55; transform: translate3d(0, 0, 0) scale(1); }
+  50% { opacity: 1; transform: translate3d(0, -2%, 0) scale(1.04); }
+}
+@keyframes ib1Drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -1.4%, 0); }
+}
+@keyframes ib1RuleDraw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Gold section-rule draws in on entry, per slide. */
+.international-business-deck .slide-body .ib-section-label::after {
+  transform-origin: left center;
+  animation: ib1RuleDraw 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: 0.15s;
+}
+
+/* Ambient float for the world map so map-led scenes feel alive. */
+.slide-frame[data-composition="world-canvas"] .ib-world,
+.slide-frame.ib-scene-dark .ib-world {
+  animation: ib1Drift 12s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------- TEXT CHOREOGRAPHY -
+   Headline mask-reveal for the marquee compositions. Executive, not flashy. */
+@keyframes ib1HeadlineReveal {
+  from { opacity: 0; clip-path: inset(0 0 100% 0); transform: translateY(6px); }
+  to { opacity: 1; clip-path: inset(0 0 0 0); transform: translateY(0); }
+}
+.slide-frame[data-composition="quiet"] .ib-story-panel h2,
+.slide-frame[data-composition="quiet"] .ib-v9-hook-q,
+.slide-frame[data-composition="editorial"] .ib-story-panel h2,
+.slide-frame[data-composition="finale"] .ib-story-panel h2 {
+  animation: ib1HeadlineReveal 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+/* --------------------------------------------------------------- DEPTH ------
+   Soft foreground vignette on hero canvases for cinematic depth (never gamey). */
+.slide-frame.ib-scene-dark .slide-body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 60%, transparent 55%, rgba(6, 16, 32, 0.28) 100%);
+  z-index: 3;
+}
+.slide-frame.ib-scene-dark .slide-body { position: relative; }
+
+/* ------------------------------------------------------- REDUCED MOTION ----- */
+@media (prefers-reduced-motion: reduce) {
+  .slide-frame[data-composition] .ib-story-panel::before,
+  .slide-frame[data-composition] .ib-world,
+  .slide-frame[data-composition] .ib-section-label::after,
+  .slide-frame[data-composition] .ib-story-panel h2,
+  .slide-frame[data-composition] .ib-v9-hook-q {
+    animation: none !important;
+    opacity: 1 !important;
+    clip-path: none !important;
+    transform: none !important;
+  }
+}
+
+/* =============================================================================
+   CHAPTER 1 — SIGNATURE SCENES + PREMIUM WORLD MAP  (benchmark lock)
+   Distinct cinematic grammar per scene. Final keyframe = settled resting state.
+   ========================================================================== */
+
+/* ---- Shared premium world map ------------------------------------------- */
+.ib-worldmap {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+  overflow: visible;
+}
+.wm-ocean {
+  fill: rgba(26, 79, 139, 0.07);
+}
+.wm-graticule line {
+  stroke: rgba(26, 79, 139, 0.08);
+  stroke-width: 0.55;
+  stroke-dasharray: 2 5;
+}
+.wm-continent {
+  fill: #f1e8d6;
+  stroke: rgba(18, 36, 58, 0.28);
+  stroke-width: 1.15;
+  opacity: 0;
+  animation: wmLandIn 0.85s ease both;
+  animation-delay: calc(0.06s + var(--i) * 0.05s);
+}
+.wm-land {
+  filter: drop-shadow(0 1px 1.4px rgba(11, 30, 56, 0.14));
+}
+@keyframes wmLandIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.wm-marker {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: wmArrive 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: calc(0.9s + var(--i) * 0.1s);
+}
+/* Destination reaction: route arrives → marker activates with pulse */
+@keyframes wmArrive {
+  0% { opacity: 0; transform: scale(0.25); }
+  45% { opacity: 1; transform: scale(1.22); }
+  70% { transform: scale(0.96); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.wm-dot-halo {
+  fill: rgba(184, 146, 58, 0.18);
+  stroke: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: wmHaloSettle 1.1s ease both;
+  animation-delay: inherit;
+}
+@keyframes wmHaloSettle {
+  0% { opacity: 0; transform: scale(0.4); }
+  40% { opacity: 1; transform: scale(1.35); }
+  100% { opacity: 0.85; transform: scale(1); }
+}
+.wm-dot {
+  fill: var(--ib-navy, #0b1e38);
+  stroke: #fff;
+  stroke-width: 1.6;
+}
+.wm-marker.kind-hq .wm-dot { fill: var(--ib-gold, #b8923a); }
+.wm-marker.kind-regional .wm-dot { fill: var(--ib-emerald, #2f6b57); }
+.wm-marker.kind-mfg .wm-dot,
+.wm-marker.kind-distribution .wm-dot { fill: var(--ib-blue, #1a4f8b); }
+.wm-marker.kind-rnd .wm-dot { fill: #6b4f8b; }
+.wm-leader {
+  stroke: rgba(26, 42, 64, 0.35);
+  stroke-width: 1;
+  fill: none;
+}
+.wm-label {
+  paint-order: stroke fill;
+}
+.wm-name {
+  fill: var(--ib-navy, #0b1e38);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-family: var(--font, "Source Sans 3", system-ui, sans-serif);
+  stroke: rgba(251, 248, 242, 0.92);
+  stroke-width: 3.5px;
+  stroke-linejoin: round;
+}
+.wm-role {
+  fill: var(--ib-muted, #5c6b7e);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-family: var(--font, "Source Sans 3", system-ui, sans-serif);
+  stroke: rgba(251, 248, 242, 0.9);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+.wm-region {
+  fill: rgba(26, 79, 139, 0.34);
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  font-family: var(--font, "Source Sans 3", system-ui, sans-serif);
+  opacity: 0;
+  animation: wmLandIn 0.8s ease both;
+  animation-delay: calc(0.4s + var(--i) * 0.1s);
+}
+.wm-pulse {
+  fill: none;
+  stroke: rgba(184, 146, 58, 0.5);
+  stroke-width: 1.5;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: wmPulse 2.8s ease-in-out infinite;
+}
+@keyframes wmPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.12; transform: scale(2.05); }
+}
+
+.wm-route-g {
+  opacity: 0;
+  animation: wmRouteShow 1.1s ease both;
+  --draw-delay: calc(1.25s + var(--i) * 0.14s);
+  animation-delay: var(--draw-delay);
+}
+@keyframes wmRouteShow { to { opacity: 1; } }
+.wm-route {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: wmDraw 1.15s ease both;
+  animation-delay: var(--draw-delay);
+}
+.wm-route-g .wm-route-label {
+  opacity: 0;
+  animation: wmLandIn 0.45s ease both;
+  animation-delay: calc(var(--draw-delay) + 0.65s);
+}
+@keyframes wmDraw {
+  0% { stroke-dashoffset: 100; opacity: 0.25; }
+  25% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.92; }
+}
+.wm-route-label {
+  fill: var(--ib-muted, #5c6b7e);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: var(--font, "Source Sans 3", system-ui, sans-serif);
+  stroke: rgba(251, 248, 242, 0.92);
+  stroke-width: 3px;
+  paint-order: stroke fill;
+}
+.wm-flow-dot { fill: var(--ib-gold, #b8923a); opacity: 0.8; }
+
+.flow-goods .wm-route { stroke: #b8923a; }
+.flow-services .wm-route { stroke: #c4a35a; stroke-width: 1.8; }
+.flow-capital .wm-route { stroke: #2f6b57; stroke-width: 1.7; }
+.flow-technology .wm-route,
+.flow-tech .wm-route { stroke: #1a4f8b; stroke-width: 1.75; }
+.flow-information .wm-route,
+.flow-info .wm-route { stroke: #8794a8; stroke-width: 1.5; }
+.flow-people .wm-route { stroke: #9a5a86; stroke-width: 1.65; }
+
+.flow-goods { color: #b8923a; }
+.flow-services { color: #c4a35a; }
+.flow-capital { color: #2f6b57; }
+.flow-technology, .flow-tech { color: #1a4f8b; }
+.flow-information, .flow-info { color: #8794a8; }
+.flow-people { color: #9a5a86; }
+
+.ib-world.ib-world-premium,
+.ib-worldmap.ib-world {
+  filter: drop-shadow(0 14px 22px rgba(12, 26, 46, 0.1));
+}
+
+/* ---- SCENE A · WORLD OPENS — local → global aerial pull-back ------------- */
+.ib-worldopens {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.wo-mapwrap {
+  position: absolute;
+  inset: 3% 1% 7%;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform-origin: 72% 40%; /* India */
+  animation: woMapReveal 6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes woMapReveal {
+  0% { opacity: 0.4; transform: scale(2.4); filter: blur(1.5px); }
+  22% { opacity: 0.85; transform: scale(1.55); filter: blur(0); }
+  48% { opacity: 1; transform: scale(1.18); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.wo-map { width: 100%; height: 100%; max-height: 100%; }
+.ib-worldopens .wm-continent {
+  fill: rgba(241, 232, 214, 0.58);
+  stroke: rgba(168, 196, 230, 0.4);
+}
+.ib-worldopens .wm-ocean { fill: rgba(8, 20, 40, 0.35); }
+.ib-worldopens .wm-name {
+  fill: #f6f1e6;
+  stroke: rgba(11, 30, 56, 0.55);
+}
+.ib-worldopens .wm-role {
+  fill: rgba(216, 189, 126, 0.88);
+  stroke: rgba(11, 30, 56, 0.45);
+}
+.ib-worldopens .wm-leader { stroke: rgba(216, 189, 126, 0.45); }
+.ib-worldopens .wm-route-label {
+  fill: rgba(230, 220, 190, 0.9);
+  stroke: rgba(11, 30, 56, 0.5);
+}
+/* India first, then destinations react as routes complete */
+.ib-worldopens .wm-marker { animation-delay: calc(2.2s + var(--arrive, var(--i)) * 0.28s); }
+.ib-worldopens .wm-route-g { --draw-delay: calc(2.8s + var(--i) * 0.22s); }
+.ib-worldopens .wm-pulse { animation-delay: 0.2s; }
+
+.wo-copy { position: relative; z-index: 4; text-align: center; padding: 0 4vw; pointer-events: none; }
+.wo-eyebrow, .wo-title, .wo-sub, .wo-hint { opacity: 0; animation: woCopy 1.1s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+.wo-eyebrow { animation-delay: 5.1s; color: #d8bd7e; font-size: clamp(11px, 0.9vw, 14px); font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase; }
+.wo-title { animation-delay: 5.3s; margin: 10px 0 0; font-family: var(--ib-serif); font-weight: 600; font-size: clamp(52px, 8vw, 120px); line-height: 0.98; letter-spacing: -0.02em; color: #f6f1e6; text-transform: uppercase; }
+.wo-sub { animation-delay: 5.55s; margin: 8px 0 0; font-family: var(--ib-serif); font-size: clamp(18px, 2vw, 30px); color: rgba(240,236,226,0.9); }
+.wo-hint { animation-delay: 5.9s; margin: 18px auto 0; max-width: 46ch; font-size: clamp(12px, 1vw, 16px); color: rgba(216,189,126,0.8); font-style: italic; }
+@keyframes woCopy { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
+
+/* ---- SCENE B · GLOBALIZATION — establish → activate → bloom by flow ----- */
+.ib-globalization { display: flex; flex-direction: column; height: 100%; min-height: 0; gap: 8px; }
+.ib-globalization .gn-stage,
+.ib-globalization .ib-worldmap { flex: 1; min-height: 0; width: 100%; }
+.ib-globalization .ib-worldmap {
+  animation: gnEstablish 1.2s ease both;
+}
+@keyframes gnEstablish {
+  from { opacity: 0.55; transform: scale(1.04); }
+  to { opacity: 1; transform: scale(1); }
+}
+.ib-globalization .wm-marker {
+  animation-delay: calc(0.7s + var(--arrive, var(--i)) * 0.09s);
+}
+.ib-globalization .flow-goods { --draw-delay: calc(1.5s + var(--i) * 0.08s); }
+.ib-globalization .flow-services { --draw-delay: calc(2.15s + var(--i) * 0.08s); }
+.ib-globalization .flow-capital { --draw-delay: calc(2.7s + var(--i) * 0.08s); }
+.ib-globalization .flow-technology { --draw-delay: calc(3.3s + var(--i) * 0.08s); }
+.ib-globalization .flow-information { --draw-delay: calc(3.9s + var(--i) * 0.08s); }
+.ib-globalization .flow-people { --draw-delay: calc(4.45s + var(--i) * 0.08s); }
+
+.gn-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 12px;
+  flex-shrink: 0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(26, 79, 139, 0.08);
+}
+.gn-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: clamp(10px, 0.78vw, 12px);
+  font-weight: 700;
+  color: var(--ib-muted);
+  letter-spacing: 0.02em;
+}
+.gn-key::before {
+  content: "";
+  width: 16px;
+  height: 3px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.gn-phases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 10px;
+  flex-shrink: 0;
+  max-height: 26%;
+  overflow: hidden;
+}
+.gn-phases article {
+  padding: 5px 8px;
+  border-left: 2px solid var(--ib-gold);
+  opacity: 0;
+  animation: imStage 0.5s ease both;
+  animation-delay: calc(5.1s + var(--i) * 0.08s);
+}
+.gn-phases strong {
+  display: block;
+  font-size: clamp(10px, 0.76vw, 12px);
+  color: var(--ib-navy);
+  font-family: var(--ib-serif);
+}
+.gn-phases p {
+  margin: 2px 0 0;
+  font-size: clamp(9px, 0.68vw, 11px);
+  color: var(--ib-muted);
+  line-height: 1.25;
+}
+
+/* ---- SCENE C · INTERNATIONALIZATION — India focus → outward expansion --- */
+.ib-intlmap { display: flex; flex-direction: column; height: 100%; min-height: 0; gap: 8px; }
+.im-cam {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  transform-origin: 72% 40%;
+  animation: imCamOut 5.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+@keyframes imCamOut {
+  0% { transform: scale(2.15) translate(6%, 3%); }
+  18% { transform: scale(1.7) translate(4%, 2%); }   /* Domestic — India */
+  38% { transform: scale(1.35) translate(2%, 1%); }  /* International */
+  58% { transform: scale(1.15); }                    /* Multinational */
+  78% { transform: scale(1.05); }                    /* Global */
+  100% { transform: scale(1) translate(0, 0); }      /* Transnational */
+}
+.ib-intlmap .im-stage,
+.ib-intlmap .ib-worldmap { width: 100%; height: 100%; min-height: 0; }
+
+.ib-intlmap .wm-marker.s1 { animation-delay: 0.25s; }
+.ib-intlmap .wm-marker.s2,
+.ib-intlmap .wm-route-g.s2 { --draw-delay: 1.1s; animation-delay: 1.1s; }
+.ib-intlmap .wm-marker.s3,
+.ib-intlmap .wm-route-g.s3 { --draw-delay: 2.15s; animation-delay: 2.15s; }
+.ib-intlmap .wm-marker.s4,
+.ib-intlmap .wm-route-g.s4 { --draw-delay: 3.2s; animation-delay: 3.2s; }
+.ib-intlmap .wm-marker.s5,
+.ib-intlmap .wm-route-g.s5 { --draw-delay: 4.2s; animation-delay: 4.2s; }
+.ib-intlmap .wm-route-g.s2 .wm-route,
+.ib-intlmap .wm-route-g.s3 .wm-route,
+.ib-intlmap .wm-route-g.s4 .wm-route,
+.ib-intlmap .wm-route-g.s5 .wm-route { animation-delay: var(--draw-delay); }
+.ib-intlmap .wm-route-g.s2 .wm-route-label,
+.ib-intlmap .wm-route-g.s3 .wm-route-label,
+.ib-intlmap .wm-route-g.s4 .wm-route-label,
+.ib-intlmap .wm-route-g.s5 .wm-route-label { animation-delay: calc(var(--draw-delay) + 0.6s); }
+
+.im-stages {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+.im-stage-item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  padding: 8px 4px 6px;
+  border-top: 2px solid var(--ib-border);
+  opacity: 0;
+  animation: imStage 0.55s ease both;
+}
+.im-stage-num {
+  display: inline-grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  margin: 0 auto 3px;
+  border-radius: 50%;
+  background: var(--ib-navy);
+  color: #fff;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 800;
+  font-family: var(--font, system-ui, sans-serif);
+}
+.im-stage-item b {
+  display: block;
+  font-family: var(--ib-serif);
+  font-size: clamp(11px, 0.82vw, 13px);
+  color: var(--ib-navy);
+}
+.im-stage-item span {
+  display: block;
+  margin-top: 2px;
+  font-size: clamp(8.5px, 0.65vw, 10.5px);
+  color: var(--ib-muted);
+  line-height: 1.25;
+}
+.im-stage-item.s1 { animation-delay: 0.25s; border-color: var(--ib-gold); }
+.im-stage-item.s1 .im-stage-num { background: var(--ib-gold); color: var(--ib-navy); }
+.im-stage-item.s2 { animation-delay: 1.2s; }
+.im-stage-item.s3 { animation-delay: 2.25s; }
+.im-stage-item.s4 { animation-delay: 3.3s; }
+.im-stage-item.s5 { animation-delay: 4.3s; }
+@keyframes imStage { 0% { opacity: 0; transform: translateY(8px); } 100% { opacity: 1; transform: translateY(0); } }
+
+/* ---- BORDER CROSSING — follow movement geographically ------------------- */
+.ib-border {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  gap: 6px;
+}
+.ib-border .bx-map,
+.ib-border .ib-worldmap { flex: 1; min-height: 0; width: 100%; }
+.ib-border .wm-marker.arrive-0 { animation-delay: 0.2s; }
+.ib-border .wm-route-g { --draw-delay: calc(0.55s + var(--i) * 0.38s); }
+.ib-border .wm-marker:not(.arrive-0) {
+  animation-delay: calc(1.1s + (var(--arrive) - 1) * 0.38s);
+}
+.bx-caption {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(10px, 0.78vw, 12px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ib-muted);
+  flex-shrink: 0;
+}
+
+/* ---- ENTRY PATHWAY (entry modes) — rising commitment ------------------- */
+.ib-pathway { position: relative; height: 100%; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 20px; }
+.pw-axis { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ib-gold); }
+.pw-x { align-self: flex-start; margin-bottom: 8px; }
+.pw-track { display: flex; align-items: flex-end; gap: 10px; height: 100%; min-height: 0; }
+.pw-step { position: relative; flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 12px 12px 14px; border: 1px solid var(--ib-border); border-bottom: 3px solid var(--ib-gold); border-radius: 4px 4px 0 0; background: rgba(251,250,247,0.94); box-shadow: var(--ib-shadow); height: calc(48% + var(--i) * (52% / (var(--n) - 1))); opacity: 0; animation: ibRise 0.6s ease both; animation-delay: calc(var(--i) * 0.13s); }
+.pw-node {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--ib-navy);
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 9px;
+  font-weight: 800;
+  box-shadow: 0 0 0 1px var(--ib-blue);
+}
+.pw-step strong { font-family: var(--ib-serif); font-size: clamp(12px, 0.95vw, 16px); color: var(--ib-navy); }
+.pw-step p { margin: 5px 0 0; font-size: clamp(10px, 0.78vw, 13px); color: var(--ib-muted); line-height: 1.28; }
+
+/* ---- FORCE FIELD (changing scenario) — forces around the firm ---------- */
+.ib-forcefield { position: relative; height: 100%; min-height: 0; display: grid; place-items: center; }
+.ff-core { z-index: 2; width: clamp(120px, 12vw, 158px); height: clamp(120px, 12vw, 158px); border-radius: 50%; display: grid; place-items: center; text-align: center; padding: 16px; color: #fff; font-family: var(--ib-serif); font-weight: 600; font-size: clamp(13px, 1vw, 16px); background: radial-gradient(circle at 32% 26%, #2a5f9e, var(--ib-navy) 72%); box-shadow: 0 22px 54px rgba(12,26,46,0.26); }
+.ff-force { position: absolute; width: clamp(120px, 12vw, 158px); padding: 9px 12px; border: 1px solid var(--ib-border); border-radius: 4px; background: rgba(251,250,247,0.96); box-shadow: var(--ib-shadow); opacity: 0; animation: ffIn 0.6s ease both, ffPush 5s ease-in-out infinite; animation-delay: calc(var(--i) * 0.12s), calc(0.8s + var(--i) * 0.12s); }
+.ff-force strong { display: block; font-size: clamp(11px, 0.85vw, 13px); color: var(--ib-navy); }
+.ff-force p { margin: 3px 0 0; font-size: clamp(10px, 0.72vw, 12px); color: var(--ib-muted); line-height: 1.25; }
+.ff-1 { top: 2%; left: 50%; --tx: -50%; --ty: 0; }
+.ff-2 { top: 26%; right: 0; --tx: 0; --ty: 0; }
+.ff-3 { bottom: 6%; right: 4%; --tx: 0; --ty: 0; }
+.ff-4 { bottom: 6%; left: 4%; --tx: 0; --ty: 0; }
+.ff-5 { top: 26%; left: 0; --tx: 0; --ty: 0; }
+.ff-6 { top: 2%; left: 8%; --tx: 0; --ty: 0; }
+@keyframes ffIn { 0% { opacity: 0; transform: translate(var(--tx, 0), 8px); } 100% { opacity: 1; transform: translate(var(--tx, 0), 0); } }
+@keyframes ffPush { 0%, 100% { transform: translate(var(--tx, 0), 0); } 50% { transform: translate(var(--tx, 0), -5px); } }
+
+/* ---- SPICE ROUTE MINI — historical directional travel ------------------- */
+.ib-spiceroute { width: 100%; max-width: 360px; height: auto; margin-top: 14px; }
+.sr-land { fill: none; stroke: rgba(26,79,139,0.18); stroke-width: 2; }
+.sr-route {
+  fill: none;
+  stroke: var(--ib-gold);
+  stroke-width: 2;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  animation: srDraw 2.6s ease 0.3s both;
+}
+@keyframes srDraw { to { stroke-dashoffset: 0; } }
+.sr-arrow {
+  fill: var(--ib-gold);
+  opacity: 0;
+  animation: wmLandIn 0.4s ease 2.4s both;
+}
+.sr-dot { fill: var(--ib-navy); }
+.sr-dot.d1 { animation: wmArrive 0.5s ease 0.4s both; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.sr-dot.d2 { fill: var(--ib-gold); animation: wmArrive 0.5s ease 1.2s both; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.sr-dot.d3 { animation: wmArrive 0.5s ease 2.2s both; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.sr-t { font-size: 11px; font-weight: 700; fill: var(--ib-muted); font-family: system-ui, sans-serif; }
+.sr-flow {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  fill: var(--ib-gold);
+  font-family: system-ui, sans-serif;
+  opacity: 0;
+  animation: wmLandIn 0.5s ease 1.6s both;
+}
+
+/* ---- Reduced motion — jump to settled final frame ---------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .wo-mapwrap, .wo-eyebrow, .wo-title, .wo-sub, .wo-hint,
+  .wm-continent, .wm-marker, .wm-route-g, .wm-route, .wm-route-label, .wm-region, .wm-pulse,
+  .wm-dot-halo, .im-cam, .im-stage-item, .gn-phases article, .pw-step, .ff-force,
+  .sr-route, .sr-arrow, .sr-dot, .sr-flow, .wm-flow-dot,
+  .ib-globalization .ib-worldmap {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+  .wo-mapwrap { transform: scale(1) !important; }
+  .wm-flow-dot { display: none; }
+}

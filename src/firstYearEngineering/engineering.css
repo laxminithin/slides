@@ -1,0 +1,335 @@
+.first-year-engineering-deck {
+  --eng-ink: #172033;
+  --eng-electrical: #d97706;
+  --eng-electronics: #7c3aed;
+  --eng-mechanical: #0f766e;
+  --eng-civil: #b45309;
+  --eng-cad: #2563eb;
+  --eng-aero: #0369a1;
+  --eng-accent: var(--eng-electrical);
+}
+
+.first-year-engineering-deck .slide-frame {
+  background:
+    linear-gradient(135deg, rgba(217, 119, 6, 0.07), transparent 30%),
+    linear-gradient(315deg, rgba(15, 118, 110, 0.07), transparent 34%),
+    #fffdf8;
+}
+
+.first-year-engineering-deck .fy-stage {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  place-items: stretch;
+  background: transparent;
+}
+
+.first-year-engineering-deck .fy-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  grid-template-rows: 0 minmax(0, 1fr) 0;
+}
+
+.first-year-engineering-deck .fy-header,
+.first-year-engineering-deck .fy-footer {
+  display: none;
+}
+
+.first-year-engineering-deck .fy-body {
+  grid-row: 2;
+  height: 100%;
+  padding: 0;
+  grid-template-columns: 1fr !important;
+  gap: clamp(0.5rem, 1vw, 0.9rem);
+  min-width: 0;
+  min-height: 0;
+}
+
+.first-year-engineering-deck .fy-copy-zone,
+.first-year-engineering-deck .fy-visual-zone {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  place-items: start center;
+  overflow: hidden;
+  padding-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.eng-hero {
+  width: min(100%, 86rem);
+  height: 100%;
+  min-height: 28rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.38fr);
+  gap: clamp(0.7rem, 1.2vw, 1.1rem);
+  align-items: stretch;
+}
+
+.eng-hero[data-eng-domain="electrical"] { --eng-accent: var(--eng-electrical); }
+.eng-hero[data-eng-domain="electronics"] { --eng-accent: var(--eng-electronics); }
+.eng-hero[data-eng-domain="mechanical"] { --eng-accent: var(--eng-mechanical); }
+.eng-hero[data-eng-domain="civil"] { --eng-accent: var(--eng-civil); }
+.eng-hero[data-eng-domain="cad"] { --eng-accent: var(--eng-cad); }
+.eng-hero[data-eng-domain="aero"] { --eng-accent: var(--eng-aero); }
+
+.eng-svg,
+.first-year-engineering-deck .fy-graph,
+.first-year-engineering-deck .fy-concept-map,
+.first-year-engineering-deck .fy-waveform {
+  width: min(100%, 64rem);
+  height: min(calc(100% - 8px), 34rem);
+  min-height: 16rem;
+  max-height: calc(100% - 12px);
+  justify-self: center;
+  align-self: start;
+  filter: drop-shadow(0 16px 24px rgba(23, 32, 51, 0.12));
+  animation: engRise .9s ease both;
+}
+
+.eng-canvas {
+  fill: rgba(255, 255, 255, 0.92);
+  stroke: rgba(23, 32, 51, 0.14);
+  stroke-width: 2;
+}
+
+.eng-svg text {
+  font-size: 22px;
+  font-weight: 800;
+  fill: var(--eng-ink);
+}
+
+.eng-wire,
+.eng-current,
+.eng-field,
+.eng-flux,
+.eng-belt,
+.eng-link,
+.eng-force,
+.eng-projector,
+.eng-jet,
+.eng-flow,
+.eng-moment,
+.eng-wave,
+.eng-inductor,
+.eng-airfoil {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.eng-wire { stroke: #334155; }
+.eng-wire.active, .eng-wire.live { stroke: var(--eng-accent, #d97706); }
+.eng-current {
+  stroke: #2563eb;
+  stroke-width: 5;
+  stroke-dasharray: 16 14;
+  animation: engTravel 1.8s linear infinite;
+}
+.eng-resistor, .eng-diode, .eng-diode-bar, .eng-plate, .eng-source line {
+  fill: none;
+  stroke: #172033;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.eng-diode { fill: color-mix(in srgb, var(--eng-accent, #d97706) 18%, white); }
+.eng-node, .eng-point, .eng-centroid, .eng-joint, .eng-chuck, .eng-wheel {
+  fill: var(--eng-accent, #d97706);
+}
+.eng-load, .eng-block, .eng-switch, .eng-body, .eng-opamp, .eng-gate, .eng-core, .eng-lathe, .eng-work, .eng-tool, .eng-cylinder, .eng-view, .eng-area, .eng-foundation, .eng-column, .eng-slab, .eng-beam-member, .eng-base {
+  fill: color-mix(in srgb, var(--eng-accent, #d97706) 12%, white);
+  stroke: #172033;
+  stroke-width: 3;
+}
+.eng-lamp, .eng-device, .eng-meter, .eng-stator, .eng-pulley, .eng-gear, .eng-runner, .eng-impeller, .eng-fuse {
+  fill: none;
+  stroke: #172033;
+  stroke-width: 6;
+}
+.eng-rotor, .eng-piston, .eng-iso, .eng-solid, .eng-true, .eng-wing, .eng-tail, .eng-plane {
+  fill: color-mix(in srgb, var(--eng-accent, #0f766e) 16%, white);
+  stroke: #172033;
+  stroke-width: 4;
+}
+.eng-force { stroke: #dc2626; stroke-width: 7; }
+.eng-force.reaction { stroke: #2563eb; }
+.eng-arrow { fill: #dc2626; }
+.eng-beam, .eng-xy, .eng-support, .eng-terminal { stroke: #172033; stroke-width: 8; fill: none; }
+.eng-section { stroke: #dc2626; stroke-width: 5; stroke-dasharray: 12 8; }
+.eng-field, .eng-flux { stroke: #7c3aed; animation: engTravel 2.2s linear infinite; }
+.eng-wave { stroke: #2563eb; stroke-dasharray: 900; stroke-dashoffset: 900; animation: engDraw 2.6s ease forwards; }
+.eng-wave.message { stroke: #0f766e; animation-delay: .35s; }
+.eng-wave.am { stroke: #d97706; animation-delay: .7s; }
+.eng-coil { fill: none; stroke: #d97706; stroke-width: 8; }
+.eng-coil.secondary { stroke: #2563eb; }
+.eng-shaft { fill: #94a3b8; }
+.eng-piston { animation: engPiston 2.4s ease-in-out infinite; }
+.eng-gear, .eng-pulley {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: engSpin 8s linear infinite;
+}
+
+.eng-topic-map,
+.eng-sequence,
+.eng-mistake,
+.eng-truth {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+.eng-topic-map {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(10px, 1vw, 16px);
+}
+
+.eng-topic-map article,
+.eng-sequence li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 18px;
+  border: 1px solid #17203318;
+  border-radius: 14px;
+  background: #fff;
+  animation: engRise .8s ease both;
+  animation-delay: calc(var(--i, 0) * 120ms);
+}
+
+.eng-topic-map strong,
+.eng-sequence strong {
+  color: var(--eng-accent, #d97706);
+  font-size: clamp(20px, 1.5vw, 28px);
+}
+
+.eng-topic-map span,
+.eng-sequence span {
+  font-size: clamp(18px, 1.3vw, 26px);
+  font-weight: 750;
+  line-height: 1.18;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.eng-sequence {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  overflow: hidden;
+}
+
+.eng-sequence li {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.eng-mistake {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  overflow: hidden;
+}
+
+.eng-mistake .fy-callout {
+  animation: engRise .85s ease both;
+}
+
+.eng-truth {
+  border-collapse: collapse;
+  font-size: clamp(24px, 2vw, 36px);
+  font-weight: 800;
+  animation: engRise .9s ease both;
+}
+
+.eng-truth th, .eng-truth td {
+  border: 3px solid #17203322;
+  padding: 18px 28px;
+  text-align: center;
+}
+
+.eng-truth tbody tr {
+  animation: engRise .7s ease both;
+  animation-delay: calc(var(--i, 0) * 140ms);
+}
+
+.eng-truth tr.active td {
+  background: color-mix(in srgb, var(--eng-electronics) 18%, white);
+  box-shadow: inset 0 0 0 4px var(--eng-electronics);
+  animation: engTruthPulse 1.8s ease-in-out 0.9s infinite;
+}
+
+@keyframes engTruthPulse {
+  0%, 100% { background: color-mix(in srgb, var(--eng-electronics) 18%, white); }
+  50% { background: color-mix(in srgb, var(--eng-electronics) 34%, white); }
+}
+
+.first-year-engineering-deck .fy-equation-stepper,
+.first-year-engineering-deck .fy-numerical-board,
+.first-year-engineering-deck .fy-process,
+.first-year-engineering-deck .fy-comparison,
+.first-year-engineering-deck .fy-source-block {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+}
+
+.first-year-engineering-deck .fy-process article,
+.first-year-engineering-deck .fy-comparison section,
+.first-year-engineering-deck .fy-callout {
+  animation: engRise .8s ease both;
+}
+
+@keyframes engTravel {
+  to { stroke-dashoffset: -120; }
+}
+
+@keyframes engDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes engRise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes engSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes engPiston {
+  50% { transform: translateY(18px); }
+}
+
+@media (width <= 1320px) {
+  .eng-hero { grid-template-columns: 1fr; }
+  .eng-svg { min-height: 0; max-height: 100%; }
+  .eng-mistake { grid-template-columns: 1fr; }
+  .eng-topic-map { grid-template-columns: 1fr; }
+  .eng-svg text { font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .first-year-engineering-deck *,
+  .first-year-engineering-deck *::before,
+  .first-year-engineering-deck *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .eng-current, .eng-wave, .eng-field, .eng-flux {
+    stroke-dashoffset: 0 !important;
+  }
+}

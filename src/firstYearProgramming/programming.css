@@ -1,0 +1,81 @@
+.fy-programming-opening {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.1vw, 18px);
+  align-content: stretch;
+}
+
+.fy-programming-opening span {
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  border: 1px solid #17203318;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--fy-accent) 10%, white);
+  color: #172033;
+  font-size: clamp(21px, 1.45vw, 29px);
+  line-height: 1.12;
+  font-weight: 850;
+  text-align: center;
+  animation: fyRise .8s ease both;
+  animation-delay: calc(var(--i, 0) * 130ms);
+}
+
+.fy-programming-split {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, .55fr) minmax(0, .45fr);
+  gap: 18px;
+}
+
+.fy-programming-split .fy-terminal {
+  min-height: 0;
+  height: 100%;
+}
+
+.fy-debug-grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+.fy-debug-grid .fy-callout {
+  min-height: 0;
+  align-content: start;
+}
+
+@media (width <= 1320px) {
+  .fy-programming-opening {
+    gap: 8px;
+  }
+
+  .fy-programming-opening span {
+    min-height: 68px;
+    padding: 10px;
+    font-size: 17px;
+  }
+
+  .fy-programming-split {
+    gap: 9px;
+  }
+
+  .fy-debug-grid {
+    gap: 9px;
+  }
+
+  .fy-debug-grid .fy-callout {
+    min-height: 150px;
+  }
+}
+
+@media (width <= 900px) {
+  .fy-programming-opening,
+  .fy-debug-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

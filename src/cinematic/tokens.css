@@ -1,0 +1,99 @@
+/* =============================================================================
+   PRESENTATION ENGINE V6.0 — Design Token System
+   Single source of truth for motion, timing, spacing, elevation, and color.
+   Subjects may theme accent/identity; they must not hard-code engine values.
+   ========================================================================== */
+
+:root {
+  /* --------------------------------------------------------------------------
+     Motion Tokens — duration grammar (shared by every subject)
+     -------------------------------------------------------------------------- */
+  --motion-instant: 120ms;
+  --motion-fast: 280ms;
+  --motion-normal: 520ms;
+  --motion-slow: 900ms;
+  --motion-cinematic: 1400ms;
+
+  --motion-ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --motion-ease-enter: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --motion-ease-emphasis: cubic-bezier(0.34, 1.2, 0.64, 1);
+  --motion-ease-ambient: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
+  /* --------------------------------------------------------------------------
+     Scene Timing Tokens — beat schedule defaults (seconds)
+     -------------------------------------------------------------------------- */
+  --scene-enter: 0s;
+  --scene-focus: 0.72s;
+  --scene-narrative: 1.2s;
+  --scene-climax-base: 1.2s;
+  --scene-settle-gap: 0.55s;
+  --scene-stagger-default: 0.12s;
+  --scene-stagger-fast: 0.09s;
+  --scene-stagger-slow: 0.16s;
+  --scene-stagger-minimal: 0.1s;
+
+  /* Soft-cut continuity timings */
+  --film-cut-carry: 520ms;
+  --film-cut-settle: 980ms;
+
+  /* --------------------------------------------------------------------------
+     Spacing Tokens — intentional rhythm (alias existing gaps)
+     -------------------------------------------------------------------------- */
+  --space-xs: var(--gap-xs, 10px);
+  --space-sm: var(--gap-sm, 16px);
+  --space-md: var(--gap-md, 24px);
+  --space-lg: var(--gap-lg, 36px);
+  --space-xl: var(--gap-xl, 48px);
+  --space-2xl: clamp(56px, 5vw, 80px);
+
+  /* --------------------------------------------------------------------------
+     Radius Tokens — one team, one geometry language
+     -------------------------------------------------------------------------- */
+  --radius-xs: 8px;
+  /* --radius-sm / --radius / --radius-lg already defined in index.css */
+
+  /* --------------------------------------------------------------------------
+     Elevation Tokens
+     -------------------------------------------------------------------------- */
+  --shadow-subtle: 0 2px 10px rgba(20, 35, 60, 0.04);
+  --shadow-card: var(--shadow, 0 8px 28px rgba(20, 35, 60, 0.06));
+  --shadow-focus: 0 12px 40px rgba(20, 35, 60, 0.12);
+  --shadow-hero: 0 18px 56px rgba(15, 30, 55, 0.16);
+
+  /* --------------------------------------------------------------------------
+     Color Tokens — platform surfaces (subjects override --accent family)
+     --accent / --accent-soft remain owned by index.css / subject decks
+     -------------------------------------------------------------------------- */
+  --surface: var(--bg-2, #ffffff);
+  --surface-muted: var(--bg-1, #faf8f3);
+  --surface-warm: var(--bg-warm, #faf4e8);
+  --surface-cool: var(--bg-3, #f2f7fb);
+  --highlight: #c9a227;
+  --highlight-soft: rgba(201, 162, 39, 0.14);
+
+  /* --------------------------------------------------------------------------
+     Icon / chrome sizing — consistent across subjects
+     -------------------------------------------------------------------------- */
+  --icon-sm: 18px;
+  --icon-md: 24px;
+  --icon-lg: 32px;
+  --icon-hero: 40px;
+
+  /* --------------------------------------------------------------------------
+     Hero tier intensity multipliers (consumed by motion CSS)
+     -------------------------------------------------------------------------- */
+  --hero-tier-1-scale: 1;
+  --hero-tier-2-scale: 0.82;
+  --hero-tier-3-scale: 0.62;
+  --hero-tier-none-scale: 0.45;
+
+  /* Living engine bridge */
+  --living-duration-scale: 1;
+}
+
+/* Engine decks advertise the token contract without redefining identities */
+.deck.living-engine,
+.deck.cinematic-film {
+  --engine-version: '6.0';
+}

@@ -1,0 +1,409 @@
+/* =============================================================================
+   PRESENTATION PLATFORM V3.2 — GLOBAL SPARSE-SLIDE INTELLIGENCE
+   -----------------------------------------------------------------------------
+   Loaded AFTER slideCompositionV31.css. Driven by runtime classifier:
+
+     data-content-density = sparse | light | normal | dense | very-dense
+     data-density-visual  = major   (large SVG / diagram / living visual)
+     data-sparse-kind     = definition | bullets | takeaway | stat | card | mixed | visual
+
+   PRIMARY RULE: less content ⇒ larger typography + stronger optical centering.
+   Dense / very-dense stay at the V3.0 projector baseline (never shrunk).
+   Major visuals: preserve visual dominance; only moderate copy uplift.
+   Text remains left-aligned by default — we center the COMPOSITION block.
+   ========================================================================== */
+
+.slide-frame {
+  --body-scale: 1;
+  --sparse-lh: 1.45;
+  --sparse-measure: 42rem;
+}
+
+.slide-frame[data-content-density='sparse'] {
+  --body-scale: 1.28;
+  --sparse-lh: 1.5;
+  --sparse-measure: 46rem;
+}
+
+.slide-frame[data-content-density='light'] {
+  --body-scale: 1.14;
+  --sparse-lh: 1.46;
+  --sparse-measure: 44rem;
+}
+
+.slide-frame[data-content-density='normal'],
+.slide-frame[data-content-density='dense'],
+.slide-frame[data-content-density='very-dense'] {
+  --body-scale: 1;
+}
+
+/* Major visual exception: never compete with diagram dominance */
+.slide-frame[data-density-visual='major'][data-content-density='sparse'],
+.slide-frame[data-density-visual='major'][data-content-density='light'] {
+  --body-scale: 1.08;
+  --sparse-lh: 1.42;
+}
+
+/* ---- Token uplift (projector-first). Dense stays untouched. ----------- */
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']),
+.slide-frame[data-content-density='light']:not([data-density-visual='major']) {
+  --fs-body: calc(clamp(19px, 1.35vw, 25px) * var(--body-scale));
+  --fs-takeaway: calc(clamp(17px, 1.15vw, 22px) * var(--body-scale));
+  --fs-label: calc(clamp(17px, 1.15vw, 22px) * var(--body-scale));
+  --fs-diagram: calc(clamp(16px, 1.1vw, 20px) * min(var(--body-scale), 1.12));
+  --fs-slide-body: calc(clamp(0.92rem, 1.05vw, 1.18rem) * var(--body-scale));
+  --fs-slide-body-sm: calc(clamp(0.84rem, 0.95vw, 1.05rem) * var(--body-scale));
+  --fs-slide-lead: calc(clamp(0.95rem, 1.2vw, 1.35rem) * var(--body-scale));
+  --fs-slide-section: calc(clamp(1.05rem, 1.35vw, 1.55rem) * var(--body-scale));
+  --fs-slide-metric: clamp(
+    calc(1.8rem * var(--body-scale)),
+    calc(2.8vw * var(--body-scale)),
+    calc(3.6rem * var(--body-scale))
+  );
+}
+
+.slide-frame[data-density-visual='major'][data-content-density='sparse'],
+.slide-frame[data-density-visual='major'][data-content-density='light'] {
+  --fs-body: calc(clamp(19px, 1.35vw, 25px) * var(--body-scale));
+  --fs-takeaway: calc(clamp(17px, 1.15vw, 22px) * var(--body-scale));
+  --fs-slide-body: calc(clamp(0.92rem, 1.05vw, 1.18rem) * var(--body-scale));
+  --fs-slide-lead: calc(clamp(0.95rem, 1.2vw, 1.35rem) * var(--body-scale));
+}
+
+/* ---- Optical center: compose the block, do not center every line ------
+   align-content:center is a no-op when children already fill the track.
+   Do NOT force display:grid on arbitrary roots — that breaks flex primitives. */
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body,
+.slide-frame[data-content-density='light']:not([data-density-visual='major']) .slide-body {
+  align-content: center;
+}
+
+/* Sparse teaching primitives already fill height via geometry — re-center mass */
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  :is(
+    .layout-visual-first,
+    .layout-two,
+    .layout-compare,
+    .stack,
+    .bda-canvas.single,
+    .ins-teaching-frame,
+    .definition-block,
+    .takeaway,
+    .key-statement,
+    .bda-definition
+  ),
+.slide-frame[data-content-density='light']:not([data-density-visual='major']) .slide-body
+  :is(.layout-visual-first, .layout-two, .layout-compare, .stack, .ins-teaching-frame) {
+  align-content: center;
+}
+
+/*
+ * Critical sparse fix: geometry stretches the body root to 100% height, then a
+ * single stretched child keeps its own ink top-pinned (measured cogY ~0.05–0.15).
+ * For sparse / light slides WITHOUT a major visual, let the content size itself
+ * and sit in the optical center. Dense / major-visual slides stay untouched.
+ */
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  > :is(.layout-visual-first, .layout-two, .layout-compare, .stack, .ins-teaching-frame, .bda-canvas.single),
+.slide-frame[data-content-density='light']:not([data-density-visual='major']) .slide-body
+  > :is(.layout-visual-first, .layout-two, .layout-compare, .stack, .ins-teaching-frame) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: clamp(12px, 2.2vh, 28px);
+  height: 100%;
+  max-height: 100%;
+}
+
+/* Two-column teaching layouts keep horizontal structure under sparse treatment */
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  > :is(.layout-two, .layout-compare),
+.slide-frame[data-content-density='light']:not([data-density-visual='major']) .slide-body
+  > :is(.layout-two, .layout-compare) {
+  display: grid;
+  align-content: center;
+  justify-items: stretch;
+}
+
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  > :is(.layout-visual-first, .layout-two, .layout-compare, .stack, .ins-teaching-frame, .bda-canvas.single)
+  > *,
+.slide-frame[data-content-density='light']:not([data-density-visual='major']) .slide-body
+  > :is(.layout-visual-first, .layout-two, .layout-compare, .stack, .ins-teaching-frame)
+  > * {
+  height: auto;
+  max-height: 100%;
+  min-height: 0;
+  align-self: stretch;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Compact visual canvases that previously collapsed to ~20px tall */
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  .vf-canvas,
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  .visual-panel-body {
+  height: auto;
+  max-height: none;
+  min-height: clamp(120px, 22vh, 240px);
+  place-content: center;
+  place-items: center;
+  overflow: visible;
+  font-size: clamp(1.25rem, 1.9vw, 1.85rem);
+  line-height: var(--sparse-lh);
+}
+
+/* INS subject sheet uses grid + stretched canvas; override for sparse */
+.ins-deck .slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  > .layout-visual-first,
+.ins-deck .slide-frame[data-content-density='light']:not([data-density-visual='major']) .slide-body
+  > .layout-visual-first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  grid-template-rows: none;
+  align-content: center;
+  gap: clamp(12px, 2.2vh, 28px);
+}
+
+.ins-deck .slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  .layout-visual-first
+  .vf-canvas {
+  height: auto;
+  max-height: none;
+  min-height: clamp(140px, 26vh, 280px);
+  place-items: center;
+  overflow: visible;
+}
+
+/* Worked-example / short visual demos under sparse treatment */
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  :is(.crypto-example, .ce-example, .worked-example) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(0.75rem, 2vh, 1.6rem);
+  font-size: clamp(1.35rem, 2.1vw, 2.15rem);
+  line-height: var(--sparse-lh);
+  width: min(100%, var(--sparse-measure));
+}
+
+/* Simple stack / single-block sparse roots: vertical optical centering */
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major'])[data-sparse-kind='definition']
+  .slide-body
+  > :is(.stack, .definition-block, .bda-definition),
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major'])[data-sparse-kind='takeaway']
+  .slide-body
+  > :is(.stack, .takeaway, .key-statement, .bda-takeaway),
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major'])[data-sparse-kind='bullets']
+  .slide-body
+  > :is(.stack, .bullets),
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major'])[data-sparse-kind='stat']
+  .slide-body
+  > :is(.stack, [class*='metric'], [class*='stat']),
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major'])[data-sparse-kind='mixed']
+  .slide-body
+  > :is(.stack, .definition-block, .takeaway, .key-statement, .bullets) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: clamp(0.75rem, 2vh, 1.5rem);
+  padding-block: clamp(0px, 2vh, 24px);
+  box-sizing: border-box;
+}
+
+/* ---- Sparse definitions: editorial composition ------------------------ */
+.slide-frame[data-content-density='sparse'][data-sparse-kind='definition'] .slide-body
+  :is(.definition-block, .bda-definition),
+.slide-frame[data-content-density='sparse'] .slide-body > :is(.definition-block, .bda-definition),
+.slide-frame[data-content-density='sparse'] .slide-body .stack > :is(.definition-block, .bda-definition):only-child {
+  width: min(100%, var(--sparse-measure));
+  max-width: 100%;
+  justify-self: center;
+  padding: clamp(1.1rem, 2.2vh, 2rem) clamp(1.2rem, 2.4vw, 2.4rem);
+  border-radius: 10px;
+}
+
+.slide-frame[data-content-density='sparse'] .slide-body
+  :is(.definition-label, .key-statement-label) {
+  margin-bottom: clamp(10px, 1.4vh, 16px);
+  font-size: clamp(0.78rem, 0.95vw, 0.95rem);
+  letter-spacing: 0.1em;
+}
+
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  :is(.definition-text, .key-statement-text) {
+  font-size: clamp(1.55rem, 2.35vw, 2.45rem); /* ~25–39px projector band */
+  line-height: var(--sparse-lh);
+  font-weight: 650;
+  max-width: var(--sparse-measure);
+}
+
+.slide-frame[data-content-density='light']:not([data-density-visual='major']) .slide-body
+  :is(.definition-text, .key-statement-text) {
+  font-size: clamp(1.28rem, 1.85vw, 1.95rem);
+  line-height: var(--sparse-lh);
+}
+
+/* ---- Sparse takeaways / key statements -------------------------------- */
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  :is(.takeaway, .bda-takeaway, .ib-takeaway, .key-statement) {
+  width: min(100%, var(--sparse-measure));
+  max-width: 100%;
+  justify-self: center;
+  align-self: center;
+  padding: clamp(1rem, 2vh, 1.75rem) clamp(1.1rem, 2.2vw, 2rem);
+}
+
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  :is(.takeaway-text, .bda-takeaway p, .key-statement-text) {
+  font-size: clamp(1.4rem, 2.1vw, 2.15rem);
+  line-height: var(--sparse-lh);
+}
+
+/* ---- Sparse bullets: larger type, airier rhythm, stage spread --------- */
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body .bullets,
+.slide-frame[data-content-density='light']:not([data-density-visual='major']) .slide-body .bullets {
+  gap: clamp(14px, 2.2vh, 28px);
+  margin-top: 0;
+  max-width: var(--sparse-measure);
+  line-height: var(--sparse-lh);
+}
+
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major'])[data-sparse-kind='bullets']
+  .slide-body
+  .bullets {
+  gap: clamp(18px, 3.2vh, 40px);
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  width: min(100%, var(--sparse-measure));
+  justify-self: center;
+}
+
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major'])[data-sparse-kind='bullets']
+  .slide-body
+  .bullets
+  li {
+  padding-block: clamp(4px, 0.6vh, 10px);
+}
+
+/* Convert tiny bullet lists into large concept rows when short */
+.slide-frame[data-content-density='sparse'][data-sparse-kind='bullets']:not([data-density-visual='major'])
+  .slide-body
+  > .bullets,
+.slide-frame[data-content-density='sparse'][data-sparse-kind='bullets']:not([data-density-visual='major'])
+  .slide-body
+  .stack
+  > .bullets:only-child {
+  display: grid;
+  gap: clamp(16px, 2.8vh, 32px);
+}
+
+.slide-frame[data-content-density='sparse'][data-sparse-kind='bullets']:not([data-density-visual='major'])
+  .slide-body
+  > .bullets
+  > li,
+.slide-frame[data-content-density='sparse'][data-sparse-kind='bullets']:not([data-density-visual='major'])
+  .slide-body
+  .stack
+  > .bullets:only-child
+  > li {
+  list-style: none;
+  margin: 0;
+  padding: clamp(0.85rem, 1.6vh, 1.35rem) clamp(1rem, 1.8vw, 1.5rem);
+  border: 1px solid var(--border-strong, rgba(30, 50, 80, 0.18));
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 10px 28px rgba(20, 35, 60, 0.06);
+  font-size: clamp(1.3rem, 1.95vw, 1.95rem);
+  font-weight: 600;
+  color: var(--ink, #172033);
+}
+
+.slide-frame[data-content-density='sparse'][data-sparse-kind='bullets']:not([data-density-visual='major'])
+  .slide-body
+  > .bullets,
+.slide-frame[data-content-density='sparse'][data-sparse-kind='bullets']:not([data-density-visual='major'])
+  .slide-body
+  .stack
+  > .bullets:only-child {
+  padding-left: 0;
+}
+
+/* ---- Sparse stats / numerals ------------------------------------------ */
+.slide-frame[data-content-density='sparse'][data-sparse-kind='stat']:not([data-density-visual='major'])
+  .slide-body
+  :is(.slide-role-metric, [class*='metric'] strong, [class*='stat'] strong, [data-stat]) {
+  font-size: clamp(3rem, 5.2vw, 4.75rem); /* ~48–76px */
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  color: var(--ink, #172033);
+}
+
+.slide-frame[data-content-density='sparse'][data-sparse-kind='stat']:not([data-density-visual='major'])
+  .slide-body
+  :is([class*='metric'], [class*='stat'], [data-stat]) {
+  align-content: center;
+  justify-items: start;
+  gap: clamp(8px, 1.2vh, 14px);
+}
+
+/* ---- Sparse / empty cards: center ink, enlarge type, earn size -------- */
+.slide-frame[data-content-density='sparse'] .slide-body
+  :is(article, .card, [class*='card'], .visual-panel),
+.slide-frame[data-content-density='light'] .slide-body
+  :is(article, .card, [class*='card'], .visual-panel) {
+  align-content: center;
+}
+
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  :is(article, .card, [class*='card']) {
+  font-size: calc(1em * min(var(--body-scale), 1.18));
+}
+
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  :is(article, .card, [class*='card'])
+  :is(strong, h2, h3, .card-title, [class*='heading']) {
+  font-size: clamp(1.25rem, 1.85vw, 1.95rem); /* ~20–31px → target 26–34 */
+  line-height: 1.25;
+}
+
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  :is(article, .card, [class*='card'])
+  p {
+  font-size: clamp(1.05rem, 1.45vw, 1.45rem);
+  line-height: var(--sparse-lh);
+}
+
+/* ---- Body paragraphs on sparse slides --------------------------------- */
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  > :is(p, .lead, .bda-lead),
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  .stack
+  > :is(p, .lead, .bda-lead),
+.slide-frame[data-content-density='sparse']:not([data-density-visual='major']) .slide-body
+  .layout-visual-first
+  > :is(p, .lead, .vf-lead, .bda-lead) {
+  font-size: clamp(1.35rem, 2vw, 1.95rem);
+  line-height: var(--sparse-lh);
+  max-width: var(--sparse-measure);
+}
+
+/* ---- Do-not-touch: intentional heroes --------------------------------- */
+.slide-frame[data-title-kind='hero'] .slide-body > *,
+.slide-frame[data-hero-tier]:not([data-hero-tier='none']) .slide-body > *,
+.slide-frame[data-composition*='hero'] .slide-body > *,
+.slide-frame[data-composition*='title-slide'] .slide-body > * {
+  /* classifier already forces normal; this is a hard CSS safety */
+  padding-block: 0;
+}
+
+.slide-frame[data-sparse-lock='true'],
+.slide-frame[data-content-density-lock='true'] {
+  --body-scale: 1 !important;
+}

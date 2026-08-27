@@ -1,0 +1,664 @@
+/* =============================================================================
+   Information & Network Security V2.0 — Masterpiece Composition Pass
+   -----------------------------------------------------------------------------
+   Scoped to `.ins-deck`. Pure layout / composition / pacing.
+   Does NOT redesign identity, syllabus, notes, PYQs, routing or navigation.
+
+   Goal: Big Data cinematic canvas utilization + INS living security flows.
+   Every slide fills the 16:9 stage with a clear center of gravity; consecutive
+   slides do not share the same optical template.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   1. Slide body = composition stage
+   ------------------------------------------------------------------------- */
+.ins-deck .slide-body {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+  min-height: 0;
+}
+
+.ins-deck .slide-body > * {
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+  align-self: stretch;
+}
+
+/* ---------------------------------------------------------------------------
+   2. Teaching frame — stretch, optical-center copy, visual owns mass
+   ------------------------------------------------------------------------- */
+.ins-deck .ins-teaching-frame {
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+  gap: clamp(14px, 2vw, 28px);
+}
+
+.ins-deck .ins-teaching-copy {
+  align-self: center;
+  min-height: 0;
+  display: grid;
+  align-content: center;
+  padding-bottom: 1.5vh; /* optical-center nudge */
+}
+
+.ins-deck .ins-teaching-visual {
+  align-self: stretch;
+  min-height: 0;
+  height: 100%;
+  display: grid;
+  place-items: stretch;
+  overflow: hidden;
+}
+
+.ins-deck .ins-teaching-visual > * {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  align-self: stretch;
+}
+
+.ins-deck .ins-teaching-frame > .takeaway {
+  align-self: end;
+}
+
+/* --- compose variants: break left-copy / right-visual monoculture --- */
+.ins-deck .ins-teaching-frame.compose-standard {
+  grid-template-columns: minmax(280px, 0.9fr) minmax(420px, 1.15fr);
+}
+
+.ins-deck .ins-teaching-frame.compose-reverse {
+  grid-template-columns: minmax(420px, 1.15fr) minmax(280px, 0.9fr);
+}
+.ins-deck .ins-teaching-frame.compose-reverse .ins-teaching-copy { order: 2; }
+.ins-deck .ins-teaching-frame.compose-reverse .ins-teaching-visual { order: 1; }
+.ins-deck .ins-teaching-frame.compose-reverse > .takeaway { order: 3; }
+
+.ins-deck .ins-teaching-frame.compose-hero {
+  grid-template-columns: minmax(240px, 0.72fr) minmax(480px, 1.45fr);
+}
+.ins-deck .ins-teaching-frame.compose-hero .ins-why-how { display: none; }
+.ins-deck .ins-teaching-frame.compose-hero .ins-teaching-copy .insx-reveal-list li {
+  padding-block: 6px;
+}
+
+.ins-deck .ins-teaching-frame.compose-quiet {
+  grid-template-columns: minmax(360px, 1.05fr) minmax(320px, 0.95fr);
+}
+.ins-deck .ins-teaching-frame.compose-quiet .ins-why-how { display: none; }
+.ins-deck .ins-teaching-frame.compose-quiet .ins-teaching-visual {
+  place-items: center;
+}
+
+.ins-deck .ins-teaching-frame.compose-visual-lead {
+  grid-template-columns: minmax(460px, 1.35fr) minmax(260px, 0.78fr);
+}
+.ins-deck .ins-teaching-frame.compose-visual-lead .ins-teaching-copy { order: 2; }
+.ins-deck .ins-teaching-frame.compose-visual-lead .ins-teaching-visual { order: 1; }
+.ins-deck .ins-teaching-frame.compose-visual-lead > .takeaway { order: 3; }
+.ins-deck .ins-teaching-frame.compose-visual-lead .ins-why-how { display: none; }
+
+/* ---------------------------------------------------------------------------
+   3. Platform layouts — fill stage, optical center
+   ------------------------------------------------------------------------- */
+.ins-deck .layout-two {
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+}
+
+/* Ratio variants from Teaching.TwoColumn — previously documented, now enforced */
+.ins-deck .layout-two.copy-visual {
+  grid-template-columns: minmax(280px, 0.95fr) minmax(340px, 1.1fr);
+}
+.ins-deck .layout-two.visual-copy {
+  grid-template-columns: minmax(340px, 1.1fr) minmax(280px, 0.95fr);
+}
+.ins-deck .layout-two.visual-copy .layout-copy { order: 2; }
+.ins-deck .layout-two.visual-copy .layout-visual { order: 1; }
+.ins-deck .layout-two.visual-lead {
+  grid-template-columns: minmax(420px, 1.35fr) minmax(240px, 0.75fr);
+}
+.ins-deck .layout-two.visual-lead .layout-copy { order: 2; }
+.ins-deck .layout-two.visual-lead .layout-visual { order: 1; }
+.ins-deck .layout-two.copy-lead {
+  grid-template-columns: minmax(360px, 1.15fr) minmax(260px, 0.85fr);
+}
+.ins-deck .layout-two.balanced {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.ins-deck .layout-copy {
+  align-self: center;
+  min-height: 0;
+  display: grid;
+  align-content: center;
+  gap: clamp(8px, 1.1vh, 14px);
+  padding-bottom: 1.5vh;
+}
+
+.ins-deck .layout-visual {
+  align-self: stretch;
+  min-height: 0;
+  height: 100%;
+  display: grid;
+  place-items: stretch;
+  overflow: hidden;
+}
+
+.ins-deck .layout-visual > * {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  align-self: stretch;
+}
+
+.ins-deck .layout-visual-first {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  /* Canvas + takeaway (and optional lead). Prefer: flexible canvas, reserved takeaway. */
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: clamp(6px, 0.9vh, 12px);
+  align-content: stretch;
+}
+
+.ins-deck .layout-visual-first:has(> .vf-lead) {
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.ins-deck .layout-visual-first .vf-canvas {
+  min-height: 0;
+  height: 100%;
+  max-height: 100%;
+  display: grid;
+  place-items: stretch;
+  overflow: hidden; /* decorative scene may clip; takeaway sits in reserved row */
+}
+
+.ins-deck .layout-visual-first > .takeaway {
+  min-height: 0;
+  align-self: end;
+}
+
+.ins-deck .layout-visual-first .vf-canvas > * {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+}
+
+.ins-deck .layout-compare {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+}
+
+.ins-deck .compare-pane {
+  min-height: 0;
+  height: 100%;
+  align-content: center;
+}
+
+/* ---------------------------------------------------------------------------
+   4. HeroScene framing — diagram fills the middle
+   ------------------------------------------------------------------------- */
+.ins-deck .ins-scene {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: clamp(4px, 0.7vh, 10px);
+  padding: clamp(6px, 1vh, 12px) clamp(8px, 1.1vw, 14px);
+  isolation: isolate;
+}
+
+.ins-deck .ins-scene-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 14px;
+  background:
+    radial-gradient(70% 60% at 50% 40%, rgba(31, 107, 255, 0.07), transparent 70%),
+    radial-gradient(50% 45% at 85% 80%, rgba(6, 182, 212, 0.06), transparent 65%);
+}
+
+.ins-deck .ins-scene-beat {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--ins-blue, #1f6bff);
+  font-family: var(--display);
+  font-size: clamp(0.72rem, 0.85vw, 0.92rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ins-deck .ins-scene-stage {
+  position: relative;
+  z-index: 1;
+  min-height: 0;
+  height: 100%;
+  display: grid;
+  place-items: stretch;
+}
+
+.ins-deck .ins-scene-stage > * {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+}
+
+.ins-deck .ins-scene-caption {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--ins-hairline, rgba(23, 47, 92, 0.10));
+  box-shadow: var(--ins-shadow-sm, 0 6px 16px rgba(29, 58, 110, 0.07));
+  justify-self: start;
+}
+
+.ins-deck .ins-scene-caption strong {
+  color: var(--ins-ink, #0f1b2e);
+  font-size: clamp(0.78rem, 0.92vw, 1rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.ins-deck .ins-annotation-rail {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ins-deck .ins-annotation-rail em {
+  font-style: normal;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(31, 107, 255, 0.08);
+  border: 1px solid rgba(31, 107, 255, 0.16);
+  color: var(--ins-body, #43536b);
+  font-size: clamp(0.68rem, 0.78vw, 0.84rem);
+  font-weight: 700;
+}
+
+.ins-deck .ins-stage-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.ins-deck .ins-stage-chips span {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--ins-hairline, rgba(23, 47, 92, 0.10));
+  color: var(--ins-body, #43536b);
+  font-size: clamp(0.7rem, 0.8vw, 0.88rem);
+  font-weight: 700;
+}
+
+.ins-deck .ins-stage-chips span.start {
+  border-color: rgba(31, 107, 255, 0.28);
+  color: var(--ins-blue, #1f6bff);
+}
+
+.ins-deck .ins-stage-chips span.end {
+  border-color: rgba(16, 185, 129, 0.35);
+  color: var(--ins-emerald, #10b981);
+}
+
+/* Peak accent — subtle emerald trust rail glow on cinematic peaks */
+.ins-deck .ins-scene.ins-peak {
+  box-shadow: inset 0 0 0 1px rgba(16, 185, 129, 0.14);
+  border-radius: 14px;
+}
+
+.ins-deck .slide-frame.ins-peak::before {
+  background: linear-gradient(90deg, var(--ins-blue), var(--ins-cyan) 35%, var(--ins-emerald) 70%, var(--ins-amber));
+  background-size: 220% 100%;
+}
+
+/* ---------------------------------------------------------------------------
+   5. Living SVG scale — drop the 40vh ceiling when the diagram is the lesson
+   ------------------------------------------------------------------------- */
+.ins-deck .ins-scene .iv-svg,
+.ins-deck .ins-teaching-frame.compose-hero .iv-svg,
+.ins-deck .ins-teaching-frame.compose-visual-lead .iv-svg,
+.ins-deck .layout-visual-first .iv-svg,
+.ins-deck .layout-two.visual-lead .iv-svg,
+.ins-deck .layout-two.visual-copy .iv-svg,
+.ins-deck .slide-frame.ins-peak .iv-svg {
+  max-height: none;
+  height: 100%;
+}
+
+.ins-deck .iv-open {
+  max-height: min(62vh, 560px);
+}
+
+.ins-deck .ins-title-hero .iv-open,
+.ins-deck .insx-title .iv-open {
+  max-height: none;
+  height: 100%;
+}
+
+/* ---------------------------------------------------------------------------
+   6. Title heroes — opening dominates the canvas
+   ------------------------------------------------------------------------- */
+.ins-deck .ins-title-hero,
+.ins-deck .insx-title {
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+  gap: clamp(16px, 2.2vw, 36px);
+  padding-block: clamp(4px, 0.8vh, 12px);
+}
+
+.ins-deck .ins-title-hero > div:first-child,
+.ins-deck .insx-title > div:first-child {
+  align-self: center;
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  padding-bottom: 2vh;
+}
+
+.ins-deck .ins-title-hero > .layout-visual,
+.ins-deck .insx-title > .layout-visual {
+  height: 100%;
+  min-height: 0;
+  align-self: stretch;
+  display: grid;
+  place-items: stretch;
+}
+
+/* Prefer visual mass on title slides (~42/58) */
+.ins-deck .ins-title-hero,
+.ins-deck .insx-title {
+  grid-template-columns: minmax(280px, 0.85fr) minmax(420px, 1.25fr);
+}
+
+/* ---------------------------------------------------------------------------
+   7. INS widgets — stretch into available mass (no corner float)
+   ------------------------------------------------------------------------- */
+.ins-deck :is(
+  .insx-ribbon,
+  .insx-machine,
+  .insx-lifecycle,
+  .insx-protocol,
+  .insx-collision,
+  .insx-card-grid,
+  .insx-matrix,
+  .insx-cert-chain,
+  .ins-mission-scene,
+  .ins-attack-board,
+  .ins-key-scene,
+  .ins-application-visual,
+  .crypto-flow,
+  .crypto-branch,
+  .alphabet-map,
+  .freq-chart,
+  .process-path,
+  .visual-panel
+) {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+.ins-deck :is(
+  .insx-ribbon,
+  .insx-machine,
+  .insx-lifecycle,
+  .insx-protocol,
+  .insx-collision,
+  .insx-card-grid,
+  .insx-matrix,
+  .ins-mission-scene,
+  .ins-attack-board,
+  .ins-key-scene,
+  .ins-application-visual,
+  .crypto-flow,
+  .process-path
+) {
+  height: 100%;
+  min-height: 0;
+  align-content: center;
+}
+
+.ins-deck .insx-lifecycle {
+  display: grid;
+  align-content: stretch;
+  gap: clamp(6px, 1vh, 12px);
+}
+
+.ins-deck .insx-lifecycle > div {
+  align-self: stretch;
+  min-height: 0;
+}
+
+.ins-deck .insx-protocol {
+  display: grid;
+  align-content: center;
+  gap: clamp(8px, 1.2vh, 14px);
+}
+
+.ins-deck .insx-protocol > div {
+  min-height: clamp(44px, 7vh, 68px);
+}
+
+.ins-deck .insx-ribbon {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: clamp(8px, 1.2vw, 14px);
+}
+
+.ins-deck .insx-ribbon-node {
+  min-height: clamp(88px, 16vh, 140px);
+  align-content: center;
+}
+
+.ins-deck .insx-machine {
+  display: grid;
+  align-content: center;
+  gap: clamp(10px, 1.4vh, 18px);
+}
+
+.ins-deck .insx-card-grid {
+  align-content: stretch;
+  align-items: stretch;
+}
+
+.ins-deck .insx-card-grid article {
+  min-height: 0;
+  height: auto;
+  align-self: stretch;
+  align-content: center;
+}
+
+.ins-deck .ins-mission-scene {
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+}
+
+.ins-deck .ins-application-visual {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-content: stretch;
+  gap: clamp(6px, 1vh, 10px);
+}
+
+.ins-deck .ins-application-visual > :first-child {
+  min-height: 0;
+  height: 100%;
+}
+
+.ins-deck .visual-panel {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.ins-deck .visual-panel-body {
+  min-height: 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.ins-deck .process-path {
+  align-content: center;
+  align-items: stretch;
+}
+
+/* ---------------------------------------------------------------------------
+   8. Module identity accents (App adds .ins-module-N on the frame)
+   Emotion without changing the ice-white design system.
+   ------------------------------------------------------------------------- */
+.ins-deck .slide-frame.ins-module-1::before {
+  background: linear-gradient(90deg, #1f6bff, #06b6d4 45%, #7c5cff 80%, #1f6bff);
+  background-size: 220% 100%;
+}
+.ins-deck .slide-frame.ins-module-2::before {
+  background: linear-gradient(90deg, #1f6bff, #10b981 50%, #06b6d4 80%, #1f6bff);
+  background-size: 220% 100%;
+}
+.ins-deck .slide-frame.ins-module-3::before {
+  background: linear-gradient(90deg, #1f6bff, #f59e0b 48%, #10b981 82%, #1f6bff);
+  background-size: 220% 100%;
+}
+.ins-deck .slide-frame.ins-module-4::before {
+  background: linear-gradient(90deg, #7c5cff, #1f6bff 40%, #10b981 78%, #7c5cff);
+  background-size: 220% 100%;
+}
+.ins-deck .slide-frame.ins-module-5::before {
+  background: linear-gradient(90deg, #ef4444, #1f6bff 38%, #06b6d4 68%, #10b981);
+  background-size: 220% 100%;
+}
+
+/* ---------------------------------------------------------------------------
+   9. Quiet pacing — definition / insight slides stay calmer but centered
+   ------------------------------------------------------------------------- */
+.ins-deck .layout-two.copy-lead .layout-copy {
+  max-width: none;
+}
+
+.ins-deck .key-statement {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  align-content: center;
+}
+
+/* ---------------------------------------------------------------------------
+   10. Responsive — keep fill discipline on shorter viewports
+   ------------------------------------------------------------------------- */
+@media (max-height: 760px) {
+  .ins-deck .ins-scene {
+    padding: 4px 8px;
+    gap: 4px;
+  }
+  .ins-deck .ins-scene-caption {
+    padding: 4px 10px;
+  }
+  .ins-deck .ins-teaching-frame.compose-hero .ins-teaching-copy .lead {
+    font-size: clamp(0.86rem, 0.98vw, 1.05rem);
+  }
+  .ins-deck .insx-ribbon-node {
+    min-height: clamp(72px, 14vh, 110px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .ins-deck .ins-teaching-frame.compose-hero,
+  .ins-deck .ins-teaching-frame.compose-visual-lead,
+  .ins-deck .ins-teaching-frame.compose-reverse,
+  .ins-deck .ins-teaching-frame.compose-quiet,
+  .ins-deck .ins-teaching-frame.compose-standard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+  .ins-deck .ins-teaching-frame.compose-reverse .ins-teaching-copy,
+  .ins-deck .ins-teaching-frame.compose-visual-lead .ins-teaching-copy {
+    order: 1;
+  }
+  .ins-deck .ins-teaching-frame.compose-reverse .ins-teaching-visual,
+  .ins-deck .ins-teaching-frame.compose-visual-lead .ins-teaching-visual {
+    order: 2;
+  }
+}
+
+/* Keep INS on a presentation canvas (never 1-col stack) at supported widths */
+@media (min-width: 1280px) {
+  .ins-deck .ins-teaching-frame.compose-hero,
+  .ins-deck .ins-teaching-frame.compose-visual-lead,
+  .ins-deck .ins-teaching-frame.compose-reverse,
+  .ins-deck .ins-teaching-frame.compose-quiet,
+  .ins-deck .ins-teaching-frame.compose-standard {
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+}
+
+@media (max-height: 820px) {
+  .ins-deck .ins-teaching-frame {
+    gap: clamp(6px, 1vw, 12px);
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+
+  .ins-deck .ins-teaching-copy {
+    padding-bottom: 0;
+    align-content: start;
+  }
+
+  .ins-deck .ins-teaching-copy .insx-reveal-list,
+  .ins-deck .ins-teaching-copy ul {
+    gap: 2px;
+  }
+
+  .ins-deck .ins-why-how {
+    display: none; /* reclaim height; takeaway carries the landing point */
+  }
+
+  .ins-deck .ins-teaching-frame > .takeaway,
+  .ins-deck .takeaway {
+    margin-top: 2px;
+    padding: 5px 8px;
+    font-size: clamp(0.72rem, 0.95vw, 0.86rem);
+    line-height: 1.22;
+  }
+
+  .ins-deck .takeaway-label {
+    margin-bottom: 0;
+    font-size: 0.65rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ins-deck .ins-scene-atmosphere {
+    animation: none;
+  }
+}

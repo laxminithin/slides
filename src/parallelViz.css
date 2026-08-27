@@ -1,0 +1,291 @@
+/* ==========================================================================
+   parallelViz.css — living instructional visuals for Parallel Computing.
+   Paired with src/components/ParallelViz.jsx. Scoped under `.parallel-deck`
+   where it matters; primitive classes are prefixed `pv-` and animations
+   `pvk-` so they never collide with the base `pc-*` / redesign `pcr-*` layers.
+
+   Rules honoured everywhere:
+   - The STATIC first frame is complete: structure paints at full opacity;
+     only motion elements (packets, LEDs, gates, meters) animate.
+   - Animations re-fire on slide revisit (deck remounts via replayKey).
+   - Reduced motion freezes all movement but keeps the diagram readable.
+   ========================================================================== */
+
+.parallel-deck .pv-svg {
+  width: 100%;
+  height: auto;
+  max-height: min(52vh, 384px);
+  display: block;
+  overflow: visible;
+  font-family: var(--display, "Plus Jakarta Sans", sans-serif);
+}
+/* dividers give the visual more room */
+.parallel-deck .pc-divider-visual .pv-svg { max-height: min(60vh, 430px); }
+
+/* shared type inside SVGs */
+.parallel-deck .pv-svg text { font-family: inherit; }
+
+/* SVG transforms resolve against each element's own box (needed for scale/
+   translate keyframes to originate correctly). */
+.pv-packet, .pv-lane-pulse, .pv-core-glow, .pv-gate-bar, .pv-meter-actual,
+.pv-hit-ring, .pv-miss-ring, .pv-req, .pv-sig, .pv-heat, .pv-chunk.enter {
+  transform-box: fill-box;
+}
+.pv-core-glow, .pv-hit-ring, .pv-miss-ring { transform-origin: center; }
+.pv-gate-bar { transform-origin: center; }
+.pv-meter-actual { transform-origin: left center; }
+.pv-t-label { fill: #172033; font-weight: 850; }
+.pv-t-sub { fill: #5b6472; font-weight: 750; }
+.pv-t-mono { font-weight: 800; letter-spacing: .02em; }
+.pv-t-cap { fill: #7a8495; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
+
+/* ---- palette helpers ---------------------------------------------------- */
+.pv-fill-blue { fill: #2563eb; }
+.pv-fill-teal { fill: #0ea5a4; }
+.pv-fill-violet { fill: #6d5dd3; }
+.pv-fill-amber { fill: #d97706; }
+.pv-fill-ink { fill: #172033; }
+
+/* =========================================================================
+   ProcessorCore primitive — a die tile with idle / busy / hot states
+   ========================================================================= */
+.pv-core-body {
+  fill: #eef2fb;
+  stroke: #c3cde0;
+  stroke-width: 1.5;
+}
+.pv-core.busy .pv-core-body { fill: #dbe6ff; stroke: #2563eb; }
+.pv-core.hot .pv-core-body { fill: #ffe6d3; stroke: #d97706; }
+.pv-core.idle .pv-core-body { fill: #eef1f6; stroke: #cbd3e0; }
+.pv-core-etch { fill: none; stroke: #9fb2d6; stroke-width: 1; opacity: .6; }
+.pv-core.busy .pv-core-etch { stroke: #2563eb; opacity: .5; }
+/* activity LED */
+.pv-core-led { fill: #cbd5e1; }
+.pv-core.busy .pv-core-led { fill: #22c55e; animation: pvk-led 1.4s ease-in-out infinite; }
+.pv-core.hot .pv-core-led { fill: #f59e0b; animation: pvk-led 1s ease-in-out infinite; }
+.pv-core-glow {
+  fill: none; stroke: #2563eb; stroke-width: 2; opacity: 0;
+}
+.pv-core.busy .pv-core-glow { opacity: .5; animation: pvk-corepulse 2.4s ease-in-out infinite; }
+
+@keyframes pvk-led { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+@keyframes pvk-corepulse {
+  0%,100% { opacity: .12; transform: scale(1); }
+  50% { opacity: .5; transform: scale(1.04); }
+}
+
+/* =========================================================================
+   ThreadLane primitive — a lane with a travelling execution pulse
+   ========================================================================= */
+.pv-lane-track { stroke: #c8d2e4; stroke-width: 3; stroke-linecap: round; }
+.pv-lane.active .pv-lane-track { stroke: #93b0f0; }
+.pv-lane-pulse { fill: #2563eb; }
+.pv-lane.active .pv-lane-pulse { animation: pvk-lane 1.8s linear infinite; }
+@keyframes pvk-lane {
+  0% { opacity: 0; transform: translateX(0); }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(var(--pv-lane-dx, 60px)); }
+}
+
+/* =========================================================================
+   TaskPacket / WorkloadChunk — units of work in motion
+   ========================================================================= */
+.pv-packet { animation: pvk-packet 2.6s ease-in-out infinite; }
+.pv-packet.q { fill: #6d5dd3; }
+.pv-packet.a { fill: #2563eb; }
+.pv-packet.b { fill: #0ea5a4; }
+.pv-packet.c { fill: #d97706; }
+@keyframes pvk-packet {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--pv-dx, 0), var(--pv-dy, 0)); }
+}
+.pv-chunk { stroke: #ffffff; stroke-width: 1.5; rx: 5; }
+.pv-chunk.enter { animation: pvk-rise .5s ease both; animation-delay: calc(var(--i, 0) * .08s); }
+@keyframes pvk-rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* =========================================================================
+   MemoryBlock / CacheLayer — hierarchy tiers
+   ========================================================================= */
+.pv-mem-body { stroke-width: 1.5; }
+.pv-tier { transition: none; }
+.pv-tier-body { stroke: #ffffff; stroke-width: 2; }
+.pv-tier-fast { fill: #2563eb; }
+.pv-tier-mid { fill: #4f74d8; }
+.pv-tier-slow { fill: #64748b; }
+.pv-tier-store { fill: #475569; }
+.pv-tier-label { fill: #ffffff; font-weight: 900; }
+.pv-tier-meta { fill: #ffffff; opacity: .82; font-weight: 750; }
+/* request token travelling the hierarchy */
+.pv-req { fill: #f59e0b; animation: pvk-req 3.4s ease-in-out infinite; }
+.pv-hit-ring { fill: none; stroke: #22c55e; stroke-width: 3; opacity: 0; animation: pvk-hit 3.4s ease-in-out infinite; }
+.pv-miss-ring { fill: none; stroke: #dc2626; stroke-width: 3; opacity: 0; animation: pvk-miss 3.4s ease-in-out infinite; }
+@keyframes pvk-req {
+  0% { opacity: 0; transform: translateY(0); }
+  10% { opacity: 1; }
+  100% { opacity: 1; transform: translateY(var(--pv-req-dy, 0)); }
+}
+@keyframes pvk-hit { 0%,55% { opacity: 0; } 62% { opacity: .9; transform: scale(1); } 80% { opacity: 0; transform: scale(1.5); } 100% { opacity: 0; } }
+@keyframes pvk-miss { 0%,20% { opacity: 0; } 28% { opacity: .9; transform: scale(1); } 46% { opacity: 0; transform: scale(1.5); } 100% { opacity: 0; } }
+
+/* =========================================================================
+   BarrierGate — sync barrier that locks then releases
+   ========================================================================= */
+.pv-gate-post { fill: #94a3b8; }
+.pv-gate-bar { fill: #dc2626; transform-origin: left center; animation: pvk-gate 4s ease-in-out infinite; }
+.pv-gate-label { fill: #64748b; font-weight: 850; }
+@keyframes pvk-gate {
+  0%, 55% { transform: scaleY(1); fill: #dc2626; }
+  70%, 100% { transform: scaleY(.06); fill: #22c55e; }
+}
+
+/* =========================================================================
+   SpeedupMeter — ideal vs actual, needle/bar
+   ========================================================================= */
+.pv-meter-track { fill: #e6ebf4; }
+.pv-meter-ideal { fill: none; stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 4 4; }
+.pv-meter-actual { fill: #2563eb; animation: pvk-meter 2.4s ease both; transform-origin: left center; }
+@keyframes pvk-meter { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.pv-meter-cap { fill: #172033; font-weight: 900; }
+
+/* =========================================================================
+   CoherenceSignal — invalidation pulse across the interconnect
+   ========================================================================= */
+.pv-sig { fill: #dc2626; }
+.pv-sig.run { animation: pvk-sig 3.6s ease-in-out infinite; }
+@keyframes pvk-sig {
+  0%, 30% { opacity: 0; transform: translateX(0); }
+  38% { opacity: 1; }
+  70% { opacity: 1; transform: translateX(var(--pv-sig-dx, 120px)); }
+  78%, 100% { opacity: 0; transform: translateX(var(--pv-sig-dx, 120px)); }
+}
+.pv-state-badge { font-weight: 900; }
+.pv-state-S { fill: #2563eb; }
+.pv-state-M { fill: #6d5dd3; }
+.pv-state-I { fill: #dc2626; }
+
+/* =========================================================================
+   Connectors, buses, packages
+   ========================================================================= */
+.pv-wire { stroke: #b7c2d8; stroke-width: 2; fill: none; }
+.pv-wire-live { stroke: #2563eb; stroke-width: 2; fill: none; stroke-dasharray: 5 6; animation: pvk-dash 1.4s linear infinite; }
+@keyframes pvk-dash { to { stroke-dashoffset: -22; } }
+.pv-bus { fill: #dbe3f2; stroke: #b7c2d8; stroke-width: 1.5; }
+.pv-bus-flow { fill: #2563eb; }
+
+/* processor package (exploded) faces */
+.pv-pkg-substrate { fill: #cdd7e8; stroke: #aab7cd; stroke-width: 1.5; }
+.pv-pkg-die { fill: #eef3fc; stroke: #b9c6de; stroke-width: 1.5; }
+.pv-pkg-lid { fill: #d7e0f0; stroke: #aeb ; stroke: #aab7cd; stroke-width: 1.5; opacity: .96; }
+.pv-pkg-pin { fill: #c0cadb; }
+.pv-heat { fill: none; stroke: #f59e0b; stroke-width: 2.4; stroke-linecap: round; opacity: .0; }
+.pv-heat.on { animation: pvk-heat 2.2s ease-in-out infinite; }
+@keyframes pvk-heat { 0%,100% { opacity: 0; transform: translateY(0); } 50% { opacity: .7; transform: translateY(-6px); } }
+
+/* legend chips shared by diagrams */
+.pv-legend { display: flex; flex-wrap: wrap; gap: 6px 12px; justify-content: center; margin-top: 8px; }
+.pv-legend span { display: inline-flex; align-items: center; gap: 6px; color: #475569; font-size: clamp(.68rem, .8vw, .82rem); font-weight: 850; }
+.pv-legend i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+
+/* instruction / data stream tokens (Flynn) */
+.pv-inst { fill: #2563eb; }
+.pv-data { fill: #0ea5a4; }
+
+/* Flynn quadrant cells */
+.pv-flynn-cell > rect:first-child {
+  fill: #f7f9fd;
+  stroke: #d3dcec;
+  stroke-width: 1.5;
+}
+.pv-flynn-cell.active > rect:first-child {
+  fill: #eef4ff;
+  stroke: #2563eb;
+  stroke-width: 2.5;
+}
+
+/* SIMD lockstep lanes */
+.pv-simd-exec {
+  fill: #2563eb; opacity: .5;
+  transform-box: fill-box; transform-origin: left center;
+  animation: pvk-exec 1.8s ease-in-out infinite;
+}
+@keyframes pvk-exec {
+  0%, 100% { opacity: .18; transform: scaleX(.35); }
+  50% { opacity: .9; transform: scaleX(1); }
+}
+.pv-sync-line { stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 3 4; }
+.pv-done-led { fill: #cbd5e1; }
+.pv-simd-done { animation: pvk-doneflash 1.8s ease-in-out infinite; }
+@keyframes pvk-doneflash { 0%, 58% { fill: #cbd5e1; } 74%, 100% { fill: #22c55e; } }
+
+/* progress bars (MIMD independent completion) */
+.pv-prog-track { fill: #e6ebf4; }
+.pv-prog-fill {
+  transform-box: fill-box; transform-origin: left center;
+  animation-name: pvk-fill; animation-timing-function: ease-out; animation-fill-mode: both;
+}
+@keyframes pvk-fill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.pv-mimd-done { animation: pvk-greenflag .4s ease both; }
+@keyframes pvk-greenflag { from { fill: #cbd5e1; } to { fill: #22c55e; } }
+
+/* contention marker on a shared bus */
+.pv-congest { fill: #dc2626; animation: pvk-led .8s ease-in-out infinite; }
+
+/* pipeline */
+.pv-stage-body { fill: #eef3fc; stroke: #b9c6de; stroke-width: 1.5; }
+.pv-pipe-item {
+  transform-box: fill-box;
+  animation: pvk-pipe 3.6s ease-in-out infinite;
+}
+@keyframes pvk-pipe {
+  0% { opacity: 0; transform: translateX(0); }
+  6% { opacity: 1; }
+  94% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(var(--pv-pipe-dx, 480px)); }
+}
+
+/* interconnect fabric */
+.pv-node { fill: #dbe6ff; stroke: #2563eb; stroke-width: 1.8; }
+.pv-switch-node { fill: #6d5dd3; stroke: #fff; stroke-width: 1.5; }
+.pv-wrap { stroke-dasharray: 5 5; opacity: .6; }
+
+/* living cluster */
+.pv-switch-body { fill: #dbe3f2; stroke: #b7c2d8; stroke-width: 1.5; }
+.pv-rack-body { fill: #eef2fb; stroke: #c3cde0; stroke-width: 1.5; }
+.pv-rack.hot .pv-rack-body { fill: #ffe9d6; stroke: #d97706; }
+.pv-rack-slot { fill: #dbe3f2; }
+.pv-rack.hot .pv-rack-slot { fill: #ffd9b8; }
+.pv-rack-unit { fill: #93b0f0; }
+.pv-rack-unit.on { fill: #22c55e; animation: pvk-led 1.6s ease-in-out infinite; }
+.pv-rack.hot .pv-rack-unit { fill: #f59e0b; animation: pvk-led .9s ease-in-out infinite; }
+.pv-packet.g { fill: #22c55e; }
+.pv-load-track { fill: #e6ebf4; }
+.pv-load-fill { fill: #2563eb; }
+.pv-load-fill.high { fill: #dc2626; }
+
+/* load balancing */
+.pv-finish { stroke: #16a34a; stroke-width: 2; stroke-dasharray: 4 4; }
+.pv-idle { opacity: .5; }
+
+/* coherence cache line states */
+.pv-cacheline { fill: #eef2fb; stroke: #c3cde0; stroke-width: 1.5; }
+.pv-cacheline.mod { fill: #ede9fb; stroke: #6d5dd3; }
+.pv-cacheline.inv { fill: #fdeaea; stroke: #dc2626; stroke-dasharray: 5 4; }
+
+/* =========================================================================
+   Reduced motion — freeze movement, keep meaning
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .parallel-deck .pv-svg *,
+  .pv-legend * {
+    animation: none !important;
+    transition: none !important;
+  }
+  /* park motion elements in their "resolved / mid" pose so nothing is blank */
+  .pv-gate-bar { transform: scaleY(.06); fill: #22c55e; }
+  .pv-meter-actual, .pv-prog-fill, .pv-simd-exec { transform: scaleX(1); }
+  .pv-hit-ring, .pv-miss-ring, .pv-packet, .pv-req, .pv-sig, .pv-lane-pulse { opacity: 1; }
+  .pv-simd-done, .pv-mimd-done { fill: #22c55e; }
+}

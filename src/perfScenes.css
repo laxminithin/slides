@@ -1,0 +1,510 @@
+/* ==========================================================================
+   perfScenes.css — Parallel Computing Module 2 only.
+   Identity: PERFORMANCE ENGINEERING (meters, lanes, runtime, GPU throughput).
+   Do not import from Modules 1, 3, 4 or 5.
+   ========================================================================== */
+
+.pc-m2-slide {
+  --pe-amber: #ea580c;
+  --pe-gold: #f59e0b;
+  --pe-teal: #0d9488;
+  --pe-cyan: #0891b2;
+  --pe-green: #16a34a;
+  --pe-red: #e11d48;
+  --pe-ink: #0f172a;
+  --pe-muted: #475569;
+  --pe-paper: #fff7ed;
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 10px;
+  font-size: 20px;
+  padding: clamp(14px, 1.6vw, 22px);
+  overflow: hidden;
+  background:
+    radial-gradient(760px 420px at 18% 14%, rgba(234, 88, 12, .12), transparent 62%),
+    radial-gradient(640px 380px at 88% 80%, rgba(13, 148, 136, .1), transparent 64%),
+    linear-gradient(135deg, #faf8f3, #fffdf8);
+}
+
+.pc-m2-slide .pe-head h2,
+.pc-m2-slide .pe-copy h2,
+.pc-m2-slide .pe-divider-copy h2 {
+  font-size: clamp(40px, 3.2vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.pc-m2-slide .pe-lead,
+.pc-m2-slide .pe-copy p,
+.pc-m2-slide .pe-take {
+  font-size: clamp(20px, 1.45vw, 24px);
+  line-height: 1.32;
+  font-weight: 650;
+}
+
+.pc-m2-slide .pe-points li {
+  font-size: clamp(20px, 1.35vw, 23px);
+  line-height: 1.3;
+}
+
+.pc-m2-roadmap {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 6px;
+  min-height: 30px;
+}
+
+.pc-m2-roadmap span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 7px 4px;
+  color: #6b7280;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(30, 50, 80, 0.1);
+  border-radius: 999px;
+  font-size: clamp(11px, 0.78vw, 13px);
+  font-weight: 900;
+  line-height: 1.05;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pc-m2-roadmap .active {
+  color: #fff;
+  background: linear-gradient(135deg, var(--pe-amber), #c2410c);
+  border-color: transparent;
+  box-shadow: 0 12px 26px rgba(234, 88, 12, 0.22);
+}
+
+.pe-stage-wrap {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pe-head {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.pe-kicker {
+  color: var(--pe-amber);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pe-head h2,
+.pe-copy h2 {
+  margin: 0;
+  color: var(--pe-ink);
+  font-family: var(--display);
+}
+
+.pe-lead {
+  margin: 0;
+  color: var(--pe-muted);
+}
+
+.pe-full,
+.pe-split,
+.pe-divider {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.pe-full {
+  display: grid;
+  place-items: stretch;
+}
+
+.pe-split {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(340px, 0.92fr) minmax(420px, 1.18fr);
+  gap: clamp(14px, 1.6vw, 22px);
+}
+
+.pe-split.reverse {
+  grid-template-columns: minmax(420px, 1.18fr) minmax(340px, 0.92fr);
+}
+
+.pe-split.reverse .pe-copy { order: 2; }
+.pe-split.reverse .pe-visual { order: 1; }
+
+.pe-copy,
+.pe-visual {
+  min-width: 0;
+  min-height: 0;
+}
+
+.pe-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: clamp(12px, 1.4vw, 20px);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(30, 50, 80, 0.1);
+  border-radius: 14px;
+}
+
+.pe-visual {
+  display: grid;
+  place-items: stretch;
+  padding: 6px;
+}
+
+.pe-points {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pe-points li {
+  position: relative;
+  padding-left: 22px;
+  color: #334155;
+  font-weight: 700;
+}
+
+.pe-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--pe-amber), var(--pe-gold));
+}
+
+.pe-formula {
+  margin: 0;
+  padding: 14px 16px;
+  color: var(--pe-ink);
+  background: #fff7ed;
+  border: 1px solid rgba(234, 88, 12, 0.22);
+  border-radius: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(26px, 1.9vw, 34px);
+  font-weight: 750;
+  line-height: 1.4;
+  overflow: auto;
+}
+
+.pe-formula.sm {
+  font-size: clamp(22px, 1.5vw, 28px);
+}
+
+.pe-q {
+  margin: 0;
+  color: #9a3412;
+  font-size: clamp(20px, 1.4vw, 24px);
+  font-weight: 850;
+}
+
+.pe-take {
+  margin: 0;
+  color: #0f766e;
+  font-weight: 800;
+}
+
+.pe-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(30, 50, 80, 0.12);
+  border-radius: 12px;
+  font-size: clamp(20px, 1.4vw, 24px);
+}
+
+.pe-table th,
+.pe-table td {
+  padding: 12px 14px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.pe-table th {
+  color: #fff;
+  background: #0f172a;
+  font-size: clamp(18px, 1.2vw, 22px);
+}
+
+.pe-table td {
+  color: var(--pe-ink);
+  border-top: 1px solid #e2e8f0;
+}
+
+.pe-table.compact th,
+.pe-table.compact td {
+  padding: 7px 10px;
+  font-size: clamp(18px, 1.2vw, 20px);
+}
+
+.pe-divider {
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: 24px;
+  align-items: center;
+  padding: 8px 4px;
+}
+
+.pe-divider-copy span {
+  display: inline-block;
+  padding: 6px 12px;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.pe-divider-copy h2 {
+  margin: 12px 0 10px;
+  color: var(--pe-ink);
+  font-family: var(--display);
+  font-size: clamp(32px, 3.4vw, 52px);
+  line-height: 1.02;
+}
+
+.pe-divider-copy p {
+  margin: 0;
+  color: var(--pe-muted);
+  font-size: clamp(18px, 1.25vw, 22px);
+  font-weight: 650;
+}
+
+.pe-div-mimd span { background: linear-gradient(135deg, #ea580c, #c2410c); }
+.pe-div-gpu span { background: linear-gradient(135deg, #16a34a, #0d9488); }
+.pe-div-hyb span { background: linear-gradient(135deg, #0891b2, #1d4ed8); }
+.pe-div-met span { background: linear-gradient(135deg, #d97706, #b45309); }
+.pe-div-amd span { background: linear-gradient(135deg, #e11d48, #9f1239); }
+.pe-div-sca span { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+.pe-div-tim span { background: linear-gradient(135deg, #334155, #0f172a); }
+.pe-div-gpf span { background: linear-gradient(135deg, #0d9488, #115e59); }
+.pe-div-sum span { background: linear-gradient(135deg, #0f172a, #ea580c); }
+
+.perf-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background:
+    radial-gradient(520px 280px at 14% 8%, rgba(234, 88, 12, 0.1), transparent 58%),
+    radial-gradient(460px 240px at 88% 86%, rgba(13, 148, 136, 0.1), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 247, 237, 0.9));
+  border: 1px solid rgba(30, 50, 80, 0.1);
+}
+
+.perf-scene svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.perf-scene text {
+  font-family: ui-sans-serif, system-ui, Inter, sans-serif;
+}
+
+.pe-chip-row {
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 10px;
+  padding: 16px;
+  align-items: stretch;
+}
+
+.pe-chip {
+  display: grid;
+  place-content: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 16px 10px;
+  color: var(--pe-ink);
+  background: #fff;
+  border: 2px solid rgba(30, 50, 80, 0.12);
+  border-radius: 14px;
+  text-align: center;
+  animation: pe-rise 0.55s ease both;
+  animation-delay: calc(var(--i, 0) * 0.1s);
+}
+
+.pe-chip strong {
+  font-size: clamp(18px, 1.3vw, 22px);
+  font-weight: 900;
+}
+
+.pe-chip span {
+  color: var(--pe-muted);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pe-resource {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 18px;
+}
+
+.pe-resource a {
+  display: grid;
+  gap: 8px;
+  align-content: center;
+  min-width: 0;
+  padding: 22px;
+  color: inherit;
+  background: #fff;
+  border: 2px solid rgba(234, 88, 12, 0.2);
+  border-radius: 16px;
+  text-decoration: none;
+}
+
+.pe-resource svg {
+  color: var(--pe-amber);
+}
+
+.pe-resource strong {
+  font-size: 24px;
+}
+
+.pe-resource span {
+  color: var(--pe-muted);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ---- motion families --------------------------------------------------- */
+@keyframes pe-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes pe-pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+
+@keyframes pe-lane {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+
+@keyframes pe-fill {
+  from { transform: scaleX(0.08); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes pe-clock {
+  0% { stroke-dashoffset: 220; }
+  100% { stroke-dashoffset: 40; }
+}
+
+@keyframes pe-flow {
+  0% { offset-distance: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0.15; }
+}
+
+@keyframes pe-spark {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+@keyframes pe-shrink {
+  0% { transform: scaleX(1); }
+  100% { transform: scaleX(0.28); }
+}
+
+@keyframes pe-idle {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes pe-trace {
+  from { stroke-dashoffset: 900; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes pe-split {
+  from { transform: scale(1); }
+  to { transform: scale(0.72); }
+}
+
+@keyframes pe-grow {
+  from { transform: scale(0.7); opacity: 0.4; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pe-serialize {
+  0%, 40% { opacity: 1; }
+  45%, 100% { opacity: 0.25; }
+}
+
+.pe-anim-fill { transform-origin: left center; animation: pe-fill 1.6s ease both; }
+.pe-anim-pulse { animation: pe-pulse 1.6s ease-in-out infinite; }
+.pe-anim-lane { animation: pe-lane 2.2s ease-in-out infinite; }
+.pe-anim-spark { animation: pe-spark 1.1s ease-in-out infinite; }
+.pe-anim-clock { stroke-dasharray: 220; animation: pe-clock 2.8s ease-in-out infinite alternate; }
+.pe-anim-trace { stroke-dasharray: 900; animation: pe-trace 2.4s ease both; }
+.pe-anim-shrink { transform-origin: left center; animation: pe-shrink 2.4s ease-in-out infinite alternate; }
+.pe-anim-idle { animation: pe-idle 1.8s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .perf-scene *,
+  .pe-chip,
+  .pe-anim-fill,
+  .pe-anim-pulse,
+  .pe-anim-lane,
+  .pe-anim-spark,
+  .pe-anim-clock,
+  .pe-anim-trace,
+  .pe-anim-shrink,
+  .pe-anim-idle {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 1366px) {
+  .pe-split {
+    grid-template-columns: minmax(300px, 0.88fr) minmax(380px, 1.12fr);
+  }
+  .pc-m2-slide .pe-head h2,
+  .pc-m2-slide .pe-copy h2 {
+    font-size: clamp(34px, 3vw, 42px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .pc-m2-roadmap span {
+    font-size: 10px;
+    padding: 6px 2px;
+  }
+  .pe-formula {
+    font-size: clamp(22px, 1.6vw, 28px);
+  }
+}

@@ -1,0 +1,952 @@
+/* ============================================================================
+   JAVA PROGRAMMING V2.1 — EXECUTIVE DIRECTOR'S CUT
+   Bright, editorial "software engineering keynote" atmosphere.
+   Same scenes / classes / content as V2.0 — this is a Director's Cut polish
+   pass: dark IDE  ->  executive software design (ivory paper + glass + graphite,
+   subtle Oracle red, deep navy, muted teal, warm shadows, magazine typography).
+
+   Depth is achieved with THREE tiers of light, not fake 3D:
+     frame  (warm ivory)  <  stage/page (warm white)  <  cards (crisp white)
+   with the dark code window as the single dramatic focal accent.
+   ========================================================================== */
+
+.java-deck {
+  --java-red: #c23b30;          /* muted Oracle red, focal */
+  --java-red-ink: #a92e25;
+  --java-red-soft: rgba(194, 59, 48, .10);
+  --java-navy: #16233d;
+  --java-navy-soft: rgba(22, 35, 61, .06);
+  --java-ink: #141c2c;          /* headlines */
+  --java-ink-2: #2c3a52;
+  --java-body: #4f5a6b;
+  --java-muted: #7c8598;
+  --java-teal: #0f766e;
+  --java-teal-soft: rgba(15, 118, 110, .10);
+  --java-amber: #bd7a1a;
+  --java-code-bg: #0e1626;      /* dark code window (focal contrast) */
+
+  --java-paper: #fdfaf3;        /* the "page" the scene sits on */
+  --java-card: #ffffff;         /* crisp white cards lift off the page */
+  --java-glass: rgba(255, 255, 255, .74);
+  --java-line: rgba(22, 35, 60, .10);
+  --java-line-strong: rgba(22, 35, 60, .17);
+
+  --java-shadow-sm: 0 2px 10px rgba(22, 35, 60, .06);
+  --java-shadow-md: 0 20px 46px rgba(22, 35, 60, .10);
+  --java-shadow-lg: 0 40px 90px rgba(22, 35, 60, .14);
+  --java-ease: cubic-bezier(.22, .61, .36, 1);
+
+  --accent: var(--java-red);
+  --accent-soft: var(--java-teal);
+}
+
+/* ---- Shell: warm ivory frame (was dark navy) ------------------------------ */
+.java-deck .slide-frame {
+  color: var(--java-ink);
+  background:
+    radial-gradient(1100px 640px at 12% -4%, rgba(194, 59, 48, .06), transparent 60%),
+    radial-gradient(1000px 660px at 94% 6%, rgba(15, 118, 110, .06), transparent 62%),
+    linear-gradient(150deg, #fbf6ee 0%, #fffdf9 46%, #f3eee2 100%);
+}
+
+.java-deck .slide-frame::before {
+  background: linear-gradient(90deg, var(--java-red), var(--java-amber), var(--java-teal));
+  opacity: .9;
+}
+
+.java-deck .slide-header { position: relative; z-index: 8; min-height: 0; padding-bottom: 0; }
+
+.java-deck .slide-header-copy .slide-kicker { color: rgba(44, 58, 82, .72); }
+.java-deck .slide-header-copy .slide-title { color: var(--java-ink); }
+
+/* footer meta (subject title / "Module 1 · Slide n") + page counter */
+.java-deck .slide-frame,
+.java-deck .slide-footer,
+.java-deck .slide-footer * { color: var(--java-ink-2); }
+
+.java-deck .module-switcher button,
+.java-deck .module-switcher a,
+.java-deck .mode-switch button {
+  color: #2c3a52;
+  background: rgba(255, 255, 255, .82);
+  border-color: var(--java-line-strong);
+}
+
+.java-deck .module-switcher button.active,
+.java-deck .module-switcher .active-link,
+.java-deck .mode-switch button.active {
+  color: #fff;
+  background: var(--java-red);
+  border-color: var(--java-red);
+}
+
+.java-deck .progress-track { background: rgba(22, 35, 60, .10); }
+.java-deck .progress-fill { background: linear-gradient(90deg, var(--java-red), var(--java-amber), var(--java-teal)); }
+
+/* ---- The stage becomes a warm-white "page" -------------------------------- */
+.java-stage {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .9);
+  border-radius: 22px;
+  background:
+    radial-gradient(120% 90% at 50% -12%, rgba(255, 255, 255, .96), rgba(255, 255, 255, 0) 60%),
+    linear-gradient(168deg, #fffefb 0%, var(--java-paper) 58%, #f7f1e6 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 0 0 1px rgba(22, 35, 60, .05),
+    var(--java-shadow-lg);
+  isolation: isolate;
+}
+
+/* faint graphite blueprint grid, masked to the centre — barely-there */
+.java-bg-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(22, 35, 60, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 35, 60, .035) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(circle at 62% 46%, #000 0%, transparent 76%);
+}
+
+/* directed depth: a soft top key-light + faint corner washes on the page */
+.java-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(680px 360px at 82% 8%, rgba(194, 59, 48, .05), transparent 66%),
+    radial-gradient(620px 420px at 10% 92%, rgba(15, 118, 110, .045), transparent 68%);
+  pointer-events: none;
+}
+
+.java-stage::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 40%;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgba(22, 35, 60, .05), transparent 74%);
+  pointer-events: none;
+}
+
+/* ---- Slide chrome (module chip + section + window dots) -------------------- */
+.java-slide-chrome {
+  position: absolute;
+  inset: 22px 26px auto;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  pointer-events: none;
+}
+
+.java-slide-chrome > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.java-module-chip,
+.java-emotion {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: clamp(.58rem, .68vw, .74rem);
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.java-module-chip {
+  color: #fff;
+  background: var(--java-red);
+  box-shadow: 0 8px 20px rgba(194, 59, 48, .26);
+}
+
+.java-emotion {
+  color: var(--java-ink-2);
+  background: rgba(255, 255, 255, .74);
+  border: 1px solid var(--java-line-strong);
+  box-shadow: var(--java-shadow-sm);
+}
+
+.java-window-dots { display: flex; gap: 7px; opacity: .9; }
+
+.java-window-dots i {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #f26d6d;
+  box-shadow: 18px 0 0 #eaa93a, 36px 0 0 #35b47f;
+}
+
+/* ---- Shared scene padding + grids ----------------------------------------- */
+.java-hero-scene,
+.java-why-scene,
+.java-ide-scene,
+.java-pipeline-scene,
+.java-memory-scene,
+.java-interaction-scene,
+.java-architecture-scene,
+.java-debug-scene,
+.java-compare-scene {
+  height: 100%;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: clamp(60px, 7vh, 86px) clamp(44px, 4.8vw, 84px) clamp(34px, 4vh, 52px);
+}
+
+.java-hero-scene,
+.java-why-scene,
+.java-ide-scene,
+.java-memory-scene,
+.java-interaction-scene,
+.java-architecture-scene,
+.java-debug-scene {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(430px, 1.12fr);
+  align-items: center;
+  gap: clamp(28px, 4.4vw, 68px);
+}
+
+.java-pipeline-scene {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  align-content: center;
+  gap: clamp(24px, 3.4vh, 42px);
+}
+
+/* ---- Editorial typography -------------------------------------------------- */
+.java-kicker,
+.java-scene-title span,
+.java-problem-card span,
+.java-console span,
+.java-debug-panel span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: var(--java-red-ink);
+  font-size: clamp(.66rem, .8vw, .84rem);
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.java-kicker::before,
+.java-scene-title span::before,
+.java-problem-card span::before,
+.java-debug-panel span::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  opacity: .55;
+}
+
+.java-hero-copy h2,
+.java-scene-title h2,
+.java-problem-card h2,
+.java-debug-panel h2 {
+  margin: 0;
+  color: var(--java-ink);
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 4.4vw, 5.1rem);
+  line-height: .97;
+  letter-spacing: -.015em;
+}
+
+.java-scene-title h2,
+.java-problem-card h2,
+.java-debug-panel h2 {
+  font-size: clamp(2.05rem, 3.5vw, 4.35rem);
+}
+
+.java-hero-copy p:not(.java-kicker),
+.java-scene-title p,
+.java-problem-card p,
+.java-debug-panel p,
+.java-console p,
+.java-before-after p {
+  margin: 18px 0 0;
+  color: var(--java-body);
+  font-size: clamp(1.04rem, 1.4vw, 1.44rem);
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 34ch;
+}
+
+/* ---- Hero scene ------------------------------------------------------------ */
+.java-hero-copy { min-width: 0; }
+
+.java-hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+
+.java-hero-tags span {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  color: var(--java-ink-2);
+  background: var(--java-glass);
+  border: 1px solid var(--java-line-strong);
+  border-radius: 999px;
+  font-size: clamp(.74rem, .84vw, .92rem);
+  font-weight: 700;
+  box-shadow: var(--java-shadow-sm);
+}
+
+.java-runtime-orbit {
+  position: relative;
+  min-height: min(56vh, 540px);
+  display: grid;
+  place-items: center;
+  perspective: 1000px;
+}
+
+.java-runtime-orbit::before {
+  content: "";
+  position: absolute;
+  width: min(88%, 510px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(22, 35, 60, .12);
+  border-radius: 999px;
+  transform: rotateX(60deg) rotateZ(-10deg);
+}
+
+.java-runtime-orbit::after {
+  content: "";
+  position: absolute;
+  width: min(70%, 400px);
+  aspect-ratio: 1;
+  border: 1px dashed rgba(194, 59, 48, .28);
+  border-radius: 999px;
+  animation: javaSpin 24s linear infinite;
+}
+
+.java-core-engine {
+  position: relative;
+  z-index: 2;
+  width: min(44%, 248px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 8px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 38% 26%, rgba(255, 255, 255, .34), transparent 40%),
+    linear-gradient(140deg, var(--java-red), #8f2820);
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 999px;
+  box-shadow:
+    0 30px 70px rgba(194, 59, 48, .30),
+    inset 0 2px 4px rgba(255, 255, 255, .3);
+  animation: javaBreathe 6s var(--java-ease) infinite;
+}
+
+.java-core-engine span { font-family: var(--display); font-size: clamp(1.4rem, 2.2vw, 2.7rem); font-weight: 800; letter-spacing: .02em; }
+
+.java-core-engine strong {
+  max-width: 150px;
+  color: rgba(255, 255, 255, .84);
+  text-align: center;
+  font-size: clamp(.68rem, .82vw, .9rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 700;
+}
+
+.java-runtime-orbit b {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(96px, 9vw, 132px);
+  min-height: 50px;
+  display: grid;
+  place-items: center;
+  padding: 9px;
+  color: var(--java-ink-2);
+  background: var(--java-card);
+  border: 1px solid var(--java-line-strong);
+  border-radius: 14px;
+  box-shadow: var(--java-shadow-md);
+  font-size: clamp(.72rem, .82vw, .92rem);
+  font-weight: 700;
+  text-align: center;
+  transform:
+    translate(-50%, -50%)
+    rotate(calc(var(--i) * 60deg))
+    translateX(min(19vw, 268px))
+    rotate(calc(var(--i) * -60deg));
+  /* opacity-only fade: this element's transform carries its orbit position,
+     so an entry animation must NOT touch transform. */
+  animation: javaFade .6s var(--java-ease) both;
+  animation-delay: calc(.2s + var(--i) * .07s);
+}
+
+/* ---- Why scene ------------------------------------------------------------- */
+.java-problem-card,
+.java-debug-panel { min-width: 0; }
+
+.java-term-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+
+.java-term-strip b {
+  padding: 7px 12px;
+  color: var(--java-ink-2);
+  background: var(--java-red-soft);
+  border: 1px solid rgba(194, 59, 48, .18);
+  border-radius: 999px;
+  font-size: clamp(.72rem, .82vw, .9rem);
+  font-weight: 700;
+}
+
+.java-before-after {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 46px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+}
+
+.java-before-after article,
+.java-console,
+.java-memory-board section,
+.java-sequence article,
+.java-debug-dashboard article {
+  background: var(--java-card);
+  border: 1px solid var(--java-line);
+  border-radius: 18px;
+  box-shadow: var(--java-shadow-md);
+}
+
+.java-before-after article {
+  min-height: 246px;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 26px;
+  color: var(--java-ink);
+  animation: javaRise .6s var(--java-ease) both;
+  animation-delay: .16s;
+}
+
+.java-before-after .is-after { animation-delay: .28s; }
+
+.java-debug-dashboard article p,
+.java-sequence article p,
+.java-memory-board b small {
+  margin: 0;
+  color: var(--java-body);
+  font-size: clamp(.78rem, .9vw, .98rem);
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.java-debug-dashboard article.active p { color: rgba(255, 255, 255, .84); }
+
+.java-memory-board b { display: grid; gap: 4px; align-content: center; }
+.java-memory-board b small { display: block; }
+.java-memory-board b.active small { color: rgba(255, 255, 255, .82); }
+
+.java-compare-dashboard { align-content: center; }
+
+.java-before-after small,
+.java-debug-dashboard small {
+  color: var(--java-red-ink);
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: clamp(.64rem, .74vw, .78rem);
+}
+
+.java-before-after strong { font-family: var(--display); font-size: clamp(1.28rem, 1.7vw, 2rem); color: var(--java-ink); letter-spacing: -.01em; }
+.java-before-after p { color: var(--java-body); font-size: clamp(.92rem, 1.05vw, 1.12rem); max-width: none; }
+
+.java-before-after i {
+  height: 3px;
+  background: linear-gradient(90deg, var(--java-red), var(--java-teal));
+  border-radius: 999px;
+  position: relative;
+}
+
+.java-before-after i::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -6px;
+  border-left: 10px solid var(--java-teal);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.java-before-after .is-after {
+  background: linear-gradient(145deg, #ffffff, #f0faf6);
+  border-color: rgba(15, 118, 110, .26);
+}
+
+/* ---- IDE scene (dark code window = the single focal accent) ---------------- */
+.java-ide-window {
+  min-height: min(58vh, 540px);
+  overflow: hidden;
+  background: var(--java-code-bg);
+  border: 1px solid rgba(22, 35, 60, .5);
+  border-radius: 18px;
+  box-shadow: 0 34px 74px rgba(14, 22, 38, .32);
+}
+
+.java-ide-window header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 46px;
+  padding: 13px 18px;
+  color: #aeb9cc;
+  background: #0a1120;
+  border-bottom: 1px solid rgba(148, 163, 184, .16);
+  font-size: clamp(.72rem, .85vw, .9rem);
+  font-weight: 700;
+}
+.java-ide-window header span { color: #cdd7e6; }
+.java-ide-window header b { color: var(--java-red); font-weight: 800; }
+
+.java-ide-window pre {
+  margin: 0;
+  padding: clamp(22px, 2.8vw, 36px);
+  color: #dbe6f7;
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: clamp(.98rem, 1.2vw, 1.36rem);
+  line-height: 1.6;
+  white-space: pre-wrap;
+  tab-size: 2;
+}
+
+.java-console {
+  min-height: min(46vh, 440px);
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  padding: clamp(24px, 2.8vw, 36px);
+  color: var(--java-ink);
+}
+
+.java-console strong { font-family: var(--display); font-size: clamp(1.4rem, 2vw, 2.4rem); color: var(--java-ink); letter-spacing: -.01em; }
+.java-console p { margin-top: 0; color: var(--java-body); font-size: clamp(.92rem, 1.05vw, 1.16rem); max-width: none; }
+
+.java-console code {
+  display: block;
+  padding: 11px 14px;
+  color: #d7f5ef;
+  background: #0e1626;
+  border: 1px solid rgba(15, 118, 110, .3);
+  border-radius: 12px;
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: clamp(.82rem, .95vw, 1.02rem);
+}
+
+/* ---- Pipeline scene -------------------------------------------------------- */
+.java-pipeline {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 14px;
+}
+
+.java-pipeline article {
+  position: relative;
+  min-height: min(38vh, 340px);
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  padding: clamp(18px, 2vw, 26px);
+  color: var(--java-ink);
+  background: var(--java-card);
+  border: 1px solid var(--java-line);
+  border-top: 4px solid var(--java-red);
+  border-radius: 16px;
+  box-shadow: var(--java-shadow-md);
+  animation: javaRise .55s var(--java-ease) both;
+  animation-delay: calc(.12s + var(--i) * .08s);
+}
+
+.java-pipeline article:nth-child(2n) { border-top-color: var(--java-teal); }
+.java-pipeline article:nth-child(3n) { border-top-color: var(--java-amber); }
+
+.java-pipeline article::after {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  z-index: 2;
+  width: 16px;
+  height: 2px;
+  background: var(--java-line-strong);
+}
+.java-pipeline article::before {
+  content: "";
+  position: absolute;
+  right: -18px;
+  top: calc(50% - 4px);
+  z-index: 2;
+  border-left: 7px solid var(--java-line-strong);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.java-pipeline article:last-child::after,
+.java-pipeline article:last-child::before { display: none; }
+
+.java-pipeline span { color: var(--java-red-ink); font-weight: 800; font-size: clamp(.9rem, 1vw, 1.1rem); }
+.java-pipeline strong { font-family: var(--display); font-size: clamp(1rem, 1.24vw, 1.46rem); line-height: 1.12; color: var(--java-ink); }
+
+/* ---- Memory scene ---------------------------------------------------------- */
+.java-memory-board {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+}
+
+.java-memory-board section {
+  min-height: min(46vh, 448px);
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: clamp(20px, 2.2vw, 30px);
+  color: var(--java-ink);
+  animation: javaRise .55s var(--java-ease) both;
+}
+.java-memory-board section:nth-child(2) { animation-delay: .14s; }
+
+.java-memory-board h3 {
+  margin: 0 0 8px;
+  color: var(--java-ink);
+  font-family: var(--display);
+  font-size: clamp(1.1rem, 1.4vw, 1.68rem);
+  letter-spacing: -.01em;
+}
+
+.java-memory-board b {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 13px 15px;
+  background: #faf8f3;
+  border: 1px solid var(--java-line);
+  border-radius: 12px;
+  color: var(--java-ink-2);
+  font-size: clamp(.86rem, 1vw, 1.08rem);
+  font-weight: 600;
+  transition: transform .3s var(--java-ease);
+}
+
+.java-memory-board b.active {
+  color: #fff;
+  background: linear-gradient(140deg, var(--java-red), #8f2820);
+  border-color: transparent;
+  box-shadow: 0 16px 34px rgba(194, 59, 48, .26);
+}
+
+.java-gc-unit {
+  position: absolute;
+  right: 24px;
+  bottom: -18px;
+  width: 84px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: .06em;
+  background: linear-gradient(140deg, var(--java-teal), #0a4f48);
+  border-radius: 14px;
+  box-shadow: 0 18px 38px rgba(15, 118, 110, .28);
+  animation: javaFloat 4s var(--java-ease) infinite;
+}
+
+.java-gc-unit span {
+  position: absolute;
+  top: 10px;
+  width: 36px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .5);
+}
+
+/* ---- Interaction scene (object collaboration) ----------------------------- */
+.java-sequence {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.java-sequence article {
+  position: relative;
+  overflow: hidden;
+  min-height: min(48vh, 436px);
+  display: grid;
+  align-content: space-between;
+  gap: 10px;
+  padding: clamp(18px, 2vw, 24px);
+  color: var(--java-ink);
+  animation: javaRise .55s var(--java-ease) both;
+  animation-delay: calc(.12s + var(--i) * .08s);
+}
+
+.java-sequence article::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 82px;
+  bottom: 30px;
+  width: 2px;
+  background: linear-gradient(rgba(194, 59, 48, .5), rgba(15, 118, 110, .32));
+}
+
+.java-sequence article::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 6px);
+  top: calc(122px + var(--i) * 34px);
+  width: 12px;
+  height: 12px;
+  background: var(--java-red);
+  border-radius: 999px;
+  box-shadow: 0 0 0 8px rgba(194, 59, 48, .12);
+  animation: javaPulse 2.4s var(--java-ease) infinite;
+  animation-delay: calc(var(--i) * .22s);
+}
+
+.java-sequence strong {
+  position: relative;
+  z-index: 1;
+  font-family: var(--display);
+  font-size: clamp(1rem, 1.24vw, 1.46rem);
+  line-height: 1.08;
+  letter-spacing: -.01em;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+.java-sequence span {
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+  padding: 8px 12px;
+  color: #fff;
+  background: var(--java-navy);
+  border-radius: 999px;
+  font-size: clamp(.7rem, .82vw, .9rem);
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+/* ---- Architecture scene (layered execution stack) ------------------------- */
+.java-architecture {
+  position: relative;
+  min-height: min(52vh, 480px);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.java-layer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(80%, 560px);
+  min-height: 72px;
+  display: grid;
+  place-items: center;
+  color: var(--java-ink);
+  background: var(--java-card);
+  border: 1px solid var(--java-line);
+  border-radius: 16px;
+  box-shadow: var(--java-shadow-md);
+  font-family: var(--display);
+  font-size: clamp(1rem, 1.34vw, 1.68rem);
+  font-weight: 800;
+  letter-spacing: -.01em;
+  transform: translate(-50%, -50%) rotateX(55deg) translateY(calc(var(--z, 0) * -54px));
+  animation: javaLayerIn .6s var(--java-ease) both;
+  animation-delay: calc(.1s + (var(--z, 0) + 2) * .08s);
+}
+
+/* the JSX emits `layer-0..layer-4`; colour the execution plates bottom->top */
+.java-layer.layer-0 { border-left: 8px solid #5b9bd8; }
+.java-layer.layer-1 { border-left: 8px solid var(--java-amber); }
+.java-layer.layer-2 { border-left: 8px solid var(--java-red); }
+.java-layer.layer-3 { border-left: 8px solid var(--java-teal); }
+.java-layer.layer-4 { border-left: 8px solid #94a3b8; }
+
+/* ---- Debug / compare dashboard -------------------------------------------- */
+.java-debug-dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.java-debug-dashboard article {
+  min-height: 152px;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: clamp(18px, 2vw, 26px);
+  color: var(--java-ink);
+  animation: javaRise .5s var(--java-ease) both;
+  animation-delay: calc(.1s + var(--i, 0) * .06s);
+}
+
+.java-debug-dashboard article.active {
+  color: #fff;
+  background: linear-gradient(140deg, var(--java-red), #8f2820);
+  border-color: transparent;
+  box-shadow: 0 18px 40px rgba(194, 59, 48, .26);
+}
+.java-debug-dashboard article.active small { color: rgba(255, 255, 255, .8); }
+
+.java-debug-dashboard strong { font-family: var(--display); font-size: clamp(1.05rem, 1.3vw, 1.54rem); line-height: 1.16; color: inherit; letter-spacing: -.01em; overflow-wrap: anywhere; }
+.java-debug-dashboard article.active strong { color: #fff; }
+
+/* ---- Per-module accent tints (restrained, one focal hue each) -------------- */
+.java-object .java-core-engine,
+.java-object .java-memory-board b.active,
+.java-object .java-debug-dashboard article.active { background: linear-gradient(140deg, #2f6fd6, #1e3f86); box-shadow: 0 18px 40px rgba(47, 111, 214, .26); }
+.java-object .java-module-chip { background: #2f6fd6; box-shadow: 0 8px 20px rgba(47, 111, 214, .26); }
+.java-object .java-kicker,
+.java-object .java-scene-title span,
+.java-object .java-problem-card span,
+.java-object .java-debug-panel span,
+.java-object .java-console span { color: #245bbf; }
+.java-object .java-pipeline article:first-child { border-top-color: #2f6fd6; }
+
+.java-reuse .java-core-engine,
+.java-reuse .java-memory-board b.active,
+.java-reuse .java-debug-dashboard article.active { background: linear-gradient(140deg, #7c46d6, #43289f); box-shadow: 0 18px 40px rgba(124, 70, 214, .26); }
+.java-reuse .java-module-chip { background: #7c46d6; box-shadow: 0 8px 20px rgba(124, 70, 214, .26); }
+.java-reuse .java-kicker,
+.java-reuse .java-scene-title span,
+.java-reuse .java-problem-card span,
+.java-reuse .java-debug-panel span,
+.java-reuse .java-console span { color: #6a37c2; }
+
+.java-thread .java-core-engine,
+.java-thread .java-memory-board b.active,
+.java-thread .java-debug-dashboard article.active { background: linear-gradient(140deg, #0f857a, #084b45); box-shadow: 0 18px 40px rgba(15, 133, 122, .26); }
+.java-thread .java-module-chip { background: #0f857a; box-shadow: 0 8px 20px rgba(15, 133, 122, .26); }
+.java-thread .java-kicker,
+.java-thread .java-scene-title span,
+.java-thread .java-problem-card span,
+.java-thread .java-debug-panel span,
+.java-thread .java-console span { color: #0c6a61; }
+
+.java-type .java-core-engine,
+.java-type .java-memory-board b.active,
+.java-type .java-debug-dashboard article.active { background: linear-gradient(140deg, #c9861d, #8f5a10); box-shadow: 0 18px 40px rgba(201, 134, 29, .26); }
+.java-type .java-module-chip { background: #c9861d; box-shadow: 0 8px 20px rgba(201, 134, 29, .26); }
+.java-type .java-kicker,
+.java-type .java-scene-title span,
+.java-type .java-problem-card span,
+.java-type .java-debug-panel span,
+.java-type .java-console span { color: #a86f13; }
+
+/* ---- Motion ---------------------------------------------------------------- */
+@keyframes javaRise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes javaFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes javaLayerIn {
+  from { opacity: 0; transform: translate(-50%, -46%) rotateX(55deg) translateY(calc(var(--z, 0) * -54px)); }
+  to   { opacity: 1; transform: translate(-50%, -50%) rotateX(55deg) translateY(calc(var(--z, 0) * -54px)); }
+}
+
+@keyframes javaPulse {
+  0%, 100% { transform: scale(1); opacity: .82; }
+  50%      { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes javaFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes javaBreathe {
+  0%, 100% { box-shadow: 0 30px 70px rgba(194, 59, 48, .30), inset 0 2px 4px rgba(255, 255, 255, .3); }
+  50%      { box-shadow: 0 34px 84px rgba(194, 59, 48, .38), inset 0 2px 4px rgba(255, 255, 255, .3); }
+}
+
+@keyframes javaSpin { to { transform: rotate(360deg); } }
+
+/* ---- Responsive ------------------------------------------------------------ */
+@media (max-width: 980px), (max-height: 680px) {
+  .java-hero-scene,
+  .java-why-scene,
+  .java-ide-scene,
+  .java-memory-scene,
+  .java-interaction-scene,
+  .java-architecture-scene,
+  .java-debug-scene {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 52px 24px 24px;
+  }
+
+  .java-runtime-orbit,
+  .java-console,
+  .java-architecture { display: none; }
+
+  .java-pipeline { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .java-pipeline article { min-height: 112px; }
+  .java-memory-board,
+  .java-debug-dashboard { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 620px) {
+  .java-slide-chrome { inset: 12px 14px auto; }
+
+  .java-hero-copy h2,
+  .java-scene-title h2,
+  .java-problem-card h2,
+  .java-debug-panel h2 { font-size: clamp(1.7rem, 8vw, 2.35rem); }
+
+  .java-before-after,
+  .java-memory-board,
+  .java-sequence,
+  .java-debug-dashboard,
+  .java-pipeline { grid-template-columns: 1fr; }
+
+  .java-before-after i,
+  .java-sequence article:nth-child(n+3),
+  .java-memory-board section:nth-child(2) { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .java-runtime-orbit::after,
+  .java-runtime-orbit b,
+  .java-core-engine,
+  .java-pipeline article,
+  .java-sequence article,
+  .java-sequence article::after,
+  .java-before-after article,
+  .java-memory-board section,
+  .java-debug-dashboard article,
+  .java-layer,
+  .java-gc-unit { animation: none; }
+}

@@ -1,0 +1,979 @@
+/* =============================================================================
+   Big Data Analytics — Premium Redesign Layer
+   -----------------------------------------------------------------------------
+   Scoped entirely to `.big-data-deck`. Loaded AFTER platform.css so it wins on
+   the cascade. Touches ZERO slide content, notes, routing or navigation — this
+   is a pure visual + motion elevation of the existing markup.
+
+   Goal: make every BDA slide feel like a premium product-launch keynote —
+   warm cream glass, layered depth, cinematic entry, and living motion — without
+   hurting readability or the VTU academic content.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   1. Design tokens (scoped) — warm cream, glass, refined palette + shadows
+   ------------------------------------------------------------------------- */
+.big-data-deck {
+  --bd-cream-1: #fbf7ef;
+  --bd-cream-2: #fffdf9;
+  --bd-cream-3: #f4efe4;
+  --bd-ink: #141d2e;
+  --bd-body: #46536a;
+  --bd-muted: #7a8698;
+
+  --bd-blue: #2f6bff;
+  --bd-teal: #0f9d94;
+  --bd-purple: #7c5cff;
+  --bd-orange: #f08a24;
+  --bd-green: #17a06b;
+
+  --bd-glass: rgba(255, 255, 255, 0.66);
+  --bd-glass-strong: rgba(255, 255, 255, 0.82);
+  --bd-hairline: rgba(20, 29, 46, 0.10);
+  --bd-hairline-strong: rgba(20, 29, 46, 0.16);
+
+  /* Layered "two light" shadow: soft ambient + tighter key light */
+  --bd-shadow-sm: 0 1px 2px rgba(20, 29, 46, 0.05), 0 6px 16px rgba(20, 29, 46, 0.06);
+  --bd-shadow-md: 0 2px 6px rgba(20, 29, 46, 0.06), 0 14px 34px rgba(20, 29, 46, 0.10);
+  --bd-shadow-lg: 0 6px 14px rgba(20, 29, 46, 0.08), 0 30px 70px rgba(20, 29, 46, 0.16);
+  --bd-glow-blue: 0 18px 44px rgba(47, 107, 255, 0.26);
+
+  --bd-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------------------------------------------------------------------------
+   2. Deck backdrop — living ambient environment behind the slide frame
+   ------------------------------------------------------------------------- */
+.big-data-deck.deck {
+  background:
+    radial-gradient(1100px 640px at 8% -12%, rgba(47, 107, 255, 0.10), transparent 60%),
+    radial-gradient(1000px 560px at 96% 4%, rgba(15, 157, 148, 0.09), transparent 58%),
+    radial-gradient(900px 620px at 50% 120%, rgba(124, 92, 255, 0.08), transparent 60%),
+    linear-gradient(150deg, #efe9dd 0%, #f3eee3 46%, #ece5d7 100%);
+  position: relative;
+  isolation: isolate;
+}
+
+/* drifting mesh + dot grid, extremely low opacity, keeps slides from feeling empty */
+.big-data-deck.deck::before {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(20, 29, 46, 0.05) 1px, transparent 1.4px);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(80% 80% at 50% 45%, #000 30%, transparent 78%);
+  animation: bdDriftGrid 44s linear infinite;
+}
+
+/* slow-floating soft blobs for depth */
+.big-data-deck.deck::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(420px 320px at 18% 82%, rgba(47, 107, 255, 0.07), transparent 70%),
+    radial-gradient(380px 300px at 84% 22%, rgba(240, 138, 36, 0.06), transparent 70%);
+  animation: bdFloatBlobs 26s ease-in-out infinite alternate;
+}
+
+/* GPU-composited drift (translate one 30px tile) instead of animating
+   background-position, which forces a full-layer repaint every frame. */
+@keyframes bdDriftGrid {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(30px, 30px, 0); }
+}
+@keyframes bdFloatBlobs {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to   { transform: translate3d(-1.2%, -1.6%, 0) scale(1.05); }
+}
+
+.big-data-deck .slide-stage { position: relative; z-index: 1; }
+
+/* ---------------------------------------------------------------------------
+   3. Slide frame — warm glass panel with layered depth + animated accent rail
+   ------------------------------------------------------------------------- */
+.big-data-deck .slide-frame {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 30%),
+    linear-gradient(155deg, var(--bd-cream-2) 0%, var(--bd-cream-1) 52%, var(--bd-cream-3) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow:
+    var(--bd-shadow-lg),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+}
+
+/* cinematic interior: a soft top key-light + corner colour wash + a faint
+   vignette so wide/empty areas read as directed depth, not dead flatness. */
+.big-data-deck .slide-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(130% 78% at 50% -14%, rgba(255, 255, 255, 0.55), transparent 58%),
+    radial-gradient(820px 540px at 100% 0%, rgba(15, 157, 148, 0.06), transparent 62%),
+    radial-gradient(760px 500px at 0% 100%, rgba(47, 107, 255, 0.06), transparent 60%),
+    radial-gradient(150% 120% at 50% 50%, transparent 62%, rgba(20, 29, 46, 0.05) 100%);
+}
+
+/* animated top accent rail (shimmer travels along the gradient) */
+.big-data-deck .slide-frame::before {
+  height: 5px;
+  background: linear-gradient(90deg, var(--bd-blue), var(--bd-teal) 34%, var(--bd-purple) 66%, var(--bd-orange));
+  background-size: 220% 100%;
+  animation: bdRailShimmer 9s linear infinite;
+  z-index: 3;
+}
+@keyframes bdRailShimmer {
+  from { background-position: 0% 0; }
+  to   { background-position: 220% 0; }
+}
+
+/* keep real content above the frame texture layers */
+.big-data-deck .slide-header,
+.big-data-deck .slide-body,
+.big-data-deck .slide-footer { position: relative; z-index: 2; }
+
+/* ---------------------------------------------------------------------------
+   4. Header + tool pills — quieter chrome, glass buttons
+   ------------------------------------------------------------------------- */
+.big-data-deck .slide-kicker {
+  color: var(--bd-blue);
+  letter-spacing: 0.14em;
+}
+
+.big-data-deck .slide-title {
+  color: var(--bd-ink);
+  letter-spacing: -0.015em;
+}
+
+.big-data-deck .slide-counter,
+.big-data-deck .mode-switch button,
+.big-data-deck .module-switcher button,
+.big-data-deck .module-switcher a {
+  background: var(--bd-glass);
+  border: 1px solid var(--bd-hairline);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  transition: transform 0.2s var(--bd-ease), background 0.2s var(--bd-ease), border-color 0.2s var(--bd-ease), color 0.2s var(--bd-ease);
+}
+.big-data-deck .mode-switch button:hover,
+.big-data-deck .module-switcher button:hover,
+.big-data-deck .module-switcher a:hover {
+  transform: translateY(-1px);
+  background: #fff;
+  border-color: rgba(47, 107, 255, 0.32);
+  color: var(--bd-blue);
+}
+.big-data-deck .mode-switch button.active,
+.big-data-deck .module-switcher button.active,
+.big-data-deck .module-switcher .active-link {
+  background: linear-gradient(135deg, var(--bd-blue), #2450c8);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(47, 107, 255, 0.30);
+}
+
+.big-data-deck .slide-footer { color: var(--bd-muted); }
+
+/* ---------------------------------------------------------------------------
+   5. Bottom control bar + redesigned segmented progress
+   ------------------------------------------------------------------------- */
+.big-data-deck .controls {
+  background: linear-gradient(180deg, rgba(19, 27, 43, 0.96), rgba(13, 19, 32, 0.98));
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 -10px 30px rgba(20, 35, 60, 0.18);
+}
+.big-data-deck .nav-btn,
+.big-data-deck .deck-link {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: transform 0.18s var(--bd-ease), background 0.18s var(--bd-ease);
+}
+.big-data-deck .nav-btn:hover:not(:disabled),
+.big-data-deck .deck-link:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.16);
+}
+.big-data-deck .active-tool {
+  background: linear-gradient(135deg, var(--bd-blue), #2450c8);
+  border-color: transparent;
+}
+
+/* segmented "module progress" look layered over the continuous fill */
+.big-data-deck .progress-bar {
+  height: 9px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.big-data-deck .progress-fill {
+  background: linear-gradient(90deg, var(--bd-blue), var(--bd-teal) 55%, var(--bd-green));
+  background-size: 200% 100%;
+  animation: bdRailShimmer 6s linear infinite;
+  box-shadow: 0 0 14px rgba(47, 107, 255, 0.5);
+  transition: width 0.5s var(--bd-ease);
+  position: relative;
+}
+/* notches carve the bar into discrete segments (■■■■□□□□ feel) */
+.big-data-deck .progress-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(90deg, transparent 0, transparent calc(5% - 2px), rgba(19, 27, 43, 0.9) calc(5% - 2px), rgba(19, 27, 43, 0.9) 5%);
+  border-radius: inherit;
+}
+.big-data-deck .progress-wrap { position: relative; }
+.big-data-deck .progress-meta span:first-child::before {
+  content: "MODULE PROGRESS · ";
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.08em;
+}
+
+/* ---------------------------------------------------------------------------
+   6. Cinematic slide entry — macro cascade on every mount (replayKey remount)
+      Background → header → body, ~700ms total. Ends fully visible & static.
+   ------------------------------------------------------------------------- */
+.big-data-deck .slide-frame {
+  animation: bdFrameIn 0.62s var(--bd-ease) both;
+}
+.big-data-deck .slide-header-copy {
+  animation: bdRiseIn 0.5s var(--bd-ease) both;
+  animation-delay: 0.08s;
+}
+.big-data-deck .slide-body > * {
+  animation: bdRiseIn 0.55s var(--bd-ease) both;
+  animation-delay: 0.16s;
+}
+
+@keyframes bdFrameIn {
+  from { opacity: 0; transform: translateY(14px) scale(0.985); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes bdRiseIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Gentle inner stagger for grid/flow cards so labels flow in after the frame.
+   Uses the existing card selectors; keeps final state visible even if the
+   original .is-visible reveal isn't driven. */
+.big-data-deck .slide-body :is(
+  .bda-silos, .bda-card-row, .bda-choice-grid, .bda-usecase-grid, .bda-limit-flow,
+  .bda-flow-row, .bda-warehouse, .bda-mapreduce, .bda-integration, .bda-etl,
+  .bda-hadoop-nodes, .bda-pressure, .bda-timeline, .bda-analytics-ladder,
+  .bda-source-cloud, .bda-campus-sources, .m2-block-strip, .process-path,
+  .layout-compare, .bullets
+) > * {
+  animation: bdRiseIn 0.5s var(--bd-ease) both;
+}
+.big-data-deck .slide-body :is(.bda-silos,.bda-card-row,.bda-choice-grid,.bda-usecase-grid,.bda-limit-flow,.bda-flow-row,.bda-warehouse,.bda-mapreduce,.bda-integration,.bda-etl,.bda-hadoop-nodes,.bda-pressure,.bda-timeline,.bda-analytics-ladder,.bda-source-cloud,.bda-campus-sources,.m2-block-strip,.process-path,.layout-compare,.bullets) > *:nth-child(1) { animation-delay: 0.22s; }
+.big-data-deck .slide-body :is(.bda-silos,.bda-card-row,.bda-choice-grid,.bda-usecase-grid,.bda-limit-flow,.bda-flow-row,.bda-warehouse,.bda-mapreduce,.bda-integration,.bda-etl,.bda-hadoop-nodes,.bda-pressure,.bda-timeline,.bda-analytics-ladder,.bda-source-cloud,.bda-campus-sources,.m2-block-strip,.process-path,.layout-compare,.bullets) > *:nth-child(2) { animation-delay: 0.28s; }
+.big-data-deck .slide-body :is(.bda-silos,.bda-card-row,.bda-choice-grid,.bda-usecase-grid,.bda-limit-flow,.bda-flow-row,.bda-warehouse,.bda-mapreduce,.bda-integration,.bda-etl,.bda-hadoop-nodes,.bda-pressure,.bda-timeline,.bda-analytics-ladder,.bda-source-cloud,.bda-campus-sources,.m2-block-strip,.process-path,.layout-compare,.bullets) > *:nth-child(3) { animation-delay: 0.34s; }
+.big-data-deck .slide-body :is(.bda-silos,.bda-card-row,.bda-choice-grid,.bda-usecase-grid,.bda-limit-flow,.bda-flow-row,.bda-warehouse,.bda-mapreduce,.bda-integration,.bda-etl,.bda-hadoop-nodes,.bda-pressure,.bda-timeline,.bda-analytics-ladder,.bda-source-cloud,.bda-campus-sources,.m2-block-strip,.process-path,.layout-compare,.bullets) > *:nth-child(4) { animation-delay: 0.40s; }
+.big-data-deck .slide-body :is(.bda-silos,.bda-card-row,.bda-choice-grid,.bda-usecase-grid,.bda-limit-flow,.bda-flow-row,.bda-warehouse,.bda-mapreduce,.bda-integration,.bda-etl,.bda-hadoop-nodes,.bda-pressure,.bda-timeline,.bda-analytics-ladder,.bda-source-cloud,.bda-campus-sources,.m2-block-strip,.process-path,.layout-compare,.bullets) > *:nth-child(5) { animation-delay: 0.46s; }
+.big-data-deck .slide-body :is(.bda-silos,.bda-card-row,.bda-choice-grid,.bda-usecase-grid,.bda-limit-flow,.bda-flow-row,.bda-warehouse,.bda-mapreduce,.bda-integration,.bda-etl,.bda-hadoop-nodes,.bda-pressure,.bda-timeline,.bda-analytics-ladder,.bda-source-cloud,.bda-campus-sources,.m2-block-strip,.process-path,.layout-compare,.bullets) > *:nth-child(n+6) { animation-delay: 0.52s; }
+
+/* ---------------------------------------------------------------------------
+   7. Premium card surfaces — elevation, glass, hover float
+      Re-skins the many existing card selectors in one place.
+   ------------------------------------------------------------------------- */
+.big-data-deck :is(
+  .bda-silos article, .bda-card-row article, .bda-choice-grid article,
+  .bda-usecase-grid article, .bda-limit-flow article, .bda-question-grid article,
+  .bda-scale-compare article, .bda-timeline article, .bda-warehouse article,
+  .bda-hadoop-core article, .bda-mapreduce article, .bda-analytics-ladder article,
+  .bda-tech-stack article, .bda-shortcut article, .bda-answer-pattern article,
+  .bda-revision-sheet article, .bda-integration article, .bda-worked article,
+  .bda-etl article, .bda-flow-row article, .bda-pressure article,
+  .bda-journey-map article
+) {
+  background: linear-gradient(180deg, var(--bd-glass-strong), rgba(255, 255, 255, 0.5));
+  border: 1px solid var(--bd-hairline);
+  border-radius: 16px;
+  box-shadow: var(--bd-shadow-md);
+  backdrop-filter: blur(6px);
+  transition: transform 0.28s var(--bd-ease), box-shadow 0.28s var(--bd-ease), border-color 0.28s var(--bd-ease);
+}
+.big-data-deck :is(
+  .bda-silos article, .bda-card-row article, .bda-choice-grid article,
+  .bda-usecase-grid article, .bda-limit-flow article, .bda-question-grid article,
+  .bda-scale-compare article, .bda-timeline article, .bda-warehouse article,
+  .bda-hadoop-core article, .bda-mapreduce article, .bda-analytics-ladder article,
+  .bda-integration article, .bda-worked article, .bda-etl article,
+  .bda-flow-row article, .bda-pressure article, .bda-journey-map article
+):hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bd-shadow-lg);
+  border-color: rgba(47, 107, 255, 0.28);
+}
+
+/* rounder corners for the many rounded-8px primitives → soft premium 14–16px */
+.big-data-deck :is(
+  .bda-definition, .bda-takeaway, .bda-code, .bda-mini-table, .bda-compare-table,
+  .bda-hadoop-label, .bda-hadoop-strip b, .bda-campus-core, .bda-title-outcome,
+  .bda-extract-flow span, .bda-quality-board span, .bda-quality-board strong,
+  .bda-node-grid b, .bda-growth-scale span, .bda-source-cloud span,
+  .bda-campus-sources span
+) {
+  border-radius: 14px;
+}
+
+/* takeaway / callout — warmer, softer, glassy */
+.big-data-deck .bda-takeaway {
+  background: linear-gradient(135deg, rgba(240, 138, 36, 0.14), rgba(240, 138, 36, 0.06));
+  border-left: 4px solid var(--bd-orange);
+  box-shadow: var(--bd-shadow-sm);
+}
+.big-data-deck .bda-definition {
+  background: linear-gradient(135deg, rgba(47, 107, 255, 0.12), rgba(47, 107, 255, 0.04));
+  border: 1px solid rgba(47, 107, 255, 0.22);
+  border-left: 5px solid var(--bd-blue);
+  box-shadow: var(--bd-shadow-sm);
+}
+
+/* ---------------------------------------------------------------------------
+   8. Living motion — pulses, LEDs, floating hero nodes, traveling data
+      Purposeful only: applied to hero/diagram elements, never body text.
+   ------------------------------------------------------------------------- */
+
+/* icons inside visuals breathe slowly */
+.big-data-deck :is(.bda-visual, .layout-visual, .visual-panel, .m2-visual) svg {
+  animation: bdIconPulse 4.5s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes bdIconPulse {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50%      { opacity: 1; transform: scale(1.05); }
+}
+
+/* hero campus core + hadoop label gently float with a soft glow */
+.big-data-deck :is(.bda-campus-core, .bda-mindmap-core) {
+  animation: bdFloat 6s ease-in-out infinite;
+  box-shadow: var(--bd-glow-blue), var(--bd-shadow-lg);
+}
+@keyframes bdFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+/* mindmap core has a transform already (centering) — float via a wrapper-safe filter glow only */
+.big-data-deck .bda-mindmap-core {
+  animation: bdCorePulse 5s ease-in-out infinite;
+}
+@keyframes bdCorePulse {
+  0%, 100% { box-shadow: var(--bd-glow-blue), 0 22px 48px rgba(47,107,255,0.2); transform: translate(-50%, -50%) scale(1); }
+  50%      { box-shadow: 0 0 0 12px rgba(47,107,255,0.08), 0 26px 56px rgba(47,107,255,0.34); transform: translate(-50%, -50%) scale(1.03); }
+}
+
+/* node/server-style blocks get a soft "activity" glow pulse (living cluster) */
+.big-data-deck :is(.bda-node-grid b, .bda-hadoop-strip b, .m2-block) {
+  position: relative;
+  animation: bdNodePulse 3.2s ease-in-out infinite;
+}
+.big-data-deck :is(.bda-node-grid b, .bda-hadoop-strip b, .m2-block):nth-child(2n) { animation-delay: 0.5s; }
+.big-data-deck :is(.bda-node-grid b, .bda-hadoop-strip b, .m2-block):nth-child(3n) { animation-delay: 1s; }
+@keyframes bdNodePulse {
+  0%, 100% { box-shadow: 0 8px 20px rgba(15, 157, 148, 0.18); }
+  50%      { box-shadow: 0 10px 26px rgba(15, 157, 148, 0.42), 0 0 0 3px rgba(15, 157, 148, 0.10); }
+}
+
+/* blinking activity LED on server/node blocks */
+.big-data-deck :is(.bda-node-grid b, .bda-hadoop-strip b)::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7dffcf;
+  box-shadow: 0 0 8px #7dffcf;
+  animation: bdLed 1.8s ease-in-out infinite;
+}
+.big-data-deck .bda-hadoop-strip b:nth-child(2)::after { animation-delay: 0.6s; }
+.big-data-deck .bda-hadoop-strip b:nth-child(3)::after { animation-delay: 1.2s; }
+@keyframes bdLed {
+  0%, 100% { opacity: 0.25; }
+  50%      { opacity: 1; }
+}
+
+/* traveling data particles along the title flow stream (enhance existing) */
+.big-data-deck .bda-flow-stream {
+  background: linear-gradient(90deg, rgba(47,107,255,0.14), rgba(15,157,148,0.14));
+  border: 1px solid rgba(47, 107, 255, 0.24);
+  box-shadow: inset 0 1px 3px rgba(20, 29, 46, 0.06);
+}
+.big-data-deck .bda-flow-stream i {
+  background: var(--bd-blue);
+  box-shadow: 0 0 10px rgba(47, 107, 255, 0.7);
+}
+
+/* directional arrows in flow rows gently slide to imply movement */
+.big-data-deck :is(.bda-flow-row, .bda-warehouse, .bda-mapreduce, .bda-integration, .bda-worked, .bda-etl) article:not(:last-child)::after {
+  animation: bdArrowNudge 1.6s ease-in-out infinite;
+}
+@keyframes bdArrowNudge {
+  0%, 100% { transform: translateY(-50%) translateX(0); opacity: 0.7; }
+  50%      { transform: translateY(-50%) translateX(3px); opacity: 1; }
+}
+
+/* ---------------------------------------------------------------------------
+   9. Interactive emphasis — hover a diagram node to spotlight it (dim siblings)
+   ------------------------------------------------------------------------- */
+.big-data-deck :is(.bda-hadoop-nodes, .bda-usecase-grid, .bda-pressure, .bda-silos):hover > * {
+  filter: saturate(0.7) opacity(0.55);
+  transition: filter 0.3s var(--bd-ease), transform 0.3s var(--bd-ease);
+}
+.big-data-deck :is(.bda-hadoop-nodes, .bda-usecase-grid, .bda-pressure, .bda-silos):hover > *:hover {
+  filter: none;
+  transform: translateY(-4px) scale(1.02);
+  z-index: 4;
+}
+
+/* ---------------------------------------------------------------------------
+   10. Cinematic section dividers
+   ------------------------------------------------------------------------- */
+.big-data-deck .bda-section-slide { position: relative; }
+.big-data-deck .bda-section-number {
+  background: linear-gradient(135deg, rgba(47, 107, 255, 0.22), rgba(124, 92, 255, 0.16));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: bdSectionGlow 6s ease-in-out infinite;
+}
+@keyframes bdSectionGlow {
+  0%, 100% { opacity: 0.7; }
+  50%      { opacity: 1; }
+}
+.big-data-deck .bda-section-slide h2 {
+  color: var(--bd-ink);
+  letter-spacing: -0.02em;
+}
+
+/* ---------------------------------------------------------------------------
+   11. Title slide — fix nav collision + DATA→INSIGHT cutoff, add polish
+   ------------------------------------------------------------------------- */
+.big-data-deck .bda-title-visual {
+  min-height: 0;
+  align-content: center;
+  gap: 16px;
+  padding-top: 8px;
+}
+.big-data-deck .bda-source-cloud { gap: 10px; }
+.big-data-deck .bda-source-cloud span { min-height: 42px; }
+.big-data-deck .bda-flow-stream { height: 66px; }
+.big-data-deck .bda-title-outcome {
+  min-height: 62px;
+  box-shadow: var(--bd-glow-blue);
+}
+.big-data-deck .bda-title-outcome.data {
+  background: linear-gradient(135deg, var(--bd-blue), #2450c8);
+}
+.big-data-deck .bda-title-outcome.insight {
+  background: linear-gradient(135deg, var(--bd-teal), #0c7d76);
+  box-shadow: 0 18px 44px rgba(15, 157, 148, 0.28);
+}
+.big-data-deck .bda-title-slide h1 {
+  background: linear-gradient(135deg, var(--bd-ink) 30%, #2a3852);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------------------------------------------------------------------------
+   12. Generic layout primitives (Modules 3–5 use Teaching.jsx) — glass + depth
+   ------------------------------------------------------------------------- */
+.big-data-deck :is(.visual-panel, .takeaway, .callout, .key-statement, .definition-block, .ce-example, .compare-pane) {
+  border-radius: 16px;
+  box-shadow: var(--bd-shadow-sm);
+}
+.big-data-deck .process-node {
+  border-radius: 14px;
+  box-shadow: var(--bd-shadow-sm);
+  transition: transform 0.25s var(--bd-ease), box-shadow 0.25s var(--bd-ease);
+}
+.big-data-deck .process-node:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--bd-shadow-md);
+}
+.big-data-deck .process-node.accent {
+  box-shadow: var(--bd-glow-blue);
+}
+
+/* ---------------------------------------------------------------------------
+   13. Animated scale-cue counters (BdaScaleStrip) — real-world Big Data scale
+   ------------------------------------------------------------------------- */
+.big-data-deck .bda-scalestrip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: clamp(16px, 2vw, 24px);
+  max-width: 620px;
+}
+.big-data-deck .bda-stat {
+  display: grid;
+  align-content: start;
+  gap: 2px;
+  padding: 11px 15px;
+  background: linear-gradient(180deg, var(--bd-glass-strong), rgba(255, 255, 255, 0.45));
+  border: 1px solid var(--bd-hairline);
+  border-radius: 14px;
+  box-shadow: var(--bd-shadow-sm);
+  backdrop-filter: blur(6px);
+  animation: bdRiseIn 0.6s var(--bd-ease) both;
+  animation-delay: var(--d, 0.2s);
+}
+.big-data-deck .bda-stat strong {
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 2.1vw, 2.35rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--bd-blue), var(--bd-teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+.big-data-deck .bda-stat span {
+  color: var(--bd-muted);
+  font-size: clamp(0.72rem, 0.82vw, 0.9rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+/* ---------------------------------------------------------------------------
+   13b. Hero slides — tame oversized titles so copy (incl. scale strip) fits
+        the 16:9 frame at every resolution. Reclaims the double padding and
+        aligns content to top so nothing clips. Fixes pre-existing overflow.
+   ------------------------------------------------------------------------- */
+.big-data-deck :is(.m2-hero, .m3-hero, .m4-hero) {
+  align-content: center;
+  padding-block: clamp(6px, 1.4vw, 18px);
+}
+.big-data-deck :is(.m2-hero, .m3-hero, .m4-hero) > div:first-child {
+  min-width: 0;
+  align-content: center;
+}
+.big-data-deck .m2-hero h1 { font-size: clamp(2.7rem, 4.9vw, 4.7rem); }
+.big-data-deck .m3-hero h1 { font-size: clamp(2.3rem, 4.2vw, 4rem); }
+.big-data-deck .m4-hero h1 { font-size: clamp(2.5rem, 4.6vw, 4.4rem); }
+.big-data-deck :is(.m2-hero, .m3-hero, .m4-hero) p {
+  font-size: clamp(1rem, 1.3vw, 1.28rem);
+  line-height: 1.4;
+}
+.big-data-deck .m2-hero-path { margin-top: 14px; }
+.big-data-deck :is(.m2-hero, .m3-hero, .m4-hero) .bda-scalestrip { margin-top: 10px; }
+
+/* ---------------------------------------------------------------------------
+   15. Module 2 dense-slide fit — tighten header title + copy so full living
+       diagrams stay visible (no clipping) without changing academic meaning.
+   ------------------------------------------------------------------------- */
+/* long M2/M3/M4/M5 titles — color/tracking only; fit owned by Typography Engine */
+.big-data-deck .slide-title {
+  letter-spacing: -0.015em;
+}
+/* tighter bullet cards */
+.big-data-deck .m2-points { gap: 7px; }
+.big-data-deck .m2-points li { padding: 8px 12px 8px 30px; line-height: 1.22; }
+.big-data-deck .m2-points li::before { top: 14px; }
+.big-data-deck .m2-lead { margin-bottom: 12px; }
+/* compact the 11-item journey rail so it is never the tallest column (it was
+   forcing the row past the body height and clipping the centered diagram) */
+.big-data-deck .m2-story { gap: 4px; align-content: center; }
+.big-data-deck .m2-story span { padding: 4px 10px; min-height: 0; font-size: clamp(.62rem, .74vw, .82rem); line-height: 1.15; }
+/* Compare panel: drop the fixed 285px min-height and tighten so it never clips */
+.big-data-deck .m2-compare section { min-height: 0; padding: 13px 14px; gap: 7px; }
+.big-data-deck .m2-compare h3 { margin-bottom: 2px; font-size: clamp(1.05rem, 1.32vw, 1.32rem); }
+.big-data-deck .m2-compare p { padding: 7px 9px; font-size: clamp(.82rem, .92vw, .98rem); line-height: 1.24; }
+
+/* ---------------------------------------------------------------------------
+   16. Cinematic composition — let living architectures become the HERO.
+       M2/M3/M4 Decks only gave the visual ~46-49% (M5 already gave ~60%),
+       so their diagrams floated small and slides read top-heavy. Rebalance
+       every BDA 3-column Deck so the diagram dominates and fills the canvas.
+       (.tight variants are already visual-dominant — leave them.)
+   ------------------------------------------------------------------------- */
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet):not(.tight) {
+  grid-template-columns: minmax(190px, 0.46fr) minmax(280px, 0.76fr) minmax(520px, 1.6fr);
+}
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet).reverse:not(.tight) {
+  grid-template-columns: minmax(190px, 0.46fr) minmax(520px, 1.6fr) minmax(280px, 0.76fr);
+}
+/* Make each Deck a definite-height cell so the SVG can cap to the actual body
+   height. With preserveAspectRatio the SVG content then SCALES to fit (fills
+   height on big screens, shrinks to fit on short-body slides) and NEVER clips. */
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet, .m5-decklet):not(.tight) {
+  height: 100%;
+  min-height: 0;
+  grid-template-rows: minmax(0, 1fr);
+}
+/* the visual cell fills the body-tall row; the SVG is taken out of flow so the
+   cell height stays independent of it (breaks the circular sizing) */
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet, .m5-decklet):not(.tight)
+  > :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) {
+  align-self: stretch;
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+}
+/* SVG absolutely fills the cell; preserveAspectRatio (meet) scales content to
+   fit — fills height on big screens, shrinks to fit short-body slides, no clip */
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet, .m5-decklet):not(.tight)
+  > :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) > .hv-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+
+/* ---------------------------------------------------------------------------
+   17. Director's Cut — cinematic peaks, module identity, hero scenes
+       Quiet slides stay quiet. Peak slides get atmosphere, metaphor captions,
+       and a dominant visual that can teach without the bullets.
+   ------------------------------------------------------------------------- */
+
+/* Module emotional identity — subtle corner wash so chapters feel different */
+.big-data-deck .slide-frame.bd-module-1::after {
+  background:
+    radial-gradient(130% 78% at 50% -14%, rgba(255, 255, 255, 0.55), transparent 58%),
+    radial-gradient(820px 540px at 100% 0%, rgba(47, 107, 255, 0.10), transparent 62%),
+    radial-gradient(760px 500px at 0% 100%, rgba(240, 138, 36, 0.08), transparent 60%),
+    radial-gradient(150% 120% at 50% 50%, transparent 62%, rgba(20, 29, 46, 0.05) 100%);
+}
+.big-data-deck .slide-frame.bd-module-2::after {
+  background:
+    radial-gradient(130% 78% at 50% -14%, rgba(255, 255, 255, 0.55), transparent 58%),
+    radial-gradient(820px 540px at 100% 0%, rgba(124, 92, 255, 0.10), transparent 62%),
+    radial-gradient(760px 500px at 0% 100%, rgba(47, 107, 255, 0.08), transparent 60%),
+    radial-gradient(150% 120% at 50% 50%, transparent 62%, rgba(20, 29, 46, 0.05) 100%);
+}
+.big-data-deck .slide-frame.bd-module-3::after {
+  background:
+    radial-gradient(130% 78% at 50% -14%, rgba(255, 255, 255, 0.55), transparent 58%),
+    radial-gradient(820px 540px at 100% 0%, rgba(15, 157, 148, 0.11), transparent 62%),
+    radial-gradient(760px 500px at 0% 100%, rgba(47, 107, 255, 0.06), transparent 60%),
+    radial-gradient(150% 120% at 50% 50%, transparent 62%, rgba(20, 29, 46, 0.05) 100%);
+}
+.big-data-deck .slide-frame.bd-module-4::after {
+  background:
+    radial-gradient(130% 78% at 50% -14%, rgba(255, 255, 255, 0.55), transparent 58%),
+    radial-gradient(820px 540px at 100% 0%, rgba(240, 138, 36, 0.12), transparent 62%),
+    radial-gradient(760px 500px at 0% 100%, rgba(15, 157, 148, 0.08), transparent 60%),
+    radial-gradient(150% 120% at 50% 50%, transparent 62%, rgba(20, 29, 46, 0.05) 100%);
+}
+.big-data-deck .slide-frame.bd-module-5::after {
+  background:
+    radial-gradient(130% 78% at 50% -14%, rgba(255, 255, 255, 0.55), transparent 58%),
+    radial-gradient(820px 540px at 100% 0%, rgba(47, 107, 255, 0.12), transparent 62%),
+    radial-gradient(760px 500px at 0% 100%, rgba(124, 92, 255, 0.10), transparent 60%),
+    radial-gradient(150% 120% at 50% 50%, transparent 62%, rgba(20, 29, 46, 0.05) 100%);
+}
+
+/* Peak slides: stronger key light + accent rail emphasis */
+.big-data-deck .slide-frame.bd-peak {
+  box-shadow:
+    var(--bd-shadow-lg),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 0 0 1px rgba(47, 107, 255, 0.06);
+}
+.big-data-deck .slide-frame.bd-peak::before {
+  height: 6px;
+  animation-duration: 7s;
+}
+
+/* Hero scene frame — atmosphere, caption, annotations */
+.big-data-deck .bo-scene {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 10px 12px 12px;
+  border-radius: 18px;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.22)),
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.65), transparent 55%);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: var(--bd-shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+.big-data-deck .bo-scene-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(420px 280px at 18% 20%, rgba(47, 107, 255, 0.10), transparent 70%),
+    radial-gradient(380px 260px at 88% 78%, rgba(15, 157, 148, 0.09), transparent 70%);
+  animation: bdFloatBlobs 22s ease-in-out infinite alternate;
+}
+.big-data-deck .bo-city .bo-scene-atmosphere {
+  background:
+    radial-gradient(420px 280px at 20% 18%, rgba(124, 92, 255, 0.12), transparent 70%),
+    radial-gradient(380px 260px at 86% 80%, rgba(47, 107, 255, 0.10), transparent 70%);
+}
+.big-data-deck .bo-library .bo-scene-atmosphere {
+  background:
+    radial-gradient(420px 280px at 18% 22%, rgba(15, 157, 148, 0.13), transparent 70%),
+    radial-gradient(380px 260px at 84% 78%, rgba(47, 107, 255, 0.07), transparent 70%);
+}
+.big-data-deck .bo-forge .bo-scene-atmosphere,
+.big-data-deck .bo-logistics .bo-scene-atmosphere {
+  background:
+    radial-gradient(420px 280px at 16% 20%, rgba(240, 138, 36, 0.12), transparent 70%),
+    radial-gradient(380px 260px at 88% 76%, rgba(124, 92, 255, 0.09), transparent 70%);
+}
+.big-data-deck .bo-influence .bo-scene-atmosphere {
+  background:
+    radial-gradient(420px 280px at 22% 18%, rgba(47, 107, 255, 0.14), transparent 70%),
+    radial-gradient(380px 260px at 86% 80%, rgba(124, 92, 255, 0.12), transparent 70%);
+}
+
+.big-data-deck .bo-scene-beat {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--bd-blue);
+  font-size: clamp(0.68rem, 0.78vw, 0.82rem);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.big-data-deck .bo-scene-stage {
+  position: relative;
+  z-index: 1;
+  min-height: 0;
+  height: 100%;
+  display: grid;
+  place-items: stretch;
+}
+.big-data-deck .bo-scene-stage > .hv-svg,
+.big-data-deck .bo-scene-stage > .bda-campus-map,
+.big-data-deck .bo-scene-stage > .bda-pressure,
+.big-data-deck .bo-scene-stage > .bda-scale-compare,
+.big-data-deck .bo-scene-stage > .bda-analytics-ladder,
+.big-data-deck .bo-scene-stage > :first-child {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  min-height: 0;
+}
+.big-data-deck .bo-scene-caption {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 2px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--bd-hairline);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--bd-shadow-sm);
+}
+.big-data-deck .bo-scene-caption strong {
+  color: var(--bd-ink);
+  font-size: clamp(0.92rem, 1.05vw, 1.12rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.big-data-deck .bo-scene-caption span {
+  color: var(--bd-muted);
+  font-size: clamp(0.72rem, 0.82vw, 0.88rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+.big-data-deck .bo-annotation-rail {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 42px;
+  display: grid;
+  gap: 6px;
+  pointer-events: none;
+}
+.big-data-deck .bo-annotation-rail em {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--bd-hairline);
+  color: var(--bd-body);
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: var(--bd-shadow-sm);
+  animation: bdRiseIn 0.55s var(--bd-ease) both;
+}
+.big-data-deck .bo-annotation-rail em:nth-child(2) { animation-delay: 0.12s; }
+.big-data-deck .bo-annotation-rail em:nth-child(3) { animation-delay: 0.24s; }
+
+/* Opening SVG motion helpers (additive; living hv-* motion untouched) */
+.big-data-deck .bo-open { max-height: min(58vh, 680px); }
+.big-data-deck .bo-in { animation: bdRiseIn 0.7s var(--bd-ease) both; animation-delay: var(--d, 0s); }
+.big-data-deck .bo-in-scale {
+  animation: boInScale 0.8s var(--bd-ease) both;
+  animation-delay: var(--d, 0s);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes boInScale {
+  from { opacity: 0; transform: scale(0.86); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.big-data-deck .bo-in-fade {
+  animation: boInFade 0.9s ease both;
+  animation-delay: var(--d, 0s);
+}
+@keyframes boInFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.big-data-deck .bo-planet-glow {
+  fill: rgba(47, 107, 255, 0.16);
+  animation: heroGlow 6.5s ease-in-out infinite;
+}
+.big-data-deck .bo-planet-glow.soft { fill: rgba(47, 107, 255, 0.10); }
+.big-data-deck .bo-orbit {
+  transform-box: view-box;
+  transform-origin: 280px 215px;
+  animation: heroOrbit var(--dur, 28s) linear infinite;
+}
+.big-data-deck .bo-orbit.rev { animation-direction: reverse; }
+.big-data-deck .bo-float {
+  transform-box: fill-box;
+  animation: heroFloat var(--dur, 7s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+/* Title + module heroes: let the metaphor own the canvas */
+.big-data-deck .bda-title-slide {
+  grid-template-columns: minmax(0, 0.78fr) minmax(420px, 1.35fr);
+}
+.big-data-deck .bda-title-visual.cinematic {
+  min-height: 0;
+  height: 100%;
+  display: grid;
+  align-content: stretch;
+}
+.big-data-deck .bda-title-visual.cinematic .bo-open {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+.big-data-deck :is(.m2-hero, .m3-hero, .m4-hero) {
+  grid-template-columns: minmax(260px, 0.72fr) minmax(480px, 1.45fr);
+  align-items: stretch;
+}
+.big-data-deck :is(.m2-hero, .m3-hero, .m4-hero) > .bo-scene,
+.big-data-deck :is(.m2-hero, .m3-hero, .m4-hero) > .bo-open {
+  min-height: 0;
+  height: 100%;
+}
+.big-data-deck .m2-end,
+.big-data-deck .m3-end,
+.big-data-deck .m4-end {
+  grid-template-columns: minmax(420px, 1.35fr) minmax(280px, 0.85fr);
+}
+.big-data-deck :is(.m2-end, .m3-end, .m4-end) > .bo-scene {
+  min-height: 0;
+}
+
+/* Deck visual cells: HeroScene fills the absolute stage */
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet, .m5-decklet):not(.tight)
+  > :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) > .bo-scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet, .m5-decklet):not(.tight)
+  > :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) > .bo-scene .hv-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet, .m5-decklet):not(.tight)
+  > :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) > .bo-scene .bo-scene-stage {
+  position: relative;
+  min-height: 120px;
+}
+
+/* 5Vs / scale / ladder peaks — larger focal cards */
+.big-data-deck .bda-pressure-hero {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  height: 100%;
+  align-content: stretch;
+}
+.big-data-deck .bda-pressure-hero article {
+  min-height: 0;
+  align-content: center;
+  padding: 18px 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.62));
+  box-shadow: var(--bd-shadow-md);
+}
+.big-data-deck .bda-pressure-hero article b {
+  font-size: clamp(1.15rem, 1.5vw, 1.55rem);
+  background: linear-gradient(135deg, var(--bd-blue), var(--bd-teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.big-data-deck .bda-scale-compare .scale-out-hero {
+  box-shadow: var(--bd-glow-blue);
+  border-color: rgba(47, 107, 255, 0.28);
+  transform: scale(1.02);
+}
+.big-data-deck .bda-scale-compare .bda-node-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Split opening for M5 influence (optional dual stage) */
+.big-data-deck .bo-scene-split {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 10px;
+  min-height: 0;
+  height: 100%;
+}
+.big-data-deck .bo-scene-secondary { opacity: 0.96; }
+
+/* ---------------------------------------------------------------------------
+   18. Accessibility — respect reduced motion
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .big-data-deck *,
+  .big-data-deck *::before,
+  .big-data-deck *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .big-data-deck :is(.bo-in, .bo-in-scale, .bo-in-fade) {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

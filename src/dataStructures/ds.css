@@ -1,0 +1,883 @@
+/* Data Structures — cream/navy teaching deck */
+
+.data-structures-deck,
+.ds-deck {
+  --ds-ink: #102033;
+  --ds-muted: #526079;
+  --ds-cream: #fffaf0;
+  --ds-paper: #faf7f0;
+  --ds-navy: #102033;
+  --ds-data: #2563eb;
+  --ds-active: #d97706;
+  --ds-pointer: #7c3aed;
+  --ds-ok: #16a34a;
+  --ds-danger: #dc2626;
+  --ds-path: #0d9488;
+  --ds-sky: #eaf2ff;
+  --ds-line: rgba(16, 32, 51, 0.12);
+  --ds-shadow: 0 16px 40px rgba(16, 32, 51, 0.1);
+  --ds-module: #2563eb;
+  --accent: #2563eb;
+  --accent-soft: #7c3aed;
+  --card-accent: #2563eb;
+  color: var(--ds-ink);
+}
+
+.data-structures-deck[data-ds-module="1"] { --ds-module: #2563eb; --accent: #2563eb; }
+.data-structures-deck[data-ds-module="2"] { --ds-module: #d97706; --accent: #d97706; }
+.data-structures-deck[data-ds-module="3"] { --ds-module: #7c3aed; --accent: #7c3aed; }
+.data-structures-deck[data-ds-module="4"] { --ds-module: #0d9488; --accent: #0d9488; }
+.data-structures-deck[data-ds-module="5"] { --ds-module: #16a34a; --accent: #16a34a; }
+
+.module-cover.data-structures { --card-accent: #2563eb; }
+
+.data-structures-deck .slide-frame {
+  background:
+    radial-gradient(920px 460px at 6% -18%, rgba(37, 99, 235, 0.1), transparent 58%),
+    radial-gradient(720px 380px at 96% 0%, rgba(217, 119, 6, 0.07), transparent 54%),
+    radial-gradient(540px 280px at 70% 110%, rgba(13, 148, 136, 0.07), transparent 50%),
+    linear-gradient(165deg, #fffcf7 0%, #fffaf0 52%, #faf7f0 100%);
+}
+
+.data-structures-deck .slide-frame::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    radial-gradient(circle at 18% 28%, rgba(37, 99, 235, 0.14) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 62% 18%, rgba(217, 119, 6, 0.12) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 78% 72%, rgba(124, 58, 237, 0.12) 0 1px, transparent 1.6px);
+  background-size: 180px 140px, 220px 160px, 160px 120px;
+  mix-blend-mode: multiply;
+}
+
+.data-structures-deck[data-ds-module="2"] .slide-frame::after { opacity: 0.2; }
+.data-structures-deck[data-ds-module="3"] .slide-frame::after { opacity: 0.2; }
+.data-structures-deck[data-ds-module="4"] .slide-frame::after { opacity: 0.18; }
+.data-structures-deck[data-ds-module="5"] .slide-frame::after { opacity: 0.18; }
+
+.data-structures-deck .slide-header-copy .slide-kicker {
+  color: var(--ds-module);
+}
+
+.data-structures-deck .slide-header-copy .slide-title {
+  font-size: clamp(34px, 2.7vw, 48px);
+  line-height: 1.14;
+  padding-bottom: 4px;
+  overflow: visible;
+  color: var(--ds-navy);
+}
+
+/* ── Stage shell ── */
+.ds-stage {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px 16px;
+  box-sizing: border-box;
+}
+
+.ds-story {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.ds-story span {
+  font-size: clamp(10px, 0.85vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ds-muted);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+.ds-story span.lit { opacity: 0.8; color: var(--ds-navy); }
+.ds-story span.now {
+  opacity: 1;
+  color: var(--ds-module);
+  transform: translateX(2px);
+}
+
+.ds-copy {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.ds-visual,
+.ds-visual-b {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+.ds-footer-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  min-width: 0;
+}
+.ds-takeaway,
+.ds-exam {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.35;
+}
+.ds-takeaway strong { color: var(--ds-ok); }
+.ds-exam strong {
+  color: var(--ds-active);
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+}
+
+/* ── Compositions ── */
+.ds-split-right {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(240px, 0.78fr) minmax(380px, 1.22fr);
+  grid-template-rows: 1fr auto;
+}
+/* Explicit placement so copy/visual don't collapse into the story column when
+   a slide renders without a <story> rail (e.g. the example beats). */
+.ds-split-right .ds-story { grid-row: 1 / 3; grid-column: 1; }
+.ds-split-right .ds-copy { grid-column: 2; }
+.ds-split-right .ds-visual { grid-column: 3; }
+.ds-split-right .ds-footer-band { grid-column: 2 / 4; }
+
+/* Algorithm beat: visual is the hero (left), algorithm/dry-run rail (right).
+   Explicit row/col placement + align-items:stretch gives BOTH cells the full
+   row height — without it the aspect-locked SVG collapsed the visual to its
+   intrinsic height and the copy cell shrank, clipping the dry-run panel. */
+.ds-split-left {
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.85fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+}
+.ds-split-left .ds-story { display: none; }
+.ds-split-left .ds-visual { grid-column: 1; grid-row: 1; min-height: 0; align-self: stretch; }
+.ds-split-left .ds-copy { grid-column: 2; grid-row: 1; min-height: 0; align-self: stretch; }
+.ds-split-left .ds-footer-band { grid-column: 1 / 3; grid-row: 2; }
+
+.ds-full-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.ds-full-stage .ds-story { display: none; }
+.ds-full-stage .ds-copy { max-width: 78%; }
+.ds-full-stage .ds-visual { min-height: 0; }
+
+/* Full-width, vertically-centred layout for text-grid framing slides
+   (syllabus audit, practice, resources) — they used a half-width "board"
+   column and left the lower half empty. */
+.ds-fill {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.ds-fill .ds-story { display: none; }
+.ds-fill .ds-copy {
+  grid-row: 1;
+  align-content: safe center;
+  gap: 16px;
+  overflow: hidden;
+}
+.ds-fill .ds-footer-band { grid-row: 2; }
+.ds-fill .ds-lead { font-size: clamp(22px, 1.7vw, 28px); }
+/* let the framing grids breathe across the full stage */
+.ds-fill .ds-syllabus-audit { grid-template-columns: repeat(auto-fit, minmax(248px, 1fr)); gap: 12px; }
+.ds-fill .ds-syllabus-audit article {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 18px;
+  min-height: 64px;
+}
+.ds-fill .ds-syllabus-audit strong { font-size: clamp(15px, 1.15vw, 19px); line-height: 1.2; }
+.ds-fill .ds-syllabus-audit em { font-size: 12px; }
+.ds-fill .ds-practice-list { gap: 18px; font-size: clamp(17px, 1.3vw, 21px); }
+.ds-fill .ds-resource-hub { gap: 18px; }
+.ds-fill .ds-resource-hub .ds-resource-card { padding: 22px; }
+.ds-fill .ds-resource-hub .ds-resource-card strong { font-size: 19px; }
+.ds-fill .ds-resource-hub .ds-resource-card span { font-size: 15px; }
+
+.ds-hero-open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.ds-hero-open .ds-story,
+.ds-hero-open .ds-copy { display: none; }
+.ds-hero-open .ds-visual { min-height: 0; }
+.ds-hero-open .ds-footer-band { justify-content: center; }
+
+.ds-showcase {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 6px;
+}
+.ds-showcase .ds-story,
+.ds-showcase .ds-copy { display: none; }
+.ds-showcase .ds-visual { grid-row: 1; min-height: 0; }
+.ds-showcase .ds-footer-band {
+  justify-content: center;
+  border-top: 1px solid var(--ds-line);
+  padding-top: 6px;
+}
+.ds-showcase .ds-takeaway { font-size: clamp(14px, 1.05vw, 17px); }
+
+.ds-board {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.ds-board .ds-story { display: none; }
+.ds-board .ds-footer-band { grid-column: 1 / 3; }
+
+.ds-inspect {
+  grid-template-columns: minmax(220px, 0.42fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.ds-inspect .ds-story { display: none; }
+.ds-inspect .ds-visual { grid-column: 2; grid-row: 1; }
+.ds-inspect .ds-footer-band { grid-column: 1 / 3; }
+
+.ds-pipeline {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.ds-pipeline .ds-story { grid-row: 1 / 4; }
+.ds-pipeline .ds-copy,
+.ds-pipeline .ds-visual,
+.ds-pipeline .ds-footer-band { grid-column: 2; }
+
+.ds-memory-first {
+  grid-template-columns: minmax(200px, 0.32fr) minmax(420px, 1.2fr);
+  grid-template-rows: 1fr auto;
+}
+.ds-memory-first .ds-story { display: none; }
+.ds-memory-first .ds-visual { grid-column: 2; grid-row: 1; }
+.ds-memory-first .ds-footer-band { grid-column: 1 / 3; }
+
+.ds-algo-board {
+  grid-template-columns: minmax(260px, 0.48fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.ds-algo-board .ds-story { display: none; }
+.ds-algo-board .ds-footer-band { grid-column: 1 / 3; }
+
+.ds-code-split {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-rows: 1fr auto;
+}
+.ds-code-split .ds-story { display: none; }
+.ds-code-split .ds-footer-band { grid-column: 1 / 3; }
+
+.data-structures-deck .slide-frame[data-composition="full-stage"] .ds-visual,
+.data-structures-deck .slide-frame[data-composition="hero-open"] .ds-visual,
+.data-structures-deck .slide-frame[data-composition="memory-first"] .ds-visual,
+.data-structures-deck .slide-frame[data-composition="showcase"] .ds-visual {
+  min-height: 0;
+}
+.ds-full-stage .ds-visual { min-height: 62%; }
+.ds-hero-open .ds-visual,
+.ds-memory-first .ds-visual { flex: 1 1 auto; }
+
+/* ── Typography blocks ── */
+.ds-lead {
+  margin: 0;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.38;
+  font-weight: 650;
+  color: var(--ds-navy);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.ds-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.34;
+}
+.ds-points li { padding-left: 2px; }
+.ds-points li::marker { color: var(--ds-module); font-weight: 800; }
+
+.ds-definition {
+  background: #fff;
+  border: 1px solid var(--ds-line);
+  border-left: 5px solid var(--ds-data);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--ds-shadow);
+}
+.ds-definition span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--ds-data);
+}
+.ds-definition strong {
+  display: block;
+  font-size: clamp(20px, 1.6vw, 28px);
+  margin: 4px 0;
+}
+.ds-definition p {
+  margin: 0;
+  font-size: clamp(15px, 1.1vw, 18px);
+}
+
+.ds-callout {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--ds-line);
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+}
+.ds-callout span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+}
+.ds-callout p {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.ds-callout-warn { border-left: 4px solid var(--ds-active); }
+.ds-callout-fault { border-left: 4px solid var(--ds-danger); }
+.ds-callout-ok { border-left: 4px solid var(--ds-ok); }
+.ds-callout-idea { border-left: 4px solid var(--ds-data); }
+.ds-callout-know { border-left: 4px solid var(--ds-pointer); }
+
+/* Scene shell */
+.ds-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.72), rgba(255, 250, 240, 0.28) 62%, transparent 78%);
+  overflow: hidden;
+  position: relative;
+}
+.ds-scene svg,
+.ds-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Code panel — light, readable (≥19px) */
+.ds-code-panel {
+  background: #ffffff;
+  border: 1.5px solid var(--ds-line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--ds-shadow);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.ds-code-line {
+  font-size: clamp(19px, 1.45vw, 22px);
+  line-height: 1.55;
+  color: var(--ds-navy);
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: pre;
+}
+.ds-code-line.is-current {
+  background: rgba(217, 119, 6, 0.14);
+  color: var(--ds-active);
+  box-shadow: inset 3px 0 0 var(--ds-active);
+}
+
+/* Linked list / stack / queue / tree helpers */
+.ds-ll-node { transform-box: fill-box; }
+.ds-stack-cell,
+.ds-queue-cell,
+.ds-tree-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ── Concept-native motion (dsv-*) ──
+   State-change animations — not fade-in as primary teaching motion. */
+
+@keyframes dsv-allocate {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  55% { transform: scale(0.96); }
+  70% { transform: scale(1.03); }
+}
+@keyframes dsv-shift {
+  0%, 12% { transform: translateX(0); }
+  45%, 55% { transform: translateX(28px); }
+  88%, 100% { transform: translateX(0); }
+}
+@keyframes dsv-insert {
+  0%, 15% { transform: translateY(-28px) scale(0.85); opacity: 0.35; }
+  40% { transform: translateY(0) scale(1.06); opacity: 1; }
+  55%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes dsv-delete {
+  0%, 20% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(0.92) translateY(6px); opacity: 0.45; }
+  70%, 100% { transform: scale(0.85); opacity: 0.2; }
+}
+@keyframes dsv-push {
+  0%, 10% { transform: translateY(-40px); opacity: 0.4; }
+  35% { transform: translateY(4px); opacity: 1; }
+  50%, 100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes dsv-pop {
+  0%, 15% { transform: translateY(0); opacity: 1; }
+  45% { transform: translateY(-36px); opacity: 0.35; }
+  70%, 100% { transform: translateY(-8px); opacity: 0.55; }
+}
+@keyframes dsv-enqueue {
+  0%, 12% { transform: translateX(40px); opacity: 0.35; }
+  40% { transform: translateX(-4px); opacity: 1; }
+  55%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes dsv-dequeue {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  45% { transform: translateX(-48px); opacity: 0.3; }
+  70%, 100% { transform: translateX(-12px); opacity: 0.5; }
+}
+@keyframes dsv-wrap {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(18deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(4deg); }
+}
+@keyframes dsv-pointer {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -24; }
+}
+@keyframes dsv-rewire {
+  0%, 20% { stroke-dashoffset: 40; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+@keyframes dsv-traverse {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -36; }
+}
+@keyframes dsv-search {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(20px); }
+  75% { transform: translateX(10px); }
+}
+@keyframes dsv-swap {
+  0%, 100% { transform: translate(0, 0); }
+  35% { transform: translate(14px, -10px); }
+  70% { transform: translate(-14px, 10px); }
+}
+@keyframes dsv-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.62; }
+}
+@keyframes dsv-wave {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.07); }
+  70% { transform: scale(1.02); }
+}
+@keyframes dsv-descend {
+  0%, 10% { transform: translate(0, -24px); opacity: 0.5; }
+  45% { transform: translate(36px, 40px); opacity: 1; }
+  70% { transform: translate(72px, 90px); opacity: 1; }
+  100% { transform: translate(72px, 90px); opacity: 0.85; }
+}
+@keyframes dsv-return {
+  0%, 15% { transform: translate(40px, 60px); opacity: 0.6; }
+  55% { transform: translate(10px, 10px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+.dsv-allocate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-allocate 2.4s ease-in-out infinite;
+}
+.dsv-shift {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-shift 2.8s ease-in-out infinite;
+}
+.dsv-insert {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-insert 2.6s ease-out infinite;
+}
+.dsv-delete {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-delete 2.8s ease-in-out infinite;
+}
+.dsv-push {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-push 2.4s ease-out infinite;
+}
+.dsv-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-pop 2.4s ease-in infinite;
+}
+.dsv-enqueue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-enqueue 2.5s ease-out infinite;
+}
+.dsv-dequeue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-dequeue 2.5s ease-in infinite;
+}
+.dsv-wrap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-wrap 3s ease-in-out infinite;
+}
+.dsv-pointer {
+  stroke-dasharray: 10 8;
+  animation: dsv-pointer 1.4s linear infinite;
+}
+.dsv-rewire {
+  stroke-dasharray: 12 10;
+  animation: dsv-rewire 2.2s ease-in-out infinite;
+}
+.dsv-traverse {
+  stroke-dasharray: 10 8;
+  animation: dsv-traverse 1.6s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.dsv-search {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-search 2.6s ease-in-out infinite;
+}
+.dsv-swap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-swap 2.4s ease-in-out infinite;
+}
+.dsv-pulse {
+  animation: dsv-pulse 1.9s ease-in-out infinite;
+}
+.dsv-wave {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-wave 2.2s ease-in-out infinite;
+}
+.dsv-descend {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-descend 3.2s ease-in-out infinite;
+}
+.dsv-return {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dsv-return 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dsv-allocate, .dsv-shift, .dsv-insert, .dsv-delete,
+  .dsv-push, .dsv-pop, .dsv-enqueue, .dsv-dequeue,
+  .dsv-wrap, .dsv-pointer, .dsv-rewire, .dsv-traverse,
+  .dsv-search, .dsv-swap, .dsv-pulse, .dsv-wave,
+  .dsv-descend, .dsv-return {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Kit components ── */
+.ds-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 750;
+  color: var(--ds-navy);
+}
+.ds-flow i { color: var(--ds-module); font-style: normal; font-weight: 900; }
+
+.ds-algo-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+  font-size: clamp(15px, 1.15vw, 19px);
+  line-height: 1.4;
+}
+.ds-algo-steps li::marker { color: var(--ds-module); font-weight: 800; }
+
+.ds-complexity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--ds-line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.ds-complexity > div {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+.ds-complexity span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--ds-muted);
+}
+.ds-complexity strong {
+  font-size: clamp(18px, 1.5vw, 26px);
+  color: var(--ds-data);
+}
+.ds-complexity > p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--ds-muted);
+}
+
+.ds-code-panel span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--ds-module);
+  margin-bottom: 8px;
+  font-family: system-ui, sans-serif;
+}
+.ds-code-panel pre {
+  margin: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.ds-code-panel code {
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.45;
+  color: var(--ds-navy);
+  font-weight: 650;
+}
+
+.ds-dryrun {
+  display: grid;
+  gap: 8px;
+}
+.ds-dryrun section {
+  background: #fff;
+  border: 1px solid var(--ds-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.ds-dryrun span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--ds-module);
+}
+.ds-dryrun p { margin: 4px 0 0; font-size: 15px; }
+.ds-dryrun ol {
+  margin: 4px 0 0;
+  padding-left: 1.15em;
+  font-size: 14px;
+  display: grid;
+  gap: 3px;
+}
+
+.ds-term-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ds-term-chips span {
+  background: var(--ds-sky);
+  color: var(--ds-data);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.ds-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.ds-roadmap article {
+  background: #fff;
+  border: 1px solid var(--ds-line);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+.ds-roadmap b { color: var(--ds-module); font-size: 12px; }
+.ds-roadmap strong { font-size: 14px; line-height: 1.25; }
+
+.ds-checkpoint-sheet {
+  display: grid;
+  gap: 8px;
+}
+.ds-checkpoint-sheet article {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.9fr) auto 1.4fr;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--ds-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+.ds-checkpoint-sheet code {
+  font-size: clamp(18px, 1.4vw, 24px);
+  font-weight: 800;
+  color: var(--ds-data);
+}
+.ds-checkpoint-sheet span { font-size: 14px; color: var(--ds-muted); }
+
+.ds-syllabus-audit {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+.ds-syllabus-audit article {
+  background: #fff;
+  border: 1px solid var(--ds-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.ds-syllabus-audit strong { font-size: 14px; }
+.ds-syllabus-audit em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--ds-ok);
+}
+
+.ds-practice-list {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(15px, 1.15vw, 18px);
+}
+.ds-practice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.ds-practice-list em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--ds-active);
+  white-space: nowrap;
+}
+
+.ds-review-map {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 12px;
+}
+.ds-review-map h3 {
+  margin: 0;
+  font-size: clamp(22px, 2vw, 32px);
+  color: var(--ds-navy);
+}
+.ds-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ds-review-topics span {
+  background: #fff;
+  border: 1.5px solid var(--ds-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ds-resource-hub {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.ds-resource-hub a {
+  display: grid;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid var(--ds-line);
+  border-radius: 14px;
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--ds-shadow);
+}
+.ds-resource-hub a:hover { border-color: var(--ds-module); }
+.ds-resource-hub strong { font-size: 16px; }
+.ds-resource-hub span { font-size: 13px; color: var(--ds-muted); }
+.ds-study-tip {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background: var(--ds-sky);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--ds-navy);
+}
+
+.ds-resource-hub .ds-resource-card {
+  display: grid;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid var(--ds-line);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: var(--ds-shadow);
+}
+.ds-resource-hub .ds-resource-card strong { font-size: 16px; }
+.ds-resource-hub .ds-resource-card span { font-size: 13px; color: var(--ds-muted); }

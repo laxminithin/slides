@@ -1,0 +1,667 @@
+/* =============================================================================
+   Big Data Analytics V2.2 — Composition Balancing & Visual Hierarchy Pass
+   -----------------------------------------------------------------------------
+   Scoped to `.big-data-deck`. Pure layout/composition only.
+   Does NOT redesign identity, animations, living architectures, content,
+   notes, PYQs, navigation, or routing.
+
+   Goal: every slide has a clear center of gravity, fills the 16:9 canvas
+   naturally, and never leaves accidental empty center / lower-half voids.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   1. Slide body = composition stage
+      Child must own the full stage so nothing floats in the upper third.
+   ------------------------------------------------------------------------- */
+.big-data-deck .slide-body {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+  min-height: 0;
+}
+
+.big-data-deck .slide-body > * {
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+  align-self: stretch;
+}
+
+/* ---------------------------------------------------------------------------
+   2. Remove accidental width caps that strand content left/center
+      Fill the canvas; optical centering comes from the grid itself.
+   ------------------------------------------------------------------------- */
+.big-data-deck :is(
+  .bda-pressure,
+  .bda-scale-compare,
+  .bda-analytics-ladder,
+  .bda-campus-map,
+  .bda-hadoop-core,
+  .bda-mindmap,
+  .bda-compare-table,
+  .bda-journey-map,
+  .bda-card-row,
+  .bda-silos,
+  .bda-flow-row,
+  .bda-warehouse,
+  .bda-mapreduce,
+  .bda-integration,
+  .bda-etl,
+  .bda-tech-stack,
+  .bda-usecase-grid,
+  .bda-choice-grid,
+  .bda-limit-flow,
+  .bda-timeline,
+  .bda-worked,
+  .bda-shortcut,
+  .bda-answer-pattern,
+  .bda-revision-sheet,
+  .bda-question-grid,
+  .bda-growth-scale,
+  .bda-quality-board
+) {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+/* Full-height compositions so the lower half participates */
+.big-data-deck :is(
+  .bda-pressure,
+  .bda-scale-compare,
+  .bda-analytics-ladder,
+  .bda-campus-map,
+  .bda-hadoop-core,
+  .bda-journey-map,
+  .bda-card-row,
+  .bda-silos,
+  .bda-flow-row,
+  .bda-warehouse,
+  .bda-mapreduce,
+  .bda-integration,
+  .bda-etl,
+  .bda-tech-stack,
+  .bda-usecase-grid,
+  .bda-choice-grid,
+  .bda-limit-flow,
+  .bda-timeline,
+  .bda-worked,
+  .bda-growth-scale,
+  .bda-quality-board,
+  .bda-compare-table,
+  .bda-mindmap
+) {
+  height: 100%;
+  min-height: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   3. M1 canvas — stretch, don’t leave a dead visual column
+   ------------------------------------------------------------------------- */
+.big-data-deck .bda-canvas {
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+  gap: clamp(18px, 2.4vw, 36px);
+}
+
+.big-data-deck .bda-canvas.single {
+  align-content: stretch;
+  grid-template-rows: minmax(0, 1fr);
+}
+
+.big-data-deck .bda-copy {
+  min-height: 0;
+  align-self: center; /* text sits on optical center */
+  display: grid;
+  align-content: center;
+  gap: 0;
+}
+
+.big-data-deck .bda-visual {
+  min-height: 0;
+  height: 100%;
+  align-self: stretch;
+  display: grid;
+  place-items: stretch;
+}
+
+.big-data-deck .bda-visual > * {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+}
+
+/* Takeaway anchors the lower edge of the copy column */
+.big-data-deck .bda-takeaway {
+  margin-top: clamp(14px, 2vh, 22px);
+}
+
+/* ---------------------------------------------------------------------------
+   4. Card / process grids — stretch into the available mass
+   ------------------------------------------------------------------------- */
+.big-data-deck :is(
+  .bda-pressure,
+  .bda-scale-compare,
+  .bda-analytics-ladder,
+  .bda-card-row,
+  .bda-silos,
+  .bda-flow-row,
+  .bda-warehouse,
+  .bda-mapreduce,
+  .bda-integration,
+  .bda-etl,
+  .bda-journey-map,
+  .bda-usecase-grid,
+  .bda-choice-grid,
+  .bda-limit-flow,
+  .bda-timeline,
+  .bda-worked,
+  .bda-tech-stack,
+  .bda-hadoop-nodes
+) {
+  align-content: stretch;
+  align-items: stretch;
+}
+
+.big-data-deck :is(
+  .bda-pressure article,
+  .bda-scale-compare article,
+  .bda-analytics-ladder article,
+  .bda-card-row article,
+  .bda-silos article,
+  .bda-flow-row article,
+  .bda-warehouse article,
+  .bda-mapreduce article,
+  .bda-integration article,
+  .bda-etl article,
+  .bda-journey-map article,
+  .bda-usecase-grid article,
+  .bda-choice-grid article,
+  .bda-limit-flow article,
+  .bda-timeline article,
+  .bda-worked article,
+  .bda-tech-stack article,
+  .bda-hadoop-nodes article
+) {
+  min-height: 0;
+  height: auto;
+  align-self: stretch;
+}
+
+/* Tall card fields: let content breathe into the vertical space */
+.big-data-deck .bda-pressure {
+  grid-template-rows: minmax(0, 1fr);
+}
+.big-data-deck .bda-pressure article {
+  align-content: center;
+  padding-block: clamp(16px, 2.2vh, 28px);
+}
+
+.big-data-deck .bda-scale-compare {
+  grid-template-rows: minmax(0, 1fr);
+}
+.big-data-deck .bda-scale-compare article {
+  align-content: center;
+  padding: clamp(18px, 2.4vh, 32px) clamp(14px, 1.6vw, 24px);
+}
+
+.big-data-deck .bda-analytics-ladder {
+  align-items: stretch;
+  grid-template-rows: minmax(0, 1fr);
+}
+.big-data-deck .bda-analytics-ladder article {
+  align-content: end;
+  padding-bottom: clamp(16px, 2vh, 28px);
+  min-height: 0 !important; /* override stepped min-heights; fill via stretch */
+}
+.big-data-deck .bda-analytics-ladder article:nth-child(1) { margin-top: 18%; }
+.big-data-deck .bda-analytics-ladder article:nth-child(2) { margin-top: 12%; }
+.big-data-deck .bda-analytics-ladder article:nth-child(3) { margin-top: 6%; }
+.big-data-deck .bda-analytics-ladder article:nth-child(4) { margin-top: 0; }
+
+.big-data-deck .bda-journey-map article {
+  min-height: 0;
+  align-content: start;
+  padding: clamp(14px, 1.8vh, 22px) clamp(10px, 1.1vw, 16px);
+}
+
+.big-data-deck .bda-campus-map {
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+  gap: clamp(18px, 2.4vw, 36px);
+  align-items: stretch;
+}
+.big-data-deck .bda-campus-core {
+  min-height: 0;
+  height: 100%;
+}
+.big-data-deck .bda-campus-sources {
+  height: 100%;
+  align-content: center;
+}
+
+.big-data-deck .bda-hadoop-core {
+  align-content: center;
+  gap: clamp(14px, 2vh, 22px);
+}
+.big-data-deck .bda-hadoop-nodes {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  align-items: stretch;
+}
+.big-data-deck .bda-hadoop-nodes article {
+  align-content: center;
+}
+
+.big-data-deck .bda-compare-table {
+  height: 100%;
+  align-content: stretch;
+  grid-auto-rows: minmax(0, 1fr);
+}
+.big-data-deck .bda-compare-table div {
+  min-height: 0;
+}
+
+.big-data-deck .bda-mindmap {
+  min-height: 0;
+  height: 100%;
+}
+
+.big-data-deck .bda-growth-scale {
+  align-content: center;
+  align-items: end;
+  gap: clamp(8px, 1.2vw, 16px);
+}
+
+/* ---------------------------------------------------------------------------
+   4b. HeroScene wrappers — own the stage; diagram fills the middle
+   ------------------------------------------------------------------------- */
+.big-data-deck .bo-scene {
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  padding: clamp(8px, 1.1vh, 14px) clamp(10px, 1.2vw, 16px);
+}
+
+.big-data-deck .bo-scene-stage {
+  min-height: 0;
+  height: 100%;
+}
+
+/* Pin scene rows so the STAGE always owns the flexible middle row and the
+   caption/beat stay compact — regardless of whether an optional beat is
+   present. (Fixes no-beat scenes where the caption grabbed the 1fr row and
+   left the diagram small with a big empty caption panel.) */
+.big-data-deck .bo-scene-beat { grid-row: 1; }
+.big-data-deck :is(.bo-scene-stage, .bo-scene-split) { grid-row: 2; }
+.big-data-deck .bo-scene-caption { grid-row: 3; align-self: end; }
+
+.big-data-deck .bo-scene-stage > .hv-svg,
+.big-data-deck .slide-body > .bo-scene .hv-svg,
+.big-data-deck .slide-body > .bo-open {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+
+/* Full-bleed logistics / planet when it IS the slide body */
+.big-data-deck .slide-body > .bo-scene,
+.big-data-deck .slide-body > .bo-open,
+.big-data-deck .slide-body > .hv-svg {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+
+/* Living SVGs: drop the 60vh ceiling inside BDA so they can fill the cell */
+.big-data-deck .hv-svg {
+  max-height: none;
+}
+
+/* ---------------------------------------------------------------------------
+   5. Title + module heroes — reduce wasted padding, dominate the canvas
+   ------------------------------------------------------------------------- */
+.big-data-deck .bda-title-slide {
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+  gap: clamp(16px, 2.2vw, 36px);
+  padding-block: clamp(4px, 0.8vh, 12px);
+}
+.big-data-deck .bda-title-slide > div:first-child {
+  align-self: center;
+  display: grid;
+  align-content: center;
+}
+.big-data-deck .bda-title-visual,
+.big-data-deck .bda-title-visual.cinematic {
+  height: 100%;
+  min-height: 0;
+  align-self: stretch;
+  display: grid;
+  place-items: stretch;
+}
+.big-data-deck .bda-title-visual .bo-open,
+.big-data-deck .bda-title-visual.cinematic .bo-open {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+/* M1 peak title: the wordmark shares the copy column with the question, the
+   scale-cue counters and the meta pills. Cap it + tighten the rhythm so the
+   counters/meta never clip at the bottom. */
+.big-data-deck .bd-m1 .bda-title-slide > div:first-child { gap: clamp(6px, 1.3vh, 16px); }
+.big-data-deck .bd-m1 .bda-title-slide h1 {
+  font-size: clamp(3rem, 5vw, 5.6rem);
+  line-height: 0.92;
+}
+
+.big-data-deck :is(.m2-hero, .m3-hero, .m4-hero) {
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+  align-content: stretch;
+  gap: clamp(16px, 2vw, 32px);
+  padding: clamp(6px, 1vh, 14px) clamp(8px, 1.2vw, 18px);
+}
+.big-data-deck :is(.m2-hero, .m3-hero, .m4-hero) > div:first-child {
+  align-self: center;
+  display: grid;
+  align-content: center;
+  min-width: 0;
+}
+.big-data-deck :is(.m2-hero, .m3-hero, .m4-hero) > :last-child {
+  min-height: 0;
+  height: 100%;
+  align-self: stretch;
+}
+
+/* End slides — visual + reflection share the full stage */
+.big-data-deck :is(.m2-end, .m3-end, .m4-end) {
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+  gap: clamp(16px, 2vw, 28px);
+  padding: clamp(6px, 1vh, 14px) clamp(8px, 1.2vw, 18px);
+}
+.big-data-deck :is(.m2-end, .m3-end, .m4-end) > .bo-scene,
+.big-data-deck :is(.m2-end, .m3-end, .m4-end) > .bo-open {
+  height: 100%;
+  min-height: 0;
+}
+.big-data-deck :is(.m2-end, .m3-end, .m4-end) > :not(.bo-scene):not(.bo-open) {
+  align-self: center;
+}
+
+/* Section dividers — keep mass in the optical middle, use vertical stage */
+.big-data-deck .bda-section-slide {
+  height: 100%;
+  min-height: 0;
+  align-content: center;
+  justify-items: start;
+  padding-block: clamp(8px, 2vh, 28px);
+}
+
+/* ---------------------------------------------------------------------------
+   6. Decklets (M2–M5) — diagram owns the mass; copy optically centered
+   ------------------------------------------------------------------------- */
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet, .m5-decklet) {
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+}
+
+.big-data-deck :is(.m2-copy, .m3-copy, .m4-copy, .m5-copy) {
+  align-self: center;
+  min-height: 0;
+  display: grid;
+  align-content: center;
+  gap: clamp(8px, 1.2vh, 14px);
+}
+
+.big-data-deck :is(.m2-story, .m3-story, .m4-story, .m5-story) {
+  align-self: stretch;
+  align-content: center;
+  min-height: 0;
+}
+
+.big-data-deck :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) {
+  align-self: stretch;
+  min-height: 0;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+
+/* Non-SVG visuals inside deck cells (flows, cards, compare) still fill */
+.big-data-deck :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) > :not(.hv-svg):not(.bo-scene) {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  align-self: stretch;
+}
+
+/* Tight variants: still fill height; keep their column ratios */
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet, .m5-decklet).tight {
+  height: 100%;
+  min-height: 0;
+  align-items: stretch;
+}
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet, .m5-decklet).tight
+  > :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+}
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet, .m5-decklet).tight
+  > :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) > .hv-svg,
+.big-data-deck :is(.m2-decklet, .m3-decklet, .m4-decklet, .m5-decklet).tight
+  > :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) > .bo-scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+
+/* Common M5/M2 flow chips — stretch into visual cell */
+.big-data-deck :is(.m5-flow, .m2-flow, .m4-master-flow, .m5-compare-flow, .m4-sources) {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  align-content: center;
+  align-items: stretch;
+}
+
+.big-data-deck :is(.m5-flow, .m4-master-flow) article,
+.big-data-deck .m4-sources article {
+  align-self: center;
+}
+
+/* Compare panels fill their visual cell */
+.big-data-deck :is(.m2-compare, .m5-compare-flow) {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  align-content: center;
+}
+
+/* Card grids used as visuals */
+.big-data-deck :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual)
+  > :is(.m2-card-grid, .m3-card-grid, .m4-card-grid, .m5-task-grid) {
+  height: 100%;
+  align-content: center;
+}
+
+/* ---------------------------------------------------------------------------
+   7. Optical center nudge — slightly favor true visual center over geometric
+      (keynote framing: center of gravity sits a touch above dead-center)
+   ------------------------------------------------------------------------- */
+.big-data-deck .bda-copy,
+.big-data-deck :is(.m2-copy, .m3-copy, .m4-copy, .m5-copy),
+.big-data-deck :is(.m2-hero, .m3-hero, .m4-hero) > div:first-child {
+  padding-bottom: 2vh; /* lifts mass slightly into optical center */
+}
+
+/* ---------------------------------------------------------------------------
+   8. Quiet supporting slides stay quieter — but still not top-stuck
+      Single-column text-heavy slides get vertical centering of the block.
+   ------------------------------------------------------------------------- */
+.big-data-deck .bda-canvas.single > .bda-copy {
+  height: 100%;
+  align-content: center;
+  max-width: min(100%, 980px);
+  justify-self: center;
+  width: 100%;
+}
+
+/* ---------------------------------------------------------------------------
+   9. Reduce floating gaps between related elements
+   ------------------------------------------------------------------------- */
+.big-data-deck :is(.m2-lead, .m3-lead, .m4-lead, .m5-lead) {
+  margin-bottom: clamp(8px, 1.1vh, 12px);
+}
+
+.big-data-deck :is(.m2-takeaway, .m3-takeaway, .m4-takeaway, .m5-takeaway) {
+  margin-top: clamp(8px, 1.1vh, 12px);
+}
+
+.big-data-deck :is(.m2-points, .m3-points, .m4-points, .m5-points) {
+  gap: clamp(6px, 0.9vh, 10px);
+}
+
+/* ---------------------------------------------------------------------------
+   10. Remaining floaters — study resources, classroom analogies, keywords
+   ------------------------------------------------------------------------- */
+.big-data-deck .study-resources-slide {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  align-content: center;
+  gap: clamp(14px, 2vh, 24px);
+}
+
+.big-data-deck .study-resources-grid {
+  align-content: stretch;
+  min-height: 0;
+}
+
+.big-data-deck :is(.m5-classroom, .m2-keywords, .m3-keywords, .m4-keywords, .m5-keywords) {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  align-content: center;
+}
+
+.big-data-deck .m5-classroom {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: clamp(10px, 1.4vw, 18px);
+}
+
+.big-data-deck .m5-classroom article {
+  height: 100%;
+  align-content: center;
+}
+
+/* Document / code panels used as visuals should fill their cell */
+.big-data-deck :is(.m3-document, .m3-command-pattern, .m5-code, .m2-block-strip) {
+  width: 100%;
+  max-height: none;
+}
+
+.big-data-deck :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) > .m3-document,
+.big-data-deck :is(.m2-visual, .m3-visual, .m4-visual, .m5-visual) > .m5-code {
+  height: 100%;
+  align-content: center;
+}
+
+/* When a HeroScene wraps a non-SVG composition, force the inner layout to fill */
+.big-data-deck .bo-scene-stage > :is(
+  .bda-campus-map,
+  .bda-pressure,
+  .bda-scale-compare,
+  .bda-analytics-ladder,
+  .bda-hadoop-core,
+  .m5-flow,
+  .m5-compare-flow,
+  .m4-master-flow,
+  .m4-split,
+  .m2-compare
+) {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* SplitDecision (Hive vs Pig): the two cards own the flexible row and the
+   "both generate Hadoop jobs" note stays a compact chip — no giant stretched
+   pill, no wasted lower third. */
+.big-data-deck .bo-scene-stage > .m4-split {
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-content: start;
+  gap: clamp(14px, 1.6vw, 22px);
+}
+.big-data-deck .bo-scene-stage > .m4-split > article {
+  min-height: 0;
+  height: 100%;
+}
+.big-data-deck .bo-scene-stage > .m4-split > p {
+  align-self: center;
+  height: auto;
+  min-height: 0;
+}
+
+/* MapReduce-vs-Spark "SPEED" compare: the two panels own the flexible stage
+   row (no 420px pin floating in the middle) and their rows spread top-to-bottom
+   so the lower third isn't wasted. Scoped to HeroScene — standalone slide keeps
+   its compact framing. */
+.big-data-deck .bo-scene-stage > .m5-compare-flow {
+  align-content: stretch;
+}
+.big-data-deck .bo-scene-stage > .m5-compare-flow > article {
+  min-height: 0;
+  height: 100%;
+  align-content: space-between;
+}
+
+/* Robust: clip oversized scene content at the STAGE boundary so nothing ever
+   spills into the caption (resolution-independent — no fragile fixed scales).
+   SVG scenes already fit exactly, so this only ever trims genuinely-too-tall
+   legacy div compositions. */
+.big-data-deck .bo-scene-stage { overflow: hidden; }
+/* NeedVisual (scale-up vs scale-out): top-align so the file→cluster story shows;
+   only the redundant 3rd rack trims cleanly if the stage is short. */
+.big-data-deck .bo-scene-stage > .m2-need { align-items: start; }
+
+@media (max-width: 1365px), (max-height: 820px) {
+  .big-data-deck .m2-need {
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    height: 100%;
+    gap: 8px;
+    align-items: stretch;
+  }
+
+  .big-data-deck .m2-need .single,
+  .big-data-deck .m2-need .many {
+    min-height: 0;
+    gap: 6px;
+    padding: 8px;
+    align-content: start;
+  }
+
+  .big-data-deck .m2-need article {
+    min-height: 0;
+    padding: 8px;
+  }
+}

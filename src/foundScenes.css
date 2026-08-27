@@ -1,0 +1,478 @@
+/* ==========================================================================
+   foundScenes.css — Parallel Computing Module 1 only.
+   Identity: FOUNDATIONS OF PARALLELISM
+   (architecture cutaways, instruction/data streams, decomposition, topology)
+   Do not import from Modules 2, 3, 4 or 5.
+   ========================================================================== */
+
+.pc-m1-slide {
+  --fo-indigo: #4338ca;
+  --fo-violet: #6d28d9;
+  --fo-copper: #c2410c;
+  --fo-gold: #b45309;
+  --fo-teal: #0f766e;
+  --fo-rose: #9f1239;
+  --fo-ink: #1c1917;
+  --fo-muted: #57534e;
+  --fo-paper: #faf6ef;
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 10px;
+  font-size: 20px;
+  padding: clamp(14px, 1.6vw, 22px);
+  overflow: hidden;
+  background:
+    radial-gradient(760px 420px at 14% 12%, rgba(67, 56, 202, 0.12), transparent 62%),
+    radial-gradient(640px 380px at 90% 82%, rgba(194, 65, 12, 0.1), transparent 64%),
+    linear-gradient(135deg, #faf6ef, #fffdf8);
+}
+
+.pc-m1-slide .fo-head h2,
+.pc-m1-slide .fo-copy h2,
+.pc-m1-slide .fo-divider-copy h2 {
+  font-size: clamp(40px, 3.2vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.pc-m1-slide .fo-lead,
+.pc-m1-slide .fo-copy p,
+.pc-m1-slide .fo-take {
+  font-size: clamp(20px, 1.45vw, 24px);
+  line-height: 1.32;
+  font-weight: 650;
+}
+
+.pc-m1-slide .fo-points li {
+  font-size: clamp(20px, 1.35vw, 23px);
+  line-height: 1.3;
+}
+
+.pc-m1-roadmap {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+  gap: 6px;
+  min-height: 30px;
+}
+
+.pc-m1-roadmap span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 7px 4px;
+  color: #6b7280;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(30, 50, 80, 0.1);
+  border-radius: 999px;
+  font-size: clamp(11px, 0.78vw, 13px);
+  font-weight: 900;
+  line-height: 1.05;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pc-m1-roadmap .active {
+  color: #fff;
+  background: linear-gradient(135deg, var(--fo-indigo), #312e81);
+  border-color: transparent;
+  box-shadow: 0 12px 26px rgba(67, 56, 202, 0.22);
+}
+
+.fo-stage-wrap {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fo-head {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.fo-kicker {
+  color: var(--fo-indigo);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.fo-head h2,
+.fo-copy h2 {
+  margin: 0;
+  color: var(--fo-ink);
+  font-family: var(--display);
+}
+
+.fo-lead {
+  margin: 0;
+  color: var(--fo-muted);
+}
+
+.fo-full,
+.fo-split,
+.fo-divider {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.fo-full {
+  display: grid;
+  place-items: stretch;
+}
+
+.fo-split {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(340px, 0.92fr) minmax(420px, 1.18fr);
+  gap: clamp(14px, 1.6vw, 22px);
+}
+
+.fo-split.reverse {
+  grid-template-columns: minmax(420px, 1.18fr) minmax(340px, 0.92fr);
+}
+
+.fo-split.reverse .fo-copy { order: 2; }
+.fo-split.reverse .fo-visual { order: 1; }
+
+.fo-copy,
+.fo-visual {
+  min-width: 0;
+  min-height: 0;
+}
+
+.fo-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: clamp(12px, 1.4vw, 20px);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(30, 50, 80, 0.1);
+  border-radius: 14px;
+}
+
+.fo-visual {
+  display: grid;
+  place-items: stretch;
+  padding: 6px;
+}
+
+.fo-points {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fo-points li {
+  position: relative;
+  padding-left: 22px;
+  color: #334155;
+  font-weight: 700;
+}
+
+.fo-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--fo-indigo), var(--fo-copper));
+}
+
+.fo-formula {
+  margin: 0;
+  padding: 14px 16px;
+  color: var(--fo-ink);
+  background: #eef2ff;
+  border: 1px solid rgba(67, 56, 202, 0.22);
+  border-radius: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(26px, 1.9vw, 34px);
+  font-weight: 750;
+  line-height: 1.4;
+  overflow: auto;
+}
+
+.fo-formula.sm {
+  font-size: clamp(22px, 1.5vw, 28px);
+}
+
+.fo-code {
+  margin: 0;
+  padding: 14px 16px;
+  color: #1e1b4b;
+  background: #eef2ff;
+  border: 1px solid rgba(67, 56, 202, 0.18);
+  border-radius: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: clamp(18px, 1.25vw, 22px);
+  font-weight: 700;
+  line-height: 1.42;
+  overflow: auto;
+  white-space: pre;
+}
+
+.fo-q {
+  margin: 0;
+  color: #6d28d9;
+  font-size: clamp(20px, 1.4vw, 24px);
+  font-weight: 850;
+}
+
+.fo-take {
+  margin: 0;
+  color: #0f766e;
+  font-weight: 800;
+}
+
+.fo-divider {
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: 24px;
+  align-items: center;
+  padding: 8px 4px;
+}
+
+.fo-divider-copy {
+  display: grid;
+  gap: 10px;
+}
+
+.fo-divider-copy span {
+  width: max-content;
+  padding: 6px 12px;
+  color: #fff;
+  background: var(--fo-indigo);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.fo-divider-copy h2 {
+  margin: 0;
+  color: var(--fo-ink);
+}
+
+.fo-divider-copy p {
+  margin: 0;
+  color: var(--fo-muted);
+  font-size: clamp(20px, 1.4vw, 24px);
+  font-weight: 700;
+}
+
+.fo-div-need .fo-divider-copy span { background: var(--fo-rose); }
+.fo-div-serial .fo-divider-copy span { background: var(--fo-copper); }
+.fo-div-hw .fo-divider-copy span { background: var(--fo-teal); }
+.fo-div-flynn .fo-divider-copy span { background: var(--fo-violet); }
+.fo-div-arch .fo-divider-copy span { background: var(--fo-indigo); }
+.fo-div-net .fo-divider-copy span { background: #0e7490; }
+.fo-div-cache .fo-divider-copy span { background: #b45309; }
+.fo-div-coord .fo-divider-copy span { background: #365314; }
+
+.fo-resource {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 18px;
+}
+
+.fo-resource a {
+  display: grid;
+  gap: 8px;
+  align-content: center;
+  min-width: 0;
+  padding: 22px;
+  color: inherit;
+  background: #fff;
+  border: 2px solid rgba(67, 56, 202, 0.2);
+  border-radius: 16px;
+  text-decoration: none;
+}
+
+.fo-resource svg { color: var(--fo-indigo); }
+.fo-resource strong { font-size: 24px; }
+.fo-resource span {
+  color: var(--fo-muted);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ---- scenes ----------------------------------------------------------- */
+.found-scene {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  place-items: stretch;
+  overflow: hidden;
+}
+
+.found-scene svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.found-scene text {
+  font-family: inherit;
+  font-weight: 800;
+}
+
+.fo-chip-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  height: 100%;
+  align-content: center;
+}
+
+.fo-chip {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  padding: 18px 16px;
+  background: #fff;
+  border: 3px solid var(--fo-indigo);
+  border-radius: 14px;
+  animation: fo-rise 0.55s ease both;
+  animation-delay: calc(var(--i) * 0.12s);
+}
+
+.fo-chip strong {
+  color: var(--fo-indigo);
+  font-size: clamp(18px, 1.3vw, 22px);
+}
+
+.fo-chip span {
+  color: var(--fo-muted);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ---- animation families ----------------------------------------------- */
+@keyframes fo-queue {
+  0%, 100% { transform: translateX(0); opacity: 0.45; }
+  50% { transform: translateX(18px); opacity: 1; }
+}
+
+@keyframes fo-split {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(var(--dx, 40px), var(--dy, 0)) scale(0.92); }
+}
+
+@keyframes fo-fan {
+  0% { stroke-dashoffset: 240; opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+
+@keyframes fo-stream {
+  0% { transform: translateY(-8px); opacity: 0.35; }
+  50% { transform: translateY(4px); opacity: 1; }
+  100% { transform: translateY(-8px); opacity: 0.35; }
+}
+
+@keyframes fo-path {
+  0% { stroke-dashoffset: 280; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes fo-stale {
+  0%, 40% { opacity: 1; }
+  55%, 100% { opacity: 0.28; }
+}
+
+@keyframes fo-fresh {
+  0%, 40% { opacity: 0.35; }
+  55%, 100% { opacity: 1; }
+}
+
+@keyframes fo-arrive {
+  0%, 30% { transform: translateY(-18px); opacity: 0.4; }
+  70%, 100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fo-pulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+@keyframes fo-rise {
+  from { transform: translateY(12px); opacity: 0.2; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fo-switch {
+  0%, 40% { fill: #c7d2fe; }
+  55%, 100% { fill: #4338ca; }
+}
+
+@keyframes fo-lane {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+}
+
+.fo-anim-queue { animation: fo-queue 1.8s ease-in-out infinite; }
+.fo-anim-split { animation: fo-split 1.6s ease both; }
+.fo-anim-fan { stroke-dasharray: 240; animation: fo-fan 2s ease-in-out infinite; }
+.fo-anim-stream { animation: fo-stream 2s ease-in-out infinite; }
+.fo-anim-path { stroke-dasharray: 280; animation: fo-path 2.2s ease infinite alternate; }
+.fo-anim-stale { animation: fo-stale 2.6s ease-in-out infinite; }
+.fo-anim-fresh { animation: fo-fresh 2.6s ease-in-out infinite; }
+.fo-anim-arrive { animation: fo-arrive 1.8s ease-in-out infinite; }
+.fo-anim-pulse { animation: fo-pulse 1.6s ease-in-out infinite; }
+.fo-anim-switch { animation: fo-switch 2s ease-in-out infinite; }
+.fo-anim-lane { animation: fo-lane 2s ease-in-out infinite; }
+
+@media (max-width: 1366px) {
+  .fo-split {
+    grid-template-columns: minmax(300px, 0.88fr) minmax(380px, 1.12fr);
+  }
+  .pc-m1-slide .fo-head h2,
+  .pc-m1-slide .fo-copy h2 {
+    font-size: clamp(34px, 3vw, 42px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .pc-m1-roadmap span {
+    font-size: 10px;
+    padding: 6px 2px;
+  }
+  .fo-formula {
+    font-size: clamp(22px, 1.6vw, 28px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .found-scene *,
+  .fo-chip,
+  .fo-anim-queue,
+  .fo-anim-split,
+  .fo-anim-fan,
+  .fo-anim-stream,
+  .fo-anim-path,
+  .fo-anim-stale,
+  .fo-anim-fresh,
+  .fo-anim-arrive,
+  .fo-anim-pulse,
+  .fo-anim-switch,
+  .fo-anim-lane {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,608 @@
+{
+  "id": "module5",
+  "title": "Sequence Modeling, RNNs & LSTM",
+  "story": [
+    "Sequences",
+    "Unfolding",
+    "RNN",
+    "Bidirectional",
+    "Encoder-Decoder",
+    "Deep/Recursive",
+    "LSTM",
+    "Revision"
+  ],
+  "source": "VTU_BCA701_Module_5_Sequence_Modeling_RNNs.pptx",
+  "syllabus": [
+    {
+      "topic": "Unfolding Computational Graphs",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Recurrent Neural Networks",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Bidirectional RNNs",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Encoder–Decoder Sequence-to-Sequence Architectures",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Deep Recurrent Networks",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Recursive Neural Networks",
+      "status": "COVERED"
+    },
+    {
+      "topic": "LSTM",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Other Gated RNNs",
+      "status": "COVERED"
+    }
+  ],
+  "slides": [
+    {
+      "n": 1,
+      "id": "module5-s01",
+      "title": "Module 5: Sequence Modeling with Recurrent and Recursive Nets",
+      "subtitle": "",
+      "layout": "opener",
+      "visual": "MasterStory",
+      "definition": null,
+      "points": [
+        "Unfolded computational graphs, RNNs, bidirectional models, encoder-decoder sequence architectures, deep recurrent stacks, recursive neural networks, LSTMs, and gated RNNs."
+      ],
+      "extraPoints": [],
+      "takeaway": "Unfolded computational graphs, RNNs, bidirectional models, encoder-decoder sequence architectures, deep recurrent stacks, recursive neural networks, LSTMs, and gated RNNs.",
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 2,
+      "id": "module5-s02",
+      "title": "Module 5 is about learning from order, context, and structure",
+      "subtitle": "",
+      "layout": "journey",
+      "visual": "JourneyPath",
+      "definition": null,
+      "points": [],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 3,
+      "id": "module5-s03",
+      "title": "Sequence models handle inputs where order changes meaning",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "SequenceMemory",
+      "definition": null,
+      "points": [
+        "Text",
+        "Word order changes meaning and sentiment.",
+        "Speech and audio",
+        "Signals unfold over time.",
+        "Time series",
+        "Forecasts depend on earlier values."
+      ],
+      "extraPoints": [
+        "Structured data",
+        "Trees and nested objects carry relationships."
+      ],
+      "takeaway": "Word order changes meaning and sentiment.",
+      "say": "",
+      "formula": "Text"
+    },
+    {
+      "n": 4,
+      "id": "module5-s04",
+      "title": "A computational graph can be unfolded through time",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "RnnUnroll",
+      "definition": null,
+      "points": [
+        "h",
+        "x1",
+        "x2",
+        "x3",
+        "x4",
+        "y1"
+      ],
+      "extraPoints": [
+        "y2",
+        "y3",
+        "y4",
+        "The same recurrent computation is reused at each time step."
+      ],
+      "takeaway": "The same recurrent computation is reused at each time step.",
+      "say": "",
+      "formula": "h"
+    },
+    {
+      "n": 5,
+      "id": "module5-s05",
+      "title": "Unfolding makes parameter sharing visible",
+      "subtitle": "",
+      "layout": "formula",
+      "visual": "CnnMotivation",
+      "definition": null,
+      "points": [
+        "h(t) = φ( Wxh x(t) + Whh h(t-1) + b )",
+        "Wxh maps the current input into hidden state.",
+        "Whh carries information from the previous hidden state.",
+        "The same weights are reused across sequence positions."
+      ],
+      "extraPoints": [],
+      "takeaway": "Wxh maps the current input into hidden state.",
+      "say": "",
+      "formula": "h(t) = φ( Wxh x(t) + Whh h(t-1) + b )"
+    },
+    {
+      "n": 6,
+      "id": "module5-s06",
+      "title": "Backpropagation through time trains unfolded recurrent graphs",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BackpropFlow",
+      "definition": null,
+      "points": [
+        "Forward through time",
+        "The RNN reads sequence elements one by one, updating hidden state and producing outputs.",
+        "Backward through time",
+        "Errors are propagated backward across the unfolded graph so shared recurrent weights receive accumulated gradients."
+      ],
+      "extraPoints": [],
+      "takeaway": "The RNN reads sequence elements one by one, updating hidden state and producing outputs.",
+      "say": "",
+      "formula": "Forward through time"
+    },
+    {
+      "n": 7,
+      "id": "module5-s07",
+      "title": "Recurrent neural networks keep a hidden state",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "SequenceMemory",
+      "definition": null,
+      "points": [
+        "Memory mechanism",
+        "The hidden state acts as a summary of previous inputs, allowing the model to condition current predictions on earlier context.",
+        "Use cases",
+        "RNNs are used for language modeling, tagging, sentiment analysis, speech, forecasting, and other sequence tasks."
+      ],
+      "extraPoints": [],
+      "takeaway": "The hidden state acts as a summary of previous inputs, allowing the model to condition current predictions on earlier context.",
+      "say": "",
+      "formula": "Memory mechanism"
+    },
+    {
+      "n": 8,
+      "id": "module5-s08",
+      "title": "RNN input-output patterns depend on the task",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "SequenceMemory",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 9,
+      "id": "module5-s09",
+      "title": "Standard RNNs struggle with long-range dependencies",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "SequenceMemory",
+      "definition": null,
+      "points": [
+        "Gradients repeatedly pass through recurrent connections across many time steps.",
+        "They can shrink, making early information hard to learn from.",
+        "They can also grow, causing unstable updates.",
+        "Gated RNNs such as LSTMs were designed to manage these problems better."
+      ],
+      "extraPoints": [],
+      "takeaway": "Gradients repeatedly pass through recurrent connections across many time steps.",
+      "say": "",
+      "formula": "Gradients repeatedly pass through recurrent connections across many time steps."
+    },
+    {
+      "n": 10,
+      "id": "module5-s10",
+      "title": "Bidirectional RNNs use context from both directions",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BidirectionalRnn",
+      "definition": null,
+      "points": [
+        "→",
+        "←",
+        "x1",
+        "x2",
+        "x3",
+        "x4"
+      ],
+      "extraPoints": [
+        "Forward state reads left to right; backward state reads right to left."
+      ],
+      "takeaway": "Forward state reads left to right; backward state reads right to left.",
+      "say": "",
+      "formula": "→"
+    },
+    {
+      "n": 11,
+      "id": "module5-s11",
+      "title": "Bidirectional context helps when the full sequence is available",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BidirectionalRnn",
+      "definition": null,
+      "points": [
+        "Why it helps",
+        "A prediction at position t can use information from earlier and later positions, not only the past.",
+        "Where it fits",
+        "Bidirectional RNNs are useful for tagging, sequence labeling, and text understanding tasks where the whole input sequence is known."
+      ],
+      "extraPoints": [],
+      "takeaway": "A prediction at position t can use information from earlier and later positions, not only the past.",
+      "say": "",
+      "formula": "Why it helps"
+    },
+    {
+      "n": 12,
+      "id": "module5-s12",
+      "title": "Encoder-decoder models map one sequence into another",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "EncoderDecoder",
+      "definition": null,
+      "points": [
+        "Input\nsequence",
+        "Encoder\nstate",
+        "Output\nsequence",
+        "The encoder summarizes the source sequence; the decoder generates the target sequence."
+      ],
+      "extraPoints": [],
+      "takeaway": "The encoder summarizes the source sequence; the decoder generates the target sequence.",
+      "say": "",
+      "formula": "Input\nsequence"
+    },
+    {
+      "n": 13,
+      "id": "module5-s13",
+      "title": "Sequence-to-sequence architecture supports unequal lengths",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "EncoderDecoder",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 14,
+      "id": "module5-s14",
+      "title": "Deep recurrent networks stack sequence processing layers",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "DeepRnnStack",
+      "definition": null,
+      "points": [
+        "Lower recurrent layers process raw temporal patterns; higher layers learn more abstract temporal representations.",
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": "Lower recurrent layers process raw temporal patterns; higher layers learn more abstract temporal representations.",
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 15,
+      "id": "module5-s15",
+      "title": "Depth can mean stacked layers, recurrence depth, or both",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "DeepRnnStack",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 16,
+      "id": "module5-s16",
+      "title": "Recursive neural networks process tree structures",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "RecursiveNet",
+      "definition": null,
+      "points": [
+        "root",
+        "Unlike an RNN over a line of time steps, a recursive net composes representations according to a tree."
+      ],
+      "extraPoints": [],
+      "takeaway": "Unlike an RNN over a line of time steps, a recursive net composes representations according to a tree.",
+      "say": "",
+      "formula": "root"
+    },
+    {
+      "n": 17,
+      "id": "module5-s17",
+      "title": "Recursive nets fit compositional structure",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "RecursiveNet",
+      "definition": null,
+      "points": [
+        "Where they help",
+        "They can model parse trees, expression trees, hierarchical documents, and nested structures.",
+        "Core operation",
+        "Child representations are combined to form a parent representation, and this repeats upward through the tree."
+      ],
+      "extraPoints": [],
+      "takeaway": "They can model parse trees, expression trees, hierarchical documents, and nested structures.",
+      "say": "",
+      "formula": "Where they help"
+    },
+    {
+      "n": 18,
+      "id": "module5-s18",
+      "title": "LSTMs add a memory cell and gates",
+      "subtitle": "",
+      "layout": "hero",
+      "visual": "LstmCell",
+      "definition": null,
+      "points": [
+        "Cell state",
+        "A path designed to carry information over many time steps.",
+        "Input gate",
+        "Controls how much new information enters memory.",
+        "Forget gate",
+        "Controls how much old information is retained."
+      ],
+      "extraPoints": [
+        "Output gate",
+        "Controls how much memory influences the hidden output."
+      ],
+      "takeaway": "A path designed to carry information over many time steps.",
+      "say": "",
+      "formula": "Cell state"
+    },
+    {
+      "n": 19,
+      "id": "module5-s19",
+      "title": "LSTM gates regulate write, keep, and read operations",
+      "subtitle": "",
+      "layout": "hero",
+      "visual": "LstmCell",
+      "definition": null,
+      "points": [
+        "cell state",
+        "forget",
+        "input",
+        "output",
+        "Gates are learned functions that decide how information moves through memory."
+      ],
+      "extraPoints": [],
+      "takeaway": "Gates are learned functions that decide how information moves through memory.",
+      "say": "",
+      "formula": "cell state"
+    },
+    {
+      "n": 20,
+      "id": "module5-s20",
+      "title": "Gated RNNs reduce the long-dependency problem",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "SequenceMemory",
+      "definition": null,
+      "points": [
+        "Plain RNN",
+        "Repeated multiplication through many time steps can weaken or destabilize gradient signals.",
+        "Gated RNN",
+        "Gates create controlled paths for remembering, forgetting, and exposing information, making long-range dependency learning easier."
+      ],
+      "extraPoints": [],
+      "takeaway": "Repeated multiplication through many time steps can weaken or destabilize gradient signals.",
+      "say": "",
+      "formula": "Plain RNN"
+    },
+    {
+      "n": 21,
+      "id": "module5-s21",
+      "title": "Other gated RNNs simplify the same idea",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "GateFlowViz",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 22,
+      "id": "module5-s22",
+      "title": "Choose the sequence model by available context and structure",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "SequenceMemory",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 23,
+      "id": "module5-s23",
+      "title": "Training sequence models requires care over time",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BatchOnlineViz",
+      "definition": null,
+      "points": [
+        "Backpropagation through time can be computationally expensive for long sequences.",
+        "Gradients may vanish or explode across many recurrent steps.",
+        "Truncating the time horizon trades efficiency for limited long-range credit assignment.",
+        "Gating, careful initialization, clipping, and batching are common practical aids."
+      ],
+      "extraPoints": [],
+      "takeaway": "Backpropagation through time can be computationally expensive for long sequences.",
+      "say": "",
+      "formula": "Gradients may vanish or explode across many recurrent steps."
+    },
+    {
+      "n": 24,
+      "id": "module5-s24",
+      "title": "A good exam answer should identify the flow of information",
+      "subtitle": "",
+      "layout": "exam",
+      "visual": "ExamStrategy",
+      "definition": null,
+      "points": [
+        "Unfolded graph",
+        "Same recurrent computation repeated over time.",
+        "Bidirectional",
+        "Forward and backward context are combined.",
+        "Encoder-decoder",
+        "One network reads; another generates."
+      ],
+      "extraPoints": [
+        "LSTM gates",
+        "Memory is controlled by learned gates."
+      ],
+      "takeaway": "Same recurrent computation repeated over time.",
+      "say": "",
+      "formula": "Unfolded graph"
+    },
+    {
+      "n": 25,
+      "id": "module5-s25",
+      "title": "Module 5 vocabulary students must own",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 26,
+      "id": "module5-s26",
+      "title": "Mini activity: match task to sequence architecture",
+      "subtitle": "",
+      "layout": "activity",
+      "visual": "BidirectionalRnn",
+      "definition": null,
+      "points": [
+        "Sentiment of a review: many-to-one RNN or LSTM.",
+        "Part-of-speech tagging: bidirectional aligned sequence model.",
+        "Translation: encoder-decoder sequence-to-sequence model.",
+        "Parsing expression trees: recursive neural network.",
+        "Long time-series dependency: LSTM or another gated RNN."
+      ],
+      "extraPoints": [],
+      "takeaway": "Sentiment of a review: many-to-one RNN or LSTM.",
+      "say": "",
+      "formula": "Sentiment of a review: many-to-one RNN or LSTM."
+    },
+    {
+      "n": 27,
+      "id": "module5-s27",
+      "title": "Module 5 closes with a complete sequence-modeling chain",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Sequence",
+        "Unfolded\ngraph",
+        "Hidden\nstate",
+        "Context",
+        "Memory\ngates",
+        "Prediction"
+      ],
+      "extraPoints": [
+        "The module moves from representing time to choosing architectures that preserve useful context."
+      ],
+      "takeaway": "The module moves from representing time to choosing architectures that preserve useful context.",
+      "say": "",
+      "formula": "Sequence"
+    },
+    {
+      "n": 28,
+      "id": "module5-s28",
+      "title": "Coverage checklist: every Module 5 phrase is included",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 29,
+      "id": "module5-s29",
+      "title": "Prescribed textbook reference for Module 5",
+      "subtitle": "",
+      "layout": "exam",
+      "visual": "ExamStrategy",
+      "definition": null,
+      "points": [
+        "Primary reference: Goodfellow, Bengio, and Courville, Deep Learning, MIT Press, 2016.",
+        "Use the textbook for computational graph unfolding, RNNs, bidirectional RNNs, sequence-to-sequence architectures, deep recurrent nets, recursive nets, LSTMs, and gated RNNs.",
+        "Use the VTU syllabus as the boundary for what belongs in Module 5."
+      ],
+      "extraPoints": [],
+      "takeaway": "Primary reference: Goodfellow, Bengio, and Courville, Deep Learning, MIT Press, 2016.",
+      "say": "",
+      "formula": "Use the VTU syllabus as the boundary for what belongs in Module 5."
+    }
+  ]
+}

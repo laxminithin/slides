@@ -1,0 +1,72 @@
+/* =============================================================================
+   PRESENTATION PLATFORM V3.1 — GLOBAL COMPOSITION & ANTI-TOP-HEAVY PASS
+   -----------------------------------------------------------------------------
+   Loaded after slideLegibility.css (V3.0) and after every subject stylesheet.
+   Does NOT touch --legibility. The V3.0 type baseline is preserved.
+
+   PROBLEM (measured, not guessed): the platform's *average* composition is fine
+   (center-of-gravity ~0.47, vertical fill ~0.70). The failure is a TAIL of slides
+   where sparse content is TOP-PINNED inside a full-height container, leaving the
+   lower ~80% empty (measured cogY 0.03-0.15, bottomGap >0.85). Concentrated in
+   BDA M1, INS M1, and the shared `.layout-visual-first` primitive.
+
+   MECHANISM of the fix: these containers stretch to the full body height, then
+   top-align their children (`align-content:start`/block flow). We center that
+   content vertically. Crucially this changes NO box SIZE — only where existing
+   content sits inside its already-allocated box — so it cannot introduce overflow
+   or clipping, and equal-height card rows stay equal-height (no raggedness).
+   `align-content:center` is a NO-OP when content already fills its container, so
+   content-rich slides are unaffected. Verified visually on BDA s21/s26 + INS s11.
+
+   This is deliberately NOT a blanket `align-items:center` on everything — it is
+   scoped to card/flow/visual-first containers where top-pinning is the defect.
+   ========================================================================== */
+
+/* ---- 1. Card & flow rows: center sparse card content vertically ---------
+   The dominant top-heavy cluster (BDA "heading + one line" cards in full-height
+   flow/grid rows). Centering aligns the label to the card's optical center (and,
+   for flow rows, to the connecting arrows) so it reads as an intentional diagram. */
+.slide-body :is(
+  .bda-warehouse, .bda-flow-row, .bda-etl, .bda-integration, .bda-worked,
+  .bda-card-row, .bda-tech-stack, .bda-timeline, .bda-limit-flow,
+  .bda-usecase-grid, .bda-journey-map, .bda-silos, .bda-choice-grid,
+  .bda-mapreduce, .bda-question-grid
+) > article {
+  align-content: center;
+}
+
+/* ---- 2. Shared teaching primitives: center the content group ------------
+   `.layout-visual-first` / `.layout-two` / `.layout-compare` are cross-deck
+   primitives (Teaching.jsx). When their visual + copy are shorter than the stage
+   they top-pin; center the row band. No-op when the row already fills the stage. */
+.slide-body :is(.layout-visual-first, .layout-two, .layout-compare) {
+  align-content: center;
+}
+
+/* ---- 3. Stretched takeaway callouts must not balloon --------------------
+   When a `.takeaway` is a grid item of a teaching primitive (e.g. DBMS s2:
+   process-path + takeaway in `.layout-visual-first`) the grid stretches it to
+   fill the cell -> a huge empty card with one line at the top. Center it in its
+   track so it collapses to a content-sized callout. `align-self` is ignored on
+   normal-flow takeaways (BDA bottom callouts), so this is safe there. */
+.slide-body :is(.layout-visual-first, .layout-two, .layout-compare) > :is(.takeaway, .bda-takeaway, .ib-takeaway) {
+  align-self: center;
+}
+
+/* ---- 4. Single-block worked-example / statement slides ------------------
+   Full-height block containers holding a few lines at the top (INS crypto worked
+   examples). Centering alone would just relocate a thin strip, so we ALSO enlarge
+   the demonstration: this is under-content space that should make the lesson
+   LARGER (projector-legible), not merely prettier. Left edge preserved so
+   key:value / step lines stay scannable. */
+.slide-body > .crypto-example,
+.slide-body > .stack.crypto-example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(0.75rem, 2vh, 1.6rem);
+  min-height: 0;
+  font-size: clamp(1.5rem, 2.35vw, 2.4rem);
+  line-height: 1.4;
+}

@@ -1,0 +1,1265 @@
+/* =============================================================================
+   International Business V2.0 — Composition + Responsive Fit Pass
+   -----------------------------------------------------------------------------
+   Scoped to `.international-business-deck`.
+   Goal: every slide fits the visible 16:9 stage at 1920→1280 without scrolling,
+   clipping academic content, or collapsing into a mobile webpage layout.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   0. Safe-area tokens (responsive)
+   ------------------------------------------------------------------------- */
+.international-business-deck {
+  --ib-safe-x: var(--slide-safe-x);
+  --ib-safe-top: var(--slide-safe-top);
+  --ib-safe-bottom: var(--slide-safe-bottom);
+  --ib-stage-gap: var(--slide-stage-gap);
+  --ib-story-pad: clamp(4px, 0.8vh, 12px);
+  --ib-card-pad: var(--slide-card-pad);
+  --ib-card-gap: var(--slide-card-gap);
+  --ib-title-size: clamp(22px, 2.6vh, 48px);
+  --ib-lead-size: clamp(13px, 1.55vh, 20px);
+  --ib-body-size: clamp(12px, 1.35vh, 15px);
+  --ib-caption-size: clamp(10px, 1.15vh, 13px);
+  --ib-label-size: clamp(9px, 1.05vh, 11px);
+}
+
+/* Compact chrome — reclaim body height for content */
+.international-business-deck .slide-frame {
+  --slide-top: clamp(10px, 1.4vh, 22px);
+  --slide-bottom: clamp(10px, 1.4vh, 22px);
+  --slide-x: var(--ib-safe-x);
+}
+
+.international-business-deck .slide-header {
+  padding: var(--slide-top) var(--slide-x) 6px;
+  gap: clamp(2px, 0.45vh, 7px);
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.international-business-deck .slide-header-copy {
+  flex: 0 1 auto;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.international-business-deck .slide-header-tools {
+  flex: 1 1 auto;
+  max-width: none;
+  align-items: flex-end;
+  gap: 6px;
+  min-width: 0;
+}
+
+.international-business-deck .slide-header .slide-kicker {
+  margin: 0;
+  font-size: var(--ib-caption-size);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  line-height: 1.15;
+}
+
+.international-business-deck .module-switcher,
+.international-business-deck .mode-switch {
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.international-business-deck .module-switcher button,
+.international-business-deck .module-switcher a,
+.international-business-deck .mode-switch button {
+  min-height: 26px;
+  padding: 4px 8px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.international-business-deck .slide-counter {
+  font-size: 11px;
+}
+
+.international-business-deck .slide-footer {
+  padding: 6px var(--slide-x) var(--slide-bottom);
+  font-size: var(--ib-caption-size);
+  gap: 8px;
+  min-height: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   1. Slide body = composition stage (must receive remaining height)
+   ------------------------------------------------------------------------- */
+.international-business-deck .slide-body {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+  min-height: 0;
+  min-width: 0;
+  padding: 0 var(--ib-safe-x);
+  /* Inherit shared clip so animation bleed does not inflate stage scroll metrics */
+  overflow: clip;
+}
+
+.international-business-deck .slide-body > * {
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+  min-width: 0;
+  max-height: 100%;
+  align-self: stretch;
+}
+
+/* Module identity via slide-frame class from App.jsx */
+.international-business-deck .slide-frame.ib-module-1 { --ib-accent: #1a4f8b; --ib-accent-soft: rgba(26, 79, 139, 0.09); }
+.international-business-deck .slide-frame.ib-module-2 { --ib-accent: #2f6b57; --ib-accent-soft: rgba(47, 107, 87, 0.1); }
+.international-business-deck .slide-frame.ib-module-3 { --ib-accent: #8a6b2f; --ib-accent-soft: rgba(138, 107, 47, 0.1); }
+.international-business-deck .slide-frame.ib-module-4 { --ib-accent: #3a4d6b; --ib-accent-soft: rgba(58, 77, 107, 0.1); }
+.international-business-deck .slide-frame.ib-module-5 { --ib-accent: #1f3d6e; --ib-accent-soft: rgba(31, 61, 110, 0.1); }
+.international-business-deck .slide-frame.ib-module-6 { --ib-accent: #245a72; --ib-accent-soft: rgba(36, 90, 114, 0.1); }
+
+/* ---------------------------------------------------------------------------
+   2. Root compositions — fill stage, allow children to shrink
+   ------------------------------------------------------------------------- */
+.international-business-deck :is(.ib-title-scene, .ib-chapter) {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  gap: var(--ib-stage-gap);
+  padding: var(--ib-safe-top) 0 var(--ib-safe-bottom);
+  box-sizing: border-box;
+}
+
+.international-business-deck .ib-story-panel {
+  align-self: stretch;
+  min-height: 0;
+  min-width: 0;
+  max-height: 100%;
+  overflow: visible;
+  display: grid;
+  align-content: start;
+  gap: 0;
+  padding: var(--ib-story-pad);
+  padding-bottom: 0.6vh;
+}
+
+.international-business-deck .ib-visual-panel {
+  align-self: stretch;
+  min-height: 0;
+  min-width: 0;
+  height: 100%;
+  display: grid;
+  place-items: stretch;
+  overflow: hidden; /* absolute decorative scenes only */
+}
+
+.international-business-deck .ib-visual-panel:has(.ib-card-grid),
+.international-business-deck .ib-visual-panel:has(.ib-matrix),
+.international-business-deck .ib-visual-panel:has(.ib-whue) {
+  overflow: visible; /* academic content in visual column must remain fully visible */
+}
+
+.international-business-deck .ib-visual-panel .ib-card-grid {
+  height: 100%;
+  min-height: 0;
+  /* V9: centre card rows at natural height. Stretching forced oversized rows
+     that pushed the visual column past the fixed slide viewport (overflow QA). */
+  align-content: center;
+  margin-top: 0; /* the visual column has no heading to clear */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--ib-card-gap);
+}
+
+.international-business-deck .ib-visual-panel .ib-card-grid article {
+  min-height: 0;
+  height: auto;
+  padding: var(--ib-card-pad);
+}
+
+.international-business-deck .ib-chapter[data-density='compact'] .ib-visual-panel .ib-card-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.international-business-deck .ib-chapter[data-density='compact'] .ib-visual-panel .ib-card-grid p {
+  font-size: var(--ib-caption-size);
+  line-height: 1.28;
+}
+
+.international-business-deck .ib-visual-panel > * {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  max-height: 100%;
+  align-self: stretch;
+}
+
+.international-business-deck .ib-story-panel,
+.international-business-deck .ib-story-panel > *,
+.international-business-deck .ib-card-grid,
+.international-business-deck .ib-whue,
+.international-business-deck .ib-matrix {
+  min-width: 0;
+}
+
+.international-business-deck .ib-takeaway {
+  align-self: end;
+  margin-top: clamp(8px, 1.2vh, 16px);
+  padding: clamp(8px, 1vh, 12px) clamp(10px, 1vw, 14px);
+  font-size: var(--ib-body-size);
+  line-height: 1.28;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+
+/* Typography — scale with stage height, keep projector-readable */
+.international-business-deck .ib-section-label {
+  font-size: var(--ib-label-size);
+}
+
+.international-business-deck .ib-story-panel h2 {
+  margin: clamp(6px, 0.9vh, 12px) 0 0;
+  font-size: var(--ib-title-size);
+  line-height: 1.08;
+}
+
+.international-business-deck .ib-story-panel > p,
+.international-business-deck .ib-hero-subtitle {
+  margin-top: clamp(6px, 0.9vh, 12px);
+  font-size: var(--ib-lead-size);
+  line-height: 1.32;
+  max-width: 38ch;
+}
+
+.international-business-deck .ib-challenge {
+  margin-top: clamp(8px, 1vh, 12px);
+  padding-top: clamp(6px, 0.8vh, 10px);
+}
+
+.international-business-deck .ib-challenge p {
+  font-size: var(--ib-body-size);
+  line-height: 1.3;
+}
+
+.international-business-deck .ib-hero-copy h1 {
+  font-size: clamp(34px, 6.2vh, 86px);
+}
+
+.international-business-deck .ib-hero-title {
+  font-size: clamp(20px, 2.8vh, 40px);
+  margin-top: clamp(8px, 1vh, 14px);
+}
+
+.international-business-deck .ib-hero-emotion {
+  margin-top: clamp(8px, 1.2vh, 16px);
+  font-size: var(--ib-label-size);
+}
+
+.international-business-deck .ib-terminal-strip {
+  margin-top: clamp(12px, 1.8vh, 24px);
+  gap: 6px;
+}
+
+.international-business-deck .ib-terminal-strip span {
+  padding: 5px 8px;
+  font-size: var(--ib-caption-size);
+}
+
+/* ---------------------------------------------------------------------------
+   3. Composition variants
+   ------------------------------------------------------------------------- */
+.international-business-deck .ib-chapter.compose-standard {
+  grid-template-columns: minmax(260px, 0.88fr) minmax(340px, 1.12fr);
+}
+
+.international-business-deck .ib-chapter.compose-reverse {
+  grid-template-columns: minmax(340px, 1.15fr) minmax(260px, 0.85fr);
+}
+.international-business-deck .ib-chapter.compose-reverse .ib-story-panel { order: 2; }
+.international-business-deck .ib-chapter.compose-reverse .ib-visual-panel { order: 1; }
+
+.international-business-deck .ib-chapter.compose-hero {
+  grid-template-columns: minmax(230px, 0.68fr) minmax(380px, 1.42fr);
+}
+.international-business-deck .ib-chapter.compose-hero .ib-whue,
+.international-business-deck .ib-chapter.compose-hero .ib-story-panel > .ib-card-grid {
+  display: none;
+}
+.international-business-deck .ib-chapter.compose-hero .ib-story-panel h2 {
+  font-size: clamp(24px, 3vh, 48px);
+}
+.international-business-deck .ib-chapter.compose-hero .ib-story-panel {
+  align-content: center;
+}
+.international-business-deck .ib-chapter.compose-hero .ib-story-panel > .ib-score-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: clamp(8px, 1.2vh, 14px);
+}
+.international-business-deck .ib-chapter.compose-hero .ib-story-panel > .ib-score-strip article {
+  padding: 8px 10px;
+}
+.international-business-deck .ib-chapter.compose-hero .ib-story-panel > .ib-score-strip strong {
+  font-size: clamp(14px, 1.8vh, 20px);
+}
+
+.international-business-deck .ib-chapter.compose-visual-lead {
+  grid-template-columns: minmax(380px, 1.35fr) minmax(220px, 0.75fr);
+}
+.international-business-deck .ib-chapter.compose-visual-lead .ib-story-panel { order: 2; }
+.international-business-deck .ib-chapter.compose-visual-lead .ib-visual-panel { order: 1; }
+.international-business-deck .ib-chapter.compose-visual-lead .ib-whue { display: none; }
+
+.international-business-deck .ib-chapter.compose-quiet {
+  grid-template-columns: minmax(300px, 1.05fr) minmax(260px, 0.95fr);
+}
+.international-business-deck .ib-chapter.compose-quiet .ib-visual-panel {
+  place-items: center;
+}
+
+.international-business-deck .ib-chapter.compose-magazine {
+  grid-template-columns: minmax(280px, 1fr) minmax(300px, 1.05fr);
+  gap: clamp(16px, 2vw, 36px);
+}
+.international-business-deck .ib-chapter.compose-magazine .ib-story-panel {
+  padding-right: clamp(6px, 0.8vw, 14px);
+  border-right: 1px solid rgba(19, 42, 74, 0.1);
+}
+.international-business-deck .ib-chapter.compose-magazine .ib-whue {
+  grid-template-columns: 1fr;
+  gap: 6px;
+  margin-top: clamp(8px, 1.2vh, 14px);
+}
+
+.international-business-deck .ib-chapter.compose-dashboard {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-rows: minmax(0, 1fr);
+  gap: clamp(8px, 1.2vw, 18px);
+}
+.international-business-deck .ib-chapter.compose-dashboard .ib-story-panel {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 0.9vh, 10px);
+  border-bottom: 0;
+  padding-bottom: 0;
+  min-height: 0;
+  height: 100%;
+  align-content: start;
+}
+.international-business-deck .ib-chapter.compose-dashboard .ib-story-panel > .ib-section-label,
+.international-business-deck .ib-chapter.compose-dashboard .ib-story-panel > h2,
+.international-business-deck .ib-chapter.compose-dashboard .ib-story-panel > p,
+.international-business-deck .ib-chapter.compose-dashboard .ib-story-panel > .ib-challenge {
+  grid-column: auto;
+}
+.international-business-deck .ib-chapter.compose-dashboard .ib-story-panel > .ib-whue,
+.international-business-deck .ib-chapter.compose-dashboard .ib-story-panel > .ib-card-grid,
+.international-business-deck .ib-chapter.compose-dashboard .ib-story-panel > .ib-score-strip {
+  grid-column: auto;
+  grid-row: auto;
+  align-self: stretch;
+  margin-top: auto;
+}
+.international-business-deck .ib-chapter.compose-dashboard .ib-story-panel > .ib-takeaway {
+  grid-column: auto;
+  grid-row: auto;
+  align-self: stretch;
+  margin-top: 0;
+}
+.international-business-deck .ib-chapter.compose-dashboard .ib-visual-panel {
+  min-height: 0;
+  height: 100%;
+}
+
+.international-business-deck .ib-chapter.compose-canvas {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 8px;
+}
+.international-business-deck .ib-chapter.compose-canvas .ib-story-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(180px, 0.65fr);
+  gap: 14px;
+  align-items: end;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(19, 42, 74, 0.08);
+  align-content: start;
+}
+.international-business-deck .ib-chapter.compose-canvas .ib-story-panel > .ib-section-label,
+.international-business-deck .ib-chapter.compose-canvas .ib-story-panel > h2,
+.international-business-deck .ib-chapter.compose-canvas .ib-story-panel > p,
+.international-business-deck .ib-chapter.compose-canvas .ib-story-panel > .ib-challenge {
+  grid-column: 1;
+}
+.international-business-deck .ib-chapter.compose-canvas .ib-story-panel > .ib-takeaway {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  margin-top: 0;
+  align-self: stretch;
+  display: grid;
+  align-content: center;
+}
+.international-business-deck .ib-chapter.compose-canvas .ib-story-panel > .ib-whue,
+.international-business-deck .ib-chapter.compose-canvas .ib-story-panel > .ib-card-grid {
+  display: none;
+}
+
+.international-business-deck .ib-chapter.compose-boardroom {
+  grid-template-columns: minmax(240px, 0.78fr) minmax(360px, 1.32fr);
+  background: linear-gradient(90deg, rgba(19, 42, 74, 0.03), transparent 42%);
+}
+.international-business-deck .ib-chapter.compose-boardroom .ib-section-label {
+  color: var(--ib-gold);
+}
+
+.international-business-deck .ib-chapter.compose-corridor {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, max-content) minmax(0, 1fr);
+  gap: 6px;
+  align-content: stretch;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 10px 14px;
+  align-items: start;
+  align-content: start;
+  max-height: none;
+  min-height: 0;
+  padding-bottom: 0;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-section-label,
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > h2,
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > p,
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-challenge {
+  grid-column: 1;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-takeaway {
+  grid-column: 2;
+  grid-row: 1 / span 4;
+  align-self: center;
+  margin-top: 0;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-whue {
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+  margin-top: 4px;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-whue article {
+  padding: 6px 7px;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-whue p {
+  font-size: var(--ib-caption-size);
+  line-height: 1.25;
+  margin-top: 2px;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+  margin-top: 4px;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-card-grid p,
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-card-grid svg {
+  display: none;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-card-grid article {
+  padding: 6px 8px;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-stage-pipeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 5px;
+  margin-top: 4px;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-stage-pipeline article {
+  padding: 8px 6px;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-story-panel > .ib-stage-pipeline p {
+  display: none;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-visual-panel {
+  min-height: 0;
+  max-height: none;
+}
+.international-business-deck .ib-chapter.compose-corridor .ib-takeaway {
+  margin-top: 0;
+}
+
+.international-business-deck .ib-chapter.compose-boardroom .ib-story-panel > .ib-card-grid,
+.international-business-deck .ib-chapter.compose-visual-lead .ib-story-panel > .ib-card-grid {
+  max-height: none;
+  mask-image: none;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 6px;
+  margin-top: clamp(8px, 1vh, 12px);
+  overflow: visible;
+}
+.international-business-deck .ib-chapter.compose-boardroom .ib-story-panel > .ib-card-grid p,
+.international-business-deck .ib-chapter.compose-visual-lead .ib-story-panel > .ib-card-grid p,
+.international-business-deck .ib-chapter.compose-boardroom .ib-story-panel > .ib-card-grid svg,
+.international-business-deck .ib-chapter.compose-visual-lead .ib-story-panel > .ib-card-grid svg {
+  display: none;
+}
+.international-business-deck .ib-chapter.compose-boardroom .ib-story-panel > .ib-card-grid article,
+.international-business-deck .ib-chapter.compose-visual-lead .ib-story-panel > .ib-card-grid article {
+  min-height: 0;
+  padding: 8px 9px;
+  align-content: center;
+}
+
+.international-business-deck .ib-chapter.compose-quiet .ib-story-panel {
+  min-width: 0;
+}
+.international-business-deck .ib-chapter.compose-quiet .ib-story-panel > .ib-card-grid {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 6px;
+  margin-top: clamp(8px, 1vh, 12px);
+}
+.international-business-deck .ib-chapter.compose-quiet .ib-story-panel > .ib-card-grid article {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.international-business-deck .ib-chapter.compose-quiet .ib-story-panel > .ib-card-grid p,
+.international-business-deck .ib-chapter.compose-quiet .ib-story-panel > .ib-card-grid svg {
+  display: none;
+}
+
+.international-business-deck .ib-chapter.ib-peak .ib-story-panel h2 {
+  letter-spacing: -0.02em;
+}
+.international-business-deck .ib-chapter.ib-peak .ib-visual-panel {
+  background: radial-gradient(ellipse at 60% 40%, var(--ib-accent-soft), transparent 55%);
+}
+
+/* ---------------------------------------------------------------------------
+   4. Component stage ownership + density
+   ------------------------------------------------------------------------- */
+.international-business-deck :is(
+  .ib-card-grid,
+  .ib-timeline,
+  .ib-entry-ladder,
+  .ib-stage-pipeline,
+  .ib-scanner,
+  .ib-museum,
+  .ib-diamond,
+  .ib-control-room,
+  .ib-orbit,
+  .ib-finance,
+  .ib-manufacturing,
+  .ib-matrix,
+  .ib-corridor,
+  .ib-score-strip,
+  .ib-whue,
+  .ib-world
+) {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* NOTE: .ib-card-grid intentionally excluded — it centres rows at natural
+   height (see rule above); stretching overflowed the fixed slide viewport. */
+.international-business-deck .ib-visual-panel > :is(
+  .ib-timeline,
+  .ib-entry-ladder,
+  .ib-stage-pipeline,
+  .ib-scanner,
+  .ib-museum,
+  .ib-diamond,
+  .ib-control-room,
+  .ib-orbit,
+  .ib-finance,
+  .ib-manufacturing,
+  .ib-matrix,
+  .ib-corridor
+) {
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+  align-content: stretch;
+}
+
+.international-business-deck .ib-card-grid {
+  gap: var(--ib-card-gap);
+  margin-top: clamp(8px, 1.2vh, 14px);
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+.international-business-deck .ib-card-grid article {
+  min-height: 0;
+  height: auto;
+  padding: var(--ib-card-pad);
+}
+.international-business-deck .ib-card-grid svg {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 6px;
+}
+.international-business-deck .ib-card-grid strong {
+  font-size: clamp(13px, 1.5vh, 17px);
+}
+.international-business-deck .ib-card-grid p,
+.international-business-deck .ib-card-grid span {
+  font-size: var(--ib-body-size);
+  line-height: 1.28;
+  margin-top: 4px;
+}
+
+.international-business-deck .ib-whue {
+  gap: 6px;
+  margin-top: clamp(8px, 1.2vh, 14px);
+}
+.international-business-deck .ib-whue article {
+  padding: clamp(8px, 1vh, 12px);
+}
+.international-business-deck .ib-whue p {
+  font-size: var(--ib-body-size);
+  line-height: 1.28;
+  margin-top: 4px;
+}
+.international-business-deck .ib-whue span {
+  font-size: var(--ib-label-size);
+}
+
+.international-business-deck .ib-world {
+  min-height: 0 !important;
+  max-height: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.international-business-deck .ib-visual-panel > .ib-world {
+  max-height: 100%;
+  align-self: center;
+  justify-self: center;
+  object-fit: contain;
+}
+
+.international-business-deck .ib-title-scene .ib-hero-visual > .ib-world {
+  height: 100%;
+  max-height: 100%;
+  align-self: stretch;
+}
+
+.international-business-deck .ib-title-scene .ib-hero-copy {
+  align-self: center;
+  min-width: 0;
+  padding-bottom: 1vh;
+}
+.international-business-deck .ib-title-scene .ib-hero-visual {
+  align-self: stretch;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.international-business-deck .ib-exec-metrics {
+  gap: 6px;
+}
+.international-business-deck .ib-exec-metrics article {
+  padding: 7px 10px;
+}
+.international-business-deck .ib-exec-metrics strong {
+  font-size: clamp(14px, 1.8vh, 20px);
+}
+.international-business-deck .ib-exec-metrics span {
+  font-size: 10px;
+}
+
+.international-business-deck .ib-glass-ticker {
+  padding: 8px 12px;
+  gap: 10px;
+}
+.international-business-deck .ib-glass-ticker span,
+.international-business-deck .ib-glass-ticker b {
+  font-size: 11px;
+}
+
+/* Absolute compositions → compact grid when stage is short */
+.international-business-deck .ib-scanner {
+  min-height: 0;
+}
+.international-business-deck .ib-orbit {
+  min-height: 0;
+}
+.international-business-deck .ib-diamond {
+  min-height: 0;
+}
+
+.international-business-deck .ib-museum {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  align-content: stretch;
+}
+.international-business-deck .ib-museum article {
+  min-height: 0;
+  padding: 10px;
+}
+
+.international-business-deck .ib-entry-ladder {
+  gap: 5px;
+}
+.international-business-deck .ib-entry-ladder article {
+  padding: 8px 10px;
+  grid-template-columns: 1.1fr 1.5fr 0.8fr 0.8fr;
+  gap: 6px;
+}
+
+.international-business-deck .ib-stage-pipeline {
+  gap: 8px;
+}
+.international-business-deck .ib-stage-pipeline article {
+  padding: 12px 10px;
+}
+.international-business-deck .ib-stage-pipeline span {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+
+.international-business-deck .ib-corridor {
+  gap: 0;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+.international-business-deck .ib-corridor article {
+  padding: 8px 4px;
+}
+.international-business-deck .ib-corridor strong {
+  font-size: clamp(12px, 1.5vh, 15px);
+}
+.international-business-deck .ib-corridor span {
+  font-size: var(--ib-caption-size);
+}
+
+.international-business-deck .ib-timeline {
+  gap: 6px;
+  padding: 4px;
+}
+.international-business-deck .ib-timeline article {
+  padding: 8px 10px;
+  margin-left: 34px;
+}
+.international-business-deck .ib-timeline strong {
+  font-size: clamp(13px, 1.6vh, 18px);
+}
+.international-business-deck .ib-timeline p {
+  font-size: var(--ib-body-size);
+}
+
+.international-business-deck .ib-score-strip {
+  gap: 6px;
+  margin-top: clamp(8px, 1.2vh, 14px);
+}
+.international-business-deck .ib-score-strip article {
+  padding: 8px 10px;
+}
+.international-business-deck .ib-score-strip strong {
+  font-size: clamp(14px, 1.8vh, 22px);
+}
+.international-business-deck .ib-score-strip span {
+  font-size: 10px;
+}
+
+.international-business-deck .ib-matrix {
+  gap: 6px;
+}
+.international-business-deck .ib-matrix article {
+  padding: 12px 11px;
+  min-height: 0;
+}
+.international-business-deck .ib-matrix strong {
+  font-size: clamp(13px, 1.7vh, 18px);
+}
+.international-business-deck .ib-matrix p {
+  font-size: var(--ib-body-size);
+  margin-top: 5px;
+}
+
+.international-business-deck .compose-canvas .ib-stage-pipeline article::after,
+.international-business-deck .compose-dashboard .ib-stage-pipeline article::after,
+.international-business-deck .compose-corridor .ib-stage-pipeline article::after {
+  display: none;
+}
+
+.international-business-deck .ib-diamond::before {
+  animation: ibDiamondSpin 18s linear infinite;
+}
+@keyframes ibDiamondSpin {
+  from { transform: translate(-50%, -50%) rotate(45deg); }
+  to { transform: translate(-50%, -50%) rotate(405deg); }
+}
+.international-business-deck .ib-orbit::before {
+  animation: ibOrbitSpin 40s linear infinite;
+}
+@keyframes ibOrbitSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.international-business-deck .ib-title-scene.theme-trade::after,
+.international-business-deck .ib-title-scene.theme-environment::after,
+.international-business-deck .ib-title-scene.theme-theory::after,
+.international-business-deck .ib-title-scene.theme-institution::after,
+.international-business-deck .ib-title-scene.theme-mnc::after,
+.international-business-deck .ib-title-scene.theme-machine::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 12%;
+  bottom: 12%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--ib-gold), transparent);
+  opacity: 0.65;
+}
+
+/* ---------------------------------------------------------------------------
+   5. Breakpoint: ≥1600 (comfortable boardroom)
+   ------------------------------------------------------------------------- */
+@media (min-width: 1600px) {
+  .international-business-deck {
+    --ib-stage-gap: clamp(18px, 1.8vw, 36px);
+    --ib-title-size: clamp(28px, 3vh, 48px);
+    --ib-lead-size: clamp(15px, 1.7vh, 21px);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   6. Breakpoint: 1366–1599
+   ------------------------------------------------------------------------- */
+@media (max-width: 1599px) {
+  .international-business-deck {
+    --ib-stage-gap: clamp(10px, 1.2vw, 20px);
+    --ib-card-pad: 9px;
+    --ib-card-gap: 6px;
+    --ib-title-size: clamp(22px, 2.8vh, 36px);
+    --ib-lead-size: clamp(13px, 1.6vh, 17px);
+    --ib-body-size: clamp(12px, 1.4vh, 14px);
+  }
+
+  .international-business-deck .ib-chapter.compose-standard,
+  .international-business-deck .ib-chapter.compose-magazine,
+  .international-business-deck .ib-chapter.compose-boardroom {
+    grid-template-columns: minmax(240px, 0.92fr) minmax(300px, 1.08fr);
+  }
+
+  .international-business-deck .ib-chapter.compose-hero,
+  .international-business-deck .ib-chapter.compose-visual-lead {
+    grid-template-columns: minmax(220px, 0.75fr) minmax(340px, 1.25fr);
+  }
+
+  .international-business-deck .ib-chapter.compose-visual-lead {
+    grid-template-columns: minmax(340px, 1.25fr) minmax(220px, 0.75fr);
+  }
+
+  .international-business-deck .ib-story-panel > .ib-card-grid,
+  .international-business-deck .ib-chapter.compose-standard .ib-story-panel > .ib-card-grid,
+  .international-business-deck .ib-chapter.compose-magazine .ib-story-panel > .ib-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+  }
+
+  .international-business-deck .ib-story-panel > .ib-card-grid:has(> :nth-child(7)) p,
+  .international-business-deck .ib-story-panel > .ib-card-grid:has(> :nth-child(7)) svg {
+    display: none;
+  }
+
+  .international-business-deck .ib-museum {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .international-business-deck .ib-museum p {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+
+  /* Compact absolute scenes into grids when height is limited */
+  .international-business-deck .ib-scanner {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    align-content: stretch;
+  }
+  .international-business-deck .scanner-core,
+  .international-business-deck .ib-scanner article {
+    position: static;
+    width: auto;
+    min-height: 0;
+    height: auto;
+    transform: none;
+  }
+  .international-business-deck .scanner-core {
+    grid-column: 1 / -1;
+    border-radius: 2px;
+    width: 100%;
+    height: auto;
+    min-height: 64px;
+    padding: 10px;
+    animation: none;
+  }
+
+  .international-business-deck .ib-orbit {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    align-content: center;
+  }
+  .international-business-deck .ib-orbit::before { display: none; }
+  .international-business-deck .orbit-center {
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+    min-height: 56px;
+    grid-column: 1 / -1;
+    justify-self: stretch;
+  }
+  .international-business-deck .ib-orbit span {
+    position: static;
+    width: auto;
+    min-height: 48px;
+    transform: none;
+    animation: ibRise 0.45s ease both;
+  }
+
+  .international-business-deck .ib-diamond {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    align-content: center;
+  }
+  .international-business-deck .ib-diamond::before { display: none; }
+  .international-business-deck .diamond-center {
+    position: static;
+    transform: none;
+    width: auto;
+    height: auto;
+    grid-column: 1 / -1;
+  }
+  .international-business-deck .ib-diamond article {
+    position: static;
+    transform: none;
+    width: auto;
+    min-height: 0;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   7. Breakpoint: 1280–1365 (and similar short stages)
+   ------------------------------------------------------------------------- */
+@media (max-width: 1365px) {
+  .international-business-deck {
+    --ib-safe-x: clamp(12px, 1.2vw, 18px);
+    --ib-safe-top: 6px;
+    --ib-safe-bottom: 4px;
+    --ib-stage-gap: 10px;
+    --ib-story-pad: 2px;
+    --ib-title-size: clamp(20px, 3.2vh, 30px);
+    --ib-lead-size: clamp(12px, 1.8vh, 15px);
+    --ib-body-size: clamp(11px, 1.55vh, 13px);
+    --ib-caption-size: 10px;
+  }
+
+  .international-business-deck .slide-header {
+    padding-bottom: 4px;
+  }
+
+  .international-business-deck .slide-footer {
+    padding-top: 4px;
+    padding-bottom: 8px;
+  }
+
+  .international-business-deck .ib-title-scene {
+    grid-template-columns: minmax(220px, 0.82fr) minmax(300px, 1.18fr);
+    gap: 12px;
+  }
+
+  .international-business-deck .ib-chapter.compose-standard,
+  .international-business-deck .ib-chapter.compose-reverse,
+  .international-business-deck .ib-chapter.compose-quiet,
+  .international-business-deck .ib-chapter.compose-magazine,
+  .international-business-deck .ib-chapter.compose-boardroom {
+    grid-template-columns: minmax(220px, 0.95fr) minmax(280px, 1.05fr);
+  }
+
+  .international-business-deck .ib-chapter.compose-hero {
+    grid-template-columns: minmax(200px, 0.72fr) minmax(300px, 1.28fr);
+  }
+
+  .international-business-deck .ib-chapter.compose-visual-lead {
+    grid-template-columns: minmax(300px, 1.28fr) minmax(200px, 0.72fr);
+  }
+
+  .international-business-deck .ib-chapter.compose-dashboard {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .international-business-deck .ib-chapter.compose-dashboard .ib-story-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .international-business-deck .ib-chapter.compose-canvas .ib-story-panel {
+    grid-template-columns: minmax(0, 1.4fr) minmax(150px, 0.6fr);
+    gap: 10px;
+  }
+
+  .international-business-deck .ib-chapter.compose-corridor .ib-story-panel {
+    max-height: none;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 8px 10px;
+  }
+
+  .international-business-deck .ib-whue {
+    grid-template-columns: 1fr 1fr;
+  }
+  .international-business-deck .ib-chapter.compose-magazine .ib-whue {
+    grid-template-columns: 1fr;
+  }
+
+  .international-business-deck .ib-story-panel > .ib-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+  }
+  .international-business-deck .ib-story-panel > .ib-card-grid:has(> :nth-child(6)) p,
+  .international-business-deck .ib-story-panel > .ib-card-grid:has(> :nth-child(6)) svg {
+    display: none;
+  }
+
+  .international-business-deck .ib-museum {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px;
+  }
+  .international-business-deck .ib-museum article {
+    padding: 7px;
+  }
+
+  .international-business-deck .ib-entry-ladder article {
+    grid-template-columns: 1fr 1.4fr 0.7fr 0.7fr;
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .international-business-deck .ib-corridor {
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+
+  .international-business-deck .ib-score-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .international-business-deck .ib-matrix {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .international-business-deck .ib-control-room {
+    grid-template-rows: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 6px;
+  }
+
+  .international-business-deck .stock-chart {
+    padding: 10px 12px;
+  }
+
+  .international-business-deck .ib-exec-metrics {
+    left: 2%;
+    top: 4%;
+  }
+
+  .international-business-deck .ib-glass-ticker {
+    right: 2%;
+    bottom: 3%;
+  }
+}
+
+/* Height-driven densification (short 16:9 frames) */
+@media (max-height: 820px) {
+  .international-business-deck {
+    --ib-safe-top: 4px;
+    --ib-safe-bottom: 2px;
+    --ib-title-size: clamp(18px, 3.4vh, 28px);
+    --ib-lead-size: clamp(12px, 2vh, 15px);
+  }
+
+  .international-business-deck .ib-challenge {
+    padding: 5px 8px;
+    margin-top: 4px;
+    gap: 2px;
+  }
+  .international-business-deck .ib-challenge p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: var(--ib-caption-size);
+    line-height: 1.25;
+  }
+
+  .international-business-deck .ib-story-panel > .ib-whue:has(+ .ib-takeaway) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .international-business-deck .ib-title-scene .ib-exec-metrics {
+    gap: 4px;
+  }
+  .international-business-deck .ib-title-scene .ib-exec-metrics article {
+    padding: 5px 7px;
+  }
+}
+
+@media (max-height: 700px) {
+  .international-business-deck .ib-story-panel > .ib-whue {
+    grid-template-columns: 1fr 1fr;
+  }
+  .international-business-deck .ib-whue article:nth-child(n + 3) {
+    display: none;
+  }
+  .international-business-deck .ib-terminal-strip span:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   8. Do NOT collapse to single-column presentation layouts
+      (presentation canvas ≠ scrolling webpage)
+   ------------------------------------------------------------------------- */
+@media (max-width: 980px) {
+  .international-business-deck .ib-title-scene,
+  .international-business-deck .ib-chapter.compose-standard,
+  .international-business-deck .ib-chapter.compose-reverse,
+  .international-business-deck .ib-chapter.compose-hero,
+  .international-business-deck .ib-chapter.compose-visual-lead,
+  .international-business-deck .ib-chapter.compose-quiet,
+  .international-business-deck .ib-chapter.compose-magazine,
+  .international-business-deck .ib-chapter.compose-boardroom {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+
+  .international-business-deck .ib-chapter.compose-reverse .ib-story-panel,
+  .international-business-deck .ib-chapter.compose-visual-lead .ib-story-panel,
+  .international-business-deck .ib-chapter.compose-reverse .ib-visual-panel,
+  .international-business-deck .ib-chapter.compose-visual-lead .ib-visual-panel {
+    order: initial;
+  }
+
+  .international-business-deck .ib-chapter.compose-reverse .ib-story-panel { order: 2; }
+  .international-business-deck .ib-chapter.compose-reverse .ib-visual-panel { order: 1; }
+  .international-business-deck .ib-chapter.compose-visual-lead .ib-story-panel { order: 2; }
+  .international-business-deck .ib-chapter.compose-visual-lead .ib-visual-panel { order: 1; }
+
+  .international-business-deck .ib-visual-panel {
+    min-height: 0 !important;
+  }
+
+  .international-business-deck .ib-chapter.compose-dashboard .ib-story-panel,
+  .international-business-deck .ib-chapter.compose-canvas .ib-story-panel,
+  .international-business-deck .ib-chapter.compose-corridor .ib-story-panel {
+    grid-template-columns: none;
+    max-height: none;
+  }
+
+  .international-business-deck .ib-chapter.compose-magazine .ib-story-panel {
+    border-right: 1px solid rgba(19, 42, 74, 0.1);
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* Never collapse IB presentation canvas to a scrolling mobile stack */
+@media (max-width: 640px) {
+  .international-business-deck .ib-whue,
+  .international-business-deck .ib-museum,
+  .international-business-deck .control-cards,
+  .international-business-deck .ib-scanner,
+  .international-business-deck .ib-matrix,
+  .international-business-deck .ib-score-strip,
+  .international-business-deck .ib-corridor {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .international-business-deck .ib-title-scene,
+  .international-business-deck .ib-chapter {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr) !important;
+    height: 100% !important;
+  }
+}
+
+/* Short projector stages — finance dashboards / score strips */
+@media (max-height: 900px) {
+  .international-business-deck .ib-finance {
+    grid-template-rows: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    gap: 6px;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .international-business-deck .ib-finance .stock-chart {
+    max-height: 18vh;
+    min-height: 0;
+    padding: 8px 10px;
+  }
+
+  .international-business-deck .ib-finance .stock-chart svg {
+    width: 100%;
+    height: 100%;
+    max-height: 18vh;
+  }
+
+  .international-business-deck .ib-finance > .ib-card-grid {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .international-business-deck .ib-finance > .ib-card-grid p {
+    font-size: var(--ib-caption-size);
+    line-height: 1.25;
+  }
+
+  .international-business-deck .ib-score-strip {
+    margin-top: 6px;
+    gap: 6px;
+  }
+
+  .international-business-deck .ib-score-strip article {
+    padding: 6px 8px;
+  }
+
+  .international-business-deck .ib-score-strip strong {
+    font-size: clamp(13px, 1.6vh, 18px);
+  }
+}
+
+@media (max-height: 760px) {
+  .international-business-deck .ib-finance .stock-chart {
+    display: none;
+  }
+
+  .international-business-deck .ib-finance {
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .international-business-deck .ib-finance > .ib-card-grid {
+    height: 100%;
+    grid-template-columns: 1fr;
+    align-content: stretch;
+  }
+
+  .international-business-deck .ib-chapter.compose-dashboard .ib-story-panel {
+    gap: 4px;
+  }
+}

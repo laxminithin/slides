@@ -1,0 +1,45 @@
+{
+  "name": "bda-module-1-presentation",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "qa:overflow": "node scripts/slide-overflow-qa.mjs",
+    "qa:overflow:screenshots": "node scripts/slide-overflow-qa.mjs --screenshots",
+    "qa:ib-overflow": "node scripts/ib-overflow-qa.mjs",
+    "qa:animation": "node scripts/animation-qa.mjs",
+    "qa:animation:ib": "node scripts/animation-qa.mjs --subject international-business",
+    "qa:visual": "node scripts/visual-regression-qa.mjs",
+    "qa:visual:update": "node scripts/visual-regression-qa.mjs --update",
+    "qa:visual:ib": "node scripts/visual-regression-qa.mjs --subject=international-business",
+    "qa:compose": "node tmp/v3/compose-audit.mjs",
+    "qa:compose:720": "W=1280 H=720 node tmp/v3/compose-audit.mjs",
+    "qa:compose:768": "W=1366 H=768 node tmp/v3/compose-audit.mjs",
+    "qa:compose:1080": "W=1920 H=1080 node tmp/v3/compose-audit.mjs",
+    "qa:pc-m1": "node scripts/pc-m1-qa.mjs",
+    "qa:pc-m2": "node scripts/pc-m2-qa.mjs",
+    "qa:pc-m3": "node scripts/pc-m3-qa.mjs",
+    "qa:pc-m3-forensic": "node scripts/pc-m3-forensic-qa.mjs",
+    "qa:first-year-leaks": "node scripts/first-year-placeholder-leak-qa.mjs",
+    "qa:first-year-depth": "node scripts/first-year-source-depth-qa.mjs",
+    "qa:first-year-depth-render": "node scripts/first-year-source-depth-render-qa.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.27.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.18.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "oxlint": "^1.71.0",
+    "playwright": "^1.49.1",
+    "vite": "^8.1.1"
+  }
+}

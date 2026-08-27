@@ -1,0 +1,1396 @@
+{
+  "id": "module4",
+  "title": "Sensors and Corrosion Science",
+  "story": [
+    "Sensors",
+    "Conductometry",
+    "Colorimetry",
+    "Gas/Bio",
+    "Corrosion",
+    "Control/CPR"
+  ],
+  "source": "VTU_1BCHES102_Module_4_Sensors_Corrosion_Science.pptx",
+  "slides": [
+    {
+      "n": 1,
+      "id": "module4-s01",
+      "title": "Sensors and Corrosion Science",
+      "subtitle": "",
+      "layout": "opener",
+      "definition": null,
+      "points": [
+        "Module 4 connects smart sensing with metal degradation and protection.",
+        "Transducers \u2022 actuators \u2022 conductometric sensor \u2022 colorimetric sensor \u2022 gas sensor \u2022 biosensor \u2022 corrosion theory \u2022 corrosion control \u2022 CPR"
+      ],
+      "say": "Open by saying smart systems must detect chemical changes and also survive chemical attack.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 2,
+      "id": "module4-s02",
+      "title": "Module 4 learning path",
+      "subtitle": "",
+      "layout": "journey",
+      "definition": null,
+      "points": [
+        "Use the VTU syllabus as the complete checklist.",
+        "Explain sensors, transducers and actuators",
+        "Explain conductometric sensor principle, construction and acid-mixture estimation",
+        "Explain colorimetric sensor principle, instrumentation and copper estimation in PCB",
+        "Explain electrochemical gas sensors for NOx and SOx detection",
+        "Explain glucose biosensor construction and working",
+        "Explain corrosion theory, types, protection methods and CPR numericals"
+      ],
+      "say": "Show that the first half measures chemistry and the second half controls unwanted chemistry.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 3,
+      "id": "module4-s03",
+      "title": "The sensing story",
+      "subtitle": "",
+      "layout": "definition",
+      "definition": null,
+      "points": [
+        "Build the sensing idea before definitions.",
+        "Chemical change",
+        "Sensitive material responds",
+        "Signal is generated",
+        "Signal is processed",
+        "Result is displayed"
+      ],
+      "say": "Use this same path for all sensor types.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 4,
+      "id": "module4-s04",
+      "title": "The corrosion story",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Build the corrosion idea before theory.",
+        "Metal surface",
+        "Moisture / electrolyte",
+        "Anodic oxidation",
+        "Cathodic reduction",
+        "Corrosion product"
+      ],
+      "say": "Tell students corrosion is an electrochemical cell on a metal surface.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 5,
+      "id": "module4-s05",
+      "title": "What is a sensor?",
+      "subtitle": "",
+      "layout": "definition",
+      "definition": null,
+      "points": [
+        "Define sensor in engineering language.",
+        "Sensor",
+        "A sensor detects a physical, chemical or biological change and converts it into a measurable signal.",
+        "Input",
+        "Detection",
+        "Response",
+        "Signal",
+        "Measurement"
+      ],
+      "say": "Use temperature, glucose and gas sensors as quick examples.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 6,
+      "id": "module4-s06",
+      "title": "Why sensors matter in smart systems",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Show real-world need.",
+        "Health monitoring",
+        "Environment monitoring",
+        "Glucose and wearable sensors track body chemistry.",
+        "Gas sensors detect air pollutants such as NOx and SOx.",
+        "Industrial control",
+        "Electronics manufacturing",
+        "Sensors help maintain concentration, pH and process safety.",
+        "Colorimetric methods help estimate copper in PCB samples."
+      ],
+      "say": "Ask students where sensors appear in a phone or lab.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 7,
+      "id": "module4-s07",
+      "title": "Transducer",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": {
+        "term": "Define transducer.",
+        "text": "A transducer converts one form of energy or signal into another form, often converting a sensor response into an electrical signal."
+      },
+      "points": [
+        "Energy conversion",
+        "Signal conversion",
+        "Input",
+        "Output",
+        "Measurement",
+        "Terminology"
+      ],
+      "say": "Clarify that many sensors include a transducer element.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 8,
+      "id": "module4-s08",
+      "title": "Actuator",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": {
+        "term": "Define actuator.",
+        "text": "An actuator receives a control signal and produces a physical action such as motion, pressure, heat or flow control."
+      },
+      "points": [
+        "Control signal",
+        "Action",
+        "Movement",
+        "Valve",
+        "Motor",
+        "Terminology"
+      ],
+      "say": "Contrast actuator with sensor: one senses, the other acts.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 9,
+      "id": "module4-s09",
+      "title": "Sensor, transducer and actuator compared",
+      "subtitle": "",
+      "layout": "compare",
+      "definition": null,
+      "points": [
+        "Avoid terminology confusion.",
+        "Term",
+        "Main role",
+        "Example",
+        "Sensor",
+        "Detects a change",
+        "Gas sensor detects NOx",
+        "Transducer",
+        "Converts signal/energy",
+        "Electrode converts ion activity to voltage",
+        "Actuator",
+        "Produces action",
+        "Valve opens after sensor signal",
+        "Terminology"
+      ],
+      "say": "Use this as a two-mark revision anchor.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 10,
+      "id": "module4-s10",
+      "title": "Basic sensor block diagram",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Show universal sensor architecture.",
+        "Analyte / stimulus",
+        "Sensing element",
+        "Transducer",
+        "Signal conditioning",
+        "Display / decision"
+      ],
+      "say": "Tell students every sensor answer can start with this block diagram.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 11,
+      "id": "module4-s11",
+      "title": "What is conductometry?",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Define the measured property.",
+        "Conductometry",
+        "Conductometry measures the electrical conductance of an ionic solution; conductance changes when ion concentration changes.",
+        "Conductance",
+        "Ions",
+        "Electrolyte",
+        "Concentration",
+        "Measurement",
+        "Conductometric Sensor"
+      ],
+      "say": "Connect conductance with acid-base titration.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 12,
+      "id": "module4-s12",
+      "title": "Conductometric sensor principle",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Explain the principle.",
+        "Ions carry current",
+        "Concentration changes during reaction",
+        "Conductance changes",
+        "Endpoint appears as graph break",
+        "Unknown concentration is calculated",
+        "Conductometric Sensor"
+      ],
+      "say": "Stress graph-based endpoint detection.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 13,
+      "id": "module4-s13",
+      "title": "Construction of conductometric sensor",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Identify parts.",
+        "Conductometric sensor",
+        "Construction view",
+        "It contains a conductivity cell with two inert electrodes, sample solution, AC source or conductance meter and display/recording unit.",
+        "Sample",
+        "Sensing part",
+        "Transducer",
+        "Output",
+        "Sample acid mixture",
+        "Electrodes",
+        "Conductance meter",
+        "Graph",
+        "Endpoint",
+        "Conductometric Sensor"
+      ],
+      "say": "Point to the two electrodes and meter.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 14,
+      "id": "module4-s14",
+      "title": "Working of conductometric sensor",
+      "subtitle": "",
+      "layout": "compare",
+      "definition": null,
+      "points": [
+        "Explain measurement steps.",
+        "Dip electrodes in sample",
+        "Apply small AC voltage",
+        "Measure conductance",
+        "Add titrant gradually",
+        "Plot conductance vs volume",
+        "Conductometric Sensor"
+      ],
+      "say": "Mention AC reduces electrode polarization.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 15,
+      "id": "module4-s15",
+      "title": "Acid mixture estimation by conductometry",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Explain the application.",
+        "Take acid mixture",
+        "Titrate with standard base",
+        "Record conductance after each addition",
+        "Plot graph segments",
+        "Find endpoints and calculate acids",
+        "Conductometric Sensor"
+      ],
+      "say": "Use HCl + CH3COOH type mixture as a familiar example.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 16,
+      "id": "module4-s16",
+      "title": "Conductometric titration curve",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Explain curve interpretation.",
+        "Strong acid region",
+        "Weak acid region",
+        "Conductance decreases as highly mobile H+ is neutralized.",
+        "Conductance changes more slowly as weak acid ionizes during titration.",
+        "After endpoint",
+        "Endpoint",
+        "Excess OH- increases conductance.",
+        "Intersection of straight-line portions gives equivalence point.",
+        "Conductometric Sensor"
+      ],
+      "say": "Ask students why H+ replacement lowers conductance.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 17,
+      "id": "module4-s17",
+      "title": "Advantages and limitations",
+      "subtitle": "",
+      "layout": "cards",
+      "definition": null,
+      "points": [
+        "Give balanced points.",
+        "Advantages",
+        "Limitations",
+        "Useful for colored/turbid solutions",
+        "Needs accurate conductance readings",
+        "No indicator required",
+        "Temperature affects conductance",
+        "Endpoint from graph",
+        "Dilution correction may be needed",
+        "Works for weak/strong acid mixtures",
+        "Graph must be interpreted carefully",
+        "Conductometric Sensor"
+      ],
+      "say": "Include both sides for exam completeness.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 18,
+      "id": "module4-s18",
+      "title": "What is colorimetry?",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Define colorimetric measurement.",
+        "Colorimetry",
+        "Colorimetry estimates concentration by measuring the intensity of color produced by a chemical species or colored complex.",
+        "Color intensity",
+        "Absorbance",
+        "Concentration",
+        "Colored complex",
+        "Calibration",
+        "Colorimetric Sensor"
+      ],
+      "say": "Link visible color intensity with concentration.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 19,
+      "id": "module4-s19",
+      "title": "Colorimetric sensor principle",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": {
+        "term": "Explain Beer-Lambert logic simply.",
+        "text": "A = log(I0 / I) A = epsilon b c Absorbance is proportional to concentration when path length and conditions are constant."
+      },
+      "points": [
+        "Colorimetric principle",
+        "Exam method: write the equation, define symbols, substitute values with units, and state the practical meaning of the result.",
+        "Colorimetric Sensor"
+      ],
+      "say": "Define I0, I, b and c at teaching level.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 20,
+      "id": "module4-s20",
+      "title": "Instrumentation of colorimetric sensor",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Identify blocks.",
+        "Light source",
+        "Filter / wavelength selector",
+        "Sample cuvette",
+        "Detector",
+        "Meter / concentration output",
+        "Colorimetric Sensor"
+      ],
+      "say": "Point out the detector measures transmitted light.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 21,
+      "id": "module4-s21",
+      "title": "Construction of colorimeter",
+      "subtitle": "",
+      "layout": "definition",
+      "definition": null,
+      "points": [
+        "Show device parts.",
+        "Colorimetric sensor",
+        "Construction view",
+        "A typical colorimeter has a lamp or LED, wavelength filter, cuvette holder, photodetector, amplifier and display.",
+        "Sample",
+        "Sensing part",
+        "Transducer",
+        "Output",
+        "Colored sample",
+        "Filter",
+        "Detector",
+        "Signal",
+        "Concentration",
+        "Colorimetric Sensor"
+      ],
+      "say": "Relate each instrument block to the principle.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 22,
+      "id": "module4-s22",
+      "title": "Working of colorimetric estimation",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Explain process.",
+        "Prepare colored complex",
+        "Select wavelength",
+        "Measure blank",
+        "Measure standards and sample",
+        "Use calibration to find concentration",
+        "Colorimetric Sensor"
+      ],
+      "say": "Pause at calibration curve and ask why standards are needed.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 23,
+      "id": "module4-s23",
+      "title": "Copper estimation in PCB sample",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Explain syllabus application.",
+        "Dissolve PCB copper sample",
+        "Convert Cu2+ to colored complex",
+        "Measure absorbance",
+        "Compare with standards",
+        "Calculate copper concentration",
+        "Colorimetric Sensor"
+      ],
+      "say": "Mention PCB copper recovery/quality analysis without overcomplicating digestion chemistry.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 24,
+      "id": "module4-s24",
+      "title": "Colorimetric strengths and errors",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Clarify exam points.",
+        "Strengths",
+        "Common errors",
+        "Simple instrumentation",
+        "Wrong wavelength",
+        "Good for colored complexes",
+        "Dirty cuvette",
+        "Useful for trace metal estimation",
+        "Unstable color complex",
+        "Calibration gives quantitative result",
+        "Ignoring blank correction",
+        "Colorimetric Sensor"
+      ],
+      "say": "Help students avoid lab-report mistakes.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 25,
+      "id": "module4-s25",
+      "title": "Electrochemical gas sensors",
+      "subtitle": "",
+      "layout": "definition",
+      "definition": null,
+      "points": [
+        "Define gas sensor.",
+        "Electrochemical gas sensor",
+        "An electrochemical gas sensor detects gases by allowing them to react at an electrode and measuring the resulting current or potential change.",
+        "Target gas",
+        "Electrode reaction",
+        "Electrolyte",
+        "Current",
+        "Concentration",
+        "Gas Sensors"
+      ],
+      "say": "Use pollution monitoring as the bridge to NOx and SOx.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 26,
+      "id": "module4-s26",
+      "title": "Principle of electrochemical gas sensing",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Explain the principle.",
+        "Gas diffuses through membrane",
+        "Gas reaches sensing electrode",
+        "Redox reaction occurs",
+        "Current is produced",
+        "Signal is proportional to gas concentration",
+        "Gas Sensors"
+      ],
+      "say": "Tell students current is the measured analytical signal.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 27,
+      "id": "module4-s27",
+      "title": "Construction of electrochemical gas sensor",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Identify components.",
+        "Electrochemical gas sensor",
+        "Construction view",
+        "It contains gas diffusion membrane, working electrode, counter electrode, reference electrode, electrolyte and signal-processing circuit.",
+        "Sample",
+        "Sensing part",
+        "Transducer",
+        "Output",
+        "Gas sample",
+        "Membrane",
+        "Electrodes",
+        "Current",
+        "Concentration",
+        "Gas Sensors"
+      ],
+      "say": "Point to working, counter and reference electrodes.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 28,
+      "id": "module4-s28",
+      "title": "Detection of NOx and SOx in air sample",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Explain application steps.",
+        "Draw air sample",
+        "Gas diffuses into sensor",
+        "NOx/SOx reacts at electrode",
+        "Current changes",
+        "Instrument reports concentration",
+        "Gas Sensors"
+      ],
+      "say": "Mention air-quality monitoring and industrial exhaust monitoring.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 29,
+      "id": "module4-s29",
+      "title": "NOx and SOx sensor applications",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Show why detection matters.",
+        "Air quality monitoring",
+        "Industrial emissions",
+        "Tracks pollutants that affect respiratory health.",
+        "Supports stack and process monitoring.",
+        "Smart cities",
+        "Safety control",
+        "Sensor networks can map pollution hotspots.",
+        "Alarms warn when pollutant levels rise.",
+        "Gas Sensors"
+      ],
+      "say": "Keep this application-focused.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 30,
+      "id": "module4-s30",
+      "title": "Gas sensor limitations",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Balance practical answer.",
+        "Selectivity",
+        "Humidity and temperature",
+        "Other gases may interfere with response.",
+        "Environmental conditions can shift readings.",
+        "Sensor aging",
+        "Calibration need",
+        "Electrolyte and electrodes degrade over time.",
+        "Reliable results require periodic calibration.",
+        "Gas Sensors"
+      ],
+      "say": "Ask students why calibration is unavoidable.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 31,
+      "id": "module4-s31",
+      "title": "What is a biosensor?",
+      "subtitle": "",
+      "layout": "definition",
+      "definition": null,
+      "points": [
+        "Define biosensor.",
+        "Biosensor",
+        "A biosensor combines a biological recognition element with a transducer to detect a biological or chemical analyte.",
+        "Bioreceptor",
+        "Analyte",
+        "Transducer",
+        "Signal",
+        "Biofluid",
+        "Biosensor"
+      ],
+      "say": "Use glucose detection as the immediate example.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 32,
+      "id": "module4-s32",
+      "title": "Biosensor construction",
+      "subtitle": "",
+      "layout": "definition",
+      "definition": null,
+      "points": [
+        "Identify standard parts.",
+        "Biosensor",
+        "Construction view",
+        "A biosensor contains a biological recognition layer, transducer, immobilization support, signal processor and display.",
+        "Sample",
+        "Sensing part",
+        "Transducer",
+        "Output",
+        "Biofluid sample",
+        "Enzyme layer",
+        "Transducer",
+        "Signal",
+        "Reading",
+        "Biosensor"
+      ],
+      "say": "Point to enzyme layer as the specificity source.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 33,
+      "id": "module4-s33",
+      "title": "Glucose biosensor principle",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Explain glucose oxidase logic.",
+        "Glucose reaches enzyme layer",
+        "Glucose oxidase catalyzes reaction",
+        "Electroactive product or oxygen change occurs",
+        "Electrode measures current",
+        "Glucose concentration is displayed",
+        "Biosensor"
+      ],
+      "say": "Keep it conceptual and exam-ready.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 34,
+      "id": "module4-s34",
+      "title": "Working for glucose detection in biofluids",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Explain stepwise application.",
+        "Place blood/serum sample",
+        "Glucose diffuses to enzyme film",
+        "Reaction rate depends on glucose",
+        "Current is measured",
+        "Calibration converts signal to concentration",
+        "Biosensor"
+      ],
+      "say": "Ask students why enzyme immobilization is important.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 35,
+      "id": "module4-s35",
+      "title": "Glucose biosensor applications and care",
+      "subtitle": "",
+      "layout": "cards",
+      "definition": null,
+      "points": [
+        "Give practical points.",
+        "Diabetes monitoring",
+        "Clinical labs",
+        "Rapid blood-glucose measurement.",
+        "Biofluid testing with small sample volume.",
+        "Wearable health devices",
+        "Care points",
+        "Continuous or near-continuous monitoring concepts.",
+        "Enzyme activity, temperature and calibration affect accuracy.",
+        "Biosensor"
+      ],
+      "say": "Emphasize that biological layers can degrade.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 36,
+      "id": "module4-s36",
+      "title": "Four sensor methods compared",
+      "subtitle": "",
+      "layout": "compare",
+      "definition": null,
+      "points": [
+        "Separate the sensor types.",
+        "Sensor",
+        "Measured signal",
+        "Module 4 application",
+        "Conductometric",
+        "Conductance change",
+        "Acid mixture estimation",
+        "Colorimetric",
+        "Absorbance/color intensity",
+        "Copper estimation in PCB",
+        "Electrochemical gas",
+        "Current/potential change",
+        "NOx and SOx in air",
+        "Biosensor",
+        "Bio-recognition signal",
+        "Glucose in biofluids",
+        "Sensor Revision"
+      ],
+      "say": "Use this as a quick revision slide before corrosion.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 37,
+      "id": "module4-s37",
+      "title": "What is corrosion?",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": {
+        "term": "Define corrosion.",
+        "text": "Corrosion is the gradual deterioration of a metal by chemical or electrochemical reaction with its environment."
+      },
+      "points": [
+        "Metal loss",
+        "Environment",
+        "Oxidation",
+        "Electrolyte",
+        "Corrosion product"
+      ],
+      "say": "Connect corrosion to rusting and electronic-device failure.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 38,
+      "id": "module4-s38",
+      "title": "Why corrosion is an electrochemical problem",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Explain the core idea.",
+        "Anodic area loses metal",
+        "Electrons travel through metal",
+        "Cathodic area consumes electrons",
+        "Electrolyte carries ions",
+        "Corrosion cell continues"
+      ],
+      "say": "Repeat: anodic part corrodes.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 39,
+      "id": "module4-s39",
+      "title": "Electrochemical theory of corrosion",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Show theory stepwise.",
+        "Metal develops anodic and cathodic sites",
+        "At anode: M -> Mn+ + ne-",
+        "Electrons move to cathode",
+        "Cathodic reaction occurs",
+        "Corrosion product forms"
+      ],
+      "say": "Ask students to identify anode and cathode on a wet iron surface.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 40,
+      "id": "module4-s40",
+      "title": "Anodic and cathodic reactions",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": {
+        "term": "Give reaction anchors.",
+        "text": "Anode: M -> Mn+ + ne- Cathode in neutral water: O2 + 2H2O + 4e- -> 4OH- Metal ions + OH- -> corrosion products"
+      },
+      "points": [
+        "Electrochemical corrosion",
+        "Exam method: write the equation, define symbols, substitute values with units, and state the practical meaning of the result."
+      ],
+      "say": "Use these equations as marks anchors.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 41,
+      "id": "module4-s41",
+      "title": "Factors that accelerate corrosion",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Explain causes.",
+        "Moisture",
+        "Dissolved oxygen",
+        "Provides electrolyte path for ion movement.",
+        "Supports cathodic reduction.",
+        "Salts and pollutants",
+        "Metal contact",
+        "Increase conductivity and aggressive attack.",
+        "Dissimilar metals can create galvanic cells."
+      ],
+      "say": "This slide prepares students for corrosion types.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 42,
+      "id": "module4-s42",
+      "title": "Differential metal corrosion",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": {
+        "term": "Define galvanic/differential metal corrosion.",
+        "text": "Differential metal corrosion occurs when two dissimilar metals are electrically connected in an electrolyte; the more active metal becomes anodic and corrodes."
+      },
+      "points": [
+        "Dissimilar metals",
+        "Electrical contact",
+        "Electrolyte",
+        "Anode corrodes",
+        "Cathode protected",
+        "Corrosion Types"
+      ],
+      "say": "Use steel-copper contact as an example.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 43,
+      "id": "module4-s43",
+      "title": "Differential metal corrosion process",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Show process.",
+        "Two dissimilar metals touch",
+        "Electrolyte completes circuit",
+        "Less noble metal becomes anode",
+        "Metal dissolves at anode",
+        "Corrosion is localized",
+        "Corrosion Types"
+      ],
+      "say": "Ask students which metal should be protected.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 44,
+      "id": "module4-s44",
+      "title": "Differential aeration corrosion",
+      "subtitle": "",
+      "layout": "compare",
+      "definition": {
+        "term": "Define oxygen-concentration corrosion.",
+        "text": "Differential aeration corrosion occurs when different areas of a metal surface receive different oxygen concentrations, creating anodic and cathodic regions."
+      },
+      "points": [
+        "Oxygen difference",
+        "Poorly aerated area",
+        "Anode",
+        "Well-aerated area",
+        "Cathode",
+        "Corrosion Types"
+      ],
+      "say": "Stress low oxygen area usually becomes anodic.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 45,
+      "id": "module4-s45",
+      "title": "Waterline corrosion",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": {
+        "term": "Explain waterline attack.",
+        "text": "Waterline corrosion is differential aeration corrosion near the water-air boundary, where oxygen concentration differs above and below the waterline."
+      },
+      "points": [
+        "Waterline",
+        "Oxygen gradient",
+        "Anodic region",
+        "Cathodic region",
+        "Localized attack",
+        "Corrosion Types"
+      ],
+      "say": "Use ship hulls/tanks as examples.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 46,
+      "id": "module4-s46",
+      "title": "Pitting corrosion",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": {
+        "term": "Define pitting.",
+        "text": "Pitting corrosion is highly localized corrosion that forms small holes or pits, often when a protective film breaks down locally."
+      },
+      "points": [
+        "Localized attack",
+        "Pit",
+        "Protective film breakdown",
+        "Autocatalytic",
+        "Dangerous",
+        "Corrosion Types"
+      ],
+      "say": "Explain pits are dangerous because they look small but penetrate deeply.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 47,
+      "id": "module4-s47",
+      "title": "Waterline vs pitting corrosion",
+      "subtitle": "",
+      "layout": "compare",
+      "definition": null,
+      "points": [
+        "Clarify the difference.",
+        "Waterline corrosion",
+        "Pitting corrosion",
+        "Caused by oxygen concentration difference",
+        "Caused by local film breakdown",
+        "Occurs near air-water boundary",
+        "Forms small deep holes",
+        "Often visible as a band",
+        "Often hard to detect early",
+        "Common in tanks and marine structures",
+        "Can perforate metal suddenly",
+        "Corrosion Types"
+      ],
+      "say": "Use this for exam comparison.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 48,
+      "id": "module4-s48",
+      "title": "How corrosion control works",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Introduce control methods.",
+        "Block electrolyte",
+        "Separate dissimilar metals",
+        "Make surface protective",
+        "Use sacrificial layer",
+        "Reduce corrosive environment",
+        "Corrosion Control"
+      ],
+      "say": "Transition from problem to protection.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 49,
+      "id": "module4-s49",
+      "title": "Galvanization",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": {
+        "term": "Define galvanization.",
+        "text": "Galvanization protects iron or steel by coating it with zinc, which provides barrier protection and sacrificial protection."
+      },
+      "points": [
+        "Zinc coating",
+        "Barrier",
+        "Sacrificial anode",
+        "Steel protection",
+        "Rust prevention"
+      ],
+      "say": "Stress zinc corrodes preferentially.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 50,
+      "id": "module4-s50",
+      "title": "How galvanization protects steel",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Explain protection process.",
+        "Steel surface is coated with zinc",
+        "Zinc blocks moisture and oxygen",
+        "If scratched, zinc acts as anode",
+        "Zinc corrodes first",
+        "Steel remains protected",
+        "Galvanization"
+      ],
+      "say": "Ask why galvanized steel still protects after small scratches.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 51,
+      "id": "module4-s51",
+      "title": "Anodization",
+      "subtitle": "",
+      "layout": "process",
+      "definition": {
+        "term": "Define anodization.",
+        "text": "Anodization is an electrochemical process that thickens the natural oxide layer on a metal surface, especially aluminium, to improve corrosion resistance."
+      },
+      "points": [
+        "Oxide layer",
+        "Electrochemical process",
+        "Aluminium",
+        "Hard surface",
+        "Protection"
+      ],
+      "say": "Explain anodized aluminium is common in device bodies.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 52,
+      "id": "module4-s52",
+      "title": "Anodization process",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Show steps.",
+        "Clean metal surface",
+        "Make metal the anode",
+        "Pass current in electrolyte",
+        "Oxide layer grows",
+        "Seal pores for better protection",
+        "Anodization"
+      ],
+      "say": "Mention oxide film is adherent and protective.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 53,
+      "id": "module4-s53",
+      "title": "Vapour corrosion inhibitors",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": {
+        "term": "Define VCI.",
+        "text": "Vapour corrosion inhibitors are volatile chemicals that vaporize, reach metal surfaces and form a protective adsorbed film against corrosion."
+      },
+      "points": [
+        "Volatile inhibitor",
+        "Vapour phase",
+        "Adsorbed film",
+        "Closed space",
+        "Protection",
+        "VCI"
+      ],
+      "say": "Connect directly to circuit-board packaging.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 54,
+      "id": "module4-s54",
+      "title": "VCI for computer circuit boards",
+      "subtitle": "",
+      "layout": "concept",
+      "definition": null,
+      "points": [
+        "Explain syllabus application.",
+        "Place VCI source in package",
+        "Inhibitor vapour fills enclosure",
+        "Molecules adsorb on metal tracks",
+        "Moisture attack is reduced",
+        "Circuit board is protected during storage",
+        "VCI"
+      ],
+      "say": "Use PCB storage/shipping as the example.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 55,
+      "id": "module4-s55",
+      "title": "Galvanization, anodization and VCI compared",
+      "subtitle": "",
+      "layout": "compare",
+      "definition": null,
+      "points": [
+        "Help students separate controls.",
+        "Method",
+        "Protective idea",
+        "Best example",
+        "Galvanization",
+        "Zinc barrier plus sacrificial action",
+        "Steel sheets, pipes",
+        "Anodization",
+        "Thick oxide layer on metal",
+        "Aluminium device parts",
+        "VCI",
+        "Protective vapour film in enclosure",
+        "Computer circuit boards",
+        "Control Revision"
+      ],
+      "say": "Use this as a revision table.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 56,
+      "id": "module4-s56",
+      "title": "Corrosion penetration rate",
+      "subtitle": "",
+      "layout": "process",
+      "definition": null,
+      "points": [
+        "Define CPR.",
+        "CPR",
+        "Corrosion penetration rate expresses how fast corrosion penetrates into a metal surface, usually as thickness loss per unit time.",
+        "Thickness loss",
+        "Rate",
+        "Weight loss",
+        "Area",
+        "Time",
+        "CPR"
+      ],
+      "say": "Tell students CPR converts lab weight loss into practical damage rate.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 57,
+      "id": "module4-s57",
+      "title": "CPR formula and units",
+      "subtitle": "",
+      "layout": "numerical",
+      "definition": {
+        "term": "Give numerical formula.",
+        "text": "CPR = K W / (D A T) W = weight loss D = density A = exposed area T = exposure time K = unit constant"
+      },
+      "points": [
+        "CPR formula",
+        "Exam method: write the equation, define symbols, substitute values with units, and state the practical meaning of the result.",
+        "CPR"
+      ],
+      "say": "Define each symbol clearly before substituting values.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 58,
+      "id": "module4-s58",
+      "title": "CPR numerical method",
+      "subtitle": "",
+      "layout": "numerical",
+      "definition": null,
+      "points": [
+        "Show problem-solving steps.",
+        "Write given data",
+        "Convert units consistently",
+        "Choose correct K",
+        "Substitute in CPR formula",
+        "Report penetration rate",
+        "CPR"
+      ],
+      "say": "Warn that most mistakes are unit mistakes.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 59,
+      "id": "module4-s59",
+      "title": "Worked CPR template",
+      "subtitle": "",
+      "layout": "numerical",
+      "definition": {
+        "term": "Provide a compact calculation pattern.",
+        "text": "Given: W, D, A, T CPR = K W / (D A T) If W increases or area/time decreases, CPR becomes larger. Interpret: higher CPR means faster metal loss."
+      },
+      "points": [
+        "CPR numerical template",
+        "Exam method: write the equation, define symbols, substitute values with units, and state the practical meaning of the result.",
+        "CPR"
+      ],
+      "say": "Use this as a flexible template instead of one fixed dataset.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 60,
+      "id": "module4-s60",
+      "title": "Common mistakes in Module 4",
+      "subtitle": "",
+      "layout": "process",
+      "definition": {
+        "term": "Clarify likely errors.",
+        "text": "Confusing sensor, transducer and actuator"
+      },
+      "points": [
+        "Writing sensor construction without principle",
+        "Forgetting calibration in colorimetric estimation",
+        "Mixing NOx/SOx gas sensor with biosensor working",
+        "Forgetting that anodic area corrodes",
+        "Confusing galvanization with anodization",
+        "Solving CPR without consistent units",
+        "Exam Prep"
+      ],
+      "say": "Use this as pre-exam protection.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 61,
+      "id": "module4-s61",
+      "title": "How to write a 10-mark sensor answer",
+      "subtitle": "",
+      "layout": "definition",
+      "definition": null,
+      "points": [
+        "Give a repeatable framework.",
+        "Definition",
+        "Principle",
+        "Construction diagram",
+        "Working steps",
+        "Application and limitations",
+        "Exam Prep"
+      ],
+      "say": "Tell students this works for conductometric, colorimetric, gas and glucose sensors.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 62,
+      "id": "module4-s62",
+      "title": "How to write a 10-mark corrosion answer",
+      "subtitle": "",
+      "layout": "definition",
+      "definition": null,
+      "points": [
+        "Give a repeatable framework.",
+        "Definition",
+        "Electrochemical theory",
+        "Type / control method",
+        "Diagram or reactions",
+        "Examples and prevention",
+        "Exam Prep"
+      ],
+      "say": "Tell students to include anode/cathode reactions wherever possible.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 63,
+      "id": "module4-s63",
+      "title": "Module 4 mind map",
+      "subtitle": "",
+      "layout": "mindmap",
+      "definition": null,
+      "points": [
+        "Connect all syllabus headings.",
+        "Conductometric",
+        "Colorimetric",
+        "Acid mixture.",
+        "Detect and measure.",
+        "Copper in PCB.",
+        "Module 4",
+        "Gas and bio",
+        "Control and CPR",
+        "NOx/SOx and glucose.",
+        "Protection and rate.",
+        "Electrochemical damage."
+      ],
+      "say": "Use this as the end-of-teaching overview.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 64,
+      "id": "module4-s64",
+      "title": "20 important viva questions",
+      "subtitle": "",
+      "layout": "exam",
+      "definition": null,
+      "points": [
+        "Rapid oral revision.",
+        "1. What is a sensor?",
+        "11. What is electrochemical gas sensor?",
+        "2. Define transducer.",
+        "12. How are NOx and SOx detected?",
+        "3. Define actuator.",
+        "13. What is biosensor?",
+        "4. What is conductance?",
+        "14. Role of glucose oxidase?",
+        "5. Principle of conductometric sensor?",
+        "15. Define corrosion.",
+        "6. Why use AC in conductometry?",
+        "16. State electrochemical theory.",
+        "7. How is acid mixture estimated?",
+        "17. What is differential metal corrosion?",
+        "8. What is colorimetry?",
+        "18. What is pitting corrosion?",
+        "9. State Beer-Lambert law.",
+        "19. What is galvanization?",
+        "10. How is copper estimated in PCB?",
+        "20. Define CPR."
+      ],
+      "say": "Run this as quick viva.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 65,
+      "id": "module4-s65",
+      "title": "Important exam questions",
+      "subtitle": "",
+      "layout": "exam",
+      "definition": null,
+      "points": [
+        "Provide practice questions.",
+        "1. 2M: Define sensor and transducer.",
+        "9. 5M: Explain glucose biosensor working.",
+        "2. 2M: Define actuator.",
+        "10. 5M: Explain electrochemical theory of corrosion.",
+        "3. 2M: Define corrosion.",
+        "11. 10M: Explain conductometric and colorimetric sensors with applications.",
+        "4. 2M: What is CPR?",
+        "12. 10M: Explain electrochemical gas sensor and glucose biosensor.",
+        "5. 2M: What is VCI?",
+        "13. 10M: Explain corrosion types: differential metal, waterline and pitting.",
+        "6. 5M: Explain conductometric sensor construction and working.",
+        "14. 10M: Explain galvanization, anodization and VCI protection.",
+        "7. 5M: Explain acid mixture estimation by conductometry.",
+        "15. 10M: Solve CPR numerical problems with definition and formula.",
+        "8. 5M: Explain colorimetric sensor instrumentation."
+      ],
+      "say": "Use this as the student study checklist.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    },
+    {
+      "n": 66,
+      "id": "module4-s66",
+      "title": "One-page revision sheet",
+      "subtitle": "",
+      "layout": "revision",
+      "definition": null,
+      "points": [
+        "End with compact keywords and answer pattern.",
+        "Keywords",
+        "Sensor; transducer; actuator; analyte; sensing element; signal conditioning; conductance; conductometric titration; acid mixture; colorimetry; absorbance; Beer-Lambert law; calibration curve; copper estimation; PCB; electrochemical gas sensor; working electrode; counter electrode; reference electrode; NOx; SOx; biosensor; bioreceptor; glucose oxidase; biofluids; corrosion; electrochemical theory; anode; cathode; electrolyte; differential metal corrosion; differential aeration corrosion; waterline corrosion; pitting corrosion; galvanization; zinc coating; anodization; oxide layer; vapour corrosion inhibitor; circuit board protection; corrosion penetration rate; CPR formula.",
+        "Exam answer pattern",
+        "For sensors: principle, construction, working, application. For corrosion: theory, type/control, reactions or diagram, examples, CPR formula if numerical.",
+        "Memory trick",
+        "Sensors convert chemical information into signals; corrosion converts useful metal into corrosion product. Track the direction of conversion."
+      ],
+      "say": "Close by asking students to explain one sensor and one corrosion-control method from memory.",
+      "ask": "Ask students to identify input, sensing element, signal and output."
+    }
+  ]
+}

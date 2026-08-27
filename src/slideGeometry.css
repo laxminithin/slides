@@ -1,0 +1,583 @@
+/* =============================================================================
+   Shared Presentation Geometry — all subjects
+   -----------------------------------------------------------------------------
+   Authoritative slide viewport hierarchy:
+
+     application viewport
+       → .deck
+         → .slide-stage
+           → .slide-frame          (16:9 teaching canvas)
+             → .slide-header       (reserved chrome)
+             → .slide-body         (safe content stage)
+             → .slide-footer       (reserved chrome)
+         → .controls               (outside the canvas)
+
+   Subject CSS may skin identity; it must not redefine fundamental viewport
+   behaviour unless absolutely necessary.
+   ========================================================================== */
+
+:root {
+  /* Outside-canvas chrome — keep stable so frame height does not thrash */
+  --slide-controls-h: 64px;
+  --slide-stage-pad: clamp(10px, 1.2vw, 20px);
+
+  /* Inside-canvas safe area */
+  --slide-safe-x: clamp(18px, 2.2vw, 48px);
+  --slide-safe-top: clamp(10px, 1.35vh, 22px);
+  --slide-safe-bottom: clamp(8px, 1.2vh, 18px);
+  --slide-header-height: clamp(56px, 8vh, 88px);
+  --slide-footer-height: clamp(26px, 3.8vh, 40px);
+  --slide-stage-gap: clamp(10px, 1.4vw, 28px);
+  --slide-card-pad: clamp(0.7rem, 1.4vw, 1.5rem);
+  --slide-card-gap: clamp(0.55rem, 1vw, 1.15rem);
+
+  /* Alias older tokens to the authoritative system */
+  --slide-x: var(--slide-safe-x);
+  --slide-top: var(--slide-safe-top);
+  --slide-bottom: var(--slide-safe-bottom);
+
+  /* Density defaults (normal) */
+  --density-scale: 1;
+  --density-gap: var(--slide-stage-gap);
+  --density-card-pad: var(--slide-card-pad);
+  --density-card-gap: var(--slide-card-gap);
+  --density-title: 1;
+  --density-body: 1;
+
+  /* Shared typography roles (projector-first, viewport-aware) */
+  --fs-slide-kicker: clamp(0.7rem, 0.88vw, 0.96rem);
+  --fs-slide-title-xl: clamp(2.1rem, 3.6vw, 4.6rem);
+  --fs-slide-title: clamp(34px, 2.7vw, 3.25rem);
+  --fs-slide-subtitle: clamp(0.95rem, 1.2vw, 1.42rem);
+  /* Default editorial measure — overridden per data-title-kind */
+  --title-measure: 62%;
+  --fs-slide-lead: clamp(0.95rem, 1.2vw, 1.35rem);
+  --fs-slide-section: clamp(1.05rem, 1.35vw, 1.55rem);
+  --fs-slide-body: clamp(0.92rem, 1.05vw, 1.18rem);
+  --fs-slide-body-sm: clamp(0.84rem, 0.95vw, 1.05rem);
+  --fs-slide-caption: clamp(0.72rem, 0.82vw, 0.92rem);
+  --fs-slide-metric: clamp(1.4rem, 2.2vw, 2.8rem);
+  --fs-slide-label: clamp(0.7rem, 0.8vw, 0.88rem);
+}
+
+/* ---- Presentation breakpoint tokens (width-driven) -------------------- */
+@media (max-width: 1599px) {
+  :root {
+    --slide-safe-x: clamp(14px, 1.7vw, 32px);
+    --slide-safe-top: clamp(8px, 1.15vh, 16px);
+    --slide-safe-bottom: clamp(6px, 1vh, 14px);
+    --slide-header-height: clamp(52px, 7.4vh, 76px);
+    --slide-footer-height: clamp(24px, 3.4vh, 36px);
+    --slide-stage-gap: clamp(8px, 1.1vw, 18px);
+    --slide-card-pad: clamp(0.6rem, 1.1vw, 1.15rem);
+    --slide-card-gap: clamp(0.45rem, 0.85vw, 0.9rem);
+    --fs-slide-title: clamp(34px, 2.4vw, 2.65rem);
+    --fs-slide-subtitle: clamp(0.9rem, 1.12vw, 1.28rem);
+    --fs-slide-body: clamp(0.88rem, 1.02vw, 1.1rem);
+  }
+}
+
+@media (max-width: 1439px) {
+  :root {
+    --slide-controls-h: 60px;
+    --slide-safe-x: clamp(12px, 1.5vw, 24px);
+    --slide-header-height: clamp(48px, 7vh, 68px);
+    --fs-slide-title: clamp(34px, 2.1vw, 2.3rem);
+    --fs-slide-subtitle: clamp(0.86rem, 1.05vw, 1.18rem);
+    --fs-slide-lead: clamp(0.88rem, 1.1vw, 1.18rem);
+    --fs-slide-body: clamp(0.86rem, 1vw, 1.05rem);
+  }
+}
+
+@media (max-width: 1365px) {
+  :root {
+    --slide-controls-h: 56px;
+    --slide-stage-pad: 8px;
+    --slide-safe-x: clamp(10px, 1.35vw, 18px);
+    --slide-safe-top: clamp(6px, 0.95vh, 12px);
+    --slide-safe-bottom: clamp(5px, 0.85vh, 10px);
+    --slide-header-height: clamp(44px, 6.5vh, 60px);
+    --slide-footer-height: clamp(22px, 3.2vh, 32px);
+    --slide-stage-gap: clamp(6px, 0.95vw, 14px);
+    --slide-card-pad: clamp(0.5rem, 0.95vw, 0.95rem);
+    --slide-card-gap: clamp(0.4rem, 0.75vw, 0.75rem);
+    --fs-slide-title: clamp(34px, 1.85vw, 2rem);
+    --fs-slide-subtitle: clamp(0.82rem, 1vw, 1.08rem);
+    --fs-slide-body: clamp(0.82rem, 0.98vw, 1rem);
+    --fs-slide-caption: clamp(0.68rem, 0.78vw, 0.84rem);
+  }
+}
+
+/* Short viewports (e.g. 1440×900, 1280×720) reclaim vertical chrome.
+   Title/subtitle scale down with height so the editorial header stays compact
+   on short projectors and the teaching body keeps its space. */
+@media (max-height: 900px) {
+  :root {
+    --slide-controls-h: 56px;
+    --slide-stage-pad: 8px;
+    --slide-header-height: clamp(44px, 6.4vh, 58px);
+    --slide-footer-height: clamp(22px, 3.1vh, 30px);
+    --slide-safe-top: clamp(6px, 0.9vh, 12px);
+    --slide-safe-bottom: clamp(5px, 0.8vh, 10px);
+    --fs-slide-title: clamp(34px, 2.1vw, 2.25rem);
+    --fs-slide-subtitle: clamp(0.85rem, 1.05vw, 1.12rem);
+  }
+}
+
+@media (max-height: 760px) {
+  :root {
+    --slide-controls-h: 52px;
+    --slide-stage-pad: 6px;
+    --slide-header-height: clamp(42px, 6vh, 54px);
+    --slide-footer-height: clamp(20px, 2.9vh, 28px);
+    --fs-slide-title: clamp(34px, 1.85vw, 1.95rem);
+  }
+
+  /* Keep chrome to two tight rows on short projectors */
+  .slide-subtitle {
+    display: none;
+  }
+}
+
+/* ---- Density modes (set on .slide-frame via data-density) -------------- */
+.slide-frame[data-density='airy'] {
+  --density-scale: 1.08;
+  --density-gap: calc(var(--slide-stage-gap) * 1.2);
+  --density-card-pad: calc(var(--slide-card-pad) * 1.15);
+  --density-card-gap: calc(var(--slide-card-gap) * 1.15);
+  --density-title: 1.08;
+  --density-body: 1.04;
+}
+
+.slide-frame[data-density='normal'] {
+  --density-scale: 1;
+}
+
+.slide-frame[data-density='compact'] {
+  --density-scale: 0.94;
+  --density-gap: calc(var(--slide-stage-gap) * 0.82);
+  --density-card-pad: calc(var(--slide-card-pad) * 0.85);
+  --density-card-gap: calc(var(--slide-card-gap) * 0.8);
+  --density-title: 0.94;
+  --density-body: 0.96;
+}
+
+.slide-frame[data-density='dense'] {
+  --density-scale: 0.88;
+  --density-gap: calc(var(--slide-stage-gap) * 0.68);
+  --density-card-pad: calc(var(--slide-card-pad) * 0.72);
+  --density-card-gap: calc(var(--slide-card-gap) * 0.68);
+  --density-title: 0.9;
+  --density-body: 0.92;
+}
+
+/* ---- Deck / stage / frame geometry ------------------------------------ */
+.deck {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  overflow: hidden;
+}
+
+.slide-stage {
+  min-height: 0;
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--slide-stage-pad);
+  overflow: hidden;
+}
+
+.slide-frame {
+  --frame-avail-h: calc(100vh - var(--slide-controls-h) - (2 * var(--slide-stage-pad)));
+  --frame-avail-h: calc(100dvh - var(--slide-controls-h) - (2 * var(--slide-stage-pad)));
+  position: relative;
+  width: min(calc(100vw - (2 * var(--slide-stage-pad))), calc(var(--frame-avail-h) * 16 / 9));
+  height: auto;
+  max-height: var(--frame-avail-h);
+  aspect-ratio: 16 / 9;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  min-width: 0;
+  min-height: 0;
+  /* Frame may clip decorative bleed; academic content must still fit. */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* V3.1 — editorial keynote header. In-slide subject/module selectors were
+   removed (bottom controls are the single navigation system), so the header
+   is now a clean, left-aligned title block that owns the full width. Height
+   tracks title lines via data-title-lines on .slide-frame so the body always
+   owns the slide (header ≤22%, body ≥78%). */
+.slide-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(2px, 0.45vh, 7px);
+  padding: var(--slide-safe-top) var(--slide-safe-x) clamp(4px, 0.7vh, 10px);
+  min-height: 0;
+  height: auto;
+  min-width: 0;
+  box-sizing: border-box;
+  /* Chrome may clip decorative bleed — never academic lesson body */
+  overflow: hidden;
+}
+
+/* Dynamic header height by title line count — never large header + tiny body */
+.slide-frame[data-title-lines='1'] .slide-header {
+  gap: clamp(1px, 0.3vh, 4px);
+  padding-bottom: clamp(2px, 0.45vh, 6px);
+}
+.slide-frame[data-title-lines='2'] .slide-header {
+  gap: clamp(1px, 0.3vh, 4px);
+  padding-bottom: clamp(2px, 0.5vh, 7px);
+}
+.slide-frame[data-title-lines='2'] .slide-header-copy {
+  gap: clamp(1px, 0.3vh, 4px);
+}
+.slide-frame[data-title-lines='3'] .slide-header {
+  gap: clamp(2px, 0.4vh, 6px);
+  padding-bottom: clamp(4px, 0.7vh, 10px);
+}
+
+.slide-header-copy {
+  min-width: 0;
+  width: 100%;
+  overflow: visible; /* never clip the title */
+  display: grid;
+  align-content: center;
+  gap: clamp(2px, 0.4vh, 6px);
+}
+
+.slide-header-tools {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: min(58%, 560px);
+  overflow: hidden;
+}
+
+.slide-kicker {
+  margin: 0;
+  font-size: var(--fs-slide-kicker);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  line-height: 1.1;
+}
+
+/* Editorial title measure by slide kind (Presentation Typography Engine). */
+.slide-frame[data-title-kind='hero'] { --title-measure: 70%; }
+.slide-frame[data-title-kind='teaching'],
+.slide-frame[data-title-kind='standard'] { --title-measure: 62%; }
+.slide-frame[data-title-kind='compare'] { --title-measure: 55%; }
+.slide-frame[data-title-kind='timeline'] { --title-measure: 75%; }
+
+@media (max-width: 1439px) {
+  .slide-frame[data-title-kind='hero'] { --title-measure: 76%; }
+  .slide-frame[data-title-kind='teaching'],
+  .slide-frame[data-title-kind='standard'] { --title-measure: 70%; }
+  .slide-frame[data-title-kind='compare'] { --title-measure: 62%; }
+  .slide-frame[data-title-kind='timeline'] { --title-measure: 80%; }
+}
+
+@media (max-width: 1365px) {
+  .slide-frame[data-title-kind='hero'] { --title-measure: 82%; }
+  .slide-frame[data-title-kind='teaching'],
+  .slide-frame[data-title-kind='standard'] { --title-measure: 78%; }
+  .slide-frame[data-title-kind='compare'] { --title-measure: 70%; }
+  .slide-frame[data-title-kind='timeline'] { --title-measure: 86%; }
+}
+
+/* V3.3 Presentation Typography Engine — slide titles.
+   Engineered semantic line breaks (\\n + pre-line). Scales via --title-fit.
+   Never clipped. Never ellipsised. Max three lines. Projector floor ≥34px. */
+.slide-title {
+  --title-fit: 1;
+  margin: 0;
+  max-width: var(--title-measure, 62%);
+  font-size: calc(var(--fs-slide-title) * var(--density-title) * var(--title-fit));
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  white-space: pre-line;
+  overflow: visible;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: unset;
+  hyphens: manual;
+}
+
+.slide-title[data-lines='2'] {
+  line-height: 1.04;
+  letter-spacing: -0.014em;
+}
+
+.slide-title[data-lines='3'] {
+  line-height: 1.02;
+  letter-spacing: -0.016em;
+}
+
+/* Supporting subtitle — kept to a single row so header height stays bounded */
+.slide-subtitle {
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  font-size: calc(var(--fs-slide-subtitle) * var(--density-body));
+  line-height: 1.22;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.82;
+}
+
+.slide-counter,
+.mode-switch,
+.module-switcher {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.slide-counter {
+  white-space: nowrap;
+  font-size: clamp(0.65rem, 0.75vw, 0.78rem);
+  font-weight: 900;
+}
+
+.mode-switch button,
+.module-switcher button,
+.module-switcher a {
+  white-space: nowrap;
+  min-height: 24px;
+  padding: 3px 7px;
+  font-size: clamp(0.62rem, 0.72vw, 0.74rem);
+}
+
+/* Compact presentation: hide secondary chrome before shrinking lesson type */
+@media (max-width: 1365px), (max-height: 760px) {
+  .slide-header-tools .mode-switch {
+    display: none;
+  }
+
+  .module-switcher button,
+  .module-switcher a {
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 1280px), (max-height: 720px) {
+  .slide-header-tools .module-switcher {
+    display: none;
+  }
+}
+
+.slide-body {
+  position: relative;
+  min-height: 0;
+  min-width: 0;
+  height: 100%;
+  padding: 0 var(--slide-safe-x);
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+  /* clip (not scroll/hidden-as-layout-fix): contains animation transform bleed
+     so temporary translate/scale effects cannot inflate stage scroll metrics.
+     Real academic fit is still enforced via composition sizing + bounds QA. */
+  overflow: clip;
+  box-sizing: border-box;
+}
+
+.slide-body > [data-slide-content],
+.slide-body > *:not(.laser-dot):not(.annotation-layer):not(.slide-overflow-overlay) {
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+  min-width: 0;
+  max-height: 100%;
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+.slide-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: clamp(4px, 0.5vh, 8px) var(--slide-safe-x) var(--slide-safe-bottom);
+  min-height: 0;
+  max-height: var(--slide-footer-height);
+  font-size: var(--fs-slide-caption);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.slide-footer span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+/* ---- Controls: never explode vertically in presentation sizes --------- */
+.controls {
+  height: var(--slide-controls-h);
+  min-height: var(--slide-controls-h);
+  max-height: var(--slide-controls-h);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto minmax(140px, 1fr) auto auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 0 clamp(12px, 1.6vw, 24px);
+  overflow: hidden;
+}
+
+.controls .nav-group {
+  flex-wrap: nowrap;
+  gap: 6px;
+}
+
+.controls .nav-btn,
+.controls .deck-link {
+  min-height: 30px;
+  padding: 6px 10px;
+  font-size: clamp(0.72rem, 0.85vw, 0.85rem);
+  white-space: nowrap;
+}
+
+.controls .hint {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Keep a horizontal control bar through supported presentation widths.
+   True phone stacking is intentionally rare and only for ultra-narrow. */
+@media (max-width: 1180px) {
+  .controls {
+    grid-template-columns: auto minmax(100px, 1fr) auto auto;
+  }
+
+  .controls .hint {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .controls {
+    grid-template-columns: auto minmax(80px, 1fr) auto;
+  }
+
+  .controls .deck-link:nth-of-type(2) {
+    display: none;
+  }
+}
+
+/* V3.1 — header is an editorial column (eyebrow / title / subtitle) at every
+   presentation size; there is no longer a right-hand tools cluster to balance. */
+
+/* ---- Shared shrink contract for flex/grid teaching layouts ------------ */
+.slide-body :is(
+  .layout-two,
+  .layout-compare,
+  .title-hero,
+  .bda-canvas,
+  .bda-title-slide,
+  .ins-teaching-frame,
+  .toc-board,
+  .ib-chapter,
+  .ib-title-scene,
+  .pc-m3-body,
+  .pc-m4-body,
+  .pc-m5-body,
+  .dbms-board,
+  .cn-board
+) {
+  min-width: 0;
+  min-height: 0;
+}
+
+.slide-body :is(
+  .layout-two > *,
+  .layout-compare > *,
+  .bda-copy,
+  .bda-visual,
+  .ins-teaching-copy,
+  .ins-teaching-visual,
+  .toc-copy,
+  .toc-visual,
+  .ib-story-panel,
+  .ib-visual-panel,
+  .pc-m3-copy,
+  .pc-m3-visual,
+  .pc-m4-copy,
+  .pc-m4-visual,
+  .pc-m5-copy,
+  .pc-m5-visual
+) {
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Decorative absolute layers may clip; mark them clearly for QA */
+[data-slide-decorative='true'],
+.slide-visual-clip {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Typography utility roles (opt-in) */
+.slide-role-kicker { font-size: var(--fs-slide-kicker); }
+.slide-role-title-xl { font-size: calc(var(--fs-slide-title-xl) * var(--density-title)); }
+.slide-role-title { font-size: calc(var(--fs-slide-title) * var(--density-title)); }
+.slide-role-lead { font-size: calc(var(--fs-slide-lead) * var(--density-body)); }
+.slide-role-section { font-size: calc(var(--fs-slide-section) * var(--density-title)); }
+.slide-role-body { font-size: calc(var(--fs-slide-body) * var(--density-body)); }
+.slide-role-body-sm { font-size: calc(var(--fs-slide-body-sm) * var(--density-body)); }
+.slide-role-caption { font-size: var(--fs-slide-caption); }
+.slide-role-metric { font-size: calc(var(--fs-slide-metric) * var(--density-title)); }
+.slide-role-label { font-size: var(--fs-slide-label); }
+
+/* Overflow QA overlay (dev only; injected by slideOverflowAudit.js) */
+.slide-overflow-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.slide-overflow-overlay .so-box {
+  position: absolute;
+  border: 2px solid #dc2626;
+  background: rgba(220, 38, 38, 0.08);
+  box-sizing: border-box;
+}
+
+.slide-overflow-overlay .so-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-100%);
+  padding: 2px 6px;
+  background: #dc2626;
+  color: #fff;
+  font: 700 10px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

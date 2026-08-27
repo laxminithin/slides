@@ -1,0 +1,288 @@
+/* ==========================================================================
+   parallelRedesign.css  —  Parallel Computing "cinematic engineering
+   simulation" layer.  Light + elevated design language.
+
+   Imported AFTER parallelComputing.css (see parallelComputingSlides.jsx) so it
+   wins the cascade.  EVERYTHING is scoped to `.parallel-deck` so no other
+   subject is touched.  Purely visual + motion — no content, notes, PYQ or
+   routing changes.  Mirrors the proven Big Data redesign approach.
+
+   Sections:
+     1.  Tokens & premium theme
+     2.  Slide frame — depth, ambient dot-grid, animated accent rail
+     3.  Structural fixes — title clamp, board fit, no takeaway overlap
+     4.  Story rail — refinement + live "now" pulse
+     5.  Entry cascade — staggered cinematic reveal on mount
+     6.  Opening slide — cinematic lower-third title
+     7.  Section dividers — cinema
+     8.  Ambient micro-motion polish
+     9.  Reduced-motion accessibility
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   1. Tokens & premium theme
+   ------------------------------------------------------------------------- */
+.parallel-deck {
+  --pc-blue: #2563eb;
+  --pc-teal: #0ea5a4;
+  --pc-violet: #6d5dd3;
+  --pc-amber: #d97706;
+  --pc-ink: #172033;
+  --pc-cream: #faf8f3;
+  --pc-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --pc-shadow-sm: 0 10px 26px rgba(20, 35, 60, 0.10);
+  --pc-shadow-md: 0 18px 46px rgba(20, 35, 60, 0.14);
+  --pc-shadow-lg: 0 30px 80px rgba(20, 35, 60, 0.22);
+}
+
+/* ---------------------------------------------------------------------------
+   2. Slide frame — depth, ambient dot-grid, animated accent rail
+   ------------------------------------------------------------------------- */
+.parallel-deck .slide-frame {
+  background:
+    radial-gradient(1200px 700px at 14% -6%, rgba(37, 99, 235, 0.06), transparent 55%),
+    radial-gradient(1000px 700px at 100% 106%, rgba(14, 165, 164, 0.07), transparent 55%),
+    linear-gradient(135deg, #fffdf8, #f6f4ee);
+  box-shadow: var(--pc-shadow-lg);
+}
+
+/* Animated multi-colour compute rail (blue -> teal -> violet, sliding). */
+.parallel-deck .slide-frame::before {
+  height: 4px;
+  background: linear-gradient(90deg, var(--pc-blue), var(--pc-teal), var(--pc-violet), var(--pc-blue));
+  background-size: 300% 100%;
+  animation: pcr-rail 9s linear infinite;
+}
+
+/* Ambient engineering dot-grid, drifting on the GPU (translate3d, not
+   background-position, to avoid full-layer repaints). Sits behind content. */
+.parallel-deck .slide-frame::after {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1.6px);
+  background-size: 28px 28px;
+  animation: pcr-drift 26s linear infinite;
+  will-change: transform;
+}
+
+/* Keep real slide content above the ambient layer. */
+.parallel-deck .slide-header,
+.parallel-deck .slide-body,
+.parallel-deck .slide-footer {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes pcr-rail {
+  to { background-position: 300% 0; }
+}
+@keyframes pcr-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(28px, 28px, 0); }
+}
+
+/* ---------------------------------------------------------------------------
+   3. Structural fixes — the real bugs seen in QA
+      (a) long shell titles ballooned to 5-6 lines and ate ~157px of header,
+          starving the board (story rail ~370px + copy ~410px could not fit)
+      (b) the copy column is centre-justified, so an earlier overflow:hidden
+          clipped it SYMMETRICALLY (Definition top + Example bottom vanished).
+      Fix: reclaim header height, tighten the rail + copy so ALL content fits,
+      and never clip teaching content. No text/meaning changed.
+   ------------------------------------------------------------------------- */
+
+/* Reclaim header height: compact the shell title on content slides (hero and
+   divider slides keep their own large display type and are unaffected). */
+.parallel-deck .slide-title {
+  letter-spacing: -0.015em;
+}
+.parallel-deck .slide-header { padding-bottom: 8px; }
+.parallel-deck .slide-subtitle {
+  margin-top: 5px;
+  font-size: clamp(0.86rem, 0.95vw, 1.02rem);
+  line-height: 1.32;
+}
+
+/* The header-copy column was crushed to ~350px by the wide 13-pill toolbar, so
+   the title wrapped to 3 lines and the subtitle to 4 (252px header, 43% of the
+   frame!). Cap + compact the nav toolbar so title + subtitle regain width and
+   each collapse to ~2 lines, reclaiming ~90px for the slide body. */
+.parallel-deck .slide-header-copy { flex: 1 1 auto; min-width: 0; }
+.parallel-deck .slide-header-tools { flex: 0 1 auto; max-width: 48%; }
+.parallel-deck .module-switcher button,
+.parallel-deck .module-switcher a,
+.parallel-deck .mode-switch button {
+  min-height: 24px;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+}
+
+/* Board: real row gap so the takeaway reads as its own band. Copy flows from
+   the top (not centre) so if any slide is still tight it degrades gracefully
+   downward instead of hiding the first + last block. No overflow clip. */
+.parallel-deck .pc-board {
+  row-gap: clamp(11px, 1.3vw, 16px);
+}
+.parallel-deck .pc-copy {
+  justify-content: center;
+  gap: clamp(6px, 0.7vw, 9px);
+  padding: clamp(11px, 1.25vw, 16px) clamp(13px, 1.5vw, 20px);
+  min-height: 0;
+}
+.parallel-deck .pc-visual { padding: clamp(12px, 1.5vw, 20px); }
+/* the definition "term" rendered oversized (128px block on the densest slide) */
+.parallel-deck .pc-definition strong { font-size: clamp(1rem, 1.15vw, 1.22rem); }
+.parallel-deck .pc-definition { gap: 3px; }
+
+/* Compact the 10-item story rail so it is never the tallest column. */
+.parallel-deck .pc-story { gap: 4px; }
+.parallel-deck .pc-story span {
+  min-height: 24px;
+  padding: 4px 10px;
+  font-size: clamp(0.66rem, 0.74vw, 0.8rem);
+}
+
+/* Slightly tighter reading blocks so dense slides (definition + points +
+   example) fit the row cleanly. Meaning unchanged. */
+.parallel-deck .pc-points { gap: 5px; }
+.parallel-deck .pc-takeaway span,
+.parallel-deck .pc-example p,
+.parallel-deck .pc-definition p,
+.parallel-deck .pc-points li {
+  font-size: clamp(0.86rem, 0.98vw, 1.02rem);
+  line-height: 1.2;
+}
+.parallel-deck .pc-definition { padding: clamp(8px, 1vw, 12px); }
+.parallel-deck .pc-example { padding: clamp(7px, 0.9vw, 12px); }
+.parallel-deck .pc-takeaway { min-height: 48px; }
+
+/* ChipFlow wraps to 3 rows on copy-heavy slides; compact so the top row is not
+   clipped when it shares the column with points + example. */
+.parallel-deck .pc-chip-flow { gap: 8px; }
+.parallel-deck .pc-chip-flow span {
+  min-height: 32px;
+  padding: 6px 11px;
+  font-size: clamp(0.82rem, 0.92vw, 0.98rem);
+}
+
+/* ---------------------------------------------------------------------------
+   4. Story rail — refinement + a live "now" pulse so the current chapter reads
+      as the active stage of a running machine.
+   ------------------------------------------------------------------------- */
+.parallel-deck .pc-story span {
+  transition: color 0.3s var(--pc-ease), opacity 0.3s var(--pc-ease);
+}
+.parallel-deck .pc-story .now {
+  animation: pcr-now 2.6s ease-in-out infinite;
+}
+@keyframes pcr-now {
+  0%, 100% { box-shadow: 0 14px 28px rgba(37, 99, 235, 0.18); }
+  50%      { box-shadow: 0 16px 36px rgba(37, 99, 235, 0.36); }
+}
+
+/* ---------------------------------------------------------------------------
+   5. Entry cascade — the slide assembles itself on mount (deck remounts via
+      replayKey, so these re-fire every navigation). Story -> copy -> visual ->
+      takeaway, a short documentary "camera settle".
+   ------------------------------------------------------------------------- */
+.parallel-deck .pc-story   { animation: pcr-enter 0.5s var(--pc-ease) both; }
+.parallel-deck .pc-copy    { animation: pcr-enter 0.55s 0.09s var(--pc-ease) both; }
+.parallel-deck .pc-visual  { animation: pcr-enter 0.6s 0.17s var(--pc-ease) both; }
+.parallel-deck .pc-takeaway{ animation: pcr-enter 0.5s 0.27s var(--pc-ease) both; }
+@keyframes pcr-enter {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Lift the visual panel with a touch more depth + a hover "spotlight". */
+.parallel-deck .pc-visual {
+  box-shadow: var(--pc-shadow-md);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+.parallel-deck .pc-visual:hover {
+  box-shadow: var(--pc-shadow-lg);
+  transform: translateY(-3px);
+}
+
+/* ---------------------------------------------------------------------------
+   6. Opening slide — turn the overlapping wordmark into a deliberate cinematic
+      lower-third: a soft scrim rises from the base so the title reads cleanly
+      over the CPU + datacenter behind it.
+   ------------------------------------------------------------------------- */
+.parallel-deck .pc-opening-title {
+  padding: 46px clamp(28px, 4vw, 58px) 12px;
+  background: linear-gradient(
+    to top,
+    var(--pc-cream) 4%,
+    rgba(250, 248, 243, 0.94) 40%,
+    rgba(250, 248, 243, 0) 100%
+  );
+  border-radius: 0 0 8px 8px;
+}
+.parallel-deck .pc-opening-title h1 {
+  font-size: clamp(2.6rem, 5.6vw, 5.6rem);
+}
+/* keep the two hero visuals in the upper field so the lower-third stays clear */
+.parallel-deck .pc-opening {
+  align-items: start;
+  padding-top: clamp(18px, 3vw, 38px);
+}
+
+/* ---------------------------------------------------------------------------
+   7. Section dividers — cinema. Ghost chapter number, confident type.
+   ------------------------------------------------------------------------- */
+.parallel-deck .pc-divider {
+  padding: clamp(20px, 3vw, 44px);
+  background:
+    radial-gradient(700px 400px at 10% 12%, rgba(37, 99, 235, 0.13), transparent 60%),
+    radial-gradient(640px 380px at 92% 88%, rgba(14, 165, 164, 0.14), transparent 62%),
+    linear-gradient(135deg, #fffdf8, #f4f2ec);
+}
+/* Bold hero type, but sized so long chapter names ("Need for Parallelism")
+   stay 2 lines and the visual never pushes the last line into the footer. */
+.parallel-deck .pc-divider h2 {
+  font-size: clamp(2.8rem, 5.2vw, 5.6rem);
+  margin: 6px 0 8px;
+}
+.parallel-deck .pc-divider-visual { min-height: 0; }
+.parallel-deck .pc-divider-number {
+  animation: pcr-enter 0.6s var(--pc-ease) both;
+}
+.parallel-deck .pc-divider h2 {
+  animation: pcr-enter 0.6s 0.1s var(--pc-ease) both;
+}
+.parallel-deck .pc-divider p {
+  animation: pcr-enter 0.6s 0.2s var(--pc-ease) both;
+}
+.parallel-deck .pc-divider-visual {
+  animation: pcr-enter 0.7s 0.28s var(--pc-ease) both;
+}
+
+/* ---------------------------------------------------------------------------
+   8. Ambient micro-motion polish — the SVG chip gains a faint compute glow so
+      the machine feels alive even while idle. (Existing per-visual animations
+      in parallelComputing.css are preserved.)
+   ------------------------------------------------------------------------- */
+.parallel-deck .pc-cpu .chip-body {
+  animation: pcr-chip-glow 3.6s ease-in-out infinite;
+}
+@keyframes pcr-chip-glow {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(37, 99, 235, 0)); }
+  50%      { filter: drop-shadow(0 6px 16px rgba(37, 99, 235, 0.28)); }
+}
+
+/* ---------------------------------------------------------------------------
+   9. Reduced-motion accessibility
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .parallel-deck *,
+  .parallel-deck *::before,
+  .parallel-deck *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

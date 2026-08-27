@@ -1,0 +1,613 @@
+{
+  "id": "module4",
+  "title": "Convolutional Neural Networks",
+  "story": [
+    "Convolution",
+    "Motivation",
+    "Pooling",
+    "Priors",
+    "Variants",
+    "Outputs",
+    "Efficiency",
+    "History",
+    "Revision"
+  ],
+  "source": "VTU_BCA701_Module_4_Convolutional_Neural_Networks.pptx",
+  "syllabus": [
+    {
+      "topic": "Convolution Operation",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Motivation",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Pooling",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Convolution and Pooling as an Infinitely Strong Prior",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Variants of Basic Convolution Function",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Structured Outputs",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Data Types",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Efficient Convolution Algorithms",
+      "status": "COVERED"
+    },
+    {
+      "topic": "CNNs and the History of Deep Learning",
+      "status": "COVERED"
+    }
+  ],
+  "slides": [
+    {
+      "n": 1,
+      "id": "module4-s01",
+      "title": "Module 4: Convolutional Neural Networks",
+      "subtitle": "",
+      "layout": "opener",
+      "visual": "MasterStory",
+      "definition": null,
+      "points": [
+        "How convolution, pooling, architectural priors, variants, structured outputs, data types, efficient algorithms, and CNN history explain modern visual deep learning."
+      ],
+      "extraPoints": [],
+      "takeaway": "How convolution, pooling, architectural priors, variants, structured outputs, data types, efficient algorithms, and CNN history explain modern visual deep learning.",
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 2,
+      "id": "module4-s02",
+      "title": "Module 4 begins with convolution, pooling, and priors",
+      "subtitle": "",
+      "layout": "journey",
+      "visual": "JourneyPath",
+      "definition": null,
+      "points": [],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 3,
+      "id": "module4-s03",
+      "title": "Module 4 then connects CNNs to outputs, data, efficiency, and history",
+      "subtitle": "",
+      "layout": "journey",
+      "visual": "JourneyPath",
+      "definition": null,
+      "points": [],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 4,
+      "id": "module4-s04",
+      "title": "A convolution applies the same small filter across many locations",
+      "subtitle": "",
+      "layout": "hero",
+      "visual": "ConvolutionScanner",
+      "definition": null,
+      "points": [
+        "Operation",
+        "A kernel slides over an input array. At each location, it multiplies local input values by kernel weights and sums the result.",
+        "Output",
+        "The repeated operation produces a feature map that marks where the learned pattern appears."
+      ],
+      "extraPoints": [],
+      "takeaway": "A kernel slides over an input array. At each location, it multiplies local input values by kernel weights and sums the result.",
+      "say": "",
+      "formula": "Operation"
+    },
+    {
+      "n": 5,
+      "id": "module4-s05",
+      "title": "The convolution operation is a weighted local sum",
+      "subtitle": "",
+      "layout": "formula",
+      "visual": "ConvolutionScanner",
+      "definition": null,
+      "points": [
+        "S(i, j) = Σm Σn I(i+m, j+n) K(m, n)",
+        "I is the input array.",
+        "K is the convolution kernel or filter.",
+        "S is the output feature map at location (i, j)."
+      ],
+      "extraPoints": [],
+      "takeaway": "S is the output feature map at location (i, j).",
+      "say": "",
+      "formula": "S(i, j) = Σm Σn I(i+m, j+n) K(m, n)"
+    },
+    {
+      "n": 6,
+      "id": "module4-s06",
+      "title": "A kernel sees only a local receptive field at each position",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "ConvolutionScanner",
+      "definition": null,
+      "points": [
+        "Input patch",
+        "Kernel",
+        "one\noutput",
+        "The same kernel is reused at the next spatial position.",
+        "This creates parameter sharing across the whole input."
+      ],
+      "extraPoints": [],
+      "takeaway": "The same kernel is reused at the next spatial position.",
+      "say": "",
+      "formula": "Input patch"
+    },
+    {
+      "n": 7,
+      "id": "module4-s07",
+      "title": "CNN motivation starts with three useful assumptions",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "CnnMotivation",
+      "definition": null,
+      "points": [
+        "Locality",
+        "Nearby values are usually more related than distant values.",
+        "Parameter sharing",
+        "The same feature may be useful at many positions.",
+        "Translation equivariance",
+        "Moving the input moves the feature response."
+      ],
+      "extraPoints": [
+        "Hierarchy",
+        "Small features combine into larger patterns across layers."
+      ],
+      "takeaway": "Nearby values are usually more related than distant values.",
+      "say": "",
+      "formula": "Locality"
+    },
+    {
+      "n": 8,
+      "id": "module4-s08",
+      "title": "Convolution dramatically reduces parameters compared with dense layers",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "ConvolutionScanner",
+      "definition": null,
+      "points": [
+        "Dense connection",
+        "Every input position can have a different weight into every output unit, which becomes expensive for images.",
+        "Convolutional connection",
+        "A small kernel is shared across spatial locations, reducing parameter count and improving sample efficiency."
+      ],
+      "extraPoints": [],
+      "takeaway": "Every input position can have a different weight into every output unit, which becomes expensive for images.",
+      "say": "",
+      "formula": "Dense connection"
+    },
+    {
+      "n": 9,
+      "id": "module4-s09",
+      "title": "CNN layers build a feature hierarchy",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "FeatureHierarchy",
+      "definition": null,
+      "points": [
+        "Edges",
+        "Textures",
+        "Parts",
+        "Objects",
+        "Early layers detect simple patterns; later layers combine them into task-level representations."
+      ],
+      "extraPoints": [],
+      "takeaway": "Early layers detect simple patterns; later layers combine them into task-level representations.",
+      "say": "",
+      "formula": "Edges"
+    },
+    {
+      "n": 10,
+      "id": "module4-s10",
+      "title": "Pooling summarizes local neighborhoods",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "PoolingViz",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 11,
+      "id": "module4-s11",
+      "title": "Max pooling keeps the strongest local activation",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "PoolingViz",
+      "definition": null,
+      "points": [
+        "Feature map",
+        "Pooled map",
+        "Each window becomes one summarized value.",
+        "The representation becomes smaller.",
+        "Small translations can have less effect on the output."
+      ],
+      "extraPoints": [],
+      "takeaway": "Each window becomes one summarized value.",
+      "say": "",
+      "formula": "Feature map"
+    },
+    {
+      "n": 12,
+      "id": "module4-s12",
+      "title": "Convolution and pooling act as an infinitely strong prior",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "PoolingViz",
+      "definition": null,
+      "points": [
+        "Prior from convolution",
+        "The network assumes useful features are local and that the same feature detector should be reused across positions.",
+        "Prior from pooling",
+        "The network assumes exact feature position may matter less than whether the feature appears in a local region."
+      ],
+      "extraPoints": [],
+      "takeaway": "The network assumes useful features are local and that the same feature detector should be reused across positions.",
+      "say": "",
+      "formula": "Prior from convolution"
+    },
+    {
+      "n": 13,
+      "id": "module4-s13",
+      "title": "A strong prior helps when the data match the assumption",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "FeatureHierarchy",
+      "definition": null,
+      "points": [
+        "Helpful case",
+        "For images, edges and textures can appear at many locations, so shared filters and pooling are useful assumptions.",
+        "Risky case",
+        "If location-specific patterns are essential, too much sharing or pooling can remove information the task needs."
+      ],
+      "extraPoints": [],
+      "takeaway": "For images, edges and textures can appear at many locations, so shared filters and pooling are useful assumptions.",
+      "say": "",
+      "formula": "Helpful case"
+    },
+    {
+      "n": 14,
+      "id": "module4-s14",
+      "title": "Basic convolution changes through stride and padding",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "ConvVariants",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 15,
+      "id": "module4-s15",
+      "title": "Channels let convolution combine multiple feature planes",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "ConvolutionScanner",
+      "definition": null,
+      "points": [
+        "Images often have multiple input channels such as red, green, and blue.",
+        "Intermediate CNN layers have many feature-map channels.",
+        "A convolution kernel spans input channels and produces one output feature map.",
+        "Multiple kernels produce multiple output channels."
+      ],
+      "extraPoints": [],
+      "takeaway": "Images often have multiple input channels such as red, green, and blue.",
+      "say": "",
+      "formula": "Images often have multiple input channels such as red, green, and blue."
+    },
+    {
+      "n": 16,
+      "id": "module4-s16",
+      "title": "CNN variants change how computation and sharing are organized",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "ConvVariants",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 17,
+      "id": "module4-s17",
+      "title": "Structured outputs predict more than one class label",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "StructuredOutputViz",
+      "definition": null,
+      "points": [
+        "Ordinary classification",
+        "A CNN maps an input image to one label, such as cat, car, or digit.",
+        "Structured output",
+        "A CNN may output a spatial map, sequence, bounding boxes, masks, or multiple labels aligned to the input."
+      ],
+      "extraPoints": [],
+      "takeaway": "A CNN maps an input image to one label, such as cat, car, or digit.",
+      "say": "",
+      "formula": "Ordinary classification"
+    },
+    {
+      "n": 18,
+      "id": "module4-s18",
+      "title": "Dense prediction keeps spatial structure in the output",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "StructuredOutputViz",
+      "definition": null,
+      "points": [
+        "Input\nimage",
+        "CNN\nfeature extractor",
+        "Output map",
+        "Segmentation and heatmaps are examples where the output has spatial organization."
+      ],
+      "extraPoints": [],
+      "takeaway": "Segmentation and heatmaps are examples where the output has spatial organization.",
+      "say": "",
+      "formula": "Input\nimage"
+    },
+    {
+      "n": 19,
+      "id": "module4-s19",
+      "title": "CNNs can process several array-like data types",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "CnnDataTypes",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 20,
+      "id": "module4-s20",
+      "title": "Data layout changes how convolution is implemented",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BatchOnlineViz",
+      "definition": null,
+      "points": [
+        "Shape matters",
+        "The same conceptual operation may be organized as channels-first, channels-last, batched tensors, or tiled memory layouts.",
+        "Hardware matters",
+        "Efficient CNN implementations arrange data to reduce memory movement and exploit parallel matrix or tensor operations."
+      ],
+      "extraPoints": [],
+      "takeaway": "The same conceptual operation may be organized as channels-first, channels-last, batched tensors, or tiled memory layouts.",
+      "say": "",
+      "formula": "Shape matters"
+    },
+    {
+      "n": 21,
+      "id": "module4-s21",
+      "title": "Efficient convolution algorithms reduce repeated computation",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "EfficientConvViz",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 22,
+      "id": "module4-s22",
+      "title": "Efficiency depends on kernel size, feature-map size, and hardware",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BatchOnlineViz",
+      "definition": null,
+      "points": [
+        "Small kernels such as 3 x 3 are common because they are expressive and efficient.",
+        "Large feature maps make memory movement a major cost.",
+        "Batches let hardware reuse computation patterns.",
+        "The best algorithm can change across CPU, GPU, mobile, and accelerator settings."
+      ],
+      "extraPoints": [],
+      "takeaway": "Small kernels such as 3 x 3 are common because they are expressive and efficient.",
+      "say": "",
+      "formula": "Large feature maps make memory movement a major cost."
+    },
+    {
+      "n": 23,
+      "id": "module4-s23",
+      "title": "A CNN pipeline stacks convolution, nonlinearity, pooling, and prediction",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "PoolingViz",
+      "definition": null,
+      "points": [
+        "Input",
+        "Convolution",
+        "Activation",
+        "Pooling",
+        "Classifier",
+        "Output"
+      ],
+      "extraPoints": [
+        "Actual networks repeat this pattern many times, building deeper feature hierarchies."
+      ],
+      "takeaway": "Actual networks repeat this pattern many times, building deeper feature hierarchies.",
+      "say": "",
+      "formula": "Input"
+    },
+    {
+      "n": 24,
+      "id": "module4-s24",
+      "title": "CNN history connects neural ideas to practical computer vision",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "CnnVolume",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 25,
+      "id": "module4-s25",
+      "title": "The history of CNNs is also a history of scale",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "EfficientConvViz",
+      "definition": null,
+      "points": [
+        "The core ideas are older than the modern deep learning boom.",
+        "Large labeled datasets made supervised visual learning more useful.",
+        "GPU computation made deeper and wider CNN training practical.",
+        "Architectural refinements improved trainability, accuracy, and efficiency."
+      ],
+      "extraPoints": [],
+      "takeaway": "The core ideas are older than the modern deep learning boom.",
+      "say": "",
+      "formula": "The core ideas are older than the modern deep learning boom."
+    },
+    {
+      "n": 26,
+      "id": "module4-s26",
+      "title": "A good exam answer should name the CNN assumption behind the method",
+      "subtitle": "",
+      "layout": "exam",
+      "visual": "ExamStrategy",
+      "definition": null,
+      "points": [
+        "Convolution",
+        "Locality and weight sharing.",
+        "Pooling",
+        "Local invariance and compact representation.",
+        "Variants",
+        "Stride, padding, channels, dimensionality, dilation, transposed convolution."
+      ],
+      "extraPoints": [
+        "Efficiency",
+        "Implementation matters because convolution dominates computation."
+      ],
+      "takeaway": "Local invariance and compact representation.",
+      "say": "",
+      "formula": "Convolution"
+    },
+    {
+      "n": 27,
+      "id": "module4-s27",
+      "title": "Module 4 vocabulary students must own",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 28,
+      "id": "module4-s28",
+      "title": "Mini activity: design the first layer of a CNN",
+      "subtitle": "",
+      "layout": "activity",
+      "visual": "ConvolutionScanner",
+      "definition": null,
+      "points": [
+        "Choose an input type: grayscale image, RGB image, audio waveform, or spectrogram.",
+        "Pick kernel size, stride, padding, and number of output channels.",
+        "Explain what prior your design assumes about the data.",
+        "Predict how pooling would change feature-map size and invariance."
+      ],
+      "extraPoints": [],
+      "takeaway": "Choose an input type: grayscale image, RGB image, audio waveform, or spectrogram.",
+      "say": "",
+      "formula": "Pick kernel size, stride, padding, and number of output channels."
+    },
+    {
+      "n": 29,
+      "id": "module4-s29",
+      "title": "Coverage checklist: every Module 4 phrase is included",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 30,
+      "id": "module4-s30",
+      "title": "Prescribed textbook reference for Module 4",
+      "subtitle": "",
+      "layout": "exam",
+      "visual": "ExamStrategy",
+      "definition": null,
+      "points": [
+        "Primary reference: Goodfellow, Bengio, and Courville, Deep Learning, MIT Press, 2016.",
+        "Use the textbook for convolution operations, pooling, priors, variants, data types, efficient algorithms, and CNN history.",
+        "Use the VTU syllabus as the boundary for what belongs in Module 4."
+      ],
+      "extraPoints": [],
+      "takeaway": "Primary reference: Goodfellow, Bengio, and Courville, Deep Learning, MIT Press, 2016.",
+      "say": "",
+      "formula": "Use the VTU syllabus as the boundary for what belongs in Module 4."
+    }
+  ]
+}

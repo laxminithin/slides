@@ -1,0 +1,640 @@
+{
+  "id": "module3",
+  "title": "Regularization & Optimization",
+  "story": [
+    "Overfitting",
+    "L2",
+    "Augment",
+    "Semi-Supervised",
+    "Landscape",
+    "Saddles",
+    "Workflow",
+    "Revision"
+  ],
+  "source": "VTU_BCA701_Module_3_Regularization_Optimization.pptx",
+  "syllabus": [
+    {
+      "topic": "Parameter Norm Penalties",
+      "status": "COVERED"
+    },
+    {
+      "topic": "L2 Parameter Regularization",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Dataset Augmentation",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Semi-Supervised Learning",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Challenges in Neural Network Optimization",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Ill Conditioning",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Local Minima",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Plateaus",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Saddle Points",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Flat Regions",
+      "status": "COVERED"
+    }
+  ],
+  "slides": [
+    {
+      "n": 1,
+      "id": "module3-s01",
+      "title": "Module 3: Regularization and Optimization",
+      "subtitle": "",
+      "layout": "opener",
+      "visual": "MasterStory",
+      "definition": null,
+      "points": [
+        "How deep models are kept from overfitting, and why their training landscapes are difficult: L2 penalties, augmentation, semi-supervised learning, ill-conditioning, local minima, plateaus, saddle points, and flat regions."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 2,
+      "id": "module3-s02",
+      "title": "Module 3 has two big jobs: generalize and train",
+      "subtitle": "",
+      "layout": "journey",
+      "visual": "JourneyPath",
+      "definition": null,
+      "points": [],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 3,
+      "id": "module3-s03",
+      "title": "Regularization controls the gap between training fit and test performance",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "OverfitCurve",
+      "definition": null,
+      "points": [
+        "Training error",
+        "A high-capacity deep model can fit the training set very closely, sometimes memorizing noise or accidental patterns.",
+        "Generalization error",
+        "Regularization changes the learning problem so the model is encouraged to perform well on unseen data, not only on the examples it has already seen."
+      ],
+      "extraPoints": [],
+      "takeaway": "A high-capacity deep model can fit the training set very closely, sometimes memorizing noise or accidental patterns.",
+      "say": "",
+      "formula": "Training error"
+    },
+    {
+      "n": 4,
+      "id": "module3-s04",
+      "title": "Parameter norm penalties regularize by making large weights costly",
+      "subtitle": "",
+      "layout": "formula",
+      "visual": "L2WeightViz",
+      "definition": null,
+      "points": [
+        "J̃(θ) = J(θ) + α Ω(θ)",
+        "J(θ) is the original training objective.",
+        "Ω(θ) is a penalty that measures parameter size.",
+        "α controls how strongly the penalty influences learning."
+      ],
+      "extraPoints": [],
+      "takeaway": "Ω(θ) is a penalty that measures parameter size.",
+      "say": "",
+      "formula": "J̃(θ) = J(θ) + α Ω(θ)"
+    },
+    {
+      "n": 5,
+      "id": "module3-s05",
+      "title": "L2 regularization uses the squared weight norm",
+      "subtitle": "",
+      "layout": "formula",
+      "visual": "L2WeightViz",
+      "definition": null,
+      "points": [
+        "Ω(w) = 1/2 ||w||²",
+        "The penalty grows rapidly as weights become large.",
+        "Bias terms are often left unpenalized or treated separately.",
+        "The model is encouraged to use smaller, smoother weight values."
+      ],
+      "extraPoints": [],
+      "takeaway": "The penalty grows rapidly as weights become large.",
+      "say": "",
+      "formula": "Ω(w) = 1/2 ||w||²"
+    },
+    {
+      "n": 6,
+      "id": "module3-s06",
+      "title": "L2 regularization appears in updates as weight decay",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "HeuristicsViz",
+      "definition": null,
+      "points": [
+        "w ← (1 - ηα)w - η ∇w J",
+        "η is the learning rate.",
+        "α is the L2 regularization strength.",
+        "The factor (1 - ηα) shrinks weights before the ordinary gradient step."
+      ],
+      "extraPoints": [],
+      "takeaway": "The factor (1 - ηα) shrinks weights before the ordinary gradient step.",
+      "say": "",
+      "formula": "w ← (1 - ηα)w - η ∇w J"
+    },
+    {
+      "n": 7,
+      "id": "module3-s07",
+      "title": "L2 regularization biases learning toward simpler mappings",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "L2WeightViz",
+      "definition": null,
+      "points": [
+        "Without L2",
+        "A network may use large weights to create sharp, highly sensitive input-output behavior.",
+        "With L2",
+        "Large weights are costly, so the model is nudged toward smoother functions that often generalize better."
+      ],
+      "extraPoints": [],
+      "takeaway": "A network may use large weights to create sharp, highly sensitive input-output behavior.",
+      "say": "",
+      "formula": "Without L2"
+    },
+    {
+      "n": 8,
+      "id": "module3-s08",
+      "title": "Choosing α is a bias-variance trade-off",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "L2WeightViz",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 9,
+      "id": "module3-s09",
+      "title": "Dataset augmentation increases useful training variation",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "AugmentationScene",
+      "definition": null,
+      "points": [
+        "Create additional examples by applying label-preserving transformations.",
+        "For images, common transformations include shifts, flips, crops, rotations, color changes, or small noise.",
+        "The model sees more variation without requiring manual labeling of every new example.",
+        "Augmentation encodes prior knowledge about what should not change the class label."
+      ],
+      "extraPoints": [],
+      "takeaway": "Create additional examples by applying label-preserving transformations.",
+      "say": "",
+      "formula": "Create additional examples by applying label-preserving transformations."
+    },
+    {
+      "n": 10,
+      "id": "module3-s10",
+      "title": "Augmentation teaches invariance by example",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "AugmentationScene",
+      "definition": null,
+      "points": [
+        "Original\nimage",
+        "crop",
+        "flip",
+        "rotate",
+        "noise",
+        "Same label\nstronger model"
+      ],
+      "extraPoints": [
+        "The label stays stable while the input appearance varies."
+      ],
+      "takeaway": "The label stays stable while the input appearance varies.",
+      "say": "",
+      "formula": "Original\nimage"
+    },
+    {
+      "n": 11,
+      "id": "module3-s11",
+      "title": "Augmentation must preserve the meaning of the label",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "AugmentationScene",
+      "definition": null,
+      "points": [
+        "Good augmentation",
+        "The transformed sample still belongs to the same class and reflects realistic variation expected at test time.",
+        "Bad augmentation",
+        "The transformation changes the label, creates impossible examples, or teaches invariances the task does not actually have."
+      ],
+      "extraPoints": [],
+      "takeaway": "The transformed sample still belongs to the same class and reflects realistic variation expected at test time.",
+      "say": "",
+      "formula": "Good augmentation"
+    },
+    {
+      "n": 12,
+      "id": "module3-s12",
+      "title": "Semi-supervised learning uses unlabeled data as a training signal",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "SemiSupervisedViz",
+      "definition": null,
+      "points": [
+        "Available data",
+        "A small labeled dataset is paired with a larger collection of unlabeled examples from the same problem domain.",
+        "Learning idea",
+        "The model uses unlabeled data to learn structure, representations, or consistency that can improve supervised prediction."
+      ],
+      "extraPoints": [],
+      "takeaway": "A small labeled dataset is paired with a larger collection of unlabeled examples from the same problem domain.",
+      "say": "",
+      "formula": "Available data"
+    },
+    {
+      "n": 13,
+      "id": "module3-s13",
+      "title": "Unlabeled examples can shape the representation",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "SemiSupervisedViz",
+      "definition": null,
+      "points": [
+        "Few labeled\nexamples",
+        "Many unlabeled\nexamples",
+        "Shared\nrepresentation",
+        "Classifier\nprediction"
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": "Few labeled\nexamples"
+    },
+    {
+      "n": 14,
+      "id": "module3-s14",
+      "title": "Regularization techniques answer different overfitting problems",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "OverfitCurve",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 15,
+      "id": "module3-s15",
+      "title": "Optimization for deep models is hard because the loss surface is complex",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "IllConditionViz",
+      "definition": null,
+      "points": [
+        "Deep networks are trained by moving through a high-dimensional parameter space.",
+        "The objective can curve sharply in some directions and barely change in others.",
+        "Gradients can point in directions that are locally correct but globally inefficient.",
+        "The syllabus highlights ill-conditioning, local minima, plateaus, saddle points, and flat regions."
+      ],
+      "extraPoints": [],
+      "takeaway": "Deep networks are trained by moving through a high-dimensional parameter space.",
+      "say": "",
+      "formula": "Deep networks are trained by moving through a high-dimensional parameter space."
+    },
+    {
+      "n": 16,
+      "id": "module3-s16",
+      "title": "Gradient descent follows local slope, not global understanding",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "HeuristicsViz",
+      "definition": null,
+      "points": [
+        "θ ← θ - η ∇θ J(θ)",
+        "θ represents all trainable parameters.",
+        "∇θ J is the gradient of the objective.",
+        "η is the learning rate controlling step size."
+      ],
+      "extraPoints": [],
+      "takeaway": "η is the learning rate controlling step size.",
+      "say": "",
+      "formula": "θ ← θ - η ∇θ J(θ)"
+    },
+    {
+      "n": 17,
+      "id": "module3-s17",
+      "title": "Ill-conditioning makes some directions much harder than others",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "IllConditionViz",
+      "definition": null,
+      "points": [
+        "The problem",
+        "The loss surface can have very different curvature along different parameter directions.",
+        "Training effect",
+        "A step size that is safe in a steep direction may be painfully slow in a flat direction, producing zig-zag or slow progress."
+      ],
+      "extraPoints": [],
+      "takeaway": "The loss surface can have very different curvature along different parameter directions.",
+      "say": "",
+      "formula": "The problem"
+    },
+    {
+      "n": 18,
+      "id": "module3-s18",
+      "title": "Ill-conditioning is about curvature, not only about high loss",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "IllConditionViz",
+      "definition": null,
+      "points": [
+        "narrow valley",
+        "Steep across the valley.",
+        "Flat along the valley.",
+        "Naive gradient steps can bounce across the steep direction while making slow progress forward."
+      ],
+      "extraPoints": [],
+      "takeaway": "Naive gradient steps can bounce across the steep direction while making slow progress forward.",
+      "say": "",
+      "formula": "narrow valley"
+    },
+    {
+      "n": 19,
+      "id": "module3-s19",
+      "title": "Local minima are points lower than their neighborhood",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "LocalMinimaViz",
+      "definition": null,
+      "points": [
+        "Definition",
+        "A local minimum has no nearby direction that immediately decreases the objective, but it may not be the best possible solution overall.",
+        "Deep-learning nuance",
+        "In high-dimensional deep networks, poor local minima are one concern, but saddle points and flat regions can also be major obstacles."
+      ],
+      "extraPoints": [],
+      "takeaway": "A local minimum has no nearby direction that immediately decreases the objective, but it may not be the best possible solution overall.",
+      "say": "",
+      "formula": "Definition"
+    },
+    {
+      "n": 20,
+      "id": "module3-s20",
+      "title": "Local minima are not the only stationary points",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "LossLandscape",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 21,
+      "id": "module3-s21",
+      "title": "Plateaus slow learning because gradients become tiny",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "HeuristicsViz",
+      "definition": null,
+      "points": [
+        "A plateau is a broad region where the objective changes very slowly.",
+        "Small gradients produce very small updates.",
+        "Training may appear stuck even when it has not reached a good solution.",
+        "Momentum, adaptive methods, or better initialization can sometimes help move across plateaus."
+      ],
+      "extraPoints": [],
+      "takeaway": "A plateau is a broad region where the objective changes very slowly.",
+      "say": "",
+      "formula": "A plateau is a broad region where the objective changes very slowly."
+    },
+    {
+      "n": 22,
+      "id": "module3-s22",
+      "title": "Saddle points can look like minima to first-order methods",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "SaddlePointScene",
+      "definition": null,
+      "points": [
+        "What a saddle is",
+        "A saddle point slopes upward in some directions and downward in others, while the gradient near the point can be very small.",
+        "Why it matters",
+        "Gradient-based training can slow down near saddle points because the immediate slope gives weak guidance."
+      ],
+      "extraPoints": [],
+      "takeaway": "A saddle point slopes upward in some directions and downward in others, while the gradient near the point can be very small.",
+      "say": "",
+      "formula": "What a saddle is"
+    },
+    {
+      "n": 23,
+      "id": "module3-s23",
+      "title": "Flat regions make progress hard to measure",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "FlatRegionViz",
+      "definition": null,
+      "points": [
+        "Flat regions are areas of parameter space with very low curvature and weak gradients.",
+        "Updates can be small even when the model is far from the best parameters.",
+        "Flatness can also be connected to many different parameter settings producing similar training loss.",
+        "Learning curves may show long stretches of little visible improvement."
+      ],
+      "extraPoints": [],
+      "takeaway": "Flat regions are areas of parameter space with very low curvature and weak gradients.",
+      "say": "",
+      "formula": "Updates can be small even when the model is far from the best parameters."
+    },
+    {
+      "n": 24,
+      "id": "module3-s24",
+      "title": "Optimization challenges affect training in different ways",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "LossLandscape",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 25,
+      "id": "module3-s25",
+      "title": "Regularization and optimization solve different problems",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "CnnMotivation",
+      "definition": null,
+      "points": [
+        "Regularization asks",
+        "Will the trained model generalize to unseen examples?",
+        "Optimization asks",
+        "Can the training procedure find useful parameters efficiently?"
+      ],
+      "extraPoints": [],
+      "takeaway": "Will the trained model generalize to unseen examples?",
+      "say": "",
+      "formula": "Regularization asks"
+    },
+    {
+      "n": 26,
+      "id": "module3-s26",
+      "title": "A practical training workflow uses both ideas together",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "PerceptronLearningLoop",
+      "definition": null,
+      "points": [
+        "Data",
+        "Augment /\nsemi-supervise",
+        "Model",
+        "Regularized\nobjective",
+        "Optimizer",
+        "Validation"
+      ],
+      "extraPoints": [
+        "The training loop balances generalization pressure with optimization progress."
+      ],
+      "takeaway": "The training loop balances generalization pressure with optimization progress.",
+      "say": "",
+      "formula": "Data"
+    },
+    {
+      "n": 27,
+      "id": "module3-s27",
+      "title": "A good exam answer should separate examples from mechanisms",
+      "subtitle": "",
+      "layout": "exam",
+      "visual": "ExamStrategy",
+      "definition": null,
+      "points": [
+        "L2 penalty",
+        "State objective plus squared weight norm and explain weight decay.",
+        "Augmentation",
+        "Name label-preserving transformations and why they help generalization.",
+        "Semi-supervised",
+        "Explain how unlabeled data supports representation or consistency."
+      ],
+      "extraPoints": [
+        "Optimization",
+        "Define each challenge and state its training symptom."
+      ],
+      "takeaway": "State objective plus squared weight norm and explain weight decay.",
+      "say": "",
+      "formula": "L2 penalty"
+    },
+    {
+      "n": 28,
+      "id": "module3-s28",
+      "title": "Module 3 vocabulary students must own",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 29,
+      "id": "module3-s29",
+      "title": "Mini activity: diagnose the training problem",
+      "subtitle": "",
+      "layout": "activity",
+      "visual": "HeuristicsViz",
+      "definition": null,
+      "points": [
+        "Show a training curve where training accuracy rises but validation accuracy falls: identify overfitting and suggest regularization.",
+        "Show a loss curve with long flat stretches: identify plateau or flat-region behavior.",
+        "Show unstable zig-zag loss changes: discuss learning rate and ill-conditioning.",
+        "Ask students to name which Module 3 idea applies to each case."
+      ],
+      "extraPoints": [],
+      "takeaway": "Show a training curve where training accuracy rises but validation accuracy falls: identify overfitting and suggest regularization.",
+      "say": "",
+      "formula": "Show unstable zig-zag loss changes: discuss learning rate and ill-conditioning."
+    },
+    {
+      "n": 30,
+      "id": "module3-s30",
+      "title": "Coverage checklist: every Module 3 phrase is included",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 31,
+      "id": "module3-s31",
+      "title": "Prescribed textbook reference for Module 3",
+      "subtitle": "",
+      "layout": "exam",
+      "visual": "ExamStrategy",
+      "definition": null,
+      "points": [
+        "Primary reference: Goodfellow, Bengio, and Courville, Deep Learning, MIT Press, 2016.",
+        "Use the textbook for regularization, L2 penalties, dataset augmentation, semi-supervised learning, and optimization challenges.",
+        "Use the VTU syllabus as the boundary for what belongs in Module 3."
+      ],
+      "extraPoints": [],
+      "takeaway": "Primary reference: Goodfellow, Bengio, and Courville, Deep Learning, MIT Press, 2016.",
+      "say": "",
+      "formula": "Use the VTU syllabus as the boundary for what belongs in Module 3."
+    }
+  ]
+}

@@ -1,0 +1,612 @@
+/* =============================================================================
+   TOC V2.0 — Masterpiece redesign layer
+   -----------------------------------------------------------------------------
+   Scoped to `.toc-deck`. Cream glass chrome + cinematic board, mirroring
+   BDA/Parallel redesign contracts. Pair with tocComposition.css + tocViz.css.
+   ========================================================================== */
+
+.toc-deck {
+  --toc-cream-1: #fbf7ef;
+  --toc-cream-2: #fffdf9;
+  --toc-cream-3: #f4efe4;
+  --toc-ink: #141d2e;
+  --toc-body: #46536a;
+  --toc-muted: #7a8698;
+
+  --toc-blue: #2f6bff;
+  --toc-teal: #0f9d94;
+  --toc-amber: #d97706;
+  --toc-green: #17a06b;
+  --toc-rose: #c45c6a;
+
+  --toc-glass: rgba(255, 255, 255, 0.66);
+  --toc-glass-strong: rgba(255, 255, 255, 0.82);
+  --toc-hairline: rgba(20, 29, 46, 0.10);
+  --toc-hairline-strong: rgba(20, 29, 46, 0.16);
+
+  --toc-shadow-sm: 0 1px 2px rgba(20, 29, 46, 0.05), 0 6px 16px rgba(20, 29, 46, 0.06);
+  --toc-shadow-md: 0 2px 6px rgba(20, 29, 46, 0.06), 0 14px 34px rgba(20, 29, 46, 0.10);
+  --toc-shadow-lg: 0 6px 14px rgba(20, 29, 46, 0.08), 0 30px 70px rgba(20, 29, 46, 0.16);
+
+  --toc-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --accent: var(--toc-blue);
+  --accent-soft: var(--toc-teal);
+  --bg-slide: var(--toc-cream-1);
+}
+
+/* ---------------------------------------------------------------------------
+   Deck ambient + slide frame
+   ------------------------------------------------------------------------- */
+.toc-deck.deck {
+  background:
+    radial-gradient(1100px 640px at 8% -12%, rgba(47, 107, 255, 0.09), transparent 60%),
+    radial-gradient(1000px 560px at 96% 4%, rgba(15, 157, 148, 0.08), transparent 58%),
+    radial-gradient(900px 620px at 50% 120%, rgba(217, 119, 6, 0.06), transparent 60%),
+    linear-gradient(150deg, #efe9dd 0%, #f3eee3 46%, #ece5d7 100%);
+  position: relative;
+  isolation: isolate;
+}
+
+.toc-deck.deck::before {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(20, 29, 46, 0.045) 1px, transparent 1.4px);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(80% 80% at 50% 45%, #000 30%, transparent 78%);
+  animation: tocDriftGrid 44s linear infinite;
+}
+
+.toc-deck.deck::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(420px 320px at 18% 82%, rgba(47, 107, 255, 0.06), transparent 70%),
+    radial-gradient(380px 300px at 84% 22%, rgba(15, 157, 148, 0.05), transparent 70%);
+  animation: tocFloatBlobs 26s ease-in-out infinite alternate;
+}
+
+@keyframes tocDriftGrid {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(30px, 30px, 0); }
+}
+@keyframes tocFloatBlobs {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to   { transform: translate3d(-1.2%, -1.6%, 0) scale(1.05); }
+}
+
+.toc-deck .slide-stage { position: relative; z-index: 1; }
+
+.toc-deck .slide-frame {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 30%),
+    linear-gradient(155deg, var(--toc-cream-2) 0%, var(--toc-cream-1) 52%, var(--toc-cream-3) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: var(--toc-shadow-lg), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+  animation: tocFrameIn 0.62s var(--toc-ease) both;
+}
+
+.toc-deck .slide-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(130% 78% at 50% -14%, rgba(255, 255, 255, 0.55), transparent 58%),
+    radial-gradient(820px 540px at 100% 0%, rgba(15, 157, 148, 0.05), transparent 62%),
+    radial-gradient(760px 500px at 0% 100%, rgba(47, 107, 255, 0.05), transparent 60%),
+    radial-gradient(150% 120% at 50% 50%, transparent 62%, rgba(20, 29, 46, 0.04) 100%);
+}
+
+.toc-deck .slide-frame::before {
+  height: 5px;
+  background: linear-gradient(90deg, var(--toc-blue), var(--toc-teal) 40%, var(--toc-amber) 78%, var(--toc-blue));
+  background-size: 220% 100%;
+  animation: tocRailShimmer 9s linear infinite;
+  z-index: 3;
+}
+
+@keyframes tocRailShimmer {
+  from { background-position: 0% 0; }
+  to   { background-position: 220% 0; }
+}
+@keyframes tocEnter {
+  /* Transform only — never animate opacity to 0.
+     Some environments pause CSS animations; fill-mode:both would otherwise
+     leave the teaching board permanently invisible. */
+  from { transform: translateY(10px); }
+  to   { transform: none; }
+}
+
+@keyframes tocFrameIn {
+  from { transform: translateY(8px) scale(0.994); }
+  to   { transform: none; }
+}
+
+.toc-deck .slide-header,
+.toc-deck .slide-body,
+.toc-deck .slide-footer { position: relative; z-index: 2; }
+
+.toc-deck .slide-kicker { color: var(--toc-blue); letter-spacing: 0.14em; }
+.toc-deck .slide-title {
+  color: var(--toc-ink);
+  letter-spacing: -0.015em;
+}
+.toc-deck .slide-header { padding-bottom: 8px; }
+.toc-deck .slide-subtitle {
+  margin-top: 5px;
+  font-size: clamp(0.86rem, 0.95vw, 1.02rem);
+  line-height: 1.32;
+  color: var(--toc-body);
+}
+.toc-deck .slide-footer { color: var(--toc-muted); }
+
+/* Reclaim body height: subject/module pills were wrapping into a ~250px header
+   and starving the living board (≈50px left). Cap tools like Parallel redesign. */
+.toc-deck .slide-header-copy { flex: 1 1 auto; min-width: 0; }
+.toc-deck .slide-header-tools { flex: 0 1 auto; max-width: 46%; }
+.toc-deck .module-switcher button,
+.toc-deck .module-switcher a,
+.toc-deck .mode-switch button {
+  min-height: 24px;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+}
+
+.toc-deck .slide-counter,
+.toc-deck .mode-switch button,
+.toc-deck .module-switcher button,
+.toc-deck .module-switcher a {
+  background: var(--toc-glass);
+  border: 1px solid var(--toc-hairline);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  transition: transform 0.2s var(--toc-ease), background 0.2s var(--toc-ease), border-color 0.2s var(--toc-ease), color 0.2s var(--toc-ease);
+}
+.toc-deck .mode-switch button:hover,
+.toc-deck .module-switcher button:hover,
+.toc-deck .module-switcher a:hover {
+  transform: translateY(-1px);
+  background: #fff;
+  border-color: rgba(47, 107, 255, 0.32);
+  color: var(--toc-blue);
+}
+.toc-deck .mode-switch button.active,
+.toc-deck .module-switcher button.active,
+.toc-deck .module-switcher .active-link {
+  background: linear-gradient(135deg, var(--toc-blue), #2450c8);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(47, 107, 255, 0.28);
+}
+
+.toc-deck .controls {
+  background: linear-gradient(180deg, rgba(19, 27, 43, 0.96), rgba(13, 19, 32, 0.98));
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.toc-deck .progress-bar {
+  height: 9px;
+  background: rgba(255, 255, 255, 0.12);
+}
+.toc-deck .progress-fill {
+  background: linear-gradient(90deg, var(--toc-blue), var(--toc-teal) 55%, var(--toc-green));
+  background-size: 200% 100%;
+  animation: tocRailShimmer 6s linear infinite;
+  box-shadow: 0 0 14px rgba(47, 107, 255, 0.4);
+  transition: width 0.5s var(--toc-ease);
+}
+
+/* ---------------------------------------------------------------------------
+   Teaching board — story rail + copy + living visual
+   ------------------------------------------------------------------------- */
+.toc-board {
+  display: grid;
+  grid-template-columns: minmax(108px, 0.13fr) minmax(300px, 0.88fr) minmax(420px, 1.12fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: clamp(14px, 1.8vw, 24px);
+  align-items: stretch;
+  height: 100%;
+  min-height: 0;
+  row-gap: clamp(10px, 1.2vw, 14px);
+}
+
+.toc-board.reverse {
+  grid-template-columns: minmax(108px, 0.13fr) minmax(420px, 1.12fr) minmax(300px, 0.88fr);
+}
+.toc-board.reverse .toc-copy { grid-column: 3; }
+.toc-board.reverse .toc-visual { grid-column: 2; grid-row: 1; }
+
+.toc-board.dense .toc-copy { gap: clamp(6px, 0.7vw, 9px); padding: clamp(11px, 1.2vw, 16px); }
+
+.toc-story {
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  min-width: 0;
+  opacity: 1;
+  animation: tocEnter 0.5s var(--toc-ease) both;
+}
+
+.toc-story span {
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  color: #64748b;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid var(--toc-hairline);
+  border-radius: 999px;
+  font-size: clamp(0.64rem, 0.72vw, 0.78rem);
+  font-weight: 850;
+  line-height: 1.05;
+  opacity: 0.72;
+  transition: color 0.3s var(--toc-ease), opacity 0.3s var(--toc-ease);
+}
+
+.toc-story .lit { color: #1d4f8f; opacity: 1; }
+.toc-story .now {
+  color: #fff;
+  background: linear-gradient(135deg, var(--toc-blue), var(--toc-teal));
+  border-color: transparent;
+  box-shadow: 0 14px 28px rgba(47, 107, 255, 0.2);
+  animation: tocNow 2.6s ease-in-out infinite;
+}
+
+@keyframes tocNow {
+  0%, 100% { box-shadow: 0 14px 28px rgba(47, 107, 255, 0.18); }
+  50%      { box-shadow: 0 16px 36px rgba(47, 107, 255, 0.34); }
+}
+
+.toc-copy,
+.toc-visual,
+.toc-takeaway,
+.toc-definition,
+.toc-example,
+.toc-compare article {
+  background: var(--toc-glass-strong);
+  border: 1px solid var(--toc-hairline);
+  border-radius: 8px;
+  box-shadow: var(--toc-shadow-md);
+  backdrop-filter: blur(10px);
+}
+
+.toc-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(10px, 1.1vw, 16px);
+  min-width: 0;
+  padding: clamp(14px, 1.8vw, 24px);
+  opacity: 1;
+  animation: tocEnter 0.55s 0.09s var(--toc-ease) both;
+}
+
+.toc-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  min-height: 0;
+  padding: clamp(12px, 1.5vw, 22px);
+  overflow: hidden;
+  background:
+    radial-gradient(520px 260px at 20% 0%, rgba(47, 107, 255, 0.09), transparent 60%),
+    radial-gradient(520px 260px at 86% 100%, rgba(15, 157, 148, 0.1), transparent 60%),
+    rgba(255, 255, 255, 0.78);
+  opacity: 1;
+  animation: tocEnter 0.6s 0.17s var(--toc-ease) both;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+.toc-visual:hover {
+  box-shadow: var(--toc-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.toc-takeaway {
+  grid-column: 2 / 4;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 11px 15px;
+  color: #0f766e;
+  background: rgba(240, 253, 250, 0.86);
+  opacity: 1;
+  animation: tocEnter 0.5s 0.27s var(--toc-ease) both;
+}
+
+.toc-takeaway strong,
+.toc-definition span,
+.toc-example span,
+.toc-divider-number {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 950;
+}
+
+.toc-takeaway span,
+.toc-example p,
+.toc-definition p,
+.toc-points li {
+  font-size: clamp(0.86rem, 0.98vw, 1.04rem);
+  line-height: 1.28;
+}
+
+.toc-points {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.toc-points li {
+  position: relative;
+  padding-left: 20px;
+  color: #334155;
+  font-weight: 720;
+}
+.toc-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--toc-blue), var(--toc-teal));
+}
+
+.toc-definition { padding: 12px 14px; }
+.toc-definition span { color: var(--toc-blue); }
+.toc-definition strong {
+  display: block;
+  margin: 3px 0 4px;
+  color: var(--toc-ink);
+  font-family: var(--display);
+  font-size: clamp(1rem, 1.2vw, 1.28rem);
+  line-height: 1.12;
+}
+.toc-definition p,
+.toc-example p {
+  margin: 0;
+  color: var(--toc-body);
+}
+.toc-example {
+  padding: 12px 14px;
+  border-left: 4px solid var(--toc-amber);
+}
+.toc-example span { color: var(--toc-amber); }
+
+.toc-hook {
+  margin: 0;
+  color: var(--toc-ink);
+  font-family: var(--display);
+  font-size: clamp(1.05rem, 1.35vw, 1.4rem);
+  font-weight: 850;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+}
+
+.toc-chip-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.toc-chip-flow span {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 11px;
+  color: var(--toc-ink);
+  background: #f7f4ee;
+  border: 1px solid var(--toc-hairline);
+  border-radius: 999px;
+  font-weight: 850;
+  font-size: clamp(0.8rem, 0.9vw, 0.96rem);
+  animation: tocEnter 0.4s calc(var(--i, 0) * 0.06s) var(--toc-ease) both;
+}
+.toc-chip-flow a {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  color: var(--toc-ink);
+  background: #f7f4ee;
+  border: 1px solid var(--toc-hairline);
+  border-radius: 999px;
+  font-weight: 850;
+  font-size: clamp(0.8rem, 0.9vw, 0.96rem);
+  text-decoration: none;
+}
+.toc-chip-flow a:hover {
+  background: #fff;
+  border-color: rgba(47, 107, 255, 0.35);
+  color: var(--toc-blue);
+}
+
+.toc-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.toc-compare article {
+  padding: 14px;
+}
+.toc-compare h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: var(--toc-ink);
+}
+.toc-compare ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--toc-body);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+.toc-compare-foot {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--toc-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------------------
+   Opening + divider cinema
+   ------------------------------------------------------------------------- */
+.toc-opening {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: clamp(8px, 1.2vw, 16px) clamp(12px, 2vw, 24px) clamp(120px, 18vh, 168px);
+}
+
+.toc-opening-scene {
+  display: grid;
+  gap: 10px;
+  align-content: center;
+  justify-items: center;
+  width: 100%;
+  min-height: 0;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.toc-opening-scene .tv-svg {
+  max-height: min(38vh, 300px);
+}
+
+.toc-open-caption {
+  margin: 0;
+  max-width: 42rem;
+  text-align: center;
+  color: #5b6472;
+  font-size: clamp(0.78rem, 1.05vw, 0.95rem);
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.toc-opening-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  padding: clamp(28px, 4vh, 48px) clamp(28px, 4vw, 58px) clamp(14px, 2vw, 22px);
+  background: linear-gradient(
+    to top,
+    var(--toc-cream-1) 18%,
+    rgba(251, 247, 239, 0.96) 58%,
+    rgba(251, 247, 239, 0) 100%
+  );
+  pointer-events: none;
+}
+.toc-opening-title p {
+  margin: 0 0 6px;
+  color: var(--toc-blue);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+.toc-opening-title h1 {
+  margin: 0;
+  color: var(--toc-ink);
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 5.2vw, 5.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+.toc-opening-title strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--toc-body);
+  font-size: clamp(1rem, 1.5vw, 1.45rem);
+  font-weight: 750;
+}
+
+.toc-divider {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(360px, 1.15fr);
+  gap: clamp(18px, 2.5vw, 36px);
+  align-items: center;
+  padding: clamp(18px, 2.5vw, 40px);
+  background:
+    radial-gradient(700px 400px at 10% 12%, rgba(47, 107, 255, 0.12), transparent 60%),
+    radial-gradient(640px 380px at 92% 88%, rgba(15, 157, 148, 0.12), transparent 62%),
+    linear-gradient(135deg, #fffdf8, #f4f2ec);
+  border-radius: 12px;
+}
+.toc-divider-number {
+  color: var(--toc-blue);
+  opacity: 0.55;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 950;
+  line-height: 1;
+}
+.toc-divider h2 {
+  margin: 6px 0 8px;
+  color: var(--toc-ink);
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 4.4vw, 4.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+.toc-divider p {
+  margin: 0;
+  max-width: 28rem;
+  color: var(--toc-body);
+  font-size: clamp(0.95rem, 1.2vw, 1.2rem);
+  line-height: 1.35;
+}
+.toc-divider-visual {
+  display: grid;
+  place-items: center;
+  min-height: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Reduced motion
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .toc-deck.deck::before,
+  .toc-deck.deck::after,
+  .toc-deck .slide-frame,
+  .toc-deck .slide-frame::before,
+  .toc-deck .progress-fill,
+  .toc-story,
+  .toc-story .now,
+  .toc-copy,
+  .toc-visual,
+  .toc-takeaway,
+  .toc-chip-flow span {
+    animation: none !important;
+    transition: none !important;
+  }
+  .toc-story,
+  .toc-copy,
+  .toc-visual,
+  .toc-takeaway,
+  .toc-chip-flow span {
+    opacity: 1;
+    transform: none;
+  }
+  .toc-visual:hover { transform: none; }
+}

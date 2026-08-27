@@ -1,0 +1,321 @@
+/* =============================================================================
+   Shared presentation composition contracts
+   -----------------------------------------------------------------------------
+   Complements subject-specific composition CSS. Keeps teaching layouts on the
+   16:9 canvas at supported presentation sizes — never collapse into a tall
+   single-column webpage layout inside the slide.
+   ========================================================================== */
+
+/* Prefer two-column (or denser) grids through the minimum presentation width.
+   True phone stacking remains available below supported teaching sizes. */
+@media (min-width: 1280px) and (max-width: 1599px) {
+  .slide-body :is(.layout-two, .bda-canvas, .ins-teaching-frame, .title-hero) {
+    gap: var(--density-gap, var(--slide-stage-gap));
+  }
+
+  .slide-body :is(
+    .bda-card-row article,
+    .bda-choice-grid article,
+    .bda-usecase-grid article,
+    .bda-silos article,
+    .bda-limit-flow article,
+    .bda-question-grid article
+  ) {
+    min-height: 0;
+    padding: var(--density-card-pad, var(--slide-card-pad));
+    gap: var(--density-card-gap, var(--slide-card-gap));
+  }
+
+  /* Soften rigid canvas mins that fight short viewports */
+  .slide-body :is(
+    .bda-title-visual,
+    .bda-journey-map article,
+    .bda-campus-map,
+    .bda-mindmap,
+    .bda-analytics-ladder article
+  ) {
+    min-height: 0 !important;
+  }
+
+  .slide-body .bda-journey-map {
+    align-items: stretch;
+  }
+
+  .slide-body .bda-journey-map article {
+    height: 100%;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1365px) {
+  /* Compact presentation: reclaim vertical room before shrinking type */
+  .slide-body :is(.bda-takeaway, .ib-takeaway, .takeaway) {
+    margin-top: clamp(6px, 0.8vh, 12px);
+    padding: clamp(6px, 0.8vh, 10px) clamp(8px, 1vw, 12px);
+  }
+
+  .slide-body :is(.bda-lead, .ins-teaching-copy p, .toc-copy p) {
+    margin-bottom: clamp(6px, 0.8vh, 12px);
+  }
+
+  .slide-body svg.hv-svg,
+  .slide-body svg.tv-svg,
+  .slide-body svg.gv-svg,
+  .slide-body svg.pv-svg,
+  .slide-body .hv-svg,
+  .slide-body .tv-svg {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Guard: within presentation sizes, keep known multi-column boards
+   from collapsing to a single tall column (phone media queries must
+   not win inside the teaching canvas at ≥1280). */
+@media (min-width: 1280px) {
+  .slide-body .bda-canvas:not(.single),
+  .slide-body .bda-title-slide,
+  .slide-body .layout-two,
+  .slide-body .title-hero {
+    /* restore a two-pane intent if a broader phone query set 1fr */
+  }
+
+  .cn-deck .slide-body :is(.cn-title-hero, .cn-osi-lab, .cn-switching-lab) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+/* Height-driven tightening for laptop / projector short stages */
+@media (max-height: 820px) {
+  .slide-body :is(
+    article,
+    .card,
+    .bda-card-row article,
+    .ins-teaching-copy,
+    .toc-copy
+  ) {
+    min-height: 0;
+  }
+
+  .slide-body :is(.bda-definition, .bda-takeaway, .ib-takeaway, .takeaway) {
+    margin-top: 0.6vh;
+    margin-bottom: 0.4vh;
+  }
+}
+
+@media (max-height: 720px) {
+  .slide-footer {
+    max-height: var(--slide-footer-height);
+  }
+
+  .slide-body {
+    --density-gap: 6px;
+  }
+
+  /* Process paths must fit the presentation canvas — no horizontal page scroll */
+  .slide-body .process-path.process-horizontal {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .slide-body .process-path.process-horizontal .process-node-wrap {
+    flex: 1 1 120px;
+    max-width: 160px;
+    min-width: 0;
+  }
+
+  .slide-body .process-path.process-horizontal .process-connector {
+    display: none;
+  }
+
+  .slide-body .process-node {
+    min-height: 0;
+    padding: 8px;
+  }
+
+  .slide-body .layout-visual,
+  .slide-body .layout-two {
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .slide-body .takeaway,
+  .slide-body .ins-teaching-frame > .takeaway {
+    margin-top: 2px;
+    padding: 5px 8px;
+    font-size: clamp(0.72rem, 0.95vw, 0.88rem);
+    line-height: 1.2;
+  }
+}
+
+/* ---- Global shrink contract for subject cards / boards ---------------- */
+@media (max-width: 1599px), (max-height: 900px) {
+  .slide-body :is(
+    article,
+    .card,
+    .visual-panel-body,
+    .dbms-core,
+    .dbms-txn-timeline section,
+    .dbms-nosql article,
+    .dbms-deadlock,
+    .dbms-acid span
+  ) {
+    min-height: 0;
+  }
+
+  .slide-body :is(
+    .layout-two,
+    .layout-compare,
+    .layout-visual-first,
+    .title-hero,
+    .vf-canvas,
+    .process-path,
+    .ib-finance,
+    .ib-visual-panel,
+    .bda-visual,
+    .ins-teaching-visual,
+    .toc-visual
+  ) {
+    min-width: 0;
+    min-height: 0;
+    max-width: 100%;
+  }
+}
+
+/* Remaining tight-fit helpers for known residual offenders */
+@media (max-width: 1599px), (max-height: 900px) {
+  .slide-body .bda-warehouse,
+  .slide-body .bda-flow-row,
+  .slide-body .bda-etl,
+  .slide-body .bda-mapreduce,
+  .slide-body .bda-integration {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .slide-body .bda-warehouse article,
+  .slide-body .bda-flow-row article {
+    min-width: 0;
+    flex: 1 1 0;
+    overflow-wrap: anywhere;
+  }
+
+  .slide-body .bda-warehouse article strong,
+  .slide-body .bda-flow-row article strong {
+    overflow-wrap: anywhere;
+  }
+
+  .slide-body .bda-question-grid article,
+  .slide-body .bda-revision-sheet article {
+    min-height: 0;
+    padding: 8px;
+  }
+
+  /* Horizontal process paths must never inflate slide width */
+  .slide-body .process-path.process-horizontal {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .slide-body .process-path.process-horizontal .process-connector {
+    display: none;
+  }
+
+  .slide-body .visual-panel-body {
+    min-height: 0;
+  }
+}
+
+/* DBMS cinema openers: decorative core may clip; stage must not scroll */
+.dbms-deck .slide-body,
+.dbms-deck .layout-two,
+.dbms-deck .title-hero,
+.dbms-deck .dbms-title-hero,
+.dbms-deck .dbms-cinema {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.dbms-deck .dbms-cinema {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(16px, 3vw, 40px);
+  min-height: 0;
+  height: 100%;
+}
+
+.dbms-deck .dbms-cinema-copy,
+.dbms-deck .dbms-core {
+  min-width: 0;
+  min-height: 0;
+}
+
+.dbms-deck .dbms-core {
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden; /* decorative orbital labels */
+}
+
+@media (max-width: 1365px), (max-height: 820px) {
+  .dbms-deck .dbms-core {
+    min-height: 0;
+  }
+
+  .dbms-deck .dbms-core-cylinder {
+    width: min(200px, 42vw);
+    height: min(210px, 32vh);
+  }
+
+  .dbms-deck .dbms-core-ring b {
+    width: 102px;
+    transform: rotate(var(--angle)) translateX(min(148px, 18vw)) rotate(calc(-1 * var(--angle)));
+    font-size: 0.7rem;
+  }
+
+  .dbms-deck .dbms-cinema h1 {
+    font-size: clamp(2.6rem, 7vw, 5.2rem);
+  }
+
+  .dbms-deck .dbms-cinema .subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.7rem);
+    margin-top: 8px;
+  }
+
+  .dbms-deck .dbms-source-pill {
+    margin-top: 10px;
+    padding: 6px 10px;
+    font-size: 0.72rem;
+  }
+}
+
+/* BDA viva / flash lists: never use in-slide scrolling */
+.big-data-deck .slide-body :is(.m5-accordion, .m5-flash, .m5-questions) {
+  max-height: none;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  align-content: start;
+  gap: clamp(4px, 0.7vh, 8px);
+}
+
+.big-data-deck .slide-body .m5-accordion details {
+  min-height: 0;
+}
+
+.big-data-deck .slide-body .m5-accordion summary {
+  padding: clamp(5px, 0.7vh, 9px) 10px;
+  font-size: clamp(0.72rem, 0.95vw, 0.9rem);
+}
+
+.big-data-deck .slide-body .m5-accordion p {
+  padding: 0 10px 8px;
+  font-size: clamp(0.68rem, 0.88vw, 0.82rem);
+  line-height: 1.25;
+}
+

@@ -1,0 +1,762 @@
+/* Analog Electronics & Linear ICs — bright circuit teaching deck */
+
+.analog-electronics-deck,
+.ae-deck {
+  --ae-ink: #102033;
+  --ae-muted: #5a6b7d;
+  --ae-cream: #fffaf0;
+  --ae-paper: #faf8f3;
+  --ae-navy: #102033;
+  --ae-signal: #2563eb;
+  --ae-current: #dc2626;
+  --ae-bias: #d97706;
+  --ae-feedback: #7c3aed;
+  --ae-stable: #16a34a;
+  --ae-line: rgba(16, 32, 51, 0.12);
+  --ae-shadow: 0 16px 40px rgba(16, 32, 51, 0.1);
+  --ae-module: #2563eb;
+  --accent: #2563eb;
+  --accent-soft: #7c3aed;
+  --card-accent: #2563eb;
+  color: var(--ae-ink);
+}
+
+.analog-electronics-deck[data-ae-module="1"] { --ae-module: #2563eb; --accent: #2563eb; }
+.analog-electronics-deck[data-ae-module="2"] { --ae-module: #dc2626; --accent: #dc2626; }
+.analog-electronics-deck[data-ae-module="3"] { --ae-module: #d97706; --accent: #d97706; }
+.analog-electronics-deck[data-ae-module="4"] { --ae-module: #7c3aed; --accent: #7c3aed; }
+.analog-electronics-deck[data-ae-module="5"] { --ae-module: #16a34a; --accent: #16a34a; }
+
+.module-cover.analog-electronics { --card-accent: #2563eb; }
+
+.analog-electronics-deck .slide-frame {
+  background:
+    radial-gradient(920px 460px at 6% -18%, rgba(37, 99, 235, 0.12), transparent 58%),
+    radial-gradient(720px 380px at 96% 0%, rgba(220, 38, 38, 0.07), transparent 54%),
+    radial-gradient(540px 280px at 70% 110%, rgba(217, 119, 6, 0.08), transparent 50%),
+    linear-gradient(165deg, #fffcf7 0%, #fffaf0 52%, #faf8f3 100%);
+}
+
+.analog-electronics-deck .slide-frame::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image:
+    radial-gradient(circle at 18% 28%, rgba(37, 99, 235, 0.16) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 62% 18%, rgba(220, 38, 38, 0.12) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 78% 72%, rgba(124, 58, 237, 0.12) 0 1px, transparent 1.6px);
+  background-size: 180px 140px, 220px 160px, 160px 120px;
+  mix-blend-mode: multiply;
+}
+
+.analog-electronics-deck[data-ae-module="2"] .slide-frame::after { opacity: 0.22; }
+.analog-electronics-deck[data-ae-module="3"] .slide-frame::after { opacity: 0.2; }
+.analog-electronics-deck[data-ae-module="4"] .slide-frame::after { opacity: 0.2; }
+.analog-electronics-deck[data-ae-module="5"] .slide-frame::after { opacity: 0.18; }
+
+.analog-electronics-deck .slide-header-copy .slide-kicker {
+  color: var(--ae-module);
+}
+
+.analog-electronics-deck .slide-header-copy .slide-title {
+  font-size: clamp(34px, 2.7vw, 48px);
+  line-height: 1.14;
+  padding-bottom: 4px;
+  overflow: visible;
+  color: var(--ae-navy);
+}
+
+/* ── Stage shell — fit 16:9, no vertical scroll ── */
+.ae-stage {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px 16px;
+  box-sizing: border-box;
+}
+
+.ae-story {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.ae-story span {
+  font-size: clamp(10px, 0.85vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ae-muted);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+.ae-story span.lit { opacity: 0.8; color: var(--ae-navy); }
+.ae-story span.now {
+  opacity: 1;
+  color: var(--ae-module);
+  transform: translateX(2px);
+}
+
+.ae-copy {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.ae-visual,
+.ae-visual-b {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+.ae-footer-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  min-width: 0;
+}
+.ae-takeaway,
+.ae-exam {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.35;
+}
+.ae-takeaway strong { color: var(--ae-stable); }
+.ae-exam strong {
+  color: var(--ae-bias);
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+}
+
+/* ── Compositions ── */
+.ae-split-right {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(240px, 0.78fr) minmax(380px, 1.22fr);
+  grid-template-rows: 1fr auto;
+}
+.ae-split-right .ae-story { grid-row: 1 / 3; }
+.ae-split-right .ae-footer-band { grid-column: 2 / 4; }
+
+.ae-split-left {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(380px, 1.22fr) minmax(240px, 0.78fr);
+  grid-template-rows: 1fr auto;
+}
+.ae-split-left .ae-story { grid-row: 1 / 3; }
+.ae-split-left .ae-copy { grid-column: 3; }
+.ae-split-left .ae-visual { grid-column: 2; }
+.ae-split-left .ae-footer-band { grid-column: 2 / 4; }
+
+.ae-full-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.ae-full-stage .ae-story { display: none; }
+.ae-full-stage .ae-copy { max-width: 78%; }
+.ae-full-stage .ae-visual { min-height: 0; }
+
+.ae-hero-open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.ae-hero-open .ae-story,
+.ae-hero-open .ae-copy { display: none; }
+.ae-hero-open .ae-visual { min-height: 0; }
+.ae-hero-open .ae-footer-band { justify-content: center; }
+
+/* Showcase — bespoke hero: full-bleed visual + one centred takeaway line */
+.ae-showcase {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 6px;
+}
+.ae-showcase .ae-story,
+.ae-showcase .ae-copy { display: none; }
+.ae-showcase .ae-visual { grid-row: 1; min-height: 0; }
+.ae-showcase .ae-footer-band {
+  justify-content: center;
+  border-top: 1px solid var(--ae-line);
+  padding-top: 6px;
+}
+.ae-showcase .ae-takeaway { font-size: clamp(14px, 1.05vw, 17px); }
+
+.ae-circuit-first {
+  grid-template-columns: minmax(200px, 0.32fr) minmax(420px, 1.2fr);
+  grid-template-rows: 1fr auto;
+}
+.ae-circuit-first .ae-story { display: none; }
+.ae-circuit-first .ae-visual { grid-column: 2; grid-row: 1; }
+.ae-circuit-first .ae-footer-band { grid-column: 1 / 3; }
+
+.ae-wave-top {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: minmax(160px, 0.42fr) 1fr auto;
+}
+.ae-wave-top .ae-story { grid-row: 1 / 4; }
+.ae-wave-top .ae-visual { grid-column: 2; grid-row: 1; }
+.ae-wave-top .ae-copy { grid-column: 2; grid-row: 2; }
+.ae-wave-top .ae-footer-band { grid-column: 2; }
+
+.ae-formula-board {
+  grid-template-columns: minmax(260px, 0.48fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.ae-formula-board .ae-story { display: none; }
+.ae-formula-board .ae-footer-band { grid-column: 1 / 3; }
+
+.ae-stage.ae-numerical {
+  grid-template-columns: minmax(220px, 0.4fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.ae-stage.ae-numerical .ae-story { display: none; }
+.ae-stage.ae-numerical .ae-footer-band { grid-column: 1 / 3; }
+
+.ae-compare {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.ae-compare .ae-story { display: none; }
+.ae-compare .ae-copy { grid-column: 1 / 3; }
+.ae-compare .ae-visual { grid-column: 1; }
+.ae-compare .ae-visual-b { grid-column: 2; }
+.ae-compare .ae-footer-band { grid-column: 1 / 3; }
+.ae-compare:not(:has(.ae-visual-b)) .ae-visual { grid-column: 1 / 3; }
+
+.ae-timeline {
+  grid-template-columns: minmax(260px, 0.5fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.ae-timeline .ae-story { display: none; }
+.ae-timeline .ae-footer-band { grid-column: 1 / 3; }
+
+.ae-pipeline {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.ae-pipeline .ae-story { grid-row: 1 / 4; }
+.ae-pipeline .ae-copy,
+.ae-pipeline .ae-visual,
+.ae-pipeline .ae-footer-band { grid-column: 2; }
+
+.ae-board {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.ae-board .ae-story { display: none; }
+.ae-board .ae-footer-band { grid-column: 1 / 3; }
+
+.ae-inspect {
+  grid-template-columns: minmax(220px, 0.42fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.ae-inspect .ae-story { display: none; }
+.ae-inspect .ae-visual { grid-column: 2; grid-row: 1; }
+.ae-inspect .ae-footer-band { grid-column: 1 / 3; }
+
+/* Circuit / full-stage: visual dominates 60–80% */
+.analog-electronics-deck .slide-frame[data-composition="full-stage"] .ae-visual,
+.analog-electronics-deck .slide-frame[data-composition="hero-open"] .ae-visual,
+.analog-electronics-deck .slide-frame[data-composition="circuit-first"] .ae-visual {
+  min-height: 0;
+}
+.ae-circuit-first .ae-visual,
+.ae-full-stage .ae-visual,
+.ae-hero-open .ae-visual {
+  flex: 1 1 auto;
+}
+.ae-circuit-first {
+  grid-template-columns: minmax(180px, 0.28fr) minmax(480px, 1.35fr);
+}
+.ae-full-stage .ae-visual {
+  min-height: 62%;
+}
+
+/* ── Typography blocks ── */
+.ae-lead {
+  margin: 0;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.38;
+  font-weight: 650;
+  color: var(--ae-navy);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.ae-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.34;
+}
+.ae-points li { padding-left: 2px; }
+.ae-points li::marker { color: var(--ae-module); font-weight: 800; }
+
+.ae-definition {
+  background: #fff;
+  border: 1px solid var(--ae-line);
+  border-left: 5px solid var(--ae-signal);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--ae-shadow);
+}
+.ae-definition span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--ae-signal);
+}
+.ae-definition strong {
+  display: block;
+  font-size: clamp(20px, 1.6vw, 28px);
+  margin: 4px 0;
+}
+.ae-definition p {
+  margin: 0;
+  font-size: clamp(15px, 1.1vw, 18px);
+}
+.ae-definition em {
+  display: block;
+  margin-top: 8px;
+  color: var(--ae-bias);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.ae-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  align-items: center;
+  font-weight: 800;
+}
+.ae-flow span {
+  background: #fff;
+  border: 1px solid var(--ae-line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+.ae-flow i {
+  color: var(--ae-signal);
+  font-style: normal;
+}
+
+.ae-formula {
+  background: var(--ae-navy);
+  color: #fff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: var(--ae-shadow);
+}
+.ae-formula-eq {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: clamp(18px, 1.6vw, 28px);
+  font-weight: 700;
+}
+.ae-formula ul {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 4px;
+  font-size: 14px;
+  opacity: 0.92;
+}
+.ae-formula b {
+  color: #7dd3fc;
+  margin-right: 6px;
+}
+
+.ae-callout {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--ae-line);
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+}
+.ae-callout span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+}
+.ae-callout p {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.ae-callout-warn { border-left: 4px solid var(--ae-bias); }
+.ae-callout-fault { border-left: 4px solid var(--ae-current); }
+.ae-callout-ok { border-left: 4px solid var(--ae-stable); }
+.ae-callout-idea { border-left: 4px solid var(--ae-signal); }
+.ae-callout-know { border-left: 4px solid var(--ae-feedback); }
+
+/* Numerical board component (stage layout uses .ae-stage.ae-numerical) */
+.ae-numerical:not(.ae-stage) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.ae-numerical:not(.ae-stage) > section {
+  background: #fff;
+  border: 1px solid var(--ae-line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--ae-shadow);
+  min-height: 0;
+  overflow: hidden;
+}
+.ae-numerical:not(.ae-stage) > section > span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.ae-numerical-given span { color: var(--ae-signal); }
+.ae-numerical-find span { color: var(--ae-bias); }
+.ae-numerical-steps {
+  grid-column: 1 / 3;
+}
+.ae-numerical-steps span { color: var(--ae-feedback); }
+.ae-numerical-result {
+  grid-column: 1 / 3;
+  border-left: 5px solid var(--ae-stable) !important;
+  background: #f0fdf4 !important;
+}
+.ae-numerical-result span { color: var(--ae-stable); }
+.ae-numerical:not(.ae-stage) ul,
+.ae-numerical:not(.ae-stage) ol {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 4px;
+  font-size: clamp(14px, 1.05vw, 17px);
+  line-height: 1.35;
+}
+.ae-numerical:not(.ae-stage) p {
+  margin: 0;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 650;
+  color: var(--ae-navy);
+}
+
+.ae-term-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ae-term-chips span {
+  background: #fff;
+  border: 1.5px solid var(--ae-line);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: clamp(13px, 1vw, 16px);
+  font-weight: 750;
+  color: var(--ae-navy);
+  box-shadow: 0 6px 16px rgba(16, 32, 51, 0.05);
+}
+.ae-term-chips span:nth-child(5n + 1) { border-color: rgba(37, 99, 235, 0.35); color: var(--ae-signal); }
+.ae-term-chips span:nth-child(5n + 2) { border-color: rgba(220, 38, 38, 0.3); color: var(--ae-current); }
+.ae-term-chips span:nth-child(5n + 3) { border-color: rgba(217, 119, 6, 0.35); color: var(--ae-bias); }
+.ae-term-chips span:nth-child(5n + 4) { border-color: rgba(124, 58, 237, 0.3); color: var(--ae-feedback); }
+.ae-term-chips span:nth-child(5n + 5) { border-color: rgba(22, 163, 74, 0.35); color: var(--ae-stable); }
+
+.ae-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  height: 100%;
+  align-content: center;
+  overflow: hidden;
+}
+.ae-roadmap article {
+  background: #fff;
+  border: 1px solid var(--ae-line);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: var(--ae-shadow);
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+.ae-roadmap b {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ae-module);
+}
+.ae-roadmap strong {
+  font-size: clamp(15px, 1.15vw, 19px);
+  color: var(--ae-navy);
+  line-height: 1.25;
+}
+.ae-roadmap p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ae-muted);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.ae-formula-sheet {
+  display: grid;
+  gap: 8px;
+  overflow: hidden;
+  height: 100%;
+  align-content: start;
+}
+.ae-formula-sheet article {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.42fr) 1fr;
+  gap: 12px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--ae-line);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 8px 22px rgba(16, 32, 51, 0.06);
+}
+.ae-formula-sheet code {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: clamp(14px, 1.15vw, 18px);
+  font-weight: 750;
+  color: var(--ae-signal);
+}
+.ae-formula-sheet span {
+  font-size: clamp(13px, 1vw, 16px);
+  color: var(--ae-muted);
+  font-weight: 600;
+}
+
+.ae-syllabus-audit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+  overflow: hidden;
+  height: 100%;
+  align-content: start;
+}
+.ae-syllabus-audit article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--ae-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  box-shadow: 0 6px 18px rgba(16, 32, 51, 0.05);
+}
+.ae-syllabus-audit strong {
+  font-size: clamp(13px, 1vw, 16px);
+  color: var(--ae-navy);
+  line-height: 1.25;
+}
+.ae-syllabus-audit em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--ae-stable);
+  background: rgba(22, 163, 74, 0.12);
+  padding: 4px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.ae-practice-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(16px, 1.2vw, 20px);
+  line-height: 1.35;
+  overflow: hidden;
+}
+.ae-practice-list li::marker {
+  color: var(--ae-module);
+  font-weight: 800;
+}
+.ae-practice-list li {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.ae-practice-list em {
+  flex: 0 0 auto;
+  font-style: normal;
+  font-size: 0.85em;
+  font-weight: 700;
+  color: var(--ae-amber, #d97706);
+}
+
+.ae-review-map {
+  display: grid;
+  gap: 12px;
+  height: 100%;
+  align-content: center;
+  overflow: hidden;
+}
+.ae-review-map h3 {
+  margin: 0;
+  font-size: clamp(22px, 1.8vw, 30px);
+  color: var(--ae-navy);
+}
+.ae-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ae-review-topics span {
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: clamp(13px, 1vw, 16px);
+  color: var(--ae-navy);
+}
+
+.ae-resource-hub {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  height: 100%;
+  align-content: center;
+  overflow: hidden;
+}
+.ae-resource-hub a {
+  background: #fff;
+  border: 1px solid var(--ae-line);
+  border-radius: 16px;
+  padding: 18px;
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  gap: 8px;
+  box-shadow: var(--ae-shadow);
+}
+.ae-resource-hub a:hover { border-color: var(--ae-signal); }
+.ae-study-tip {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: rgba(37, 99, 235, 0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 650;
+}
+
+/* Scene helpers */
+.ae-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.72), rgba(255, 250, 240, 0.28) 62%, transparent 78%);
+  overflow: hidden;
+  position: relative;
+}
+.ae-scene svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* ── Scene motion vocabulary — concept-native, no bounce / spin ──
+   Applied to SVG elements inside .ae-scene. Class names are prefixed
+   `aev-` so they never collide with layout classes (e.g. .ae-flow pills). */
+
+@keyframes aev-flow {          /* charge carriers drifting along a wire */
+  to { stroke-dashoffset: -80; }
+}
+@keyframes aev-dot {           /* a discrete current dot travelling a path */
+  0% { opacity: 0; transform: translateX(-6px); }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(10px); }
+}
+@keyframes aev-draw {          /* trace a waveform / load line / curve on */
+  from { stroke-dashoffset: var(--aev-len, 2400); }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes aev-pulse {         /* Q-point / active region / controlled src */
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.62; }
+}
+@keyframes aev-wave {          /* a standing waveform breathing sideways */
+  0%, 100% { transform: translateX(-2.2%); }
+  50% { transform: translateX(2.2%); }
+}
+@keyframes aev-glow {          /* soft emphasis halo on a result */
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(37, 99, 235, 0)); opacity: 0.9; }
+  50% { filter: drop-shadow(0 0 6px rgba(37, 99, 235, 0.5)); opacity: 1; }
+}
+@keyframes aev-charge {        /* capacitor ramping up then holding */
+  0% { transform: scaleY(0.08); opacity: 0.5; }
+  70% { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 1; }
+}
+@keyframes aev-osc {           /* oscillation amplitude building */
+  0% { transform: scaleY(0.18); opacity: 0.4; }
+  60% { transform: scaleY(1.06); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 1; }
+}
+@keyframes aev-sweep {         /* a marker sweeping across a graph */
+  0% { transform: translateX(0); opacity: 0.35; }
+  50% { opacity: 1; }
+  100% { transform: translateX(var(--aev-sweep, 560px)); opacity: 0.35; }
+}
+@keyframes aev-shift {         /* phase shift / Q-point travel */
+  0%, 100% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+}
+
+.aev-flow {
+  stroke-dasharray: 9 11;
+  animation: aev-flow 1.15s linear infinite;
+}
+.aev-dot { animation: aev-dot 1.6s ease-in-out infinite; }
+.aev-draw {
+  stroke-dasharray: var(--aev-len, 2400);
+  animation: aev-draw 1.7s ease-out both;
+}
+.aev-pulse { animation: aev-pulse 1.9s ease-in-out infinite; }
+.aev-wave { animation: aev-wave 3s ease-in-out infinite; transform-origin: center; }
+.aev-glow { animation: aev-glow 2.2s ease-in-out infinite; }
+.aev-charge { animation: aev-charge 2.1s ease-out infinite alternate; transform-origin: center bottom; }
+.aev-osc { animation: aev-osc 1.8s ease-out both; transform-origin: center; }
+.aev-sweep { animation: aev-sweep 2.6s ease-in-out infinite; }
+.aev-shift { animation: aev-shift 2.4s ease-in-out infinite; transform-origin: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .aev-flow, .aev-dot, .aev-draw, .aev-pulse, .aev-wave,
+  .aev-glow, .aev-charge, .aev-osc, .aev-sweep, .aev-shift {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}

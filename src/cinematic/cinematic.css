@@ -1,0 +1,211 @@
+/* =============================================================================
+   CINEMATIC ENGINE — Director’s Final Cut (platform-shared)
+   Soft continuity · film ribbon · visual memory echoes · quiet rests
+   Subject decks own identity; this file only provides film grammar.
+   ========================================================================== */
+
+.film-continuity {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.film-continuity.phase-carry {
+  opacity: 1;
+}
+
+.film-continuity.phase-settle {
+  opacity: 0.55;
+  transition: opacity 0.45s ease;
+}
+
+.film-continuity.phase-idle {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.film-ribbon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(184, 146, 58, 0.55), rgba(26, 79, 139, 0.45), transparent);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.film-continuity.phase-carry .film-ribbon {
+  animation: filmRibbonCarry 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.film-symbol-wake {
+  position: absolute;
+  right: 8%;
+  bottom: 14%;
+  width: min(28vw, 220px);
+  height: min(28vw, 220px);
+  opacity: 0;
+}
+
+.film-continuity.phase-carry .film-symbol-wake,
+.film-continuity.phase-settle .film-symbol-wake {
+  opacity: 0.35;
+  animation: filmWake 0.85s ease both;
+}
+
+.film-glyph,
+.film-callback-echo,
+.film-identity {
+  position: absolute;
+  inset: 18%;
+  border-radius: 50%;
+  border: 1px solid rgba(26, 79, 139, 0.18);
+  background:
+    radial-gradient(circle at 40% 40%, rgba(184, 146, 58, 0.16), transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(26, 79, 139, 0.12), transparent 50%);
+}
+
+.film-glyph.g-trade-route,
+.film-glyph.g-global-ops,
+.film-glyph.g-expansion-path {
+  border-radius: 42%;
+}
+
+.film-glyph.g-multinational,
+.film-glyph.g-global-enterprise,
+.film-glyph.g-local-vision {
+  border-radius: 18%;
+}
+
+.film-callback-echo {
+  inset: 28%;
+  border-style: dashed;
+  opacity: 0.7;
+  animation: filmCallbackPulse 1.1s ease both;
+}
+
+.film-identity.id-globalization {
+  box-shadow: 0 0 0 1px rgba(26, 79, 139, 0.12), inset 0 0 24px rgba(184, 146, 58, 0.12);
+}
+
+.film-identity.id-porter {
+  clip-path: polygon(50% 8%, 92% 50%, 50% 92%, 8% 50%);
+  border-radius: 0;
+}
+
+.film-identity.id-wto,
+.film-identity.id-imf,
+.film-identity.id-unctad {
+  border-radius: 8%;
+  border-color: rgba(58, 77, 107, 0.35);
+}
+
+.film-identity.id-mnc {
+  border-radius: 20%;
+}
+
+.film-identity.id-supply {
+  border-radius: 40% 60%;
+}
+
+.film-arc-thread {
+  position: absolute;
+  left: 6%;
+  bottom: 8%;
+  width: 24%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  color: rgba(26, 79, 139, 0.25);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.film-continuity.phase-carry .film-arc-thread {
+  animation: filmRibbonCarry 0.8s ease both 0.1s;
+}
+
+.film-continuity[data-emotion="curiosity"] .film-arc-thread { color: rgba(26, 79, 139, 0.35); }
+.film-continuity[data-emotion="observation"] .film-arc-thread { color: rgba(47, 107, 87, 0.35); }
+.film-continuity[data-emotion="insight"] .film-arc-thread { color: rgba(138, 107, 47, 0.4); }
+.film-continuity[data-emotion="authority"] .film-arc-thread { color: rgba(58, 77, 107, 0.4); }
+.film-continuity[data-emotion="ambition"] .film-arc-thread { color: rgba(31, 61, 110, 0.4); }
+.film-continuity[data-emotion="mastery"] .film-arc-thread { color: rgba(36, 90, 114, 0.45); }
+
+.film-continuity.is-quiet .film-symbol-wake {
+  opacity: 0.12;
+}
+
+.film-continuity.is-finale .film-ribbon {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #b8923a, #1a4f8b, #2f6b57, transparent);
+}
+
+.film-continuity.is-finale .film-symbol-wake {
+  opacity: 0.55;
+  inset: auto 10% 12% auto;
+  width: min(34vw, 280px);
+  height: min(34vw, 280px);
+}
+
+/* Soft slide enter for cinematic decks — resolve instead of pop */
+.deck.cinematic-film .slide-frame {
+  animation: filmSlideResolve 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.deck.cinematic-film .slide-frame[data-quiet="true"] {
+  animation-duration: 0.7s;
+}
+
+.deck.cinematic-film .slide-frame[data-finale="true"] {
+  animation-name: filmFinaleEnter;
+  animation-duration: 0.9s;
+}
+
+@keyframes filmRibbonCarry {
+  from { transform: scaleX(0); opacity: 0; }
+  40% { opacity: 1; }
+  to { transform: scaleX(1); opacity: 0.45; }
+}
+
+@keyframes filmWake {
+  from { opacity: 0; transform: scale(0.92) translateY(8px); }
+  to { opacity: 0.35; transform: none; }
+}
+
+@keyframes filmCallbackPulse {
+  from { opacity: 0; transform: scale(1.12); }
+  to { opacity: 0.7; transform: scale(1); }
+}
+
+@keyframes filmSlideResolve {
+  from { opacity: 0.72; filter: blur(2px); transform: translateY(6px) scale(0.995); }
+  to { opacity: 1; filter: none; transform: none; }
+}
+
+@keyframes filmFinaleEnter {
+  from { opacity: 0; filter: blur(6px); transform: scale(1.02); }
+  to { opacity: 1; filter: none; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .film-continuity,
+  .film-continuity .film-ribbon,
+  .film-continuity .film-symbol-wake,
+  .film-continuity .film-arc-thread,
+  .film-continuity .film-callback-echo,
+  .deck.cinematic-film .slide-frame {
+    animation: none !important;
+    transition: none !important;
+    opacity: 0 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .deck.cinematic-film .slide-frame {
+    opacity: 1 !important;
+  }
+}

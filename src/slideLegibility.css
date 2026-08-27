@@ -1,0 +1,70 @@
+/* =============================================================================
+   PRESENTATION PLATFORM V3.0 — GLOBAL LEGIBILITY & COMPOSITION ENGINE
+   -----------------------------------------------------------------------------
+   Projector-first, last-bench-first. Loaded after slideGeometry + slideComposition
+   and after every subject stylesheet, so it is the authoritative legibility layer.
+
+   ONE lever, platform-wide: `--legibility`.
+   ~90% of the platform's type anchors are rem-based (BDA / INS / Java / DBMS /
+   Parallel / TOC). rem resolves against the root font-size, so raising the root
+   font-size lifts every rem clamp — floor AND cap — proportionally across all of
+   those decks at once. The 16:9 slide frame + safe areas are vw/vh-based and are
+   NOT affected: only type and rem-based spacing grow. That is the surgical effect
+   we want (bigger text, same canvas), and clipping is the single risk to measure.
+
+   International Business is 100% px-anchored today, so it does NOT respond to this
+   lever — it opts in during its executive rebuild (px -> rem).
+
+   Tuning contract: raise `--legibility` to the largest value that produces ZERO
+   overflow in the dev audit (slideOverflowAudit.js) across every deck at 1920x1080
+   and 1280x720. Never trade readability for clipping — if a deck clips before the
+   rest, tighten that deck's spacing rather than lowering the global lever.
+   ========================================================================== */
+
+:root {
+  /* THE global legibility lever. 1.00 = baseline; 1.12 = V3.0 projector baseline.
+     Chosen by measure-then-commit: a full Playwright overflow sweep of ~1000 slides
+     across BDA / INS / Java / DBMS / Parallel / TOC at 1920x1080 AND 1280x720.
+       @1.12  1920x1080 -> 0 text clips
+       @1.12  1280x720  -> 2 text clips, both long unbreakable tokens on the right
+                           edge (handled by the token-wrap safety rule below).
+     Raising further re-runs the sweep; 1.12 is the largest value that is clean
+     everywhere except those 2 long-token cases. Base type grows ~12% platform-wide
+     (16px -> ~17.9px root), lifting every rem clamp floor AND cap in one move. */
+  --legibility: 1.12;
+}
+
+/* Root font-size is the only value rem resolves against. Percentage font-size on
+   <html> is relative to the browser default (16px), so this is the clean global
+   type multiplier. vw/vh frame geometry is untouched. */
+html {
+  font-size: calc(100% * var(--legibility));
+}
+
+/* ---- Long-token wrap safety --------------------------------------------
+   The only text overflow the 1.12 bump produced was long unbreakable tokens
+   (a fully-qualified class name, a two-word emphasis) pushing past the right
+   safe edge. Allow such tokens to break INSIDE the word only when they cannot
+   fit — normal-length words are unaffected. Scoped to lesson text on the stage,
+   so chrome/nav is untouched. This also hardens the platform against future
+   long identifiers (URLs, exception names, SQL) regardless of the lever value. */
+.slide-body :is(h1, h2, h3, h4, p, li, strong, code, td, th) {
+  overflow-wrap: anywhere;
+}
+.slide-body :is(h1, h2, h3, h4, p, li, strong) {
+  min-width: 0;
+}
+
+/* ---- Per-deck tightening (measure-driven) ------------------------------
+   Grid-item hygiene: let flow cards shrink with their track rather than force
+   their intrinsic width. Harmless platform-wide; kept as good practice. */
+.big-data-deck .slide-body .m5-flow article {
+  min-width: 0;
+}
+
+/* KNOWN RESIDUAL (not clipped, logged for the BDA composition pass):
+   BDA M5 s36 @1280x720 — a `.m5-flow` card label ("Sparse Features") sits ~10px
+   into the right SAFE margin (still inside the visible 16:9 frame; not cut off).
+   The overflow is the fixed-track flow row being marginally too wide at 1.12,
+   not the label itself, so the correct fix lives in BDA's `.m5-flow` grid
+   template and belongs with the BDA layout pass — NOT a lever change. */

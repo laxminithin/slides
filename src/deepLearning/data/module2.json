@@ -1,0 +1,632 @@
+{
+  "id": "module2",
+  "title": "Multilayer Perceptrons & Backpropagation",
+  "story": [
+    "MLP",
+    "Learning Modes",
+    "Forward",
+    "Backprop",
+    "XOR",
+    "Heuristics",
+    "Differentiation",
+    "Revision"
+  ],
+  "source": "VTU_BCA701_Module_2_Multilayer_Perceptrons.pptx",
+  "syllabus": [
+    {
+      "topic": "Multilayer Perceptrons — Introduction",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Batch Learning",
+      "status": "COVERED"
+    },
+    {
+      "topic": "On-Line Learning",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Back-Propagation Algorithm",
+      "status": "COVERED"
+    },
+    {
+      "topic": "XOR Problem",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Heuristics for Improving Backpropagation",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Backpropagation and Differentiation",
+      "status": "COVERED"
+    }
+  ],
+  "slides": [
+    {
+      "n": 1,
+      "id": "module2-s01",
+      "title": "Module 2: Multilayer Perceptrons",
+      "subtitle": "",
+      "layout": "opener",
+      "visual": "MasterStory",
+      "definition": null,
+      "points": [
+        "From single perceptrons to trainable hidden layers: batch learning, online learning, backpropagation, XOR, optimization heuristics, and differentiation."
+      ],
+      "extraPoints": [],
+      "takeaway": "From single perceptrons to trainable hidden layers: batch learning, online learning, backpropagation, XOR, optimization heuristics, and differentiation.",
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 2,
+      "id": "module2-s02",
+      "title": "Module 2 has six syllabus checkpoints",
+      "subtitle": "",
+      "layout": "journey",
+      "visual": "JourneyPath",
+      "definition": null,
+      "points": [],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 3,
+      "id": "module2-s03",
+      "title": "Multilayer perceptrons add hidden layers between input and output",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "MlpScene",
+      "definition": null,
+      "points": [
+        "What changes from Module 1",
+        "A single perceptron can only draw a linear boundary. An MLP adds hidden neurons so the network can build intermediate representations before making an output decision.",
+        "Why it matters",
+        "Hidden layers allow nonlinear input-output mappings, making the MLP a foundation for later deep neural networks."
+      ],
+      "extraPoints": [],
+      "takeaway": "A single perceptron can only draw a linear boundary. An MLP adds hidden neurons so the network can build intermediate representations before making an output decision.",
+      "say": "",
+      "formula": "What changes from Module 1"
+    },
+    {
+      "n": 4,
+      "id": "module2-s04",
+      "title": "An MLP is a directed, layered computation graph",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "MlpScene",
+      "definition": null,
+      "points": [
+        "Input layer",
+        "Hidden layer",
+        "Output layer",
+        "Signals flow forward; learning sends error information backward."
+      ],
+      "extraPoints": [],
+      "takeaway": "Signals flow forward; learning sends error information backward.",
+      "say": "",
+      "formula": "Input layer"
+    },
+    {
+      "n": 5,
+      "id": "module2-s05",
+      "title": "Each layer applies the same neuron logic to new learned features",
+      "subtitle": "",
+      "layout": "formula",
+      "visual": "MlpScene",
+      "definition": null,
+      "points": [
+        "a(l) = φ( W(l) a(l-1) + b(l) )",
+        "a(l-1) is the previous layer's activation vector.",
+        "W(l) and b(l) are the trainable weights and biases for layer l.",
+        "φ is applied to create the next layer's representation."
+      ],
+      "extraPoints": [],
+      "takeaway": "a(l-1) is the previous layer's activation vector.",
+      "say": "",
+      "formula": "a(l) = φ( W(l) a(l-1) + b(l) )"
+    },
+    {
+      "n": 6,
+      "id": "module2-s06",
+      "title": "Batch and online learning differ in when weights are updated",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BatchOnlineViz",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 7,
+      "id": "module2-s07",
+      "title": "Batch learning views training as reducing total error",
+      "subtitle": "",
+      "layout": "formula",
+      "visual": "BatchOnlineViz",
+      "definition": null,
+      "points": [
+        "Etotal = Σp Ep",
+        "Each pattern p contributes an error term.",
+        "Weights are adjusted after the aggregate error or gradient is computed.",
+        "Batch updates are less noisy because they use the whole training set."
+      ],
+      "extraPoints": [],
+      "takeaway": "Each pattern p contributes an error term.",
+      "say": "",
+      "formula": "Etotal = Σp Ep"
+    },
+    {
+      "n": 8,
+      "id": "module2-s08",
+      "title": "Online learning updates immediately from each example",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BatchOnlineViz",
+      "definition": null,
+      "points": [
+        "w ← w + Δwp",
+        "One pattern is presented, prediction is made, error is computed, and weights are changed.",
+        "The next example sees the newly updated network.",
+        "The update path can fluctuate, but learning can respond quickly."
+      ],
+      "extraPoints": [],
+      "takeaway": "One pattern is presented, prediction is made, error is computed, and weights are changed.",
+      "say": "",
+      "formula": "w ← w + Δwp"
+    },
+    {
+      "n": 9,
+      "id": "module2-s09",
+      "title": "Backpropagation is gradient descent made efficient for layered networks",
+      "subtitle": "",
+      "layout": "hero",
+      "visual": "ForwardPass",
+      "definition": null,
+      "points": [
+        "Forward pass",
+        "Compute activations from input to output.",
+        "Loss",
+        "Measure the difference between output and target.",
+        "Backward pass",
+        "Propagate error signals from output to hidden layers."
+      ],
+      "extraPoints": [
+        "Update",
+        "Adjust weights in the direction that reduces error."
+      ],
+      "takeaway": "Compute activations from input to output.",
+      "say": "",
+      "formula": "Forward pass"
+    },
+    {
+      "n": 10,
+      "id": "module2-s10",
+      "title": "Backpropagation starts with a forward pass",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "ForwardPass",
+      "definition": null,
+      "points": [
+        "Present an input vector to the input layer.",
+        "Compute weighted sums and activations layer by layer.",
+        "Produce the network output.",
+        "Store intermediate activations because the backward pass needs them."
+      ],
+      "extraPoints": [],
+      "takeaway": "Present an input vector to the input layer.",
+      "say": "",
+      "formula": "Present an input vector to the input layer."
+    },
+    {
+      "n": 11,
+      "id": "module2-s11",
+      "title": "The output error tells the network what must change",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BackpropFlow",
+      "definition": null,
+      "points": [
+        "e = d - y",
+        "d is the desired response for the training example.",
+        "y is the network output.",
+        "The error signal is converted into gradients for the output-layer weights."
+      ],
+      "extraPoints": [],
+      "takeaway": "d is the desired response for the training example.",
+      "say": "",
+      "formula": "e = d - y"
+    },
+    {
+      "n": 12,
+      "id": "module2-s12",
+      "title": "The backward pass assigns responsibility to earlier layers",
+      "subtitle": "",
+      "layout": "formula",
+      "visual": "BackpropFlow",
+      "definition": null,
+      "points": [
+        "δj = φ'(vj) Σk δk wkj",
+        "δ is the local gradient or error responsibility for a neuron.",
+        "Output-layer errors are pushed backward through connection weights.",
+        "The derivative of the activation controls how strongly a neuron can change."
+      ],
+      "extraPoints": [],
+      "takeaway": "δ is the local gradient or error responsibility for a neuron.",
+      "say": "",
+      "formula": "δj = φ'(vj) Σk δk wkj"
+    },
+    {
+      "n": 13,
+      "id": "module2-s13",
+      "title": "Weight updates use local information at each connection",
+      "subtitle": "",
+      "layout": "formula",
+      "visual": "BackpropFlow",
+      "definition": null,
+      "points": [
+        "Δwji = η δj yi",
+        "η is the learning-rate parameter.",
+        "δj is the local gradient at the destination neuron.",
+        "yi is the activation arriving from the source neuron."
+      ],
+      "extraPoints": [],
+      "takeaway": "δj is the local gradient at the destination neuron.",
+      "say": "",
+      "formula": "Δwji = η δj yi"
+    },
+    {
+      "n": 14,
+      "id": "module2-s14",
+      "title": "Backpropagation can be read as a four-step algorithm",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BackpropFlow",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 15,
+      "id": "module2-s15",
+      "title": "The XOR problem exposes why hidden layers are needed",
+      "subtitle": "",
+      "layout": "hero",
+      "visual": "XorBoundaryViz",
+      "definition": null,
+      "points": [
+        "No single straight line separates the 1s from the 0s.",
+        "Two hidden neurons can create two intermediate linear regions.",
+        "The output neuron combines those hidden regions to solve XOR."
+      ],
+      "extraPoints": [],
+      "takeaway": "No single straight line separates the 1s from the 0s.",
+      "say": "",
+      "formula": "No single straight line separates the 1s from the 0s."
+    },
+    {
+      "n": 16,
+      "id": "module2-s16",
+      "title": "A hidden layer can turn XOR into a separable representation",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "XorBoundaryViz",
+      "definition": null,
+      "points": [
+        "Two hidden boundaries",
+        "One hidden neuron can detect one half-space.",
+        "Another hidden neuron can detect a second half-space.",
+        "The output layer combines hidden activations into the XOR answer."
+      ],
+      "extraPoints": [],
+      "takeaway": "One hidden neuron can detect one half-space.",
+      "say": "",
+      "formula": "Two hidden boundaries"
+    },
+    {
+      "n": 17,
+      "id": "module2-s17",
+      "title": "Learning rate is the first backpropagation heuristic to tune",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BackpropFlow",
+      "definition": null,
+      "points": [
+        "Too small",
+        "Learning is stable but slow. The error decreases gradually and may require many epochs.",
+        "Too large",
+        "Updates can overshoot useful directions. Training may oscillate or diverge."
+      ],
+      "extraPoints": [],
+      "takeaway": "Learning is stable but slow. The error decreases gradually and may require many epochs.",
+      "say": "",
+      "formula": "Too small"
+    },
+    {
+      "n": 18,
+      "id": "module2-s18",
+      "title": "Momentum smooths noisy updates and helps cross shallow regions",
+      "subtitle": "",
+      "layout": "formula",
+      "visual": "HeuristicsViz",
+      "definition": null,
+      "points": [
+        "Δw(t) = η δ y + α Δw(t-1)",
+        "η δ y is the current gradient-based correction.",
+        "α Δw(t-1) carries part of the previous correction forward.",
+        "Momentum can reduce zig-zag movement across narrow error surfaces."
+      ],
+      "extraPoints": [],
+      "takeaway": "η δ y is the current gradient-based correction.",
+      "say": "",
+      "formula": "Δw(t) = η δ y + α Δw(t-1)"
+    },
+    {
+      "n": 19,
+      "id": "module2-s19",
+      "title": "Initialization matters because symmetry blocks learning",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "HeuristicsViz",
+      "definition": null,
+      "points": [
+        "If hidden neurons start with identical weights, they receive identical gradients.",
+        "Small random weights break symmetry between neurons.",
+        "Weights should not start so large that activations saturate.",
+        "Good initialization keeps signals and gradients in useful ranges."
+      ],
+      "extraPoints": [],
+      "takeaway": "If hidden neurons start with identical weights, they receive identical gradients.",
+      "say": "",
+      "formula": "Small random weights break symmetry between neurons."
+    },
+    {
+      "n": 20,
+      "id": "module2-s20",
+      "title": "Activation saturation slows backpropagation",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BackpropFlow",
+      "definition": null,
+      "points": [
+        "The issue",
+        "For sigmoid-like functions, very large positive or negative inputs create nearly flat output regions.",
+        "The effect",
+        "When φ'(v) is close to zero, local gradients become small and weight updates lose strength."
+      ],
+      "extraPoints": [],
+      "takeaway": "For sigmoid-like functions, very large positive or negative inputs create nearly flat output regions.",
+      "say": "",
+      "formula": "The issue"
+    },
+    {
+      "n": 21,
+      "id": "module2-s21",
+      "title": "Data scaling helps gradients behave consistently",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "HeuristicsViz",
+      "definition": null,
+      "points": [
+        "Normalize or standardize input features before training.",
+        "Avoid one feature numerically dominating the weighted sum.",
+        "Scaled data often permits more reliable learning-rate choices.",
+        "Output encoding should match the activation and loss function."
+      ],
+      "extraPoints": [],
+      "takeaway": "Normalize or standardize input features before training.",
+      "say": "",
+      "formula": "Normalize or standardize input features before training."
+    },
+    {
+      "n": 22,
+      "id": "module2-s22",
+      "title": "Stopping and validation prevent training from chasing noise",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BackpropFlow",
+      "definition": null,
+      "points": [
+        "Training error",
+        "Backpropagation can continue reducing error on the training set as weights adapt.",
+        "Validation signal",
+        "A separate validation set helps decide when additional training no longer improves generalization."
+      ],
+      "extraPoints": [],
+      "takeaway": "Backpropagation can continue reducing error on the training set as weights adapt.",
+      "say": "",
+      "formula": "Training error"
+    },
+    {
+      "n": 23,
+      "id": "module2-s23",
+      "title": "Backpropagation is repeated application of the chain rule",
+      "subtitle": "",
+      "layout": "hero",
+      "visual": "BackpropFlow",
+      "definition": null,
+      "points": [
+        "∂E/∂w = (∂E/∂y)(∂y/∂v)(∂v/∂w)",
+        "The error depends on the output.",
+        "The output depends on the neuron's local field.",
+        "The local field depends on the weight being updated."
+      ],
+      "extraPoints": [],
+      "takeaway": "The output depends on the neuron's local field.",
+      "say": "",
+      "formula": "∂E/∂w = (∂E/∂y)(∂y/∂v)(∂v/∂w)"
+    },
+    {
+      "n": 24,
+      "id": "module2-s24",
+      "title": "Differentiation explains why smooth activations help",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "MlpScene",
+      "definition": null,
+      "points": [
+        "Perceptron threshold",
+        "A hard threshold is not useful for gradient-based learning because it is not smoothly differentiable.",
+        "MLP activations",
+        "Differentiable nonlinear activations allow gradients to flow backward through layers."
+      ],
+      "extraPoints": [],
+      "takeaway": "A hard threshold is not useful for gradient-based learning because it is not smoothly differentiable.",
+      "say": "",
+      "formula": "Perceptron threshold"
+    },
+    {
+      "n": 25,
+      "id": "module2-s25",
+      "title": "The same chain-rule logic scales from one neuron to many layers",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "BatchOnlineViz",
+      "definition": null,
+      "points": [
+        "For an output neuron, compute the derivative of error with respect to its weights directly.",
+        "For a hidden neuron, multiply downstream error by the derivative of its activation.",
+        "Repeat this layer by layer until every weight has a gradient.",
+        "Update all trainable parameters using the chosen learning mode."
+      ],
+      "extraPoints": [],
+      "takeaway": "For an output neuron, compute the derivative of error with respect to its weights directly.",
+      "say": "",
+      "formula": "Repeat this layer by layer until every weight has a gradient."
+    },
+    {
+      "n": 26,
+      "id": "module2-s26",
+      "title": "A good exam answer should connect algorithm, geometry, and calculus",
+      "subtitle": "",
+      "layout": "exam",
+      "visual": "ExamStrategy",
+      "definition": null,
+      "points": [
+        "MLP need",
+        "Hidden layers address nonlinear tasks such as XOR.",
+        "Learning mode",
+        "Batch and online learning differ by update timing.",
+        "Backprop steps",
+        "Forward pass, error, backward pass, update."
+      ],
+      "extraPoints": [
+        "Differentiation",
+        "Local gradients come from the chain rule."
+      ],
+      "takeaway": "Hidden layers address nonlinear tasks such as XOR.",
+      "say": "",
+      "formula": "MLP need"
+    },
+    {
+      "n": 27,
+      "id": "module2-s27",
+      "title": "Module 2 vocabulary students must own",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 28,
+      "id": "module2-s28",
+      "title": "Mini activity: solve XOR with hidden features",
+      "subtitle": "",
+      "layout": "activity",
+      "visual": "XorBoundaryViz",
+      "definition": null,
+      "points": [
+        "Ask students to plot the four XOR points.",
+        "Confirm that one straight line cannot separate the classes.",
+        "Draw two hidden boundaries that isolate the positive cases.",
+        "Explain how the output neuron combines hidden decisions."
+      ],
+      "extraPoints": [],
+      "takeaway": "Ask students to plot the four XOR points.",
+      "say": "",
+      "formula": "Ask students to plot the four XOR points."
+    },
+    {
+      "n": 29,
+      "id": "module2-s29",
+      "title": "Module 2 closes with a complete training chain",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Input",
+        "Hidden\nfeatures",
+        "Output",
+        "Loss",
+        "Gradients",
+        "Updated\nweights"
+      ],
+      "extraPoints": [
+        "Forward computation creates predictions; backward differentiation makes learning possible."
+      ],
+      "takeaway": "Forward computation creates predictions; backward differentiation makes learning possible.",
+      "say": "",
+      "formula": "Input"
+    },
+    {
+      "n": 30,
+      "id": "module2-s30",
+      "title": "Coverage checklist: every Module 2 phrase is included",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 31,
+      "id": "module2-s31",
+      "title": "Prescribed textbook reference for Module 2",
+      "subtitle": "",
+      "layout": "exam",
+      "visual": "ExamStrategy",
+      "definition": null,
+      "points": [
+        "Primary reference: Simon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education.",
+        "Use Haykin for MLP architecture, batch and online learning, backpropagation, XOR, heuristics, and differentiation.",
+        "Use the VTU syllabus as the boundary for what belongs in Module 2."
+      ],
+      "extraPoints": [],
+      "takeaway": "Primary reference: Simon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education.",
+      "say": "",
+      "formula": "Use the VTU syllabus as the boundary for what belongs in Module 2."
+    }
+  ]
+}

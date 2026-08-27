@@ -1,0 +1,184 @@
+/* ==========================================================================
+   gpuViz.css — GPU Computing living visuals (Module 2, the flagship).
+   Paired with src/components/GpuViz.jsx; reuses ParallelViz primitives/CSS.
+   Scoped under .parallel-deck. Classes `gv-*`, keyframes `gvk-*`.
+   Light + elevated. GPU cores render GREEN to contrast CPU (blue).
+   Static first frame complete; only cores/packets/schedulers animate.
+   ========================================================================== */
+
+.parallel-deck .gv-svg {
+  width: 100%;
+  height: auto;
+  max-height: min(52vh, 384px);
+  display: block;
+  overflow: visible;
+  font-family: var(--display, "Plus Jakarta Sans", sans-serif);
+}
+.parallel-deck .pc-divider-visual .gv-svg,
+.parallel-deck .pc-comp-hero .gv-svg,
+.parallel-deck .gv-svg.gv-hero { max-height: min(62vh, 460px); }
+
+.gv-t-label { fill: #172033; font-weight: 850; }
+.gv-t-sub { fill: #5b6472; font-weight: 750; }
+.gv-t-cap { fill: #7a8495; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
+.gv-t-green { fill: #16a34a; font-weight: 850; }
+.gv-t-blue { fill: #2563eb; font-weight: 850; }
+
+/* ---- CPU cores: few, big, blue (latency) ---- */
+.gv-cpu-core { fill: #dbe6ff; stroke: #2563eb; stroke-width: 1.6; }
+.gv-cpu-core.beat { animation: gvk-beat 2.6s ease-in-out infinite; }
+@keyframes gvk-beat { 0%, 100% { fill: #dbe6ff; } 50% { fill: #9ec0ff; } }
+
+/* ---- GPU cores: many, tiny, green (throughput) ---- */
+.gv-gpu-core { fill: #c7f2d6; stroke: #16a34a; stroke-width: .7; }
+.gv-gpu-core.on { animation: gvk-cuda 2.6s ease-in-out infinite; }
+@keyframes gvk-cuda { 0%, 100% { fill: #c7f2d6; } 45% { fill: #22c55e; } }
+
+/* ---- package faces (exploded GPU) ---- */
+.gv-lid { fill: #d7e0f0; stroke: #aab7cd; stroke-width: 1.5; }
+.gv-pkg-sub { fill: #cdd7e8; stroke: #aab7cd; stroke-width: 1.5; }
+.gv-die { fill: #eef3fc; stroke: #b9c6de; stroke-width: 1.5; }
+.gv-pin { fill: #c0cadb; }
+
+/* ---- Streaming Multiprocessor ---- */
+.gv-sm-body { fill: #f3f8ff; stroke: #94b3f2; stroke-width: 1.4; }
+.gv-sm-body.hot { stroke: #16a34a; }
+.gv-cuda { fill: #c7f2d6; stroke: #16a34a; stroke-width: .5; }
+.gv-cuda.on { animation: gvk-cuda 2.4s ease-in-out infinite; }
+.gv-warp-sched { fill: #6d5dd3; }
+.gv-shared { fill: #fcd9a8; stroke: #d97706; stroke-width: .7; }
+.gv-regs { fill: #bcd0f5; }
+
+/* ---- thread hierarchy (grid/block/warp/thread) ---- */
+.gv-hbox { fill: #f7f9fd; stroke: #c3cde0; stroke-width: 1.4; }
+.gv-block-cell { fill: #dbe6ff; stroke: #2563eb; stroke-width: .8; }
+.gv-block-cell.sel { fill: #2563eb; }
+.gv-warp-row { fill: #e6ecfb; stroke: #94b3f2; stroke-width: .8; }
+.gv-warp-row.sel { fill: #c7d6f7; stroke: #2563eb; stroke-width: 1.4; }
+.gv-thread { fill: #c7f2d6; stroke: #16a34a; stroke-width: .5; }
+.gv-thread.on { animation: gvk-cuda 1.8s ease-in-out infinite; }
+.gv-zoom { stroke: #94a3b8; stroke-width: 1.4; stroke-dasharray: 4 4; fill: none; }
+
+/* ---- connectors ---- */
+.gv-wire { stroke: #b7c2d8; stroke-width: 2; fill: none; }
+.gv-wire-green { stroke: #16a34a; stroke-width: 2; fill: none; stroke-dasharray: 5 6; animation: gvk-dash 1.2s linear infinite; }
+@keyframes gvk-dash { to { stroke-dashoffset: -22; } }
+.gv-panel { fill: #ffffff; stroke: #e2e8f2; stroke-width: 1.2; }
+
+/* ---- host ↔ device transfer ---- */
+.gv-host-buf { fill: #dbe6ff; stroke: #2563eb; stroke-width: 1.2; }
+.gv-dev-buf { fill: #c7f2d6; stroke: #16a34a; stroke-width: 1.2; }
+.gv-pcie { fill: #f3f0ff; stroke: #6d5dd3; stroke-width: 1.4; }
+.gv-xfer { fill: #2563eb; transform-box: fill-box; }
+.gv-xfer.down { animation: gvk-xfer-down 2.4s ease-in-out infinite; }
+.gv-xfer.up { fill: #16a34a; animation: gvk-xfer-up 2.4s ease-in-out infinite; }
+@keyframes gvk-xfer-down {
+  0% { opacity: 0; transform: translateX(0); }
+  15% { opacity: 1; }
+  85% { opacity: 1; transform: translateX(100px); }
+  100% { opacity: 0; transform: translateX(100px); }
+}
+@keyframes gvk-xfer-up {
+  0% { opacity: 0; transform: translateX(0); }
+  15% { opacity: 1; }
+  85% { opacity: 1; transform: translateX(-90px); }
+  100% { opacity: 0; transform: translateX(-90px); }
+}
+.gv-kernel-pulse { fill: #22c55e; opacity: .55; animation: gvk-beat 1.6s ease-in-out infinite; }
+
+/* ---- warp divergence ---- */
+.gv-thread.masked { fill: #e8edf5; stroke: #c3cde0; opacity: .55; animation: none; }
+
+/* ---- occupancy ---- */
+.gv-occ-slot { stroke-width: 1.2; }
+.gv-occ-slot.full { fill: #c7f2d6; stroke: #16a34a; animation: gvk-cuda 2.4s ease-in-out infinite; }
+.gv-occ-slot.empty { fill: #f1f4f9; stroke: #c3cde0; }
+.gv-occ-track { fill: #e6ebf4; }
+.gv-occ-fill { fill: #16a34a; transform-box: fill-box; transform-origin: left center; animation: gvk-occ 1.6s ease both; }
+@keyframes gvk-occ { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* ---- coalescing ---- */
+.gv-mem-row.good { fill: #16a34a; }
+.gv-mem-cell.bad { fill: #fecaca; stroke: #dc2626; stroke-width: .8; animation: gvk-beat 1.8s ease-in-out infinite; }
+
+/* ---- kernel launch ---- */
+.gv-launch-block {
+  fill: #dbe6ff; stroke: #2563eb; stroke-width: 1.2;
+  transform-box: fill-box; transform-origin: center;
+  animation: gvk-drop 2.8s ease-in-out infinite;
+}
+@keyframes gvk-drop {
+  0%, 100% { opacity: .75; transform: translateY(0); }
+  45% { opacity: 1; transform: translateY(8px); }
+}
+
+/* ---- shared vs global ---- */
+.gv-shared-box { fill: #fcd9a8; stroke: #d97706; stroke-width: 1.4; }
+.gv-global-row { fill: #e2e8f2; stroke: #94a3b8; stroke-width: 1.2; animation: gvk-beat 2.8s ease-in-out infinite; }
+
+/* ---- Director's Cut V2.1 ---- */
+.gv-work-burst {
+  fill: #d97706;
+  transform-box: fill-box; transform-origin: center;
+  animation: gvk-burst 2.2s ease-in-out infinite;
+}
+@keyframes gvk-burst {
+  0%, 100% { opacity: .4; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+.gv-lid-lift { animation: gvk-lid 3.2s ease-in-out infinite; transform-box: fill-box; }
+@keyframes gvk-lid {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.gv-sm-ignite { animation: gvk-ignite 2.8s ease-in-out infinite; }
+@keyframes gvk-ignite {
+  0%, 100% { stroke: #94b3f2; }
+  40% { stroke: #16a34a; }
+}
+.gv-thread-awake { opacity: 0; animation: gvk-awake 2.4s ease both infinite; }
+@keyframes gvk-awake {
+  0% { opacity: 0; transform: translateY(6px); }
+  30%, 100% { opacity: 1; transform: none; }
+}
+.gv-sm-shell { fill: #f7fafc; stroke: #94b3f2; stroke-width: 2; }
+.gv-sm-unit { stroke-width: 1.3; }
+.gv-sfu { fill: #ede9fb; stroke: #6d5dd3; stroke-width: 1.3; }
+.gv-lsu { fill: #e0f2fe; stroke: #0ea5a4; stroke-width: 1.3; }
+.gv-branch-split { stroke: #dc2626; stroke-width: 2; fill: none; stroke-dasharray: 4 4; }
+.gv-cost-badge { fill: #dc2626; }
+.gv-res-regs { fill: #2563eb; }
+.gv-res-shm { fill: #d97706; }
+.gv-res-blk { fill: #6d5dd3; }
+.gv-sync-gate { fill: #6d5dd3; }
+.gv-mem-tier { stroke: #fff; stroke-width: 2; animation: gvk-tier 2.8s ease-in-out infinite; }
+.gv-tier-reg { fill: #2563eb; }
+.gv-tier-shm { fill: #d97706; }
+.gv-tier-l1 { fill: #0ea5a4; }
+.gv-tier-l2 { fill: #6d5dd3; }
+.gv-tier-glob { fill: #64748b; }
+.gv-tier-host { fill: #94a3b8; }
+@keyframes gvk-tier {
+  0%, 100% { opacity: .92; }
+  50% { opacity: 1; }
+}
+.gv-mem-token {
+  fill: #f59e0b;
+  transform-box: fill-box;
+  animation: gvk-memtok 4s ease-in-out infinite;
+}
+@keyframes gvk-memtok {
+  0% { opacity: 0; transform: translateY(0); }
+  15% { opacity: 1; }
+  100% { opacity: 1; transform: translateY(250px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallel-deck .gv-svg *,
+  .parallel-deck .gv-svg *::before { animation: none !important; }
+  .gv-gpu-core.on, .gv-cuda.on, .gv-thread.on { fill: #22c55e; }
+  .gv-occ-fill { transform: scaleX(1); }
+  .gv-xfer, .gv-launch-block, .gv-thread-awake, .gv-lid-lift, .gv-mem-token {
+    opacity: 1; transform: none;
+  }
+}

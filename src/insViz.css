@@ -1,0 +1,224 @@
+/* =============================================================================
+   InsSecurityViz — reusable living SVG security architectures (INS, all modules)
+   -----------------------------------------------------------------------------
+   Phase 2 of the "Premium White Cybersecurity" flagship. Companion to
+   InsSecurityViz.jsx. Same discipline as HadoopViz:
+     - Structure is ALWAYS painted; only packets / links / scans / rings / meters
+       animate, so a frozen frame (paused / throttled / reduced-motion) still
+       reads correctly.
+     - Every moving element TEACHES: packet = a unit of traffic, marching dash =
+       a live channel, scan = rule/certificate evaluation, ring = verification,
+       red flash = block/attack, gold lock = encrypted traffic, meter = a live
+       statistic. No decorative spinning, no flashing.
+     - Components are pure SVG+CSS/SMIL with no JS state, so they restart cleanly
+       when App.jsx remounts the slide article (replayKey) on revisit.
+   ========================================================================== */
+
+.iv-svg {
+  --iv-blue:    #1f6bff;
+  --iv-cyan:    #06b6d4;
+  --iv-emerald: #10b981;
+  --iv-amber:   #f59e0b;
+  --iv-red:     #ef4444;
+  --iv-purple:  #7c5cff;
+  --iv-ink:     #0f1b2e;
+  --iv-body:    #43536b;
+  --iv-muted:   #74879f;
+  --iv-line:    #cdd9ec;
+  --iv-surface: #ffffff;
+  --iv-glass:   rgba(255, 255, 255, 0.72);
+
+  --iv-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  width: 100%;
+  height: auto;
+  max-height: min(58vh, 470px);
+  display: block;
+  overflow: visible;
+  font-family: var(--display, "Plus Jakarta Sans", system-ui, sans-serif);
+}
+
+/* --- static building blocks (glass nodes, labels, links) --- */
+.iv-box       { fill: var(--iv-surface); stroke: var(--iv-line); stroke-width: 1.5; }
+.iv-box.soft  { fill: #f4f8ff; stroke: #d4e0f5; }
+.iv-box.trust { fill: #eefaf4; stroke: #b5e6d1; }
+.iv-box.warn  { fill: #fff7ea; stroke: #f3dcae; }
+.iv-box.alert { fill: #fdecec; stroke: #f3c0c0; }
+.iv-title  { fill: var(--iv-ink);  font-weight: 800; }
+.iv-sub    { fill: var(--iv-muted); font-weight: 600; }
+.iv-label  { fill: var(--iv-body); font-weight: 700; }
+.iv-conn   { stroke: var(--iv-line); stroke-width: 2; fill: none; }
+.iv-ink    { fill: var(--iv-ink); }
+.iv-white  { fill: #fff; }
+
+/* --- active channel: marching dashes = a live connection --- */
+.iv-flow { stroke-dasharray: 7 7; animation: ivDash 0.9s linear infinite; }
+@keyframes ivDash { to { stroke-dashoffset: -28; } }
+
+/* --- SMIL-animated travelling packets are tagged .iv-anim so reduced-motion
+       can remove just the motion layer while the static diagram remains --- */
+
+/* --- CSS straight-segment packet (--dx/--dy in user units) --- */
+.iv-packet {
+  animation: ivPacket var(--dur, 2.6s) linear infinite;
+  animation-delay: var(--delay, 0s);
+  will-change: transform, opacity;
+}
+@keyframes ivPacket {
+  0%   { transform: translate(0, 0); opacity: 0; }
+  12%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { transform: translate(var(--dx, 0px), var(--dy, 0px)); opacity: 0; }
+}
+
+/* --- healthy / active LED blink --- */
+.iv-led { animation: ivLed 1.8s ease-in-out infinite; animation-delay: var(--delay, 0s); }
+@keyframes ivLed { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+
+/* --- soft breathing (brains, shields, badges) --- */
+.iv-pulse { animation: ivPulse 3.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes ivPulse { 0%, 100% { opacity: 0.85; } 50% { opacity: 1; } }
+
+/* --- gentle bob for floating 3D glass objects (NO spin) --- */
+.iv-bob { animation: ivBob var(--dur, 5.5s) ease-in-out infinite; animation-delay: var(--delay, 0s); }
+@keyframes ivBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+/* --- icon breathe --- */
+.iv-breathe { animation: ivBreathe 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes ivBreathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+
+/* --- verification pulse ring (trust established) --- */
+.iv-verify { fill: none; stroke: var(--iv-emerald); stroke-width: 2.5; opacity: 0;
+  animation: ivVerify var(--dur, 2.8s) ease-out infinite; animation-delay: var(--delay, 0s);
+  transform-box: fill-box; transform-origin: center; }
+@keyframes ivVerify {
+  0%   { opacity: 0.85; transform: scale(0.55); }
+  70%  { opacity: 0;    transform: scale(1.35); }
+  100% { opacity: 0;    transform: scale(1.35); }
+}
+
+/* --- firewall rule-evaluation scan sweep (a bar travels down the rule list) --- */
+.iv-scan { animation: ivScan var(--dur, 3.4s) ease-in-out infinite; }
+@keyframes ivScan {
+  0%   { transform: translateY(0);   opacity: 0; }
+  8%   { opacity: 0.9; }
+  50%  { opacity: 0.9; }
+  58%  { opacity: 0; }
+  100% { transform: translateY(var(--scan, 90px)); opacity: 0; }
+}
+
+/* --- block flash: a malicious packet is stopped at the membrane --- */
+.iv-block { animation: ivBlock var(--dur, 3s) ease-out infinite; animation-delay: var(--delay, 0s);
+  transform-box: fill-box; transform-origin: center; opacity: 0; }
+@keyframes ivBlock {
+  0%, 40% { opacity: 0; transform: scale(0.6); }
+  52%     { opacity: 0.9; transform: scale(1.1); }
+  70%     { opacity: 0; transform: scale(1.4); }
+  100%    { opacity: 0; }
+}
+
+/* --- encrypted-tunnel draw-on: the secure channel literally forms --- */
+.iv-tunnel { stroke-dasharray: var(--len, 600); stroke-dashoffset: var(--len, 600);
+  animation: ivTunnel var(--dur, 6s) ease-in-out infinite; }
+@keyframes ivTunnel {
+  0%   { stroke-dashoffset: var(--len, 600); opacity: 0.2; }
+  40%  { opacity: 0.5; }
+  70%, 100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+/* --- encrypted traffic look (post-handshake / ciphertext) --- */
+.iv-enc { animation: ivEnc 2.4s ease-in-out infinite; }
+@keyframes ivEnc { 0%, 100% { opacity: 0.85; } 50% { opacity: 1; } }
+
+/* --- live statistic meter (bar grows to show throughput / counts) --- */
+.iv-meter-fill { transform-box: fill-box; transform-origin: left center;
+  animation: ivMeter var(--dur, 4s) ease-in-out infinite; animation-delay: var(--delay, 0s); }
+@keyframes ivMeter { 0% { transform: scaleX(0.05); } 55%, 100% { transform: scaleX(1); } }
+
+/* --- a counter/badge that ticks each time an event fires --- */
+.iv-tick { animation: ivTick var(--dur, 3s) ease-out infinite; animation-delay: var(--delay, 0s);
+  transform-box: fill-box; transform-origin: center; }
+@keyframes ivTick { 0%, 46% { transform: scale(1); } 54% { transform: scale(1.18); } 66%, 100% { transform: scale(1); } }
+
+/* --- ambient trust wave / shield ripple (very subtle) --- */
+.iv-wave { fill: none; opacity: 0; animation: ivWave var(--dur, 5s) ease-out infinite; animation-delay: var(--delay, 0s);
+  transform-box: fill-box; transform-origin: center; }
+@keyframes ivWave { 0% { opacity: 0.5; transform: scale(0.7); } 80%, 100% { opacity: 0; transform: scale(1.5); } }
+
+/* --- progressive step activation (chain / auth stepper) --- */
+.iv-step { transition: none; }
+.iv-step-on { animation: ivStepOn var(--dur, 6s) ease-in-out infinite; animation-delay: var(--delay, 0s); }
+@keyframes ivStepOn { 0%, 100% { opacity: 0.4; } 20%, 80% { opacity: 1; } }
+
+/* --- dimming for stages not spotlighted (structure still visible) --- */
+.iv-dim { opacity: 0.36; }
+
+/* --- soft coloured glows via filter refs are defined in <IvDefs/>; utility
+       stroke/fill helpers keep component JSX terse --- */
+.iv-s-blue    { stroke: var(--iv-blue); }
+.iv-s-cyan    { stroke: var(--iv-cyan); }
+.iv-s-emerald { stroke: var(--iv-emerald); }
+.iv-s-amber   { stroke: var(--iv-amber); }
+.iv-s-red     { stroke: var(--iv-red); }
+.iv-f-blue    { fill: var(--iv-blue); }
+.iv-f-cyan    { fill: var(--iv-cyan); }
+.iv-f-emerald { fill: var(--iv-emerald); }
+.iv-f-amber   { fill: var(--iv-amber); }
+.iv-f-red     { fill: var(--iv-red); }
+
+/* --- caption/legend chips --- */
+.iv-legend { fill: var(--iv-muted); font-weight: 700; }
+.iv-legend-dot { }
+
+/* Inside a live deck the slide body is only ~43vh tall and the scene usually
+   shares that space with a copy column, so cap every in-deck scene to 40vh.
+   Tall scenes letterbox down to fit; wide/short ones (PKI, Auth) stay
+   width-driven and are unaffected. */
+/* Baseline in-deck cap; masterpiece composition lifts this for hero /
+   visual-lead / visual-first / peak contexts (see insComposition.css). */
+.ins-deck .iv-svg { max-height: 46vh; }
+.ins-application-visual .iv-svg { margin-inline: auto; }
+
+/* ---------------------------------------------------------------------------
+   Phase 3 — cinematic module-opening entrances. Layers reveal in sequence via
+   per-element --d (delay): background → network → objects → trust → path. Each
+   entrance runs ONCE (fill:both); continuous idle motion (.iv-bob/.iv-led/
+   packets) lives on INNER groups so it survives after the assemble. "Camera
+   feel" = drift/zoom/assemble/reveal, never a pop. Openings tag their <svg>
+   `.iv-svg .iv-open`; the opening title slides get more height (below).
+   ------------------------------------------------------------------------- */
+.ins-deck .iv-open { max-height: 52vh; }
+
+.iv-in       { animation: ivIn 0.7s var(--iv-ease) both; animation-delay: var(--d, 0s); transform-box: fill-box; transform-origin: center; }
+@keyframes ivIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.iv-in-scale { animation: ivInScale 0.8s var(--iv-ease) both; animation-delay: var(--d, 0s); transform-box: fill-box; transform-origin: center; }
+@keyframes ivInScale { from { opacity: 0; transform: scale(0.82); } to { opacity: 1; transform: scale(1); } }
+.iv-in-fade  { animation: ivInFade 0.9s ease both; animation-delay: var(--d, 0s); }
+@keyframes ivInFade { from { opacity: 0; } to { opacity: 1; } }
+.iv-draw     { stroke-dasharray: var(--len, 320); stroke-dashoffset: var(--len, 320); animation: ivDraw 1s var(--iv-ease) both; animation-delay: var(--d, 0s); }
+@keyframes ivDraw { to { stroke-dashoffset: 0; } }
+/* an emerald "safe path illuminates" once the scene is composed */
+.iv-path-glow { animation: ivPathGlow 2.6s ease-in-out infinite; animation-delay: var(--d, 0s); }
+@keyframes ivPathGlow { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  /* drop all motion-only layers; keep the full static architecture */
+  .iv-svg .iv-anim { display: none; }
+  .iv-svg .iv-flow { animation: none; }
+  .iv-svg .iv-scan { display: none; }
+  .iv-svg .iv-block { display: none; }
+  .iv-svg .iv-verify { display: none; }
+  .iv-svg .iv-wave { display: none; }
+  .iv-svg .iv-led { animation: none; opacity: 1; }
+  .iv-svg .iv-pulse { animation: none; opacity: 1; }
+  .iv-svg .iv-bob { animation: none; }
+  .iv-svg .iv-breathe { animation: none; }
+  .iv-svg .iv-enc { animation: none; opacity: 1; }
+  .iv-svg .iv-tick { animation: none; }
+  .iv-svg .iv-meter-fill { animation: none; transform: scaleX(1); }
+  .iv-svg .iv-tunnel { animation: none; stroke-dashoffset: 0; opacity: 1; }
+  .iv-svg .iv-step-on { animation: none; opacity: 1; }
+  /* opening entrances snap straight to the composed final frame */
+  .iv-svg :is(.iv-in, .iv-in-scale, .iv-in-fade) { animation: none; opacity: 1; transform: none; }
+  .iv-svg .iv-draw { animation: none; stroke-dashoffset: 0; }
+  .iv-svg .iv-path-glow { animation: none; opacity: 1; }
+}

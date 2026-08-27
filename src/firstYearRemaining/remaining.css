@@ -1,0 +1,344 @@
+.first-year-human-deck,
+.first-year-kannada-deck,
+.first-year-lab-deck,
+.first-year-project-deck {
+  --rem-ink: #172033;
+  --rem-human: #0f766e;
+  --rem-kannada: #b45309;
+  --rem-lab: #b91c1c;
+  --rem-project: #6d28d9;
+  --rem-accent: var(--rem-human);
+}
+
+.first-year-human-deck { --rem-accent: var(--rem-human); }
+.first-year-kannada-deck { --rem-accent: var(--rem-kannada); }
+.first-year-lab-deck { --rem-accent: var(--rem-lab); }
+.first-year-project-deck { --rem-accent: var(--rem-project); }
+
+.first-year-human-deck .slide-frame {
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.08), transparent 32%), #f8fffd;
+}
+.first-year-kannada-deck .slide-frame {
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.08), transparent 32%), #fffaf4;
+}
+.first-year-lab-deck .slide-frame {
+  background: linear-gradient(135deg, rgba(185, 28, 28, 0.07), transparent 32%), #fff8f7;
+}
+.first-year-project-deck .slide-frame {
+  background: linear-gradient(135deg, rgba(109, 40, 217, 0.08), transparent 32%), #fbf7ff;
+}
+
+.first-year-human-deck .fy-stage,
+.first-year-kannada-deck .fy-stage,
+.first-year-lab-deck .fy-stage,
+.first-year-project-deck .fy-stage {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.first-year-human-deck .fy-frame,
+.first-year-kannada-deck .fy-frame,
+.first-year-lab-deck .fy-frame,
+.first-year-project-deck .fy-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  grid-template-rows: 0 minmax(0, 1fr) 0;
+}
+
+.first-year-human-deck .fy-header,
+.first-year-human-deck .fy-footer,
+.first-year-kannada-deck .fy-header,
+.first-year-kannada-deck .fy-footer,
+.first-year-lab-deck .fy-header,
+.first-year-lab-deck .fy-footer,
+.first-year-project-deck .fy-header,
+.first-year-project-deck .fy-footer {
+  display: none;
+}
+
+.first-year-human-deck .fy-body,
+.first-year-kannada-deck .fy-body,
+.first-year-lab-deck .fy-body,
+.first-year-project-deck .fy-body {
+  grid-row: 2;
+  height: 100%;
+  padding: 0;
+  grid-template-columns: 1fr !important;
+  min-width: 0;
+  min-height: 0;
+}
+
+.first-year-human-deck .fy-copy-zone,
+.first-year-human-deck .fy-visual-zone,
+.first-year-kannada-deck .fy-copy-zone,
+.first-year-kannada-deck .fy-visual-zone,
+.first-year-lab-deck .fy-copy-zone,
+.first-year-lab-deck .fy-visual-zone,
+.first-year-project-deck .fy-copy-zone,
+.first-year-project-deck .fy-visual-zone {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.first-year-kannada-deck,
+.first-year-kannada-deck .slide-title,
+.first-year-kannada-deck .slide-body {
+  font-family: "Noto Sans Kannada", "Noto Sans", "Source Sans 3", sans-serif;
+}
+
+.rem-svg {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
+  display: block;
+  overflow: hidden;
+  animation: remRise .9s ease both;
+}
+
+.rem-svg text {
+  font-weight: 800;
+  fill: #172033;
+  font-family: inherit;
+}
+
+.first-year-kannada-deck .rem-svg text {
+  font-family: "Noto Sans Kannada", "Noto Sans", sans-serif;
+}
+
+.rem-hero,
+.rem-split,
+.rem-topics,
+.rem-dialogue,
+.rem-vocab,
+.rem-passage,
+.rem-practice,
+.rem-mistake,
+.rem-terminal-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.rem-terminal-wrap {
+  animation: remRise .85s ease both;
+}
+
+.rem-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.4fr);
+  gap: 1rem;
+}
+
+.rem-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.rem-topics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.rem-vocab {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  overflow: hidden;
+}
+
+.rem-topics article,
+.rem-vocab article,
+.rem-practice article {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border: 1px solid #17203318;
+  border-radius: 16px;
+  background: #fff;
+  animation: remRise .75s ease both;
+  animation-delay: calc(var(--i, 0) * 90ms);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.rem-topics strong,
+.rem-vocab strong {
+  color: var(--rem-accent);
+  font-size: clamp(20px, 1.6vw, 28px);
+}
+
+.rem-topics span,
+.rem-vocab span,
+.rem-passage p,
+.rem-practice span {
+  font-size: clamp(16px, 1.2vw, 24px);
+  font-weight: 700;
+  line-height: 1.3;
+  min-width: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.rem-dialogue {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 12px;
+}
+
+.rem-bubble {
+  max-width: 78%;
+  padding: 16px 20px;
+  border-radius: 18px;
+  font-size: clamp(20px, 1.6vw, 28px);
+  font-weight: 750;
+  line-height: 1.3;
+  animation: remRise .8s ease both;
+}
+
+.rem-bubble[data-who="poor"] {
+  justify-self: start;
+  background: #fee2e2;
+}
+
+.rem-bubble[data-who="good"] {
+  justify-self: end;
+  background: #d1fae5;
+}
+
+.rem-bubble[data-who="sender"] {
+  justify-self: start;
+  background: color-mix(in srgb, var(--rem-accent) 16%, white);
+}
+
+.rem-bubble[data-who="receiver"] {
+  justify-self: end;
+  background: #e0e7ff;
+}
+
+.rem-passage {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.rem-passage blockquote {
+  margin: 0;
+  padding: 22px 26px;
+  border-left: 8px solid var(--rem-accent);
+  background: #fff;
+  font-size: clamp(22px, 1.8vw, 32px);
+  line-height: 1.5;
+  font-weight: 700;
+  animation: remRise .85s ease both;
+}
+
+.rem-mistake {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.first-year-human-deck .fy-callout,
+.first-year-kannada-deck .fy-callout,
+.first-year-lab-deck .fy-callout,
+.first-year-project-deck .fy-callout,
+.first-year-human-deck .fy-process article,
+.first-year-kannada-deck .fy-process article,
+.first-year-lab-deck .fy-process article,
+.first-year-project-deck .fy-process article,
+.first-year-human-deck .fy-comparison section,
+.first-year-kannada-deck .fy-comparison section,
+.first-year-lab-deck .fy-timeline section,
+.first-year-project-deck .fy-timeline section,
+.first-year-lab-deck .fy-experiment section,
+.first-year-human-deck .fy-source-block article,
+.first-year-kannada-deck .fy-source-block article,
+.first-year-lab-deck .fy-source-block article,
+.first-year-project-deck .fy-source-block article {
+  animation: remRise .8s ease both;
+}
+
+.first-year-human-deck .fy-process,
+.first-year-kannada-deck .fy-process,
+.first-year-lab-deck .fy-process,
+.first-year-project-deck .fy-process,
+.first-year-human-deck .fy-comparison,
+.first-year-lab-deck .fy-execution-trace,
+.first-year-lab-deck .fy-execution-trace pre,
+.first-year-lab-deck .fy-io-panel,
+.first-year-lab-deck .fy-experiment,
+.first-year-lab-deck .fy-terminal,
+.first-year-lab-deck .fy-terminal code,
+.first-year-lab-deck .fy-numerical-board,
+.first-year-human-deck .fy-timeline,
+.first-year-project-deck .fy-timeline,
+.first-year-human-deck .fy-concept-map,
+.first-year-kannada-deck .fy-concept-map,
+.first-year-lab-deck .fy-concept-map,
+.first-year-project-deck .fy-concept-map,
+.first-year-lab-deck .fy-source-block,
+.first-year-human-deck .fy-source-block,
+.first-year-kannada-deck .fy-source-block,
+.first-year-project-deck .fy-source-block {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  animation: remRise .85s ease both;
+}
+
+.rem-obs {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  font-size: clamp(20px, 1.7vw, 30px);
+  font-weight: 800;
+  animation: remRise .8s ease both;
+}
+
+.rem-obs th, .rem-obs td {
+  border: 3px solid #17203322;
+  padding: 14px 18px;
+  text-align: center;
+}
+
+.rem-obs tr.active td {
+  background: color-mix(in srgb, var(--rem-lab) 16%, white);
+}
+
+@keyframes remRise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (width <= 1320px) {
+  .rem-hero { grid-template-columns: minmax(0, 1.15fr) minmax(12rem, 0.5fr); gap: 0.7rem; }
+  .rem-split, .rem-mistake { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rem-topics article, .rem-vocab article, .rem-practice article { padding: 10px 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .first-year-human-deck *,
+  .first-year-kannada-deck *,
+  .first-year-lab-deck *,
+  .first-year-project-deck *,
+  .first-year-human-deck *::before,
+  .first-year-kannada-deck *::before,
+  .first-year-lab-deck *::before,
+  .first-year-project-deck *::before {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

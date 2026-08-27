@@ -1,0 +1,644 @@
+{
+  "id": "module1",
+  "title": "Foundations of Neural Networks & Perceptron",
+  "story": [
+    "Brain",
+    "Neuron",
+    "Graph",
+    "Architectures",
+    "Perceptron",
+    "Convergence",
+    "Bayes",
+    "Revision"
+  ],
+  "source": "VTU_BCA701_Module_1_Introduction_Neural_Networks.pptx",
+  "syllabus": [
+    {
+      "topic": "What is a Neural Network?",
+      "status": "COVERED"
+    },
+    {
+      "topic": "The Human Brain",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Models of a Neuron",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Neural Networks Viewed as Directed Graphs",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Feedback",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Network Architectures",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Rosenblatt's Perceptron — Introduction",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Perceptron",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Perceptron Convergence Theorem",
+      "status": "COVERED"
+    },
+    {
+      "topic": "Relation Between the Perceptron and Bayes Classifier for a Gaussian Environment",
+      "status": "COVERED"
+    }
+  ],
+  "slides": [
+    {
+      "n": 1,
+      "id": "module1-s01",
+      "title": "Module 1: Introduction to Neural Networks",
+      "subtitle": "",
+      "layout": "opener",
+      "visual": "MasterStory",
+      "definition": null,
+      "points": [
+        "Neuron models, directed graphs, feedback, architectures, Rosenblatt's perceptron, convergence, and the Bayes classifier relation."
+      ],
+      "extraPoints": [],
+      "takeaway": "Neuron models, directed graphs, feedback, architectures, Rosenblatt's perceptron, convergence, and the Bayes classifier relation.",
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 2,
+      "id": "module1-s02",
+      "title": "Module 1 checkpoints start with neural-network basics",
+      "subtitle": "",
+      "layout": "journey",
+      "visual": "JourneyPath",
+      "definition": null,
+      "points": [],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 3,
+      "id": "module1-s03",
+      "title": "Module 1 then builds the perceptron and classifier link",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "JourneyPath",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 4,
+      "id": "module1-s04",
+      "title": "A neural network is a weighted, adaptive signal-processing system",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "ArtificialNeuron",
+      "definition": null,
+      "points": [
+        "Core definition",
+        "A neural network is built from simple processing units connected by weighted links. Each unit receives inputs, combines them, applies an activation function, and passes a signal forward or around a network.",
+        "Why it matters",
+        "The network does not need a hand-written rule for every case. It adjusts weights from examples so that its input-output mapping improves for a task."
+      ],
+      "extraPoints": [],
+      "takeaway": "The network does not need a hand-written rule for every case. It adjusts weights from examples so that its input-output mapping improves for a task.",
+      "say": "",
+      "formula": "Core definition"
+    },
+    {
+      "n": 5,
+      "id": "module1-s05",
+      "title": "The human brain supplies the metaphor, not a literal blueprint",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "NeuralBrainBridge",
+      "definition": null,
+      "points": [
+        "Neurons",
+        "Information-processing cells inspire artificial processing units.",
+        "Synapses",
+        "Connection strength inspires numerical weights between units.",
+        "Plasticity",
+        "Learning suggests changing connection strengths from experience."
+      ],
+      "extraPoints": [
+        "Parallelism",
+        "Many simple units together can express complex behavior."
+      ],
+      "takeaway": "Information-processing cells inspire artificial processing units.",
+      "say": "",
+      "formula": "Neurons"
+    },
+    {
+      "n": 6,
+      "id": "module1-s06",
+      "title": "An artificial neuron has three essential operations",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "ArtificialNeuron",
+      "definition": null,
+      "points": [
+        "Inputs\nx1, x2, ...",
+        "Activation\nφ(v)",
+        "Output\ny",
+        "Weights scale inputs before summation.",
+        "Bias shifts the activation threshold.",
+        "Activation function controls the neuron's output response."
+      ],
+      "extraPoints": [],
+      "takeaway": "Activation function controls the neuron's output response.",
+      "say": "",
+      "formula": "Inputs\nx1, x2, ..."
+    },
+    {
+      "n": 7,
+      "id": "module1-s07",
+      "title": "The neuron model is compact enough to write as one equation",
+      "subtitle": "",
+      "layout": "formula",
+      "visual": "ArtificialNeuron",
+      "definition": null,
+      "points": [
+        "y = φ( Σ wi xi + b )",
+        "xi are input signals; wi are synaptic weights.",
+        "b is the bias, equivalent to a weight connected to a constant input.",
+        "φ is the activation function that introduces a controlled nonlinearity."
+      ],
+      "extraPoints": [],
+      "takeaway": "xi are input signals; wi are synaptic weights.",
+      "say": "",
+      "formula": "y = φ( Σ wi xi + b )"
+    },
+    {
+      "n": 8,
+      "id": "module1-s08",
+      "title": "Activation functions turn weighted sums into decisions or signals",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "ArtificialNeuron",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 9,
+      "id": "module1-s09",
+      "title": "Viewing a neural network as a directed graph clarifies signal flow",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "DirectedNeuralGraph",
+      "definition": null,
+      "points": [
+        "x1",
+        "x2",
+        "neuron",
+        "y",
+        "Nodes are processing units; directed edges carry weighted signals."
+      ],
+      "extraPoints": [],
+      "takeaway": "Nodes are processing units; directed edges carry weighted signals.",
+      "say": "",
+      "formula": "x1"
+    },
+    {
+      "n": 10,
+      "id": "module1-s10",
+      "title": "Feedback introduces cycles, memory, and dynamics",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "FeedbackCompare",
+      "definition": null,
+      "points": [
+        "Unit A",
+        "Unit B",
+        "Feedforward path: signals move from inputs toward outputs.",
+        "Feedback path: a later signal returns to an earlier unit or layer.",
+        "Feedback networks can represent state over time, but training and stability become harder."
+      ],
+      "extraPoints": [],
+      "takeaway": "Feedforward path: signals move from inputs toward outputs.",
+      "say": "",
+      "formula": "Unit A"
+    },
+    {
+      "n": 11,
+      "id": "module1-s11",
+      "title": "Network architecture describes how neurons are arranged",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "NetworkArchitectures",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 12,
+      "id": "module1-s12",
+      "title": "Single-layer feedforward networks are the simplest classifiers",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "NetworkArchitectures",
+      "definition": null,
+      "points": [
+        "Structure",
+        "The input layer distributes signals to output neurons. There is no hidden computation layer; the trainable weights sit on the links into the output layer.",
+        "Consequence",
+        "The decision boundary is linear in the input space. This is enough for separable problems, but not for problems requiring nonlinear boundaries."
+      ],
+      "extraPoints": [],
+      "takeaway": "The input layer distributes signals to output neurons. There is no hidden computation layer; the trainable weights sit on the links into the output layer.",
+      "say": "",
+      "formula": "Structure"
+    },
+    {
+      "n": 13,
+      "id": "module1-s13",
+      "title": "Multilayer feedforward networks add hidden representations",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "NetworkArchitectures",
+      "definition": null,
+      "points": [
+        "Input",
+        "Hidden",
+        "Output",
+        "Hidden units learn intermediate features, which is the basic idea that later becomes deep learning."
+      ],
+      "extraPoints": [],
+      "takeaway": "Hidden units learn intermediate features, which is the basic idea that later becomes deep learning.",
+      "say": "",
+      "formula": "Input"
+    },
+    {
+      "n": 14,
+      "id": "module1-s14",
+      "title": "Rosenblatt's perceptron is a trainable binary classifier",
+      "subtitle": "",
+      "layout": "hero",
+      "visual": "PerceptronClassifier",
+      "definition": null,
+      "points": [
+        "Historical role",
+        "Introduced as an early learning machine for pattern classification.",
+        "Inputs",
+        "Feature vector x represents the pattern to be classified.",
+        "Weights",
+        "Weights are adjusted from labeled examples."
+      ],
+      "extraPoints": [
+        "Output",
+        "A hard threshold chooses one of two classes."
+      ],
+      "takeaway": "Introduced as an early learning machine for pattern classification.",
+      "say": "",
+      "formula": "Historical role"
+    },
+    {
+      "n": 15,
+      "id": "module1-s15",
+      "title": "The perceptron computes a weighted sum and applies a threshold",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "PerceptronClassifier",
+      "definition": null,
+      "points": [
+        "y = sign(wᵀx + b)",
+        "w is the weight vector and b is the bias.",
+        "The sign of the induced local field assigns the input to one of two classes.",
+        "The separating surface is wᵀx + b = 0."
+      ],
+      "extraPoints": [],
+      "takeaway": "w is the weight vector and b is the bias.",
+      "say": "",
+      "formula": "y = sign(wᵀx + b)"
+    },
+    {
+      "n": 16,
+      "id": "module1-s16",
+      "title": "Geometrically, a perceptron draws a hyperplane",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "DecisionBoundary",
+      "definition": null,
+      "points": [
+        "wᵀx + b = 0",
+        "Points on one side map to class +1.",
+        "Points on the other side map to class -1.",
+        "In two dimensions the hyperplane is a line; in higher dimensions it is a plane-like separator."
+      ],
+      "extraPoints": [],
+      "takeaway": "Points on the other side map to class -1.",
+      "say": "",
+      "formula": "wᵀx + b = 0"
+    },
+    {
+      "n": 17,
+      "id": "module1-s17",
+      "title": "Perceptron learning changes weights only when a pattern is misclassified",
+      "subtitle": "",
+      "layout": "formula",
+      "visual": "DecisionBoundary",
+      "definition": null,
+      "points": [
+        "w(new) = w(old) + η d x",
+        "η is the learning-rate parameter.",
+        "d is the desired class label, commonly +1 or -1.",
+        "The correction moves the separating hyperplane toward classifying x correctly."
+      ],
+      "extraPoints": [],
+      "takeaway": "d is the desired class label, commonly +1 or -1.",
+      "say": "",
+      "formula": "w(new) = w(old) + η d x"
+    },
+    {
+      "n": 18,
+      "id": "module1-s18",
+      "title": "The training loop is simple but powerful",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "PerceptronLearningLoop",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 19,
+      "id": "module1-s19",
+      "title": "The convergence theorem needs linear separability",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "DecisionBoundary",
+      "definition": null,
+      "points": [
+        "Condition",
+        "A training set is linearly separable if at least one hyperplane can classify every training example correctly.",
+        "Guarantee",
+        "For linearly separable data and a suitable fixed learning rate, the perceptron learning rule reaches a solution in a finite number of updates."
+      ],
+      "extraPoints": [],
+      "takeaway": "A training set is linearly separable if at least one hyperplane can classify every training example correctly.",
+      "say": "",
+      "formula": "Condition"
+    },
+    {
+      "n": 20,
+      "id": "module1-s20",
+      "title": "Convergence is a statement about finding a separator, not about finding the best separator",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "DecisionBoundary",
+      "definition": null,
+      "points": [
+        "The theorem says the algorithm will stop if a separating hyperplane exists.",
+        "It does not say the separator is unique.",
+        "It does not maximize margin; different starting weights can reach different valid solutions.",
+        "If the data are not linearly separable, the basic perceptron can keep updating indefinitely."
+      ],
+      "extraPoints": [],
+      "takeaway": "The theorem says the algorithm will stop if a separating hyperplane exists.",
+      "say": "",
+      "formula": "The theorem says the algorithm will stop if a separating hyperplane exists."
+    },
+    {
+      "n": 21,
+      "id": "module1-s21",
+      "title": "Nonseparable patterns reveal the perceptron's limitation",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "DecisionBoundary",
+      "definition": null,
+      "points": [
+        "What fails",
+        "If two classes overlap or require a nonlinear boundary, no single hyperplane can classify all examples correctly.",
+        "Why it matters",
+        "This limitation motivates multilayer networks and nonlinear representation learning in later modules."
+      ],
+      "extraPoints": [],
+      "takeaway": "If two classes overlap or require a nonlinear boundary, no single hyperplane can classify all examples correctly.",
+      "say": "",
+      "formula": "What fails"
+    },
+    {
+      "n": 22,
+      "id": "module1-s22",
+      "title": "Bayes classification provides the statistical gold standard",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "DecisionBoundary",
+      "definition": null,
+      "points": [
+        "Bayes classification assigns an input to the class with the largest posterior probability.",
+        "It minimizes probability of classification error when the true class distributions are known.",
+        "For Gaussian class-conditional densities, the decision boundary depends on means, covariance, and prior probabilities."
+      ],
+      "extraPoints": [],
+      "takeaway": "Bayes classification assigns an input to the class with the largest posterior probability.",
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 23,
+      "id": "module1-s23",
+      "title": "A Gaussian environment can make the Bayes boundary linear",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "DecisionBoundary",
+      "definition": null,
+      "points": [
+        "Equal covariance case",
+        "When two Gaussian classes share the same covariance matrix, the Bayes decision boundary is linear in x.",
+        "Perceptron connection",
+        "A perceptron also implements a linear boundary. Under this condition, its boundary form matches the Bayes classifier form."
+      ],
+      "extraPoints": [],
+      "takeaway": "When two Gaussian classes share the same covariance matrix, the Bayes decision boundary is linear in x.",
+      "say": "",
+      "formula": "Equal covariance case"
+    },
+    {
+      "n": 24,
+      "id": "module1-s24",
+      "title": "Perceptron and Bayes classifiers answer different questions",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "GaussianBayesScene",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 25,
+      "id": "module1-s25",
+      "title": "Example: AND is linearly separable, XOR is not",
+      "subtitle": "",
+      "layout": "concept",
+      "visual": "DecisionBoundary",
+      "definition": null,
+      "points": [
+        "AND can be separated by one straight boundary.",
+        "XOR cannot be separated by one straight boundary.",
+        "This is why Module 2 moves into multilayer perceptrons."
+      ],
+      "extraPoints": [],
+      "takeaway": "AND can be separated by one straight boundary.",
+      "say": "",
+      "formula": "AND can be separated by one straight boundary."
+    },
+    {
+      "n": 26,
+      "id": "module1-s26",
+      "title": "A good exam answer separates terminology from theorem conditions",
+      "subtitle": "",
+      "layout": "exam",
+      "visual": "ExamStrategy",
+      "definition": null,
+      "points": [
+        "Neuron model",
+        "Name weights, adder, bias, activation, and output.",
+        "Graph view",
+        "Explain nodes, directed edges, signal flow, and cycles.",
+        "Convergence",
+        "State linear separability and finite updates clearly."
+      ],
+      "extraPoints": [
+        "Bayes relation",
+        "Mention Gaussian distributions and the equal covariance linear-boundary case."
+      ],
+      "takeaway": "Name weights, adder, bias, activation, and output.",
+      "say": "",
+      "formula": "Neuron model"
+    },
+    {
+      "n": 27,
+      "id": "module1-s27",
+      "title": "Module 1 vocabulary students must own",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 28,
+      "id": "module1-s28",
+      "title": "Mini activity: classify by moving the boundary",
+      "subtitle": "",
+      "layout": "activity",
+      "visual": "DecisionBoundary",
+      "definition": null,
+      "points": [
+        "Give students six labeled 2D points on the board.",
+        "Ask them to draw a line that separates the two classes.",
+        "Move one point so separation becomes impossible.",
+        "Use the failure case to motivate convergence conditions and multilayer networks."
+      ],
+      "extraPoints": [],
+      "takeaway": "Give students six labeled 2D points on the board.",
+      "say": "",
+      "formula": "Give students six labeled 2D points on the board."
+    },
+    {
+      "n": 29,
+      "id": "module1-s29",
+      "title": "Module 1 closes with a complete conceptual chain",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Brain inspiration",
+        "Neuron model",
+        "Network graph",
+        "Perceptron",
+        "Bayes relation",
+        "The module starts with inspiration, formalizes a neuron, organizes neurons as networks, trains the simplest classifier, and compares it with a probabilistic optimal classifier."
+      ],
+      "extraPoints": [],
+      "takeaway": "The module starts with inspiration, formalizes a neuron, organizes neurons as networks, trains the simplest classifier, and compares it with a probabilistic optimal classifier.",
+      "say": "",
+      "formula": "Brain inspiration"
+    },
+    {
+      "n": 30,
+      "id": "module1-s30",
+      "title": "Coverage checklist: every syllabus phrase is included",
+      "subtitle": "",
+      "layout": "revision",
+      "visual": "RevisionMap",
+      "definition": null,
+      "points": [
+        "Keep the diagram primary — narrate the signal path aloud.",
+        "Connect each symbol or block to the syllabus phrase for this topic."
+      ],
+      "extraPoints": [],
+      "takeaway": null,
+      "say": "",
+      "formula": null
+    },
+    {
+      "n": 31,
+      "id": "module1-s31",
+      "title": "Prescribed textbook reference for Module 1",
+      "subtitle": "",
+      "layout": "exam",
+      "visual": "ExamStrategy",
+      "definition": null,
+      "points": [
+        "Primary reference: Simon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education.",
+        "Use Haykin for neuron models, network architectures, perceptron learning, convergence theorem, and statistical classifier relation.",
+        "Use the VTU syllabus as the boundary for what belongs in Module 1."
+      ],
+      "extraPoints": [],
+      "takeaway": "Primary reference: Simon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education.",
+      "say": "",
+      "formula": "Use the VTU syllabus as the boundary for what belongs in Module 1."
+    }
+  ]
+}

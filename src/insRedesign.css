@@ -1,0 +1,549 @@
+/* =============================================================================
+   Information & Network Security — Premium Redesign Layer
+   -----------------------------------------------------------------------------
+   Scoped entirely to `.ins-deck`. Loaded AFTER platform.css / reworkDecks.css so
+   it wins on the cascade. Touches ZERO slide content, notes, PYQs, routing or
+   navigation — a pure visual + motion elevation of the existing markup.
+
+   Design language: "Premium White Cybersecurity" — a futuristic security
+   control center built from glass, depth and subtle colour. Ice-white base,
+   frosted floating panels, pale-blue shadows, a barely-there network backdrop,
+   and living motion that communicates TRUST being established (verify, encrypt,
+   authenticate) rather than raw movement. Depth comes from LAYERING, not
+   darkness. Sibling of the Big Data cream layer — same ecosystem, cooler skin.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   1. Design tokens (scoped) — ice white, glass, cyber palette, pale-blue depth
+   ------------------------------------------------------------------------- */
+.ins-deck {
+  --ins-white-1: #f7fbff;   /* ice white */
+  --ins-white-2: #ffffff;
+  --ins-cream:   #eef4fc;   /* soft cool "cream" */
+  --ins-ink:     #0f1b2e;
+  --ins-body:    #43536b;
+  --ins-muted:   #74879f;
+
+  --ins-blue:    #1f6bff;   /* cyber blue */
+  --ins-cyan:    #06b6d4;   /* electric cyan */
+  --ins-emerald: #10b981;   /* verified / secure */
+  --ins-amber:   #f59e0b;   /* security caution */
+  --ins-red:     #ef4444;   /* alert — attacks & errors only */
+
+  --ins-glass:        rgba(255, 255, 255, 0.62);
+  --ins-glass-strong: rgba(255, 255, 255, 0.82);
+  --ins-hairline:        rgba(23, 47, 92, 0.10);
+  --ins-hairline-strong: rgba(23, 47, 92, 0.17);
+
+  /* Layered "two light" shadow, tinted pale blue (frosted-glass depth) */
+  --ins-shadow-sm: 0 1px 2px rgba(29, 58, 110, 0.05), 0 6px 16px rgba(29, 58, 110, 0.07);
+  --ins-shadow-md: 0 2px 6px rgba(29, 58, 110, 0.06), 0 14px 34px rgba(29, 58, 110, 0.11);
+  --ins-shadow-lg: 0 6px 14px rgba(29, 58, 110, 0.08), 0 30px 70px rgba(29, 58, 110, 0.16);
+  --ins-glow-blue:    0 18px 44px rgba(31, 107, 255, 0.24);
+  --ins-glow-cyan:    0 16px 40px rgba(6, 182, 212, 0.24);
+  --ins-glow-emerald: 0 16px 40px rgba(16, 185, 129, 0.22);
+
+  --ins-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------------------------------------------------------------------------
+   2. Deck backdrop — a barely-visible living security network behind the frame
+   ------------------------------------------------------------------------- */
+.ins-deck.deck {
+  background:
+    radial-gradient(1100px 640px at 8% -12%, rgba(31, 107, 255, 0.10), transparent 60%),
+    radial-gradient(1000px 560px at 96% 4%, rgba(6, 182, 212, 0.09), transparent 58%),
+    radial-gradient(900px 620px at 50% 120%, rgba(16, 185, 129, 0.07), transparent 60%),
+    linear-gradient(150deg, #eef4fc 0%, #f4f8ff 48%, #e8f0fb 100%);
+  position: relative;
+  isolation: isolate;
+}
+
+/* drifting network dot-grid — extremely low opacity, never distracts */
+.ins-deck.deck::before {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(23, 47, 92, 0.05) 1px, transparent 1.4px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(80% 80% at 50% 45%, #000 30%, transparent 78%);
+  animation: insDriftGrid 46s linear infinite;
+}
+
+/* slow-floating soft light blobs for atmospheric depth */
+.ins-deck.deck::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(420px 320px at 18% 82%, rgba(31, 107, 255, 0.06), transparent 70%),
+    radial-gradient(380px 300px at 84% 22%, rgba(6, 182, 212, 0.06), transparent 70%);
+  animation: insFloatBlobs 28s ease-in-out infinite alternate;
+}
+
+/* GPU-composited drift (translate one 32px tile) — no per-frame repaint */
+@keyframes insDriftGrid {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(32px, 32px, 0); }
+}
+@keyframes insFloatBlobs {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to   { transform: translate3d(-1.2%, -1.6%, 0) scale(1.05); }
+}
+
+.ins-deck .slide-stage { position: relative; z-index: 1; }
+
+/* ---------------------------------------------------------------------------
+   3. Slide frame — floating ice-glass panel with layered depth + accent rail
+   ------------------------------------------------------------------------- */
+.ins-deck .slide-frame {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 30%),
+    linear-gradient(155deg, var(--ins-white-2) 0%, var(--ins-white-1) 54%, var(--ins-cream) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  box-shadow:
+    var(--ins-shadow-lg),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+}
+
+/* subtle interior texture so wide areas never read as flat */
+.ins-deck .slide-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(700px 460px at 100% 0%, rgba(6, 182, 212, 0.05), transparent 62%),
+    radial-gradient(640px 420px at 0% 100%, rgba(31, 107, 255, 0.05), transparent 60%);
+}
+
+/* animated top accent rail — a secure signal travelling along the gradient */
+.ins-deck .slide-frame::before {
+  height: 5px;
+  background: linear-gradient(90deg, var(--ins-blue), var(--ins-cyan) 40%, var(--ins-emerald) 74%, var(--ins-blue));
+  background-size: 220% 100%;
+  animation: insRailShimmer 9s linear infinite;
+  z-index: 3;
+}
+@keyframes insRailShimmer {
+  from { background-position: 0% 0; }
+  to   { background-position: 220% 0; }
+}
+
+/* keep real content above the frame texture layers */
+.ins-deck .slide-header,
+.ins-deck .slide-body,
+.ins-deck .slide-footer { position: relative; z-index: 2; }
+
+/* ---------------------------------------------------------------------------
+   4. Header + tool pills — quiet chrome, floating glass buttons
+   ------------------------------------------------------------------------- */
+.ins-deck .slide-kicker {
+  color: var(--ins-blue);
+  letter-spacing: 0.14em;
+}
+.ins-deck .slide-title {
+  color: var(--ins-ink);
+  letter-spacing: -0.015em;
+}
+
+.ins-deck .slide-counter,
+.ins-deck .mode-switch button,
+.ins-deck .module-switcher button,
+.ins-deck .module-switcher a {
+  background: var(--ins-glass);
+  border: 1px solid var(--ins-hairline);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  transition: transform 0.2s var(--ins-ease), background 0.2s var(--ins-ease),
+              border-color 0.2s var(--ins-ease), color 0.2s var(--ins-ease);
+}
+.ins-deck .mode-switch button:hover,
+.ins-deck .module-switcher button:hover,
+.ins-deck .module-switcher a:hover {
+  transform: translateY(-1px);
+  background: #fff;
+  border-color: rgba(31, 107, 255, 0.32);
+  color: var(--ins-blue);
+}
+.ins-deck .mode-switch button.active,
+.ins-deck .module-switcher button.active,
+.ins-deck .module-switcher .active-link {
+  background: linear-gradient(135deg, var(--ins-blue), #1550d6);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(31, 107, 255, 0.30);
+}
+
+.ins-deck .slide-footer { color: var(--ins-muted); }
+
+/* ---------------------------------------------------------------------------
+   5. Bottom control bar + redesigned segmented progress
+   ------------------------------------------------------------------------- */
+.ins-deck .controls {
+  background: linear-gradient(180deg, rgba(15, 27, 46, 0.96), rgba(11, 19, 33, 0.98));
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 -10px 30px rgba(20, 40, 80, 0.18);
+}
+.ins-deck .nav-btn,
+.ins-deck .deck-link {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: transform 0.18s var(--ins-ease), background 0.18s var(--ins-ease);
+}
+.ins-deck .nav-btn:hover:not(:disabled),
+.ins-deck .deck-link:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.16);
+}
+.ins-deck .active-tool {
+  background: linear-gradient(135deg, var(--ins-blue), #1550d6);
+  border-color: transparent;
+}
+
+/* segmented "module progress" look layered over the continuous fill */
+.ins-deck .progress-bar {
+  height: 9px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.ins-deck .progress-fill {
+  background: linear-gradient(90deg, var(--ins-blue), var(--ins-cyan) 55%, var(--ins-emerald));
+  background-size: 200% 100%;
+  animation: insRailShimmer 6s linear infinite;
+  box-shadow: 0 0 14px rgba(31, 107, 255, 0.5);
+  transition: width 0.5s var(--ins-ease);
+  position: relative;
+}
+.ins-deck .progress-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(90deg, transparent 0, transparent calc(5% - 2px), rgba(15, 27, 46, 0.9) calc(5% - 2px), rgba(15, 27, 46, 0.9) 5%);
+  border-radius: inherit;
+}
+.ins-deck .progress-wrap { position: relative; }
+.ins-deck .progress-meta span:first-child::before {
+  content: "MODULE PROGRESS · ";
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.08em;
+}
+
+/* ---------------------------------------------------------------------------
+   6. Cinematic slide entry — macro cascade on every mount (replayKey remount)
+      Background → header → body, ~700ms total. Ends fully visible & static.
+   ------------------------------------------------------------------------- */
+.ins-deck .slide-frame {
+  animation: insFrameIn 0.62s var(--ins-ease) both;
+}
+.ins-deck .slide-header-copy {
+  animation: insRiseIn 0.5s var(--ins-ease) both;
+  animation-delay: 0.08s;
+}
+.ins-deck .slide-body > * {
+  animation: insRiseIn 0.55s var(--ins-ease) both;
+  animation-delay: 0.16s;
+}
+@keyframes insFrameIn {
+  from { opacity: 0; transform: translateY(14px) scale(0.985); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes insRiseIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Module-opening title text emerges in sequence, so the module name + objectives
+   rise in just after the cinematic visual has assembled (Phase 3). */
+.ins-deck .ins-title-hero > div > * { animation: insRiseIn 0.6s var(--ins-ease) both; }
+.ins-deck .ins-title-hero .slide-kicker { animation-delay: 0.35s; }
+.ins-deck .ins-title-hero h1 { animation-delay: 0.55s; }
+.ins-deck .ins-title-hero .subtitle { animation-delay: 0.75s; }
+.ins-deck .ins-title-hero .lead { animation-delay: 0.95s; }
+.ins-deck .ins-title-hero .meta { animation-delay: 1.15s; }
+
+/* ---------------------------------------------------------------------------
+   7. Generic Teaching primitives (M2–M5) — floating glass + pale-blue depth
+   ------------------------------------------------------------------------- */
+.ins-deck :is(.visual-panel, .layout-visual, .takeaway, .callout, .key-statement,
+              .definition-block, .ce-example, .compare-pane) {
+  border-radius: 16px;
+  box-shadow: var(--ins-shadow-sm);
+}
+.ins-deck .process-node {
+  border-radius: 14px;
+  box-shadow: var(--ins-shadow-sm);
+  transition: transform 0.25s var(--ins-ease), box-shadow 0.25s var(--ins-ease);
+}
+.ins-deck .process-node:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ins-shadow-md);
+}
+.ins-deck .process-node.accent { box-shadow: var(--ins-glow-blue); }
+
+/* soft, glassy takeaway / callout to match the security skin */
+.ins-deck :is(.takeaway, .callout, .ins-teaching-frame > .takeaway) {
+  background: linear-gradient(180deg, var(--ins-glass-strong), rgba(255, 255, 255, 0.5));
+  border: 1px solid var(--ins-hairline);
+  backdrop-filter: blur(6px);
+}
+
+/* ---------------------------------------------------------------------------
+   8. INS security scenes — turn the existing panels into floating ice glass
+      (CyberMissionScene, node row, teaching frame, insx-* cards). Styles the
+      current markup only; component internals are upgraded in a later phase.
+   ------------------------------------------------------------------------- */
+.ins-deck .ins-teaching-visual,
+.ins-deck .ins-mission-scene {
+  border-radius: 18px;
+}
+
+/* Alice / Internet / Cipher Box / Bob → floating glass server tiles */
+.ins-deck .ins-node-row article,
+.ins-deck :is(.insx-ribbon-node, .insx-card-grid > *, .insx-cert-chain > *,
+              .insx-protocol > *, .insx-lifecycle > *) {
+  background: linear-gradient(180deg, var(--ins-glass-strong), rgba(255, 255, 255, 0.55));
+  border: 1px solid var(--ins-hairline);
+  border-radius: 16px;
+  box-shadow: var(--ins-shadow-sm);
+  backdrop-filter: blur(7px);
+  transition: transform 0.25s var(--ins-ease), box-shadow 0.25s var(--ins-ease),
+              border-color 0.25s var(--ins-ease);
+}
+.ins-deck .ins-node-row article:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ins-shadow-md);
+  border-color: rgba(31, 107, 255, 0.28);
+}
+
+/* inspection node = the security gate → cyan/emerald authority */
+.ins-deck .ins-node-row .defense-node {
+  border-color: rgba(6, 182, 212, 0.35);
+  box-shadow: var(--ins-glow-cyan);
+}
+.ins-deck .ins-node-row .safe-node {
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: var(--ins-glow-emerald);
+}
+
+/* Eve — the threat card floats apart, alert-red but never shouty on white */
+.ins-deck .ins-attacker-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(254, 242, 242, 0.85));
+  border: 1px solid rgba(239, 68, 68, 0.28);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(239, 68, 68, 0.14);
+  backdrop-filter: blur(7px);
+  animation: insThreatBob 6s ease-in-out infinite;
+}
+@keyframes insThreatBob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-5px); }
+}
+
+/* ---------------------------------------------------------------------------
+   9. Living micro-motion — "trust being established", calm & premium
+      (structure is always painted; only these motion layers animate)
+   ------------------------------------------------------------------------- */
+/* shield / lock / server icons inside security tiles breathe slowly */
+.ins-deck .ins-node-row article svg,
+.ins-deck .ins-attacker-card svg {
+  animation: insIconBreathe 5.5s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes insIconBreathe {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.06); }
+}
+
+/* the inspection gate gently pulses a protective cyan glow (living firewall) */
+.ins-deck .ins-node-row .defense-node {
+  animation: insGuardPulse 4.5s ease-in-out infinite;
+}
+@keyframes insGuardPulse {
+  0%, 100% { box-shadow: 0 10px 26px rgba(6, 182, 212, 0.16); }
+  50%      { box-shadow: 0 16px 40px rgba(6, 182, 212, 0.30); }
+}
+
+/* the receiver shows a soft "verified" emerald heartbeat */
+.ins-deck .ins-node-row .safe-node {
+  animation: insVerifyPulse 4.5s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+@keyframes insVerifyPulse {
+  0%, 100% { box-shadow: 0 10px 26px rgba(16, 185, 129, 0.14); }
+  50%      { box-shadow: 0 16px 40px rgba(16, 185, 129, 0.28); }
+}
+
+/* ---------------------------------------------------------------------------
+   10. Interactive emphasis — hover the security row to spotlight one node
+   ------------------------------------------------------------------------- */
+.ins-deck :is(.ins-node-row, .insx-card-grid, .insx-protocol):hover > * {
+  filter: saturate(0.72) opacity(0.55);
+  transition: filter 0.3s var(--ins-ease), transform 0.3s var(--ins-ease);
+}
+.ins-deck :is(.ins-node-row, .insx-card-grid, .insx-protocol):hover > *:hover {
+  filter: none;
+  transform: translateY(-4px) scale(1.02);
+  z-index: 4;
+}
+
+/* ---------------------------------------------------------------------------
+   11. Section dividers (tone-driven frame class) — quiet cinematic emphasis
+   ------------------------------------------------------------------------- */
+.ins-deck .slide-frame.section h2,
+.ins-deck .slide-frame.divider h2 {
+  color: var(--ins-ink);
+  letter-spacing: -0.02em;
+}
+
+/* ---------------------------------------------------------------------------
+   11b. Phase 4 density — keep the applied-module (SecurityTeachingFrame) copy
+   column inside its grid row so the full-width takeaway never overlaps the
+   "example" aside at 1280×720. Fit-only: tighter gaps/padding/type, no content
+   change. `min-height:0` lets the copy track actually shrink to its row.
+   ------------------------------------------------------------------------- */
+.ins-deck .ins-teaching-frame { align-items: stretch; }
+.ins-deck .ins-teaching-copy { gap: clamp(7px, 0.9vh, 12px); align-content: center; min-height: 0; }
+.ins-deck .ins-why-how { gap: 8px; }
+.ins-deck .ins-why-how article { padding: 8px 12px; gap: 4px; }
+.ins-deck .ins-why-how span { font-size: clamp(0.72rem, 0.82vw, 0.92rem); line-height: 1.24; }
+/* the "Real-world example" aside defaults to the SAME scenario text as the
+   "Why needed" card (no slide passes a distinct example) — hide the duplicate
+   to reclaim vertical space and stop the takeaway overlap. */
+.ins-deck .ins-teaching-frame .ins-example { display: none; }
+.ins-deck .ins-teaching-copy .lead { font-size: clamp(0.92rem, 1.05vw, 1.16rem); line-height: 1.34; margin: 0; }
+.ins-deck .ins-teaching-copy .insx-reveal-list { gap: 6px; margin-top: 8px; }
+.ins-deck .ins-teaching-copy .insx-reveal-list li { min-height: 0; padding: 7px 12px 7px 34px; font-size: clamp(0.82rem, 0.95vw, 1.02rem); line-height: 1.22; }
+.ins-deck .ins-teaching-copy .insx-reveal-list li::before { top: 13px; }
+.ins-deck .ins-teaching-frame > .takeaway { padding: 10px 16px; }
+.ins-deck .ins-teaching-visual { min-height: 0; overflow: hidden; }
+.ins-deck .ins-application-visual { min-height: 0; align-content: center; gap: 8px; }
+.ins-deck .ins-application-visual .ins-mission-scene { min-height: clamp(150px, 24vh, 260px); }
+.ins-deck .ins-application-visual .insx-card-grid { width: 100%; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; }
+.ins-deck .ins-application-visual .insx-card-grid article { min-height: 0; padding: 6px 8px; gap: 3px; }
+.ins-deck .ins-application-visual .insx-card-grid svg { display: none; }
+.ins-deck .ins-application-visual .insx-card-grid strong { font-size: clamp(0.7rem, 0.74vw, 0.86rem); }
+.ins-deck .ins-application-visual .insx-card-grid p { display: none; }
+.ins-deck .ins-teaching-frame .ins-mission-scene { min-height: clamp(210px, 34vh, 320px); }
+.ins-deck .ins-teaching-frame .ins-node-row article {
+  min-height: 0;
+  padding: 9px 10px;
+}
+.ins-deck .ins-teaching-frame .ins-attacker-card {
+  padding: 9px 12px;
+}
+.ins-deck .module2-card-grid.ins-cards {
+  width: min(100%, 720px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.ins-deck .module2-card {
+  min-height: 0;
+  display: grid;
+  align-content: center;
+  gap: 5px;
+  padding: 10px 12px;
+}
+.ins-deck .module2-card-icon {
+  display: grid;
+  place-items: center;
+  min-height: 24px;
+}
+.ins-deck .module2-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+.ins-deck .module2-card strong {
+  font-size: clamp(0.84rem, 0.95vw, 1.04rem);
+  line-height: 1.12;
+}
+.ins-deck .module2-card p {
+  margin: 0;
+  font-size: clamp(0.74rem, 0.84vw, 0.92rem);
+  line-height: 1.18;
+}
+
+@media (max-height: 760px) {
+  .ins-deck .layout-visual-first { gap: 10px; }
+  .ins-deck .layout-visual-first .takeaway,
+  .ins-deck .layout-two .takeaway,
+  .ins-deck .compare-footer .takeaway {
+    padding: 8px 12px;
+  }
+  .ins-deck .takeaway-label {
+    margin-bottom: 5px;
+    font-size: 0.68rem;
+  }
+  .ins-deck .takeaway-text {
+    font-size: clamp(0.88rem, 0.98vw, 1.06rem);
+    line-height: 1.25;
+  }
+  .ins-deck .layout-visual-first .insx-card-grid {
+    width: 100%;
+    gap: 8px;
+  }
+  .ins-deck .layout-visual-first .insx-card-grid article {
+    min-height: 0;
+    padding: 9px 11px;
+  }
+  .ins-deck .layout-visual-first .insx-card-grid strong {
+    font-size: clamp(0.82rem, 0.9vw, 1rem);
+  }
+  .ins-deck .layout-visual-first .insx-card-grid p {
+    font-size: clamp(0.72rem, 0.8vw, 0.88rem);
+    line-height: 1.18;
+  }
+  .ins-deck .layout-copy .insx-reveal-list {
+    gap: 5px;
+    margin-top: 8px;
+  }
+  .ins-deck .layout-copy .insx-reveal-list li {
+    min-height: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: clamp(0.78rem, 0.9vw, 0.98rem);
+    line-height: 1.18;
+  }
+  .ins-deck .visual-panel {
+    padding: 12px 14px;
+  }
+  .ins-deck .visual-panel-body {
+    min-height: 0;
+  }
+  .ins-deck .module2-card-grid.ins-cards {
+    gap: 7px;
+  }
+  .ins-deck .module2-card {
+    padding: 8px 10px;
+  }
+  .ins-deck .module2-card p {
+    font-size: clamp(0.7rem, 0.78vw, 0.84rem);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   12. Accessibility — respect reduced motion
+   ------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .ins-deck .ins-mission-lines .packet {
+    display: none;
+  }
+
+  .ins-deck *,
+  .ins-deck *::before,
+  .ins-deck *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

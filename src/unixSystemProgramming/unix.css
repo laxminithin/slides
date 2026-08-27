@@ -1,0 +1,1306 @@
+/* Data Structures — cream/navy teaching deck */
+
+.unix-system-programming-deck,
+.unix-deck {
+  --unix-ink: #102033;
+  --unix-muted: #526079;
+  --unix-cream: #fffaf0;
+  --unix-paper: #faf7f0;
+  --unix-navy: #102033;
+  --unix-data: #2563eb;
+  --unix-active: #d97706;
+  --unix-pointer: #7c3aed;
+  --unix-ok: #16a34a;
+  --unix-danger: #dc2626;
+  --unix-path: #0d9488;
+  --unix-sky: #eaf2ff;
+  --unix-line: rgba(16, 32, 51, 0.12);
+  --unix-shadow: 0 16px 40px rgba(16, 32, 51, 0.1);
+  --unix-module: #2563eb;
+  --accent: #2563eb;
+  --accent-soft: #7c3aed;
+  --card-accent: #2563eb;
+  color: var(--unix-ink);
+}
+
+.unix-system-programming-deck[data-unix-module="1"] { --unix-module: #2563eb; --accent: #2563eb; }
+.unix-system-programming-deck[data-unix-module="2"] { --unix-module: #d97706; --accent: #d97706; }
+.unix-system-programming-deck[data-unix-module="3"] { --unix-module: #7c3aed; --accent: #7c3aed; }
+.unix-system-programming-deck[data-unix-module="4"] { --unix-module: #0d9488; --accent: #0d9488; }
+.unix-system-programming-deck[data-unix-module="5"] { --unix-module: #16a34a; --accent: #16a34a; }
+
+.module-cover.unix-system-programming { --card-accent: #2563eb; }
+
+.unix-system-programming-deck .slide-frame {
+  background:
+    radial-gradient(920px 460px at 6% -18%, rgba(37, 99, 235, 0.1), transparent 58%),
+    radial-gradient(720px 380px at 96% 0%, rgba(217, 119, 6, 0.07), transparent 54%),
+    radial-gradient(540px 280px at 70% 110%, rgba(13, 148, 136, 0.07), transparent 50%),
+    linear-gradient(165deg, #fffcf7 0%, #fffaf0 52%, #faf7f0 100%);
+}
+
+.unix-system-programming-deck .slide-frame::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    radial-gradient(circle at 18% 28%, rgba(37, 99, 235, 0.14) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 62% 18%, rgba(217, 119, 6, 0.12) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 78% 72%, rgba(124, 58, 237, 0.12) 0 1px, transparent 1.6px);
+  background-size: 180px 140px, 220px 160px, 160px 120px;
+  mix-blend-mode: multiply;
+}
+
+.unix-system-programming-deck[data-unix-module="2"] .slide-frame::after { opacity: 0.2; }
+.unix-system-programming-deck[data-unix-module="3"] .slide-frame::after { opacity: 0.2; }
+.unix-system-programming-deck[data-unix-module="4"] .slide-frame::after { opacity: 0.18; }
+.unix-system-programming-deck[data-unix-module="5"] .slide-frame::after { opacity: 0.18; }
+
+.unix-system-programming-deck .slide-header-copy .slide-kicker {
+  color: var(--unix-module);
+}
+
+.unix-system-programming-deck .slide-header-copy .slide-title {
+  font-size: clamp(34px, 2.7vw, 48px);
+  line-height: 1.14;
+  padding-bottom: 4px;
+  overflow: visible;
+  color: var(--unix-navy);
+}
+
+/* ── Stage shell ── */
+.unix-stage {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px 16px;
+  box-sizing: border-box;
+}
+
+.unix-story {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.unix-story span {
+  font-size: clamp(10px, 0.85vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--unix-muted);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+.unix-story span.lit { opacity: 0.8; color: var(--unix-navy); }
+.unix-story span.now {
+  opacity: 1;
+  color: var(--unix-module);
+  transform: translateX(2px);
+}
+
+.unix-copy {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.unix-visual,
+.unix-visual-b {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+.unix-footer-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  min-width: 0;
+}
+.unix-takeaway,
+.unix-exam {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.35;
+}
+.unix-takeaway strong { color: var(--unix-ok); }
+.unix-exam strong {
+  color: var(--unix-active);
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+}
+
+/* ── Compositions ── */
+.unix-split-right {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(240px, 0.78fr) minmax(380px, 1.22fr);
+  grid-template-rows: 1fr auto;
+}
+/* Explicit placement so copy/visual don't collapse into the story column when
+   a slide renders without a <story> rail (e.g. the example beats). */
+.unix-split-right .unix-story { grid-row: 1 / 3; grid-column: 1; }
+.unix-split-right .unix-copy { grid-column: 2; }
+.unix-split-right .unix-visual { grid-column: 3; }
+.unix-split-right .unix-footer-band { grid-column: 2 / 4; }
+
+/* Algorithm beat: visual is the hero (left), algorithm/dry-run rail (right).
+   Explicit row/col placement + align-items:stretch gives BOTH cells the full
+   row height — without it the aspect-locked SVG collapsed the visual to its
+   intrinsic height and the copy cell shrank, clipping the dry-run panel. */
+.unix-split-left {
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.85fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+}
+.unix-split-left .unix-story { display: none; }
+.unix-split-left .unix-visual { grid-column: 1; grid-row: 1; min-height: 0; align-self: stretch; }
+.unix-split-left .unix-copy { grid-column: 2; grid-row: 1; min-height: 0; align-self: stretch; }
+.unix-split-left .unix-footer-band { grid-column: 1 / 3; grid-row: 2; }
+
+.unix-full-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.unix-full-stage .unix-story { display: none; }
+.unix-full-stage .unix-copy { max-width: 78%; }
+.unix-full-stage .unix-visual { min-height: 0; }
+
+/* Full-width, vertically-centred layout for text-grid framing slides
+   (syllabus audit, practice, resources) — they used a half-width "board"
+   column and left the lower half empty. */
+.unix-fill {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.unix-fill .unix-story { display: none; }
+.unix-fill .unix-copy {
+  grid-row: 1;
+  align-content: safe start;
+  gap: 14px;
+  padding-block: 2px 6px;
+  overflow: hidden;
+}
+.unix-fill .unix-footer-band { grid-row: 2; }
+.unix-fill .unix-lead { font-size: clamp(22px, 1.7vw, 28px); }
+/* let the framing grids breathe across the full stage */
+.unix-fill .unix-syllabus-audit { grid-template-columns: repeat(auto-fit, minmax(184px, 1fr)); gap: 9px; }
+.unix-fill .unix-syllabus-audit article {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 11px;
+  min-height: 40px;
+}
+.unix-fill .unix-syllabus-audit strong { font-size: clamp(13px, 0.92vw, 16px); line-height: 1.18; }
+.unix-fill .unix-syllabus-audit em { font-size: 12px; }
+/* Hardened cap: the syllabus checklist must fit above the footer even in
+   the fullest module (22-24 long topic names). High-specificity + !important
+   so it wins over the platform legibility/base font unconditionally. */
+.unix-stage.unix-fill .unix-syllabus-audit strong { font-size: 15px !important; line-height: 1.16 !important; }
+.unix-stage.unix-fill .unix-syllabus-audit em { font-size: 11px !important; }
+.unix-stage.unix-fill .unix-syllabus-audit article { min-height: 38px !important; padding: 6px 10px !important; gap: 2px !important; }
+.unix-fill .unix-practice-list { gap: 18px; font-size: clamp(17px, 1.3vw, 21px); }
+.unix-fill .unix-resource-hub { gap: 18px; }
+.unix-fill .unix-resource-hub .unix-resource-card { padding: 22px; }
+.unix-fill .unix-resource-hub .unix-resource-card strong { font-size: 19px; }
+.unix-fill .unix-resource-hub .unix-resource-card span { font-size: 15px; }
+
+.unix-hero-open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.unix-hero-open .unix-story,
+.unix-hero-open .unix-copy { display: none; }
+.unix-hero-open .unix-visual { min-height: 0; }
+.unix-hero-open .unix-footer-band { justify-content: center; }
+
+.unix-showcase {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 6px;
+}
+.unix-showcase .unix-story,
+.unix-showcase .unix-copy { display: none; }
+.unix-showcase .unix-visual { grid-row: 1; min-height: 0; }
+.unix-showcase .unix-footer-band {
+  justify-content: center;
+  border-top: 1px solid var(--unix-line);
+  padding-top: 6px;
+}
+.unix-showcase .unix-takeaway { font-size: clamp(14px, 1.05vw, 17px); }
+
+.unix-board {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.unix-board .unix-story { display: none; }
+.unix-board .unix-footer-band { grid-column: 1 / 3; }
+
+.unix-inspect {
+  grid-template-columns: minmax(220px, 0.42fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.unix-inspect .unix-story { display: none; }
+.unix-inspect .unix-visual { grid-column: 2; grid-row: 1; }
+.unix-inspect .unix-footer-band { grid-column: 1 / 3; }
+
+.unix-pipeline {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.unix-pipeline .unix-story { grid-row: 1 / 4; }
+.unix-pipeline .unix-copy,
+.unix-pipeline .unix-visual,
+.unix-pipeline .unix-footer-band { grid-column: 2; }
+
+.unix-memory-first {
+  grid-template-columns: minmax(200px, 0.32fr) minmax(420px, 1.2fr);
+  grid-template-rows: 1fr auto;
+}
+.unix-memory-first .unix-story { display: none; }
+.unix-memory-first .unix-visual { grid-column: 2; grid-row: 1; }
+.unix-memory-first .unix-footer-band { grid-column: 1 / 3; }
+
+.unix-algo-board {
+  grid-template-columns: minmax(260px, 0.48fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.unix-algo-board .unix-story { display: none; }
+.unix-algo-board .unix-footer-band { grid-column: 1 / 3; }
+
+.unix-code-split {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-rows: 1fr auto;
+}
+.unix-code-split .unix-story { display: none; }
+.unix-code-split .unix-footer-band { grid-column: 1 / 3; }
+
+.unix-system-programming-deck .slide-frame[data-composition="full-stage"] .unix-visual,
+.unix-system-programming-deck .slide-frame[data-composition="hero-open"] .unix-visual,
+.unix-system-programming-deck .slide-frame[data-composition="memory-first"] .unix-visual,
+.unix-system-programming-deck .slide-frame[data-composition="showcase"] .unix-visual {
+  min-height: 0;
+}
+.unix-full-stage .unix-visual { min-height: 62%; }
+.unix-hero-open .unix-visual,
+.unix-memory-first .unix-visual { flex: 1 1 auto; }
+
+/* ── Typography blocks ── */
+.unix-lead {
+  margin: 0;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.38;
+  font-weight: 650;
+  color: var(--unix-navy);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.unix-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.34;
+}
+.unix-points li { padding-left: 2px; }
+.unix-points li::marker { color: var(--unix-module); font-weight: 800; }
+
+.unix-definition {
+  background: #fff;
+  border: 1px solid var(--unix-line);
+  border-left: 5px solid var(--unix-data);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--unix-shadow);
+}
+.unix-definition span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--unix-data);
+}
+.unix-definition strong {
+  display: block;
+  font-size: clamp(20px, 1.6vw, 28px);
+  margin: 4px 0;
+}
+.unix-definition p {
+  margin: 0;
+  font-size: clamp(15px, 1.1vw, 18px);
+}
+
+.unix-callout {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--unix-line);
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+}
+.unix-callout span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+}
+.unix-callout p {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.unix-callout-warn { border-left: 4px solid var(--unix-active); }
+.unix-callout-fault { border-left: 4px solid var(--unix-danger); }
+.unix-callout-ok { border-left: 4px solid var(--unix-ok); }
+.unix-callout-idea { border-left: 4px solid var(--unix-data); }
+.unix-callout-know { border-left: 4px solid var(--unix-pointer); }
+
+/* Scene shell */
+.unix-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.72), rgba(255, 250, 240, 0.28) 62%, transparent 78%);
+  overflow: hidden;
+  position: relative;
+}
+.unix-scene svg,
+.unix-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Code panel — light, readable (≥19px) */
+.unix-code-panel {
+  background: #ffffff;
+  border: 1.5px solid var(--unix-line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--unix-shadow);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.unix-code-line {
+  font-size: clamp(19px, 1.45vw, 22px);
+  line-height: 1.55;
+  color: var(--unix-navy);
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: pre;
+}
+.unix-code-line.is-current {
+  background: rgba(217, 119, 6, 0.14);
+  color: var(--unix-active);
+  box-shadow: inset 3px 0 0 var(--unix-active);
+}
+
+/* Linked list / stack / queue / tree helpers */
+.unix-ll-node { transform-box: fill-box; }
+.unix-stack-cell,
+.unix-queue-cell,
+.unix-tree-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ── Concept-native motion (unixv-*) ──
+   State-change animations — not fade-in as primary teaching motion. */
+
+@keyframes unixv-allocate {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  55% { transform: scale(0.96); }
+  70% { transform: scale(1.03); }
+}
+@keyframes unixv-shift {
+  0%, 12% { transform: translateX(0); }
+  45%, 55% { transform: translateX(28px); }
+  88%, 100% { transform: translateX(0); }
+}
+@keyframes unixv-insert {
+  0%, 15% { transform: translateY(-28px) scale(0.85); opacity: 0.35; }
+  40% { transform: translateY(0) scale(1.06); opacity: 1; }
+  55%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes unixv-delete {
+  0%, 20% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(0.92) translateY(6px); opacity: 0.45; }
+  70%, 100% { transform: scale(0.85); opacity: 0.2; }
+}
+@keyframes unixv-push {
+  0%, 10% { transform: translateY(-40px); opacity: 0.4; }
+  35% { transform: translateY(4px); opacity: 1; }
+  50%, 100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes unixv-pop {
+  0%, 15% { transform: translateY(0); opacity: 1; }
+  45% { transform: translateY(-36px); opacity: 0.35; }
+  70%, 100% { transform: translateY(-8px); opacity: 0.55; }
+}
+@keyframes unixv-enqueue {
+  0%, 12% { transform: translateX(40px); opacity: 0.35; }
+  40% { transform: translateX(-4px); opacity: 1; }
+  55%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes unixv-dequeue {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  45% { transform: translateX(-48px); opacity: 0.3; }
+  70%, 100% { transform: translateX(-12px); opacity: 0.5; }
+}
+@keyframes unixv-wrap {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(18deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(4deg); }
+}
+@keyframes unixv-pointer {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -24; }
+}
+@keyframes unixv-rewire {
+  0%, 20% { stroke-dashoffset: 40; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+@keyframes unixv-traverse {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -36; }
+}
+@keyframes unixv-search {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(20px); }
+  75% { transform: translateX(10px); }
+}
+@keyframes unixv-swap {
+  0%, 100% { transform: translate(0, 0); }
+  35% { transform: translate(14px, -10px); }
+  70% { transform: translate(-14px, 10px); }
+}
+@keyframes unixv-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.62; }
+}
+@keyframes unixv-wave {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.07); }
+  70% { transform: scale(1.02); }
+}
+@keyframes unixv-descend {
+  0%, 10% { transform: translate(0, -24px); opacity: 0.5; }
+  45% { transform: translate(36px, 40px); opacity: 1; }
+  70% { transform: translate(72px, 90px); opacity: 1; }
+  100% { transform: translate(72px, 90px); opacity: 0.85; }
+}
+@keyframes unixv-return {
+  0%, 15% { transform: translate(40px, 60px); opacity: 0.6; }
+  55% { transform: translate(10px, 10px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+.unixv-allocate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-allocate 2.4s ease-in-out infinite;
+}
+.unixv-shift {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-shift 2.8s ease-in-out infinite;
+}
+.unixv-insert {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-insert 2.6s ease-out infinite;
+}
+.unixv-delete {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-delete 2.8s ease-in-out infinite;
+}
+.unixv-push {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-push 2.4s ease-out infinite;
+}
+.unixv-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-pop 2.4s ease-in infinite;
+}
+.unixv-enqueue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-enqueue 2.5s ease-out infinite;
+}
+.unixv-dequeue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-dequeue 2.5s ease-in infinite;
+}
+.unixv-wrap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-wrap 3s ease-in-out infinite;
+}
+.unixv-pointer {
+  stroke-dasharray: 10 8;
+  animation: unixv-pointer 1.4s linear infinite;
+}
+.unixv-rewire {
+  stroke-dasharray: 12 10;
+  animation: unixv-rewire 2.2s ease-in-out infinite;
+}
+.unixv-traverse {
+  stroke-dasharray: 10 8;
+  animation: unixv-traverse 1.6s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.unixv-search {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-search 2.6s ease-in-out infinite;
+}
+.unixv-swap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-swap 2.4s ease-in-out infinite;
+}
+.unixv-pulse {
+  animation: unixv-pulse 1.9s ease-in-out infinite;
+}
+.unixv-wave {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-wave 2.2s ease-in-out infinite;
+}
+.unixv-descend {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-descend 3.2s ease-in-out infinite;
+}
+.unixv-return {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-return 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .unixv-allocate, .unixv-shift, .unixv-insert, .unixv-delete,
+  .unixv-push, .unixv-pop, .unixv-enqueue, .unixv-dequeue,
+  .unixv-wrap, .unixv-pointer, .unixv-rewire, .unixv-traverse,
+  .unixv-search, .unixv-swap, .unixv-pulse, .unixv-wave,
+  .unixv-descend, .unixv-return {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Kit components ── */
+.unix-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 750;
+  color: var(--unix-navy);
+}
+.unix-flow i { color: var(--unix-module); font-style: normal; font-weight: 900; }
+
+.unix-algo-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+  font-size: clamp(15px, 1.15vw, 19px);
+  line-height: 1.4;
+}
+.unix-algo-steps li::marker { color: var(--unix-module); font-weight: 800; }
+
+.unix-complexity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--unix-line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.unix-complexity > div {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+.unix-complexity span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--unix-muted);
+}
+.unix-complexity strong {
+  font-size: clamp(18px, 1.5vw, 26px);
+  color: var(--unix-data);
+}
+.unix-complexity > p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--unix-muted);
+}
+
+.unix-code-panel span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--unix-module);
+  margin-bottom: 8px;
+  font-family: system-ui, sans-serif;
+}
+.unix-code-panel pre {
+  margin: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.unix-code-panel code {
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.45;
+  color: var(--unix-navy);
+  font-weight: 650;
+}
+
+.unix-dryrun {
+  display: grid;
+  gap: 8px;
+}
+.unix-dryrun section {
+  background: #fff;
+  border: 1px solid var(--unix-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.unix-dryrun span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--unix-module);
+}
+.unix-dryrun p { margin: 4px 0 0; font-size: 15px; }
+.unix-dryrun ol {
+  margin: 4px 0 0;
+  padding-left: 1.15em;
+  font-size: 14px;
+  display: grid;
+  gap: 3px;
+}
+
+.unix-term-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.unix-term-chips span {
+  background: var(--unix-sky);
+  color: var(--unix-data);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.unix-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.unix-roadmap article {
+  background: #fff;
+  border: 1px solid var(--unix-line);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+.unix-roadmap b { color: var(--unix-module); font-size: 12px; }
+.unix-roadmap strong { font-size: 14px; line-height: 1.25; }
+
+.unix-checkpoint-sheet {
+  display: grid;
+  gap: 7px;
+}
+.unix-checkpoint-sheet article {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.72fr) auto 1.85fr;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--unix-line);
+  border-radius: 12px;
+  padding: 7px 12px;
+}
+.unix-checkpoint-sheet code {
+  font-size: clamp(16px, 1.2vw, 21px);
+  font-weight: 800;
+  color: var(--unix-data);
+}
+.unix-checkpoint-sheet span { font-size: 12.5px; line-height: 1.25; color: var(--unix-muted); }
+
+.unix-syllabus-audit {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+.unix-syllabus-audit article {
+  background: #fff;
+  border: 1px solid var(--unix-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.unix-syllabus-audit strong { font-size: 14px; }
+.unix-syllabus-audit em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--unix-ok);
+}
+
+.unix-practice-list {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(15px, 1.15vw, 18px);
+}
+.unix-practice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.unix-practice-list em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--unix-active);
+  white-space: nowrap;
+}
+
+.unix-review-map {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 12px;
+}
+.unix-review-map h3 {
+  margin: 0;
+  font-size: clamp(22px, 2vw, 32px);
+  color: var(--unix-navy);
+}
+.unix-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.unix-review-topics span {
+  background: #fff;
+  border: 1.5px solid var(--unix-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.unix-resource-hub {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.unix-resource-hub a {
+  display: grid;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid var(--unix-line);
+  border-radius: 14px;
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--unix-shadow);
+}
+.unix-resource-hub a:hover { border-color: var(--unix-module); }
+.unix-resource-hub strong { font-size: 16px; }
+.unix-resource-hub span { font-size: 13px; color: var(--unix-muted); }
+.unix-study-tip {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background: var(--unix-sky);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--unix-navy);
+}
+
+.unix-resource-hub .unix-resource-card {
+  display: grid;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid var(--unix-line);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: var(--unix-shadow);
+}
+.unix-resource-hub .unix-resource-card strong { font-size: 16px; }
+.unix-resource-hub .unix-resource-card span { font-size: 13px; color: var(--unix-muted); }
+
+/* ── SEPM instructional motion (classroom-paced) ── */
+@keyframes unixv-flow-node {
+  0%, 100% { opacity: 0.55; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-4px); }
+}
+@keyframes unixv-flow-arrow {
+  0% { stroke-dashoffset: 24; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.4; }
+}
+@keyframes unixv-feedback {
+  0% { stroke-dashoffset: 40; opacity: 0.45; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -40; opacity: 0.45; }
+}
+@keyframes unixv-waterfall {
+  0% { opacity: 0; transform: translate(-12px, -18px); }
+  30%, 100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes unixv-cost-curve {
+  0% { stroke-dasharray: 0 800; }
+  100% { stroke-dasharray: 800 0; }
+}
+@keyframes unixv-cost-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+@keyframes unixv-grow {
+  0% { opacity: 0; transform: scaleX(0.55); transform-origin: center; }
+  45%, 100% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes unixv-spiral {
+  0% { opacity: 0.15; }
+  40% { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+@keyframes unixv-concurrent {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+@keyframes unixv-up-line {
+  0% { stroke-dasharray: 0 1200; }
+  100% { stroke-dasharray: 1200 0; }
+}
+@keyframes unixv-orbit {
+  0%, 100% { opacity: 0.65; }
+  50% { opacity: 1; }
+}
+@keyframes unixv-token {
+  0% { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateY(-170px) rotate(-360deg); }
+}
+@keyframes unixv-backlog {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(210px); }
+  70% { transform: translateX(420px); }
+  100% { transform: translateX(630px); }
+}
+@keyframes unixv-xp-step {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+@keyframes unixv-bar {
+  0% { transform: scaleX(0.2); transform-origin: left center; opacity: 0.4; }
+  50%, 100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes unixv-gate {
+  0%, 100% { opacity: 0.7; }
+  40% { opacity: 1; }
+}
+@keyframes unixv-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  40%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes unixv-pulse-soft {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.unixv-flow-node { animation: unixv-flow-node 3.2s ease-in-out infinite; }
+.unixv-flow-arrow { stroke-dasharray: 10 8; animation: unixv-flow-arrow 2.8s linear infinite; }
+.unixv-feedback { stroke-dasharray: 10 8; animation: unixv-feedback 3.6s linear infinite; }
+.unixv-waterfall { animation: unixv-waterfall 3.5s ease-out infinite; }
+.unixv-cost-curve { animation: unixv-cost-curve 4s ease-out infinite; }
+.unixv-cost-dot { animation: unixv-cost-dot 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.unixv-grow { animation: unixv-grow 3.8s ease-out infinite; }
+.unixv-spiral { animation: unixv-spiral 3.2s ease-in-out infinite; }
+.unixv-concurrent { animation: unixv-concurrent 2.8s ease-in-out infinite; }
+.unixv-up-line { animation: unixv-up-line 4.5s ease-out infinite; }
+.unixv-orbit { animation: unixv-orbit 2.6s ease-in-out infinite; }
+.unixv-token { animation: unixv-token 12s linear infinite; transform-box: fill-box; transform-origin: 450px 260px; }
+.unixv-backlog-card { animation: unixv-backlog 10s ease-in-out infinite; }
+.unixv-xp-step { animation: unixv-xp-step 3s ease-in-out infinite; }
+.unixv-bar { animation: unixv-bar 3.4s ease-out infinite; }
+.unixv-gate { animation: unixv-gate 2.8s ease-in-out infinite; }
+.unixv-fade-in { animation: unixv-fade-in 2.4s ease-out both; }
+.unixv-pulse { animation: unixv-pulse-soft 2.4s ease-in-out infinite; }
+.unixv-step { animation: unixv-pulse-soft 2.8s ease-in-out infinite; }
+.unixv-actor { animation: unixv-pulse-soft 3s ease-in-out infinite; }
+.unixv-usecase-step { animation: unixv-flow-node 2.8s ease-in-out infinite; }
+.unixv-system-box { animation: unixv-pulse-soft 2.6s ease-in-out infinite; }
+.unixv-risk-cell { animation: unixv-pulse-soft 3.2s ease-in-out infinite; }
+.unixv-risk-dot { animation: unixv-cost-dot 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.unixv-delay-0 { animation-delay: 0s; }
+.unixv-delay-1 { animation-delay: 0.35s; }
+.unixv-delay-2 { animation-delay: 0.7s; }
+.unixv-delay-3 { animation-delay: 1.05s; }
+.unixv-delay-4 { animation-delay: 1.4s; }
+
+/* ── Unix teaching motion (architecture / shell / process / IPC) ── */
+@keyframes unixv-arch-layer {
+  0%, 100% { opacity: 0.72; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-3px); }
+}
+@keyframes unixv-arch-flow {
+  0% { stroke-dashoffset: 28; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -28; opacity: 0.45; }
+}
+@keyframes unixv-term-cursor {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0.15; }
+}
+@keyframes unixv-term-type {
+  0%, 15% { opacity: 0.35; }
+  40%, 100% { opacity: 1; }
+}
+@keyframes unixv-annotate {
+  0%, 20% { opacity: 0.4; transform: translateY(6px); }
+  45%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes unixv-cd-move {
+  0%, 20% { transform: translate(0, 0); }
+  45%, 70% { transform: translate(160px, 0); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes unixv-path-scan {
+  0%, 100% { opacity: 0.65; }
+  40% { opacity: 1; }
+}
+@keyframes unixv-path-probe {
+  0% { transform: translateX(0); opacity: 0.5; }
+  35% { transform: translateX(220px); opacity: 1; }
+  70% { transform: translateX(440px); opacity: 1; }
+  100% { transform: translateX(660px); opacity: 0.35; }
+}
+@keyframes unixv-perm-box {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+@keyframes unixv-perm-bit {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.06); }
+  60% { transform: scale(0.98); }
+}
+@keyframes unixv-pipe-flow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.06); }
+}
+@keyframes unixv-pipe-packet {
+  0% { transform: translateX(0); opacity: 0.3; }
+  40% { transform: translateX(110px); opacity: 1; }
+  80%, 100% { transform: translateX(220px); opacity: 0.35; }
+}
+@keyframes unixv-redir-arrow {
+  0% { stroke-dashoffset: 24; opacity: 0.45; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.45; }
+}
+@keyframes unixv-mem-region {
+  0%, 100% { opacity: 0.8; }
+  45% { opacity: 1; }
+}
+@keyframes unixv-fork-split {
+  0% { stroke-dashoffset: 40; opacity: 0.35; }
+  45% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+@keyframes unixv-fork-parent {
+  0%, 30% { opacity: 0.55; transform: translateX(0); }
+  55%, 100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes unixv-fork-child {
+  0%, 25% { opacity: 0.2; transform: translateX(-24px); }
+  55%, 100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes unixv-exec-old {
+  0%, 25% { opacity: 1; }
+  55%, 100% { opacity: 0.35; }
+}
+@keyframes unixv-exec-new {
+  0%, 25% { opacity: 0.25; transform: scale(0.92); }
+  55%, 100% { opacity: 1; transform: scale(1); }
+}
+@keyframes unixv-exec-swap {
+  0%, 100% { transform: translateX(0); }
+  40% { transform: translateX(8px); }
+  70% { transform: translateX(-4px); }
+}
+@keyframes unixv-wait-block {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+@keyframes unixv-wait-link {
+  0% { stroke-dashoffset: 30; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -30; opacity: 0.4; }
+}
+@keyframes unixv-wait-status {
+  0%, 35% { opacity: 0.25; transform: translateY(8px); }
+  60%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes unixv-shm-link {
+  0% { stroke-dashoffset: 28; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -28; opacity: 0.45; }
+}
+@keyframes unixv-shm-seg {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+@keyframes unixv-shm-packet {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(18px); }
+}
+@keyframes unixv-signal-fly {
+  0% { transform: translateX(-40px); opacity: 0.25; }
+  40% { transform: translateX(0); opacity: 1; }
+  70% { transform: translateX(40px); opacity: 1; }
+  100% { transform: translateX(80px); opacity: 0.3; }
+}
+@keyframes unixv-signal-target {
+  0%, 45% { opacity: 0.7; }
+  60% { opacity: 1; }
+  100% { opacity: 0.85; }
+}
+@keyframes unixv-daemon-step {
+  0%, 100% { opacity: 0.65; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-4px); }
+}
+@keyframes unixv-daemon-flow {
+  0% { stroke-dashoffset: 24; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.4; }
+}
+@keyframes unixv-daemon-detach {
+  0%, 30% { opacity: 0.2; transform: translateY(10px); }
+  60%, 100% { opacity: 1; transform: translateY(0); }
+}
+
+.unixv-arch-layer {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-arch-layer 3s ease-in-out infinite;
+}
+.unixv-arch-flow {
+  stroke-dasharray: 10 8;
+  animation: unixv-arch-flow 2.6s linear infinite;
+}
+.unixv-term-cursor {
+  animation: unixv-term-cursor 1.1s steps(1) infinite;
+}
+.unixv-term-type {
+  animation: unixv-term-type 2.8s ease-out infinite;
+}
+.unixv-annotate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-annotate 3s ease-out infinite;
+}
+.unixv-cd-move {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-cd-move 4.5s ease-in-out infinite;
+}
+.unixv-path-scan {
+  animation: unixv-path-scan 2.8s ease-in-out infinite;
+}
+.unixv-path-probe {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-path-probe 4.2s ease-in-out infinite;
+}
+.unixv-perm-box {
+  animation: unixv-perm-box 2.8s ease-in-out infinite;
+}
+.unixv-perm-bit {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-perm-bit 2.4s ease-in-out infinite;
+}
+.unixv-pipe-flow {
+  animation: unixv-pipe-flow 2.6s ease-in-out infinite;
+}
+.unixv-pipe-packet {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-pipe-packet 2.8s ease-in-out infinite;
+}
+.unixv-redir-arrow {
+  stroke-dasharray: 10 8;
+  animation: unixv-redir-arrow 2.5s linear infinite;
+}
+.unixv-mem-region {
+  animation: unixv-mem-region 3s ease-in-out infinite;
+}
+.unixv-fork-split {
+  stroke-dasharray: 12 10;
+  animation: unixv-fork-split 2.8s ease-in-out infinite;
+}
+.unixv-fork-parent {
+  animation: unixv-fork-parent 3.2s ease-out infinite;
+}
+.unixv-fork-child {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-fork-child 3.2s ease-out infinite;
+}
+.unixv-exec-old {
+  animation: unixv-exec-old 3.4s ease-in-out infinite;
+}
+.unixv-exec-new {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-exec-new 3.4s ease-out infinite;
+}
+.unixv-exec-swap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-exec-swap 2.2s ease-in-out infinite;
+}
+.unixv-wait-block {
+  animation: unixv-wait-block 2.6s ease-in-out infinite;
+}
+.unixv-wait-link {
+  stroke-dasharray: 10 8;
+  animation: unixv-wait-link 2.4s linear infinite;
+}
+.unixv-wait-status {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-wait-status 3.2s ease-out infinite;
+}
+.unixv-shm-link {
+  stroke-dasharray: 10 8;
+  animation: unixv-shm-link 2.6s linear infinite;
+}
+.unixv-shm-seg {
+  animation: unixv-shm-seg 2.8s ease-in-out infinite;
+}
+.unixv-shm-packet {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-shm-packet 2.2s ease-in-out infinite;
+}
+.unixv-signal-fly {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-signal-fly 3s ease-in-out infinite;
+}
+.unixv-signal-target {
+  animation: unixv-signal-target 3s ease-in-out infinite;
+}
+.unixv-daemon-step {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-daemon-step 3s ease-in-out infinite;
+}
+.unixv-daemon-flow {
+  stroke-dasharray: 10 8;
+  animation: unixv-daemon-flow 2.5s linear infinite;
+}
+.unixv-daemon-detach {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: unixv-daemon-detach 3.6s ease-out infinite;
+}
+
+.unix-terminal { transform-box: fill-box; }
+
+.unix-scene, .unix-showcase-scene { width: 100%; height: 100%; min-height: 0; }
+.unix-svg { width: 100%; height: 100%; display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .unix-system-programming-deck [class*="unixv-"] {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+
+/* Compact headers so teaching body stays >=78% at 1080p */
+.unix-system-programming-deck .slide-header-copy .slide-title {
+  font-size: clamp(22px, 2.1vw, 30px) !important;
+  line-height: 1.15 !important;
+  max-height: 2.45em;
+  overflow: hidden;
+}
+.unix-system-programming-deck .slide-header-copy .slide-kicker {
+  font-size: 12px !important;
+  letter-spacing: 0.08em;
+}
+
+/* Dense algorithm slides (real algo steps + dry-run trace) must fit the
+   algo-board left column at 1280×720. Tighten only in that composition. */
+.unix-algo-board .unix-algo-steps { gap: 4px; font-size: clamp(14px, 1.02vw, 17px); line-height: 1.3; }
+.unix-algo-board .unix-dryrun { gap: 5px; }
+.unix-algo-board .unix-dryrun section { padding: 6px 11px; }
+.unix-algo-board .unix-dryrun ol { gap: 2px; font-size: 13.5px; }
+.unix-algo-board .unix-dryrun p { font-size: 14px; }
+.unix-algo-board .unix-lead { font-size: clamp(16px, 1.25vw, 20px); }

@@ -1,0 +1,277 @@
+.first-year-science-deck {
+  --science-ink: #172033;
+  --science-physics: #2563eb;
+  --science-chem: #0f766e;
+  --science-amber: #b45309;
+}
+
+.first-year-science-deck .slide-frame {
+  background:
+    linear-gradient(135deg, rgba(15, 118, 110, 0.08), transparent 32%),
+    linear-gradient(315deg, rgba(37, 99, 235, 0.07), transparent 38%),
+    #fbfefa;
+}
+
+.first-year-science-deck .fy-stage {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  place-items: stretch;
+  background: transparent;
+}
+
+.first-year-science-deck .fy-frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  grid-template-rows: 0 minmax(0, 1fr) 0;
+}
+
+.first-year-science-deck .fy-header,
+.first-year-science-deck .fy-footer {
+  display: none;
+}
+
+.first-year-science-deck .fy-body {
+  grid-row: 2;
+  height: 100%;
+  padding: 0;
+  grid-template-columns: 1fr !important;
+  gap: clamp(0.6rem, 1vw, 1rem);
+  min-width: 0;
+  min-height: 0;
+}
+
+.first-year-science-deck .fy-copy-zone,
+.first-year-science-deck .fy-visual-zone {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+}
+
+.science-hero-visual {
+  width: min(100%, 84rem);
+  height: 100%;
+  min-height: 30rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(19rem, 0.42fr);
+  gap: clamp(0.8rem, 1.3vw, 1.2rem);
+  align-items: center;
+}
+
+.science-svg,
+.first-year-science-deck .fy-graph,
+.first-year-science-deck .fy-concept-map,
+.first-year-science-deck .fy-waveform {
+  width: min(100%, 62rem);
+  height: min(100%, 34rem);
+  min-height: 24rem;
+  filter: drop-shadow(0 18px 26px rgba(23, 32, 51, 0.14));
+}
+
+.science-svg rect:first-child,
+.science-svg > rect {
+  fill: rgba(255, 255, 255, 0.9);
+  stroke: rgba(23, 32, 51, 0.14);
+  stroke-width: 2;
+}
+
+.science-svg text {
+  font-size: 24px;
+  font-weight: 800;
+  fill: var(--science-ink);
+}
+
+.science-wire,
+.science-flow,
+.science-bridge,
+.science-bond,
+.science-wave,
+.science-transition {
+  fill: none;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.science-wire {
+  stroke: #334155;
+  stroke-dasharray: 18 12;
+  animation: scienceTrace 2.4s linear infinite;
+}
+.science-bridge { stroke: #38bdf8; stroke-dasharray: 10 10; }
+.science-flow {
+  stroke: var(--science-physics);
+  stroke-dasharray: 14 14;
+  animation: scienceTrace 2.2s linear infinite;
+}
+.science-flow.ion,
+.science-flow.water { stroke: var(--science-chem); }
+.science-flow.electron { stroke: #b45309; }
+.science-electrode { stroke: #475569; stroke-width: 15; stroke-linecap: round; }
+.science-electrode.cathode { stroke: #0f766e; }
+.science-liquid { fill: rgba(56, 189, 248, 0.25); stroke: #0891b2; stroke-width: 3; }
+.science-site { fill: #fee2e2; stroke: #dc2626; stroke-width: 4; }
+.science-site.cathode { fill: #dcfce7; stroke: #16a34a; }
+.science-ion,
+.science-carrier {
+  fill: #fde68a;
+  stroke: #b45309;
+  stroke-width: 4;
+  animation: sciencePulse 1.7s ease-in-out infinite;
+}
+.science-monomer circle { fill: #dcfce7; stroke: #0f766e; stroke-width: 5; }
+.science-monomer text { font-size: 34px; fill: #0f766e; }
+.science-bond { stroke: #0f766e; stroke-dasharray: 260; stroke-dashoffset: 260; animation: scienceDraw 1.6s ease forwards; }
+.science-wave { stroke: #2563eb; stroke-dasharray: 900; stroke-dashoffset: 900; animation: scienceDraw 2.4s ease forwards; }
+.science-level { stroke: #334155; stroke-width: 7; }
+.science-transition { stroke: #b45309; marker-end: url(#arrow); animation: scienceTrace 2s linear infinite; }
+.science-band { fill: #dbeafe; stroke: #2563eb; stroke-width: 4; }
+.science-band.valence { fill: #dcfce7; stroke: #0f766e; }
+
+.science-topic-map {
+  width: min(100%, 84rem);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.65rem, 1vw, 1rem);
+}
+
+.science-topic-map article {
+  min-height: 5.4rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.8rem;
+  align-items: center;
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: 2px solid rgba(15, 118, 110, 0.18);
+  background: rgba(255,255,255,0.88);
+  animation: fyRise 0.7s ease both;
+  animation-delay: calc(var(--i) * 80ms);
+}
+
+.science-topic-map strong {
+  font-size: clamp(1.4rem, 2vw, 2.1rem);
+  color: var(--science-chem);
+}
+
+.science-topic-map span {
+  font-size: clamp(1rem, 1.28vw, 1.45rem);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.science-wave-stack {
+  width: min(100%, 62rem);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.science-wave-legend {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  font-size: clamp(1rem, 1.2vw, 1.35rem);
+  font-weight: 800;
+}
+
+.science-wave-legend span {
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 0.6rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.soil-layer { fill: #d9f99d; stroke: #4d7c0f; stroke-width: 3; }
+.soil-layer.layer-1 { fill: #a3e635; }
+.soil-layer.layer-2 { fill: #facc15; }
+.soil-layer.layer-3 { fill: #ca8a04; }
+
+.first-year-science-deck .fy-equation-stepper,
+.first-year-science-deck .fy-numerical-board,
+.first-year-science-deck .fy-process,
+.first-year-science-deck .fy-comparison {
+  width: min(100%, 84rem);
+  min-height: clamp(21rem, 48vh, 34rem);
+  align-content: center;
+}
+
+.first-year-science-deck .fy-callout {
+  width: min(100%, 62rem);
+  min-height: clamp(18rem, 42vh, 30rem);
+  display: grid;
+  align-content: center;
+}
+
+.first-year-science-deck .fy-callout strong {
+  font-size: clamp(1.7rem, 2.5vw, 3rem);
+}
+
+.first-year-science-deck .fy-callout span {
+  font-size: clamp(1.35rem, 1.8vw, 2rem);
+  line-height: 1.2;
+}
+
+@keyframes scienceDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes scienceTrace {
+  to { stroke-dashoffset: -160; }
+}
+
+@keyframes sciencePulse {
+  50% { transform: scale(1.18); transform-origin: center; }
+}
+
+@media (max-width: 1320px) {
+  .science-hero-visual {
+    grid-template-columns: minmax(0, 1.08fr) minmax(16rem, 0.46fr);
+    min-height: 0;
+    gap: 0.55rem;
+  }
+
+  .science-svg,
+  .first-year-science-deck .fy-graph,
+  .first-year-science-deck .fy-concept-map,
+  .first-year-science-deck .fy-waveform {
+    min-height: 18rem;
+    height: min(100%, 25rem);
+  }
+
+  .science-topic-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .science-topic-map article {
+    min-height: 4.2rem;
+    padding: 0.6rem;
+  }
+
+  .science-hero-visual .fy-callout {
+    padding: 0.75rem;
+  }
+
+  .science-hero-visual .fy-callout span {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.15;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .science-flow,
+  .science-bond,
+  .science-wave,
+  .science-ion,
+  .science-carrier,
+  .science-transition {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
