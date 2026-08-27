@@ -1,0 +1,367 @@
+{
+  "existingComponentsReused": [
+    {
+      "component": "PresentationEngine / TeachingControls / FilmContinuity",
+      "path": "src/cinematic/*",
+      "reuse": "Kept the existing slide/runtime architecture; the foundation is a hidden route and standalone component package."
+    },
+    {
+      "component": "CSS/SVG animation stack",
+      "path": "existing subject CSS + SVG scene patterns",
+      "reuse": "Used CSS keyframes, SVG draw/path motion and reduced-motion fallbacks instead of adding Framer/GSAP/Three."
+    },
+    {
+      "component": "Typography and density guardrails",
+      "path": "src/presentationTypography.js; src/slideContentDensity.js; src/slideOverflowAudit.js",
+      "reuse": "Foundation tokens follow projector-safe title/body/label sizes and are validated with Playwright."
+    },
+    {
+      "component": "ChemKit, AelicScenes, JavaLivingViz, Diagrams patterns",
+      "path": "src/chemistry; src/analogElectronics; src/components",
+      "reuse": "Used the same local React/SVG component style and subject-identity model."
+    }
+  ],
+  "newComponents": [
+    {
+      "component": "First Year Foundation package",
+      "path": "src/firstYearFoundation/index.jsx",
+      "purpose": "Reusable equation, numerical, graph, geometry, code, loop, array, terminal, circuit, waveform, process, timeline, comparison, concept-map, apparatus and experiment primitives."
+    },
+    {
+      "component": "First Year Foundation stylesheet",
+      "path": "src/firstYearFoundation/foundation.css",
+      "purpose": "Classroom readability tokens, safe layouts, screen utilization guardrails, motion primitives, reduced-motion states and responsive 16:9 rules."
+    },
+    {
+      "component": "Development-only foundation playground",
+      "path": "src/firstYearFoundation/Playground.jsx",
+      "purpose": "Hidden QA harness at #/__first-year-foundation with seven representative teaching scenes."
+    },
+    {
+      "component": "Foundation QA script",
+      "path": "scripts/first-year-foundation-qa.mjs",
+      "purpose": "Playwright QA for 1920x1080, 1280x720, reduced motion, visual occupancy, overflow, animation presence and existing-route smoke checks."
+    }
+  ],
+  "improvedComponents": [
+    {
+      "component": "App route table",
+      "path": "src/main.jsx",
+      "change": "Added hidden route /__first-year-foundation; no academic subject registry, subject navigation or existing course module was changed."
+    }
+  ],
+  "componentsIntentionallyNotCreated": [
+    "No complete CAD system: only point/vector/axes/angle/projection primitives were added.",
+    "No SPICE/circuit simulator: circuit primitives show teaching behavior, not electrical simulation.",
+    "No symbolic algebra engine or external math renderer: EquationStepper supports classroom-scale transformed text; deeper rendering can be considered after Phase 3 content pressure is known.",
+    "No new animation framework: Phase 1 found CSS/SVG/react runtime sufficient.",
+    "No mass-generated First Year subjects and no recreation of Applied Chemistry for Smart Systems."
+  ],
+  "engines": [
+    {
+      "engine": "EquationStepper / DerivationAnimator",
+      "families": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "subjects": [
+        "Differential Calculus and Linear Algebra (1BMATC101)",
+        "Differential Calculus and Numerical Methods (1BMATC201)",
+        "Differential Calculus & Linear Algebra (1BMATE101)",
+        "Calculus, Laplace Transforms and Numerical Techniques (1BMATE201)",
+        "Differential Calculus and Linear Algebra (1BMATM101)",
+        "Multivariable Calculus and Numerical Methods (1BMATM201)",
+        "CALCULUS AND LINEAR ALGEBRA (1BMATS101)",
+        "NUMERICAL METHODS (1BMATS201)"
+      ],
+      "component": "EquationStepper"
+    },
+    {
+      "engine": "NumericalSolver",
+      "families": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "subjects": [
+        "Differential Calculus and Linear Algebra (1BMATC101)",
+        "Differential Calculus and Numerical Methods (1BMATC201)",
+        "Differential Calculus & Linear Algebra (1BMATE101)",
+        "Calculus, Laplace Transforms and Numerical Techniques (1BMATE201)",
+        "Differential Calculus and Linear Algebra (1BMATM101)",
+        "Multivariable Calculus and Numerical Methods (1BMATM201)",
+        "CALCULUS AND LINEAR ALGEBRA (1BMATS101)",
+        "NUMERICAL METHODS (1BMATS201)"
+      ],
+      "component": "NumericalBoard"
+    },
+    {
+      "engine": "GraphAnimator",
+      "families": [
+        "A",
+        "B",
+        "F"
+      ],
+      "subjects": [
+        "Differential Calculus and Linear Algebra (1BMATC101)",
+        "Differential Calculus and Numerical Methods (1BMATC201)",
+        "Differential Calculus & Linear Algebra (1BMATE101)",
+        "Calculus, Laplace Transforms and Numerical Techniques (1BMATE201)",
+        "Differential Calculus and Linear Algebra (1BMATM101)",
+        "Multivariable Calculus and Numerical Methods (1BMATM201)",
+        "CALCULUS AND LINEAR ALGEBRA (1BMATS101)",
+        "NUMERICAL METHODS (1BMATS201)"
+      ],
+      "component": "GraphAnimator"
+    },
+    {
+      "engine": "GeometryVisualizer / CAD primitives",
+      "families": [
+        "A",
+        "F"
+      ],
+      "subjects": [
+        "Computer Aided Engineering Drawing for CV Stream (1BCEDC103/203)",
+        "Computer Aided Engineering Drawing for EE Stream (1BCEDE103/203)",
+        "Computer Aided Engineering Drawing for ECE Stream (1BCEDEC103/203)",
+        "Computer Aided Engineering Drawing for ME Stream (1BCEDM103/203)",
+        "Computer Aided Engineering Drawing for CS Stream (1BCEDS103/203)"
+      ],
+      "component": "GeometryVisualizer"
+    },
+    {
+      "engine": "CodeExecutionVisualizer / MemoryVisualizer basics",
+      "families": [
+        "D",
+        "H"
+      ],
+      "subjects": [
+        "Introduction to AI and Applications (1BAIA103/203)",
+        "Programming in C (1BEIT105/205)",
+        "ESSENTIALS OF INFORMATION TECHNOLOGY (1BESC104E)",
+        "PYTHON PROGRAMMING (1BPLC105B/205B)",
+        "INTRODUCTION TO C PROGRAMMING (1BPLC205E/105E)"
+      ],
+      "component": "CodeExecutionVisualizer, LoopVisualizer, ArrayVisualizer, TerminalPanel"
+    },
+    {
+      "engine": "CircuitVisualizer / WaveformAnimator",
+      "families": [
+        "E",
+        "H"
+      ],
+      "subjects": [
+        "Basics of Electrical Engineering (1BBEE105/205)",
+        "Fundamentals of Electronics and Communication Engineering (1BECE105/205)",
+        "Introduction to Electrical Engineering (1BESC104B/204B)",
+        "Introduction to Electronics and Communication Engineering (1BESC104C/204C)"
+      ],
+      "component": "CircuitVisualizer, WaveformAnimator"
+    },
+    {
+      "engine": "ProcessAnimator / Timeline / Comparison / ConceptMap",
+      "families": [
+        "B",
+        "C",
+        "F",
+        "G"
+      ],
+      "subjects": [
+        "Computer Aided Engineering Drawing for CV Stream (1BCEDC103/203)",
+        "Computer Aided Engineering Drawing for EE Stream (1BCEDE103/203)",
+        "Computer Aided Engineering Drawing for ECE Stream (1BCEDEC103/203)",
+        "Computer Aided Engineering Drawing for ME Stream (1BCEDM103/203)",
+        "Computer Aided Engineering Drawing for CS Stream (1BCEDS103/203)",
+        "Applied Chemistry for Sustainable Structures and Material Design (1BCHEC102/202)",
+        "Applied Chemistry for Emerging Electronics and Futuristic Devices (1BCHEE102/202)",
+        "Applied Chemistry for Advanced Metal Protection and Sustainable Energy Systems (1BCHEM102/202)",
+        "ENGINEERING MECHANICS (1BCIV105/205)",
+        "Elements of Aeronautics (1BEAE105/205)",
+        "Elements of Biotechnology and Biomimetics (1BEBT105/205)",
+        "Elements of Chemical Engineering (1BECHE105/205)",
+        "Elements of Mechanical Engineering (1BEME105/205)",
+        "Communication Skills (1BENGL106)",
+        "BUILDING SCIENCE AND MECHANICS (1BESC104A/204A)",
+        "INTRODUCTION TO MECHANICAL ENGINEERING (1BESC104D/204D)",
+        "Indian Constitution and Engineering Ethics (1BICO107/207)",
+        "Balake Kannada (Kannada for Usage) (1BKBK109)",
+        "Samskrutika Kannada (1BKSK109)",
+        "QUANTUM PHYSICS AND ELECTRONIC SENSORS (1BPHEC102/202)",
+        "ELECTRICAL ENGINEERING MATERIALS (1BPHEE102/102)",
+        "PHYSICS FOR SUSTAINABLE STRUCTURAL SYSTEMS (1BPHYC102/202)",
+        "PHYSICS OF MATERIALS (1BPHYM102/202)",
+        "QUANTUM PHYSICS AND APPLICATIONS (1BPHYS102/202)",
+        "Soft Skills (1BSKS106/206)",
+        "Principles of Soil Science and Agronomy (1BSSA105/205)"
+      ],
+      "component": "ProcessAnimator, TimelineEngine, ComparisonVisualizer, ConceptMap"
+    },
+    {
+      "engine": "ExperimentVisualizer",
+      "families": [
+        "H"
+      ],
+      "subjects": [
+        "Basic Electrical Lab (1BBEEL107)",
+        "Fundamentals of Electronics and Communication Engineering Lab (1BECEL107)",
+        "Elements of Mechanical Engineering Lab (1BEMEL105)",
+        "Innovation & Design Thinking Lab (1BIDTL158)",
+        "MECHANICS AND MATERIALS LABORATORY (1BMEML107/207)",
+        "C Programming Lab (1BPOPL107/207)",
+        "Interdisciplinary Project Work (1BPRJ258)"
+      ],
+      "component": "ExperimentVisualizer, ApparatusLayout"
+    }
+  ],
+  "testScenes": [
+    {
+      "scene": 1,
+      "name": "Equation progression",
+      "examples": "Derivative of x^2 with substitution, expansion, cancellation and result.",
+      "engines": [
+        "EquationStepper",
+        "TeachingCallout"
+      ]
+    },
+    {
+      "scene": 2,
+      "name": "Numerical solution",
+      "examples": "Ohm law GIVEN/FIND/FORMULA/SUBSTITUTION/CALCULATION/ANSWER/INTERPRETATION board.",
+      "engines": [
+        "NumericalBoard"
+      ]
+    },
+    {
+      "scene": 3,
+      "name": "Graph and geometry",
+      "examples": "Parabola/line graph plus vector/projection primitives.",
+      "engines": [
+        "GraphAnimator",
+        "GeometryVisualizer"
+      ]
+    },
+    {
+      "scene": 4,
+      "name": "Code execution",
+      "examples": "C loop sum dry-run with line execution, state panel, loop iterations, array traversal and terminal output.",
+      "engines": [
+        "CodeExecutionVisualizer",
+        "LoopVisualizer",
+        "ArrayVisualizer",
+        "TerminalPanel"
+      ]
+    },
+    {
+      "scene": 5,
+      "name": "Circuit and waveform",
+      "examples": "Resistor circuit current path plus sine/square waveform comparison.",
+      "engines": [
+        "CircuitVisualizer",
+        "WaveformAnimator"
+      ]
+    },
+    {
+      "scene": 6,
+      "name": "Process, comparison and concept map",
+      "examples": "Soil decision cycle, design timeline, communication comparison and ethics concept map.",
+      "engines": [
+        "ProcessAnimator",
+        "TimelineEngine",
+        "ComparisonVisualizer",
+        "ConceptMap"
+      ]
+    },
+    {
+      "scene": 7,
+      "name": "Experiment shell",
+      "examples": "Ohm law lab with apparatus, aim, setup, procedure, observation, output, result and viva.",
+      "engines": [
+        "ApparatusLayout",
+        "ExperimentVisualizer"
+      ]
+    }
+  ],
+  "qa": {
+    "1920x1080": {
+      "scenesChecked": 7,
+      "passed": true,
+      "failures": 0,
+      "visualShareRange": [
+        39.3,
+        91.1
+      ]
+    },
+    "1280x720": {
+      "scenesChecked": 7,
+      "passed": true,
+      "failures": 0,
+      "visualShareRange": [
+        40.3,
+        92.5
+      ]
+    },
+    "animation": {
+      "scenesChecked": 14,
+      "passed": true,
+      "minAnimatedElements": 4,
+      "maxAnimatedElements": 19,
+      "reducedMotionPassed": true,
+      "reducedMotionScenes": 14
+    },
+    "performance": {
+      "passed": true,
+      "observations": [
+        "No requestAnimationFrame loops or timers were introduced in the foundation components.",
+        "Animations are CSS/SVG declarative and reset naturally on route/scene remount.",
+        "QA screenshots were captured with animations disabled after live timing checks.",
+        "Production build completed; Vite still reports the pre-existing large bundle warning."
+      ]
+    },
+    "regression": {
+      "passed": true,
+      "routes": [
+        {
+          "route": "/#/chemistry/module-1?slide=1",
+          "viewport": "1920x1080",
+          "ok": true,
+          "title": ""
+        },
+        {
+          "route": "/#/big-data-analytics/module-1?slide=1",
+          "viewport": "1920x1080",
+          "ok": true,
+          "title": ""
+        },
+        {
+          "route": "/#/database-management-systems/module-1?slide=1",
+          "viewport": "1920x1080",
+          "ok": true,
+          "title": ""
+        },
+        {
+          "route": "/#/chemistry/module-1?slide=1",
+          "viewport": "1280x720",
+          "ok": true,
+          "title": ""
+        },
+        {
+          "route": "/#/big-data-analytics/module-1?slide=1",
+          "viewport": "1280x720",
+          "ok": true,
+          "title": ""
+        },
+        {
+          "route": "/#/database-management-systems/module-1?slide=1",
+          "viewport": "1280x720",
+          "ok": true,
+          "title": ""
+        }
+      ]
+    }
+  },
+  "phase3Ready": true
+}

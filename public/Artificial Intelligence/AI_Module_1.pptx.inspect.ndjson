@@ -1,0 +1,794 @@
+{"kind":"deck","id":"pr/1nkaku","name":"Deck"}
+{"kind":"layout","layoutId":"a8153e48-4b71-49ea-b7f7-b3bf2e555e76","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"55d2e9d4-20b2-4dd0-9172-920d5b45d686","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/6sa0kc","slide":1,"title":"Module 1","textShapes":9}
+{"kind":"textbox","id":"sh/ah8ru18v","slide":1,"text":"Module 1","textPreview":"Module 1","textChars":8,"textLines":1,"bbox":[82,88,340,60]}
+{"kind":"textbox","id":"sh/xkjqpw7m","slide":1,"text":"Introduction and Intelligent Agents","textPreview":"Introduction and Intelligent Agents","textChars":35,"textLines":1,"bbox":[82,166,760,100]}
+{"kind":"textbox","id":"sh/cja9wrq1","slide":1,"text":"• What is AI?\n• The state of the art\n• Agents and environment\n• Concept of rationality\n• Nature of environments\n• Structure of agents","textPreview":"• What is AI? | • The state of the art | • Agents and environment | • Concept of rationality | • Nature of environments | • Structure of ...","textChars":133,"textLines":6,"bbox":[94,342,520,250]}
+{"kind":"textbox","id":"sh/zm1sr6pc","slide":1,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/ylsry187","slide":1,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/l8jatg7i","slide":1,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/k7a90bqx","slide":1,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/fqx8f298","slide":1,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/epormh8n","slide":1,"text":"VTU BCS515B • Module 1 • 01/50","textPreview":"VTU BCS515B • Module 1 • 01/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/6sa0kc","slide":1,"text":"[Animation]\nUse this as the module reset. Reveal syllabus bullets one by one and connect them to the right-side visual.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/ylhpuo","slide":2,"title":"VTU syllabus cross-check","textShapes":12}
+{"kind":"textbox","id":"sh/d0vi9ojq","slide":2,"text":"VTU syllabus cross-check","textPreview":"VTU syllabus cross-check","textChars":24,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/qx4zyt0f","slide":2,"text":"Roadmap for Module 1","textPreview":"Roadmap for Module 1","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ryd07y1k","slide":2,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/0n6h43ih","slide":2,"text":"1. What is AI?","textPreview":"1. What is AI?","textChars":14,"textLines":1,"bbox":[76,210,190,70]}
+{"kind":"textbox","id":"sh/1ofid8j2","slide":2,"text":"2. Foundations of AI","textPreview":"2. Foundations of AI","textChars":20,"textLines":1,"bbox":[308,210,190,70]}
+{"kind":"textbox","id":"sh/e14z2t0b","slide":2,"text":"3. State of the art","textPreview":"3. State of the art","textChars":19,"textLines":1,"bbox":[540,210,190,70]}
+{"kind":"textbox","id":"sh/z2x0by1w","slide":2,"text":"4. Agents and environments","textPreview":"4. Agents and environments","textChars":26,"textLines":1,"bbox":[772,210,190,70]}
+{"kind":"textbox","id":"sh/or6h83id","slide":2,"text":"5. Rationality","textPreview":"5. Rationality","textChars":14,"textLines":1,"bbox":[1004,210,190,70]}
+{"kind":"textbox","id":"sh/9sfih8jy","slide":2,"text":"6. Task environments","textPreview":"6. Task environments","textChars":20,"textLines":1,"bbox":[76,342,190,70]}
+{"kind":"textbox","id":"sh/1wn6lc7y","slide":2,"text":"7. Environment types","textPreview":"7. Environment types","textChars":20,"textLines":1,"bbox":[308,342,190,70]}
+{"kind":"textbox","id":"sh/0vepc76d","slide":2,"text":"8. Agent structures","textPreview":"8. Agent structures","textChars":19,"textLines":1,"bbox":[540,342,190,70]}
+{"kind":"textbox","id":"sh/fu5oj2p8","slide":2,"text":"Every VTU topic is expanded as definition → intuition → workflow → example → exam view","textPreview":"Every VTU topic is expanded as definition → intuition → workflow → example → exam view","textChars":86,"textLines":1,"bbox":[188,552,900,54]}
+{"kind":"textbox","id":"sh/etw7ax8n","slide":2,"text":"VTU BCS515B • Module 1 • 02/50","textPreview":"VTU BCS515B • Module 1 • 02/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ylhpuo","slide":2,"text":"[Animation]\nAnimate the roadmap by row. Pause after each syllabus cluster and state how it will be examined.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/po7bnq","slide":3,"title":"MISSING = 0","textShapes":31}
+{"kind":"textbox","id":"sh/1836d476","slide":3,"text":"MISSING = 0","textPreview":"MISSING = 0","textChars":11,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/e5c7ipof","slide":3,"text":"Module 1 VTU coverage audit","textPreview":"Module 1 VTU coverage audit","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/f6lobup0","slide":3,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/obepoz6h","slide":3,"text":"VTU topic","textPreview":"VTU topic","textChars":9,"textLines":1,"bbox":[82,154,310,28]}
+{"kind":"textbox","id":"sh/pcn6h472","slide":3,"text":"Local source coverage","textPreview":"Local source coverage","textChars":21,"textLines":1,"bbox":[430,154,230,28]}
+{"kind":"textbox","id":"sh/29c7m9ob","slide":3,"text":"Status","textPreview":"Status","textChars":6,"textLines":1,"bbox":[700,154,100,28]}
+{"kind":"textbox","id":"sh/na5ofupw","slide":3,"text":"Action in this deck","textPreview":"Action in this deck","textChars":19,"textLines":1,"bbox":[842,154,320,28]}
+{"kind":"textbox","id":"sh/czepsj6t","slide":3,"text":"What is AI?","textPreview":"What is AI?","textChars":11,"textLines":1,"bbox":[82,192,310,46]}
+{"kind":"textbox","id":"sh/x0n6lo7y","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,192,230,46]}
+{"kind":"textbox","id":"sh/x0jmpofe","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,192,100,46]}
+{"kind":"textbox","id":"sh/wzalg3et","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,192,320,46]}
+{"kind":"textbox","id":"sh/vyh4nyx8","slide":3,"text":"The state of the art","textPreview":"The state of the art","textChars":20,"textLines":1,"bbox":[82,254,310,46]}
+{"kind":"textbox","id":"sh/ax83etwn","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,254,230,46]}
+{"kind":"textbox","id":"sh/54jmt8fa","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,254,100,46]}
+{"kind":"textbox","id":"sh/k3alk3ep","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,254,320,46]}
+{"kind":"textbox","id":"sh/j214ryx4","slide":3,"text":"Agents and environment","textPreview":"Agents and environment","textChars":22,"textLines":1,"bbox":[82,316,310,46]}
+{"kind":"textbox","id":"sh/i1s3itwj","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,316,230,46]}
+{"kind":"textbox","id":"sh/l8z2h4f6","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,316,100,46]}
+{"kind":"textbox","id":"sh/07ql8jel","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,316,320,46]}
+{"kind":"textbox","id":"sh/cralojmh","slide":3,"text":"Concept of rationality","textPreview":"Concept of rationality","textChars":22,"textLines":1,"bbox":[82,378,310,46]}
+{"kind":"textbox","id":"sh/ds3mxon2","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,378,230,46]}
+{"kind":"textbox","id":"sh/qps3m94b","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,378,100,46]}
+{"kind":"textbox","id":"sh/rq14ve5w","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,378,320,46]}
+{"kind":"textbox","id":"sh/0fulsjmd","slide":3,"text":"Nature of environments","textPreview":"Nature of environments","textChars":22,"textLines":1,"bbox":[82,440,310,46]}
+{"kind":"textbox","id":"sh/1g3m1ony","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,440,230,46]}
+{"kind":"textbox","id":"sh/edc3qt47","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,440,100,46]}
+{"kind":"textbox","id":"sh/zel4ze5s","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,440,320,46]}
+{"kind":"textbox","id":"sh/ojulw3mp","slide":3,"text":"Structure of agents","textPreview":"Structure of agents","textChars":19,"textLines":1,"bbox":[82,502,310,46]}
+{"kind":"textbox","id":"sh/9knm58nu","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,502,230,46]}
+{"kind":"textbox","id":"sh/jq9gbmto","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,502,100,46]}
+{"kind":"textbox","id":"sh/ip0fihs3","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,502,320,46]}
+{"kind":"textbox","id":"sh/5srydwbe","slide":3,"text":"VTU BCS515B • Module 1 • 03/50","textPreview":"VTU BCS515B • Module 1 • 03/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/po7bnq","slide":3,"text":"[Animation]\nUse this audit slide only if students or reviewers need syllabus mapping. Otherwise keep it as backup.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/pbhrb8","slide":4,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":11}
+{"kind":"textbox","id":"sh/k7ypwbal","slide":4,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/z6p8n690","slide":4,"text":"What is AI?: definition","textPreview":"What is AI?: definition","textChars":23,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/y5g7u1sf","slide":4,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/x4nqlwra","slide":4,"text":"AI studies systems that perceive, reason, learn, and act.","textPreview":"AI studies systems that perceive, reason, learn, and act.","textChars":57,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/c3epsrap","slide":4,"text":"• acting humanly\n• thinking humanly\n• thinking rationally\n• acting rationally","textPreview":"• acting humanly | • thinking humanly | • thinking rationally | • acting rationally","textChars":77,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/b25oj694","slide":4,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ahw7q1sj","slide":4,"text":"AI is best taught here as rational action.","textPreview":"AI is best taught here as rational action.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/pgn6hwry","slide":4,"text":"acting humanly","textPreview":"acting humanly","textChars":14,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/ofeporad","slide":4,"text":"thinking humanly","textPreview":"thinking humanly","textChars":16,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/yxc7qp0z","slide":4,"text":"thinking rationally","textPreview":"thinking rationally","textChars":19,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/ji5ozahk","slide":4,"text":"acting rationally","textPreview":"acting rationally","textChars":17,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/kjepsfi5","slide":4,"text":"VTU BCS515B • Module 1 • 04/50","textPreview":"VTU BCS515B • Module 1 • 04/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/pbhrb8","slide":4,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/7x0i9b","slide":5,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/3u5c3qp0","slide":5,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ovytcv6l","slide":5,"text":"What is AI?: intuition","textPreview":"What is AI?: intuition","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/pw7u5076","slide":5,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/axgbe5or","slide":5,"text":"Think of what is ai? as a way to make an agent's next choice clearer.","textPreview":"Think of what is ai? as a way to make an agent's next choice clearer.","textChars":69,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/bipc7apc","slide":5,"text":"• Why it matters: AI is best taught here as rational action.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: AI is best taught here as rational action. | • What changes: uncertainty becomes structure | • Teaching cue: connect th...","textChars":160,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/cjydgf6h","slide":5,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/xk7u9k72","slide":5,"text":"AI is best taught here as rational action.","textPreview":"AI is best taught here as rational action.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/61cb2lo7","slide":5,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/rmlcv6ps","slide":5,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/v6pwj25w","slide":5,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/a5gvqxob","slide":5,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/x87elcn2","slide":5,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/w7yds76h","slide":5,"text":"VTU BCS515B • Module 1 • 05/50","textPreview":"VTU BCS515B • Module 1 • 05/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/7x0i9b","slide":5,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/4uqiat","slide":6,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/ud0fudkr","slide":6,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/h0ry5s3i","slide":6,"text":"What is AI?: workflow","textPreview":"What is AI?: workflow","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/gfihwn2x","slide":6,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/32tg7il8","slide":6,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/i1kzyxk3","slide":6,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/54by9sje","slide":6,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/432h0n2t","slide":6,"text":"AI is best taught here as rational action.","textPreview":"AI is best taught here as rational action.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/z6pgvyl4","slide":6,"text":"acting humanly","textPreview":"acting humanly","textChars":14,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/y5gfmtkj","slide":6,"text":"thinking humanly","textPreview":"thinking humanly","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/oz6tsje1","slide":6,"text":"thinking rationally","textPreview":"thinking rationally","textChars":19,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/p0zalofm","slide":6,"text":"acting rationally","textPreview":"acting rationally","textChars":17,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/2dobq9wv","slide":6,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/3exsjexg","slide":6,"text":"VTU BCS515B • Module 1 • 06/50","textPreview":"VTU BCS515B • Module 1 • 06/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/4uqiat","slide":6,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/4daoqi","slide":7,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":15}
+{"kind":"textbox","id":"sh/gja9kjud","slide":7,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/fi18rets","slide":7,"text":"What is AI?: example","textPreview":"What is AI?: example","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ehsri9c7","slide":7,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/tgjqpobm","slide":7,"text":"A small classroom example makes what is ai? concrete.","textPreview":"A small classroom example makes what is ai? concrete.","textChars":53,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/sfa9gju1","slide":7,"text":"• Use the terms: acting humanly, thinking humanly\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: acting humanly, thinking humanly | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":135,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/re18netg","slide":7,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/6ds7e9cv","slide":7,"text":"AI is best taught here as rational action.","textPreview":"AI is best taught here as rational action.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/5czql4ba","slide":7,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/4bqpczu5","slide":7,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/epo329sn","slide":7,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/zqh4bet8","slide":7,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/0rql4jat","slide":7,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/1szmdore","slide":7,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/qlo3ypsr","slide":7,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/rmx47utc","slide":7,"text":"acting humanly","textPreview":"acting humanly","textChars":14,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/cn6l0zah","slide":7,"text":"VTU BCS515B • Module 1 • 07/50","textPreview":"VTU BCS515B • Module 1 • 07/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/4daoqi","slide":7,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/jnr3zm","slide":8,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/4fitsvu5","slide":8,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/je9szadk","slide":8,"text":"What is AI?: algorithm / exam view","textPreview":"What is AI?: algorithm / exam view","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/idgbq5cz","slide":8,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/t4ru5kbm","slide":8,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/sjitwfuh","slide":8,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: AI is best taught here as rational action.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: AI ...","textChars":170,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ri9s3adw","slide":8,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/6h0bu5cb","slide":8,"text":"AI is best taught here as rational action.","textPreview":"AI is best taught here as rational action.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/987atgvi","slide":8,"text":"acting humanly","textPreview":"acting humanly","textChars":14,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/8nytkbux","slide":8,"text":"thinking humanly","textPreview":"thinking humanly","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/iponmpkj","slide":8,"text":"thinking rationally","textPreview":"thinking rationally","textChars":19,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/jaxova1o","slide":8,"text":"acting rationally","textPreview":"acting rationally","textChars":17,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/4b65of29","slide":8,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/5cz6xkju","slide":8,"text":"VTU BCS515B • Module 1 • 08/50","textPreview":"VTU BCS515B • Module 1 • 08/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/jnr3zm","slide":8,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/dx1li6","slide":9,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":11}
+{"kind":"textbox","id":"sh/kvilofel","slide":9,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ju94vuxg","slide":9,"text":"Foundations of AI: definition","textPreview":"Foundations of AI: definition","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/yt03mpwv","slide":9,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/xsrmtkfa","slide":9,"text":"AI combines models of thought, decision, computation, and behavior.","textPreview":"AI combines models of thought, decision, computation, and behavior.","textChars":67,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/wrilkfep","slide":9,"text":"• philosophy\n• mathematics\n• economics\n• neuroscience","textPreview":"• philosophy | • mathematics | • economics | • neuroscience","textChars":53,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/bqp4rax4","slide":9,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/apg3i5wj","slide":9,"text":"Multiple foundations explain why AI is interdisciplinary.","textPreview":"Multiple foundations explain why AI is interdisciplinary.","textChars":57,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/9o7mp0fy","slide":9,"text":"philosophy","textPreview":"philosophy","textChars":10,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/onylgvet","slide":9,"text":"mathematics","textPreview":"mathematics","textChars":11,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/ut4va94r","slide":9,"text":"economics","textPreview":"economics","textChars":9,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/vudcjelc","slide":9,"text":"neuroscience","textPreview":"neuroscience","textChars":12,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/wvmdcjmx","slide":9,"text":"VTU BCS515B • Module 1 • 09/50","textPreview":"VTU BCS515B • Module 1 • 09/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/dx1li6","slide":9,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/9gdkhm","slide":10,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/0j6hof69","slide":10,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/zixgfapo","slide":10,"text":"Foundations of AI: intuition","textPreview":"Foundations of AI: intuition","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/yh4zm5o3","slide":10,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/dgvyd07i","slide":10,"text":"Think of foundations of ai as a way to make an agent's next choice clearer.","textPreview":"Think of foundations of ai as a way to make an agent's next choice clearer.","textChars":75,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cfmhkv6x","slide":10,"text":"• Why it matters: Multiple foundations explain why AI is interdisciplinary.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Multiple foundations explain why AI is interdisciplinary. | • What changes: uncertainty becomes structure | • Teaching ...","textChars":175,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/budgbqpc","slide":10,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/qt4zi5or","slide":10,"text":"Multiple foundations explain why AI is interdisciplinary.","textPreview":"Multiple foundations explain why AI is interdisciplinary.","textChars":57,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hczip4nm","slide":10,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/wbqhwz61","slide":10,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/m1gf6xw7","slide":10,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/72pwz2ds","slide":10,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/8nyx87ed","slide":10,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/9ore1cvy","slide":10,"text":"VTU BCS515B • Module 1 • 10/50","textPreview":"VTU BCS515B • Module 1 • 10/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/9gdkhm","slide":10,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/9r0bc2","slide":11,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/yh0belkf","slide":11,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/lkrap0j6","slide":11,"text":"Foundations of AI: workflow","textPreview":"Foundations of AI: workflow","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/kjitgv2l","slide":11,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/bupsjq1o","slide":11,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/atgralk3","slide":11,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/xgralgju","slide":11,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/wfi9cb29","slide":11,"text":"Multiple foundations explain why AI is interdisciplinary.","textPreview":"Multiple foundations explain why AI is interdisciplinary.","textChars":57,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/fatsva18","slide":11,"text":"philosophy","textPreview":"philosophy","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/upkbm5kn","slide":11,"text":"mathematics","textPreview":"mathematics","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/ojeh4jyp","slide":11,"text":"economics","textPreview":"economics","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/pknixofa","slide":11,"text":"neuroscience","textPreview":"neuroscience","textChars":12,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/2hcz29gj","slide":11,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/3i50vex4","slide":11,"text":"VTU BCS515B • Module 1 • 11/50","textPreview":"VTU BCS515B • Module 1 • 11/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/9r0bc2","slide":11,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/xzznxh","slide":12,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":15}
+{"kind":"textbox","id":"sh/k3q50vyh","slide":12,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/j2horqhw","slide":12,"text":"Foundations of AI: example","textPreview":"Foundations of AI: example","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/i1onylgb","slide":12,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/tsz6x0zy","slide":12,"text":"A small classroom example makes foundations of ai concrete.","textPreview":"A small classroom example makes foundations of ai concrete.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/s7q54fyd","slide":12,"text":"• Use the terms: philosophy, mathematics\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: philosophy, mathematics | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":126,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/76hovahs","slide":12,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/658n25g7","slide":12,"text":"Multiple foundations explain why AI is interdisciplinary.","textPreview":"Multiple foundations explain why AI is interdisciplinary.","textChars":57,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/9cf6lgzu","slide":12,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/8b65sby9","slide":12,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/ehsrqlgz","slide":12,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/fi18jqxk","slide":12,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/gja9svy5","slide":12,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/1kjql0fq","slide":12,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/2lsru5gb","slide":12,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/3m18nqxw","slide":12,"text":"philosophy","textPreview":"philosophy","textChars":10,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/onu9wvy1","slide":12,"text":"VTU BCS515B • Module 1 • 12/50","textPreview":"VTU BCS515B • Module 1 • 12/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/xzznxh","slide":12,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/ea5rr1","slide":13,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/qhgzyhgj","slide":13,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/dk7ytwzu","slide":13,"text":"Foundations of AI: algorithm / exam view","textPreview":"Foundations of AI: algorithm / exam view","textChars":40,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/cjyh0ry9","slide":13,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/3epgnmhs","slide":13,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/idwzuhg7","slide":13,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Multiple foundations explain why AI is interdisciplinary.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Mul...","textChars":185,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/5g7ypczy","slide":13,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/4fyhwryd","slide":13,"text":"Multiple foundations explain why AI is interdisciplinary.","textPreview":"Multiple foundations explain why AI is interdisciplinary.","textChars":57,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/na9gz6xw","slide":13,"text":"philosophy","textPreview":"philosophy","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/m90z61gb","slide":13,"text":"mathematics","textPreview":"mathematics","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/03elcbyh","slide":13,"text":"economics","textPreview":"economics","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/14n25gfm","slide":13,"text":"neuroscience","textPreview":"neuroscience","textChars":12,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/e1w3a1gb","slide":13,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/f25k36xw","slide":13,"text":"VTU BCS515B • Module 1 • 13/50","textPreview":"VTU BCS515B • Module 1 • 13/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ea5rr1","slide":13,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/6txeo4","slide":14,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":11}
+{"kind":"textbox","id":"sh/gze1cn2t","slide":14,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/fy5k3ilo","slide":14,"text":"State of the art: definition","textPreview":"State of the art: definition","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/exwjadk3","slide":14,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/twn2183i","slide":14,"text":"Modern AI is a toolbox of capabilities across environments.","textPreview":"Modern AI is a toolbox of capabilities across environments.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/sve1832x","slide":14,"text":"• planning\n• language\n• vision\n• robotics","textPreview":"• planning | • language | • vision | • robotics","textChars":41,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ralkzylc","slide":14,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/69cj6tkr","slide":14,"text":"Capabilities differ because task environments differ.","textPreview":"Capabilities differ because task environments differ.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/5832x836","slide":14,"text":"planning","textPreview":"planning","textChars":8,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/47u14321","slide":14,"text":"language","textPreview":"language","textChars":8,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/ad43a5ob","slide":14,"text":"vision","textPreview":"vision","textChars":6,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/bed4jq5w","slide":14,"text":"robotics","textPreview":"robotics","textChars":8,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/wfmlcvmh","slide":14,"text":"VTU BCS515B • Module 1 • 14/50","textPreview":"VTU BCS515B • Module 1 • 14/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/6txeo4","slide":14,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/vhz6ki","slide":15,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/w3al0zm9","slide":15,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/b21k7u5o","slide":15,"text":"State of the art: intuition","textPreview":"State of the art: intuition","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/a1s3yp43","slide":15,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/90j25kni","slide":15,"text":"Think of state of the art as a way to make an agent's next choice clearer.","textPreview":"Think of state of the art as a way to make an agent's next choice clearer.","textChars":74,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ofqlwfmx","slide":15,"text":"• Why it matters: Capabilities differ because task environments differ.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Capabilities differ because task environments differ. | • What changes: uncertainty becomes structure | • Teaching cue:...","textChars":171,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/nehk3a5c","slide":15,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/md83u54r","slide":15,"text":"Capabilities differ because task environments differ.","textPreview":"Capabilities differ because task environments differ.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/1cz21knm","slide":15,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/0bqlsf61","slide":15,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/etovy5s3","slide":15,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/zuxcra98","slide":15,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/0v6d0fat","slide":15,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/1wzut0re","slide":15,"text":"VTU BCS515B • Module 1 • 15/50","textPreview":"VTU BCS515B • Module 1 • 15/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/vhz6ki","slide":15,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/xfi333","slide":16,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/mlkb2dwb","slide":16,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/9obaxsf2","slide":16,"text":"State of the art: workflow","textPreview":"State of the art: workflow","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/8n2t4neh","slide":16,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zy9srix0","slide":16,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/yx0bydwf","slide":16,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/l0batsfq","slide":16,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/kzit0nel","slide":16,"text":"Capabilities differ because task environments differ.","textPreview":"Capabilities differ because task environments differ.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/judc32x4","slide":16,"text":"planning","textPreview":"planning","textChars":8,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/it4baxwj","slide":16,"text":"language","textPreview":"language","textChars":8,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/g7utwfi1","slide":16,"text":"vision","textPreview":"vision","textChars":6,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/h83a50zm","slide":16,"text":"robotics","textPreview":"robotics","textChars":8,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/ulcbu50v","slide":16,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/fmls3ahg","slide":16,"text":"VTU BCS515B • Module 1 • 16/50","textPreview":"VTU BCS515B • Module 1 • 16/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/xfi333","slide":16,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/8wuyc4","slide":17,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":15}
+{"kind":"textbox","id":"sh/e54r21gj","slide":17,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/18vadwzu","slide":17,"text":"State of the art: example","textPreview":"State of the art: example","textChars":25,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/g7m94ryp","slide":17,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/r2ts7mhs","slide":17,"text":"A small classroom example makes state of the art concrete.","textPreview":"A small classroom example makes state of the art concrete.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/6hkryhg7","slide":17,"text":"• Use the terms: planning, language\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: planning, language | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":121,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/t4va9wzy","slide":17,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/s3m90ryd","slide":17,"text":"Capabilities differ because task environments differ.","textPreview":"Capabilities differ because task environments differ.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/byxsj6hc","slide":17,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/qdobalgr","slide":17,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/gfy5k7yh","slide":17,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/hg7mtcf2","slide":17,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/utwnixgb","slide":17,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/fep4r2xw","slide":17,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/srelgnyl","slide":17,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/tsnmpsfq","slide":17,"text":"planning","textPreview":"planning","textChars":8,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/6pw3exgf","slide":17,"text":"VTU BCS515B • Module 1 • 17/50","textPreview":"VTU BCS515B • Module 1 • 17/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/8wuyc4","slide":17,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/xaln2k","slide":18,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/wbi50jux","slide":18,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ba9oretc","slide":18,"text":"State of the art: algorithm / exam view","textPreview":"State of the art: algorithm / exam view","textChars":39,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/a90nytcr","slide":18,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/l0b6x8be","slide":18,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/kz2543u9","slide":18,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Capabilities differ because task environments differ.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Cap...","textChars":181,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/jytovyto","slide":18,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/yxkn2tc3","slide":18,"text":"Capabilities differ because task environments differ.","textPreview":"Capabilities differ because task environments differ.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/147ml4ba","slide":18,"text":"planning","textPreview":"planning","textChars":8,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/03y5szup","slide":18,"text":"language","textPreview":"language","textChars":8,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/ahsvu9wf","slide":18,"text":"vision","textPreview":"vision","textChars":6,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/bi1c3ed0","slide":18,"text":"robotics","textPreview":"robotics","textChars":8,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/wjadwjel","slide":18,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/xk3u5ov6","slide":18,"text":"VTU BCS515B • Module 1 • 18/50","textPreview":"VTU BCS515B • Module 1 • 18/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/xaln2k","slide":18,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/0yajxh","slide":19,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":11}
+{"kind":"textbox","id":"sh/25c3e5of","slide":19,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/p8n2pkn6","slide":19,"text":"Agents and environments: definition","textPreview":"Agents and environments: definition","textChars":35,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/47ulgf6l","slide":19,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/filkja54","slide":19,"text":"An agent perceives the environment and acts upon it.","textPreview":"An agent perceives the environment and acts upon it.","textChars":52,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/uhc3a5oj","slide":19,"text":"• agent\n• environment\n• sensor\n• actuator","textPreview":"• agent | • environment | • sensor | • actuator","textChars":41,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/h432lknu","slide":19,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/gjulcf6p","slide":19,"text":"The perception-action loop is the central mental model.","textPreview":"The perception-action loop is the central mental model.","textChars":55,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/7e1kfq5s","slide":19,"text":"agent","textPreview":"agent","textChars":5,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/6ds36lo7","slide":19,"text":"environment","textPreview":"environment","textChars":11,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/o3ml8bux","slide":19,"text":"sensor","textPreview":"sensor","textChars":6,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/94v21gvi","slide":19,"text":"actuator","textPreview":"actuator","textChars":8,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/m1436lcr","slide":19,"text":"VTU BCS515B • Module 1 • 19/50","textPreview":"VTU BCS515B • Module 1 • 19/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/0yajxh","slide":19,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/s0oldg","slide":20,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/90ru50j6","slide":20,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/mx0balkv","slide":20,"text":"Agents and environments: intuition","textPreview":"Agents and environments: intuition","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ny9c3q1g","slide":20,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/0vit8b2p","slide":20,"text":"Think of agents and environments as a way to make an agent's next choice clearer.","textPreview":"Think of agents and environments as a way to make an agent's next choice clearer.","textChars":81,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/1wru1gja","slide":20,"text":"• Why it matters: The perception-action loop is the central mental model.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: The perception-action loop is the central mental model. | • What changes: uncertainty becomes structure | • Teaching cu...","textChars":173,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/et0b6lkj","slide":20,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/zu9czq14","slide":20,"text":"The perception-action loop is the central mental model.","textPreview":"The perception-action loop is the central mental model.","textChars":55,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/kr2dkf2t","slide":20,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/5svudkje","slide":20,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/5s3mt8r6","slide":20,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/4ru5knql","slide":20,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/3ql4ri90","slide":20,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/ipsnid8f","slide":20,"text":"VTU BCS515B • Module 1 • 20/50","textPreview":"VTU BCS515B • Module 1 • 20/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/s0oldg","slide":20,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/uojwti","slide":21,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/id4ridwj","slide":21,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/5gfadsfa","slide":21,"text":"Agents and environments: workflow","textPreview":"Agents and environments: workflow","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/4f69knep","slide":21,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/vqds7ix8","slide":21,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/up4redwn","slide":21,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/hcva98fy","slide":21,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/wrm9gned","slide":21,"text":"The perception-action loop is the central mental model.","textPreview":"The perception-action loop is the central mental model.","textChars":55,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/7mt83yxw","slide":21,"text":"agent","textPreview":"agent","textChars":5,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/mlkratwb","slide":21,"text":"environment","textPreview":"environment","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/ozyl07ux","slide":21,"text":"sensor","textPreview":"sensor","textChars":6,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/907m9cbi","slide":21,"text":"actuator","textPreview":"actuator","textChars":8,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/mdg3yhcr","slide":21,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/nypk7mtc","slide":21,"text":"VTU BCS515B • Module 1 • 21/50","textPreview":"VTU BCS515B • Module 1 • 21/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/uojwti","slide":21,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/w79kg3","slide":22,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":15}
+{"kind":"textbox","id":"sh/mto3exoj","slide":22,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/9gf2pc7a","slide":22,"text":"Agents and environments: example","textPreview":"Agents and environments: example","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/8f6lg76p","slide":22,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zqdkjip8","slide":22,"text":"A small classroom example makes agents and environments concrete.","textPreview":"A small classroom example makes agents and environments concrete.","textChars":65,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/yp43adon","slide":22,"text":"• Use the terms: agent, environment\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: agent, environment | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":121,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/lsf2ls7y","slide":22,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/kr6lcn6d","slide":22,"text":"The perception-action loop is the central mental model.","textPreview":"The perception-action loop is the central mental model.","textChars":55,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/bmdkfipw","slide":22,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/al4j6dob","slide":22,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/cryl8b2h","slide":22,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/ds72hgj2","slide":22,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/qpg361kb","slide":22,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/rqpkf61w","slide":22,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/4nyl4r2l","slide":22,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/po72dwjq","slide":22,"text":"agent","textPreview":"agent","textChars":5,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/21w321kf","slide":22,"text":"VTU BCS515B • Module 1 • 22/50","textPreview":"VTU BCS515B • Module 1 • 22/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/w79kg3","slide":22,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/f51yoa","slide":23,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/7ip0vi1o","slide":23,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/sjyh4n29","slide":23,"text":"Agents and environments: algorithm / exam view","textPreview":"Agents and environments: algorithm / exam view","textChars":46,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/tk7ixsju","slide":23,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/itwzydk7","slide":23,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ju5gri1s","slide":23,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: The perception-action loop is the central mental model.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: The...","textChars":183,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/kveh0n2d","slide":23,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/5wnitsjy","slide":23,"text":"The perception-action loop is the central mental model.","textPreview":"The perception-action loop is the central mental model.","textChars":55,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/2pgzahkb","slide":23,"text":"agent","textPreview":"agent","textChars":5,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/3q90321w","slide":23,"text":"environment","textPreview":"environment","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/jmxori90","slide":23,"text":"sensor","textPreview":"sensor","textChars":6,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/yl47idsf","slide":23,"text":"actuator","textPreview":"actuator","textChars":8,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/5of6tsrq","slide":23,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/kn6pkna5","slide":23,"text":"VTU BCS515B • Module 1 • 23/50","textPreview":"VTU BCS515B • Module 1 • 23/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/f51yoa","slide":23,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/hfsbd2","slide":24,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":11}
+{"kind":"textbox","id":"sh/t0zalkfa","slide":24,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/6x8rq5wz","slide":24,"text":"Rationality: definition","textPreview":"Rationality: definition","textChars":23,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/7yhsjaxk","slide":24,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/gnqtwfe1","slide":24,"text":"Rationality means choosing the action expected to maximize performance.","textPreview":"Rationality means choosing the action expected to maximize performance.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/hojapkvm","slide":24,"text":"• performance measure\n• percept sequence\n• knowledge\n• action","textPreview":"• performance measure | • percept sequence | • knowledge | • action","textChars":61,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/u18bu5wv","slide":24,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/v2hsnaxg","slide":24,"text":"Rational agents are not omniscient; they use available evidence.","textPreview":"Rational agents are not omniscient; they use available evidence.","textChars":64,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/w769kvex","slide":24,"text":"performance measure","textPreview":"performance measure","textChars":19,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/xsfad0fi","slide":24,"text":"percept sequence","textPreview":"percept sequence","textChars":16,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/5ovex8fe","slide":24,"text":"knowledge","textPreview":"knowledge","textChars":9,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/knmxonet","slide":24,"text":"action","textPreview":"action","textChars":6,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/j2dwvix8","slide":24,"text":"VTU BCS515B • Module 1 • 24/50","textPreview":"VTU BCS515B • Module 1 • 24/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/hfsbd2","slide":24,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/hd8l1c","slide":25,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/2dcvmp47","slide":25,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/pg3ex43y","slide":25,"text":"Rationality: intuition","textPreview":"Rationality: intuition","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ofudoz2d","slide":25,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/bi5wzel4","slide":25,"text":"Think of rationality as a way to make an agent's next choice clearer.","textPreview":"Think of rationality as a way to make an agent's next choice clearer.","textChars":69,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/qhcvq9kj","slide":25,"text":"• Why it matters: Rational agents are not omniscient; they use available evidence.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Rational agents are not omniscient; they use available evidence. | • What changes: uncertainty becomes structure | • Te...","textChars":182,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/dkne143u","slide":25,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/cjedsz29","slide":25,"text":"Rational agents are not omniscient; they use available evidence.","textPreview":"Rational agents are not omniscient; they use available evidence.","textChars":64,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/zm5w3el0","slide":25,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/ylwfu9kf","slide":25,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/cny1s7ql","slide":25,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/xo721s76","slide":25,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/algjqx8f","slide":25,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/bmpkz2p0","slide":25,"text":"VTU BCS515B • Module 1 • 25/50","textPreview":"VTU BCS515B • Module 1 • 25/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/hd8l1c","slide":25,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/qpoejf","slide":26,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/dcfmxo3e","slide":26,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/qp432tk3","slide":26,"text":"Rationality: workflow","textPreview":"Rationality: workflow","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/rqx4vel8","slide":26,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/4nml0j2x","slide":26,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/povmto3i","slide":26,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/2l43y9kr","slide":26,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/3md4relc","slide":26,"text":"Rational agents are not omniscient; they use available evidence.","textPreview":"Rational agents are not omniscient; they use available evidence.","textChars":64,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/gjmlwz2l","slide":26,"text":"performance measure","textPreview":"performance measure","textChars":19,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/hkvmp436","slide":26,"text":"percept sequence","textPreview":"percept sequence","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/l0v2x0ji","slide":26,"text":"knowledge","textPreview":"knowledge","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/0fmlov2x","slide":26,"text":"action","textPreview":"action","textChars":6,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/zedkva1c","slide":26,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/yd4jm5k7","slide":26,"text":"VTU BCS515B • Module 1 • 26/50","textPreview":"VTU BCS515B • Module 1 • 26/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/qpoejf","slide":26,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/9438p0","slide":27,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":15}
+{"kind":"textbox","id":"sh/onih4fq9","slide":27,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/3m90vapo","slide":27,"text":"Rationality: example","textPreview":"Rationality: example","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/2l0z2583","slide":27,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/dsbi1k7q","slide":27,"text":"A small classroom example makes rationality concrete.","textPreview":"A small classroom example makes rationality concrete.","textChars":53,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cr2h8fq5","slide":27,"text":"• Use the terms: performance measure, percept sequence\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: performance measure, percept sequence | • Trace one decision visibly | • Ask which step would change if the environment ...","textChars":140,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/bqt0zapk","slide":27,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/qpkz658z","slide":27,"text":"Rational agents are not omniscient; they use available evidence.","textPreview":"Rational agents are not omniscient; they use available evidence.","textChars":64,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/lwbi547m","slide":27,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/0v2hczq1","slide":27,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/u1oryxcn","slide":27,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/v2hs72d8","slide":27,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/w3q907ut","slide":27,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/h4za9sve","slide":27,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/ip8r2xcz","slide":27,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/jqhsb2dk","slide":27,"text":"performance measure","textPreview":"performance measure","textChars":19,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/4rq947u5","slide":27,"text":"VTU BCS515B • Module 1 • 27/50","textPreview":"VTU BCS515B • Module 1 • 27/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/9438p0","slide":27,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/ul6hxe","slide":28,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/qh4fydoz","slide":28,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/dkvet8nq","slide":28,"text":"Rationality: algorithm / exam view","textPreview":"Rationality: algorithm / exam view","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/sjmx0365","slide":28,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/fmdwvi5w","slide":28,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/el4f2dob","slide":28,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Rational agents are not omniscient; they use available evidence.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Rat...","textChars":192,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/18fexsnm","slide":28,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/076x4n6h","slide":28,"text":"Rational agents are not omniscient; they use available evidence.","textPreview":"Rational agents are not omniscient; they use available evidence.","textChars":64,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/vqtwzepc","slide":28,"text":"performance measure","textPreview":"performance measure","textChars":19,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/upkvqto7","slide":28,"text":"percept sequence","textPreview":"percept sequence","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/8nq9w3a5","slide":28,"text":"knowledge","textPreview":"knowledge","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/9ozq58bq","slide":28,"text":"action","textPreview":"action","textChars":6,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/ml8rutcz","slide":28,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/nmh83ytk","slide":28,"text":"VTU BCS515B • Module 1 • 28/50","textPreview":"VTU BCS515B • Module 1 • 28/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ul6hxe","slide":28,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/t43tmu","slide":29,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":11}
+{"kind":"textbox","id":"sh/lgnyl0fa","slide":29,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ydwfqlwj","slide":29,"text":"Task environments: definition","textPreview":"Task environments: definition","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ze5wjqx4","slide":29,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/cbexovet","slide":29,"text":"PEAS converts an informal task into an engineering specification.","textPreview":"PEAS converts an informal task into an engineering specification.","textChars":65,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/dcnehgfy","slide":29,"text":"• PEAS\n• performance\n• environment\n• actuators","textPreview":"• PEAS | • performance | • environment | • actuators","textChars":46,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/q9cfmlgn","slide":29,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/balwfqx8","slide":29,"text":"Good PEAS design prevents vague AI requirements.","textPreview":"Good PEAS design prevents vague AI requirements.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/w7yx0fex","slide":29,"text":"PEAS","textPreview":"PEAS","textChars":4,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/x87ytkfi","slide":29,"text":"performance","textPreview":"performance","textChars":11,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/xknm5sz6","slide":29,"text":"environment","textPreview":"environment","textChars":11,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/wjelwnyl","slide":29,"text":"actuators","textPreview":"actuators","textChars":9,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/bi543ih0","slide":29,"text":"VTU BCS515B • Module 1 • 29/50","textPreview":"VTU BCS515B • Module 1 • 29/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/t43tmu","slide":29,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/t78yfv","slide":30,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/wri9wvy9","slide":30,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/vq9snqho","slide":30,"text":"Task environments: intuition","textPreview":"Task environments: intuition","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/upgru5g3","slide":30,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/9o7al0zy","slide":30,"text":"Think of task environments as a way to make an agent's next choice clearer.","textPreview":"Think of task environments as a way to make an agent's next choice clearer.","textChars":75,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/8ny9svyd","slide":30,"text":"• Why it matters: Good PEAS design prevents vague AI requirements.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Good PEAS design prevents vague AI requirements. | • What changes: uncertainty becomes structure | • Teaching cue: conn...","textChars":166,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/7mp8jqhs","slide":30,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/mlgrqlg7","slide":30,"text":"Good PEAS design prevents vague AI requirements.","textPreview":"Good PEAS design prevents vague AI requirements.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/lk7qhgzm","slide":30,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/0jy9oby1","slide":30,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/e9cn6t03","slide":30,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/zalofyho","slide":30,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/0bu583i9","slide":30,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/1c36h8zu","slide":30,"text":"VTU BCS515B • Module 1 • 30/50","textPreview":"VTU BCS515B • Module 1 • 30/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/t78yfv","slide":30,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/s1uzzr","slide":31,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/nmxorahg","slide":31,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/on650fi1","slide":31,"text":"Task environments: workflow","textPreview":"Task environments: workflow","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/9of6tkzm","slide":31,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/apon2p07","slide":31,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/bqxovuhs","slide":31,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/wbq54zid","slide":31,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/xcz6x4zi","slide":31,"text":"Good PEAS design prevents vague AI requirements.","textPreview":"Good PEAS design prevents vague AI requirements.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/qt4nq503","slide":31,"text":"PEAS","textPreview":"PEAS","textChars":4,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/rud4jqh8","slide":31,"text":"performance","textPreview":"performance","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/nqhw7mlo","slide":31,"text":"environment","textPreview":"environment","textChars":11,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/mpovyhk3","slide":31,"text":"actuators","textPreview":"actuators","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/9sze9c3u","slide":31,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/orqd0729","slide":31,"text":"VTU BCS515B • Module 1 • 31/50","textPreview":"VTU BCS515B • Module 1 • 31/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/s1uzzr","slide":31,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/uwzltp","slide":32,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":15}
+{"kind":"textbox","id":"sh/kzixgve1","slide":32,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/zy9wnqdw","slide":32,"text":"Task environments: example","textPreview":"Task environments: example","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/yx0felwb","slide":32,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/xwrelgvq","slide":32,"text":"A small classroom example makes task environments concrete.","textPreview":"A small classroom example makes task environments concrete.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cvyxcbe5","slide":32,"text":"• Use the terms: PEAS, performance\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: PEAS, performance | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":120,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/bupwj6dk","slide":32,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/atgfa1wz","slide":32,"text":"Good PEAS design prevents vague AI requirements.","textPreview":"Good PEAS design prevents vague AI requirements.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hsbyxkvu","slide":32,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/wr2xofu9","slide":32,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/adoral0j","slide":32,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/vex83qho","slide":32,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/wf69cvi9","slide":32,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/x0fq50zu","slide":32,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/m9476l07","slide":32,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/nad8z61s","slide":32,"text":"PEAS","textPreview":"PEAS","textChars":4,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/8bm98bid","slide":32,"text":"VTU BCS515B • Module 1 • 32/50","textPreview":"VTU BCS515B • Module 1 • 32/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/uwzltp","slide":32,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/r7qai4","slide":33,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/mhkv6pkr","slide":33,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/9kbeh432","slide":33,"text":"Task environments: algorithm / exam view","textPreview":"Task environments: algorithm / exam view","textChars":40,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/8j2d8z2h","slide":33,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/vmdwjel8","slide":33,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/al4va9kn","slide":33,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Good PEAS design prevents vague AI requirements.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Goo...","textChars":176,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/xovelo3e","slide":33,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/wnmxcj2t","slide":33,"text":"Good PEAS design prevents vague AI requirements.","textPreview":"Good PEAS design prevents vague AI requirements.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/bq9w7al4","slide":33,"text":"PEAS","textPreview":"PEAS","textChars":4,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/qp0vy5kj","slide":33,"text":"performance","textPreview":"performance","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/87u1s3i5","slide":33,"text":"environment","textPreview":"environment","textChars":11,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/983il8jq","slide":33,"text":"actuators","textPreview":"actuators","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/m5sjqt0z","slide":33,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/n610jy1k","slide":33,"text":"VTU BCS515B • Module 1 • 33/50","textPreview":"VTU BCS515B • Module 1 • 33/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/r7qai4","slide":33,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/c4h9uw","slide":34,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":11}
+{"kind":"textbox","id":"sh/ehg32pgn","slide":34,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/1kr2dkfe","slide":34,"text":"Environment types: definition","textPreview":"Environment types: definition","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/0jil4zyt","slide":34,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/repk7ahc","slide":34,"text":"Environment properties predict agent complexity.","textPreview":"Environment properties predict agent complexity.","textChars":48,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/qdgjy5gr","slide":34,"text":"• observable\n• deterministic\n• episodic\n• static","textPreview":"• observable | • deterministic | • episodic | • static","textChars":48,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/dg729kz2","slide":34,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/cfy10fyh","slide":34,"text":"Partially observable and dynamic worlds need more internal state.","textPreview":"Partially observable and dynamic worlds need more internal state.","textChars":65,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/3q5k3ah0","slide":34,"text":"observable","textPreview":"observable","textChars":10,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/2pwju5gf","slide":34,"text":"deterministic","textPreview":"deterministic","textChars":13,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/436xsrq9","slide":34,"text":"episodic","textPreview":"episodic","textChars":8,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/54felwru","slide":34,"text":"static","textPreview":"static","textChars":6,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/i1ofq18j","slide":34,"text":"VTU BCS515B • Module 1 • 34/50","textPreview":"VTU BCS515B • Module 1 • 34/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/c4h9uw","slide":34,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/p2xqpm","slide":35,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/8fu90ry5","slide":35,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/7els7mhk","slide":35,"text":"Environment types: intuition","textPreview":"Environment types: intuition","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/mdcryh0f","slide":35,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/lc3a5wzu","slide":35,"text":"Think of environment types as a way to make an agent's next choice clearer.","textPreview":"Think of environment types as a way to make an agent's next choice clearer.","textChars":75,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/kbu9wri9","slide":35,"text":"• Why it matters: Partially observable and dynamic worlds need more internal state.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Partially observable and dynamic worlds need more internal state. | • What changes: uncertainty becomes structure | • T...","textChars":183,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/zal83mho","slide":35,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/y9cruh03","slide":35,"text":"Partially observable and dynamic worlds need more internal state.","textPreview":"Partially observable and dynamic worlds need more internal state.","textChars":65,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/x83q1czi","slide":35,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/c7a9s7ix","slide":35,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/uh0bmhgb","slide":35,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/fi9sfmxw","slide":35,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/gjitore1","slide":35,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/hkrahwfm","slide":35,"text":"VTU BCS515B • Module 1 • 35/50","textPreview":"VTU BCS515B • Module 1 • 35/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/p2xqpm","slide":35,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/d6bs3y","slide":36,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/xs3650ne","slide":36,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/apsnal4n","slide":36,"text":"Environment types: workflow","textPreview":"Environment types: workflow","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/bql43q58","slide":36,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/o3a58vmh","slide":36,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/pojm10n2","slide":36,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/21sn6l4r","slide":36,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/n214zq5w","slide":36,"text":"Partially observable and dynamic worlds need more internal state.","textPreview":"Partially observable and dynamic worlds need more internal state.","textChars":65,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/8je5kfm1","slide":36,"text":"observable","textPreview":"observable","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/tkn6dkn6","slide":36,"text":"deterministic","textPreview":"deterministic","textChars":13,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/ho36lgvm","slide":36,"text":"episodic","textPreview":"episodic","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/gnupcve1","slide":36,"text":"static","textPreview":"static","textChars":6,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/vmlojqdg","slide":36,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/ulc7alwv","slide":36,"text":"VTU BCS515B • Module 1 • 36/50","textPreview":"VTU BCS515B • Module 1 • 36/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/d6bs3y","slide":36,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/mnrgy2","slide":37,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":15}
+{"kind":"textbox","id":"sh/zq50j25k","slide":37,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/kre1c76p","slide":37,"text":"Environment types: example","textPreview":"Environment types: example","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/lcnilcna","slide":37,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/mdwjehov","slide":37,"text":"A small classroom example makes environment types concrete.","textPreview":"A small classroom example makes environment types concrete.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/7e50nm5g","slide":37,"text":"• Use the terms: observable, deterministic\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: observable, deterministic | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":128,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/8fe1gr61","slide":37,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/9g7ipwnm","slide":37,"text":"Partially observable and dynamic worlds need more internal state.","textPreview":"Partially observable and dynamic worlds need more internal state.","textChars":65,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/2hcz2dor","slide":37,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/3il0bi5c","slide":37,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/765one9o","slide":37,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/65wnu98j","slide":37,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/tsn6poru","slide":37,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/s7epwjq9","slide":37,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/j2loje9s","slide":37,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/i1cnq987","slide":37,"text":"observable","textPreview":"observable","textChars":10,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/54n6l4ry","slide":37,"text":"VTU BCS515B • Module 1 • 37/50","textPreview":"VTU BCS515B • Module 1 • 37/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/mnrgy2","slide":37,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/bgx4ut","slide":38,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/kbq5ovat","slide":38,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/jah4va98","slide":38,"text":"Environment types: algorithm / exam view","textPreview":"Environment types: algorithm / exam view","textChars":40,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/y98nm5s3","slide":38,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/tgzm1krq","slide":38,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/sfq5sfa5","slide":38,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Partially observable and dynamic worlds need more internal state.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Par...","textChars":193,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/7eh4za9k","slide":38,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/6d8nq5sz","slide":38,"text":"Partially observable and dynamic worlds need more internal state.","textPreview":"Partially observable and dynamic worlds need more internal state.","textChars":65,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/h4jm5krm","slide":38,"text":"observable","textPreview":"observable","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/g3a5wfa1","slide":38,"text":"deterministic","textPreview":"deterministic","textChars":13,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/mdkjud8f","slide":38,"text":"episodic","textPreview":"episodic","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/7yt03i90","slide":38,"text":"static","textPreview":"static","textChars":6,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/8z21wnq5","slide":38,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/90bi58rq","slide":38,"text":"VTU BCS515B • Module 1 • 38/50","textPreview":"VTU BCS515B • Module 1 • 38/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/bgx4ut","slide":38,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/nihfcc","slide":39,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":11}
+{"kind":"textbox","id":"sh/hgvylg32","slide":39,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ud4fql4r","slide":39,"text":"Agent structures: definition","textPreview":"Agent structures: definition","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/vedgjqlc","slide":39,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/436xwv2t","slide":39,"text":"Agent architectures add memory and deliberation step by step.","textPreview":"Agent architectures add memory and deliberation step by step.","textChars":61,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/54fyp03e","slide":39,"text":"• reflex\n• model-based\n• goal-based\n• utility-based","textPreview":"• reflex | • model-based | • goal-based | • utility-based","textChars":51,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ih4fulkn","slide":39,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/3ixgnql8","slide":39,"text":"Learning agents improve behavior from experience.","textPreview":"Learning agents improve behavior from experience.","textChars":49,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/s76h0f2p","slide":39,"text":"reflex","textPreview":"reflex","textChars":6,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/d8fytk3a","slide":39,"text":"model-based","textPreview":"model-based","textChars":11,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/9kb6xobm","slide":39,"text":"goal-based","textPreview":"goal-based","textChars":10,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/8z2po3u1","slide":39,"text":"utility-based","textPreview":"utility-based","textChars":13,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/7ytovytg","slide":39,"text":"VTU BCS515B • Module 1 • 39/50","textPreview":"VTU BCS515B • Module 1 • 39/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/nihfcc","slide":39,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/j7uabi","slide":40,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/6lkbu1k3","slide":40,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/tobu5wju","slide":40,"text":"Agent structures: intuition","textPreview":"Agent structures: intuition","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/8n2twb29","slide":40,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/vqdc7610","slide":40,"text":"Think of agent structures as a way to make an agent's next choice clearer.","textPreview":"Think of agent structures as a way to make an agent's next choice clearer.","textChars":74,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/up4by1kf","slide":40,"text":"• Why it matters: Learning agents improve behavior from experience.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Learning agents improve behavior from experience. | • What changes: uncertainty becomes structure | • Teaching cue: con...","textChars":167,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/hsvu9gjq","slide":40,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/grmd0b2l","slide":40,"text":"Learning agents improve behavior from experience.","textPreview":"Learning agents improve behavior from experience.","textChars":49,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/bu9cvm1g","slide":40,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/at0bmhkb","slide":40,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/cnmxov6d","slide":40,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/doveh0ny","slide":40,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/qlkfm5o7","slide":40,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/rmdwfa5s","slide":40,"text":"VTU BCS515B • Module 1 • 40/50","textPreview":"VTU BCS515B • Module 1 • 40/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/j7uabi","slide":40,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/3p4fr8","slide":41,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/3edgru1k","slide":41,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/of6x0z25","slide":41,"text":"Agent structures: workflow","textPreview":"Agent structures: workflow","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/pgfyt4jq","slide":41,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ep4fupk3","slide":41,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/fqdwnu1o","slide":41,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/grmxwz2t","slide":41,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/1svypkje","slide":41,"text":"Learning agents improve behavior from experience.","textPreview":"Learning agents improve behavior from experience.","textChars":49,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/6lkfq5kr","slide":41,"text":"reflex","textPreview":"reflex","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/rmtwjalc","slide":41,"text":"model-based","textPreview":"model-based","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/nutonuh8","slide":41,"text":"goal-based","textPreview":"goal-based","textChars":10,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/mtknup0n","slide":41,"text":"utility-based","textPreview":"utility-based","textChars":13,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/9wb6p4ze","slide":41,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/ov25wzit","slide":41,"text":"VTU BCS515B • Module 1 • 41/50","textPreview":"VTU BCS515B • Module 1 • 41/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/3p4fr8","slide":41,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/l6eddt","slide":42,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":15}
+{"kind":"textbox","id":"sh/72hwjqpo","slide":42,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/83qdcv69","slide":42,"text":"Agent structures: example","textPreview":"Agent structures: example","textChars":25,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/t4zel07u","slide":42,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/u58ve5of","slide":42,"text":"A small classroom example makes agent structures concrete.","textPreview":"A small classroom example makes agent structures concrete.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/vqhwnap0","slide":42,"text":"• Use the terms: reflex, model-based\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: reflex, model-based | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":122,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/grqxgf6l","slide":42,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/hszepk76","slide":42,"text":"Learning agents improve behavior from experience.","textPreview":"Learning agents improve behavior from experience.","textChars":49,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/a94v21ob","slide":42,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/budwb6pg","slide":42,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/jm5gb6xk","slide":42,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/ilcz21gz","slide":42,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/5onydgfq","slide":42,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/4neh4by5","slide":42,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/vylg7mho","slide":42,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/uxczyhg3","slide":42,"text":"reflex","textPreview":"reflex","textChars":6,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/h03y9wzu","slide":42,"text":"VTU BCS515B • Module 1 • 42/50","textPreview":"VTU BCS515B • Module 1 • 42/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/l6eddt","slide":42,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/4x7p9v","slide":43,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/q54fi58b","slide":43,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/d8vetk7m","slide":43,"text":"Agent structures: algorithm / exam view","textPreview":"Agent structures: algorithm / exam view","textChars":39,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/c7mxkfqh","slide":43,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zudwvaps","slide":43,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/yt4fm587","slide":43,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Learning agents improve behavior from experience.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Lea...","textChars":177,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/lwfexk7y","slide":43,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/0v6xofqd","slide":43,"text":"Learning agents improve behavior from experience.","textPreview":"Learning agents improve behavior from experience.","textChars":49,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/fytwjqpo","slide":43,"text":"reflex","textPreview":"reflex","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/edkval83","slide":43,"text":"model-based","textPreview":"model-based","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/ovmd0zmx","slide":43,"text":"goal-based","textPreview":"goal-based","textChars":10,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/9wve943i","slide":43,"text":"utility-based","textPreview":"utility-based","textChars":13,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/mt4vyp47","slide":43,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/nudw7uls","slide":43,"text":"VTU BCS515B • Module 1 • 43/50","textPreview":"VTU BCS515B • Module 1 • 43/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/4x7p9v","slide":43,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/q9j0zi","slide":44,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":11}
+{"kind":"textbox","id":"sh/xkn6dg7y","slide":44,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ahw721o7","slide":44,"text":"Environment types: definition","textPreview":"Environment types: definition","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/vi5ob6ps","slide":44,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/8fep0r6h","slide":44,"text":"Environment properties predict agent complexity.","textPreview":"Environment properties predict agent complexity.","textChars":48,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/9gn69w72","slide":44,"text":"• observable\n• deterministic\n• episodic\n• static","textPreview":"• observable | • deterministic | • episodic | • static","textChars":48,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/mtc7yh8b","slide":44,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ne5o7mpw","slide":44,"text":"Partially observable and dynamic worlds need more internal state.","textPreview":"Partially observable and dynamic worlds need more internal state.","textChars":65,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/0rupwrq5","slide":44,"text":"observable","textPreview":"observable","textChars":10,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/ls365w7q","slide":44,"text":"deterministic","textPreview":"deterministic","textChars":13,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/t0va9wfy","slide":44,"text":"episodic","textPreview":"episodic","textChars":8,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/sz290red","slide":44,"text":"static","textPreview":"static","textChars":6,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/ryts7mxs","slide":44,"text":"VTU BCS515B • Module 1 • 44/50","textPreview":"VTU BCS515B • Module 1 • 44/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/q9j0zi","slide":44,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/bcfvfm","slide":45,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/072d43yl","slide":45,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/z6tcbyh0","slide":45,"text":"Agent structures: intuition","textPreview":"Agent structures: intuition","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/y5kv2dgf","slide":45,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/d4bu98zu","slide":45,"text":"Think of agent structures as a way to make an agent's next choice clearer.","textPreview":"Think of agent structures as a way to make an agent's next choice clearer.","textChars":74,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/c32d03yp","slide":45,"text":"• Why it matters: Learning agents improve behavior from experience.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Learning agents improve behavior from experience. | • What changes: uncertainty becomes structure | • Teaching cue: con...","textChars":167,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/b29c7yh4","slide":45,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/q10vytgj","slide":45,"text":"Learning agents improve behavior from experience.","textPreview":"Learning agents improve behavior from experience.","textChars":49,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/x0velsfe","slide":45,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/wzmdcnyt","slide":45,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/6p4vm9sf","slide":45,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/7qdcvet0","slide":45,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/8rmdojal","slide":45,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/tsvux4b6","slide":45,"text":"VTU BCS515B • Module 1 • 45/50","textPreview":"VTU BCS515B • Module 1 • 45/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/bcfvfm","slide":45,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/u62wkv","slide":46,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/5kjy983y","slide":46,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ih8zetkn","slide":46,"text":"What is AI?: workflow","textPreview":"What is AI?: workflow","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/3ihg7yl8","slide":46,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/gfqhc32h","slide":46,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/hgzy5o32","slide":46,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ud8zatkb","slide":46,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/vehg3ylw","slide":46,"text":"AI is best taught here as rational action.","textPreview":"AI is best taught here as rational action.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/0buhon2l","slide":46,"text":"acting humanly","textPreview":"acting humanly","textChars":14,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/1c3ihs36","slide":46,"text":"thinking humanly","textPreview":"thinking humanly","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/l8ri18ni","slide":46,"text":"thinking rationally","textPreview":"thinking rationally","textChars":19,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/07ihs3mx","slide":46,"text":"acting rationally","textPreview":"acting rationally","textChars":17,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/z6p0zi5c","slide":46,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/y5gzqd4r","slide":46,"text":"VTU BCS515B • Module 1 • 46/50","textPreview":"VTU BCS515B • Module 1 • 46/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/u62wkv","slide":46,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/ktn1bj","slide":47,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/crid4f65","slide":47,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/bq9wva5k","slide":47,"text":"Module 1 summary map","textPreview":"Module 1 summary map","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/qp0v25oz","slide":47,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/poret0nu","slide":47,"text":"Introduction and Intelligent Agents","textPreview":"Introduction and Intelligent Agents","textChars":35,"textLines":1,"bbox":[500,300,280,74]}
+{"kind":"textbox","id":"sh/onid0v69","slide":47,"text":"What is AI?","textPreview":"What is AI?","textChars":11,"textLines":1,"bbox":[120,190,180,58]}
+{"kind":"textbox","id":"sh/3m9crq5o","slide":47,"text":"Foundations of AI","textPreview":"Foundations of AI","textChars":17,"textLines":1,"bbox":[400,190,180,58]}
+{"kind":"textbox","id":"sh/2l0vylo3","slide":47,"text":"State of the art","textPreview":"State of the art","textChars":16,"textLines":1,"bbox":[680,190,180,58]}
+{"kind":"textbox","id":"sh/1krup0ni","slide":47,"text":"Agents and environments","textPreview":"Agents and environments","textChars":23,"textLines":1,"bbox":[960,190,180,58]}
+{"kind":"textbox","id":"sh/gjydwv6x","slide":47,"text":"Rationality","textPreview":"Rationality","textChars":11,"textLines":1,"bbox":[120,430,180,58]}
+{"kind":"textbox","id":"sh/qlgz6dcz","slide":47,"text":"Task environments","textPreview":"Task environments","textChars":17,"textLines":1,"bbox":[400,430,180,58]}
+{"kind":"textbox","id":"sh/bmpgzitk","slide":47,"text":"Environment types","textPreview":"Environment types","textChars":17,"textLines":1,"bbox":[680,430,180,58]}
+{"kind":"textbox","id":"sh/cnyh8nu5","slide":47,"text":"Agent structures","textPreview":"Agent structures","textChars":16,"textLines":1,"bbox":[960,430,180,58]}
+{"kind":"textbox","id":"sh/do7y1sbq","slide":47,"text":"Explain the module by connecting each outer idea back to the center.","textPreview":"Explain the module by connecting each outer idea back to the center.","textChars":68,"textLines":1,"bbox":[254,608,780,34]}
+{"kind":"textbox","id":"sh/2hwz2dcn","slide":47,"text":"VTU BCS515B • Module 1 • 47/50","textPreview":"VTU BCS515B • Module 1 • 47/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ktn1bj","slide":47,"text":"[Animation]\nReveal branches around the center. Ask students to supply one example for each branch.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/26tjnl","slide":48,"title":"Questions","textShapes":21}
+{"kind":"textbox","id":"sh/ep8r2p8f","slide":48,"text":"Questions","textPreview":"Questions","textChars":9,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/1szqdkr6","slide":48,"text":"Module 1 exam practice","textPreview":"Module 1 exam practice","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/0rq94fql","slide":48,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ne18fu9w","slide":48,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,166,46,46]}
+{"kind":"textbox","id":"sh/md8r6p8r","slide":48,"text":"Explain what is ai? with a neat diagram.","textPreview":"Explain what is ai? with a neat diagram.","textChars":40,"textLines":1,"bbox":[164,158,850,54]}
+{"kind":"textbox","id":"sh/9gjqh4r2","slide":48,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,168,110,36]}
+{"kind":"textbox","id":"sh/ofa98zqh","slide":48,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,242,46,46]}
+{"kind":"textbox","id":"sh/bi18ju98","slide":48,"text":"Apply foundations of ai to a small example and state the takeaway.","textPreview":"Apply foundations of ai to a small example and state the takeaway.","textChars":66,"textLines":1,"bbox":[164,234,850,54]}
+{"kind":"textbox","id":"sh/ahsra98n","slide":48,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,244,110,36]}
+{"kind":"textbox","id":"sh/o3a1oba9","slide":48,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,318,46,46]}
+{"kind":"textbox","id":"sh/pojixgbu","slide":48,"text":"Explain state of the art with a neat diagram.","textPreview":"Explain state of the art with a neat diagram.","textChars":45,"textLines":1,"bbox":[164,310,850,54]}
+{"kind":"textbox","id":"sh/21sjm1s3","slide":48,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,320,110,36]}
+{"kind":"textbox","id":"sh/3210v6to","slide":48,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,394,46,46]}
+{"kind":"textbox","id":"sh/cra1sba5","slide":48,"text":"Apply agents and environments to a small example and state the takeaway.","textPreview":"Apply agents and environments to a small example and state the takeaway.","textChars":72,"textLines":1,"bbox":[164,386,850,54]}
+{"kind":"textbox","id":"sh/ds3i1gbq","slide":48,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,396,110,36]}
+{"kind":"textbox","id":"sh/qpsjq1sf","slide":48,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,470,46,46]}
+{"kind":"textbox","id":"sh/bq10z6tk","slide":48,"text":"Explain rationality with a neat diagram.","textPreview":"Explain rationality with a neat diagram.","textChars":40,"textLines":1,"bbox":[164,462,850,54]}
+{"kind":"textbox","id":"sh/0vu1wvah","slide":48,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,472,110,36]}
+{"kind":"textbox","id":"sh/lw3250b2","slide":48,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,546,46,46]}
+{"kind":"textbox","id":"sh/9czipg36","slide":48,"text":"Apply task environments to a small example and state the takeaway.","textPreview":"Apply task environments to a small example and state the takeaway.","textChars":66,"textLines":1,"bbox":[164,538,850,54]}
+{"kind":"textbox","id":"sh/8bq1gb2l","slide":48,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,548,110,36]}
+{"kind":"textbox","id":"sh/7ah0nql0","slide":48,"text":"VTU BCS515B • Module 1 • 48/50","textPreview":"VTU BCS515B • Module 1 • 48/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/26tjnl","slide":48,"text":"[Animation]\nReveal questions one at a time. For each, ask students to first identify keywords from the syllabus.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/0xbwnq","slide":49,"title":"Module 1 / Introduction and Intelligent Agents","textShapes":12}
+{"kind":"textbox","id":"sh/4jmp0z65","slide":49,"text":"Module 1 / Introduction and Intelligent Agents","textPreview":"Module 1 / Introduction and Intelligent Agents","textChars":46,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/3id8rupk","slide":49,"text":"What is AI?: algorithm / exam view","textPreview":"What is AI?: algorithm / exam view","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ih47ypoz","slide":49,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/hgvqpk7u","slide":49,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/gfmpwz69","slide":49,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: AI is best taught here as rational action.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: AI ...","textChars":170,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ved8nupo","slide":49,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/udk7up83","slide":49,"text":"AI is best taught here as rational action.","textPreview":"AI is best taught here as rational action.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/1cfq1o7y","slide":49,"text":"acting humanly","textPreview":"acting humanly","textChars":14,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/0b698j6d","slide":49,"text":"thinking humanly","textPreview":"thinking humanly","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/69grid4b","slide":49,"text":"thinking rationally","textPreview":"thinking rationally","textChars":19,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/rapsbi5w","slide":49,"text":"acting rationally","textPreview":"acting rationally","textChars":17,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/sby9knmh","slide":49,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/tc7adsn2","slide":49,"text":"VTU BCS515B • Module 1 • 49/50","textPreview":"VTU BCS515B • Module 1 • 49/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/0xbwnq","slide":49,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}
+{"kind":"slide","id":"sl/nl6egi","slide":50,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/zypg3m5w","slide":50,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/0jyhcr6h","slide":50,"text":"Module 1 summary map","textPreview":"Module 1 summary map","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/lk7y5wn2","slide":50,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/mlgzehon","slide":50,"text":"Introduction and Intelligent Agents","textPreview":"Introduction and Intelligent Agents","textChars":35,"textLines":1,"bbox":[500,300,280,74]}
+{"kind":"textbox","id":"sh/nmpg7m58","slide":50,"text":"What is AI?","textPreview":"What is AI?","textChars":11,"textLines":1,"bbox":[120,190,180,58]}
+{"kind":"textbox","id":"sh/8nyhgr6t","slide":50,"text":"Foundations of AI","textPreview":"Foundations of AI","textChars":17,"textLines":1,"bbox":[400,190,180,58]}
+{"kind":"textbox","id":"sh/9o7i9wne","slide":50,"text":"State of the art","textPreview":"State of the art","textChars":16,"textLines":1,"bbox":[680,190,180,58]}
+{"kind":"textbox","id":"sh/ap0zi1oj","slide":50,"text":"Agents and environments","textPreview":"Agents and environments","textChars":23,"textLines":1,"bbox":[960,190,180,58]}
+{"kind":"textbox","id":"sh/vq90b654","slide":50,"text":"Rationality","textPreview":"Rationality","textChars":11,"textLines":1,"bbox":[120,430,180,58]}
+{"kind":"textbox","id":"sh/jqxk32ps","slide":50,"text":"Task environments","textPreview":"Task environments","textChars":17,"textLines":1,"bbox":[400,430,180,58]}
+{"kind":"textbox","id":"sh/ypo3axo7","slide":50,"text":"Environment types","textPreview":"Environment types","textChars":17,"textLines":1,"bbox":[680,430,180,58]}
+{"kind":"textbox","id":"sh/5cf25c7y","slide":50,"text":"Agent structures","textPreview":"Agent structures","textChars":16,"textLines":1,"bbox":[960,430,180,58]}
+{"kind":"textbox","id":"sh/kr6lc76d","slide":50,"text":"Explain the module by connecting each outer idea back to the center.","textPreview":"Explain the module by connecting each outer idea back to the center.","textChars":68,"textLines":1,"bbox":[254,608,780,34]}
+{"kind":"textbox","id":"sh/bmdkz2pw","slide":50,"text":"VTU BCS515B • Module 1 • 50/50","textPreview":"VTU BCS515B • Module 1 • 50/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/nl6egi","slide":50,"text":"[Animation]\nReveal branches around the center. Ask students to supply one example for each branch.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-1-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-1-textbook.pdf"}

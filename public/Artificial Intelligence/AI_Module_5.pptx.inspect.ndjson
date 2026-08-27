@@ -1,0 +1,902 @@
+{"kind":"deck","id":"pr/491h8o","name":"Deck"}
+{"kind":"layout","layoutId":"92dd4c67-f57c-46a7-b1b5-9c4e453919c4","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"eb2bfa0a-166d-4239-ad90-9f46e229d70d","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/o9orj2","slide":1,"title":"Module 5","textShapes":9}
+{"kind":"textbox","id":"sh/9gb6h4zq","slide":1,"text":"Module 5","textPreview":"Module 5","textChars":8,"textLines":1,"bbox":[82,88,340,60]}
+{"kind":"textbox","id":"sh/mtk7mpgf","slide":1,"text":"Backward Inference, Resolution, and Classical Planning","textPreview":"Backward Inference, Resolution, and Classical Planning","textChars":54,"textLines":1,"bbox":[82,166,760,100]}
+{"kind":"textbox","id":"sh/netofuhk","slide":1,"text":"• Backward chaining\n• Resolution\n• Definition of classical planning\n• Algorithms for planning as state-space search\n• Planning graphs","textPreview":"• Backward chaining | • Resolution | • Definition of classical planning | • Algorithms for planning as state-space search | • Planning gr...","textChars":133,"textLines":5,"bbox":[94,342,520,250]}
+{"kind":"textbox","id":"sh/0r2pkfy9","slide":1,"text":"Backward chaining","textPreview":"Backward chaining","textChars":17,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/1sb6dkzu","slide":1,"text":"Resolution","textPreview":"Resolution","textChars":10,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/ep0ni5g3","slide":1,"text":"Definition of classical planning","textPreview":"Definition of classical planning","textChars":32,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/zq9obaho","slide":1,"text":"Algorithms for planning as state-space search","textPreview":"Algorithms for planning as state-space search","textChars":45,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/cni5gfyx","slide":1,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/dor69kzi","slide":1,"text":"VTU BCS515B • Module 5 • 01/50","textPreview":"VTU BCS515B • Module 5 • 01/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/o9orj2","slide":1,"text":"[Animation]\nUse this as the module reset. Reveal syllabus bullets one by one and connect them to the right-side visual.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/lg72l8","slide":2,"title":"VTU syllabus cross-check","textShapes":14}
+{"kind":"textbox","id":"sh/e1oj2dcv","slide":2,"text":"VTU syllabus cross-check","textPreview":"VTU syllabus cross-check","textChars":24,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/1oz2xsvm","slide":2,"text":"Roadmap for Module 5","textPreview":"Roadmap for Module 5","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/0n614nu1","slide":2,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ryx0rid4","slide":2,"text":"1. Backward chaining","textPreview":"1. Backward chaining","textChars":20,"textLines":1,"bbox":[76,210,190,70]}
+{"kind":"textbox","id":"sh/qxojydcz","slide":2,"text":"2. AND/OR proof trees","textPreview":"2. AND/OR proof trees","textChars":21,"textLines":1,"bbox":[308,210,190,70]}
+{"kind":"textbox","id":"sh/d0f2t8va","slide":2,"text":"3. Logic programming view","textPreview":"3. Logic programming view","textChars":25,"textLines":1,"bbox":[540,210,190,70]}
+{"kind":"textbox","id":"sh/cz610nup","slide":2,"text":"4. Resolution","textPreview":"4. Resolution","textChars":13,"textLines":1,"bbox":[772,210,190,70]}
+{"kind":"textbox","id":"sh/3ud0nyd8","slide":2,"text":"5. CNF conversion","textPreview":"5. CNF conversion","textChars":17,"textLines":1,"bbox":[1004,210,190,70]}
+{"kind":"textbox","id":"sh/it4jutcn","slide":2,"text":"6. Classical planning","textPreview":"6. Classical planning","textChars":21,"textLines":1,"bbox":[76,342,190,70]}
+{"kind":"textbox","id":"sh/czepknmh","slide":2,"text":"7. Planning search","textPreview":"7. Planning search","textChars":18,"textLines":1,"bbox":[308,342,190,70]}
+{"kind":"textbox","id":"sh/x0n6tsn2","slide":2,"text":"8. Blocks world","textPreview":"8. Blocks world","textChars":15,"textLines":1,"bbox":[540,342,190,70]}
+{"kind":"textbox","id":"sh/axc7id4b","slide":2,"text":"9. Planning graphs","textPreview":"9. Planning graphs","textChars":18,"textLines":1,"bbox":[772,342,190,70]}
+{"kind":"textbox","id":"sh/by5ori5w","slide":2,"text":"10. Course integration","textPreview":"10. Course integration","textChars":22,"textLines":1,"bbox":[1004,342,190,70]}
+{"kind":"textbox","id":"sh/ovupg3ml","slide":2,"text":"Every VTU topic is expanded as definition → intuition → workflow → example → exam view","textPreview":"Every VTU topic is expanded as definition → intuition → workflow → example → exam view","textChars":86,"textLines":1,"bbox":[188,552,900,54]}
+{"kind":"textbox","id":"sh/pw36p8n6","slide":2,"text":"VTU BCS515B • Module 5 • 02/50","textPreview":"VTU BCS515B • Module 5 • 02/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/lg72l8","slide":2,"text":"[Animation]\nAnimate the roadmap by row. Pause after each syllabus cluster and state how it will be examined.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/dq96l8","slide":3,"title":"MISSING = 0","textShapes":27}
+{"kind":"textbox","id":"sh/ahsvepwz","slide":3,"text":"MISSING = 0","textPreview":"MISSING = 0","textChars":11,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/xkje9kvq","slide":3,"text":"Module 5 VTU coverage audit","textPreview":"Module 5 VTU coverage audit","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/wjadgfe5","slide":3,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/jmlwbudg","slide":3,"text":"VTU topic","textPreview":"VTU topic","textChars":9,"textLines":1,"bbox":[82,154,310,28]}
+{"kind":"textbox","id":"sh/ylcvipwv","slide":3,"text":"Local source coverage","textPreview":"Local source coverage","textChars":21,"textLines":1,"bbox":[430,154,230,28]}
+{"kind":"textbox","id":"sh/5o3ed4vm","slide":3,"text":"Status","textPreview":"Status","textChars":6,"textLines":1,"bbox":[700,154,100,28]}
+{"kind":"textbox","id":"sh/knudkze1","slide":3,"text":"Action in this deck","textPreview":"Action in this deck","textChars":19,"textLines":1,"bbox":[842,154,320,28]}
+{"kind":"textbox","id":"sh/7alwfeds","slide":3,"text":"Backward chaining","textPreview":"Backward chaining","textChars":17,"textLines":1,"bbox":[82,192,310,46]}
+{"kind":"textbox","id":"sh/6pcvm9w7","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,192,230,46]}
+{"kind":"textbox","id":"sh/gvi9k7ep","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,192,100,46]}
+{"kind":"textbox","id":"sh/hgrqdcfa","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,192,320,46]}
+{"kind":"textbox","id":"sh/ut0rixwj","slide":3,"text":"Resolution","textPreview":"Resolution","textChars":10,"textLines":1,"bbox":[82,254,310,46]}
+{"kind":"textbox","id":"sh/vu98b2x4","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,254,230,46]}
+{"kind":"textbox","id":"sh/4j29ore1","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,254,100,46]}
+{"kind":"textbox","id":"sh/5kbqhwf6","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,254,320,46]}
+{"kind":"textbox","id":"sh/ih0rmhwv","slide":3,"text":"Definition of classical planning","textPreview":"Definition of classical planning","textChars":32,"textLines":1,"bbox":[82,316,310,46]}
+{"kind":"textbox","id":"sh/3it8fmxg","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,316,230,46]}
+{"kind":"textbox","id":"sh/sn29srex","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,316,100,46]}
+{"kind":"textbox","id":"sh/dobqlwfi","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,316,320,46]}
+{"kind":"textbox","id":"sh/147q5w7m","slide":3,"text":"Algorithms for planning as state-space search","textPreview":"Algorithms for planning as state-space search","textChars":45,"textLines":1,"bbox":[82,378,310,46]}
+{"kind":"textbox","id":"sh/03y9cr61","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,378,230,46]}
+{"kind":"textbox","id":"sh/z2p83mpg","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,378,100,46]}
+{"kind":"textbox","id":"sh/e1g7ahov","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,378,320,46]}
+{"kind":"textbox","id":"sh/98rq9w7i","slide":3,"text":"Planning graphs","textPreview":"Planning graphs","textChars":15,"textLines":1,"bbox":[82,440,310,46]}
+{"kind":"textbox","id":"sh/o7i9gb6d","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,440,230,46]}
+{"kind":"textbox","id":"sh/n69876ps","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,440,100,46]}
+{"kind":"textbox","id":"sh/m50re1o7","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,440,320,46]}
+{"kind":"textbox","id":"sh/pcnqxc7e","slide":3,"text":"VTU BCS515B • Module 5 • 03/50","textPreview":"VTU BCS515B • Module 5 • 03/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/dq96l8","slide":3,"text":"[Animation]\nUse this audit slide only if students or reviewers need syllabus mapping. Otherwise keep it as backup.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/0hfy0z","slide":4,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":11}
+{"kind":"textbox","id":"sh/nudkjm9c","slide":4,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ovmlcrqx","slide":4,"text":"Backward chaining: definition","textPreview":"Backward chaining: definition","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/9gv2lwri","slide":4,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/epk36hsv","slide":4,"text":"Backward chaining works from the query back to facts.","textPreview":"Backward chaining works from the query back to facts.","textChars":53,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/zqtkfm90","slide":4,"text":"• goal-directed\n• match conclusion\n• subgoals\n• proof","textPreview":"• goal-directed | • match conclusion | • subgoals | • proof","textChars":53,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/0rml8ral","slide":4,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/1sv2hcr6","slide":4,"text":"It is efficient when the query is specific.","textPreview":"It is efficient when the query is specific.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ylo3i18z","slide":4,"text":"goal-directed","textPreview":"goal-directed","textChars":13,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/jmx4r69k","slide":4,"text":"match conclusion","textPreview":"match conclusion","textChars":16,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/7y58nq9c","slide":4,"text":"subgoals","textPreview":"subgoals","textChars":8,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/6dw7elsr","slide":4,"text":"proof","textPreview":"proof","textChars":5,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/t0nqpgr2","slide":4,"text":"VTU BCS515B • Module 5 • 04/50","textPreview":"VTU BCS515B • Module 5 • 04/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/0hfy0z","slide":4,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/ci5wpt","slide":5,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/2903a98n","slide":5,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/pcrm54re","slide":5,"text":"Backward chaining: intuition","textPreview":"Backward chaining: intuition","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/4bilczqt","slide":5,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/fmpkzu9w","slide":5,"text":"Think of backward chaining as a way to make an agent's next choice clearer.","textPreview":"Think of backward chaining as a way to make an agent's next choice clearer.","textChars":75,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ulg36p8r","slide":5,"text":"• Why it matters: It is efficient when the query is specific.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: It is efficient when the query is specific. | • What changes: uncertainty becomes structure | • Teaching cue: connect t...","textChars":161,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/hor214r2","slide":5,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/gnil8zqh","slide":5,"text":"It is efficient when the query is specific.","textPreview":"It is efficient when the query is specific.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/7ipkva90","slide":5,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/6hg32p8f","slide":5,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/4fq5s7yl","slide":5,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/p0zm1cf6","slide":5,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/2donqxgf","slide":5,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/3eh4z2h0","slide":5,"text":"VTU BCS515B • Module 5 • 05/50","textPreview":"VTU BCS515B • Module 5 • 05/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ci5wpt","slide":5,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/s7w8b5","slide":6,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/epon2tcr","slide":6,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/1sf6d8v2","slide":6,"text":"Backward chaining: workflow","textPreview":"Backward chaining: workflow","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/0r6543uh","slide":6,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/nuxofid8","slide":6,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/2ton6dcn","slide":6,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/pwf6hsve","slide":6,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ov658nut","slide":6,"text":"It is efficient when the query is specific.","textPreview":"It is efficient when the query is specific.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/jydo3ed4","slide":6,"text":"goal-directed","textPreview":"goal-directed","textChars":13,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/ixknu9wj","slide":6,"text":"match conclusion","textPreview":"match conclusion","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/wj65sv2p","slide":6,"text":"subgoals","textPreview":"subgoals","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/xkf610ja","slide":6,"text":"proof","textPreview":"proof","textChars":5,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/ahonq5kj","slide":6,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/bixozq14","slide":6,"text":"VTU BCS515B • Module 5 • 06/50","textPreview":"VTU BCS515B • Module 5 • 06/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/s7w8b5","slide":6,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/u9ya3k","slide":7,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":15}
+{"kind":"textbox","id":"sh/cjqd8zat","slide":7,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/rihwzu98","slide":7,"text":"Backward chaining: example","textPreview":"Backward chaining: example","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/qh8v6psn","slide":7,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/l8je54ra","slide":7,"text":"A small classroom example makes backward chaining concrete.","textPreview":"A small classroom example makes backward chaining concrete.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/07axczap","slide":7,"text":"• Use the terms: goal-directed, match conclusion\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: goal-directed, match conclusion | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":134,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/z61w3e94","slide":7,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/y5sva9sj","slide":7,"text":"It is efficient when the query is specific.","textPreview":"It is efficient when the query is specific.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/9c3e9or6","slide":7,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/8buxgja1","slide":7,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/y903ydgf","slide":7,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/ja947ih0","slide":7,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/kbil0nyl","slide":7,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/lcrm9sz6","slide":7,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/6d032xgb","slide":7,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/7e94b2hw","slide":7,"text":"goal-directed","textPreview":"goal-directed","textChars":13,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/8f2l47yh","slide":7,"text":"VTU BCS515B • Module 5 • 07/50","textPreview":"VTU BCS515B • Module 5 • 07/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/u9ya3k","slide":7,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/akp88e","slide":8,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/7ylk3aho","slide":8,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/szulwfi9","slide":8,"text":"Backward chaining: algorithm / exam view","textPreview":"Backward chaining: algorithm / exam view","textChars":40,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/t03m5kzu","slide":8,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/u1c3y50f","slide":8,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/f2l47ah0","slide":8,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: It is efficient when the query is specific.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: It ...","textChars":171,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/g3el0fil","slide":8,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/h4nm9kz6","slide":8,"text":"It is efficient when the query is specific.","textPreview":"It is efficient when the query is specific.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/25w32p0b","slide":8,"text":"goal-directed","textPreview":"goal-directed","textChars":13,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/3654buhw","slide":8,"text":"match conclusion","textPreview":"match conclusion","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/ja9gjupo","slide":8,"text":"subgoals","textPreview":"subgoals","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/i90fapo3","slide":8,"text":"proof","textPreview":"proof","textChars":5,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/5wbyl47e","slide":8,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/kvixcz69","slide":8,"text":"VTU BCS515B • Module 5 • 08/50","textPreview":"VTU BCS515B • Module 5 • 08/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/akp88e","slide":8,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/50cchm","slide":9,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":11}
+{"kind":"textbox","id":"sh/2hgjqd4f","slide":9,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/p472l836","slide":9,"text":"AND/OR proof trees: definition","textPreview":"AND/OR proof trees: definition","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ojy1snml","slide":9,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/fe5kfyl4","slide":9,"text":"Backward chaining produces proof trees.","textPreview":"Backward chaining produces proof trees.","textChars":39,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/edwjmt4j","slide":9,"text":"• OR choices\n• AND premises\n• bindings\n• backtracking","textPreview":"• OR choices | • AND premises | • bindings | • backtracking","textChars":53,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/1gn2h83u","slide":9,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/0fe1o3m9","slide":9,"text":"OR chooses a rule; AND proves all premises.","textPreview":"OR chooses a rule; AND proves all premises.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ra50byls","slide":9,"text":"OR choices","textPreview":"OR choices","textChars":10,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/q9wjit47","slide":9,"text":"AND premises","textPreview":"AND premises","textChars":12,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/8nehcv29","slide":9,"text":"bindings","textPreview":"bindings","textChars":8,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/tonyl0ju","slide":9,"text":"backtracking","textPreview":"backtracking","textChars":12,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/6lwfalk3","slide":9,"text":"VTU BCS515B • Module 5 • 09/50","textPreview":"VTU BCS515B • Module 5 • 09/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/50cchm","slide":9,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/b1lefl","slide":10,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/i5cre50b","slide":10,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/583a9kz2","slide":10,"text":"AND/OR proof trees: intuition","textPreview":"AND/OR proof trees: intuition","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/47u9gfih","slide":10,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/rulsbuh8","slide":10,"text":"Think of and/or proof trees as a way to make an agent's next choice clearer.","textPreview":"Think of and/or proof trees as a way to make an agent's next choice clearer.","textChars":76,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/6tcrip0n","slide":10,"text":"• Why it matters: OR chooses a rule; AND proves all premises.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: OR chooses a rule; AND proves all premises. | • What changes: uncertainty becomes structure | • Teaching cue: connect t...","textChars":161,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/twnad4zy","slide":10,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/sve9kzit","slide":10,"text":"OR chooses a rule; AND proves all premises.","textPreview":"OR chooses a rule; AND proves all premises.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/fy5sfuh4","slide":10,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/exwbmp0j","slide":10,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/0juhw7ih","slide":10,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/lk3ypsz2","slide":10,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/yxczux0r","slide":10,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/zilgn2hw","slide":10,"text":"VTU BCS515B • Module 5 • 10/50","textPreview":"VTU BCS515B • Module 5 • 10/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/b1lefl","slide":10,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/eihs1m","slide":11,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/5w3ixwza","slide":11,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/itcz21gz","slide":11,"text":"AND/OR proof trees: workflow","textPreview":"AND/OR proof trees: workflow","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/jul0vmhk","slide":11,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/sze18by1","slide":11,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/t0ni1gzm","slide":11,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/6xwj61gv","slide":11,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ry50z6hg","slide":11,"text":"OR chooses a rule; AND proves all premises.","textPreview":"OR chooses a rule; AND proves all premises.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/83ahw7ix","slide":11,"text":"OR choices","textPreview":"OR choices","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/94jipczi","slide":11,"text":"AND premises","textPreview":"AND premises","textChars":12,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/1kj6xsra","slide":11,"text":"bindings","textPreview":"bindings","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/0jq5onqp","slide":11,"text":"backtracking","textPreview":"backtracking","textChars":12,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/fihovi94","slide":11,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/ex8nmd8j","slide":11,"text":"VTU BCS515B • Module 5 • 11/50","textPreview":"VTU BCS515B • Module 5 • 11/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/eihs1m","slide":11,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/8dk86u","slide":12,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":15}
+{"kind":"textbox","id":"sh/4by5gne9","slide":12,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/3ap47ido","slide":12,"text":"AND/OR proof trees: example","textPreview":"AND/OR proof trees: example","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/29gnedw3","slide":12,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/h87m58vi","slide":12,"text":"A small classroom example makes and/or proof trees concrete.","textPreview":"A small classroom example makes and/or proof trees concrete.","textChars":60,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/gny5c3ed","slide":12,"text":"• Use the terms: OR choices, AND premises\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: OR choices, AND premises | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":127,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/fm543yds","slide":12,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ulw3atw7","slide":12,"text":"OR chooses a rule; AND proves all premises.","textPreview":"OR chooses a rule; AND proves all premises.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/tknm18vm","slide":12,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/8jel83e1","slide":12,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/ado721ob","slide":12,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/bexov6pw","slide":12,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/cf6p4b6h","slide":12,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/xgf6xg72","slide":12,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/2947y1of","slide":12,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/nador6p0","slide":12,"text":"OR choices","textPreview":"OR choices","textChars":10,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/ob6p0b6l","slide":12,"text":"VTU BCS515B • Module 5 • 12/50","textPreview":"VTU BCS515B • Module 5 • 12/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/8dk86u","slide":12,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/rcbza6","slide":13,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/6t4jexgz","slide":13,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/twvi9cfq","slide":13,"text":"AND/OR proof trees: algorithm / exam view","textPreview":"AND/OR proof trees: algorithm / exam view","textChars":41,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/svm1g7y5","slide":13,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/j6d03ih8","slide":13,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/i5kjaxg3","slide":13,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: OR chooses a rule; AND proves all premises.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: OR ...","textChars":171,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/5svi5sfe","slide":13,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/4rm1cnyt","slide":13,"text":"OR chooses a rule; AND proves all premises.","textPreview":"OR chooses a rule; AND proves all premises.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/32xkfmxs","slide":13,"text":"OR choices","textPreview":"OR choices","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/21ojmhg7","slide":13,"text":"AND premises","textPreview":"AND premises","textChars":12,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/cv61srat","slide":13,"text":"bindings","textPreview":"bindings","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/dgf21wre","slide":13,"text":"backtracking","textPreview":"backtracking","textChars":12,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/qtojqhsn","slide":13,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/ruxkzm98","slide":13,"text":"VTU BCS515B • Module 5 • 13/50","textPreview":"VTU BCS515B • Module 5 • 13/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/rcbza6","slide":13,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/wj1zvv","slide":14,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":11}
+{"kind":"textbox","id":"sh/cbatsvul","slide":14,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ba1czad0","slide":14,"text":"Logic programming view: definition","textPreview":"Logic programming view: definition","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/q9sbq5cf","slide":14,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/l03u5kv2","slide":14,"text":"Logic programming executes queries using backward chaining.","textPreview":"Logic programming executes queries using backward chaining.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/0zutwfuh","slide":14,"text":"• depth-first\n• unification\n• backtracking\n• memoization","textPreview":"• depth-first | • unification | • backtracking | • memoization","textChars":56,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/zy1c3adc","slide":14,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/yxsbu5cr","slide":14,"text":"Caching avoids repeated subgoals.","textPreview":"Caching avoids repeated subgoals.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/943u9kve","slide":14,"text":"depth-first","textPreview":"depth-first","textChars":11,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/83ud0fut","slide":14,"text":"unification","textPreview":"unification","textChars":11,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/u543yd83","slide":14,"text":"backtracking","textPreview":"backtracking","textChars":12,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/v6d4rypo","slide":14,"text":"memoization","textPreview":"memoization","textChars":11,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/g7ml03q9","slide":14,"text":"VTU BCS515B • Module 5 • 14/50","textPreview":"VTU BCS515B • Module 5 • 14/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/wj1zvv","slide":14,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/rcfcx8","slide":15,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/ilkne9k7","slide":15,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/5ov69ojy","slide":15,"text":"Logic programming view: intuition","textPreview":"Logic programming view: intuition","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/kn25gj2d","slide":15,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7qdoby14","slide":15,"text":"Think of logic programming view as a way to make an agent's next choice clearer.","textPreview":"Think of logic programming view as a way to make an agent's next choice clearer.","textChars":80,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/6p4nitkj","slide":15,"text":"• Why it matters: Caching avoids repeated subgoals.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Caching avoids repeated subgoals. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea to...","textChars":151,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/tsv6doju","slide":15,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/srm5k329","slide":15,"text":"Caching avoids repeated subgoals.","textPreview":"Caching avoids repeated subgoals.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/nu9ozu1k","slide":15,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/mt0n6pkz","slide":15,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/s3atkbep","slide":15,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/d4jutgva","slide":15,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/q1sbi1wj","slide":15,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/r21cr6d4","slide":15,"text":"VTU BCS515B • Module 5 • 15/50","textPreview":"VTU BCS515B • Module 5 • 15/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/rcfcx8","slide":15,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/t1mu1d","slide":16,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/qhs3yp0f","slide":16,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/dkjm94j6","slide":16,"text":"Logic programming view: workflow","textPreview":"Logic programming view: workflow","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/sjal0zil","slide":16,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/3eh43u1o","slide":16,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/it83up03","slide":16,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/5gjm5kju","slide":16,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/4fqlwfi9","slide":16,"text":"Caching avoids repeated subgoals.","textPreview":"Caching avoids repeated subgoals.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/vqh4za1s","slide":16,"text":"depth-first","textPreview":"depth-first","textChars":11,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/up83q507","slide":16,"text":"unification","textPreview":"unification","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/0j6hsb6x","slide":16,"text":"backtracking","textPreview":"backtracking","textChars":12,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/lkfilgni","slide":16,"text":"memoization","textPreview":"memoization","textChars":11,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/yx4zq1or","slide":16,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/zyx0j65c","slide":16,"text":"VTU BCS515B • Module 5 • 16/50","textPreview":"VTU BCS515B • Module 5 • 16/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/t1mu1d","slide":16,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/pg57g1","slide":17,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":15}
+{"kind":"textbox","id":"sh/5s3a9cbe","slide":17,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ipsbehs3","slide":17,"text":"Logic programming view: example","textPreview":"Logic programming view: example","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/jq1s7mto","slide":17,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/svutkra5","slide":17,"text":"A small classroom example makes logic programming view concrete.","textPreview":"A small classroom example makes logic programming view concrete.","textChars":64,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/tw3adwbq","slide":17,"text":"• Use the terms: depth-first, unification\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: depth-first, unification | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":127,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/6tcbihsz","slide":17,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/7ulsbmtk","slide":17,"text":"Caching avoids repeated subgoals.","textPreview":"Caching avoids repeated subgoals.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/gjetoba1","slide":17,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/hknuhwbm","slide":17,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/t0vq90b2","slide":17,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/szm9gvah","slide":17,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/7yd87qtw","slide":17,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/6x4relsb","slide":17,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/h4fqd0by","slide":17,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/g369kvad","slide":17,"text":"depth-first","textPreview":"depth-first","textChars":11,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/f2x8bqts","slide":17,"text":"VTU BCS515B • Module 5 • 17/50","textPreview":"VTU BCS515B • Module 5 • 17/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/pg57g1","slide":17,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/erfqi2","slide":18,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/t0f6tw36","slide":18,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/6d47i14v","slide":18,"text":"Logic programming view: algorithm / exam view","textPreview":"Logic programming view: algorithm / exam view","textChars":45,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/rydor6lg","slide":18,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/g36pobmx","slide":18,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/14f6xg3i","slide":18,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Caching avoids repeated subgoals.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Cac...","textChars":161,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/e1o7m14r","slide":18,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/f2xov6lc","slide":18,"text":"Caching avoids repeated subgoals.","textPreview":"Caching avoids repeated subgoals.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/w725s7mt","slide":18,"text":"depth-first","textPreview":"depth-first","textChars":11,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/h8b6lc3e","slide":18,"text":"unification","textPreview":"unification","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/1sbedkrm","slide":18,"text":"backtracking","textPreview":"backtracking","textChars":12,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/gr2xkfa1","slide":18,"text":"memoization","textPreview":"memoization","textChars":11,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/f6twba9g","slide":18,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/e50fi5sv","slide":18,"text":"VTU BCS515B • Module 5 • 18/50","textPreview":"VTU BCS515B • Module 5 • 18/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/erfqi2","slide":18,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/jqreef","slide":19,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":11}
+{"kind":"textbox","id":"sh/jm1wf2po","slide":19,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/knax8769","slide":19,"text":"Resolution: definition","textPreview":"Resolution: definition","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/lojyhc7u","slide":19,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ax8f2xo7","slide":19,"text":"Resolution proves a statement by contradiction.","textPreview":"Resolution proves a statement by contradiction.","textChars":47,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/by1wb2ps","slide":19,"text":"• CNF\n• unification\n• complementary literals\n• empty clause","textPreview":"• CNF | • unification | • complementary literals | • empty clause","textChars":59,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/wzax476d","slide":19,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/x0jedc7i","slide":19,"text":"Empty clause means the KB entails the query.","textPreview":"Empty clause means the KB entails the query.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/utcfe1ob","slide":19,"text":"CNF","textPreview":"CNF","textChars":3,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/vulgnm5w","slide":19,"text":"unification","textPreview":"unification","textChars":11,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/nylwzid4","slide":19,"text":"complementary literals","textPreview":"complementary literals","textChars":22,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/2xcf6dwj","slide":19,"text":"empty clause","textPreview":"empty clause","textChars":12,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/p0ne1sva","slide":19,"text":"VTU BCS515B • Module 5 • 19/50","textPreview":"VTU BCS515B • Module 5 • 19/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/jqreef","slide":19,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/zbxb5i","slide":20,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/y987m54z","slide":20,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/lwzqhk3q","slide":20,"text":"Resolution: intuition","textPreview":"Resolution: intuition","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/0vqpofm5","slide":20,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/b6h8bal8","slide":20,"text":"Think of resolution as a way to make an agent's next choice clearer.","textPreview":"Think of resolution as a way to make an agent's next choice clearer.","textChars":68,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/q5o7i543","slide":20,"text":"• Why it matters: Empty clause means the KB entails the query.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Empty clause means the KB entails the query. | • What changes: uncertainty becomes structure | • Teaching cue: connect ...","textChars":162,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/d8zqdk3e","slide":20,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/c7qpkfmt","slide":20,"text":"Empty clause means the KB entails the query.","textPreview":"Empty clause means the KB entails the query.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/32xo7qlc","slide":20,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/21o7el4r","slide":20,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/g3upc7m9","slide":20,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/1436lcnu","slide":20,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/e1c7ax43","slide":20,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/f2loj25o","slide":20,"text":"VTU BCS515B • Module 5 • 20/50","textPreview":"VTU BCS515B • Module 5 • 20/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/zbxb5i","slide":20,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/a96x35","slide":21,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/654bq5gj","slide":21,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/t8fu10zu","slide":21,"text":"Resolution: workflow","textPreview":"Resolution: workflow","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/s7mtsfy9","slide":21,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/jidcvqhs","slide":21,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ih4bmlg7","slide":21,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/54vux0zy","slide":21,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/k3mtovyd","slide":21,"text":"Empty clause means the KB entails the query.","textPreview":"Empty clause means the KB entails the query.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/3yxc7uhw","slide":21,"text":"CNF","textPreview":"CNF","textChars":3,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/2dobypgr","slide":21,"text":"unification","textPreview":"unification","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/wrqdkjah","slide":21,"text":"complementary literals","textPreview":"complementary literals","textChars":22,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/xszetob2","slide":21,"text":"empty clause","textPreview":"empty clause","textChars":12,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/ap8vitsr","slide":21,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/bqhwretc","slide":21,"text":"VTU BCS515B • Module 5 • 21/50","textPreview":"VTU BCS515B • Module 5 • 21/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/a96x35","slide":21,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/ntvwyv","slide":22,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":15}
+{"kind":"textbox","id":"sh/w3utk3qh","slide":22,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/v2lcrypw","slide":22,"text":"Resolution: example","textPreview":"Resolution: example","textChars":19,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/u1cbit8b","slide":22,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/903upo7q","slide":22,"text":"A small classroom example makes resolution concrete.","textPreview":"A small classroom example makes resolution concrete.","textChars":52,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/8zutgjql","slide":22,"text":"• Use the terms: CNF, unification\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: CNF, unification | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":119,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/7y1cnep0","slide":22,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/mxsbet8f","slide":22,"text":"Empty clause means the KB entails the query.","textPreview":"Empty clause means the KB entails the query.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/twnu1s7a","slide":22,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/svedsnqp","slide":22,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/a54ry9o3","slide":22,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/b6dsre5o","slide":22,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/w7m90j69","slide":22,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/xsvatone","slide":22,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/21kru9or","slide":22,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/n2tsne5c","slide":22,"text":"CNF","textPreview":"CNF","textChars":3,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/o3m9wj6x","slide":22,"text":"VTU BCS515B • Module 5 • 22/50","textPreview":"VTU BCS515B • Module 5 • 22/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ntvwyv","slide":22,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/xazidp","slide":23,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/sfqhg32t","slide":23,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/rexgny1o","slide":23,"text":"Resolution: algorithm / exam view","textPreview":"Resolution: algorithm / exam view","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/qdozedk3","slide":23,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/5cfyl83i","slide":23,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/4b6hc32x","slide":23,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Empty clause means the KB entails the query.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Emp...","textChars":172,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/3axgjylc","slide":23,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/i9ozatkr","slide":23,"text":"Empty clause means the KB entails the query.","textPreview":"Empty clause means the KB entails the query.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/h8fyho36","slide":23,"text":"CNF","textPreview":"CNF","textChars":3,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/g76h8j2l","slide":23,"text":"unification","textPreview":"unification","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/y1kzul8f","slide":23,"text":"complementary literals","textPreview":"complementary literals","textChars":22,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/jmt0nq90","slide":23,"text":"empty clause","textPreview":"empty clause","textChars":12,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/kn2hwvq5","slide":23,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/lovip0rq","slide":23,"text":"VTU BCS515B • Module 5 • 23/50","textPreview":"VTU BCS515B • Module 5 • 23/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/xazidp","slide":23,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/cmzet2","slide":24,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":11}
+{"kind":"textbox","id":"sh/neloj6x8","slide":24,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/8fupcbyt","slide":24,"text":"CNF conversion: definition","textPreview":"CNF conversion: definition","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/9036lgfy","slide":24,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/y9s761gb","slide":24,"text":"Resolution requires clauses in a standard form.","textPreview":"Resolution requires clauses in a standard form.","textChars":47,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/za1ofmxw","slide":24,"text":"• remove implication\n• move negation\n• standardize variables\n• skolemize","textPreview":"• remove implication | • move negation | • standardize variables | • skolemize","textChars":72,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/0bap8ryh","slide":24,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/lcj6hwf2","slide":24,"text":"CNF conversion prepares knowledge for proof.","textPreview":"CNF conversion prepares knowledge for proof.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/i5w7ilgv","slide":24,"text":"remove implication","textPreview":"remove implication","textChars":18,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/j658rqxg","slide":24,"text":"move negation","textPreview":"move negation","textChars":13,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/bql4zuxs","slide":24,"text":"standardize variables","textPreview":"standardize variables","textChars":21,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/qpcnqpgn","slide":24,"text":"skolemize","textPreview":"skolemize","textChars":9,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/ds3m14fy","slide":24,"text":"VTU BCS515B • Module 5 • 24/50","textPreview":"VTU BCS515B • Module 5 • 24/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/cmzet2","slide":24,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/xfqg4h","slide":25,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/472h0rad","slide":25,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/36tg7mts","slide":25,"text":"CNF conversion: intuition","textPreview":"CNF conversion: intuition","textChars":25,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/i50fyhs7","slide":25,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/dwbydwbu","slide":25,"text":"Think of cnf conversion as a way to make an agent's next choice clearer.","textPreview":"Think of cnf conversion as a way to make an agent's next choice clearer.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/sv2h4rap","slide":25,"text":"• Why it matters: CNF conversion prepares knowledge for proof.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: CNF conversion prepares knowledge for proof. | • What changes: uncertainty becomes structure | • Teaching cue: connect ...","textChars":162,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ratgbmt4","slide":25,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/q9kz2hsj","slide":25,"text":"CNF conversion prepares knowledge for proof.","textPreview":"CNF conversion prepares knowledge for proof.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/90ry1cbq","slide":25,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/8zixs7a5","slide":25,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/ehcfa9w3","slide":25,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/filwjedo","slide":25,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/g3uxczet","slide":25,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/143el4ve","slide":25,"text":"VTU BCS515B • Module 5 • 25/50","textPreview":"VTU BCS515B • Module 5 • 25/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/xfqg4h","slide":25,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/qoqr0r","slide":26,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/xkr6psb2","slide":26,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/axgnudcr","slide":26,"text":"CNF conversion: workflow","textPreview":"CNF conversion: workflow","textChars":24,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/by94nitc","slide":26,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/kni50nat","slide":26,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/lor6tsbe","slide":26,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/yl0nyxcn","slide":26,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/zm9or2t8","slide":26,"text":"CNF conversion prepares knowledge for proof.","textPreview":"CNF conversion prepares knowledge for proof.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/0ry5o3up","slide":26,"text":"remove implication","textPreview":"remove implication","textChars":18,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/1s7mh8bu","slide":26,"text":"move negation","textPreview":"move negation","textChars":13,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/p4v2dk3q","slide":26,"text":"standardize variables","textPreview":"standardize variables","textChars":21,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/o3m14f25","slide":26,"text":"skolemize","textPreview":"skolemize","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/n2dkbalk","slide":26,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/214j254f","slide":26,"text":"VTU BCS515B • Module 5 • 26/50","textPreview":"VTU BCS515B • Module 5 • 26/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/qoqr0r","slide":26,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/lrp9tc","slide":27,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":15}
+{"kind":"textbox","id":"sh/qpob6dw3","slide":27,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/dsfuhsve","slide":27,"text":"CNF conversion: example","textPreview":"CNF conversion: example","textChars":23,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/sr6t8ne9","slide":27,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/fuhcjidk","slide":27,"text":"A small classroom example makes cnf conversion concrete.","textPreview":"A small classroom example makes cnf conversion concrete.","textChars":56,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/etobaxwz","slide":27,"text":"• Use the terms: remove implication, move negation\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: remove implication, move negation | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":136,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/1gzulsvq","slide":27,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/0fqdcne5","slide":27,"text":"CNF conversion prepares knowledge for proof.","textPreview":"CNF conversion prepares knowledge for proof.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/nihcn2dw","slide":27,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/2h8vexwb","slide":27,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/wvmlo7m9","slide":27,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/hwf2hs3u","slide":27,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/ut43mx43","slide":27,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/vudkf2lo","slide":27,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/4z6ls7m5","slide":27,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/50fmlc3q","slide":27,"text":"remove implication","textPreview":"remove implication","textChars":18,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/ixo3qx4f","slide":27,"text":"VTU BCS515B • Module 5 • 27/50","textPreview":"VTU BCS515B • Module 5 • 27/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/lrp9tc","slide":27,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/k59aye","slide":28,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/q50f2dc7","slide":28,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/d8rexsvy","slide":28,"text":"CNF conversion: algorithm / exam view","textPreview":"CNF conversion: algorithm / exam view","textChars":37,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/c7ix4nud","slide":28,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/32pwridw","slide":28,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/21gvydwb","slide":28,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: CNF conversion prepares knowledge for proof.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: CNF...","textChars":172,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/p47et8vm","slide":28,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/o3yd03eh","slide":28,"text":"CNF conversion prepares knowledge for proof.","textPreview":"CNF conversion prepares knowledge for proof.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/nytw32d0","slide":28,"text":"remove implication","textPreview":"remove implication","textChars":18,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/mxkfaxcf","slide":28,"text":"move negation","textPreview":"move negation","textChars":13,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/4be1kbe9","slide":28,"text":"standardize variables","textPreview":"standardize variables","textChars":21,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/pcn2tgvu","slide":28,"text":"skolemize","textPreview":"skolemize","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/29wji1w3","slide":28,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/3a5kr6do","slide":28,"text":"VTU BCS515B • Module 5 • 28/50","textPreview":"VTU BCS515B • Module 5 • 28/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/k59aye","slide":28,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/wll0e8","slide":29,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":11}
+{"kind":"textbox","id":"sh/szixgzal","slide":29,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ry9w7u90","slide":29,"text":"Classical planning: definition","textPreview":"Classical planning: definition","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/qx0fepsf","slide":29,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/5wre5kru","slide":29,"text":"Planning finds action sequences that achieve goals.","textPreview":"Planning finds action sequences that achieve goals.","textChars":51,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/4vixcza9","slide":29,"text":"• initial state\n• goal\n• actions\n• preconditions/effects","textPreview":"• initial state | • goal | • actions | • preconditions/effects","textChars":56,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/3u9w3u9o","slide":29,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/it0faps3","slide":29,"text":"Actions transform symbolic states.","textPreview":"Actions transform symbolic states.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hs7e1kry","slide":29,"text":"initial state","textPreview":"initial state","textChars":13,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/gryd8fad","slide":29,"text":"goal","textPreview":"goal","textChars":4,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/ylo7ihk3","slide":29,"text":"actions","textPreview":"actions","textChars":7,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/jmx8rm1o","slide":29,"text":"preconditions/effects","textPreview":"preconditions/effects","textChars":21,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/kn6pkr29","slide":29,"text":"VTU BCS515B • Module 5 • 29/50","textPreview":"VTU BCS515B • Module 5 • 29/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/wll0e8","slide":29,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/qjbqt9","slide":30,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/dkzaxwn6","slide":30,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/qh8r21of","slide":30,"text":"Classical planning: intuition","textPreview":"Classical planning: intuition","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/bihsv650","slide":30,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/0na98b6h","slide":30,"text":"Think of classical planning as a way to make an agent's next choice clearer.","textPreview":"Think of classical planning as a way to make an agent's next choice clearer.","textChars":76,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/loja1gn2","slide":30,"text":"• Why it matters: Actions transform symbolic states.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Actions transform symbolic states. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea t...","textChars":152,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/yl8r61or","slide":30,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/zmhsz65w","slide":30,"text":"Actions transform symbolic states.","textPreview":"Actions transform symbolic states.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/gr69wr6d","slide":30,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/1sfqpcny","slide":30,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/9wze5gju","slide":30,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/ovqxcb29","slide":30,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/nuhw36lo","slide":30,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/m9ofa1k3","slide":30,"text":"VTU BCS515B • Module 5 • 30/50","textPreview":"VTU BCS515B • Module 5 • 30/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/qjbqt9","slide":30,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/hb79v1","slide":31,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/za9cz2ps","slide":31,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/0v2ds76d","slide":31,"text":"Classical planning: workflow","textPreview":"Classical planning: workflow","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/lwbu1c7y","slide":31,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/q50vmx8b","slide":31,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/b69cv2pw","slide":31,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/c7ido7qh","slide":31,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/d8ruxs72","slide":31,"text":"Actions transform symbolic states.","textPreview":"Actions transform symbolic states.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/21gbid8f","slide":31,"text":"initial state","textPreview":"initial state","textChars":13,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/32pcrip0","slide":31,"text":"goal","textPreview":"goal","textChars":4,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/7m1o7u9w","slide":31,"text":"actions","textPreview":"actions","textChars":7,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/m1snyp8b","slide":31,"text":"preconditions/effects","textPreview":"preconditions/effects","textChars":21,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/9oj69472","slide":31,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/8na50zqh","slide":31,"text":"VTU BCS515B • Module 5 • 31/50","textPreview":"VTU BCS515B • Module 5 • 31/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/hb79v1","slide":31,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/gowvpz","slide":32,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":15}
+{"kind":"textbox","id":"sh/5kz29oni","slide":32,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ih8jy94r","slide":32,"text":"Classical planning: example","textPreview":"Classical planning: example","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/jihk7e5c","slide":32,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/s7q14jmt","slide":32,"text":"A small classroom example makes classical planning concrete.","textPreview":"A small classroom example makes classical planning concrete.","textChars":60,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/t8j2done","slide":32,"text":"• Use the terms: initial state, goal\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: initial state, goal | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":122,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/6l8j2943","slide":32,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/r6hkbe58","slide":32,"text":"Actions transform symbolic states.","textPreview":"Actions transform symbolic states.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/8b61szmp","slide":32,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/9cfi14na","slide":32,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/hw3axove","slide":32,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/wvu9ojut","slide":32,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/vulsved8","slide":32,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/atcrmtc3","slide":32,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/5kna18vq","slide":32,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/4jets3u5","slide":32,"text":"initial state","textPreview":"initial state","textChars":13,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/jilszydk","slide":32,"text":"VTU BCS515B • Module 5 • 32/50","textPreview":"VTU BCS515B • Module 5 • 32/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/gowvpz","slide":32,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/3uxdrr","slide":33,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/uhgfi18n","slide":33,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/hk7edw7e","slide":33,"text":"Classical planning: algorithm / exam view","textPreview":"Classical planning: algorithm / exam view","textChars":41,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/wjyxkrqt","slide":33,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7epw7mpw","slide":33,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/mdwfeh8r","slide":33,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Actions transform symbolic states.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Act...","textChars":162,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/9g7e9w72","slide":33,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/8fyxgrqh","slide":33,"text":"Actions transform symbolic states.","textPreview":"Actions transform symbolic states.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/zq5w32p0","slide":33,"text":"initial state","textPreview":"initial state","textChars":13,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/ypwvah8f","slide":33,"text":"goal","textPreview":"goal","textChars":4,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/k7qt4ryt","slide":33,"text":"actions","textPreview":"actions","textChars":7,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/l8zaxcze","slide":33,"text":"preconditions/effects","textPreview":"preconditions/effects","textChars":21,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/y5or2hgn","slide":33,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/z6xsvmh8","slide":33,"text":"VTU BCS515B • Module 5 • 33/50","textPreview":"VTU BCS515B • Module 5 • 33/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/3uxdrr","slide":33,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/07st0t","slide":34,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":11}
+{"kind":"textbox","id":"sh/ojaxwbi9","slide":34,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ni1w361o","slide":34,"text":"Planning search: definition","textPreview":"Planning search: definition","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/2hsful03","slide":34,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/xo3y90jq","slide":34,"text":"Planning can search forward from the start or backward from the goal.","textPreview":"Planning can search forward from the start or backward from the goal.","textChars":69,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cnux0vi5","slide":34,"text":"• progression\n• regression\n• state-space\n• heuristics","textPreview":"• progression | • regression | • state-space | • heuristics","textChars":53,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/bmlg7q10","slide":34,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/alcfyl0f","slide":34,"text":"Heuristics make planning practical.","textPreview":"Heuristics make planning practical.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/lsnyd0j2","slide":34,"text":"progression","textPreview":"progression","textChars":11,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/krux4vih","slide":34,"text":"regression","textPreview":"regression","textChars":10,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/yhwbihg3","slide":34,"text":"state-space","textPreview":"state-space","textChars":11,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/zi5crmxo","slide":34,"text":"heuristics","textPreview":"heuristics","textChars":10,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/03etkry9","slide":34,"text":"VTU BCS515B • Module 5 • 34/50","textPreview":"VTU BCS515B • Module 5 • 34/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/07st0t","slide":34,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/9z0op1","slide":35,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/1sbitw3a","slide":35,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/epkji14j","slide":35,"text":"Planning search: intuition","textPreview":"Planning search: intuition","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/fqt0rml4","slide":35,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ovm1obml","slide":35,"text":"Think of planning search as a way to make an agent's next choice clearer.","textPreview":"Think of planning search as a way to make an agent's next choice clearer.","textChars":73,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/pwvixg36","slide":35,"text":"• Why it matters: Heuristics make planning practical.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Heuristics make planning practical. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea ...","textChars":153,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/2tkjm14v","slide":35,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/3ut0v6l0","slide":35,"text":"Heuristics make planning practical.","textPreview":"Heuristics make planning practical.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/4zihc7mh","slide":35,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/50rilc32","slide":35,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/hoze5sjm","slide":35,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/wnqdcni1","slide":35,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/vmxw3i1g","slide":35,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/ulovax0b","slide":35,"text":"VTU BCS515B • Module 5 • 35/50","textPreview":"VTU BCS515B • Module 5 • 35/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/9z0op1","slide":35,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/rk9dqc","slide":36,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/8bm90z6d","slide":36,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/7ad87ups","slide":36,"text":"Planning search: workflow","textPreview":"Planning search: workflow","textChars":25,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/m94rypo7","slide":36,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/hgfadonu","slide":36,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/wf694j6p","slide":36,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ved8be54","slide":36,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ud4r29oj","slide":36,"text":"Heuristics make planning practical.","textPreview":"Heuristics make planning practical.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/54fahon6","slide":36,"text":"progression","textPreview":"progression","textChars":11,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/43698j6l","slide":36,"text":"regression","textPreview":"regression","textChars":10,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/mlwfy1oz","slide":36,"text":"state-space","textPreview":"state-space","textChars":11,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/765gr6pk","slide":36,"text":"heuristics","textPreview":"heuristics","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/87ex0b65","slide":36,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/98nytg7q","slide":36,"text":"VTU BCS515B • Module 5 • 36/50","textPreview":"VTU BCS515B • Module 5 • 36/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/rk9dqc","slide":36,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/2holrm","slide":37,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":15}
+{"kind":"textbox","id":"sh/69cbuloz","slide":37,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/tcnupgnq","slide":37,"text":"Planning search: example","textPreview":"Planning search: example","textChars":24,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/sbetwv65","slide":37,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/j6lcj65o","slide":37,"text":"A small classroom example makes planning search concrete.","textPreview":"A small classroom example makes planning search concrete.","textChars":57,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/y5cbq1o3","slide":37,"text":"• Use the terms: progression, regression\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: progression, regression | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":126,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/583ulgnu","slide":37,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/k7utsb69","slide":37,"text":"Heuristics make planning practical.","textPreview":"Heuristics make planning practical.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/bi1sf65c","slide":37,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/ahsbm1or","slide":37,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/oj2xgfud","slide":37,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/pkbe9kby","slide":37,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/2hkfepc7","slide":37,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/nitw7uds","slide":37,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/0fixcfu1","slide":37,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/1gre5kvm","slide":37,"text":"progression","textPreview":"progression","textChars":11,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/et0fa5cb","slide":37,"text":"VTU BCS515B • Module 5 • 37/50","textPreview":"VTU BCS515B • Module 5 • 37/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/2holrm","slide":37,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/u7ixb0","slide":38,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/ja1sfqpg","slide":38,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/kbatov61","slide":38,"text":"Planning search: algorithm / exam view","textPreview":"Planning search: algorithm / exam view","textChars":38,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/5cjah07m","slide":38,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/a58bi1oz","slide":38,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/v6hsb6pk","slide":38,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Heuristics make planning practical.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Heu...","textChars":163,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/w7atkb65","slide":38,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/x8jadg7q","slide":38,"text":"Heuristics make planning practical.","textPreview":"Heuristics make planning practical.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/u1cbu5oj","slide":38,"text":"progression","textPreview":"progression","textChars":11,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/f2lcnapo","slide":38,"text":"regression","textPreview":"regression","textChars":10,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/bipgnqd4","slide":38,"text":"state-space","textPreview":"state-space","textChars":11,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/qhgfelcz","slide":38,"text":"heuristics","textPreview":"heuristics","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/d47ypgva","slide":38,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/cjyxgbup","slide":38,"text":"VTU BCS515B • Module 5 • 38/50","textPreview":"VTU BCS515B • Module 5 • 38/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/u7ixb0","slide":38,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/rbpwyp","slide":39,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":11}
+{"kind":"textbox","id":"sh/exwradwj","slide":39,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/10nq5sfa","slide":39,"text":"Blocks world: definition","textPreview":"Blocks world: definition","textChars":24,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/gze9cnep","slide":39,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/32ps72d0","slide":39,"text":"Blocks world gives planning a concrete symbolic domain.","textPreview":"Blocks world gives planning a concrete symbolic domain.","textChars":55,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/21grexwf","slide":39,"text":"• clear\n• on\n• move\n• goal stack","textPreview":"• clear | • on | • move | • goal stack","textChars":32,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/po7a9sv6","slide":39,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/o3y9gnel","slide":39,"text":"Operators encode what can change.","textPreview":"Operators encode what can change.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/bqpsb2dc","slide":39,"text":"clear","textPreview":"clear","textChars":5,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/qpgrixwr","slide":39,"text":"on","textPreview":"on","textChars":2,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/cz6l0vq5","slide":39,"text":"move","textPreview":"move","textChars":4,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/x0z2t07a","slide":39,"text":"goal stack","textPreview":"goal stack","textChars":10,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/axo3yl8z","slide":39,"text":"VTU BCS515B • Module 5 • 39/50","textPreview":"VTU BCS515B • Module 5 • 39/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/rbpwyp","slide":39,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/l5k8sc","slide":40,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/w7it0fa5","slide":40,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/b69srut0","slide":40,"text":"Blocks world: intuition","textPreview":"Blocks world: intuition","textChars":23,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/a50bypsf","slide":40,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/lwbax4b2","slide":40,"text":"Think of blocks world as a way to make an agent's next choice clearer.","textPreview":"Think of blocks world as a way to make an agent's next choice clearer.","textChars":70,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/kv2t4zah","slide":40,"text":"• Why it matters: Operators encode what can change.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Operators encode what can change. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea to...","textChars":151,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/jutsvutw","slide":40,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/yt0b2psb","slide":40,"text":"Operators encode what can change.","textPreview":"Operators encode what can change.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/t0ba14by","slide":40,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/8z2t8zad","slide":40,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/ah8n29gv","slide":40,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/bi14vexg","slide":40,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/w3a54jy1","slide":40,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/x4jmxofm","slide":40,"text":"VTU BCS515B • Module 5 • 40/50","textPreview":"VTU BCS515B • Module 5 • 40/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/l5k8sc","slide":40,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/5adbor","slide":41,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/lwj65wzy","slide":41,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/yts7a1gn","slide":41,"text":"Blocks world: workflow","textPreview":"Blocks world: workflow","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/zu1o3mh8","slide":41,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/8japgbyp","slide":41,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/9kj69gza","slide":41,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/mxs7e1gj","slide":41,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ni1o76h4","slide":41,"text":"Operators encode what can change.","textPreview":"Operators encode what can change.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/onq547yl","slide":41,"text":"clear","textPreview":"clear","textChars":5,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/poz6xczq","slide":41,"text":"on","textPreview":"on","textChars":2,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/x0rytwb6","slide":41,"text":"move","textPreview":"move","textChars":4,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/wzihkru1","slide":41,"text":"goal stack","textPreview":"goal stack","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/by9grmtg","slide":41,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/ax0zihcv","slide":41,"text":"VTU BCS515B • Module 5 • 41/50","textPreview":"VTU BCS515B • Module 5 • 41/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/5adbor","slide":41,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/h8pcjy","slide":42,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":15}
+{"kind":"textbox","id":"sh/mlsvq5oz","slide":42,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/98jel07q","slide":42,"text":"Blocks world: example","textPreview":"Blocks world: example","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/87adsv65","slide":42,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/va1wnapw","slide":42,"text":"A small classroom example makes blocks world concrete.","textPreview":"A small classroom example makes blocks world concrete.","textChars":54,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/u9svu5ob","slide":42,"text":"• Use the terms: clear, on\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: clear, on | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":112,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/hcjepk7m","slide":42,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/wbadwf6h","slide":42,"text":"Operators encode what can change.","textPreview":"Operators encode what can change.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/behcb6pc","slide":42,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/qdovilor","slide":42,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/c7ap0jq5","slide":42,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/d8jq947q","slide":42,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/q5s7y98z","slide":42,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/b6187epk","slide":42,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/0bu94jq1","slide":42,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/lc3qdo7m","slide":42,"text":"clear","textPreview":"clear","textChars":5,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/y9sr298v","slide":42,"text":"VTU BCS515B • Module 5 • 42/50","textPreview":"VTU BCS515B • Module 5 • 42/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/h8pcjy","slide":42,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/elkofj","slide":43,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/fytcnixw","slide":43,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/0z2dwnyh","slide":43,"text":"Blocks world: algorithm / exam view","textPreview":"Blocks world: algorithm / exam view","textChars":35,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/10bupsf2","slide":43,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/21kvyxgn","slide":43,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/n2tcr2x8","slide":43,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Operators encode what can change.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Ope...","textChars":161,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/o3md07yt","slide":43,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/p4vutcfe","slide":43,"text":"Operators encode what can change.","textPreview":"Operators encode what can change.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/i50bmtgj","slide":43,"text":"clear","textPreview":"clear","textChars":5,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/369cfyxo","slide":43,"text":"on","textPreview":"on","textChars":2,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/3ixwbuto","slide":43,"text":"move","textPreview":"move","textChars":4,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/2hov2ps3","slide":43,"text":"goal stack","textPreview":"goal stack","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/p4zed4ru","slide":43,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/ojqd4za9","slide":43,"text":"VTU BCS515B • Module 5 • 43/50","textPreview":"VTU BCS515B • Module 5 • 43/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/elkofj","slide":43,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/w4kwr0","slide":44,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":11}
+{"kind":"textbox","id":"sh/bq9c3y1s","slide":44,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/cridc32d","slide":44,"text":"Planning graphs: definition","textPreview":"Planning graphs: definition","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/dsru5oji","slide":44,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/yt0vetk3","slide":44,"text":"Planning graphs reveal possible actions and conflicts over time.","textPreview":"Planning graphs reveal possible actions and conflicts over time.","textChars":64,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/zetc7y1o","slide":44,"text":"• proposition layers\n• action layers\n• mutex\n• reachability","textPreview":"• proposition layers | • action layers | • mutex | • reachability","textChars":59,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/0f2dg329","slide":44,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/lgbu98ju","slide":44,"text":"Mutex relations explain impossible combinations.","textPreview":"Mutex relations explain impossible combinations.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/mhkvidkf","slide":44,"text":"proposition layers","textPreview":"proposition layers","textChars":18,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/nitcbi10","slide":44,"text":"action layers","textPreview":"action layers","textChars":13,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/f6pwjih0","slide":44,"text":"mutex","textPreview":"mutex","textChars":5,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/e5gvad0f","slide":44,"text":"reachability","textPreview":"reachability","textChars":12,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/1s7elszq","slide":44,"text":"VTU BCS515B • Module 5 • 44/50","textPreview":"VTU BCS515B • Module 5 • 44/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/w4kwr0","slide":44,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/eedo9r","slide":45,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/2l83mh0r","slide":45,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/pojmhwj2","slide":45,"text":"Planning graphs: intuition","textPreview":"Planning graphs: intuition","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/4nalorix","slide":45,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/fih4bm10","slide":45,"text":"Think of planning graphs as a way to make an agent's next choice clearer.","textPreview":"Think of planning graphs as a way to make an agent's next choice clearer.","textChars":73,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/uh83ih0f","slide":45,"text":"• Why it matters: Mutex relations explain impossible combinations.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Mutex relations explain impossible combinations. | • What changes: uncertainty becomes structure | • Teaching cue: conn...","textChars":166,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/hkzmdcj6","slide":45,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/gjqlkril","slide":45,"text":"Mutex relations explain impossible combinations.","textPreview":"Mutex relations explain impossible combinations.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/zel4n61k","slide":45,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/eds3u10z","slide":45,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/0nexcjeh","slide":45,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/1one5of2","slide":45,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/elwfa9wr","slide":45,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/fm5w3exw","slide":45,"text":"VTU BCS515B • Module 5 • 45/50","textPreview":"VTU BCS515B • Module 5 • 45/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/eedo9r","slide":45,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/da006o","slide":46,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/ahwn65o7","slide":46,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/xk76h0ni","slide":46,"text":"Planning graphs: workflow","textPreview":"Planning graphs: workflow","textChars":25,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/wje58v6x","slide":46,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ne54bq5g","slide":46,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/mtwn2lov","slide":46,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/9gnmd0nm","slide":46,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/8fe54v61","slide":46,"text":"Mutex relations explain impossible combinations.","textPreview":"Mutex relations explain impossible combinations.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/7apona5k","slide":46,"text":"proposition layers","textPreview":"proposition layers","textChars":18,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/6pgnepoz","slide":46,"text":"action layers","textPreview":"action layers","textChars":13,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/8vqh0nm5","slide":46,"text":"mutex","textPreview":"mutex","textChars":5,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/9wzy9s3a","slide":46,"text":"reachability","textPreview":"reachability","textChars":12,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/m98fyd4z","slide":46,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/7ahg7ilk","slide":46,"text":"VTU BCS515B • Module 5 • 46/50","textPreview":"VTU BCS515B • Module 5 • 46/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/da006o","slide":46,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/oxt6nh","slide":47,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":15}
+{"kind":"textbox","id":"sh/rq98f61s","slide":47,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/crip8bix","slide":47,"text":"Planning graphs: example","textPreview":"Planning graphs: example","textChars":24,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/dsrqhgji","slide":47,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/2lg7210v","slide":47,"text":"A small classroom example makes planning graphs concrete.","textPreview":"A small classroom example makes planning graphs concrete.","textChars":57,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/3m98b61g","slide":47,"text":"• Use the terms: proposition layers, action layers\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: proposition layers, action layers | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":136,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/4nip4bi1","slide":47,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/porqdwjm","slide":47,"text":"Mutex relations explain impossible combinations.","textPreview":"Mutex relations explain impossible combinations.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/mhk7el0f","slide":47,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/nit8nqhk","slide":47,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/ve5sri9s","slide":47,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/adwrids7","slide":47,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/hg7atsri","slide":47,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/wfy9knax","slide":47,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/jipsvi9o","slide":47,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/ihgbmxs3","slide":47,"text":"proposition layers","textPreview":"proposition layers","textChars":18,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/5k7axsru","slide":47,"text":"VTU BCS515B • Module 5 • 47/50","textPreview":"VTU BCS515B • Module 5 • 47/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/oxt6nh","slide":47,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/qv23pn","slide":48,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/gfy1ojml","slide":48,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/vup0fel0","slide":48,"text":"Planning graphs: algorithm / exam view","textPreview":"Planning graphs: algorithm / exam view","textChars":38,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/utgjm94f","slide":48,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/5krilo32","slide":48,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/4ji1sjmh","slide":48,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Mutex relations explain impossible combinations.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Mut...","textChars":176,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/3ip0jelw","slide":48,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ihgjq94r","slide":48,"text":"Mutex relations explain impossible combinations.","textPreview":"Mutex relations explain impossible combinations.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/dor2po3e","slide":48,"text":"proposition layers","textPreview":"proposition layers","textChars":18,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/sni1w3mt","slide":48,"text":"action layers","textPreview":"action layers","textChars":13,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/69cbaxcj","slide":48,"text":"mutex","textPreview":"mutex","textChars":5,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/ra5sj2d4","slide":48,"text":"reachability","textPreview":"reachability","textChars":12,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/svetc7up","slide":48,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/twnalcva","slide":48,"text":"VTU BCS515B • Module 5 • 48/50","textPreview":"VTU BCS515B • Module 5 • 48/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/qv23pn","slide":48,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/qnv9wq","slide":49,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":11}
+{"kind":"textbox","id":"sh/gve587ql","slide":49,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/fu54f2p0","slide":49,"text":"Course integration: definition","textPreview":"Course integration: definition","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/etwn6x8f","slide":49,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/p07mlc72","slide":49,"text":"The course connects search, inference, and action.","textPreview":"The course connects search, inference, and action.","textChars":50,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ozy5crqh","slide":49,"text":"• search\n• logic\n• planning\n• rational action","textPreview":"• search | • logic | • planning | • rational action","textChars":45,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/3yp4jmpc","slide":49,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/2xwnah8r","slide":49,"text":"AI is the study of rational action under representation limits.","textPreview":"AI is the study of rational action under representation limits.","textChars":63,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/543m9s7y","slide":49,"text":"search","textPreview":"search","textChars":6,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/43ul0nqd","slide":49,"text":"logic","textPreview":"logic","textChars":5,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/ihw7a1w7","slide":49,"text":"planning","textPreview":"planning","textChars":8,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/3258j6ds","slide":49,"text":"rational action","textPreview":"rational action","textChars":15,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/43e9cbed","slide":49,"text":"VTU BCS515B • Module 5 • 49/50","textPreview":"VTU BCS515B • Module 5 • 49/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/qnv9wq","slide":49,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/orgxr4","slide":50,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/yho7y90v","slide":50,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/lkf6t4z6","slide":50,"text":"Course integration: intuition","textPreview":"Course integration: intuition","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/kj6p0jyl","slide":50,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/budonuh4","slide":50,"text":"Think of course integration as a way to make an agent's next choice clearer.","textPreview":"Think of course integration as a way to make an agent's next choice clearer.","textChars":76,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/at4nup0j","slide":50,"text":"• Why it matters: AI is the study of rational action under representation limits.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: AI is the study of rational action under representation limits. | • What changes: uncertainty becomes structure | • Tea...","textChars":181,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/xwv6p4za","slide":50,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/wvm5wzip","slide":50,"text":"AI is the study of rational action under representation limits.","textPreview":"AI is the study of rational action under representation limits.","textChars":63,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/vqhozyh8","slide":50,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/up876tg3","slide":50,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/0bi9kj69","slide":50,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/1cbadonu","slide":50,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/e90ri9o3","slide":50,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/za9sbe5o","slide":50,"text":"VTU BCS515B • Module 5 • 50/50","textPreview":"VTU BCS515B • Module 5 • 50/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/orgxr4","slide":50,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/76ged7","slide":51,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/ud4bepgf","slide":51,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/hgfu9kf6","slide":51,"text":"Course integration: workflow","textPreview":"Course integration: workflow","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/wf6tgfyl","slide":51,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7adc3ax4","slide":51,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/m94ba5gj","slide":51,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/9cvu5kfu","slide":51,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/8bmtcfy9","slide":51,"text":"AI is the study of rational action under representation limits.","textPreview":"AI is the study of rational action under representation limits.","textChars":63,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/r6hcfex8","slide":51,"text":"search","textPreview":"search","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/q5ovm9gn","slide":51,"text":"logic","textPreview":"logic","textChars":5,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/4be94r2t","slide":51,"text":"planning","textPreview":"planning","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/5cnqxw3y","slide":51,"text":"rational action","textPreview":"rational action","textChars":15,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/ipc72hkn","slide":51,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/ja58vml8","slide":51,"text":"VTU BCS515B • Module 5 • 51/50","textPreview":"VTU BCS515B • Module 5 • 51/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/76ged7","slide":51,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/0fob6l","slide":52,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":15}
+{"kind":"textbox","id":"sh/l8ji9kzy","slide":52,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ylsjy50n","slide":52,"text":"Course integration: example","textPreview":"Course integration: example","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/zm107ah8","slide":52,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/8bu14fyp","slide":52,"text":"A small classroom example makes course integration concrete.","textPreview":"A small classroom example makes course integration concrete.","textChars":60,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/9c3idkza","slide":52,"text":"• Use the terms: search, logic\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: search, logic | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":116,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/m9cj2p0j","slide":52,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/nal0bah4","slide":52,"text":"AI is the study of rational action under representation limits.","textPreview":"AI is the study of rational action under representation limits.","textChars":63,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/wfu18zyl","slide":52,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/xgn2h4z6","slide":52,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/h83ud07e","slide":52,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/g7udkf6t","slide":52,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/f6lcbap8","slide":52,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/u5cvi5on","slide":52,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/pcnuhk7a","slide":52,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/4bedof6p","slide":52,"text":"search","textPreview":"search","textChars":6,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/3alcfapk","slide":52,"text":"VTU BCS515B • Module 5 • 52/50","textPreview":"VTU BCS515B • Module 5 • 52/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/0fob6l","slide":52,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/8qoov0","slide":53,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/3i9sruds","slide":53,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ojit0zed","slide":53,"text":"Course integration: algorithm / exam view","textPreview":"Course integration: algorithm / exam view","textChars":41,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/pkrat4vy","slide":53,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ql0b29wj","slide":53,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/bm9sved4","slide":53,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: AI is the study of rational action under representation limits.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: AI ...","textChars":191,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/cn2t4jep","slide":53,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/xobax4vu","slide":53,"text":"AI is the study of rational action under representation limits.","textPreview":"AI is the study of rational action under representation limits.","textChars":63,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ypkb69wf","slide":53,"text":"search","textPreview":"search","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/zqtszed0","slide":53,"text":"logic","textPreview":"logic","textChars":5,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/rqxkbmd8","slide":53,"text":"planning","textPreview":"planning","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/6p43ihwn","slide":53,"text":"rational action","textPreview":"rational action","textChars":15,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/tsf2dwve","slide":53,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/sr6lkret","slide":53,"text":"VTU BCS515B • Module 5 • 53/50","textPreview":"VTU BCS515B • Module 5 • 53/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/8qoov0","slide":53,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/3vnwma","slide":54,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/a5wvaxor","slide":54,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/hsnelsni","slide":54,"text":"Module 5 summary map","textPreview":"Module 5 summary map","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/w7excn6x","slide":54,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/n2lwfi5g","slide":54,"text":"Backward Inference, Resolution, and Classical Planning","textPreview":"Backward Inference, Resolution, and Classical Planning","textChars":54,"textLines":1,"bbox":[500,300,280,74]}
+{"kind":"textbox","id":"sh/m1cv6dov","slide":54,"text":"Backward chaining","textPreview":"Backward chaining","textChars":17,"textLines":1,"bbox":[120,190,180,58]}
+{"kind":"textbox","id":"sh/94nehsnm","slide":54,"text":"AND/OR proof trees","textPreview":"AND/OR proof trees","textChars":18,"textLines":1,"bbox":[400,190,180,58]}
+{"kind":"textbox","id":"sh/83ud8n61","slide":54,"text":"Logic programming view","textPreview":"Logic programming view","textChars":22,"textLines":1,"bbox":[680,190,180,58]}
+{"kind":"textbox","id":"sh/zylwby54","slide":54,"text":"Resolution","textPreview":"Resolution","textChars":10,"textLines":1,"bbox":[960,190,180,58]}
+{"kind":"textbox","id":"sh/yxcv2doj","slide":54,"text":"CNF conversion","textPreview":"CNF conversion","textChars":14,"textLines":1,"bbox":[120,430,180,58]}
+{"kind":"textbox","id":"sh/wbu907qp","slide":54,"text":"Classical planning","textPreview":"Classical planning","textChars":18,"textLines":1,"bbox":[400,430,180,58]}
+{"kind":"textbox","id":"sh/hc3a9cra","slide":54,"text":"Planning search","textPreview":"Planning search","textChars":15,"textLines":1,"bbox":[680,430,180,58]}
+{"kind":"textbox","id":"sh/u9cryx8j","slide":54,"text":"Blocks world","textPreview":"Blocks world","textChars":12,"textLines":1,"bbox":[960,430,180,58]}
+{"kind":"textbox","id":"sh/vals7294","slide":54,"text":"Explain the module by connecting each outer idea back to the center.","textPreview":"Explain the module by connecting each outer idea back to the center.","textChars":68,"textLines":1,"bbox":[254,608,780,34]}
+{"kind":"textbox","id":"sh/8nu9w7qd","slide":54,"text":"VTU BCS515B • Module 5 • 54/50","textPreview":"VTU BCS515B • Module 5 • 54/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/3vnwma","slide":54,"text":"[Animation]\nReveal branches around the center. Ask students to supply one example for each branch.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/wk1xj2","slide":55,"title":"Questions","textShapes":21}
+{"kind":"textbox","id":"sh/nexc7uxw","slide":55,"text":"Questions","textPreview":"Questions","textChars":9,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/of6d0zyh","slide":55,"text":"Module 5 exam practice","textPreview":"Module 5 exam practice","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/9gfu94f2","slide":55,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/e94vupgf","slide":55,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,166,46,46]}
+{"kind":"textbox","id":"sh/zaxc3ux0","slide":55,"text":"Explain backward chaining with a neat diagram.","textPreview":"Explain backward chaining with a neat diagram.","textChars":46,"textLines":1,"bbox":[164,158,850,54]}
+{"kind":"textbox","id":"sh/0b6dwzyl","slide":55,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,168,110,36]}
+{"kind":"textbox","id":"sh/1cfu54f6","slide":55,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,242,46,46]}
+{"kind":"textbox","id":"sh/y58v69gj","slide":55,"text":"Apply and/or proof trees to a small example and state the takeaway.","textPreview":"Apply and/or proof trees to a small example and state the takeaway.","textChars":67,"textLines":1,"bbox":[164,234,850,54]}
+{"kind":"textbox","id":"sh/j6hwfex4","slide":55,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,244,110,36]}
+{"kind":"textbox","id":"sh/jitk3e9w","slide":55,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,318,46,46]}
+{"kind":"textbox","id":"sh/ihk3a9sb","slide":55,"text":"Explain logic programming view with a neat diagram.","textPreview":"Explain logic programming view with a neat diagram.","textChars":51,"textLines":1,"bbox":[164,310,850,54]}
+{"kind":"textbox","id":"sh/5kb25or2","slide":55,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,320,110,36]}
+{"kind":"textbox","id":"sh/4j2lcjah","slide":55,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,394,46,46]}
+{"kind":"textbox","id":"sh/rmdk7y98","slide":55,"text":"Apply resolution to a small example and state the takeaway.","textPreview":"Apply resolution to a small example and state the takeaway.","textChars":59,"textLines":1,"bbox":[164,386,850,54]}
+{"kind":"textbox","id":"sh/6l43ytsn","slide":55,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,396,110,36]}
+{"kind":"textbox","id":"sh/t8v29ory","slide":55,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,470,46,46]}
+{"kind":"textbox","id":"sh/s7ml0jat","slide":55,"text":"Explain cnf conversion with a neat diagram.","textPreview":"Explain cnf conversion with a neat diagram.","textChars":43,"textLines":1,"bbox":[164,462,850,54]}
+{"kind":"textbox","id":"sh/fadkby94","slide":55,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,472,110,36]}
+{"kind":"textbox","id":"sh/e9432tsj","slide":55,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,546,46,46]}
+{"kind":"textbox","id":"sh/q58naxcr","slide":55,"text":"Apply classical planning to a small example and state the takeaway.","textPreview":"Apply classical planning to a small example and state the takeaway.","textChars":67,"textLines":1,"bbox":[164,538,850,54]}
+{"kind":"textbox","id":"sh/b6ho32tc","slide":55,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,548,110,36]}
+{"kind":"textbox","id":"sh/c7q5c7ux","slide":55,"text":"VTU BCS515B • Module 5 • 55/50","textPreview":"VTU BCS515B • Module 5 • 55/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/wk1xj2","slide":55,"text":"[Animation]\nReveal questions one at a time. For each, ask students to first identify keywords from the syllabus.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/gdcatq","slide":56,"title":"Module 5 / Backward Inference, Resolution, and Classical Planning","textShapes":12}
+{"kind":"textbox","id":"sh/mh87mpcr","slide":56,"text":"Module 5 / Backward Inference, Resolution, and Classical Planning","textPreview":"Module 5 / Backward Inference, Resolution, and Classical Planning","textChars":65,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/9kjqh4b2","slide":56,"text":"Backward chaining: algorithm / exam view","textPreview":"Backward chaining: algorithm / exam view","textChars":40,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/8japozuh","slide":56,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zehobat0","slide":56,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/yd87i5cf","slide":56,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: It is efficient when the query is specific.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: It ...","textChars":171,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/lgzqdkb6","slide":56,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/kfqpkful","slide":56,"text":"It is efficient when the query is specific.","textPreview":"It is efficient when the query is specific.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/jal8net4","slide":56,"text":"goal-directed","textPreview":"goal-directed","textChars":13,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/i9s7u9cj","slide":56,"text":"match conclusion","textPreview":"match conclusion","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/s72l0fuh","slide":56,"text":"subgoals","textPreview":"subgoals","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/t8bm9kvm","slide":56,"text":"proof","textPreview":"proof","textChars":5,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/6lk3y5cb","slide":56,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/7mt47adw","slide":56,"text":"VTU BCS515B • Module 5 • 56/50","textPreview":"VTU BCS515B • Module 5 • 56/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/gdcatq","slide":56,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}
+{"kind":"slide","id":"sl/46xyoc","slide":57,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/f2lwrmtg","slide":57,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/g3ux0ru1","slide":57,"text":"Module 5 summary map","textPreview":"Module 5 summary map","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/h43etcb6","slide":57,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/6dsvuxcj","slide":57,"text":"Backward Inference, Resolution, and Classical Planning","textPreview":"Backward Inference, Resolution, and Classical Planning","textChars":54,"textLines":1,"bbox":[500,300,280,74]}
+{"kind":"textbox","id":"sh/7e1wn2t4","slide":57,"text":"Backward chaining","textPreview":"Backward chaining","textChars":17,"textLines":1,"bbox":[120,190,180,58]}
+{"kind":"textbox","id":"sh/sfudw7up","slide":57,"text":"AND/OR proof trees","textPreview":"AND/OR proof trees","textChars":18,"textLines":1,"bbox":[400,190,180,58]}
+{"kind":"textbox","id":"sh/tg3epcba","slide":57,"text":"Logic programming view","textPreview":"Logic programming view","textChars":22,"textLines":1,"bbox":[680,190,180,58]}
+{"kind":"textbox","id":"sh/i9svqxcn","slide":57,"text":"Resolution","textPreview":"Resolution","textChars":10,"textLines":1,"bbox":[960,190,180,58]}
+{"kind":"textbox","id":"sh/ja1wj2t8","slide":57,"text":"CNF conversion","textPreview":"CNF conversion","textChars":14,"textLines":1,"bbox":[120,430,180,58]}
+{"kind":"textbox","id":"sh/bq54nqxg","slide":57,"text":"Classical planning","textPreview":"Classical planning","textChars":18,"textLines":1,"bbox":[400,430,180,58]}
+{"kind":"textbox","id":"sh/qpwnulwv","slide":57,"text":"Planning search","textPreview":"Planning search","textChars":15,"textLines":1,"bbox":[680,430,180,58]}
+{"kind":"textbox","id":"sh/ds7mp0fm","slide":57,"text":"Blocks world","textPreview":"Blocks world","textChars":12,"textLines":1,"bbox":[960,430,180,58]}
+{"kind":"textbox","id":"sh/cry5wve1","slide":57,"text":"Explain the module by connecting each outer idea back to the center.","textPreview":"Explain the module by connecting each outer idea back to the center.","textChars":68,"textLines":1,"bbox":[254,608,780,34]}
+{"kind":"textbox","id":"sh/zup4raxc","slide":57,"text":"VTU BCS515B • Module 5 • 57/50","textPreview":"VTU BCS515B • Module 5 • 57/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/46xyoc","slide":57,"text":"[Animation]\nReveal branches around the center. Ask students to supply one example for each branch.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-5-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-5-textbook.pdf"}

@@ -1,0 +1,901 @@
+{"kind":"deck","id":"pr/au58cc","name":"Deck"}
+{"kind":"layout","layoutId":"a5787a65-d906-4ce4-a265-5e68f4d8f63b","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"b849ae74-a2db-47eb-9638-4885cd42d1e9","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/yqlgcg","slide":1,"title":"Module 5","textShapes":11}
+{"kind":"textbox","id":"sh/l0vm50nq","slide":1,"text":"Module 5","textPreview":"Module 5","textChars":8,"textLines":1,"bbox":[82,86,330,60]}
+{"kind":"textbox","id":"sh/yd43u54z","slide":1,"text":"Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":51,"textLines":1,"bbox":[82,162,800,112]}
+{"kind":"textbox","id":"sh/jed43a5k","slide":1,"text":"8 teaching hours","textPreview":"8 teaching hours","textChars":16,"textLines":1,"bbox":[88,300,220,48]}
+{"kind":"textbox","id":"sh/836l0fmh","slide":1,"text":"• Graph ADT / graph abstract data type\n• Elementary graph operations\n• Hashing introduction\n• Static hashing\n• Dynamic hashing\n• Single-ended priority queues\n• Double-ended priority queues\n• Leftist trees","textPreview":"• Graph ADT / graph abstract data type | • Elementary graph operations | • Hashing introduction | • Static hashing | • Dynamic hashing | ...","textChars":204,"textLines":8,"bbox":[92,378,540,230]}
+{"kind":"textbox","id":"sh/t4fm9knm","slide":1,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/61o3y54b","slide":1,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/72x47a5w","slide":1,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/o72lovmx","slide":1,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/98b2xgni","slide":1,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/1c3i103i","slide":1,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/0buhsv2x","slide":1,"text":"VTU 1BCS305 • Module 5 • 01/50","textPreview":"VTU 1BCS305 • Module 5 • 01/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/yqlgcg","slide":1,"text":"[Animation]\nUse this slide as a section reset. Reveal syllabus bullets one by one.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/inux9a","slide":2,"title":"COVERED / MISSING = 0","textShapes":31}
+{"kind":"textbox","id":"sh/elsbqtw3","slide":2,"text":"COVERED / MISSING = 0","textPreview":"COVERED / MISSING = 0","textChars":21,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/lo3a18vu","slide":2,"text":"Module 5 syllabus audit","textPreview":"Module 5 syllabus audit","textChars":23,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/0nuts3e9","slide":2,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/nals3ydk","slide":2,"text":"Syllabus topic","textPreview":"Syllabus topic","textChars":14,"textLines":1,"bbox":[82,152,590,28]}
+{"kind":"textbox","id":"sh/mpcbudwf","slide":2,"text":"Source","textPreview":"Source","textChars":6,"textLines":1,"bbox":[725,152,210,28]}
+{"kind":"textbox","id":"sh/9c3a58vq","slide":2,"text":"Status","textPreview":"Status","textChars":6,"textLines":1,"bbox":[1010,152,120,28]}
+{"kind":"textbox","id":"sh/8butw3e5","slide":2,"text":"1. Graph ADT / graph abstract data type","textPreview":"1. Graph ADT / graph abstract data type","textChars":39,"textLines":1,"bbox":[88,190,590,24]}
+{"kind":"textbox","id":"sh/3uhsredg","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,190,210,24]}
+{"kind":"textbox","id":"sh/2t8ri9wv","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,190,120,24]}
+{"kind":"textbox","id":"sh/wrix876x","slide":2,"text":"2. Elementary graph operations","textPreview":"2. Elementary graph operations","textChars":30,"textLines":1,"bbox":[88,228,590,24]}
+{"kind":"textbox","id":"sh/hsre1s7i","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,228,210,24]}
+{"kind":"textbox","id":"sh/up0v6xo7","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,228,120,24]}
+{"kind":"textbox","id":"sh/vq9wz2ps","slide":2,"text":"3. Hashing introduction","textPreview":"3. Hashing introduction","textChars":23,"textLines":1,"bbox":[88,266,590,24]}
+{"kind":"textbox","id":"sh/4vixc769","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,266,210,24]}
+{"kind":"textbox","id":"sh/5wbe5c7u","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,266,120,24]}
+{"kind":"textbox","id":"sh/it0faxo3","slide":2,"text":"4. Static hashing","textPreview":"4. Static hashing","textChars":17,"textLines":1,"bbox":[88,304,590,24]}
+{"kind":"textbox","id":"sh/ju9w32po","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,304,210,24]}
+{"kind":"textbox","id":"sh/kzyd0nq5","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,304,120,24]}
+{"kind":"textbox","id":"sh/l07et87a","slide":2,"text":"5. Dynamic hashing","textPreview":"5. Dynamic hashing","textChars":18,"textLines":1,"bbox":[88,342,590,24]}
+{"kind":"textbox","id":"sh/14f2hkv2","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,342,210,24]}
+{"kind":"textbox","id":"sh/g36l8feh","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,342,120,24]}
+{"kind":"textbox","id":"sh/fixkfadw","slide":2,"text":"6. Single-ended priority queues","textPreview":"6. Single-ended priority queues","textChars":31,"textLines":1,"bbox":[88,380,590,24]}
+{"kind":"textbox","id":"sh/eho365wb","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,380,210,24]}
+{"kind":"textbox","id":"sh/p8zmlkvy","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,380,120,24]}
+{"kind":"textbox","id":"sh/o7qlcfet","slide":2,"text":"7. Double-ended priority queues","textPreview":"7. Double-ended priority queues","textChars":31,"textLines":1,"bbox":[88,418,590,24]}
+{"kind":"textbox","id":"sh/n6xkjad8","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,418,210,24]}
+{"kind":"textbox","id":"sh/25o3a5wn","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,418,120,24]}
+{"kind":"textbox","id":"sh/xczmp4va","slide":2,"text":"8. Leftist trees","textPreview":"8. Leftist trees","textChars":16,"textLines":1,"bbox":[88,456,590,24]}
+{"kind":"textbox","id":"sh/cbqlgzep","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,456,210,24]}
+{"kind":"textbox","id":"sh/uhkza1c7","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,456,120,24]}
+{"kind":"textbox","id":"sh/vit0jmts","slide":2,"text":"Final status: no missing topics","textPreview":"Final status: no missing topics","textChars":31,"textLines":1,"bbox":[388,625,500,42]}
+{"kind":"textbox","id":"sh/wj2hcrud","slide":2,"text":"VTU 1BCS305 • Module 5 • 02/50","textPreview":"VTU 1BCS305 • Module 5 • 02/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/inux9a","slide":2,"text":"[Animation]\nReveal rows quickly and end on MISSING = 0.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/k63dk5","slide":3,"title":"Teaching sequence","textShapes":14}
+{"kind":"textbox","id":"sh/on614bqt","slide":3,"text":"Teaching sequence","textPreview":"Teaching sequence","textChars":17,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/nmx0b6p8","slide":3,"text":"Roadmap for Module 5","textPreview":"Roadmap for Module 5","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/2loj2183","slide":3,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/1kvi9w7i","slide":3,"text":"1. Graph ADT / graph abstract data type","textPreview":"1. Graph ADT / graph abstract data type","textChars":39,"textLines":1,"bbox":[76,220,190,74]}
+{"kind":"textbox","id":"sh/0jmh0rqx","slide":3,"text":"2. Graph representation","textPreview":"2. Graph representation","textChars":23,"textLines":1,"bbox":[308,220,190,74]}
+{"kind":"textbox","id":"sh/fid076pc","slide":3,"text":"3. Elementary graph operations","textPreview":"3. Elementary graph operations","textChars":30,"textLines":1,"bbox":[540,220,190,74]}
+{"kind":"textbox","id":"sh/eh4zy18r","slide":3,"text":"4. Graph traversal","textPreview":"4. Graph traversal","textChars":18,"textLines":1,"bbox":[772,220,190,74]}
+{"kind":"textbox","id":"sh/dgvi5wr6","slide":3,"text":"5. Hashing introduction","textPreview":"5. Hashing introduction","textChars":23,"textLines":1,"bbox":[1004,220,190,74]}
+{"kind":"textbox","id":"sh/sfmhwrql","slide":3,"text":"6. Static hashing","textPreview":"6. Static hashing","textChars":17,"textLines":1,"bbox":[76,356,190,74]}
+{"kind":"textbox","id":"sh/yd0butsz","slide":3,"text":"7. Dynamic hashing","textPreview":"7. Dynamic hashing","textChars":18,"textLines":1,"bbox":[308,356,190,74]}
+{"kind":"textbox","id":"sh/jy9s3yt4","slide":3,"text":"8. Priority queue","textPreview":"8. Priority queue","textChars":17,"textLines":1,"bbox":[540,356,190,74]}
+{"kind":"textbox","id":"sh/kz2tw3ap","slide":3,"text":"9. Double-ended priority queue","textPreview":"9. Double-ended priority queue","textChars":30,"textLines":1,"bbox":[772,356,190,74]}
+{"kind":"textbox","id":"sh/l0ba58ba","slide":3,"text":"10. Leftist tree","textPreview":"10. Leftist tree","textChars":16,"textLines":1,"bbox":[1004,356,190,74]}
+{"kind":"textbox","id":"sh/a90r6tsn","slide":3,"text":"Each topic becomes: concept -> operations -> algorithm -> example","textPreview":"Each topic becomes: concept -> operations -> algorithm -> example","textChars":65,"textLines":1,"bbox":[230,562,825,54]}
+{"kind":"textbox","id":"sh/ba9szet8","slide":3,"text":"VTU 1BCS305 • Module 5 • 03/50","textPreview":"VTU 1BCS305 • Module 5 • 03/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/k63dk5","slide":3,"text":"[Animation]\nReveal roadmap by row and connect each unit to implementation.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/gx1og4","slide":4,"title":"Exam quick reference","textShapes":21}
+{"kind":"textbox","id":"sh/mtkfid0z","slide":4,"text":"Exam quick reference","textPreview":"Exam quick reference","textChars":20,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/9wvyd8zq","slide":4,"text":"Module 5 complexity checkpoints","textPreview":"Module 5 complexity checkpoints","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ov2xk3i5","slide":4,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zqtg7yho","slide":4,"text":"Graph ADT / graph abstract data type","textPreview":"Graph ADT / graph abstract data type","textChars":36,"textLines":1,"bbox":[96,172,330,48]}
+{"kind":"textbox","id":"sh/epkfet03","slide":4,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,176,270,36]}
+{"kind":"textbox","id":"sh/1sby98ze","slide":4,"text":"Representation decides cost","textPreview":"Representation decides cost","textChars":27,"textLines":1,"bbox":[790,176,330,36]}
+{"kind":"textbox","id":"sh/0r2xg3it","slide":4,"text":"Graph representation","textPreview":"Graph representation","textChars":20,"textLines":1,"bbox":[96,244,330,48]}
+{"kind":"textbox","id":"sh/r29w3ehc","slide":4,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,248,270,36]}
+{"kind":"textbox","id":"sh/q10fa90r","slide":4,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,248,330,36]}
+{"kind":"textbox","id":"sh/gritovmt","slide":4,"text":"Elementary graph operations","textPreview":"Elementary graph operations","textChars":27,"textLines":1,"bbox":[96,316,330,48]}
+{"kind":"textbox","id":"sh/hsrah0ne","slide":4,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,320,270,36]}
+{"kind":"textbox","id":"sh/upgbml4n","slide":4,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,320,330,36]}
+{"kind":"textbox","id":"sh/fq9sfq58","slide":4,"text":"Graph traversal","textPreview":"Graph traversal","textChars":15,"textLines":1,"bbox":[96,388,330,48]}
+{"kind":"textbox","id":"sh/s3ytkbmx","slide":4,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,392,270,36]}
+{"kind":"textbox","id":"sh/t47adgni","slide":4,"text":"Representation decides cost","textPreview":"Representation decides cost","textChars":27,"textLines":1,"bbox":[790,392,330,36]}
+{"kind":"textbox","id":"sh/61gbi14r","slide":4,"text":"Hashing introduction","textPreview":"Hashing introduction","textChars":20,"textLines":1,"bbox":[96,460,330,48]}
+{"kind":"textbox","id":"sh/72psb65c","slide":4,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,464,270,36]}
+{"kind":"textbox","id":"sh/cz2twfm1","slide":4,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,464,330,36]}
+{"kind":"textbox","id":"sh/d0bupk3m","slide":4,"text":"Static hashing","textPreview":"Static hashing","textChars":14,"textLines":1,"bbox":[96,532,330,48]}
+{"kind":"textbox","id":"sh/lg7a90vq","slide":4,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,536,270,36]}
+{"kind":"textbox","id":"sh/0fytgve5","slide":4,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,536,330,36]}
+{"kind":"textbox","id":"sh/zeps7adk","slide":4,"text":"VTU 1BCS305 • Module 5 • 04/50","textPreview":"VTU 1BCS305 • Module 5 • 04/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/gx1og4","slide":4,"text":"[Animation]\nReveal one row at a time; ask students to justify the complexity from representation.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/oagr03","slide":5,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/a5kv6xkr","slide":5,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/x8be1c3i","slide":5,"text":"Graph ADT / graph abstract data type: core idea","textPreview":"Graph ADT / graph abstract data type: core idea","textChars":47,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/c72d872x","slide":5,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/judw3ml8","slide":5,"text":"A graph models relationships among objects.","textPreview":"A graph models relationships among objects.","textChars":43,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/yt4vahk3","slide":5,"text":"• vertices\n• edges\n• directed\n• undirected","textPreview":"• vertices | • edges | • directed | • undirected","textChars":42,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/lwve5w3e","slide":5,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/kvmxcr2t","slide":5,"text":"Graphs generalize lists and trees to many-to-many links.","textPreview":"Graphs generalize lists and trees to many-to-many links.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/fy9wril4","slide":5,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/ed0vyd4j","slide":5,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/srylw3qp","slide":5,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/tsr2587a","slide":5,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/6pg3ut8j","slide":5,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/7qpk3yp4","slide":5,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/gvil0nql","slide":5,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/hwr29s76","slide":5,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/ut03yd8f","slide":5,"text":"VTU 1BCS305 • Module 5 • 05/50","textPreview":"VTU 1BCS305 • Module 5 • 05/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/oagr03","slide":5,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/66cni6","slide":6,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/8ju587u9","slide":6,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/7iloz2to","slide":6,"text":"Graph ADT / graph abstract data type: operations","textPreview":"Graph ADT / graph abstract data type: operations","textChars":48,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/mhsn6xcj","slide":6,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/lgj6xsby","slide":6,"text":"Understand graph adt / graph abstract data type by tracing the operations it supports.","textPreview":"Understand graph adt / graph abstract data type by tracing the operations it supports.","textChars":86,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/kfa54nud","slide":6,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/zu1ovits","slide":6,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/ytsn2xc7","slide":6,"text":"Graphs generalize lists and trees to many-to-many links.","textPreview":"Graphs generalize lists and trees to many-to-many links.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/xsj6tsbm","slide":6,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/cra50nu1","slide":6,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/ipczet4j","slide":6,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/3ql0nyl4","slide":6,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/4re1g3mp","slide":6,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/5snipo3a","slide":6,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/ulcza94n","slide":6,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/vml0jel8","slide":6,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/gnuhcjmd","slide":6,"text":"VTU 1BCS305 • Module 5 • 06/50","textPreview":"VTU 1BCS305 • Module 5 • 06/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/66cni6","slide":6,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/x1zn7g","slide":7,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/1gjex0fa","slide":7,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/edsfm5wj","slide":7,"text":"Graph ADT / graph abstract data type: algorithm pattern","textPreview":"Graph ADT / graph abstract data type: algorithm pattern","textChars":55,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/fe1wvax4","slide":7,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/o3uxsfel","slide":7,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/p43e1kf6","slide":7,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Graphs generalize lists and trees to many-to-many links.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Graphs generalize lists and trees to many-to-ma...","textChars":140,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/21sfq5wv","slide":7,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/32lwzaxg","slide":7,"text":"Graphs generalize lists and trees to many-to-many links.","textPreview":"Graphs generalize lists and trees to many-to-many links.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/47qdgbeh","slide":7,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/58zepgf2","slide":7,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/1gjqlcz6","slide":7,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/0va9s7yl","slide":7,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/fu18j2h0","slide":7,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/etsrqxgf","slide":7,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/pk3qpcz2","slide":7,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/oju9w7yh","slide":7,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/nil8n2hw","slide":7,"text":"VTU 1BCS305 • Module 5 • 07/50","textPreview":"VTU 1BCS305 • Module 5 • 07/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/x1zn7g","slide":7,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/iujxpr","slide":8,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/cfy58bat","slide":8,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/bep4fqt8","slide":8,"text":"Graph ADT / graph abstract data type: classroom example","textPreview":"Graph ADT / graph abstract data type: classroom example","textChars":55,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/qdwn6lsn","slide":8,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/l476l0ba","slide":8,"text":"A small trace makes graph adt / graph abstract data type exam-ready.","textPreview":"A small trace makes graph adt / graph abstract data type exam-ready.","textChars":68,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/03y5cvap","slide":8,"text":"• Use terms: vertices, edges\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: vertices, edges | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":113,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/z2p4jqt4","slide":8,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/y1gnalsj","slide":8,"text":"Graphs generalize lists and trees to many-to-many links.","textPreview":"Graphs generalize lists and trees to many-to-many links.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/18nm9wb6","slide":8,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/g7e50rul","slide":8,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/ix4jq547","slide":8,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/jyd0zqls","slide":8,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/4zm1svmd","slide":8,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/50vi103y","slide":8,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/61oju54j","slide":8,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/r2x03al4","slide":8,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/sn61wfm9","slide":8,"text":"VTU 1BCS305 • Module 5 • 08/50","textPreview":"VTU 1BCS305 • Module 5 • 08/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/iujxpr","slide":8,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/o7wydg","slide":9,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/fitsja14","slide":9,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/gj29cv2p","slide":9,"text":"Graph representation: core idea","textPreview":"Graph representation: core idea","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/1kbal0ju","slide":9,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/6t0r6lk7","slide":9,"text":"Graph representation determines storage and operation cost.","textPreview":"Graph representation determines storage and operation cost.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/rutsfq1s","slide":9,"text":"• adjacency matrix\n• adjacency list\n• space\n• density","textPreview":"• adjacency matrix | • adjacency list | • space | • density","textChars":53,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/sv298v2d","slide":9,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/twbah0jy","slide":9,"text":"Dense graphs suit matrices; sparse graphs suit lists.","textPreview":"Dense graphs suit matrices; sparse graphs suit lists.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/qp4bipkr","slide":9,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[815,261,62,56]}
+{"kind":"textbox","id":"sh/bqdsru1c","slide":9,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1015,236,62,56]}
+{"kind":"textbox","id":"sh/fqhw7il0","slide":9,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1115,386,62,56]}
+{"kind":"textbox","id":"sh/up8vexkf","slide":9,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[915,451,62,56]}
+{"kind":"textbox","id":"sh/hsze9s36","slide":9,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[755,411,62,56]}
+{"kind":"textbox","id":"sh/grqdgn2l","slide":9,"text":"Vertices + edges model relationships","textPreview":"Vertices + edges model relationships","textChars":36,"textLines":1,"bbox":[745,521,440,36]}
+{"kind":"textbox","id":"sh/3uhwb2lc","slide":9,"text":"VTU 1BCS305 • Module 5 • 09/50","textPreview":"VTU 1BCS305 • Module 5 • 09/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/o7wydg","slide":9,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/bzag3x","slide":10,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/fu9gz2lg","slide":10,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/0vixs721","slide":10,"text":"Graph representation: operations","textPreview":"Graph representation: operations","textChars":32,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/1wby1s3m","slide":10,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qp0fmdkz","slide":10,"text":"Understand graph representation by tracing the operations it supports.","textPreview":"Understand graph representation by tracing the operations it supports.","textChars":70,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/rq9gvilk","slide":10,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/srixon25","slide":10,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/dsryxs3q","slide":10,"text":"Dense graphs suit matrices; sparse graphs suit lists.","textPreview":"Dense graphs suit matrices; sparse graphs suit lists.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ilgfidk3","slide":10,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[815,261,62,56]}
+{"kind":"textbox","id":"sh/3mpgril8","slide":10,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1015,236,62,56]}
+{"kind":"textbox","id":"sh/fudo3edc","slide":10,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1115,386,62,56]}
+{"kind":"textbox","id":"sh/et4nu9cr","slide":10,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[915,451,62,56]}
+{"kind":"textbox","id":"sh/1wf65ovi","slide":10,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[755,411,62,56]}
+{"kind":"textbox","id":"sh/gvm5wjux","slide":10,"text":"Vertices + edges model relationships","textPreview":"Vertices + edges model relationships","textChars":36,"textLines":1,"bbox":[745,521,440,36]}
+{"kind":"textbox","id":"sh/3yxo7et8","slide":10,"text":"VTU 1BCS305 • Module 5 • 10/50","textPreview":"VTU 1BCS305 • Module 5 • 10/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/bzag3x","slide":10,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/ud8v7g","slide":11,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/hwzaxgf2","slide":11,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/u98r21wb","slide":11,"text":"Graph representation: algorithm pattern","textPreview":"Graph representation: algorithm pattern","textChars":39,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/vahsv6xw","slide":11,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/4zat8bed","slide":11,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/50ja1gfy","slide":11,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Dense graphs suit matrices; sparse graphs suit lists.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Dense graphs suit matrices; sparse graphs suit ...","textChars":137,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/ix8b6lwn","slide":11,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/jy1sz6x8","slide":11,"text":"Dense graphs suit matrices; sparse graphs suit lists.","textPreview":"Dense graphs suit matrices; sparse graphs suit lists.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/k369wre9","slide":11,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[815,261,62,56]}
+{"kind":"textbox","id":"sh/l4fapwfu","slide":11,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1015,236,62,56]}
+{"kind":"textbox","id":"sh/tcj2xo7e","slide":11,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1115,386,62,56]}
+{"kind":"textbox","id":"sh/8bal4j6t","slide":11,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[915,451,62,56]}
+{"kind":"textbox","id":"sh/7a1kvep8","slide":11,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[755,411,62,56]}
+{"kind":"textbox","id":"sh/69s329on","slide":11,"text":"Vertices + edges model relationships","textPreview":"Vertices + edges model relationships","textChars":36,"textLines":1,"bbox":[745,521,440,36]}
+{"kind":"textbox","id":"sh/h03m1o7a","slide":11,"text":"VTU 1BCS305 • Module 5 • 11/50","textPreview":"VTU 1BCS305 • Module 5 • 11/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/ud8v7g","slide":11,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/p9umu4","slide":12,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/ytkz6xkv","slide":12,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/lwby1cjm","slide":12,"text":"Graph representation: classroom example","textPreview":"Graph representation: classroom example","textChars":39,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/0v2h8721","slide":12,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/bq9gv214","slide":12,"text":"A small trace makes graph representation exam-ready.","textPreview":"A small trace makes graph representation exam-ready.","textChars":52,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/qp0z2xkz","slide":12,"text":"• Use terms: adjacency matrix, adjacency list\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: adjacency matrix, adjacency list | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":130,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/dsryxsja","slide":12,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/crih4n2p","slide":12,"text":"Dense graphs suit matrices; sparse graphs suit lists.","textPreview":"Dense graphs suit matrices; sparse graphs suit lists.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/329gri18","slide":12,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[815,261,62,56]}
+{"kind":"textbox","id":"sh/21gfydkn","slide":12,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1015,236,62,56]}
+{"kind":"textbox","id":"sh/8j2xcvq1","slide":12,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1115,386,62,56]}
+{"kind":"textbox","id":"sh/tkvy50rm","slide":12,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[915,451,62,56]}
+{"kind":"textbox","id":"sh/6hkfal8v","slide":12,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[755,411,62,56]}
+{"kind":"textbox","id":"sh/7itg3q9g","slide":12,"text":"Vertices + edges model relationships","textPreview":"Vertices + edges model relationships","textChars":36,"textLines":1,"bbox":[745,521,440,36]}
+{"kind":"textbox","id":"sh/kf2x8bq5","slide":12,"text":"VTU 1BCS305 • Module 5 • 12/50","textPreview":"VTU 1BCS305 • Module 5 • 12/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/p9umu4","slide":12,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/9i1wx4","slide":13,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/g3etoj6p","slide":13,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/f25svy54","slide":13,"text":"Elementary graph operations: core idea","textPreview":"Elementary graph operations: core idea","textChars":38,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/u1cbmtoj","slide":13,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/tg3atony","slide":13,"text":"Graph ADT operations manipulate vertices and edges.","textPreview":"Graph ADT operations manipulate vertices and edges.","textChars":51,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/sfutkj6t","slide":13,"text":"• create\n• insert edge\n• delete edge\n• neighbors","textPreview":"• create | • insert edge | • delete edge | • neighbors","textChars":48,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/7elsre58","slide":13,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/6dcbi9on","slide":13,"text":"Operations must match the chosen representation.","textPreview":"Operations must match the chosen representation.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/dc7u58ni","slide":13,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[815,261,62,56]}
+{"kind":"textbox","id":"sh/cbytw36x","slide":13,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1015,236,62,56]}
+{"kind":"textbox","id":"sh/upkn6t4r","slide":13,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1115,386,62,56]}
+{"kind":"textbox","id":"sh/fqtozylc","slide":13,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[915,451,62,56]}
+{"kind":"textbox","id":"sh/gr2583mx","slide":13,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[755,411,62,56]}
+{"kind":"textbox","id":"sh/hsb6183i","slide":13,"text":"Vertices + edges model relationships","textPreview":"Vertices + edges model relationships","textChars":36,"textLines":1,"bbox":[745,521,440,36]}
+{"kind":"textbox","id":"sh/6lkn2t4v","slide":13,"text":"VTU 1BCS305 • Module 5 • 13/50","textPreview":"VTU 1BCS305 • Module 5 • 13/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/9i1wx4","slide":13,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/27lt76","slide":14,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/8nmpcra9","slide":14,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/7mdo3mto","slide":14,"text":"Elementary graph operations: operations","textPreview":"Elementary graph operations: operations","textChars":39,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/6l47ahc3","slide":14,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/hsfq9wbq","slide":14,"text":"Understand elementary graph operations by tracing the operations it supports.","textPreview":"Understand elementary graph operations by tracing the operations it supports.","textChars":77,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/gr6pgbal","slide":14,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/fqxo76t0","slide":14,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/upo7e1sf","slide":14,"text":"Operations must match the chosen representation.","textPreview":"Operations must match the chosen representation.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/pgzqdgb2","slide":14,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[815,261,62,56]}
+{"kind":"textbox","id":"sh/4vqpkbah","slide":14,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1015,236,62,56]}
+{"kind":"textbox","id":"sh/e1g725k7","slide":14,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1115,386,62,56]}
+{"kind":"textbox","id":"sh/z2p8vqls","slide":14,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[915,451,62,56]}
+{"kind":"textbox","id":"sh/0nyp4v2x","slide":14,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[755,411,62,56]}
+{"kind":"textbox","id":"sh/1o7qx03i","slide":14,"text":"Vertices + edges model relationships","textPreview":"Vertices + edges model relationships","textChars":36,"textLines":1,"bbox":[745,521,440,36]}
+{"kind":"textbox","id":"sh/mpgr65k3","slide":14,"text":"VTU 1BCS305 • Module 5 • 14/50","textPreview":"VTU 1BCS305 • Module 5 • 14/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/27lt76","slide":14,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/tp1p3f","slide":15,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/adobu1sf","slide":15,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/x0fupwb6","slide":15,"text":"Elementary graph operations: algorithm pattern","textPreview":"Elementary graph operations: algorithm pattern","textChars":46,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/cz6twral","slide":15,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/nadcjmt4","slide":15,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/294bqhsj","slide":15,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Operations must match the chosen representation.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Operations must match the chosen representation.","textChars":132,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/pcfulwbu","slide":15,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/ob6tsra9","slide":15,"text":"Operations must match the chosen representation.","textPreview":"Operations must match the chosen representation.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/76hcv6t8","slide":15,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[815,261,62,56]}
+{"kind":"textbox","id":"sh/m58v2lsn","slide":15,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1015,236,62,56]}
+{"kind":"textbox","id":"sh/8z6xcrux","slide":15,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1115,386,62,56]}
+{"kind":"textbox","id":"sh/90zylwb2","slide":15,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[915,451,62,56]}
+{"kind":"textbox","id":"sh/mxofahcr","slide":15,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[755,411,62,56]}
+{"kind":"textbox","id":"sh/7yxgjmtc","slide":15,"text":"Vertices + edges model relationships","textPreview":"Vertices + edges model relationships","textChars":36,"textLines":1,"bbox":[745,521,440,36]}
+{"kind":"textbox","id":"sh/kb6x87ul","slide":15,"text":"VTU 1BCS305 • Module 5 • 15/50","textPreview":"VTU 1BCS305 • Module 5 • 15/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/tp1p3f","slide":15,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/dsbzf3","slide":16,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/o3u1snux","slide":16,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/n2l0zitc","slide":16,"text":"Elementary graph operations: classroom example","textPreview":"Elementary graph operations: classroom example","textChars":46,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/21sjqdcr","slide":16,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/x8325sbe","slide":16,"text":"A small trace makes elementary graph operations exam-ready.","textPreview":"A small trace makes elementary graph operations exam-ready.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/w7u1w7ut","slide":16,"text":"• Use terms: create, insert edge\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: create, insert edge | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":117,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/b6lk32to","slide":16,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/a5cjuxc3","slide":16,"text":"Operations must match the chosen representation.","textPreview":"Operations must match the chosen representation.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/lwn29cbq","slide":16,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[815,261,62,56]}
+{"kind":"textbox","id":"sh/kbe107u5","slide":16,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1015,236,62,56]}
+{"kind":"textbox","id":"sh/m54z2hgr","slide":16,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1115,386,62,56]}
+{"kind":"textbox","id":"sh/n6d0bmxw","slide":16,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[915,451,62,56]}
+{"kind":"textbox","id":"sh/87m14ryh","slide":16,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[755,411,62,56]}
+{"kind":"textbox","id":"sh/98vidcf2","slide":16,"text":"Vertices + edges model relationships","textPreview":"Vertices + edges model relationships","textChars":36,"textLines":1,"bbox":[745,521,440,36]}
+{"kind":"textbox","id":"sh/a94j6hgn","slide":16,"text":"VTU 1BCS305 • Module 5 • 16/50","textPreview":"VTU 1BCS305 • Module 5 • 16/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/dsbzf3","slide":16,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/ruuwyl","slide":17,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/mhwvypor","slide":17,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/9k7ut47i","slide":17,"text":"Graph traversal: core idea","textPreview":"Graph traversal: core idea","textChars":26,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/8jyd0z6x","slide":17,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zu5cnupg","slide":17,"text":"DFS and BFS explore reachable vertices systematically.","textPreview":"DFS and BFS explore reachable vertices systematically.","textChars":54,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ytwbupov","slide":17,"text":"• DFS\n• BFS\n• visited\n• reachability","textPreview":"• DFS | • BFS | • visited | • reachability","textChars":36,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/lgnup476","slide":17,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/kfetwz6l","slide":17,"text":"Traversal requires a visited set to avoid repetition.","textPreview":"Traversal requires a visited set to avoid repetition.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/jq9cze5k","slide":17,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/ip0v69oz","slide":17,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/4bu1czyt","slide":17,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/pc3i54fe","slide":17,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/29sjapg3","slide":17,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/3a103ux8","slide":17,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/g7a18fyx","slide":17,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/h8ji1kfi","slide":17,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/u5sz65gr","slide":17,"text":"VTU 1BCS305 • Module 5 • 17/50","textPreview":"VTU 1BCS305 • Module 5 • 17/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/ruuwyl","slide":17,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/n3ru8k","slide":18,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/za1wbydw","slide":18,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/kbudk3eh","slide":18,"text":"Graph traversal: operations","textPreview":"Graph traversal: operations","textChars":27,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/lc3ed8v2","slide":18,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/mdcvmdcn","slide":18,"text":"Understand graph traversal by tracing the operations it supports.","textPreview":"Understand graph traversal by tracing the operations it supports.","textChars":65,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/7elwfid8","slide":18,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/8fudonut","slide":18,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/tg3ehsvy","slide":18,"text":"Traversal requires a visited set to avoid repetition.","textPreview":"Traversal requires a visited set to avoid repetition.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/2h8vatwj","slide":18,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/nihcjedo","slide":18,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/ryd8bmt4","slide":18,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/6x47ihsj","slide":18,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/tkfqdwba","slide":18,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/sz6pkrap","slide":18,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/jud87mts","slide":18,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/it47ehsn","slide":18,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/5wvq9cby","slide":18,"text":"VTU 1BCS305 • Module 5 • 18/50","textPreview":"VTU 1BCS305 • Module 5 • 18/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/n3ru8k","slide":18,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/sof6os","slide":19,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/it0v6l4r","slide":19,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/5grehgn2","slide":19,"text":"Graph traversal: algorithm pattern","textPreview":"Graph traversal: algorithm pattern","textChars":34,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/kfid8bmh","slide":19,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7i9wjq58","slide":19,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/6h0val4n","slide":19,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Traversal requires a visited set to avoid repetition.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Traversal requires a visited set to avoid repet...","textChars":137,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/tkbel0ne","slide":19,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/sj2dcvmt","slide":19,"text":"Traversal requires a visited set to avoid repetition.","textPreview":"Traversal requires a visited set to avoid repetition.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/nmpc7m54","slide":19,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/mlgvy1oj","slide":19,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/kzyxob6l","slide":19,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/lkryxg76","slide":19,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/yxgfm1of","slide":19,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/zypgv6p0","slide":19,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/8nixsv6h","slide":19,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/9ory1gn2","slide":19,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/ml0fqlor","slide":19,"text":"VTU 1BCS305 • Module 5 • 19/50","textPreview":"VTU 1BCS305 • Module 5 • 19/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/sof6os","slide":19,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/6u0t79","slide":20,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/90vq5kn6","slide":20,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/mx4ra5ov","slide":20,"text":"Graph traversal: classroom example","textPreview":"Graph traversal: classroom example","textChars":34,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/nyd83a50","slide":20,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/0v298f6p","slide":20,"text":"A small trace makes graph traversal exam-ready.","textPreview":"A small trace makes graph traversal exam-ready.","textChars":47,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/lwbq1kna","slide":20,"text":"• Use terms: DFS, BFS\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: DFS, BFS | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":106,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/etkr65oj","slide":20,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/zut8za54","slide":20,"text":"Traversal requires a visited set to avoid repetition.","textPreview":"Traversal requires a visited set to avoid repetition.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/kr69kz6t","slide":20,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/5sfad4ne","slide":20,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/t4jex0r2","slide":20,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/83qx4fqh","slide":20,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/72hwva9w","slide":20,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/618f258b","slide":20,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/l0zet0r6","slide":20,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/kzqd0vql","slide":20,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/jyhwrq90","slide":20,"text":"VTU 1BCS305 • Module 5 • 20/50","textPreview":"VTU 1BCS305 • Module 5 • 20/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/6u0t79","slide":20,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/3lq5rk","slide":21,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/wj6psf21","slide":21,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/vyxozu1g","slide":21,"text":"Hashing introduction: core idea","textPreview":"Hashing introduction: core idea","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/uxo7qpkv","slide":21,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/9wf6xkja","slide":21,"text":"Hashing maps keys to table positions for fast search.","textPreview":"Hashing maps keys to table positions for fast search.","textChars":53,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/8v6pof25","slide":21,"text":"• key\n• hash function\n• table\n• collision","textPreview":"• key | • hash function | • table | • collision","textChars":41,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/7uxova1k","slide":21,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/mto7m5kz","slide":21,"text":"Collision handling is unavoidable in real tables.","textPreview":"Collision handling is unavoidable in real tables.","textChars":49,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/lsv6t0je","slide":21,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/krmpkv2t","slide":21,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/i9k36xkb","slide":21,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/3atkz21w","slide":21,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/4bml872h","slide":21,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/5cv21sj2","slide":21,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/u5kj2dkf","slide":21,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/v6tkvi1k","slide":21,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/g7214n25","slide":21,"text":"VTU 1BCS305 • Module 5 • 21/50","textPreview":"VTU 1BCS305 • Module 5 • 21/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/3lq5rk","slide":21,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/uv8ehj","slide":22,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/gbm9kf2h","slide":22,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/fqd8ra1w","slide":22,"text":"Hashing introduction: operations","textPreview":"Hashing introduction: operations","textChars":32,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/upkri5kb","slide":22,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/tobqp0jq","slide":22,"text":"Understand hashing introduction by tracing the operations it supports.","textPreview":"Understand hashing introduction by tracing the operations it supports.","textChars":70,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/sn29gv2l","slide":22,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/7mt8nq10","slide":22,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/6lkrelkf","slide":22,"text":"Collision handling is unavoidable in real tables.","textPreview":"Collision handling is unavoidable in real tables.","textChars":49,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/5kbql0ju","slide":22,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/kj29cv29","slide":22,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/290769w7","slide":22,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/3u98zexs","slide":22,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/4vip8zed","slide":22,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/pwrq14fy","slide":22,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/u5g72pwb","slide":22,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/f6p8vuxw","slide":22,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/g7yp4zeh","slide":22,"text":"VTU 1BCS305 • Module 5 • 22/50","textPreview":"VTU 1BCS305 • Module 5 • 22/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/uv8ehj","slide":22,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/erg8by","slide":23,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/1krq1gv6","slide":23,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/eh0761wv","slide":23,"text":"Hashing introduction: algorithm pattern","textPreview":"Hashing introduction: algorithm pattern","textChars":39,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/zi98z6dg","slide":23,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/o72pcbex","slide":23,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/98bq5gvi","slide":23,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Collision handling is unavoidable in real tables.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Collision handling is unavoidable in real tables.","textChars":133,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/ml07a1wr","slide":23,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/n69836dc","slide":23,"text":"Collision handling is unavoidable in real tables.","textPreview":"Collision handling is unavoidable in real tables.","textChars":49,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/wb29gvet","slide":23,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/xcbq90ve","slide":23,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/p8nqp4bi","slide":23,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/o7epwzux","slide":23,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/nm58netc","slide":23,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/2lc7u9cr","slide":23,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/xcnqtobe","slide":23,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/wbe90ju9","slide":23,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/ba58reto","slide":23,"text":"VTU 1BCS305 • Module 5 • 23/50","textPreview":"VTU 1BCS305 • Module 5 • 23/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/erg8by","slide":23,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/6d9i22","slide":24,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/q5knudkr","slide":24,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/d8bmps3i","slide":24,"text":"Hashing introduction: classroom example","textPreview":"Hashing introduction: classroom example","textChars":39,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/c725wn2x","slide":24,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/32t4zylg","slide":24,"text":"A small trace makes hashing introduction exam-ready.","textPreview":"A small trace makes hashing introduction exam-ready.","textChars":52,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/210nqtkv","slide":24,"text":"• Use terms: key, hash function\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: key, hash function | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":116,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/p4bml836","slide":24,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/4325s321","slide":24,"text":"Collision handling is unavoidable in real tables.","textPreview":"Collision handling is unavoidable in real tables.","textChars":49,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/nyd4v2lk","slide":24,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/mx4n2xkz","slide":24,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/cvepwzyx","slide":24,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/xwn6p4z2","slide":24,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/atc7u9gr","slide":24,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/bulonuhc","slide":24,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/orupszyl","slide":24,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/ps36l4z6","slide":24,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/25c7qpgf","slide":24,"text":"VTU 1BCS305 • Module 5 • 24/50","textPreview":"VTU 1BCS305 • Module 5 • 24/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/6d9i22","slide":24,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/xibh3i","slide":25,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/xcbyd0fq","slide":25,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/a9kfilgf","slide":25,"text":"Static hashing: core idea","textPreview":"Static hashing: core idea","textChars":25,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/batwbqx0","slide":25,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/kzmxoveh","slide":25,"text":"Static hashing uses a fixed-size table.","textPreview":"Static hashing uses a fixed-size table.","textChars":39,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/l0vyh0f2","slide":25,"text":"• fixed table\n• linear probing\n• chaining\n• load factor","textPreview":"• fixed table | • linear probing | • chaining | • load factor","textChars":55,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/yxkfm5wb","slide":25,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/jytgfaxw","slide":25,"text":"Load factor controls performance.","textPreview":"Load factor controls performance.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/03ixcbyd","slide":25,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/14re5gfi","slide":25,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/5g3a9obm","slide":25,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/kfutgju1","slide":25,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/jels7etg","slide":25,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/idcre9cv","slide":25,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/tknadoby","slide":25,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/sjetk3ud","slide":25,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/ri5sbyts","slide":25,"text":"VTU 1BCS305 • Module 5 • 25/50","textPreview":"VTU 1BCS305 • Module 5 • 25/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/xibh3i","slide":25,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/pn9lit","slide":26,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/03ypofa9","slide":26,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/f2pofato","slide":26,"text":"Static hashing: operations","textPreview":"Static hashing: operations","textChars":26,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/e1g7m5s3","slide":26,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/d076d0bi","slide":26,"text":"Understand static hashing by tracing the operations it supports.","textPreview":"Understand static hashing by tracing the operations it supports.","textChars":64,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/sfypkvax","slide":26,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/repobatc","slide":26,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/qdg7i5sr","slide":26,"text":"Load factor controls performance.","textPreview":"Load factor controls performance.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/xwbqp4bm","slide":26,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/wbipwzah","slide":26,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/yxs7mh87","slide":26,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/zy1ofmps","slide":26,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/kzaporqd","slide":26,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/l0j6hw7i","slide":26,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/at8nix8v","slide":26,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/buhob2pg","slide":26,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/cvq5k7q1","slide":26,"text":"VTU 1BCS305 • Module 5 • 26/50","textPreview":"VTU 1BCS305 • Module 5 • 26/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/pn9lit","slide":26,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/hq1hrj","slide":27,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/43qlgrmp","slide":27,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/32hk76lk","slide":27,"text":"Static hashing: algorithm pattern","textPreview":"Static hashing: algorithm pattern","textChars":33,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/2183e14z","slide":27,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/d8j2dg3m","slide":27,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/c7alkbm1","slide":27,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Load factor controls performance.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Load factor controls performance.","textChars":117,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/r61kb6lg","slide":27,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/q583i14v","slide":27,"text":"Load factor controls performance.","textPreview":"Load factor controls performance.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/1wj2hg3i","slide":27,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/0balob2x","slide":27,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/6p0nqtw7","slide":27,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/7q9ojeds","slide":27,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/sri5sjed","slide":27,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/tcr6lovy","slide":27,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/udknutwj","slide":27,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/fetonyd4","slide":27,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/gf2pw3u9","slide":27,"text":"VTU 1BCS305 • Module 5 • 27/50","textPreview":"VTU 1BCS305 • Module 5 • 27/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/hq1hrj","slide":27,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/lknipj","slide":28,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/kbuxormd","slide":28,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/zalgvmls","slide":28,"text":"Static hashing: classroom example","textPreview":"Static hashing: classroom example","textChars":33,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/y9cfmh4n","slide":28,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/9gny1g3a","slide":28,"text":"A small trace makes static hashing exam-ready.","textPreview":"A small trace makes static hashing exam-ready.","textChars":46,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/8fehsbmp","slide":28,"text":"• Use terms: fixed table, linear probing\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: fixed table, linear probing | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":125,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/7elgz6l4","slide":28,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/mdcfq14j","slide":28,"text":"Load factor controls performance.","textPreview":"Load factor controls performance.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hkny5g36","slide":28,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/wjehwbml","slide":28,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/mlk32pwz","slide":28,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/7mt4vudk","slide":28,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/87mloze5","slide":28,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/98vmxkva","slide":28,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/u94nqpcv","slide":28,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/vad4zudg","slide":28,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/wbm5szu1","slide":28,"text":"VTU 1BCS305 • Module 5 • 28/50","textPreview":"VTU 1BCS305 • Module 5 • 28/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/lknipj","slide":28,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/n5n8tg","slide":29,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/4rapkj2l","slide":29,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/361orel0","slide":29,"text":"Dynamic hashing: core idea","textPreview":"Dynamic hashing: core idea","textChars":26,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/25s7i9kf","slide":29,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/dw36x832","slide":29,"text":"Dynamic hashing adapts as records grow.","textPreview":"Dynamic hashing adapts as records grow.","textChars":39,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cvupo32x","slide":29,"text":"• growing table\n• rehash\n• extendible idea\n• bucket","textPreview":"• growing table | • rehash | • extendible idea | • bucket","textChars":51,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/ru1ovylc","slide":29,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/qts7mtkr","slide":29,"text":"Expansion reduces long collision chains.","textPreview":"Expansion reduces long collision chains.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/1036183e","slide":29,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/0zups32t","slide":29,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/ydkved4f","slide":29,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/zetcnil0","slide":29,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/0f2dgnml","slide":29,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/lgbeps36","slide":29,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/mhkvid4r","slide":29,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/nitwrilc","slide":29,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/832dknmx","slide":29,"text":"VTU 1BCS305 • Module 5 • 29/50","textPreview":"VTU 1BCS305 • Module 5 • 29/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/n5n8tg","slide":29,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/zn3glg","slide":30,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/7ml4b6x0","slide":30,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/8ne5kbel","slide":30,"text":"Dynamic hashing: operations","textPreview":"Dynamic hashing: operations","textChars":27,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/tonmdgf6","slide":30,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/u9wnmlwr","slide":30,"text":"Understand dynamic hashing by tracing the operations it supports.","textPreview":"Understand dynamic hashing by tracing the operations it supports.","textChars":65,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/va54fqxw","slide":30,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/gbe5obeh","slide":30,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/hcnmhgv2","slide":30,"text":"Expansion reduces long collision chains.","textPreview":"Expansion reduces long collision chains.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/idwnqlwn","slide":30,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/3ep4jqd8","slide":30,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/b2p4r25k","slide":30,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/q1g3ixoz","slide":30,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/d47mtcna","slide":30,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/c3ylk76p","slide":30,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/3y54n2p8","slide":30,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/2xw3exon","slide":30,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/p0nmpcne","slide":30,"text":"VTU 1BCS305 • Module 5 • 30/50","textPreview":"VTU 1BCS305 • Module 5 • 30/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/zn3glg","slide":30,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/m7jv7c","slide":31,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/knmxsvyh","slide":31,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/jmdgjqhw","slide":31,"text":"Dynamic hashing: algorithm pattern","textPreview":"Dynamic hashing: algorithm pattern","textChars":34,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/yl4fqlgb","slide":31,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/xkvyhgzq","slide":31,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/wzmxoby5","slide":31,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Expansion reduces long collision chains.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Expansion reduces long collision chains.","textChars":124,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/bytgf6hk","slide":31,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/axkfm1gf","slide":31,"text":"Expansion reduces long collision chains.","textPreview":"Expansion reduces long collision chains.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hgfytkfu","slide":31,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/gv6h0fyp","slide":31,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/mtkjal8v","slide":31,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/nut036pg","slide":31,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/8v21cbq1","slide":31,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/9wbi5g7m","slide":31,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/y5kj618z","slide":31,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/z6t0f69k","slide":31,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/07218bqp","slide":31,"text":"VTU 1BCS305 • Module 5 • 31/50","textPreview":"VTU 1BCS305 • Module 5 • 31/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/m7jv7c","slide":31,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/nfx7pb","slide":32,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/nal0nahw","slide":32,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/obuhgfih","slide":32,"text":"Dynamic hashing: classroom example","textPreview":"Dynamic hashing: classroom example","textChars":34,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/9c3ipkz2","slide":32,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/e5szal0f","slide":32,"text":"A small trace makes dynamic hashing exam-ready.","textPreview":"A small trace makes dynamic hashing exam-ready.","textChars":47,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/z6lgjqh0","slide":32,"text":"• Use terms: growing table, rehash\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: growing table, rehash | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":119,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/07uhcvil","slide":32,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/183il0zq","slide":32,"text":"Expansion reduces long collision chains.","textPreview":"Expansion reduces long collision chains.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/qhsz6l03","slide":32,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/ri1gfqho","slide":32,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/7it0rqp8","slide":32,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/6hkzylon","slide":32,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/tkbit07e","slide":32,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/8j2h0v6t","slide":32,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/vmd0vqp4","slide":32,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/ulkz2loz","slide":32,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/hovix07a","slide":32,"text":"VTU 1BCS305 • Module 5 • 32/50","textPreview":"VTU 1BCS305 • Module 5 • 32/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/nfx7pb","slide":32,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/a5be2t","slide":33,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/d8fmdonm","slide":33,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ql43i9ov","slide":33,"text":"Priority queue: core idea","textPreview":"Priority queue: core idea","textChars":25,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/rmd4be5g","slide":33,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/4jmlgz65","slide":33,"text":"A priority queue removes the item with highest or lowest priority.","textPreview":"A priority queue removes the item with highest or lowest priority.","textChars":66,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/pkvm94nq","slide":33,"text":"• priority\n• delete min\n• delete max\n• heap idea","textPreview":"• priority | • delete min | • delete max | • heap idea","textChars":48,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/2h43epoz","slide":33,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/3id47u5k","slide":33,"text":"Priority order is different from arrival order.","textPreview":"Priority order is different from arrival order.","textChars":47,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/of65s369","slide":33,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/9gzml8nu","slide":33,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/xk3m1gbm","slide":33,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/cjul8ba1","slide":33,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/bil4z6tg","slide":33,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/ahs361sb","slide":33,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/pgjmxwbq","slide":33,"text":"VTU 1BCS305 • Module 5 • 33/50","textPreview":"VTU 1BCS305 • Module 5 • 33/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/a5be2t","slide":33,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/6bnbx3","slide":34,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/dofytkbu","slide":34,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/q14fips3","slide":34,"text":"Priority queue: operations","textPreview":"Priority queue: operations","textChars":26,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/b2dwruto","slide":34,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ozmxgfax","slide":34,"text":"Understand priority queue by tracing the operations it supports.","textPreview":"Understand priority queue by tracing the operations it supports.","textChars":64,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/p0vepkbi","slide":34,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/2x4fe5s7","slide":34,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/3ydwnatc","slide":34,"text":"Priority order is different from arrival order.","textPreview":"Priority order is different from arrival order.","textChars":47,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/gv2xcfu1","slide":34,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/1wvel0bm","slide":34,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/t4fetsvu","slide":34,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/s3md0nu9","slide":34,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/72dwrido","slide":34,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/6h4vyxc3","slide":34,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/5gvupsvi","slide":34,"text":"VTU 1BCS305 • Module 5 • 34/50","textPreview":"VTU 1BCS305 • Module 5 • 34/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/6bnbx3","slide":34,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/d7lqvz","slide":35,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/wb65on61","slide":35,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/baxovipg","slide":35,"text":"Priority queue: algorithm pattern","textPreview":"Priority queue: algorithm pattern","textChars":33,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/aponmdov","slide":35,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/9of6t87a","slide":35,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/on65kn65","slide":35,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Priority order is different from arrival order.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Priority order is different from arrival order.","textChars":131,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/nmx4ripk","slide":35,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/mlonidoz","slide":35,"text":"Priority order is different from arrival order.","textPreview":"Priority order is different from arrival order.","textChars":47,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/1kfmp87e","slide":35,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/0jm5g36t","slide":35,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/2tgje9gv","slide":35,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/3ep0nexg","slide":35,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/4fi1gjyl","slide":35,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/pgripof6","slide":35,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/upgza9gj","slide":35,"text":"VTU 1BCS305 • Module 5 • 35/50","textPreview":"VTU 1BCS305 • Module 5 • 35/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/d7lqvz","slide":35,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/hx38ap","slide":36,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/kbat8zuh","slide":36,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ja1czutc","slide":36,"text":"Priority queue: classroom example","textPreview":"Priority queue: classroom example","textChars":33,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/y9sb6pcr","slide":36,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/x8juxkb6","slide":36,"text":"A small trace makes priority queue exam-ready.","textPreview":"A small trace makes priority queue exam-ready.","textChars":46,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/w7at4ful","slide":36,"text":"• Use terms: priority, delete min\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: priority, delete min | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":118,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/b61cvat0","slide":36,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/a5sb25cf","slide":36,"text":"Priority order is different from arrival order.","textPreview":"Priority order is different from arrival order.","textChars":47,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/94zutkbu","slide":36,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/ojqt0fup","slide":36,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/u1czy187","slide":36,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/v25g7mps","slide":36,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/g3eh0rqd","slide":36,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/h4ny9w7y","slide":36,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/mxczuh8b","slide":36,"text":"VTU 1BCS305 • Module 5 • 36/50","textPreview":"VTU 1BCS305 • Module 5 • 36/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/hx38ap","slide":36,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/klmrwy","slide":37,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/mxgnu907","slide":37,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/9kr65ojy","slide":37,"text":"Double-ended priority queue: core idea","textPreview":"Double-ended priority queue: core idea","textChars":38,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/8ji5wjid","slide":37,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/vm9o7e14","slide":37,"text":"A DEPQ supports both delete-min and delete-max.","textPreview":"A DEPQ supports both delete-min and delete-max.","textChars":47,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/al0ny90j","slide":37,"text":"• min\n• max\n• two-ended access\n• range","textPreview":"• min | • max | • two-ended access | • range","textChars":38,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/hor69oju","slide":37,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/wni50jip","slide":37,"text":"It is useful when extremes are both important.","textPreview":"It is useful when extremes are both important.","textChars":46,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/jq9oby10","slide":37,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/ip0n2t0f","slide":37,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/snq1srql","slide":37,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/toz2lw76","slide":37,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/6l8jqh8v","slide":37,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/7mhkjmp0","slide":37,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/gba1wrqx","slide":37,"text":"VTU 1BCS305 • Module 5 • 37/50","textPreview":"VTU 1BCS305 • Module 5 • 37/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/klmrwy","slide":37,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/g5jw65","slide":38,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/0zyd4bih","slide":38,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/zypcv6hw","slide":38,"text":"Double-ended priority queue: operations","textPreview":"Double-ended priority queue: operations","textChars":39,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/exgv210b","slide":38,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/94ru10zy","slide":38,"text":"Understand double-ended priority queue by tracing the operations it supports.","textPreview":"Understand double-ended priority queue by tracing the operations it supports.","textChars":77,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/o3yd8vid","slide":38,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/n2pczqhs","slide":38,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/m1gv6l0n","slide":38,"text":"It is useful when extremes are both important.","textPreview":"It is useful when extremes are both important.","textChars":46,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/xsre50za","slide":38,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/wridcvip","slide":38,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/2lobq5kn","slide":38,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/3mxcza18","slide":38,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/4n6tsf2t","slide":38,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/pofu10je","slide":38,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/qpobu50z","slide":38,"text":"VTU 1BCS305 • Module 5 • 38/50","textPreview":"VTU 1BCS305 • Module 5 • 38/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/g5jw65","slide":38,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/xeae67","slide":39,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/o3m9gbqd","slide":39,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/32d8n69s","slide":39,"text":"Double-ended priority queue: algorithm pattern","textPreview":"Double-ended priority queue: algorithm pattern","textChars":46,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/214re1s7","slide":39,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/10vqlgrm","slide":39,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/gz29cba1","slide":39,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: It is useful when extremes are both important.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: It is useful when extremes are both important.","textChars":130,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/fyt8j69g","slide":39,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/exkra1sv","slide":39,"text":"It is useful when extremes are both important.","textPreview":"It is useful when extremes are both important.","textChars":46,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/lwfax0rq","slide":39,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/kv69ovq5","slide":39,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/qdkz6dkf","slide":39,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/betgfy10","slide":39,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/cf2h832l","slide":39,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/dgbyh8j6","slide":39,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/2p0z2tkj","slide":39,"text":"VTU 1BCS305 • Module 5 • 39/50","textPreview":"VTU 1BCS305 • Module 5 • 39/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/xeae67","slide":39,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/9py4dt","slide":40,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":13}
+{"kind":"textbox","id":"sh/el4faxoz","slide":40,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/1ove5c7q","slide":40,"text":"Double-ended priority queue: classroom example","textPreview":"Double-ended priority queue: classroom example","textChars":46,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/gnmxc765","slide":40,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ritwzipo","slide":40,"text":"A small trace makes double-ended priority queue exam-ready.","textPreview":"A small trace makes double-ended priority queue exam-ready.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/6hkf6d83","slide":40,"text":"• Use terms: min, max\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: min, max | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":106,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/tkve1s7e","slide":40,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/sj2x8nqt","slide":40,"text":"It is useful when extremes are both important.","textPreview":"It is useful when extremes are both important.","textChars":46,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/bexgbmps","slide":40,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/qdofiho7","slide":40,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/47658r2d","slide":40,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/p8f6hw3y","slide":40,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/254n6hkn","slide":40,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/36xofml8","slide":40,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/g3m5472h","slide":40,"text":"VTU 1BCS305 • Module 5 • 40/50","textPreview":"VTU 1BCS305 • Module 5 • 40/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/9py4dt","slide":40,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/e63aky","slide":41,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/byporexs","slide":41,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/wzi5kjyd","slide":41,"text":"Leftist tree: core idea","textPreview":"Leftist tree: core idea","textChars":23,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/x0r6tofy","slide":41,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/2tgnepgb","slide":41,"text":"Leftist trees support efficient mergeable priority queues.","textPreview":"Leftist trees support efficient mergeable priority queues.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/nuponuxw","slide":41,"text":"• null path length\n• merge\n• heap order\n• priority queue","textPreview":"• null path length | • merge | • heap order | • priority queue","textChars":56,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/ovy5gzy1","slide":41,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/9w76p4fm","slide":41,"text":"Merge is the central operation.","textPreview":"Merge is the central operation.","textChars":31,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/6p0nqtgf","slide":41,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/7qtozyx0","slide":41,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/7e1on6ho","slide":41,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/6ds7u103","slide":41,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/tg36pgze","slide":41,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/8fupwbit","slide":41,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/vil8r6hk","slide":41,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/uhc7y10z","slide":41,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/hk3qtgzq","slide":41,"text":"VTU 1BCS305 • Module 5 • 41/50","textPreview":"VTU 1BCS305 • Module 5 • 41/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/e63aky","slide":41,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/qz26n1","slide":42,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/wbit0fy5","slide":42,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ba9s7uh0","slide":42,"text":"Leftist tree: operations","textPreview":"Leftist tree: operations","textChars":24,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/a90bypgf","slide":42,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/lgbud4z2","slide":42,"text":"Understand leftist tree by tracing the operations it supports.","textPreview":"Understand leftist tree by tracing the operations it supports.","textChars":62,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/kf2t4zyh","slide":42,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/jetcbuhw","slide":42,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/yd0b2pgb","slide":42,"text":"Merge is the central operation.","textPreview":"Merge is the central operation.","textChars":31,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/t4buh4zy","slide":42,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/8j2t8zyd","slide":42,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/ap472lkr","slide":42,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/bqdovqlc","slide":42,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/crmp4b2x","slide":42,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/xsv6xg3i","slide":42,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/yt476lk3","slide":42,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/zuxozql8","slide":42,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/kv6psv2t","slide":42,"text":"VTU 1BCS305 • Module 5 • 42/50","textPreview":"VTU 1BCS305 • Module 5 • 42/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/qz26n1","slide":42,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/pmuadq","slide":43,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/oz2l0bal","slide":43,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ny94rq90","slide":43,"text":"Leftist tree: algorithm pattern","textPreview":"Leftist tree: algorithm pattern","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/2x03ylsf","slide":43,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/xobmx0r2","slide":43,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cn2l4vah","slide":43,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Merge is the central operation.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Merge is the central operation.","textChars":115,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/b2t4vq9w","slide":43,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/a1k32lsb","slide":43,"text":"Merge is the central operation.","textPreview":"Merge is the central operation.","textChars":31,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/lsvm10ry","slide":43,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/krm58vad","slide":43,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/e1g72543","slide":43,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/f2p8bal8","slide":43,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/g3ip4fmt","slide":43,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/14rqdk3e","slide":43,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/2p076p4z","slide":43,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/3q98fulk","slide":43,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/orip8zm5","slide":43,"text":"VTU 1BCS305 • Module 5 • 43/50","textPreview":"VTU 1BCS305 • Module 5 • 43/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/pmuadq","slide":43,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/80ql7d","slide":44,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/c3e9c3ud","slide":44,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/r25sjyds","slide":44,"text":"Leftist tree: classroom example","textPreview":"Leftist tree: classroom example","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/q1wratc7","slide":44,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/1s7ap8vu","slide":44,"text":"A small trace makes leftist tree exam-ready.","textPreview":"A small trace makes leftist tree exam-ready.","textChars":44,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/0retg3u9","slide":44,"text":"• Use terms: null path length, merge\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: null path length, merge | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":121,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/z65snydo","slide":44,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/e5wredc3","slide":44,"text":"Merge is the central operation.","textPreview":"Merge is the central operation.","textChars":31,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/9w7atsvq","slide":44,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[935,196,54,50]}
+{"kind":"textbox","id":"sh/ovytknu5","slide":44,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[835,301,54,50]}
+{"kind":"textbox","id":"sh/upcnixk3","slide":44,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[1035,301,54,50]}
+{"kind":"textbox","id":"sh/vqlob2lo","slide":44,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[785,411,54,50]}
+{"kind":"textbox","id":"sh/gru5k729","slide":44,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[885,411,54,50]}
+{"kind":"textbox","id":"sh/hs36dc3u","slide":44,"text":"F","textPreview":"F","textChars":1,"textLines":1,"bbox":[985,411,54,50]}
+{"kind":"textbox","id":"sh/itcnmhkz","slide":44,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1085,411,54,50]}
+{"kind":"textbox","id":"sh/3ulofmlk","slide":44,"text":"Recursive structure: root with subtrees","textPreview":"Recursive structure: root with subtrees","textChars":39,"textLines":1,"bbox":[755,501,410,36]}
+{"kind":"textbox","id":"sh/4fu5o725","slide":44,"text":"VTU 1BCS305 • Module 5 • 44/50","textPreview":"VTU 1BCS305 • Module 5 • 44/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/80ql7d","slide":44,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/vbsszh","slide":45,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/ah8r25wf","slide":45,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/xkzax0f6","slide":45,"text":"Module 5 summary map","textPreview":"Module 5 summary map","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/wjq94vel","slide":45,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/nexsrqx4","slide":45,"text":"Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":51,"textLines":1,"bbox":[462,300,360,82]}
+{"kind":"textbox","id":"sh/mdorylwj","slide":45,"text":"Graph ADT / graph abstract data type","textPreview":"Graph ADT / graph abstract data type","textChars":36,"textLines":1,"bbox":[100,185,190,58]}
+{"kind":"textbox","id":"sh/9gzat0fu","slide":45,"text":"Graph representation","textPreview":"Graph representation","textChars":20,"textLines":1,"bbox":[380,185,190,58]}
+{"kind":"textbox","id":"sh/of690ve9","slide":45,"text":"Elementary graph operations","textPreview":"Elementary graph operations","textChars":27,"textLines":1,"bbox":[660,185,190,58]}
+{"kind":"textbox","id":"sh/7a1s3ud8","slide":45,"text":"Graph traversal","textPreview":"Graph traversal","textChars":15,"textLines":1,"bbox":[940,185,190,58]}
+{"kind":"textbox","id":"sh/69sbapwn","slide":45,"text":"Hashing introduction","textPreview":"Hashing introduction","textChars":20,"textLines":1,"bbox":[100,430,190,58]}
+{"kind":"textbox","id":"sh/8ry5cv25","slide":45,"text":"Static hashing","textPreview":"Static hashing","textChars":14,"textLines":1,"bbox":[380,430,190,58]}
+{"kind":"textbox","id":"sh/9s7650jq","slide":45,"text":"Dynamic hashing","textPreview":"Dynamic hashing","textChars":15,"textLines":1,"bbox":[660,430,190,58]}
+{"kind":"textbox","id":"sh/mpwnalkz","slide":45,"text":"Priority queue","textPreview":"Priority queue","textChars":14,"textLines":1,"bbox":[940,430,190,58]}
+{"kind":"textbox","id":"sh/nqpo3q1k","slide":45,"text":"Use the map to revise definitions, operations, and one example per structure.","textPreview":"Use the map to revise definitions, operations, and one example per structure.","textChars":77,"textLines":1,"bbox":[192,608,900,36]}
+{"kind":"textbox","id":"sh/0ne58v29","slide":45,"text":"VTU 1BCS305 • Module 5 • 45/50","textPreview":"VTU 1BCS305 • Module 5 • 45/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/vbsszh","slide":45,"text":"[Animation]\nReveal outer topics and ask students for one operation and one boundary case.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/j347jm","slide":46,"title":"Practice","textShapes":21}
+{"kind":"textbox","id":"sh/72xgrat0","slide":46,"text":"Practice","textPreview":"Practice","textChars":8,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/836h0fu5","slide":46,"text":"Module 5 exam-focused questions","textPreview":"Module 5 exam-focused questions","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/94fitkbq","slide":46,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/u5oz2pcb","slide":46,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,158,46,46]}
+{"kind":"textbox","id":"sh/v6h0vatw","slide":46,"text":"Define graph adt / graph abstract data type and explain its representation.","textPreview":"Define graph adt / graph abstract data type and explain its representation.","textChars":75,"textLines":1,"bbox":[164,150,850,54]}
+{"kind":"textbox","id":"sh/w7qh4fuh","slide":46,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,160,110,36]}
+{"kind":"textbox","id":"sh/h8zixkb2","slide":46,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,234,46,46]}
+{"kind":"textbox","id":"sh/i98z6pcn","slide":46,"text":"Write an algorithm for graph representation with boundary cases.","textPreview":"Write an algorithm for graph representation with boundary cases.","textChars":64,"textLines":1,"bbox":[164,226,850,54]}
+{"kind":"textbox","id":"sh/jah0zuts","slide":46,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,236,110,36]}
+{"kind":"textbox","id":"sh/n2tobqd4","slide":46,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,310,46,46]}
+{"kind":"textbox","id":"sh/m1k7ilcj","slide":46,"text":"Trace elementary graph operations using a small example.","textPreview":"Trace elementary graph operations using a small example.","textChars":56,"textLines":1,"bbox":[164,302,850,54]}
+{"kind":"textbox","id":"sh/94bqd0va","slide":46,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,312,110,36]}
+{"kind":"textbox","id":"sh/832pkvup","slide":46,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,386,46,46]}
+{"kind":"textbox","id":"sh/ze9o76ds","slide":46,"text":"Compare two representations used in this module.","textPreview":"Compare two representations used in this module.","textChars":48,"textLines":1,"bbox":[164,378,850,54]}
+{"kind":"textbox","id":"sh/yd07e1cn","slide":46,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,388,110,36]}
+{"kind":"textbox","id":"sh/l0b69gvy","slide":46,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,462,46,46]}
+{"kind":"textbox","id":"sh/0fipgbud","slide":46,"text":"Explain the time complexity of a key operation.","textPreview":"Explain the time complexity of a key operation.","textChars":47,"textLines":1,"bbox":[164,454,850,54]}
+{"kind":"textbox","id":"sh/jad8jadc","slide":46,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,464,110,36]}
+{"kind":"textbox","id":"sh/i947q5cr","slide":46,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,538,46,46]}
+{"kind":"textbox","id":"sh/upori9wz","slide":46,"text":"Write short notes on leftist tree.","textPreview":"Write short notes on leftist tree.","textChars":34,"textLines":1,"bbox":[164,530,850,54]}
+{"kind":"textbox","id":"sh/fqxsbexk","slide":46,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,540,110,36]}
+{"kind":"textbox","id":"sh/grqtkje5","slide":46,"text":"VTU 1BCS305 • Module 5 • 46/50","textPreview":"VTU 1BCS305 • Module 5 • 46/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/j347jm","slide":46,"text":"[Animation]\nReveal questions one by one. Ask students to sketch before answering.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/d9v0fb","slide":47,"title":"Exam quick reference","textShapes":21}
+{"kind":"textbox","id":"sh/18zadwba","slide":47,"text":"Exam quick reference","textPreview":"Exam quick reference","textChars":20,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/e5ob21cj","slide":47,"text":"Module 5 complexity checkpoints","textPreview":"Module 5 complexity checkpoints","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/f6xsb6t4","slide":47,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/obqt8bul","slide":47,"text":"Graph ADT / graph abstract data type","textPreview":"Graph ADT / graph abstract data type","textChars":36,"textLines":1,"bbox":[96,172,330,48]}
+{"kind":"textbox","id":"sh/pczahgb6","slide":47,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,176,270,36]}
+{"kind":"textbox","id":"sh/298b61cv","slide":47,"text":"Representation decides cost","textPreview":"Representation decides cost","textChars":27,"textLines":1,"bbox":[790,176,330,36]}
+{"kind":"textbox","id":"sh/3ahsf6tg","slide":47,"text":"Graph representation","textPreview":"Graph representation","textChars":20,"textLines":1,"bbox":[96,244,330,48]}
+{"kind":"textbox","id":"sh/kfmtwruh","slide":47,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,248,270,36]}
+{"kind":"textbox","id":"sh/5gva5cb2","slide":47,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,248,330,36]}
+{"kind":"textbox","id":"sh/hg72183u","slide":47,"text":"Elementary graph operations","textPreview":"Elementary graph operations","textChars":27,"textLines":1,"bbox":[96,316,330,48]}
+{"kind":"textbox","id":"sh/gfy1832p","slide":47,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,320,270,36]}
+{"kind":"textbox","id":"sh/vepkzil4","slide":47,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,320,330,36]}
+{"kind":"textbox","id":"sh/udwj6d4j","slide":47,"text":"Graph traversal","textPreview":"Graph traversal","textChars":15,"textLines":1,"bbox":[96,388,330,48]}
+{"kind":"textbox","id":"sh/5k725s36","slide":47,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,392,270,36]}
+{"kind":"textbox","id":"sh/4jy1cn2l","slide":47,"text":"Representation decides cost","textPreview":"Representation decides cost","textChars":27,"textLines":1,"bbox":[790,392,330,36]}
+{"kind":"textbox","id":"sh/3ipk3il0","slide":47,"text":"Hashing introduction","textPreview":"Hashing introduction","textChars":20,"textLines":1,"bbox":[96,460,330,48]}
+{"kind":"textbox","id":"sh/ihgjadkf","slide":47,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,464,270,36]}
+{"kind":"textbox","id":"sh/dor29s32","slide":47,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,464,330,36]}
+{"kind":"textbox","id":"sh/cni1gn2h","slide":47,"text":"Static hashing","textPreview":"Static hashing","textChars":14,"textLines":1,"bbox":[96,532,330,48]}
+{"kind":"textbox","id":"sh/crqlcbat","slide":47,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,536,270,36]}
+{"kind":"textbox","id":"sh/xszm5gbe","slide":47,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,536,330,36]}
+{"kind":"textbox","id":"sh/apo3a1sn","slide":47,"text":"VTU 1BCS305 • Module 5 • 47/50","textPreview":"VTU 1BCS305 • Module 5 • 47/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/d9v0fb","slide":47,"text":"[Animation]\nReveal one row at a time; ask students to justify the complexity from representation.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/js2zla","slide":48,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/qp8721cz","slide":48,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/dsjqxwba","slide":48,"text":"Module 5 summary map","textPreview":"Module 5 summary map","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/crap4rup","slide":48,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zu18z6tg","slide":48,"text":"Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":51,"textLines":1,"bbox":[462,300,360,82]}
+{"kind":"textbox","id":"sh/ets761cv","slide":48,"text":"Graph ADT / graph abstract data type","textPreview":"Graph ADT / graph abstract data type","textChars":36,"textLines":1,"bbox":[100,185,190,58]}
+{"kind":"textbox","id":"sh/1wjq1gbm","slide":48,"text":"Graph representation","textPreview":"Graph representation","textChars":20,"textLines":1,"bbox":[380,185,190,58]}
+{"kind":"textbox","id":"sh/0vap8bu1","slide":48,"text":"Elementary graph operations","textPreview":"Elementary graph operations","textChars":27,"textLines":1,"bbox":[660,185,190,58]}
+{"kind":"textbox","id":"sh/vyxon2tc","slide":48,"text":"Graph traversal","textPreview":"Graph traversal","textChars":15,"textLines":1,"bbox":[940,185,190,58]}
+{"kind":"textbox","id":"sh/uxo7uxcr","slide":48,"text":"Hashing introduction","textPreview":"Hashing introduction","textChars":20,"textLines":1,"bbox":[100,430,190,58]}
+{"kind":"textbox","id":"sh/wnqd8zu9","slide":48,"text":"Static hashing","textPreview":"Static hashing","textChars":14,"textLines":1,"bbox":[380,430,190,58]}
+{"kind":"textbox","id":"sh/xozeh4bu","slide":48,"text":"Dynamic hashing","textPreview":"Dynamic hashing","textChars":15,"textLines":1,"bbox":[660,430,190,58]}
+{"kind":"textbox","id":"sh/a18v6pcj","slide":48,"text":"Priority queue","textPreview":"Priority queue","textChars":14,"textLines":1,"bbox":[940,430,190,58]}
+{"kind":"textbox","id":"sh/vmhwfuto","slide":48,"text":"Use the map to revise definitions, operations, and one example per structure.","textPreview":"Use the map to revise definitions, operations, and one example per structure.","textChars":77,"textLines":1,"bbox":[192,608,900,36]}
+{"kind":"textbox","id":"sh/kradcjul","slide":48,"text":"VTU 1BCS305 • Module 5 • 48/50","textPreview":"VTU 1BCS305 • Module 5 • 48/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/js2zla","slide":48,"text":"[Animation]\nReveal outer topics and ask students for one operation and one boundary case.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/zznjpa","slide":49,"title":"Practice","textShapes":21}
+{"kind":"textbox","id":"sh/na1gripk","slide":49,"text":"Practice","textPreview":"Practice","textChars":8,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/obaxkn65","slide":49,"text":"Module 5 exam-focused questions","textPreview":"Module 5 exam-focused questions","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/9cjyts7q","slide":49,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/adsfmxob","slide":49,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,158,46,46]}
+{"kind":"textbox","id":"sh/be1gv2pg","slide":49,"text":"Define graph adt / graph abstract data type and explain its representation.","textPreview":"Define graph adt / graph abstract data type and explain its representation.","textChars":75,"textLines":1,"bbox":[164,150,850,54]}
+{"kind":"textbox","id":"sh/wfuxo761","slide":49,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,160,110,36]}
+{"kind":"textbox","id":"sh/xg3yxc7m","slide":49,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,234,46,46]}
+{"kind":"textbox","id":"sh/yhcfqho7","slide":49,"text":"Write an algorithm for graph representation with boundary cases.","textPreview":"Write an algorithm for graph representation with boundary cases.","textChars":64,"textLines":1,"bbox":[164,226,850,54]}
+{"kind":"textbox","id":"sh/jilgz2ps","slide":49,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,236,110,36]}
+{"kind":"textbox","id":"sh/3ahw36tk","slide":49,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,310,46,46]}
+{"kind":"textbox","id":"sh/298vu1cz","slide":49,"text":"Trace elementary graph operations using a small example.","textPreview":"Trace elementary graph operations using a small example.","textChars":56,"textLines":1,"bbox":[164,302,850,54]}
+{"kind":"textbox","id":"sh/pcze5gba","slide":49,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,312,110,36]}
+{"kind":"textbox","id":"sh/obqdwbup","slide":49,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,386,46,46]}
+{"kind":"textbox","id":"sh/f6xwz6t8","slide":49,"text":"Compare two representations used in this module.","textPreview":"Compare two representations used in this module.","textChars":48,"textLines":1,"bbox":[164,378,850,54]}
+{"kind":"textbox","id":"sh/e5ovq1cn","slide":49,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,388,110,36]}
+{"kind":"textbox","id":"sh/18ze1wbe","slide":49,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,462,46,46]}
+{"kind":"textbox","id":"sh/g76dsrut","slide":49,"text":"Explain the time complexity of a key operation.","textPreview":"Explain the time complexity of a key operation.","textChars":47,"textLines":1,"bbox":[164,454,850,54]}
+{"kind":"textbox","id":"sh/z21wbqtc","slide":49,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,464,110,36]}
+{"kind":"textbox","id":"sh/y1sf2lc7","slide":49,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,538,46,46]}
+{"kind":"textbox","id":"sh/uxczapwf","slide":49,"text":"Write short notes on leftist tree.","textPreview":"Write short notes on leftist tree.","textChars":34,"textLines":1,"bbox":[164,530,850,54]}
+{"kind":"textbox","id":"sh/vylg3udk","slide":49,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,540,110,36]}
+{"kind":"textbox","id":"sh/wzehcze5","slide":49,"text":"VTU 1BCS305 • Module 5 • 49/50","textPreview":"VTU 1BCS305 • Module 5 • 49/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/zznjpa","slide":49,"text":"[Animation]\nReveal questions one by one. Ask students to sketch before answering.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/b888e3","slide":50,"title":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textShapes":15}
+{"kind":"textbox","id":"sh/ojuxo361","slide":50,"text":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textPreview":"Module 5 / Graphs, Hashing, Priority Queues, and Leftist Trees","textChars":62,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/nilgfy5g","slide":50,"text":"Dynamic hashing: classroom example","textPreview":"Dynamic hashing: classroom example","textChars":34,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/2hsfmdob","slide":50,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/1gjyd8nq","slide":50,"text":"A small trace makes dynamic hashing exam-ready.","textPreview":"A small trace makes dynamic hashing exam-ready.","textChars":47,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/0faxk365","slide":50,"text":"• Use terms: growing table, rehash\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: growing table, rehash | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":119,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/fu1gby5k","slide":50,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/etsfitoz","slide":50,"text":"Expansion reduces long collision chains.","textPreview":"Expansion reduces long collision chains.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/dsje9one","slide":50,"text":"0\n","textPreview":"0 |","textChars":2,"textLines":2,"bbox":[775,201,120,46]}
+{"kind":"textbox","id":"sh/sraxgj6t","slide":50,"text":"1\n","textPreview":"1 |","textChars":2,"textLines":2,"bbox":[775,255,120,46]}
+{"kind":"textbox","id":"sh/6honet8z","slide":50,"text":"2\nK","textPreview":"2 | K","textChars":3,"textLines":2,"bbox":[775,309,120,46]}
+{"kind":"textbox","id":"sh/7ihony9k","slide":50,"text":"3\n","textPreview":"3 |","textChars":2,"textLines":2,"bbox":[775,363,120,46]}
+{"kind":"textbox","id":"sh/sjq5g3qp","slide":50,"text":"4\n","textPreview":"4 |","textChars":2,"textLines":2,"bbox":[775,417,120,46]}
+{"kind":"textbox","id":"sh/t4z6pora","slide":50,"text":"5\n","textPreview":"5 |","textChars":2,"textLines":2,"bbox":[775,471,120,46]}
+{"kind":"textbox","id":"sh/idona9sn","slide":50,"text":"H(K)=K mod m","textPreview":"H(K)=K mod m","textChars":12,"textLines":1,"bbox":[965,291,180,60]}
+{"kind":"textbox","id":"sh/jex4je98","slide":50,"text":"Hash function chooses a table slot","textPreview":"Hash function chooses a table slot","textChars":34,"textLines":1,"bbox":[737,536,430,36]}
+{"kind":"textbox","id":"sh/kf65cjqt","slide":50,"text":"VTU 1BCS305 • Module 5 • 50/50","textPreview":"VTU 1BCS305 • Module 5 • 50/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/b888e3","slide":50,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}

@@ -1,0 +1,1029 @@
+{"kind":"deck","id":"pr/9cxmyl","name":"Deck"}
+{"kind":"layout","layoutId":"2baf5395-3b02-40eb-9db7-9bc2b556ca4b","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"d176a251-3c6c-41ba-b477-dfed960a041b","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/w6stj1","slide":1,"title":"Transaction Processing","textShapes":8}
+{"kind":"shape","id":"sh/vy50ja9c","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/gze1cvqx","slide":1,"text":"Transaction Processing","textPreview":"Transaction Processing","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/h0nil0ri","slide":1,"text":"Module 4 explains correctness when many database operations run and failures happen.","textPreview":"Module 4 explains correctness when many database operations run and failures happen.","textChars":84,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/i1wje583","slide":1,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/3250na9o","slide":1,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/4ny1gfqt","slide":1,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/5o7ipkre","slide":1,"text":"Opening","textPreview":"Opening","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/qpgjip8z","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/rqp0ru9k","slide":1,"text":"DBMS\nModule 4","textPreview":"DBMS | Module 4","textChars":13,"textLines":2,"bbox":[78,184,640,175]}
+{"kind":"textbox","id":"sh/f2d4nyx8","slide":1,"text":"Transactions • Concurrency need • Recovery • Logs • ACID • Schedules • Serializability","textPreview":"Transactions • Concurrency need • Recovery • Logs • ACID • Schedules • Serializability","textChars":86,"textLines":1,"bbox":[82,388,700,78]}
+{"kind":"shape","id":"sh/e14nutgn","slide":1,"bbox":[790,134,330,330]}
+{"kind":"shape","id":"sh/14f6pofe","slide":1,"bbox":[875,220,160,160]}
+{"kind":"textbox","id":"sh/0365w3yt","slide":1,"text":"ACID\nLOG\nTXN","textPreview":"ACID | LOG | TXN","textChars":12,"textLines":3,"bbox":[814,238,280,125]}
+{"kind":"notes","id":"nt/w6stj1","slide":1,"text":"What to say: Open with online banking: hundreds of users update accounts while crashes can happen.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/vxye0w","slide":2,"title":"Module 4 learning path","textShapes":17}
+{"kind":"shape","id":"sh/5k3mp0r6","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ihs3ul8f","slide":2,"text":"Module 4 learning path","textPreview":"Module 4 learning path","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/3il4nq90","slide":2,"text":"Use the supplied notes as the checklist.","textPreview":"Use the supplied notes as the checklist.","textChars":40,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/s7ul0fqh","slide":2,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/d83mt072","slide":2,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/qlc3y58b","slide":2,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/r6l4rapw","slide":2,"text":"Opening","textPreview":"Opening","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/8balobqd","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/tcj2hgry","slide":2,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/90z2x8ba","slide":2,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/8z6143up","slide":2,"text":"Explain single-user and multiuser transaction processing","textPreview":"Explain single-user and multiuser transaction processing","textChars":56,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/nyxkvyt4","slide":2,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/mdoj2tcz","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/x4z218bm","slide":2,"text":"Explain database items, read/write operations and buffers","textPreview":"Explain database items, read/write operations and buffers","textChars":57,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/w3q183u1","slide":2,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/v2hkzitg","slide":2,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/a18j6dcv","slide":2,"text":"Explain lost update, dirty read, incorrect summary and unrepeatable read","textPreview":"Explain lost update, dirty read, incorrect summary and unrepeatable read","textChars":72,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/58j25sbi","slide":2,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/47a1cnux","slide":2,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/onidovml","slide":2,"text":"Explain why recovery is needed and types of failures","textPreview":"Explain why recovery is needed and types of failures","textChars":52,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/pobux0nq","slide":2,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/2l0vml4f","slide":2,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/3m9cvq50","slide":2,"text":"Explain transaction states, commit point, system log and buffer replacement","textPreview":"Explain transaction states, commit point, system log and buffer replacement","textChars":75,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"shape","id":"sh/cr2dsvmh","slide":2,"bbox":[92,453,28,28]}
+{"kind":"textbox","id":"sh/dcbu10n2","slide":2,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,456,28,18]}
+{"kind":"textbox","id":"sh/qpkvql4b","slide":2,"text":"Explain ACID, recoverability, serializability and SQL transaction support","textPreview":"Explain ACID, recoverability, serializability and SQL transaction support","textChars":73,"textLines":1,"bbox":[136,449,996,42]}
+{"kind":"notes","id":"nt/vxye0w","slide":2,"text":"What to say: Preview correctness under concurrency and failure.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/an5of5","slide":3,"title":"A transaction is a logical unit of work","textShapes":12}
+{"kind":"shape","id":"sh/onu18bqx","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/nmlkf69c","slide":3,"text":"A transaction is a logical unit of work","textPreview":"A transaction is a logical unit of work","textChars":39,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/mlcj618r","slide":3,"text":"Define transaction.","textPreview":"Define transaction.","textChars":19,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/xcn2lgre","slide":3,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/wbelcvqt","slide":3,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ba5kjq98","slide":3,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/a9wjal8n","slide":3,"text":"Transaction Basics","textPreview":"Transaction Basics","textChars":18,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/lg72p0ra","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/kfylgvq5","slide":3,"text":"Transaction","textPreview":"Transaction","textChars":11,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/y1kjexof","slide":3,"text":"A transaction is an executing program that performs database reads and writes as one logical unit that should either complete fully or have no effect.","textPreview":"A transaction is an executing program that performs database reads and writes as one logical unit that should either complete fully or ha...","textChars":150,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/z2tk7250","slide":3,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/k321g7ml","slide":3,"text":"Read","textPreview":"Read","textChars":4,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/l4b29cn6","slide":3,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/m5kjih4r","slide":3,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/76tkbm5w","slide":3,"text":"Write","textPreview":"Write","textChars":5,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/872lkrmh","slide":3,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/98v2dcn2","slide":3,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/290j6do7","slide":3,"text":"Logical unit","textPreview":"Logical unit","textChars":12,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/na9kzi5s","slide":3,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/re5g7elk","slide":3,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/qdwze94z","slide":3,"text":"Commit","textPreview":"Commit","textChars":6,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/dgny9o3q","slide":3,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/sfehgjm5","slide":3,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/3q5g3elo","slide":3,"text":"Rollback","textPreview":"Rollback","textChars":8,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/an5of5","slide":3,"text":"What to say: Use transfer money from A to B as the example.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/1qgitc","slide":4,"title":"Single-user vs multiuser systems","textShapes":23}
+{"kind":"shape","id":"sh/bitgr6tw","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/wj2x0buh","slide":4,"text":"Single-user vs multiuser systems","textPreview":"Single-user vs multiuser systems","textChars":32,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/xkbytgb2","slide":4,"text":"Compare execution settings.","textPreview":"Compare execution settings.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/ilkz21sn","slide":4,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/jmtgv6t8","slide":4,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/knmh4bat","slide":4,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/58vyxgbe","slide":4,"text":"Transaction Basics","textPreview":"Transaction Basics","textChars":18,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/ep0fqhcj","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/zq9gjmto","slide":4,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/7qh03m90","slide":4,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/6p8juh8f","slide":4,"text":"Single-user","textPreview":"Single-user","textChars":11,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/tcji5wr6","slide":4,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/8ra1wrql","slide":4,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/jmh0z29o","slide":4,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/yl8zqh8j","slide":4,"text":"Multiuser","textPreview":"Multiuser","textChars":9,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/lozi1cru","slide":4,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/knqhs7q9","slide":4,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/bix0v29s","slide":4,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/ahozmx87","slide":4,"text":"One user at a time","textPreview":"One user at a time","textChars":18,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/etojexsz","slide":4,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/zex072tk","slide":4,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/0f61g7a5","slide":4,"text":"No interleaved transactions","textPreview":"No interleaved transactions","textChars":27,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/1gf29sbq","slide":4,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/mhojixsb","slide":4,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/nixkb2tw","slide":4,"text":"Simpler correctness","textPreview":"Simpler correctness","textChars":19,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/oj61k7ah","slide":4,"bbox":[110,407,28,28]}
+{"kind":"textbox","id":"sh/9kz2dcbm","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[110,410,28,18]}
+{"kind":"textbox","id":"sh/al8jmhs7","slide":4,"text":"Limited throughput","textPreview":"Limited throughput","textChars":18,"textLines":1,"bbox":[154,403,396,42]}
+{"kind":"shape","id":"sh/bmhkfmts","slide":4,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/lgjm5gvu","slide":4,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/kfalcbup","slide":4,"text":"Many users concurrently","textPreview":"Many users concurrently","textChars":23,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/je1436d4","slide":4,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/yds3a1cj","slide":4,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/t43m9gv6","slide":4,"text":"Interleaved operations","textPreview":"Interleaved operations","textChars":22,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/8ja5gvul","slide":4,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/7i147qd0","slide":4,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/6hs3elcf","slide":4,"text":"Needs concurrency control","textPreview":"Needs concurrency control","textChars":25,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"shape","id":"sh/h83md0v2","slide":4,"bbox":[718,407,28,28]}
+{"kind":"textbox","id":"sh/g7u5kvuh","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[718,410,28,18]}
+{"kind":"textbox","id":"sh/c3ypczep","slide":4,"text":"Higher availability and response needs","textPreview":"Higher availability and response needs","textChars":38,"textLines":1,"bbox":[762,403,396,42]}
+{"kind":"notes","id":"nt/1qgitc","slide":4,"text":"What to say: Explain most commercial DBMS are multiuser.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/px4p8d","slide":5,"title":"Database items and buffers","textShapes":10}
+{"kind":"shape","id":"sh/ux8vylor","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/1kjut072","slide":5,"text":"Database items and buffers","textPreview":"Database items and buffers","textChars":26,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/gjad0v6x","slide":5,"text":"Show data movement.","textPreview":"Show data movement.","textChars":19,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/3m1cvqp8","slide":5,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/2lsv2lon","slide":5,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/pojux07e","slide":5,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/onad4v6t","slide":5,"text":"Transaction Basics","textPreview":"Transaction Basics","textChars":18,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/bq1czapk","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/qpsv65oz","slide":5,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/ov2po3e9","slide":5,"text":"Disk block","textPreview":"Disk block","textChars":10,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/pwbqx8fu","slide":5,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/29k7mtw3","slide":5,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/nat8vyxo","slide":5,"text":"DBMS buffer","textPreview":"DBMS buffer","textChars":11,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/czmps3e5","slide":5,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/x0vq18vq","slide":5,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/ax47qtwf","slide":5,"text":"Program variable","textPreview":"Program variable","textChars":16,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/byd8zyd0","slide":5,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/k3mpwneh","slide":5,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/l4vq5sv2","slide":5,"text":"Transaction operation","textPreview":"Transaction operation","textChars":21,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/tkbqp8n6","slide":5,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/8jipgn6l","slide":5,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/7i9oni50","slide":5,"text":"Write back to disk","textPreview":"Write back to disk","textChars":18,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/px4p8d","slide":5,"text":"What to say: Explain DBMS does not always write immediately to disk.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/fucjvk","slide":6,"title":"Read and write item operations","textShapes":13}
+{"kind":"shape","id":"sh/belwjudg","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/wzuxcze1","slide":6,"text":"Read and write item operations","textPreview":"Read and write item operations","textChars":30,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/x03elkvm","slide":6,"text":"Cover operation mechanics.","textPreview":"Cover operation mechanics.","textChars":26,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/m9sf65wz","slide":6,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/na1wfadk","slide":6,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/obux8fe5","slide":6,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/9c3ehkvq","slide":6,"text":"Transaction Basics","textPreview":"Transaction Basics","textChars":18,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/65wfi9w3","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/765wredo","slide":6,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/361s36hw","slide":6,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/i5sbu1gb","slide":6,"text":"read_item(X)","textPreview":"read_item(X)","textChars":12,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/58ja5wz2","slide":6,"text":"Find disk block, copy into buffer, copy item X into program variable.","textPreview":"Find disk block, copy into buffer, copy item X into program variable.","textChars":69,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/47atwbyh","slide":6,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/rals76hs","slide":6,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/q9sby1gn","slide":6,"text":"write_item(X)","textPreview":"write_item(X)","textChars":13,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/dc3a9gfy","slide":6,"text":"Find block, copy to buffer, copy variable value into buffer, later write block to disk.","textPreview":"Find block, copy to buffer, copy variable value into buffer, later write block to disk.","textChars":87,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/sbut0byd","slide":6,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/felsbqx4","slide":6,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/edcb2lgj","slide":6,"text":"Buffer","textPreview":"Buffer","textChars":6,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/a5gnq943","slide":6,"text":"Main-memory area where DBMS works on disk blocks.","textPreview":"Main-memory area where DBMS works on disk blocks.","textChars":49,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/b6p4je5o","slide":6,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/w7i5sjm9","slide":6,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/x8rmlo3e","slide":6,"text":"Deferred disk write","textPreview":"Deferred disk write","textChars":19,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/mhgnm94r","slide":6,"text":"Updated buffer may reach disk immediately or later.","textPreview":"Updated buffer may reach disk immediately or later.","textChars":51,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/fucjvk","slide":6,"text":"What to say: Point out buffer behavior affects recovery.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/3p3vpw","slide":7,"title":"Why concurrency control is needed","textShapes":18}
+{"kind":"shape","id":"sh/f6l4feh0","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/g7u58jyl","slide":7,"text":"Why concurrency control is needed","textPreview":"Why concurrency control is needed","textChars":33,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/183mh4z6","slide":7,"text":"Introduce concurrency problems.","textPreview":"Introduce concurrency problems.","textChars":31,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/6hsn2pgj","slide":7,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/r214buh4","slide":7,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/s3u54zyp","slide":7,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/t43md4za","slide":7,"text":"Concurrency Need","textPreview":"Concurrency Need","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/qxwnetgn","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/by54nyh8","slide":7,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/zyhsj25s","slide":7,"text":"Problems","textPreview":"Problems","textChars":8,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/ydoraxo7","slide":7,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/l0zalcny","slide":7,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/kzq9c76d","slide":7,"text":"Lost update","textPreview":"Lost update","textChars":11,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/72hsn254","slide":7,"text":"One update overwrites another.","textPreview":"One update overwrites another.","textChars":30,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/m18rexoj","slide":7,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/94zapcnu","slide":7,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/83q9g76p","slide":7,"text":"Dirty read","textPreview":"Dirty read","textChars":10,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/v61srm50","slide":7,"text":"Read uncommitted temporary value.","textPreview":"Read uncommitted temporary value.","textChars":33,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/u5srihof","slide":7,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/61cvql8n","slide":7,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/r2lcjqp8","slide":7,"text":"Incorrect summary","textPreview":"Incorrect summary","textChars":17,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/snudsvqt","slide":7,"text":"Aggregate reads mixed old/new values.","textPreview":"Aggregate reads mixed old/new values.","textChars":37,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/tonulg7e","slide":7,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/ixcvm18r","slide":7,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/jylcf6pc","slide":7,"text":"Unrepeatable read","textPreview":"Unrepeatable read","textChars":17,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/4zudobqx","slide":7,"text":"Same read gives different result.","textPreview":"Same read gives different result.","textChars":33,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/503uhg72","slide":7,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/2twvy5ov","slide":7,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/nu5wrapg","slide":7,"text":"Isolation","textPreview":"Isolation","textChars":9,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/xoryh4ri","slide":7,"text":"Transactions should not interfere.","textPreview":"Transactions should not interfere.","textChars":34,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/cnixozax","slide":7,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/bmpgfu9s","slide":7,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/algfmps7","slide":7,"text":"Consistency","textPreview":"Consistency","textChars":11,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/pk7ydkrm","slide":7,"text":"Database rules must hold.","textPreview":"Database rules must hold.","textChars":25,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/3p3vpw","slide":7,"text":"What to say: Explain all problems come from uncontrolled interleaving.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/10bzwe","slide":8,"title":"Lost update problem","textShapes":10}
+{"kind":"shape","id":"sh/h43y507e","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/uhszu5on","slide":8,"text":"Lost update problem","textPreview":"Lost update problem","textChars":19,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/v21g3qp8","slide":8,"text":"Explain overwritten update.","textPreview":"Explain overwritten update.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/47uh0f6p","slide":8,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/583i9k7a","slide":8,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/i5czy5oz","slide":8,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/36lg7ap4","slide":8,"text":"Concurrency Need","textPreview":"Concurrency Need","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/sbeh4f61","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/dcnidk7m","slide":8,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/p8v2xcfi","slide":8,"text":"T1 reads X","textPreview":"T1 reads X","textChars":10,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/o72lo7ex","slide":8,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/n6tkv2xc","slide":8,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/25k3mxwr","slide":8,"text":"T2 reads X","textPreview":"T2 reads X","textChars":10,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/xcvm1cfe","slide":8,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/cbmlsret","slide":8,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/bad4zmx8","slide":8,"text":"T1 writes X","textPreview":"T1 writes X","textChars":11,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/a943qhw3","slide":8,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/dgb2psfa","slide":8,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/sfilgnyp","slide":8,"text":"T2 writes X","textPreview":"T2 writes X","textChars":11,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/4zmlwn6l","slide":8,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/5kvm5sn6","slide":8,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/ix43udof","slide":8,"text":"T1 update lost","textPreview":"T1 update lost","textChars":14,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/10bzwe","slide":8,"text":"What to say: Use two users withdrawing or updating same seat count.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/zogmi4","slide":9,"title":"Temporary update or dirty read","textShapes":10}
+{"kind":"shape","id":"sh/g7u9gnyt","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/f6l8nix8","slide":9,"text":"Temporary update or dirty read","textPreview":"Temporary update or dirty read","textChars":30,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/e5credgn","slide":9,"text":"Explain uncommitted read.","textPreview":"Explain uncommitted read.","textChars":25,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/pc3atsfa","slide":9,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/obu9knyp","slide":9,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/3al8r2xk","slide":9,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/29crixgz","slide":9,"text":"Concurrency Need","textPreview":"Concurrency Need","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/d0naxcfm","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/cze9o7y1","slide":9,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/2987ahcr","slide":9,"text":"T1 writes X","textPreview":"T1 writes X","textChars":11,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/3ah83mtc","slide":9,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/obapcrux","slide":9,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/pcjq5wb2","slide":9,"text":"T2 reads X","textPreview":"T2 reads X","textChars":10,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/qds7ehcn","slide":9,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/be187mt8","slide":9,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/cfa9grut","slide":9,"text":"T1 aborts","textPreview":"T1 aborts","textChars":9,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/dgjq9wbe","slide":9,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/6ho72xcj","slide":9,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/rix8v2t4","slide":9,"text":"T2 used bad value","textPreview":"T2 used bad value","textChars":17,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/vmd43y9w","slide":9,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/ul4natsb","slide":9,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/hovm58r2","slide":9,"text":"Recovery becomes hard","textPreview":"Recovery becomes hard","textChars":21,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/zogmi4","slide":9,"text":"What to say: Explain dirty data should not influence committed transactions.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/xswybp","slide":10,"title":"Incorrect summary problem","textShapes":10}
+{"kind":"shape","id":"sh/7ehcnmto","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/sfqtgru9","slide":10,"text":"Incorrect summary problem","textPreview":"Incorrect summary problem","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/tgzupcbu","slide":10,"text":"Explain aggregate inconsistency.","textPreview":"Explain aggregate inconsistency.","textChars":32,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/ipobaxc7","slide":10,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/jqxcj2ts","slide":10,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/kr6tc7ud","slide":10,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/5szulcbi","slide":10,"text":"Concurrency Need","textPreview":"Concurrency Need","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/alob6xcv","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/vmxcf2dg","slide":10,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/bylojyhg","slide":10,"text":"T1 computes total","textPreview":"T1 computes total","textChars":17,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/axc7qtgv","slide":10,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/x0n6lozm","slide":10,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/wzeps3y1","slide":10,"text":"T2 updates items","textPreview":"T2 updates items","textChars":16,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/jm5onyhc","slide":10,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/y1w7utg7","slide":10,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/lonqp8zi","slide":10,"text":"T1 reads mixed values","textPreview":"T1 reads mixed values","textChars":21,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/knepw3yx","slide":10,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/z61obeh8","slide":10,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/e5s7i90n","slide":10,"text":"Total is inconsistent","textPreview":"Total is inconsistent","textChars":21,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/2l0rqh0b","slide":10,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/3m9sjm1w","slide":10,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/4ni9s7ih","slide":10,"text":"Report becomes wrong","textPreview":"Report becomes wrong","textChars":20,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/xswybp","slide":10,"text":"What to say: Use bank balance total while transfers occur.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/k77vu5","slide":11,"title":"Unrepeatable read problem","textShapes":10}
+{"kind":"shape","id":"sh/tknux0nu","slide":11,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/6hcb25o3","slide":11,"text":"Unrepeatable read problem","textPreview":"Unrepeatable read problem","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ri5cva5o","slide":11,"text":"Explain changed reread.","textPreview":"Explain changed reread.","textChars":23,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/gned8f65","slide":11,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/1onu1knq","slide":11,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/elwb65oz","slide":11,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/fm5cza5k","slide":11,"text":"Concurrency Need","textPreview":"Concurrency Need","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/obydcz6h","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/pc7u54nm","slide":11,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/9oj2tk7u","slide":11,"text":"T1 reads X","textPreview":"T1 reads X","textChars":10,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/8na10f69","slide":11,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/7m1krapo","slide":11,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/mlsjy5o3","slide":11,"text":"T2 updates X","textPreview":"T2 updates X","textChars":12,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/hsj2xk7q","slide":11,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/wra14f6l","slide":11,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/vq1kvap0","slide":11,"text":"T2 commits","textPreview":"T2 commits","textChars":10,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/upsj25of","slide":11,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/xwz2lg7m","slide":11,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/cvq1sv61","slide":11,"text":"T1 reads X again","textPreview":"T1 reads X again","textChars":16,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/ozu18vex","slide":11,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/p032h0fi","slide":11,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/2xsj6lwr","slide":11,"text":"Different value appears","textPreview":"Different value appears","textChars":23,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/k77vu5","slide":11,"text":"What to say: Connect to SQL isolation levels later.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/p6uk5k","slide":12,"title":"Why recovery is needed","textShapes":13}
+{"kind":"shape","id":"sh/cjupcvy9","slide":12,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/bilo3qh4","slide":12,"text":"Why recovery is needed","textPreview":"Why recovery is needed","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/qhc7algj","slide":12,"text":"Define recovery goal.","textPreview":"Define recovery goal.","textChars":21,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/pgj61gzy","slide":12,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ofap8bid","slide":12,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/3u1ozqhs","slide":12,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/2ts76l07","slide":12,"text":"Recovery Need","textPreview":"Recovery Need","textChars":13,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/9cnqdkz2","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/8bepkfyh","slide":12,"text":"Recovery","textPreview":"Recovery","textChars":8,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/e1kb2hcz","slide":12,"text":"Recovery restores the database to a correct state after transaction, system, disk or physical failures.","textPreview":"Recovery restores the database to a correct state after transaction, system, disk or physical failures.","textChars":103,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/f2tcvmtk","slide":12,"bbox":[96,472,141.67,96]}
+{"kind":"textbox","id":"sh/032tora5","slide":12,"text":"Failure","textPreview":"Failure","textChars":7,"textLines":1,"bbox":[108,491,117.67,58]}
+{"kind":"shape","id":"sh/1obuxwba","slide":12,"bbox":[245.67,504,26,30]}
+{"kind":"shape","id":"sh/qx0byhcn","slide":12,"bbox":[279.67,472,141.67,96]}
+{"kind":"textbox","id":"sh/ry9srmt8","slide":12,"text":"Rollback","textPreview":"Rollback","textChars":8,"textLines":1,"bbox":[291.67,491,117.67,58]}
+{"kind":"shape","id":"sh/sz2t0rut","slide":12,"bbox":[429.33,504,26,30]}
+{"kind":"shape","id":"sh/d0batcbe","slide":12,"bbox":[463.33,472,141.67,96]}
+{"kind":"textbox","id":"sh/at4bu1s7","slide":12,"text":"Redo","textPreview":"Redo","textChars":4,"textLines":1,"bbox":[475.33,491,117.67,58]}
+{"kind":"shape","id":"sh/budc36ts","slide":12,"bbox":[613,504,26,30]}
+{"kind":"shape","id":"sh/7e58vy94","slide":12,"bbox":[647,472,141.67,96]}
+{"kind":"textbox","id":"sh/6dw7mtsj","slide":12,"text":"Undo","textPreview":"Undo","textChars":4,"textLines":1,"bbox":[659,491,117.67,58]}
+{"kind":"shape","id":"sh/t07qx8ru","slide":12,"bbox":[796.67,504,26,30]}
+{"kind":"shape","id":"sh/8ze9o3ap","slide":12,"bbox":[830.67,472,141.67,96]}
+{"kind":"textbox","id":"sh/v2p8zi90","slide":12,"text":"Commit","textPreview":"Commit","textChars":6,"textLines":1,"bbox":[842.67,491,117.67,58]}
+{"kind":"shape","id":"sh/u1grqdsf","slide":12,"bbox":[980.33,504,26,30]}
+{"kind":"shape","id":"sh/h47q18r6","slide":12,"bbox":[1014.33,472,141.67,96]}
+{"kind":"textbox","id":"sh/g3y9snal","slide":12,"text":"Durability","textPreview":"Durability","textChars":10,"textLines":1,"bbox":[1026.33,491,117.67,58]}
+{"kind":"notes","id":"nt/p6uk5k","slide":12,"text":"What to say: Explain DBMS must know what completed and what did not.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/jp8zwy","slide":13,"title":"Types of failures","textShapes":13}
+{"kind":"shape","id":"sh/u94zqx07","slide":13,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/hcvi1sjy","slide":13,"text":"Types of failures","textPreview":"Types of failures","textChars":17,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/gbmhs7id","slide":13,"text":"Cover failure list.","textPreview":"Cover failure list.","textChars":19,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/3ed0321o","slide":13,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/2d4jux0j","slide":13,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/pgfi5czu","slide":13,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/4f61w7i9","slide":13,"text":"Recovery Need","textPreview":"Recovery Need","textChars":13,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/rix07mh0","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/qhojyh0f","slide":13,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/ozm58neh","slide":13,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/90vmhsf2","slide":13,"text":"System crash","textPreview":"System crash","textChars":12,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/mx4n6dwr","slide":13,"text":"Computer failure loses volatile memory.","textPreview":"Computer failure loses volatile memory.","textChars":39,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/nyd4fixc","slide":13,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/w3m5c7et","slide":13,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/xofmlsfe","slide":13,"text":"Transaction error","textPreview":"Transaction error","textChars":17,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/a14naxwn","slide":13,"text":"Logical or system error prevents completion.","textPreview":"Logical or system error prevents completion.","textChars":44,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/v2d4j2x8","slide":13,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/kr65g7ep","slide":13,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/5sfmpcva","slide":13,"text":"Local exception","textPreview":"Local exception","textChars":15,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/t8bm9cne","slide":13,"text":"Bad data, missing input or detected condition.","textPreview":"Bad data, missing input or detected condition.","textChars":46,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/sn25076t","slide":13,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/rmt4725o","slide":13,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/6lk3yxo3","slide":13,"text":"Disk / catastrophe","textPreview":"Disk / catastrophe","textChars":18,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/1cvmdcnq","slide":13,"text":"Storage failure or physical problem damages data.","textPreview":"Storage failure or physical problem damages data.","textChars":49,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/jp8zwy","slide":13,"text":"What to say: Mention concurrency control can also abort transactions.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/jvsvs0","slide":14,"title":"Transaction states","textShapes":10}
+{"kind":"shape","id":"sh/c7axs361","slide":14,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/b61wzypg","slide":14,"text":"Transaction states","textPreview":"Transaction states","textChars":18,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ql8fqtov","slide":14,"text":"Show state flow.","textPreview":"Show state flow.","textChars":16,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/lcje587i","slide":14,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/0baxw36x","slide":14,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/za1w3ypc","slide":14,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/y9sfuto7","slide":14,"text":"Transaction States","textPreview":"Transaction States","textChars":18,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/hgzeto7e","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/gfqdkjqt","slide":14,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/elsr6x0r","slide":14,"text":"Active","textPreview":"Active","textChars":6,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/z618z21c","slide":14,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/07a987ix","slide":14,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/18jq1cji","slide":14,"text":"Partially committed","textPreview":"Partially committed","textChars":19,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/m9crah03","slide":14,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/nals3m1o","slide":14,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/8bu9cri9","slide":14,"text":"Committed","textPreview":"Committed","textChars":9,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/9c3a5wju","slide":14,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/adcreh0z","slide":14,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/vels7m1k","slide":14,"text":"Failed","textPreview":"Failed","textChars":6,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/7i58vmxs","slide":14,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/6hw7m1g7","slide":14,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/t4nqxwfy","slide":14,"text":"Aborted","textPreview":"Aborted","textChars":7,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/jvsvs0","slide":14,"text":"What to say: Explain normal path and failure path.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/2kdbig","slide":15,"title":"Commit point","textShapes":12}
+{"kind":"shape","id":"sh/9g72hwjm","slide":15,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/mdg36h0v","slide":15,"text":"Commit point","textPreview":"Commit point","textChars":12,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/7epkfm1g","slide":15,"text":"Explain durable completion point.","textPreview":"Explain durable completion point.","textChars":33,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/wjylcrid","slide":15,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/hkrmlwji","slide":15,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/uhg3a107","slide":15,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/vipkjm1s","slide":15,"text":"Transaction States","textPreview":"Transaction States","textChars":18,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/cnel072t","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/xon29cje","slide":15,"text":"Commit point","textPreview":"Commit point","textChars":12,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/l4nylgne","slide":15,"text":"A transaction reaches commit point when all operations have executed successfully and required log information is safely recorded.","textPreview":"A transaction reaches commit point when all operations have executed successfully and required log information is safely recorded.","textChars":130,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/k3exsvmt","slide":15,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/j25gjq58","slide":15,"text":"Success","textPreview":"Success","textChars":7,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/y1wfql4n","slide":15,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/ts7yp0na","slide":15,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/8ryxwvmp","slide":15,"text":"Log","textPreview":"Log","textChars":3,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/7q5gnq54","slide":15,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/6pwful4j","slide":15,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/hw7yt036","slide":15,"text":"Durability","textPreview":"Durability","textChars":10,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/gvyh0fm1","slide":15,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/0bq9c3y9","slide":15,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/1czal8fu","slide":15,"text":"Commit","textPreview":"Commit","textChars":6,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/e98radg3","slide":15,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/zah8jyxo","slide":15,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/ofa9gny5","slide":15,"text":"Recovery","textPreview":"Recovery","textChars":8,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/2kdbig","slide":15,"text":"What to say: Explain commit tells DBMS transaction effects must survive.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/eq2b99","slide":16,"title":"The system log is recovery memory","textShapes":12}
+{"kind":"shape","id":"sh/u98n65cz","slide":16,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/hcz61kba","slide":16,"text":"The system log is recovery memory","textPreview":"The system log is recovery memory","textChars":33,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/gbq58fu5","slide":16,"text":"Define log.","textPreview":"Define log.","textChars":11,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/76xovqd8","slide":16,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/65on25cn","slide":16,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/t8f6x0ve","slide":16,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/87654vut","slide":16,"text":"System Log","textPreview":"System Log","textChars":10,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/j2xorqdc","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/yh4nylcr","slide":16,"text":"System log","textPreview":"System log","textChars":10,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/4ze1sj2t","slide":16,"text":"The system log records transaction events and before/after values so the DBMS can undo or redo work during recovery.","textPreview":"The system log records transaction events and before/after values so the DBMS can undo or redo work during recovery.","textChars":116,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/p0n2loje","slide":16,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/2dwjq9kn","slide":16,"text":"start","textPreview":"start","textChars":5,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/3y5kje18","slide":16,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/gbe1oz2h","slide":16,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/hcn2h4j2","slide":16,"text":"read","textPreview":"read","textChars":4,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/u9cjm9kr","slide":16,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/falkfe1c","slide":16,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/07yl03i1","slide":16,"text":"write","textPreview":"write","textChars":5,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/1872t8jm","slide":16,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/9o32d8bq","slide":16,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/8nu1k3a5","slide":16,"text":"commit","textPreview":"commit","textChars":6,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/nmlkbytk","slide":16,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/mlcjitsz","slide":16,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/lk329obe","slide":16,"text":"abort","textPreview":"abort","textChars":5,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/eq2b99","slide":16,"text":"What to say: Explain log is stored safely and consulted after failures.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/4zbbp9","slide":17,"title":"Important log records","textShapes":13}
+{"kind":"shape","id":"sh/dsbilwra","slide":17,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/qpkzahsj","slide":17,"text":"Important log records","textPreview":"Important log records","textChars":21,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/rqt0jm94","slide":17,"text":"Cover log record types.","textPreview":"Cover log record types.","textChars":23,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/43ih8rat","slide":17,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/5orihcry","slide":17,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/i10z6hsn","slide":17,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/3290fm98","slide":17,"text":"System Log","textPreview":"System Log","textChars":10,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/gzih47ah","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/h0ridcr2","slide":17,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/p8fq5gnm","slide":17,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/o769wb61","slide":17,"text":"start_transaction","textPreview":"start_transaction","textChars":17,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/n6x8365g","slide":17,"text":"Marks beginning of transaction T.","textPreview":"Marks beginning of transaction T.","textChars":33,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/25oru1ov","slide":17,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/1kvq1wnq","slide":17,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/0jm9sr65","slide":17,"text":"write_item","textPreview":"write_item","textChars":10,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/fid8zm5k","slide":17,"text":"Stores transaction, item, old value and new value.","textPreview":"Stores transaction, item, old value and new value.","textChars":50,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/eh4rqhoz","slide":17,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/dgvqxwne","slide":17,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/sfm9or6t","slide":17,"text":"read_item","textPreview":"read_item","textChars":9,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/kzq94rep","slide":17,"text":"Records item read where needed.","textPreview":"Records item read where needed.","textChars":31,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/50zqdwva","slide":17,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/ixor2hwj","slide":17,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/jyx8bmd4","slide":17,"text":"commit / abort","textPreview":"commit / abort","textChars":14,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/wv6907et","slide":17,"text":"Marks successful completion or rollback.","textPreview":"Marks successful completion or rollback.","textChars":40,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/4zbbp9","slide":17,"text":"What to say: Point out old value supports undo and new value supports redo.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/wv1bcw","slide":18,"title":"DBMS buffer replacement policies","textShapes":13}
+{"kind":"shape","id":"sh/ehcbq18b","slide":18,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/1k3ulg72","slide":18,"text":"DBMS buffer replacement policies","textPreview":"DBMS buffer replacement policies","textChars":32,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/0jutsbqh","slide":18,"text":"Cover DS, hot set and DBMIN.","textPreview":"Cover DS, hot set and DBMIN.","textChars":28,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/nmlcn6p8","slide":18,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/mlcbu18n","slide":18,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/9onupg7y","slide":18,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/onutwbqd","slide":18,"text":"Buffers","textPreview":"Buffers","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/bq5crqp4","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/apwbyl8j","slide":18,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/8bu1s7qh","slide":18,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/tc3ilcr2","slide":18,"text":"Domain separation","textPreview":"Domain separation","textChars":17,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/69cjqx8b","slide":18,"text":"Separates buffer areas by database domain or file type.","textPreview":"Separates buffer areas by database domain or file type.","textChars":55,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/7al0j29w","slide":18,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/gze1w7qd","slide":18,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/h0n2pc7y","slide":18,"text":"Hot set","textPreview":"Hot set","textChars":7,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/udcjuh87","slide":18,"text":"Keeps pages frequently needed by active transactions.","textPreview":"Keeps pages frequently needed by active transactions.","textChars":53,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/velkn29s","slide":18,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/43e10rqp","slide":18,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/54n2tw7a","slide":18,"text":"DBMIN","textPreview":"DBMIN","textChars":5,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/dkjidcze","slide":18,"text":"Uses query locality sets to guide buffer allocation.","textPreview":"Uses query locality sets to guide buffer allocation.","textChars":52,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/cja14rit","slide":18,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/ry10bmh8","slide":18,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/qxsj2h0n","slide":18,"text":"Goal","textPreview":"Goal","textChars":4,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/1o32hwza","slide":18,"text":"Reduce I/O while supporting transaction processing.","textPreview":"Reduce I/O while supporting transaction processing.","textChars":51,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/wv1bcw","slide":18,"text":"What to say: Keep this conceptual since notes provide policy names.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/ln2o6g","slide":19,"title":"ACID properties define transaction quality","textShapes":18}
+{"kind":"shape","id":"sh/8valwz6x","slide":19,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/7uhknupc","slide":19,"text":"ACID properties define transaction quality","textPreview":"ACID properties define transaction quality","textChars":42,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/mt83upor","slide":19,"text":"Introduce ACID.","textPreview":"Introduce ACID.","textChars":15,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/hkj2t47e","slide":19,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/wjal0z6t","slide":19,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/vi1krep8","slide":19,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/uhs3y9o3","slide":19,"text":"ACID","textPreview":"ACID","textChars":4,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/5o32xo7q","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/4nul4j65","slide":19,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/mdgra9gz","slide":19,"text":"ACID","textPreview":"ACID","textChars":4,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/nepsjehk","slide":19,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/ozytcjy5","slide":19,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/90raloza","slide":19,"text":"Atomicity","textPreview":"Atomicity","textChars":9,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/a10betgv","slide":19,"text":"All or none.","textPreview":"All or none.","textChars":12,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/b29snehg","slide":19,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/w3itgjy1","slide":19,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/x4rapozm","slide":19,"text":"Consistency","textPreview":"Consistency","textChars":11,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/q5wr2p0r","slide":19,"text":"Preserve rules.","textPreview":"Preserve rules.","textChars":15,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/r65sbuhc","slide":19,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/falojqx4","slide":19,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/u9c7algj","slide":19,"text":"Isolation","textPreview":"Isolation","textChars":9,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/hc3ql0fa","slide":19,"text":"Appear independent.","textPreview":"Appear independent.","textChars":19,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/gbupcvyp","slide":19,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/7m1ofqxs","slide":19,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/6ls76lgn","slide":19,"text":"Durability","textPreview":"Durability","textChars":10,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/toj6hgfy","slide":19,"text":"Committed effects persist.","textPreview":"Committed effects persist.","textChars":26,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/snap8byd","slide":19,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/ri58raxc","slide":19,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/qhw7i5wr","slide":19,"text":"Recovery","textPreview":"Recovery","textChars":8,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/on6lc7e9","slide":19,"text":"Supports A and D.","textPreview":"Supports A and D.","textChars":17,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/9ofmlcvu","slide":19,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/mlo3axw3","slide":19,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/nmx4j2do","slide":19,"text":"Concurrency","textPreview":"Concurrency","textChars":11,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/wrq5gre5","slide":19,"text":"Supports I.","textPreview":"Supports I.","textChars":11,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/ln2o6g","slide":19,"text":"What to say: Use bank transfer to explain all four.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/6zyged","slide":20,"title":"Atomicity and durability","textShapes":19}
+{"kind":"shape","id":"sh/pg76dsjy","slide":20,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/2dgnix0n","slide":20,"text":"Atomicity and durability","textPreview":"Atomicity and durability","textChars":24,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/nepobi1s","slide":20,"text":"Compare recovery-focused properties.","textPreview":"Compare recovery-focused properties.","textChars":36,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/cjy5o7ip","slide":20,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/xkr6hcja","slide":20,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ahgnmx0j","slide":20,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/bipof214","slide":20,"text":"ACID","textPreview":"ACID","textChars":4,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/sne5c3i5","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/tonm58jq","slide":20,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/tcn2xwrq","slide":20,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/sbe1ora5","slide":20,"text":"Atomicity","textPreview":"Atomicity","textChars":9,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/7a5kvm9k","slide":20,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/69wjmhsz","slide":20,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/hg721wrm","slide":20,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/gfelsra1","slide":20,"text":"Durability","textPreview":"Durability","textChars":10,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/fe5kzm9g","slide":20,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/udw3qhsv","slide":20,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/p4725gry","slide":20,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/43ylwbad","slide":20,"text":"No partial transaction effects","textPreview":"No partial transaction effects","textChars":30,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/8zqdoj2l","slide":20,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/9kzeh436","slide":20,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/mxovm9kf","slide":20,"text":"Abort means undo changes","textPreview":"Abort means undo changes","textChars":24,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/nyhwfel0","slide":20,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/wnqdsj2x","slide":20,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/xozelo32","slide":20,"text":"Protects against mid-transaction failure","textPreview":"Protects against mid-transaction failure","textChars":40,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/al8vq9kr","slide":20,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/vmhwjelc","slide":20,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/cr6dgfmd","slide":20,"text":"Committed effects survive failure","textPreview":"Committed effects survive failure","textChars":33,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/dsfu9k3y","slide":20,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/fmlgf25g","slide":20,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/ulczmx4v","slide":20,"text":"Uses stable log/storage","textPreview":"Uses stable log/storage","textChars":23,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/honyhsnm","slide":20,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/gnuhonm1","slide":20,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/7ilgbi5k","slide":20,"text":"Protects completed work","textPreview":"Protects completed work","textChars":23,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"notes","id":"nt/6zyged","slide":20,"text":"What to say: Explain undo vs redo intuition.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/v1198p","slide":21,"title":"Consistency and isolation","textShapes":19}
+{"kind":"shape","id":"sh/fyd43exk","slide":21,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/0z6lcje5","slide":21,"text":"Consistency and isolation","textPreview":"Consistency and isolation","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/1kfm5ofq","slide":21,"text":"Compare correctness-focused properties.","textPreview":"Compare correctness-focused properties.","textChars":39,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/qt436pg3","slide":21,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/rud4zux8","slide":21,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/svml8zyt","slide":21,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/dwvm14fe","slide":21,"text":"ACID","textPreview":"ACID","textChars":4,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/apo3itw7","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/bqh4byxs","slide":21,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/fydsnm1w","slide":21,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/ux4buhkb","slide":21,"text":"Consistency","textPreview":"Consistency","textChars":11,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/h0vapwjm","slide":21,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/gzmtwr2h","slide":21,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/32dsr61s","slide":21,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/214by107","slide":21,"text":"Isolation","textPreview":"Isolation","textChars":9,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/p4fatwjy","slide":21,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/436t0bid","slide":21,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/rqxcv614","slide":21,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/qpob210j","slide":21,"text":"Transaction moves database between valid states","textPreview":"Transaction moves database between valid states","textChars":47,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/mxsna9o3","slide":21,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/7y14jep8","slide":21,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/8zu5cj6t","slide":21,"text":"Integrity constraints remain true","textPreview":"Integrity constraints remain true","textChars":33,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/903ml47e","slide":21,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/y9sn6p8r","slide":21,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/za14fupc","slide":21,"text":"Application logic matters","textPreview":"Application logic matters","textChars":25,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/kva58zqx","slide":21,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/lwjmh47i","slide":21,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/i5cnitov","slide":21,"text":"Concurrent transactions appear separated","textPreview":"Concurrent transactions appear separated","textChars":40,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/jqlorypg","slide":21,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/tk7qhsry","slide":21,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/szyp8nqd","slide":21,"text":"Prevents dirty reads and lost updates","textPreview":"Prevents dirty reads and lost updates","textChars":37,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/ry58fi9s","slide":21,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/6xw76d87","slide":21,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/5wnqd8rm","slide":21,"text":"Controlled by scheduling","textPreview":"Controlled by scheduling","textChars":24,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"notes","id":"nt/v1198p","slide":21,"text":"What to say: Connect consistency to constraints and isolation to concurrency.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/82a7n7","slide":22,"title":"A schedule orders transaction operations","textShapes":12}
+{"kind":"shape","id":"sh/9s3etcni","slide":22,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/mpsfyhor","slide":22,"text":"A schedule orders transaction operations","textPreview":"A schedule orders transaction operations","textChars":40,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/7qlwrmpc","slide":22,"text":"Define schedule.","textPreview":"Define schedule.","textChars":16,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/wfux4r6t","slide":22,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/hg3exwne","slide":22,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/utcf2hon","slide":22,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/vulwvm58","slide":22,"text":"Schedules","textPreview":"Schedules","textChars":9,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/czads76p","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/xkjels7a","slide":22,"text":"Schedule","textPreview":"Schedule","textChars":8,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/9kbypone","slide":22,"text":"A schedule is an ordering of operations from one or more transactions that preserves each transaction's internal order.","textPreview":"A schedule is an ordering of operations from one or more transactions that preserves each transaction's internal order.","textChars":119,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/8j2hwj6t","slide":22,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/nitgne58","slide":22,"text":"Operations","textPreview":"Operations","textChars":10,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/mxkzu9on","slide":22,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/xobitona","slide":22,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/wn2h0j6p","slide":22,"text":"Interleaving","textPreview":"Interleaving","textChars":12,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/vmt0re54","slide":22,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/alkzytoz","slide":22,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/5svix8nm","slide":22,"text":"Serial","textPreview":"Serial","textChars":6,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/krmh43m1","slide":22,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/o7etgby9","slide":22,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/p8napgzu","slide":22,"text":"Concurrent","textPreview":"Concurrent","textChars":10,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/25cbe1g3","slide":22,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/365sn6ho","slide":22,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/cbetkbyl","slide":22,"text":"Correctness","textPreview":"Correctness","textChars":11,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/82a7n7","slide":22,"text":"What to say: Explain DBMS decides safe interleavings.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/kpteq9","slide":23,"title":"Recoverable schedules protect committed work","textShapes":18}
+{"kind":"shape","id":"sh/cb2dg7e9","slide":23,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ratw72do","slide":23,"text":"Recoverable schedules protect committed work","textPreview":"Recoverable schedules protect committed work","textChars":44,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/q9kvexw3","slide":23,"text":"Introduce recoverability classes.","textPreview":"Introduce recoverability classes.","textChars":33,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/1gbedcvq","slide":23,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/0f2xkru5","slide":23,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/zetwbmdk","slide":23,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/edkfihcf","slide":23,"text":"Recoverability","textPreview":"Recoverability","textChars":14,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/94vehwv2","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/o3mxoruh","slide":23,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/upwret07","slide":23,"text":"Recoverability","textPreview":"Recoverability","textChars":14,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/fq5s7y1c","slide":23,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/gre9g3ix","slide":23,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/hsna98ji","slide":23,"text":"Recoverable","textPreview":"Recoverable","textChars":11,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/2twrid03","slide":23,"text":"Commit after dependencies commit.","textPreview":"Commit after dependencies commit.","textChars":33,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/3u5sbiho","slide":23,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/4ve9kni9","slide":23,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/pg7ad8zu","slide":23,"text":"Cascadeless","textPreview":"Cascadeless","textChars":11,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/yxcr690z","slide":23,"text":"Read only committed values.","textPreview":"Read only committed values.","textChars":27,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/jyl8ze14","slide":23,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/n2ho7ahw","slide":23,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/m187y5gr","slide":23,"text":"Strict","textPreview":"Strict","textChars":6,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/94z69kz2","slide":23,"text":"No read/write of uncommitted writes.","textPreview":"No read/write of uncommitted writes.","textChars":36,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/o3qp0fyh","slide":23,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/zyho3ah0","slide":23,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/exo7u5gf","slide":23,"text":"Dirty read","textPreview":"Dirty read","textChars":10,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/10z650z6","slide":23,"text":"Main risk.","textPreview":"Main risk.","textChars":10,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/0zqpwfyl","slide":23,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/ju1ofuh4","slide":23,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/yts76pgz","slide":23,"text":"Abort","textPreview":"Abort","textChars":5,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/gfml0re1","slide":23,"text":"Can cascade.","textPreview":"Can cascade.","textChars":12,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/hgvm9wfm","slide":23,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/udk3yhwb","slide":23,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/fet47mxw","slide":23,"text":"Commit order","textPreview":"Commit order","textChars":12,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/43ml4bed","slide":23,"text":"Matters.","textPreview":"Matters.","textChars":8,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/kpteq9","slide":23,"text":"What to say: Explain strict schedules are easiest to recover.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/oswrqh","slide":24,"title":"Recoverable vs cascadeless vs strict","textShapes":17}
+{"kind":"shape","id":"sh/k7alobup","slide":24,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/z61kf6d4","slide":24,"text":"Recoverable vs cascadeless vs strict","textPreview":"Recoverable vs cascadeless vs strict","textChars":36,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/y5s3m1cz","slide":24,"text":"Compare schedule classes.","textPreview":"Compare schedule classes.","textChars":25,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/9c32lgvm","slide":24,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/8bulsbu1","slide":24,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/7alkj6dg","slide":24,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/m9c3qlcv","slide":24,"text":"Recoverability","textPreview":"Recoverability","textChars":14,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/pgj29wv2","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ofq1greh","slide":24,"bbox":[84,175,370.67,54]}
+{"kind":"textbox","id":"sh/m1wj61sb","slide":24,"text":"Class","textPreview":"Class","textChars":5,"textLines":1,"bbox":[94,188,350.67,26]}
+{"kind":"shape","id":"sh/nm5kf69g","slide":24,"bbox":[454.67,175,370.67,54]}
+{"kind":"textbox","id":"sh/onel8ba1","slide":24,"text":"Rule","textPreview":"Rule","textChars":4,"textLines":1,"bbox":[464.67,188,350.67,26]}
+{"kind":"shape","id":"sh/9on2hgrm","slide":24,"bbox":[825.33,175,370.67,54]}
+{"kind":"textbox","id":"sh/apw3al87","slide":24,"text":"Why it matters","textPreview":"Why it matters","textChars":14,"textLines":1,"bbox":[835.33,188,350.67,26]}
+{"kind":"shape","id":"sh/bq5kjq9s","slide":24,"bbox":[84,229,370.67,62]}
+{"kind":"textbox","id":"sh/wrelcvqd","slide":24,"text":"Recoverable","textPreview":"Recoverable","textChars":11,"textLines":1,"bbox":[96,239,346.67,48]}
+{"kind":"shape","id":"sh/xsn2lgry","slide":24,"bbox":[454.67,229,370.67,62]}
+{"kind":"textbox","id":"sh/ytg3el83","slide":24,"text":"Dependent transaction commits later","textPreview":"Dependent transaction commits later","textChars":35,"textLines":1,"bbox":[466.67,239,346.67,48]}
+{"kind":"shape","id":"sh/jupknq9o","slide":24,"bbox":[825.33,229,370.67,62]}
+{"kind":"textbox","id":"sh/vypkbqpw","slide":24,"text":"Avoids committed transaction depending on aborted one","textPreview":"Avoids committed transaction depending on aborted one","textChars":53,"textLines":1,"bbox":[837.33,239,346.67,48]}
+{"kind":"shape","id":"sh/uxgj2lob","slide":24,"bbox":[84,291,370.67,62]}
+{"kind":"textbox","id":"sh/hkr2d072","slide":24,"text":"Cascadeless","textPreview":"Cascadeless","textChars":11,"textLines":1,"bbox":[96,301,346.67,48]}
+{"kind":"shape","id":"sh/gzy14v6h","slide":24,"bbox":[454.67,291,370.67,62]}
+{"kind":"textbox","id":"sh/7up07qp0","slide":24,"text":"Reads only committed data","textPreview":"Reads only committed data","textChars":25,"textLines":1,"bbox":[466.67,301,346.67,48]}
+{"kind":"shape","id":"sh/6tgjylof","slide":24,"bbox":[825.33,291,370.67,62]}
+{"kind":"textbox","id":"sh/tw72907q","slide":24,"text":"Avoids cascading rollbacks","textPreview":"Avoids cascading rollbacks","textChars":26,"textLines":1,"bbox":[837.33,301,346.67,48]}
+{"kind":"shape","id":"sh/8vy10v65","slide":24,"bbox":[84,353,370.67,62]}
+{"kind":"textbox","id":"sh/jq5036po","slide":24,"text":"Strict","textPreview":"Strict","textChars":6,"textLines":1,"bbox":[96,363,346.67,48]}
+{"kind":"shape","id":"sh/ypwju1o3","slide":24,"bbox":[454.67,353,370.67,62]}
+{"kind":"textbox","id":"sh/ojaponip","slide":24,"text":"No one reads/writes item until writer commits/aborts","textPreview":"No one reads/writes item until writer commits/aborts","textChars":52,"textLines":1,"bbox":[466.67,363,346.67,48]}
+{"kind":"shape","id":"sh/pkjqhsja","slide":24,"bbox":[825.33,353,370.67,62]}
+{"kind":"textbox","id":"sh/2xs7md0z","slide":24,"text":"Simplifies recovery","textPreview":"Simplifies recovery","textChars":19,"textLines":1,"bbox":[837.33,363,346.67,48]}
+{"kind":"notes","id":"nt/oswrqh","slide":24,"text":"What to say: Use this table for exam comparison.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/b1x68a","slide":25,"title":"Serializability is the gold standard","textShapes":12}
+{"kind":"shape","id":"sh/uhszehgb","slide":25,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/hk3y9cz2","slide":25,"text":"Serializability is the gold standard","textPreview":"Serializability is the gold standard","textChars":36,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/gjuhgryh","slide":25,"text":"Define serializability.","textPreview":"Define serializability.","textChars":23,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/3mlgbmhs","slide":25,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/2lczihg7","slide":25,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/po3idwzy","slide":25,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/4nuhkryd","slide":25,"text":"Serializability","textPreview":"Serializability","textChars":15,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/rq50f6h4","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/qpczm1gj","slide":25,"text":"Serializability","textPreview":"Serializability","textChars":15,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/gbilgjuh","slide":25,"text":"A schedule is serializable if its effect is equivalent to some serial execution of the same transactions.","textPreview":"A schedule is serializable if its effect is equivalent to some serial execution of the same transactions.","textChars":105,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/hcrmpov2","slide":25,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/up03e9cb","slide":25,"text":"Equivalent","textPreview":"Equivalent","textChars":10,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/va94nedw","slide":25,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/4f2lk3ut","slide":25,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/5gbmtovy","slide":25,"text":"Serial order","textPreview":"Serial order","textChars":12,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/idk3itcn","slide":25,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/3et4ryd8","slide":25,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/sj25o3up","slide":25,"text":"Correctness","textPreview":"Correctness","textChars":11,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/dkbmx8va","slide":25,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/10rmh8ne","slide":25,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/0zyl83mt","slide":25,"text":"Conflicts","textPreview":"Conflicts","textChars":9,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/zyp4fy58","slide":25,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/exg36t4n","slide":25,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/94rml8na","slide":25,"text":"Precedence graph","textPreview":"Precedence graph","textChars":16,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/b1x68a","slide":25,"text":"What to say: Explain serial execution is correct but slow; serializable interleaving is correct and faster.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/08cm3a","slide":26,"title":"Serial and nonserial schedules","textShapes":21}
+{"kind":"shape","id":"sh/q5gjilkj","slide":26,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/d8r2dg3a","slide":26,"text":"Serial and nonserial schedules","textPreview":"Serial and nonserial schedules","textChars":30,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/s7y1kv2p","slide":26,"text":"Compare schedule styles.","textPreview":"Compare schedule styles.","textChars":24,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/3ipk76l8","slide":26,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ihgje1kn","slide":26,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/54729g3y","slide":26,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/4jy1gb2d","slide":26,"text":"Serializability","textPreview":"Serializability","textChars":15,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/ne9kjalc","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/2d03q5kr","slide":26,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/0zu183m1","slide":26,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/1032ho3m","slide":26,"text":"Serial","textPreview":"Serial","textChars":6,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/excj6t4v","slide":26,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/fyl0fylg","slide":26,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/sva14jmp","slide":26,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/dw3ido3a","slide":26,"text":"Nonserial","textPreview":"Nonserial","textChars":9,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/q9sj294z","slide":26,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/ra10bel4","slide":26,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/47a10jmt","slide":26,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/58ji943e","slide":26,"text":"Runs T1 fully then T2, or reverse","textPreview":"Runs T1 fully then T2, or reverse","textChars":33,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/lcrqhgbq","slide":26,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/kripoba5","slide":26,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/zq98f6t0","slide":26,"text":"Simple correctness","textPreview":"Simple correctness","textChars":18,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/yp07m1sf","slide":26,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/xorqdwbu","slide":26,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/cnypkra9","slide":26,"text":"Low concurrency","textPreview":"Low concurrency","textChars":15,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/bmp8bmto","slide":26,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/alg7ihs3","slide":26,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/hkbqp0ry","slide":26,"text":"Operations interleave","textPreview":"Operations interleave","textChars":21,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/gj29wvad","slide":26,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/epwnqx8v","slide":26,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/fq54ji9g","slide":26,"text":"Higher throughput","textPreview":"Higher throughput","textChars":17,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/0re5snq1","slide":26,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/1snmlsrm","slide":26,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/q1cnmd8z","slide":26,"text":"Needs serializability test","textPreview":"Needs serializability test","textChars":26,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"shape","id":"sh/r2l4fi9k","slide":26,"bbox":[718,407,28,28]}
+{"kind":"textbox","id":"sh/snu5onq5","slide":26,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[718,410,28,18]}
+{"kind":"textbox","id":"sh/donmhsra","slide":26,"text":"May still be correct","textPreview":"May still be correct","textChars":20,"textLines":1,"bbox":[762,403,396,42]}
+{"kind":"notes","id":"nt/08cm3a","slide":26,"text":"What to say: Use T1/T2 operation sequence.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/gn183f","slide":27,"title":"Conflict serializability","textShapes":12}
+{"kind":"shape","id":"sh/xwz698fi","slide":27,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/atonetgr","slide":27,"text":"Conflict serializability","textPreview":"Conflict serializability","textChars":24,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/vuho7yxc","slide":27,"text":"Explain conflict idea.","textPreview":"Explain conflict idea.","textChars":22,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/kzq5k3y9","slide":27,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/50z6d8fe","slide":27,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ix8nitg3","slide":27,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/jyhobyxo","slide":27,"text":"Serializability","textPreview":"Serializability","textChars":15,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/03658jyp","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/l4fm1ofa","slide":27,"text":"Conflict","textPreview":"Conflict","textChars":8,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/xgv2xojq","slide":27,"text":"Two operations conflict when they belong to different transactions, access the same item, and at least one is a write.","textPreview":"Two operations conflict when they belong to different transactions, access the same item, and at least one is a write.","textChars":118,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/cfm14j2l","slide":27,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/bedkve10","slide":27,"text":"Different transactions","textPreview":"Different transactions","textChars":22,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/ad4j2tkf","slide":27,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/l4f218j2","slide":27,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/k361832h","slide":27,"text":"Same item","textPreview":"Same item","textChars":9,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/z2xkzy1w","slide":27,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/yhoj6tkb","slide":27,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/98f258jy","slide":27,"text":"Read/write","textPreview":"Read/write","textChars":10,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/8761c32d","slide":27,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/snydobu1","slide":27,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/to7uxgvm","slide":27,"text":"Write/write","textPreview":"Write/write","textChars":11,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/6lgvm1cv","slide":27,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/rmpcv6dg","slide":27,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/gridsvux","slide":27,"text":"Order matters","textPreview":"Order matters","textChars":13,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/gn183f","slide":27,"text":"What to say: Explain read-read does not conflict.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/vcp3um","slide":28,"title":"Testing conflict serializability","textShapes":10}
+{"kind":"shape","id":"sh/al4neps7","slide":28,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/xofmpkbi","slide":28,"text":"Testing conflict serializability","textPreview":"Testing conflict serializability","textChars":32,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/wnm5gzad","slide":28,"text":"Show precedence graph method.","textPreview":"Show precedence graph method.","textChars":29,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/nyd4jatg","slide":28,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/mx4na5sv","slide":28,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/9kvmlkbm","slide":28,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/ojm5cfa1","slide":28,"text":"Serializability","textPreview":"Serializability","textChars":15,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/zut4fatk","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/etk365sz","slide":28,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/k7m5cryx","slide":28,"text":"Create node per transaction","textPreview":"Create node per transaction","textChars":27,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/l8fm5wzi","slide":28,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/y54na1gr","slide":28,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/z6d43mhc","slide":28,"text":"Find conflicting operation pairs","textPreview":"Find conflicting operation pairs","textChars":32,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/c3m58ryl","slide":28,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/x4vm1wz6","slide":28,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/a14n6hgv","slide":28,"text":"Add directed edge by order","textPreview":"Add directed edge by order","textChars":26,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/b2d4fmhg","slide":28,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/gzq5kby5","slide":28,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/h0z6dgfq","slide":28,"text":"Check for cycle","textPreview":"Check for cycle","textChars":15,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/pwvmxg7u","slide":28,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/4vm54bq9","slide":28,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/3ud4v6po","slide":28,"text":"Acyclic means serializable","textPreview":"Acyclic means serializable","textChars":26,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/vcp3um","slide":28,"text":"What to say: Mention topological order gives equivalent serial order.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/96wcah","slide":29,"title":"Precedence graph visual","textShapes":12}
+{"kind":"shape","id":"sh/edgrut8z","slide":29,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/1g7qpo7q","slide":29,"text":"Precedence graph visual","textPreview":"Precedence graph visual","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/0fy9wjq5","slide":29,"text":"Use graph intuition.","textPreview":"Use graph intuition.","textChars":20,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/ni98rypg","slide":29,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/mhgryt8b","slide":29,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/94rqt87m","slide":29,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/o3i903q1","slide":29,"text":"Serializability","textPreview":"Serializability","textChars":15,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/3m58fupc","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ilw7m98r","slide":29,"bbox":[315,258,120,28]}
+{"kind":"shape","id":"sh/cfu9w7q5","slide":29,"bbox":[560,228,120,28]}
+{"kind":"shape","id":"sh/dg3apc7q","slide":29,"bbox":[745,350,95,28]}
+{"kind":"shape","id":"sh/qdcrux8z","slide":29,"bbox":[315,360,116,28]}
+{"kind":"shape","id":"sh/belsn2pk","slide":29,"bbox":[545,402,120,28]}
+{"kind":"shape","id":"sh/03u907q1","slide":29,"bbox":[230,245,72,72]}
+{"kind":"textbox","id":"sh/l4natc7m","slide":29,"text":"T1","textPreview":"T1","textChars":2,"textLines":1,"bbox":[230,265,72,28]}
+{"kind":"shape","id":"sh/y1cryx8b","slide":29,"bbox":[470,190,72,72]}
+{"kind":"textbox","id":"sh/z2lsr2pg","slide":29,"text":"T2","textPreview":"T2","textChars":2,"textLines":1,"bbox":[470,210,72,28]}
+{"kind":"shape","id":"sh/g7a9onqx","slide":29,"bbox":[715,250,72,72]}
+{"kind":"textbox","id":"sh/18jah87i","slide":29,"text":"T3","textPreview":"T3","textChars":2,"textLines":1,"bbox":[715,270,72,28]}
+{"kind":"shape","id":"sh/h4bql4z6","slide":29,"bbox":[420,455,72,72]}
+{"kind":"textbox","id":"sh/g32pszil","slide":29,"text":"T4","textPreview":"T4","textChars":2,"textLines":1,"bbox":[420,475,72,28]}
+{"kind":"shape","id":"sh/v2t8juh0","slide":29,"bbox":[820,450,72,72]}
+{"kind":"textbox","id":"sh/u1k7q90v","slide":29,"text":"T5","textPreview":"T5","textChars":2,"textLines":1,"bbox":[820,470,72,28]}
+{"kind":"shape","id":"sh/58vqpozi","slide":29,"bbox":[900,260,260,176]}
+{"kind":"shape","id":"sh/472pwjix","slide":29,"bbox":[900,260,8,176]}
+{"kind":"textbox","id":"sh/36t8nehc","slide":29,"text":"Graph check","textPreview":"Graph check","textChars":11,"textLines":1,"bbox":[922,274,222,34]}
+{"kind":"textbox","id":"sh/i5k7u90r","slide":29,"text":"A cycle in a precedence or wait-for graph signals non-serializability or deadlock, depending on the graph type.","textPreview":"A cycle in a precedence or wait-for graph signals non-serializability or deadlock, depending on the graph type.","textChars":111,"textLines":1,"bbox":[922,314,222,114]}
+{"kind":"notes","id":"nt/96wcah","slide":29,"text":"What to say: Explain a cycle means no serial order can satisfy all conflict directions.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/d2w14x","slide":30,"title":"SQL transaction support","textShapes":8}
+{"kind":"shape","id":"sh/0jux8b6d","slide":30,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/zilgz6ps","slide":30,"text":"SQL transaction support","textPreview":"SQL transaction support","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ehcf6l87","slide":30,"text":"Cover COMMIT and ROLLBACK.","textPreview":"Cover COMMIT and ROLLBACK.","textChars":26,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/9ony507u","slide":30,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/8nuxcv6p","slide":30,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/nmlg3qp4","slide":30,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/mlcfaloj","slide":30,"text":"SQL Transactions","textPreview":"SQL Transactions","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/psjetw7q","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/4rax0rq5","slide":30,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/it8jahkv","slide":30,"text":"START TRANSACTION;\nUPDATE ACCOUNT SET Bal = Bal - 100 WHERE AccNo = 1;\nUPDATE ACCOUNT SET Bal = Bal + 100 WHERE AccNo = 2;\nCOMMIT;\n-- or ROLLBACK on error","textPreview":"START TRANSACTION; | UPDATE ACCOUNT SET Bal = Bal - 100 WHERE AccNo = 1; | UPDATE ACCOUNT SET Bal = Bal + 100 WHERE AccNo = 2; | COMMIT; ...","textChars":154,"textLines":5,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/juhk3mlg","slide":30,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/kvq1c721","slide":30,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/5wz25c3m","slide":30,"text":"SQL transaction","textPreview":"SQL transaction","textChars":15,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/6xsjehkr","slide":30,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/d2w14x","slide":30,"text":"What to say: Explain commit makes changes permanent; rollback cancels transaction.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/n8gvfc","slide":31,"title":"Isolation levels expose trade-offs","textShapes":13}
+{"kind":"shape","id":"sh/ulwfuho3","slide":31,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ho7ypwne","slide":31,"text":"Isolation levels expose trade-offs","textPreview":"Isolation levels expose trade-offs","textChars":34,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/wnyxwr6t","slide":31,"text":"Cover SQL isolation ideas.","textPreview":"Cover SQL isolation ideas.","textChars":26,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/jqpgr65k","slide":31,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ipgfy1oz","slide":31,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/5c7ytwnq","slide":31,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/4byx0r65","slide":31,"text":"SQL Transactions","textPreview":"SQL Transactions","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/re9gv65g","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/6dgf21ov","slide":31,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/o3e9snat","slide":31,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/94nq1sre","slide":31,"text":"READ UNCOMMITTED","textPreview":"READ UNCOMMITTED","textChars":16,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/m1crqxsn","slide":31,"text":"May allow dirty reads.","textPreview":"May allow dirty reads.","textChars":22,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/n2l8zi98","slide":31,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/wre9w7ap","slide":31,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/xsna5cra","slide":31,"text":"READ COMMITTED","textPreview":"READ COMMITTED","textChars":14,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/apwruxsz","slide":31,"text":"Avoids dirty reads.","textPreview":"Avoids dirty reads.","textChars":19,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/vq5s329k","slide":31,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/kvy907q1","slide":31,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/5w7a9crm","slide":31,"text":"REPEATABLE READ","textPreview":"REPEATABLE READ","textChars":15,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/t0jix8fe","slide":31,"text":"Avoids nonrepeatable reads.","textPreview":"Avoids nonrepeatable reads.","textChars":27,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/szah4net","slide":31,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/7y10vix8","slide":31,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/6dsz2dwn","slide":31,"text":"SERIALIZABLE","textPreview":"SERIALIZABLE","textChars":12,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/h43i1sfa","slide":31,"text":"Strongest; makes execution equivalent to serial.","textPreview":"Strongest; makes execution equivalent to serial.","textChars":48,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/n8gvfc","slide":31,"text":"What to say: Mention stronger isolation may reduce concurrency.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/hlejfc","slide":32,"title":"Dirty read, nonrepeatable read and phantom","textShapes":11}
+{"kind":"shape","id":"sh/y54zi98b","slide":32,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/l8fydor2","slide":32,"text":"Dirty read, nonrepeatable read and phantom","textPreview":"Dirty read, nonrepeatable read and phantom","textChars":42,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/076hkjqh","slide":32,"text":"Clarify SQL anomalies.","textPreview":"Clarify SQL anomalies.","textChars":22,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/bidg7e9k","slide":32,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/qh4ze98f","slide":32,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/dkvy94rq","slide":32,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/cjmhgjq5","slide":32,"text":"SQL Transactions","textPreview":"SQL Transactions","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/3etg3u9o","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/2dkfap83","slide":32,"bbox":[90,215,320,260]}
+{"kind":"shape","id":"sh/wbmxc3i9","slide":32,"bbox":[90,215,8,260]}
+{"kind":"textbox","id":"sh/hcvel8je","slide":32,"text":"Dirty read","textPreview":"Dirty read","textChars":10,"textLines":1,"bbox":[112,229,282,34]}
+{"kind":"textbox","id":"sh/u9kfat03","slide":32,"text":"Read update from uncommitted transaction.","textPreview":"Read update from uncommitted transaction.","textChars":41,"textLines":1,"bbox":[112,269,282,198]}
+{"kind":"shape","id":"sh/vatwjy1o","slide":32,"bbox":[470,215,320,260]}
+{"kind":"shape","id":"sh/8n2x83ix","slide":32,"bbox":[470,215,8,260]}
+{"kind":"textbox","id":"sh/9obehoji","slide":32,"text":"Nonrepeatable read","textPreview":"Nonrepeatable read","textChars":18,"textLines":1,"bbox":[492,229,282,34]}
+{"kind":"textbox","id":"sh/mlkf6t0r","slide":32,"text":"Same row read twice gives different value.","textPreview":"Same row read twice gives different value.","textChars":42,"textLines":1,"bbox":[492,269,282,198]}
+{"kind":"shape","id":"sh/7mtwfy1c","slide":32,"bbox":[850,215,320,260]}
+{"kind":"shape","id":"sh/sj6xkni1","slide":32,"bbox":[850,215,8,260]}
+{"kind":"textbox","id":"sh/tkfytszm","slide":32,"text":"Phantom","textPreview":"Phantom","textChars":7,"textLines":1,"bbox":[872,229,282,34]}
+{"kind":"textbox","id":"sh/10bedsrq","slide":32,"text":"Same predicate returns extra/missing rows after another transaction changes matching set.","textPreview":"Same predicate returns extra/missing rows after another transaction changes matching set.","textChars":89,"textLines":1,"bbox":[872,269,282,198]}
+{"kind":"notes","id":"nt/hlejfc","slide":32,"text":"What to say: Use these terms exactly; they often appear in exams.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/yl1oap","slide":33,"title":"Module 4 mind map","textShapes":18}
+{"kind":"shape","id":"sh/yt0ba98v","slide":33,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/lgral4rm","slide":33,"text":"Module 4 mind map","textPreview":"Module 4 mind map","textChars":17,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/0fitczq1","slide":33,"text":"Connect all major headings.","textPreview":"Connect all major headings.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/nitsne9c","slide":33,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/mh0be987","slide":33,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/9kbapori","slide":33,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/8j2tgjqx","slide":33,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/vmtcry9o","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ulkbit83","slide":33,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/w36tgjyd","slide":33,"text":"Module 4","textPreview":"Module 4","textChars":8,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/x4fa9ofy","slide":33,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/ahobe9gn","slide":33,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/bixs7exs","slide":33,"text":"Transactions","textPreview":"Transactions","textChars":12,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/k76tk3yp","slide":33,"text":"Logical unit.","textPreview":"Logical unit.","textChars":13,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/l8zad8fa","slide":33,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/y5obitgj","slide":33,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/j6xsbyx4","slide":33,"text":"Concurrency problems","textPreview":"Concurrency problems","textChars":20,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/8bqto3yl","slide":33,"text":"Lost/dirty/summary/repeat.","textPreview":"Lost/dirty/summary/repeat.","textChars":26,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/tczah8f6","slide":33,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/hsva187a","slide":33,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/grmt83qp","slide":33,"text":"Recovery","textPreview":"Recovery","textChars":8,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/fqdszyp4","slide":33,"text":"Failures and logs.","textPreview":"Failures and logs.","textChars":18,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/up4b6t8z","slide":33,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/pwfa587m","slide":33,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/4v6tcnq1","slide":33,"text":"ACID","textPreview":"ACID","textChars":4,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/3uds3ipg","slide":33,"text":"Transaction properties.","textPreview":"Transaction properties.","textChars":23,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/2t4bad8v","slide":33,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/50bato72","slide":33,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/kz290jqh","slide":33,"text":"Schedules","textPreview":"Schedules","textChars":9,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/a507apof","slide":33,"text":"Recoverability.","textPreview":"Recoverability.","textChars":15,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/b6983u50","slide":33,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/w7ipwz6l","slide":33,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/x8rq54n6","slide":33,"text":"Serializability","textPreview":"Serializability","textChars":15,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/it07ypor","slide":33,"text":"Conflict graph.","textPreview":"Conflict graph.","textChars":15,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/yl1oap","slide":33,"text":"What to say: Use this as final overview.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/5pysqq","slide":34,"title":"Exam and viva focus","textShapes":15}
+{"kind":"shape","id":"sh/7uhsfe5k","slide":34,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/svq98jm5","slide":34,"text":"Exam and viva focus","textPreview":"Exam and viva focus","textChars":19,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/tgzahonq","slide":34,"text":"Convert content into marks.","textPreview":"Convert content into marks.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/uh8rat4b","slide":34,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/fihsjy5g","slide":34,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/gjq9c3m1","slide":34,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/hkzal8nm","slide":34,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/al4rypor","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/vmx87u5c","slide":34,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/fadc3e9w","slide":34,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/e94bu9sb","slide":34,"text":"Draw transaction state diagram for state questions","textPreview":"Draw transaction state diagram for state questions","textChars":50,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/1cvu5orm","slide":34,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/0bmtwja1","slide":34,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/r6tcze9k","slide":34,"text":"Explain each concurrency problem with a timeline","textPreview":"Explain each concurrency problem with a timeline","textChars":48,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/q5kbq9sz","slide":34,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/d8bu14rq","slide":34,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/s72tsza5","slide":34,"text":"Use log records to explain recovery","textPreview":"Use log records to explain recovery","textChars":35,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/3itsvu9o","slide":34,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/ihkbmps3","slide":34,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/6d0vypcv","slide":34,"text":"Define ACID with one banking example","textPreview":"Define ACID with one banking example","textChars":36,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/7e9c7utg","slide":34,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/8fid0zu1","slide":34,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/tgru94bm","slide":34,"text":"Use precedence graph steps for serializability answers","textPreview":"Use precedence graph steps for serializability answers","textChars":54,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"notes","id":"nt/5pysqq","slide":34,"text":"What to say: Tell students timelines and graphs earn clarity.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/4j1dau","slide":35,"title":"20 important viva questions","textShapes":25}
+{"kind":"shape","id":"sh/5cb61sr2","slide":35,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/i90nqd8r","slide":35,"text":"20 important viva questions","textPreview":"20 important viva questions","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ja9ozi9c","slide":35,"text":"Rapid oral revision.","textPreview":"Rapid oral revision.","textChars":20,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/sf2pwnqt","slide":35,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/tgb65sre","slide":35,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/6dk7ux8n","slide":35,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/reto3i98","slide":35,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/8jy5k3q9","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/9k76t8ru","slide":35,"text":"1. What is transaction?","textPreview":"1. What is transaction?","textChars":23,"textLines":1,"bbox":[78,156,548,32]}
+{"kind":"textbox","id":"sh/h0jqdsje","slide":35,"text":"2. Single vs multiuser?","textPreview":"2. Single vs multiuser?","textChars":23,"textLines":1,"bbox":[78,202,548,32]}
+{"kind":"textbox","id":"sh/gza9kn2t","slide":35,"text":"3. What is read_item?","textPreview":"3. What is read_item?","textChars":21,"textLines":1,"bbox":[78,248,548,32]}
+{"kind":"textbox","id":"sh/vyh8bi18","slide":35,"text":"4. What is write_item?","textPreview":"4. What is write_item?","textChars":22,"textLines":1,"bbox":[78,294,548,32]}
+{"kind":"textbox","id":"sh/ux87idkn","slide":35,"text":"5. What is buffer?","textPreview":"5. What is buffer?","textChars":18,"textLines":1,"bbox":[78,340,548,32]}
+{"kind":"textbox","id":"sh/54jqhsja","slide":35,"text":"6. Lost update?","textPreview":"6. Lost update?","textChars":15,"textLines":1,"bbox":[78,386,548,32]}
+{"kind":"textbox","id":"sh/43a9o72p","slide":35,"text":"7. Dirty read?","textPreview":"7. Dirty read?","textChars":14,"textLines":1,"bbox":[78,432,548,32]}
+{"kind":"textbox","id":"sh/3218f21k","slide":35,"text":"8. Incorrect summary?","textPreview":"8. Incorrect summary?","textChars":21,"textLines":1,"bbox":[78,478,548,32]}
+{"kind":"textbox","id":"sh/i1srmxkz","slide":35,"text":"9. Unrepeatable read?","textPreview":"9. Unrepeatable read?","textChars":21,"textLines":1,"bbox":[78,524,548,32]}
+{"kind":"textbox","id":"sh/ds3qlcjm","slide":35,"text":"10. Why recovery?","textPreview":"10. Why recovery?","textChars":17,"textLines":1,"bbox":[78,570,548,32]}
+{"kind":"textbox","id":"sh/sru9s721","slide":35,"text":"11. Types of failures?","textPreview":"11. Types of failures?","textChars":22,"textLines":1,"bbox":[664,156,548,32]}
+{"kind":"textbox","id":"sh/cnm14fe9","slide":35,"text":"12. Transaction states?","textPreview":"12. Transaction states?","textChars":23,"textLines":1,"bbox":[664,202,548,32]}
+{"kind":"textbox","id":"sh/x8v2dkvu","slide":35,"text":"13. Commit point?","textPreview":"13. Commit point?","textChars":17,"textLines":1,"bbox":[664,248,548,32]}
+{"kind":"textbox","id":"sh/alkj25wj","slide":35,"text":"14. System log?","textPreview":"14. System log?","textChars":15,"textLines":1,"bbox":[664,294,548,32]}
+{"kind":"textbox","id":"sh/bmtkbado","slide":35,"text":"15. Atomicity?","textPreview":"15. Atomicity?","textChars":14,"textLines":1,"bbox":[664,340,548,32]}
+{"kind":"textbox","id":"sh/kbm18ful","slide":35,"text":"16. Consistency?","textPreview":"16. Consistency?","textChars":16,"textLines":1,"bbox":[664,386,548,32]}
+{"kind":"textbox","id":"sh/lcv2hkv6","slide":35,"text":"17. Isolation?","textPreview":"17. Isolation?","textChars":14,"textLines":1,"bbox":[664,432,548,32]}
+{"kind":"textbox","id":"sh/y94j6pcf","slide":35,"text":"18. Durability?","textPreview":"18. Durability?","textChars":15,"textLines":1,"bbox":[664,478,548,32]}
+{"kind":"textbox","id":"sh/zadkfad0","slide":35,"text":"19. Recoverable schedule?","textPreview":"19. Recoverable schedule?","textChars":25,"textLines":1,"bbox":[664,524,548,32]}
+{"kind":"textbox","id":"sh/0fi1wve1","slide":35,"text":"20. Conflict serializability?","textPreview":"20. Conflict serializability?","textChars":29,"textLines":1,"bbox":[664,570,548,32]}
+{"kind":"notes","id":"nt/4j1dau","slide":35,"text":"What to say: Run rapid viva.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/tavtgv","slide":36,"title":"Important questions bank","textShapes":20}
+{"kind":"shape","id":"sh/6lkf2xs7","slide":36,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/tovydsbi","slide":36,"text":"Important questions bank","textPreview":"Important questions bank","textChars":24,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/snmh4nad","slide":36,"text":"Provide two, five and ten-mark practice.","textPreview":"Provide two, five and ten-mark practice.","textChars":40,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/fqdgf2to","slide":36,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ep4z6xs3","slide":36,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/1cvyhcbu","slide":36,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/grmh87a9","slide":36,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/3exgjmt0","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/2dozahsf","slide":36,"text":"1. 2M: Define transaction.","textPreview":"1. 2M: Define transaction.","textChars":26,"textLines":1,"bbox":[78,156,548,32]}
+{"kind":"textbox","id":"sh/c3yxojep","slide":36,"text":"2. 2M: Define dirty read.","textPreview":"2. 2M: Define dirty read.","textChars":25,"textLines":1,"bbox":[78,202,548,32]}
+{"kind":"textbox","id":"sh/x47yxofa","slide":36,"text":"3. 2M: Define commit point.","textPreview":"3. 2M: Define commit point.","textChars":27,"textLines":1,"bbox":[78,248,548,32]}
+{"kind":"textbox","id":"sh/a1gfm9wj","slide":36,"text":"4. 2M: Define system log.","textPreview":"4. 2M: Define system log.","textChars":25,"textLines":1,"bbox":[78,294,548,32]}
+{"kind":"textbox","id":"sh/b2pgvex4","slide":36,"text":"5. 2M: Define serializability.","textPreview":"5. 2M: Define serializability.","textChars":30,"textLines":1,"bbox":[78,340,548,32]}
+{"kind":"textbox","id":"sh/kryxsjel","slide":36,"text":"6. 5M: Explain transaction states.","textPreview":"6. 5M: Explain transaction states.","textChars":34,"textLines":1,"bbox":[78,386,548,32]}
+{"kind":"textbox","id":"sh/lsry1of6","slide":36,"text":"7. 5M: Explain concurrency problems.","textPreview":"7. 5M: Explain concurrency problems.","textChars":36,"textLines":1,"bbox":[78,432,548,32]}
+{"kind":"textbox","id":"sh/y5gfqtwv","slide":36,"text":"8. 5M: Explain recovery need and failures.","textPreview":"8. 5M: Explain recovery need and failures.","textChars":42,"textLines":1,"bbox":[78,478,548,32]}
+{"kind":"textbox","id":"sh/z6pgzex0","slide":36,"text":"9. 5M: Explain ACID.","textPreview":"9. 5M: Explain ACID.","textChars":20,"textLines":1,"bbox":[664,156,548,32]}
+{"kind":"textbox","id":"sh/8vixw3ex","slide":36,"text":"10. 5M: Test conflict serializability.","textPreview":"10. 5M: Test conflict serializability.","textChars":38,"textLines":1,"bbox":[664,202,548,32]}
+{"kind":"textbox","id":"sh/9wry58fi","slide":36,"text":"11. 10M: Explain transaction processing concepts.","textPreview":"11. 10M: Explain transaction processing concepts.","textChars":49,"textLines":1,"bbox":[664,248,548,32]}
+{"kind":"textbox","id":"sh/h036t43a","slide":36,"text":"12. 10M: Explain recoverability classes.","textPreview":"12. 10M: Explain recoverability classes.","textChars":40,"textLines":1,"bbox":[664,294,548,32]}
+{"kind":"textbox","id":"sh/wfu50z2p","slide":36,"text":"13. 10M: Explain serializability with graph test.","textPreview":"13. 10M: Explain serializability with graph test.","textChars":49,"textLines":1,"bbox":[664,340,548,32]}
+{"kind":"textbox","id":"sh/velorul4","slide":36,"text":"14. 10M: Explain SQL transaction support.","textPreview":"14. 10M: Explain SQL transaction support.","textChars":41,"textLines":1,"bbox":[664,386,548,32]}
+{"kind":"textbox","id":"sh/udcnypkj","slide":36,"text":"15. VTU previous question placeholders: fill from past papers.","textPreview":"15. VTU previous question placeholders: fill from past papers.","textChars":62,"textLines":1,"bbox":[664,432,548,32]}
+{"kind":"notes","id":"nt/tavtgv","slide":36,"text":"What to say: Use this as study list.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}
+{"kind":"slide","id":"sl/gvm9eq","slide":37,"title":"One-page revision sheet","textShapes":11}
+{"kind":"shape","id":"sh/hsfapkna","slide":37,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/upore5oz","slide":37,"text":"One-page revision sheet","textPreview":"One-page revision sheet","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/vqxsna5k","slide":37,"text":"End with compact keywords.","textPreview":"End with compact keywords.","textChars":26,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/4f69kf61","slide":37,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/pgzatknm","slide":37,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/itoripov","slide":37,"text":"DBMS | Module 4","textPreview":"DBMS | Module 4","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/3uxsra5g","slide":37,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/kzm98v6x","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/lkvqh072","slide":37,"bbox":[78,176,1124,174]}
+{"kind":"shape","id":"sh/54fi943i","slide":37,"bbox":[78,176,8,174]}
+{"kind":"textbox","id":"sh/k361gzmx","slide":37,"text":"Keywords","textPreview":"Keywords","textChars":8,"textLines":1,"bbox":[100,190,1086,34]}
+{"kind":"textbox","id":"sh/j2x07u5c","slide":37,"text":"Transaction; read_item; write_item; DBMS buffer; single-user; multiuser; lost update; temporary update; dirty read; incorrect summary; unrepeatable read; recovery; system crash; transaction error; local exception; disk failure; active; partially committed; committed; failed; aborted; commit point; system log; undo; redo; ACID; recoverable; cascadeless; strict; serial schedule; nonserial schedule; conflict; precedence graph; SQL COMMIT; ROLLBACK; isolation level; phantom.","textPreview":"Transaction; read_item; write_item; DBMS buffer; single-user; multiuser; lost update; temporary update; dirty read; incorrect summary; un...","textChars":475,"textLines":1,"bbox":[100,230,1086,112]}
+{"kind":"shape","id":"sh/i1oje94r","slide":37,"bbox":[78,388,1124,98]}
+{"kind":"shape","id":"sh/tszido3e","slide":37,"bbox":[78,388,8,98]}
+{"kind":"textbox","id":"sh/srq1kjmt","slide":37,"text":"Exam answer pattern","textPreview":"Exam answer pattern","textChars":19,"textLines":1,"bbox":[100,402,1086,34]}
+{"kind":"textbox","id":"sh/7qx0bel8","slide":37,"text":"For Module 4 answers: draw a timeline for problems, draw state/log/graph for theory, and always connect ACID to recovery or concurrency.","textPreview":"For Module 4 answers: draw a timeline for problems, draw state/log/graph for theory, and always connect ACID to recovery or concurrency.","textChars":136,"textLines":1,"bbox":[100,442,1086,36]}
+{"kind":"shape","id":"sh/65oji943","slide":37,"bbox":[78,530,1124,82]}
+{"kind":"shape","id":"sh/1wz2ho3q","slide":37,"bbox":[78,530,8,82]}
+{"kind":"textbox","id":"sh/gvq1ojm5","slide":37,"text":"Memory trick","textPreview":"Memory trick","textChars":12,"textLines":1,"bbox":[100,544,1086,34]}
+{"kind":"textbox","id":"sh/0zylk7u1","slide":37,"text":"Definition -> diagram -> constraints/rules -> example -> common mistake. This sequence works for almost every DBMS long answer.","textPreview":"Definition -> diagram -> constraints/rules -> example -> common mistake. This sequence works for almost every DBMS long answer.","textChars":127,"textLines":1,"bbox":[100,584,1086,20]}
+{"kind":"notes","id":"nt/gvm9eq","slide":37,"text":"What to say: Close with keyword revision.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_4_NOTES.pdf, Module 4 notes: Transaction Processing, Recovery Need, Transaction States, System Log, ACID, Recoverability, Serializability, SQL Transaction Support."}

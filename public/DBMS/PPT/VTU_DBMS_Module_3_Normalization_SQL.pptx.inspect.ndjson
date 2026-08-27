@@ -1,0 +1,1002 @@
+{"kind":"deck","id":"pr/mpray0","name":"Deck"}
+{"kind":"layout","layoutId":"fda6d2f4-8b67-4f37-ad1b-3829e53dd0d0","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"d16ddf74-231d-45c8-b259-592a07867388","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/jy3qcr","slide":1,"title":"Normalization and SQL","textShapes":8}
+{"kind":"shape","id":"sh/298rypob","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/pczat4nm","slide":1,"text":"Normalization and SQL","textPreview":"Normalization and SQL","textChars":21,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/obq90z61","slide":1,"text":"Module 3 connects good relational design with SQL implementation.","textPreview":"Module 3 connects good relational design with SQL implementation.","textChars":65,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/f6hsna5k","slide":1,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/e5oru5oz","slide":1,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/18zapknq","slide":1,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/07q9wf65","slide":1,"text":"Opening","textPreview":"Opening","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/z21sze5o","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/y1sb69o3","slide":1,"text":"DBMS\nModule 3","textPreview":"DBMS | Module 3","textChars":13,"textLines":2,"bbox":[78,184,640,175]}
+{"kind":"textbox","id":"sh/4v6103uh","slide":1,"text":"Functional dependencies • Normal forms • SQL DDL/DML • Constraints • Queries","textPreview":"Functional dependencies • Normal forms • SQL DDL/DML • Constraints • Queries","textChars":76,"textLines":1,"bbox":[82,388,700,78]}
+{"kind":"shape","id":"sh/5wf298b2","slide":1,"bbox":[790,134,330,330]}
+{"kind":"shape","id":"sh/itojytcb","slide":1,"bbox":[875,220,160,160]}
+{"kind":"textbox","id":"sh/3uxk7ytw","slide":1,"text":"FD\nSQL\n3NF","textPreview":"FD | SQL | 3NF","textChars":10,"textLines":3,"bbox":[814,238,280,125]}
+{"kind":"notes","id":"nt/jy3qcr","slide":1,"text":"What to say: Open by saying Module 2 creates relations; Module 3 checks whether those relations are well designed and implements them in SQL.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/xzydmz","slide":2,"title":"Module 3 learning path","textShapes":17}
+{"kind":"shape","id":"sh/mtsfilc3","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/9g3ydgvu","slide":2,"text":"Module 3 learning path","textPreview":"Module 3 learning path","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/8fahkvu9","slide":2,"text":"Use the supplied notes as the checklist.","textPreview":"Use the supplied notes as the checklist.","textChars":40,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/vilgfqdk","slide":2,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/uhczmlcf","slide":2,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/hk3yh0vq","slide":2,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/wjuhovu5","slide":2,"text":"Opening","textPreview":"Opening","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/jmlgjadw","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ilczq5cb","slide":2,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/grm94v6p","slide":2,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/1sfqx0na","slide":2,"text":"Explain informal design guidelines for relation schemas","textPreview":"Explain informal design guidelines for relation schemas","textChars":55,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/ep4725oz","slide":2,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/fqd8vq5k","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/ov698f61","slide":2,"text":"Explain redundancy, update anomalies, NULLs and spurious tuples","textPreview":"Explain redundancy, update anomalies, NULLs and spurious tuples","textChars":63,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/pgfq1knm","slide":2,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/2tor65ov","slide":2,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/3ux8za5g","slide":2,"text":"Explain functional dependencies and keys","textPreview":"Explain functional dependencies and keys","textChars":40,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/cjq9cf6x","slide":2,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/dkzq5kni","slide":2,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/l0vqpkfm","slide":2,"text":"Explain 1NF, 2NF, 3NF, BCNF, 4NF and 5NF ideas","textPreview":"Explain 1NF, 2NF, 3NF, BCNF, 4NF and 5NF ideas","textChars":46,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/kfmpgfy1","slide":2,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/zed8naxw","slide":2,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/ydk7e5gb","slide":2,"text":"Write SQL DDL, data types and constraints","textPreview":"Write SQL DDL, data types and constraints","textChars":41,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"shape","id":"sh/t4vqtkfy","slide":2,"bbox":[92,453,28,28]}
+{"kind":"textbox","id":"sh/83m9kzyd","slide":2,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,456,28,18]}
+{"kind":"textbox","id":"sh/72d8ruxs","slide":2,"text":"Write SQL SELECT, INSERT, DELETE, UPDATE and additional features","textPreview":"Write SQL SELECT, INSERT, DELETE, UPDATE and additional features","textChars":64,"textLines":1,"bbox":[136,449,996,42]}
+{"kind":"notes","id":"nt/xzydmz","slide":2,"text":"What to say: Preview design quality first, then SQL.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/okoplm","slide":3,"title":"Why normalization matters","textShapes":10}
+{"kind":"shape","id":"sh/cz6lk36d","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ryxkry5s","slide":3,"text":"Why normalization matters","textPreview":"Why normalization matters","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/qxo3ito7","slide":3,"text":"Motivate good relation design.","textPreview":"Motivate good relation design.","textChars":30,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/pwf2pon2","slide":3,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/4v6lgj6h","slide":3,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/3udkne5w","slide":3,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/2943e9ob","slide":3,"text":"Design Quality","textPreview":"Design Quality","textChars":14,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/h8v2l47q","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/g7mlsj65","slide":3,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/q1wjaxs3","slide":3,"text":"Single big table","textPreview":"Single big table","textChars":16,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/r25kj2to","slide":3,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/cne1c7at","slide":3,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/don2lsbe","slide":3,"text":"Repeated facts","textPreview":"Repeated facts","textChars":14,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/2xcj6dsr","slide":3,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/3y5kfitc","slide":3,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/4ze18nax","slide":3,"text":"Update anomalies","textPreview":"Update anomalies","textChars":16,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/p0n2hsbi","slide":3,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/utcj2dsv","slide":3,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/ful0bitg","slide":3,"text":"Decompose relations","textPreview":"Decompose relations","textChars":19,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/jyhgje98","slide":3,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/ix8za98n","slide":3,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/50jylory","slide":3,"text":"Cleaner schema","textPreview":"Cleaner schema","textChars":14,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/okoplm","slide":3,"text":"What to say: Use employee-department repeated department information as example.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/189ypa","slide":4,"title":"Clear semantics of attributes","textShapes":12}
+{"kind":"shape","id":"sh/il4buh47","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/58fu5c3i","slide":4,"text":"Clear semantics of attributes","textPreview":"Clear semantics of attributes","textChars":29,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/k76twrmd","slide":4,"text":"Cover informal guideline 1.","textPreview":"Cover informal guideline 1.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/7axc7mlo","slide":4,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/69obyhk3","slide":4,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/tcfu9w3u","slide":4,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/sb6t0r29","slide":4,"text":"Design Quality","textPreview":"Design Quality","textChars":14,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/fehcb6l0","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/edob21kf","slide":4,"text":"Clear semantics","textPreview":"Clear semantics","textChars":15,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/sjyxs7yt","slide":4,"text":"A relation schema should group attributes that describe one clear entity or relationship meaning.","textPreview":"A relation schema should group attributes that describe one clear entity or relationship meaning.","textChars":97,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/tk7elcfy","slide":4,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/6hwfqhgn","slide":4,"text":"Meaning","textPreview":"Meaning","textChars":7,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/ripwj2x8","slide":4,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/gnyxwryp","slide":4,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/1o7epwfa","slide":4,"text":"Cohesion","textPreview":"Cohesion","textChars":8,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/elgfuhgj","slide":4,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/fmpwnmx4","slide":4,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/obix0ryl","slide":4,"text":"Entity","textPreview":"Entity","textChars":6,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/pcrytwf6","slide":4,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/dw36xs3e","slide":4,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/cvu5o7mt","slide":4,"text":"Relationship","textPreview":"Relationship","textChars":12,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/bulov2l8","slide":4,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/qtcnmx4n","slide":4,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/lkn61c3a","slide":4,"text":"Clarity","textPreview":"Clarity","textChars":7,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/189ypa","slide":4,"text":"What to say: Explain that every tuple should be easy to interpret.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/asuxz2","slide":5,"title":"Redundancy causes anomalies","textShapes":13}
+{"kind":"shape","id":"sh/9ofih472","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/mloz6p8r","slide":5,"text":"Redundancy causes anomalies","textPreview":"Redundancy causes anomalies","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/7mx0fupc","slide":5,"text":"Explain repeated information risk.","textPreview":"Explain repeated information risk.","textChars":34,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/wrqhcjqt","slide":5,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/hczil47e","slide":5,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/upoza98n","slide":5,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/vqh0jep8","slide":5,"text":"Design Quality","textPreview":"Design Quality","textChars":14,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/4fq1gjq5","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/5gzipo7a","slide":5,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/lwbm1obq","slide":5,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/kv258ju5","slide":5,"text":"Redundant facts","textPreview":"Redundant facts","textChars":15,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/zut4zytk","slide":5,"text":"Department name and manager repeated in many employee rows.","textPreview":"Department name and manager repeated in many employee rows.","textChars":59,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/ytkn6tcz","slide":5,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/90vm58bm","slide":5,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/8zm5c3u1","slide":5,"text":"Storage waste","textPreview":"Storage waste","textChars":13,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/7yd43ytg","slide":5,"text":"Same fact stored again and again.","textPreview":"Same fact stored again and again.","textChars":33,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/mxknatcb","slide":5,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/p4rmt4bi","slide":5,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/o3i50zux","slide":5,"text":"Inconsistency","textPreview":"Inconsistency","textChars":13,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/0j6dw365","slide":5,"text":"Some copies may change while others do not.","textPreview":"Some copies may change while others do not.","textChars":43,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/1kfe58na","slide":5,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/ehovutoz","slide":5,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/fixw3y5k","slide":5,"text":"Maintenance effort","textPreview":"Maintenance effort","textChars":18,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/on6d0n61","slide":5,"text":"Every update must find all repeated copies.","textPreview":"Every update must find all repeated copies.","textChars":43,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/asuxz2","slide":5,"text":"What to say: Connect redundancy to the three anomalies.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/3eulg1","slide":6,"title":"Insertion, deletion and modification anomalies","textShapes":13}
+{"kind":"shape","id":"sh/pkfmt8vu","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/2xonydc3","slide":6,"text":"Insertion, deletion and modification anomalies","textPreview":"Insertion, deletion and modification anomalies","textChars":46,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/3yx4rido","slide":6,"text":"Compare anomalies.","textPreview":"Compare anomalies.","textChars":18,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/cnq54nu5","slide":6,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/dozmxsvq","slide":6,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ql8n2dcz","slide":6,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/rmh4vidk","slide":6,"text":"Design Quality","textPreview":"Design Quality","textChars":14,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/srmlsju1","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/tsvmlovm","slide":6,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/dw7yh87q","slide":6,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/svyh8365","slide":6,"text":"Insertion","textPreview":"Insertion","textChars":9,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/rupgfypk","slide":6,"text":"Cannot insert a department unless an employee exists.","textPreview":"Cannot insert a department unless an employee exists.","textChars":53,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/qtgz6toz","slide":6,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/10rilsnm","slide":6,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/0zyhcn61","slide":6,"text":"Deletion","textPreview":"Deletion","textChars":8,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/fypgjipg","slide":6,"text":"Deleting last employee may lose department facts.","textPreview":"Deleting last employee may lose department facts.","textChars":49,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/exgzadov","slide":6,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/poripsni","slide":6,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/onihgn6d","slide":6,"text":"Modification","textPreview":"Modification","textChars":12,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/8jat8vil","slide":6,"text":"Changing department data requires many tuple updates.","textPreview":"Changing department data requires many tuple updates.","textChars":53,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/94ja10z6","slide":6,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/mhsr6l0f","slide":6,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/7i1szqh0","slide":6,"text":"Fix","textPreview":"Fix","textChars":3,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/w7atcfih","slide":6,"text":"Decompose into better relations with dependencies preserved.","textPreview":"Decompose into better relations with dependencies preserved.","textChars":60,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/3eulg1","slide":6,"text":"What to say: Use EMP_DEPT from notes.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/0qmcs0","slide":7,"title":"NULL values should be exceptional","textShapes":12}
+{"kind":"shape","id":"sh/axofux8z","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/x0fe5crq","slide":7,"text":"NULL values should be exceptional","textPreview":"NULL values should be exceptional","textChars":33,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/wz6xw7q5","slide":7,"text":"Explain NULL problems.","textPreview":"Explain NULL problems.","textChars":22,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/j2xw7m9w","slide":7,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/y1ofyh8b","slide":7,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/l4fe9wrm","slide":7,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/k36x0rqh","slide":7,"text":"Design Quality","textPreview":"Design Quality","textChars":14,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/z6dwvi9c","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/e5kvmd87","slide":7,"text":"NULL","textPreview":"NULL","textChars":4,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/oru5k3mp","slide":7,"text":"NULL may mean not applicable, unknown, or known but absent; too many NULLs make queries and meaning unclear.","textPreview":"NULL may mean not applicable, unknown, or known but absent; too many NULLs make queries and meaning unclear.","textChars":108,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/9s36t83a","slide":7,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/m5cnit4j","slide":7,"text":"Not applicable","textPreview":"Not applicable","textChars":14,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/n6loryl4","slide":7,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/wvu5onml","slide":7,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/xwn6xs36","slide":7,"text":"Unknown","textPreview":"Unknown","textChars":7,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/atcnmd4f","slide":7,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/bulovil0","slide":7,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/cza5cjmh","slide":7,"text":"Absent","textPreview":"Absent","textChars":6,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/d0jmlo32","slide":7,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/twb29kvq","slide":7,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/sv2lgfe5","slide":7,"text":"Query logic","textPreview":"Query logic","textChars":11,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/rutk7adk","slide":7,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/6t03e5wz","slide":7,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/1kbmdkvm","slide":7,"text":"Avoid excess","textPreview":"Avoid excess","textChars":12,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/0qmcs0","slide":7,"text":"What to say: Ask students why NULL is not the same as zero or blank string.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/3ngg4y","slide":8,"title":"Spurious tuples reveal bad decomposition","textShapes":12}
+{"kind":"shape","id":"sh/ax8zidor","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/x0jidsn2","slide":8,"text":"Spurious tuples reveal bad decomposition","textPreview":"Spurious tuples reveal bad decomposition","textChars":40,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/wzahkn6h","slide":8,"text":"Explain join error.","textPreview":"Explain join error.","textChars":19,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/nuh07i50","slide":8,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/m98zedof","slide":8,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/9wzi9sn6","slide":8,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/8vqhgn6l","slide":8,"text":"Design Quality","textPreview":"Design Quality","textChars":14,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/7ql0j254","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/6pcjqx4z","slide":8,"text":"Spurious tuple","textPreview":"Spurious tuple","textChars":14,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/4ry5cfml","slide":8,"text":"A spurious tuple is an incorrect extra tuple produced when decomposed relations are joined back improperly.","textPreview":"A spurious tuple is an incorrect extra tuple produced when decomposed relations are joined back improperly.","textChars":107,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/5srm5k3q","slide":8,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/ipg3a54f","slide":8,"text":"Decomposition","textPreview":"Decomposition","textChars":13,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/jqp43al0","slide":8,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/wnyl8fm9","slide":8,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/ho7m103u","slide":8,"text":"Join","textPreview":"Join","textChars":4,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/ulg36543","slide":8,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/vmp4zalo","slide":8,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/8zel4vmd","slide":8,"text":"Lossless","textPreview":"Lossless","textChars":8,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/907mx0ny","slide":8,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/9gf21wfm","slide":8,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/of61sre1","slide":8,"text":"Incorrect rows","textPreview":"Incorrect rows","textChars":14,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/nuxkzmxg","slide":8,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/mtojqhwv","slide":8,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/1sf2xcfa","slide":8,"text":"Design error","textPreview":"Design error","textChars":12,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/3ngg4y","slide":8,"text":"What to say: Explain that decomposition must allow correct reconstruction.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/rtxvif","slide":9,"title":"Functional dependency is the design rule","textShapes":12}
+{"kind":"shape","id":"sh/rul876pw","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/svu9grqh","slide":9,"text":"Functional dependency is the design rule","textPreview":"Functional dependency is the design rule","textChars":40,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/dw3q9w72","slide":9,"text":"Define FD.","textPreview":"Define FD.","textChars":10,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/i5s7ah8f","slide":9,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/36l83mp0","slide":9,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/47upcrql","slide":9,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/5s3q5w76","slide":9,"text":"Dependencies","textPreview":"Dependencies","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/21wrml8j","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/n258fqp4","slide":9,"text":"Functional dependency","textPreview":"Functional dependency","textChars":21,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/vm18fqlc","slide":9,"text":"X → Y means that if two tuples agree on attribute set X, they must also agree on attribute set Y.","textPreview":"X → Y means that if two tuples agree on attribute set X, they must also agree on attribute set Y.","textChars":97,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/uls7ml47","slide":9,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/ho3qh03i","slide":9,"text":"X determines Y","textPreview":"X determines Y","textChars":14,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/wnapovmx","slide":9,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/jal8jqlo","slide":9,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/i9c7qlk3","slide":9,"text":"Constraint","textPreview":"Constraint","textChars":10,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/5c3ql03u","slide":9,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/4bupsv29","slide":9,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/rel8nalk","slide":9,"text":"Keys","textPreview":"Keys","textChars":4,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/6dc7u5kz","slide":9,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/2l0j2t8j","slide":9,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/nm9kby94","slide":9,"text":"Normalization","textPreview":"Normalization","textChars":13,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/oni143qp","slide":9,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/por2d8ra","slide":9,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/ehgjytsn","slide":9,"text":"Semantics","textPreview":"Semantics","textChars":9,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/rtxvif","slide":9,"text":"What to say: Use USN determines student name.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/cuej5e","slide":10,"title":"Full, partial, transitive and trivial FDs","textShapes":13}
+{"kind":"shape","id":"sh/1sfqt0b2","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/epori5sb","slide":10,"text":"Full, partial, transitive and trivial FDs","textPreview":"Full, partial, transitive and trivial FDs","textChars":41,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/fqx8ratw","slide":10,"text":"Cover dependency types.","textPreview":"Cover dependency types.","textChars":23,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/ovq9ofat","slide":10,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/pwzqxkby","slide":10,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/2t8rm5sn","slide":10,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/nuh8vat8","slide":10,"text":"Dependencies","textPreview":"Dependencies","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/4zmpcbu9","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/50vqlgbu","slide":10,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/1gbulwne","slide":10,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/gf2dcr69","slide":10,"text":"Full FD","textPreview":"Full FD","textChars":7,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/fetcjm5o","slide":10,"text":"Removing any attribute from determinant breaks dependency.","textPreview":"Removing any attribute from determinant breaks dependency.","textChars":58,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/etkbaho3","slide":10,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/pkvupwnq","slide":10,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/ojmdgbm5","slide":10,"text":"Partial FD","textPreview":"Partial FD","textChars":10,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/3itcn65k","slide":10,"text":"Some attribute can be removed and dependency still holds.","textPreview":"Some attribute can be removed and dependency still holds.","textChars":57,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/2hkve1oz","slide":10,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/dovutgnm","slide":10,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/cnmdkbm1","slide":10,"text":"Transitive FD","textPreview":"Transitive FD","textChars":13,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/wruxgfud","slide":10,"text":"X → Y and Y → Z imply X determines Z indirectly.","textPreview":"X → Y and Y → Z imply X determines Z indirectly.","textChars":48,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/xs3epkvy","slide":10,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/apcfepc7","slide":10,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/bqlwnads","slide":10,"text":"Trivial FD","textPreview":"Trivial FD","textChars":10,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/kvexkzup","slide":10,"text":"Y is subset of X, so X → Y is always true.","textPreview":"Y is subset of X, so X → Y is always true.","textChars":42,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/cuej5e","slide":10,"text":"What to say: These terms drive 2NF and 3NF.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/vx7rzi","slide":11,"title":"Keys and prime attributes","textShapes":13}
+{"kind":"shape","id":"sh/07y1c3e9","slide":11,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/z6pkjyx4","slide":11,"text":"Keys and prime attributes","textPreview":"Keys and prime attributes","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/y5gjatwj","slide":11,"text":"Explain key vocabulary for normalization.","textPreview":"Explain key vocabulary for normalization.","textChars":41,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/9wr2p8f6","slide":11,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/8bi1g3el","slide":11,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/na9knyx0","slide":11,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/m90jetwf","slide":11,"text":"Dependencies","textPreview":"Dependencies","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/x0b2tsf2","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/wzilkneh","slide":11,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/q9onqt07","slide":11,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/raxojehs","slide":11,"text":"Superkey","textPreview":"Superkey","textChars":8,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/cb65sjid","slide":11,"text":"Uniquely identifies tuples.","textPreview":"Uniquely identifies tuples.","textChars":27,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/dcf6lozy","slide":11,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/edonut0j","slide":11,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/zehonyho","slide":11,"text":"Candidate key","textPreview":"Candidate key","textChars":13,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/0fq5w3i9","slide":11,"text":"Minimal superkey.","textPreview":"Minimal superkey.","textChars":17,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/1gz6p8zu","slide":11,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/uh4ni90z","slide":11,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/fid4buhk","slide":11,"text":"Primary key","textPreview":"Primary key","textChars":11,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/jm9kjaxc","slide":11,"text":"Chosen candidate key.","textPreview":"Chosen candidate key.","textChars":21,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/yl03q5gr","slide":11,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/lob2l0fi","slide":11,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/knilsvyx","slide":11,"text":"Prime attribute","textPreview":"Prime attribute","textChars":15,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/bi9kfqxg","slide":11,"text":"Attribute that is part of some candidate key.","textPreview":"Attribute that is part of some candidate key.","textChars":45,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/vx7rzi","slide":11,"text":"What to say: Mention nonprime attributes in 2NF/3NF definitions.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/b1ubyo","slide":12,"title":"Normalization as a sequence","textShapes":10}
+{"kind":"shape","id":"sh/0365k3u9","slide":12,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/f2xobyto","slide":12,"text":"Normalization as a sequence","textPreview":"Normalization as a sequence","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/e1onitcj","slide":12,"text":"Show normal form progression.","textPreview":"Show normal form progression.","textChars":29,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/psz6h8b6","slide":12,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/orqpo3al","slide":12,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/n6hofit0","slide":12,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/2587mdcf","slide":12,"text":"Normal Forms","textPreview":"Normal Forms","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/5wv65obm","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/4vm5cju1","slide":12,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/u1sbq14b","slide":12,"text":"Unnormalized","textPreview":"Unnormalized","textChars":12,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/f21cz65w","slide":12,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/g3atsrmh","slide":12,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/h43u1wn2","slide":12,"text":"1NF","textPreview":"1NF","textChars":3,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/25cbu14n","slide":12,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/36lc3658","slide":12,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/4rutwbmd","slide":12,"text":"2NF","textPreview":"2NF","textChars":3,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/ps3u5gny","slide":12,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/qtcbyl4j","slide":12,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/rulc7q54","slide":12,"text":"3NF","textPreview":"3NF","textChars":3,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/ny5sfq1c","slide":12,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/mxwbmlkr","slide":12,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/90nahgji","slide":12,"text":"BCNF / 4NF / 5NF","textPreview":"BCNF / 4NF / 5NF","textChars":16,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/b1ubyo","slide":12,"text":"What to say: Explain each stage removes a class of design problem.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/u40gzn","slide":13,"title":"First Normal Form","textShapes":12}
+{"kind":"shape","id":"sh/axs76pk3","slide":13,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/xkjqhk3e","slide":13,"text":"First Normal Form","textPreview":"First Normal Form","textChars":17,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/wzap8z2t","slide":13,"text":"Explain 1NF.","textPreview":"Explain 1NF.","textChars":12,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/nuhobalc","slide":13,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/mt8725kr","slide":13,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/9wj6dk3i","slide":13,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/8vap4f2x","slide":13,"text":"Normal Forms","textPreview":"Normal Forms","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/7ql8ne1w","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/6pc7e9kb","slide":13,"text":"1NF","textPreview":"1NF","textChars":3,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/grq9cb6d","slide":13,"text":"A relation is in First Normal Form when every attribute value is atomic and repeating groups or multivalued attributes are removed.","textPreview":"A relation is in First Normal Form when every attribute value is atomic and repeating groups or multivalued attributes are removed.","textChars":131,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/hszqlg7i","slide":13,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/u58ra1o7","slide":13,"text":"Atomic","textPreview":"Atomic","textChars":6,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/fqh8j6ps","slide":13,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/s3698r61","slide":13,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/t4fqhw7m","slide":13,"text":"No repeating groups","textPreview":"No repeating groups","textChars":19,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/61or61ov","slide":13,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/72x8fmpg","slide":13,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/kz694rq5","slide":13,"text":"No multivalued cells","textPreview":"No multivalued cells","textChars":20,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/50fqdw7q","slide":13,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/lw7618ze","slide":13,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/kvyp8nit","slide":13,"text":"Separate relation","textPreview":"Separate relation","textChars":17,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/zupozih8","slide":13,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/ytg76d0n","slide":13,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/xsn6x8z2","slide":13,"text":"Primary key","textPreview":"Primary key","textChars":11,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/u40gzn","slide":13,"text":"What to say: Use department locations as multivalued attribute.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/4z7xm5","slide":14,"title":"How to remove 1NF violations","textShapes":11}
+{"kind":"shape","id":"sh/rydgzm54","slide":14,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/szmh8r6p","slide":14,"text":"How to remove 1NF violations","textPreview":"How to remove 1NF violations","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/d0vy1wna","slide":14,"text":"Cover strategies from notes.","textPreview":"Cover strategies from notes.","textChars":28,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/e14za14v","slide":14,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/f2dg365g","slide":14,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/036hcrm1","slide":14,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/14fy5wnm","slide":14,"text":"Normal Forms","textPreview":"Normal Forms","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/u5kfyxor","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/v6tgr25c","slide":14,"bbox":[90,215,320,260]}
+{"kind":"shape","id":"sh/bit8ry98","slide":14,"bbox":[90,215,8,260]}
+{"kind":"textbox","id":"sh/ahkritsn","slide":14,"text":"Separate relation","textPreview":"Separate relation","textChars":17,"textLines":1,"bbox":[112,229,282,34]}
+{"kind":"textbox","id":"sh/xkbat8re","slide":14,"text":"Move multivalued attribute into a new relation.","textPreview":"Move multivalued attribute into a new relation.","textChars":47,"textLines":1,"bbox":[112,269,282,198]}
+{"kind":"shape","id":"sh/wj29k3at","slide":14,"bbox":[470,215,320,260]}
+{"kind":"shape","id":"sh/nu98nytc","slide":14,"bbox":[470,215,8,260]}
+{"kind":"textbox","id":"sh/mt0retsr","slide":14,"text":"Expand key","textPreview":"Expand key","textChars":10,"textLines":1,"bbox":[492,229,282,34]}
+{"kind":"textbox","id":"sh/9wbqpob2","slide":14,"text":"Create separate tuples for each repeated value.","textPreview":"Create separate tuples for each repeated value.","textChars":47,"textLines":1,"bbox":[492,269,282,198]}
+{"kind":"shape","id":"sh/ov29g3ah","slide":14,"bbox":[850,215,320,260]}
+{"kind":"shape","id":"sh/zq98jet0","slide":14,"bbox":[850,215,8,260]}
+{"kind":"textbox","id":"sh/ep0ra9sf","slide":14,"text":"Fixed attributes","textPreview":"Fixed attributes","textChars":16,"textLines":1,"bbox":[872,229,282,34]}
+{"kind":"textbox","id":"sh/2lgrm9c7","slide":14,"text":"Use multiple attributes only when maximum count is known, though this is less flexible.","textPreview":"Use multiple attributes only when maximum count is known, though this is less flexible.","textChars":87,"textLines":1,"bbox":[872,269,282,198]}
+{"kind":"notes","id":"nt/4z7xm5","slide":14,"text":"What to say: Explain why separate relation is usually cleanest.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/8nf60i","slide":15,"title":"Second Normal Form","textShapes":12}
+{"kind":"shape","id":"sh/dgru9gri","slide":15,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/qdgbyls7","slide":15,"text":"Second Normal Form","textPreview":"Second Normal Form","textChars":18,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/reps769c","slide":15,"text":"Explain 2NF.","textPreview":"Explain 2NF.","textChars":12,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/4bytwba1","slide":15,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/5c7a5grm","slide":15,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ipgbu1sv","slide":15,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/3qps369g","slide":15,"text":"Normal Forms","textPreview":"Normal Forms","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/o7it8va5","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/p8buh0rq","slide":15,"text":"2NF","textPreview":"2NF","textChars":3,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/58vm5wvu","slide":15,"text":"A relation is in 2NF when it is in 1NF and every nonprime attribute is fully functionally dependent on the whole candidate key.","textPreview":"A relation is in 2NF when it is in 1NF and every nonprime attribute is fully functionally dependent on the whole candidate key.","textChars":127,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/47m5cre9","slide":15,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/j6d43mdo","slide":15,"text":"1NF","textPreview":"1NF","textChars":3,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/i543ahw3","slide":15,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/hkbmhcvi","slide":15,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/wj2l87ex","slide":15,"text":"Full dependency","textPreview":"Full dependency","textChars":15,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/vit4f2dc","slide":15,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/uhk36hw7","slide":15,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/1gfmdgvm","slide":15,"text":"No partial dependency","textPreview":"No partial dependency","textChars":21,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/gf65kbeh","slide":15,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/kvyxwj6p","slide":15,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/lw7y5o7a","slide":15,"text":"Composite key","textPreview":"Composite key","textChars":13,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/ytwfu9oj","slide":15,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/zupg3ep4","slide":15,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/crexsz6t","slide":15,"text":"Nonprime","textPreview":"Nonprime","textChars":8,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/8nf60i","slide":15,"text":"What to say: 2NF matters mainly when candidate key is composite.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/ylnxvx","slide":16,"title":"2NF removes partial dependency","textShapes":10}
+{"kind":"shape","id":"sh/t0vqd4fa","slide":16,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/6x47ipwz","slide":16,"text":"2NF removes partial dependency","textPreview":"2NF removes partial dependency","textChars":30,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/7yd8buxk","slide":16,"text":"Show the process.","textPreview":"Show the process.","textChars":17,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/g3m9oze1","slide":16,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/h4vqh4fm","slide":16,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/u147m9wv","slide":16,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/f2d8fuxg","slide":16,"text":"Normal Forms","textPreview":"Normal Forms","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/4r69sjex","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/psfqlovi","slide":16,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/x0radonq","slide":16,"text":"Find composite key","textPreview":"Find composite key","textChars":18,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/czi9kjm5","slide":16,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/by9sbe5k","slide":16,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/axgri94z","slide":16,"text":"Find nonprime attributes","textPreview":"Find nonprime attributes","textChars":24,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/lorahonm","slide":16,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/k3i9ojm1","slide":16,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/j29sfy5w","slide":16,"text":"Detect partial dependency","textPreview":"Detect partial dependency","textChars":25,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/y10rmt4b","slide":16,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/1s7q54ni","slide":16,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/07y9czmx","slide":16,"text":"Move dependent attributes","textPreview":"Move dependent attributes","textChars":25,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/sb29szut","slide":16,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/tcbal4ve","slide":16,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/690rqpcn","slide":16,"text":"Create proper relation","textPreview":"Create proper relation","textChars":22,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/ylnxvx","slide":16,"text":"What to say: Use CourseName depending on CourseNo not full student-course key.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/tx9rkd","slide":17,"title":"Third Normal Form","textShapes":12}
+{"kind":"shape","id":"sh/qd0vi1wf","slide":17,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/dgrutwf6","slide":17,"text":"Third Normal Form","textPreview":"Third Normal Form","textChars":17,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/cfidkrel","slide":17,"text":"Explain 3NF.","textPreview":"Explain 3NF.","textChars":12,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/zitcv6xw","slide":17,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/eh0vm1wr","slide":17,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/1kbuxgf2","slide":17,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/0j2dobeh","slide":17,"text":"Normal Forms","textPreview":"Normal Forms","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/fmpcjmxs","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/ulgbahg7","slide":17,"text":"3NF","textPreview":"3NF","textChars":3,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/8n29gvqh","slide":17,"text":"A relation is in 3NF when it is in 2NF and no nonprime attribute depends transitively on a key through another nonprime attribute.","textPreview":"A relation is in 3NF when it is in 2NF and no nonprime attribute depends transitively on a key through another nonprime attribute.","textChars":130,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/9ovq9072","slide":17,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/mlkre58r","slide":17,"text":"2NF","textPreview":"2NF","textChars":3,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/nmt87qpc","slide":17,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/wbm9kfqt","slide":17,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/xcvadk7e","slide":17,"text":"No transitive dependency","textPreview":"No transitive dependency","textChars":24,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/ap4ri58n","slide":17,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/vqdsbap8","slide":17,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/cfi98bqp","slide":17,"text":"Nonprime","textPreview":"Nonprime","textChars":8,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/dgbq1g7u","slide":17,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/tc365cjy","slide":17,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/sbapc7id","slide":17,"text":"Candidate key","textPreview":"Candidate key","textChars":13,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/ra1o321s","slide":17,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/69s7ax07","slide":17,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/1g369cju","slide":17,"text":"Dependency preservation","textPreview":"Dependency preservation","textChars":23,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/tx9rkd","slide":17,"text":"What to say: Use DeptNo determines DeptName while EmpNo determines DeptNo.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/jkjzm4","slide":18,"title":"BCNF is stricter than 3NF","textShapes":12}
+{"kind":"shape","id":"sh/kv6p0jud","slide":18,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/jux8rets","slide":18,"text":"BCNF is stricter than 3NF","textPreview":"BCNF is stricter than 3NF","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/yto7y9c7","slide":18,"text":"Explain BCNF.","textPreview":"Explain BCNF.","textChars":13,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/tkzqxobu","slide":18,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/8zqp4jup","slide":18,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/7yh8vet4","slide":18,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/6xo729cj","slide":18,"text":"Normal Forms","textPreview":"Normal Forms","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/9ov6lkbq","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/o3mpszu5","slide":18,"text":"BCNF","textPreview":"BCNF","textChars":4,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/qdw72pcz","slide":18,"text":"A relation is in Boyce-Codd Normal Form when every nontrivial functional dependency X → Y has X as a superkey.","textPreview":"A relation is in Boyce-Codd Normal Form when every nontrivial functional dependency X → Y has X as a superkey.","textChars":110,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/re58budk","slide":18,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/sfep4fu5","slide":18,"text":"Nontrivial FD","textPreview":"Nontrivial FD","textChars":13,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/dgnqdkvq","slide":18,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/ehwr6pcb","slide":18,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/fi58fudg","slide":18,"text":"Determinant","textPreview":"Determinant","textChars":11,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/0jy98zu1","slide":18,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/1k7qh4vm","slide":18,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/2lgra9c7","slide":18,"text":"Superkey","textPreview":"Superkey","textChars":8,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/nmp8jeds","slide":18,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/jap8re90","slide":18,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/ypg7y9sf","slide":18,"text":"Stricter","textPreview":"Stricter","textChars":8,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/lcrqtorq","slide":18,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/kbip0ja5","slide":18,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/bmponuto","slide":18,"text":"Anomaly control","textPreview":"Anomaly control","textChars":15,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/jkjzm4","slide":18,"text":"What to say: Explain BCNF can require decomposition when overlapping candidate keys exist.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/0sq14t","slide":19,"title":"3NF vs BCNF","textShapes":23}
+{"kind":"shape","id":"sh/juxc7yds","slide":19,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/kvqdg3ed","slide":19,"text":"3NF vs BCNF","textPreview":"3NF vs BCNF","textChars":11,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/5wzu98vy","slide":19,"text":"Compare definitions.","textPreview":"Compare definitions.","textChars":20,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/a5obatwb","slide":19,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/v6xc3ydw","slide":19,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/w76dc3eh","slide":19,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/xsfu58v2","slide":19,"text":"Normal Forms","textPreview":"Normal Forms","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/u18vmxcf","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/f21cf2d0","slide":19,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/nat0365w","slide":19,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/29kza14r","slide":19,"text":"3NF","textPreview":"3NF","textChars":3,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/pcbi5gn2","slide":19,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/ob2hcbmh","slide":19,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/byd07q58","slide":19,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/adkzel4n","slide":19,"text":"BCNF","textPreview":"BCNF","textChars":4,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/x0vi9gne","slide":19,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/czmhgbmt","slide":19,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/z2d0bq54","slide":19,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/y14zil4j","slide":19,"text":"Allows exception for prime attributes","textPreview":"Allows exception for prime attributes","textChars":37,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/uxo3apor","slide":19,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/vyhkjupc","slide":19,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/gzqlcz6x","slide":19,"text":"Often preserves dependencies","textPreview":"Often preserves dependencies","textChars":28,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/h0z2l47i","slide":19,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/mtoj6pov","slide":19,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/7uxkfapg","slide":19,"text":"Less strict than BCNF","textPreview":"Less strict than BCNF","textChars":21,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/8v6l8f61","slide":19,"bbox":[110,407,28,28]}
+{"kind":"textbox","id":"sh/twf2hk7m","slide":19,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[110,410,28,18]}
+{"kind":"textbox","id":"sh/qps3i9oz","slide":19,"text":"Common design target","textPreview":"Common design target","textChars":20,"textLines":1,"bbox":[154,403,396,42]}
+{"kind":"shape","id":"sh/rq1krepk","slide":19,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/1k36h8rm","slide":19,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/0ju583qh","slide":19,"text":"Every determinant must be superkey","textPreview":"Every determinant must be superkey","textChars":34,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/filofy9w","slide":19,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/ehcn6t8b","slide":19,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/dwjmd8rq","slide":19,"text":"Removes more anomalies","textPreview":"Removes more anomalies","textChars":22,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/sva543q5","slide":19,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/ru14by9k","slide":19,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/qtsn2t8z","slide":19,"text":"May lose dependency preservation","textPreview":"May lose dependency preservation","textChars":32,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"shape","id":"sh/xsn6psru","slide":19,"bbox":[718,407,28,28]}
+{"kind":"textbox","id":"sh/cre5gnqp","slide":19,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[718,410,28,18]}
+{"kind":"textbox","id":"sh/4v2dgnq5","slide":19,"text":"Stronger normal form","textPreview":"Stronger normal form","textChars":20,"textLines":1,"bbox":[762,403,396,42]}
+{"kind":"notes","id":"nt/0sq14t","slide":19,"text":"What to say: Use this for exam comparison.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/aqwrv3","slide":20,"title":"Fourth Normal Form","textShapes":12}
+{"kind":"shape","id":"sh/eh0fa1kv","slide":20,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/1kbylgjm","slide":20,"text":"Fourth Normal Form","textPreview":"Fourth Normal Form","textChars":18,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/0jixcb21","slide":20,"text":"Introduce multivalued dependencies.","textPreview":"Introduce multivalued dependencies.","textChars":35,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/re9wfm1k","slide":20,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/qd0f61kz","slide":20,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/dgryhwjq","slide":20,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/sfix8r25","slide":20,"text":"Normal Forms","textPreview":"Normal Forms","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/batgrq1o","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/a9kfil03","slide":20,"text":"4NF","textPreview":"4NF","textChars":3,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/wfy1krup","slide":20,"text":"A relation is in 4NF when every nontrivial multivalued dependency has a determinant that is a superkey.","textPreview":"A relation is in 4NF when every nontrivial multivalued dependency has a determinant that is a superkey.","textChars":103,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/hg7idwbu","slide":20,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/udgji1cj","slide":20,"text":"Multivalued dependency","textPreview":"Multivalued dependency","textChars":22,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/vep0bmt4","slide":20,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/8be1grud","slide":20,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/9c7i9wby","slide":20,"text":"Independent facts","textPreview":"Independent facts","textChars":17,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/mpwjehc7","slide":20,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/7q507mts","slide":20,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/kne1c7uh","slide":20,"text":"Superkey","textPreview":"Superkey","textChars":8,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/loni5cb2","slide":20,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/18vqt4je","slide":20,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/g7mpkzit","slide":20,"text":"Decomposition","textPreview":"Decomposition","textChars":13,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/f6d8re18","slide":20,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/e547i903","slide":20,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/t4v6p4ji","slide":20,"text":"No repetition","textPreview":"No repetition","textChars":13,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/aqwrv3","slide":20,"text":"What to say: Explain independent multivalued facts create combinations.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/zj4vcv","slide":21,"title":"Fifth Normal Form","textShapes":12}
+{"kind":"shape","id":"sh/ry1g76t8","slide":21,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/sjaxgbat","slide":21,"text":"Fifth Normal Form","textPreview":"Fifth Normal Form","textChars":17,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/tkjy9gbe","slide":21,"text":"Introduce join dependencies.","textPreview":"Introduce join dependencies.","textChars":28,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/elsfilsz","slide":21,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/fmlgbqtk","slide":21,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/gnuxkba5","slide":21,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/1o3ydgba","slide":21,"text":"Normal Forms","textPreview":"Normal Forms","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/2pcfmlsv","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/3qlgfqtg","slide":21,"text":"5NF","textPreview":"5NF","textChars":3,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/zyl0zi5s","slide":21,"text":"A relation is in 5NF when every nontrivial join dependency is implied by candidate keys.","textPreview":"A relation is in 5NF when every nontrivial join dependency is implied by candidate keys.","textChars":88,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/excz6do7","slide":21,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/1k3i1sny","slide":21,"text":"Join dependency","textPreview":"Join dependency","textChars":15,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/0zuh8n6d","slide":21,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/ru10vipw","slide":21,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/qtsz2dob","slide":21,"text":"Lossless decomposition","textPreview":"Lossless decomposition","textChars":22,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/dw3ixsnm","slide":21,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/cvuh4n6h","slide":21,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/bq507250","slide":21,"text":"Projection-join","textPreview":"Projection-join","textChars":15,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/apwjexof","slide":21,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/6l03618n","slide":21,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/7m9kz6p8","slide":21,"text":"Candidate keys","textPreview":"Candidate keys","textChars":14,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/8nil8bqt","slide":21,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/tor21g7e","slide":21,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/up03al8z","slide":21,"text":"Rare but precise","textPreview":"Rare but precise","textChars":16,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/zj4vcv","slide":21,"text":"What to say: Keep 5NF conceptual; students need purpose and definition.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/wuw4xh","slide":22,"title":"SQL implements relational schemas","textShapes":10}
+{"kind":"shape","id":"sh/zeh0bu98","slide":22,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/kfq1kzat","slide":22,"text":"SQL implements relational schemas","textPreview":"SQL implements relational schemas","textChars":33,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/lgzid4re","slide":22,"text":"Transition from design to SQL.","textPreview":"Transition from design to SQL.","textChars":30,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/apozepsr","slide":22,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/bqx07u9c","slide":22,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/cr6hgzax","slide":22,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/xsfi94r2","slide":22,"text":"SQL DDL","textPreview":"SQL DDL","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/ulsjqtsv","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/vm10je9g","slide":22,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/f2x0b29k","slide":22,"text":"Choose relations","textPreview":"Choose relations","textChars":16,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/u14j2xsz","slide":22,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/h4fidcra","slide":22,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/g36147a5","slide":22,"text":"Choose domains","textPreview":"Choose domains","textChars":14,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/36x0fm9g","slide":22,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/25oj6h8v","slide":22,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/psfihcrm","slide":22,"text":"Declare keys","textPreview":"Declare keys","textChars":12,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/47618rq1","slide":22,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/ruh0jm9s","slide":22,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/qtojah87","slide":22,"text":"Declare foreign keys","textPreview":"Declare foreign keys","textChars":20,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/m1cvypwr","slide":22,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/n2lcruxw","slide":22,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/83ud0zeh","slide":22,"text":"Run SQL DDL","textPreview":"Run SQL DDL","textChars":11,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/wuw4xh","slide":22,"text":"What to say: Explain SQL DDL turns design into database objects.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/1n9mot","slide":23,"title":"CREATE TABLE pattern","textShapes":8}
+{"kind":"shape","id":"sh/kfuh4fyd","slide":23,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/jelgbaxs","slide":23,"text":"CREATE TABLE pattern","textPreview":"CREATE TABLE pattern","textChars":20,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/idczi5g7","slide":23,"text":"Show SQL table creation.","textPreview":"Show SQL table creation.","textChars":24,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/tknyhkfu","slide":23,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/sjeh8fy9","slide":23,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/7ilgfaxo","slide":23,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/6hcz6pg3","slide":23,"text":"SQL DDL","textPreview":"SQL DDL","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/h8nil4fq","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/g7ehczy5","slide":23,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/6tgvq50n","slide":23,"text":"CREATE TABLE STUDENT (\n  USN CHAR(10) PRIMARY KEY,\n  Name VARCHAR(40) NOT NULL,\n  DeptNo INT,\n  CGPA DECIMAL(3,2),\n  FOREIGN KEY (DeptNo)\n    REFERENCES DEPARTMENT(DeptNo)\n);","textPreview":"CREATE TABLE STUDENT ( |   USN CHAR(10) PRIMARY KEY, |   Name VARCHAR(40) NOT NULL, |   DeptNo INT, |   CGPA DECIMAL(3,2), |   FOREIGN KE...","textChars":174,"textLines":8,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/7u9wja18","slide":23,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/svidsfid","slide":23,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/twrelkjy","slide":23,"text":"CREATE TABLE","textPreview":"CREATE TABLE","textChars":12,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/ux0vup0j","slide":23,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/1n9mot","slide":23,"text":"What to say: Point to attribute declarations, primary key and foreign key.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/npv6xe","slide":24,"title":"SQL data types","textShapes":13}
+{"kind":"shape","id":"sh/tknip0fu","slide":24,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/6hczulw3","slide":24,"text":"SQL data types","textPreview":"SQL data types","textChars":14,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/7i50nqxo","slide":24,"text":"Cover type categories.","textPreview":"Cover type categories.","textChars":22,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/kfuhsbyx","slide":24,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/lg3ilgfi","slide":24,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ytczq1g7","slide":24,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/jul0j6xs","slide":24,"text":"SQL DDL","textPreview":"SQL DDL","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/wruhoby1","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/xs3ihgfm","slide":24,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/lory90nq","slide":24,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/knihgv65","slide":24,"text":"Numeric","textPreview":"Numeric","textChars":7,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/zm9g7q5k","slide":24,"text":"INTEGER, SMALLINT, DECIMAL, FLOAT and related numeric types.","textPreview":"INTEGER, SMALLINT, DECIMAL, FLOAT and related numeric types.","textChars":60,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/ylgzeloz","slide":24,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/xk7y50ne","slide":24,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/cjyhcv6t","slide":24,"text":"Character string","textPreview":"Character string","textChars":16,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/bipg3q5o","slide":24,"text":"CHAR and VARCHAR for fixed or variable strings.","textPreview":"CHAR and VARCHAR for fixed or variable strings.","textChars":47,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/axgfalo3","slide":24,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/pw7y1gni","slide":24,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/ovyx8b6x","slide":24,"text":"Bit / Boolean","textPreview":"Bit / Boolean","textChars":13,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/0b2p4fi5","slide":24,"text":"Bit strings and TRUE/FALSE values where supported.","textPreview":"Bit strings and TRUE/FALSE values where supported.","textChars":50,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/1cbqdkjq","slide":24,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/e9k7i50z","slide":24,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/fat8ba1k","slide":24,"text":"Date/time","textPreview":"Date/time","textChars":9,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/sn2pgvit","slide":24,"text":"DATE, TIME, TIMESTAMP and INTERVAL values.","textPreview":"DATE, TIME, TIMESTAMP and INTERVAL values.","textChars":42,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/npv6xe","slide":24,"text":"What to say: Explain domains become SQL types and constraints.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/9zpr1z","slide":25,"title":"Attribute constraints and defaults","textShapes":13}
+{"kind":"shape","id":"sh/4zmpsfy5","slide":25,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/3yd8jah0","slide":25,"text":"Attribute constraints and defaults","textPreview":"Attribute constraints and defaults","textChars":34,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/2xk7q5gf","slide":25,"text":"Cover NOT NULL, DEFAULT and CHECK.","textPreview":"Cover NOT NULL, DEFAULT and CHECK.","textChars":34,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/d4vqp4z2","slide":25,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/c3mpwzyh","slide":25,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/r2d8nuhw","slide":25,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/q147upgb","slide":25,"text":"SQL Constraints","textPreview":"SQL Constraints","textChars":15,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/1sfqt4zy","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/0r690zyd","slide":25,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/itg769wr","slide":25,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/ju98zexc","slide":25,"text":"NOT NULL","textPreview":"NOT NULL","textChars":8,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/4vip8zex","slide":25,"text":"Attribute must have a value.","textPreview":"Attribute must have a value.","textChars":28,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/5wrq14f2","slide":25,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/qx07a9wn","slide":25,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/ry983ex8","slide":25,"text":"DEFAULT","textPreview":"DEFAULT","textChars":7,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/szi9cjet","slide":25,"text":"DBMS supplies value when user omits one.","textPreview":"DBMS supplies value when user omits one.","textChars":40,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/d0rq5ofe","slide":25,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/m1w7ypwj","slide":25,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/7258rux4","slide":25,"text":"CHECK","textPreview":"CHECK","textChars":5,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/bu1wjm9k","slide":25,"text":"Boolean condition that tuple values must satisfy.","textPreview":"Boolean condition that tuple values must satisfy.","textChars":49,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/qtsvah8z","slide":25,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/dwjelwrq","slide":25,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/cvadcrq5","slide":25,"text":"Domain","textPreview":"Domain","textChars":6,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/3q1wfm9o","slide":25,"text":"Types plus constraints restrict valid values.","textPreview":"Types plus constraints restrict valid values.","textChars":45,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/9zpr1z","slide":25,"text":"What to say: Use salary > 0 or CGPA between 0 and 10.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/mb3iyb","slide":26,"title":"Key and referential constraints","textShapes":13}
+{"kind":"shape","id":"sh/65krelcj","slide":26,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/tsbqp0bu","slide":26,"text":"Key and referential constraints","textPreview":"Key and referential constraints","textChars":31,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/s729gvu9","slide":26,"text":"Cover PK, UNIQUE and FK.","textPreview":"Cover PK, UNIQUE and FK.","textChars":24,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/fud8rqt0","slide":26,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ut4ri5cf","slide":26,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/hwvqt0b6","slide":26,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/gvm9kvul","slide":26,"text":"SQL Constraints","textPreview":"SQL Constraints","textChars":15,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/vy98f6dw","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ax0761cb","slide":26,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/4vit8bih","slide":26,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/5gba1gz2","slide":26,"text":"PRIMARY KEY","textPreview":"PRIMARY KEY","textChars":11,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/it0b6l0b","slide":26,"text":"Unique and not NULL identifier.","textPreview":"Unique and not NULL identifier.","textChars":31,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/3u9szqhw","slide":26,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/sj2tcvid","slide":26,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/dkba50zy","slide":26,"text":"UNIQUE","textPreview":"UNIQUE","textChars":6,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/qhkbal0n","slide":26,"text":"Alternate key constraint.","textPreview":"Alternate key constraint.","textChars":25,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/rits3qh8","slide":26,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/8ny90ri9","slide":26,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/toratwju","slide":26,"text":"FOREIGN KEY","textPreview":"FOREIGN KEY","textChars":11,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/p8zyh876","slide":26,"text":"References primary/candidate key in another table.","textPreview":"References primary/candidate key in another table.","textChars":50,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/o7qh8361","slide":26,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/n6xgfypg","slide":26,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/25oz6tov","slide":26,"text":"Referential actions","textPreview":"Referential actions","textChars":19,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/xczil87i","slide":26,"text":"CASCADE, SET NULL, SET DEFAULT or restrict behavior.","textPreview":"CASCADE, SET NULL, SET DEFAULT or restrict behavior.","textChars":52,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/mb3iyb","slide":26,"text":"What to say: Explain named constraints help debugging and maintenance.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/ktdyqr","slide":27,"title":"Tuple constraints using CHECK","textShapes":8}
+{"kind":"shape","id":"sh/bq5wb6d0","slide":27,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/wred4bul","slide":27,"text":"Tuple constraints using CHECK","textPreview":"Tuple constraints using CHECK","textChars":29,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/xsnedwb6","slide":27,"text":"Explain row-level rules.","textPreview":"Explain row-level rules.","textChars":24,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/mlcvyhcj","slide":27,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/nmlc7md4","slide":27,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/onud0ru9","slide":27,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/9one9wvu","slide":27,"text":"SQL Constraints","textPreview":"SQL Constraints","textChars":15,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/6hgvalcn","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/7ipwjqt8","slide":27,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/r21kbitg","slide":27,"text":"CREATE TABLE EMPLOYEE (\n  Salary DECIMAL(10,2),\n  SupervisorSalary DECIMAL(10,2),\n  CHECK (Salary <= SupervisorSalary)\n);","textPreview":"CREATE TABLE EMPLOYEE ( |   Salary DECIMAL(10,2), |   SupervisorSalary DECIMAL(10,2), |   CHECK (Salary <= SupervisorSalary) | );","textChars":121,"textLines":5,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/61s32dcv","slide":27,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/d4j2d8bm","slide":27,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/s3al43u1","slide":27,"text":"CHECK constraint","textPreview":"CHECK constraint","textChars":16,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/f6lkfits","slide":27,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/ktdyqr","slide":27,"text":"What to say: Clarify that CHECK can compare attributes in same tuple.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/cp49gl","slide":28,"title":"Basic SELECT-FROM-WHERE","textShapes":8}
+{"kind":"shape","id":"sh/bqh0fydo","slide":28,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/crqh83ut","slide":28,"text":"Basic SELECT-FROM-WHERE","textPreview":"Basic SELECT-FROM-WHERE","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/dcjihove","slide":28,"text":"Show retrieval form.","textPreview":"Show retrieval form.","textChars":20,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/ydszatcz","slide":28,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ze10jydk","slide":28,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/0fahc3u5","slide":28,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/lgjil8vq","slide":28,"text":"SQL Queries","textPreview":"SQL Queries","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/mhszedcb","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ni10nidg","slide":28,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/nqh4vqxc","slide":28,"text":"SELECT Fname, Lname, Address\nFROM EMPLOYEE\nWHERE Dno = 5;","textPreview":"SELECT Fname, Lname, Address | FROM EMPLOYEE | WHERE Dno = 5;","textChars":57,"textLines":3,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/2583mlgr","slide":28,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/psjmx0fi","slide":28,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/orqlovyx","slide":28,"text":"SELECT query","textPreview":"SELECT query","textChars":12,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/f2hkrqxg","slide":28,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/cp49gl","slide":28,"text":"What to say: Explain SELECT columns, FROM tables, WHERE condition.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/5en80n","slide":29,"title":"Ambiguous names and aliases","textShapes":8}
+{"kind":"shape","id":"sh/87ihc76l","slide":29,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/n690j2p0","slide":29,"text":"Ambiguous names and aliases","textPreview":"Ambiguous names and aliases","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/m50zaxov","slide":29,"text":"Explain qualification.","textPreview":"Explain qualification.","textChars":22,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/l4rihs7a","slide":29,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/0jih8n6p","slide":29,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/zi90fip4","slide":29,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/yh0z6doj","slide":29,"text":"SQL Queries","textPreview":"SQL Queries","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/dg7id87y","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/cfyh4n6d","slide":29,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/qp4bix4z","slide":29,"text":"SELECT E.Fname, E.Lname, D.Dname\nFROM EMPLOYEE AS E, DEPARTMENT AS D\nWHERE E.Dno = D.Dnumber;","textPreview":"SELECT E.Fname, E.Lname, D.Dname | FROM EMPLOYEE AS E, DEPARTMENT AS D | WHERE E.Dno = D.Dnumber;","textChars":93,"textLines":3,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/rqdsb25k","slide":29,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/srmtk7m5","slide":29,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/dsfudcnq","slide":29,"text":"Aliases","textPreview":"Aliases","textChars":7,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/i14bed43","slide":29,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/5en80n","slide":29,"text":"What to say: Use aliases for joins and self-joins.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/76w4dn","slide":30,"title":"SELECT * , ALL and DISTINCT","textShapes":13}
+{"kind":"shape","id":"sh/ihszep8v","slide":30,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/54jy947m","slide":30,"text":"SELECT * , ALL and DISTINCT","textPreview":"SELECT * , ALL and DISTINCT","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/43ahgzq1","slide":30,"text":"Cover result options.","textPreview":"Cover result options.","textChars":21,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/vehg3upk","slide":30,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ud8fap8z","slide":30,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/hgzy5k7a","slide":30,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/gfqhczq5","slide":30,"text":"SQL Queries","textPreview":"SQL Queries","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/7ahgzap8","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/698f658n","slide":30,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/8napgz61","slide":30,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/tojqp4nm","slide":30,"text":"SELECT *","textPreview":"SELECT *","textChars":8,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/6ls7epov","slide":30,"text":"Return all attributes.","textPreview":"Return all attributes.","textChars":22,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/7m18nu5g","slide":30,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/kjapcf65","slide":30,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/lkjqlkna","slide":30,"text":"SELECT ALL","textPreview":"SELECT ALL","textChars":10,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/yxs7a5oz","slide":30,"text":"Keep duplicate result rows; usually default.","textPreview":"Keep duplicate result rows; usually default.","textChars":44,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/jy1oja5k","slide":30,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/4fupoj69","slide":30,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/pgnqxonu","slide":30,"text":"SELECT DISTINCT","textPreview":"SELECT DISTINCT","textChars":15,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/dcjqh4fy","slide":30,"text":"Eliminate duplicate result rows.","textPreview":"Eliminate duplicate result rows.","textChars":32,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/cbap8jyd","slide":30,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/bah8fexs","slide":30,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/q98769g7","slide":30,"text":"Projection link","textPreview":"Projection link","textChars":15,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/p8z6d4fm","slide":30,"text":"SQL SELECT resembles relational projection with bag behavior.","textPreview":"SQL SELECT resembles relational projection with bag behavior.","textChars":61,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/76w4dn","slide":30,"text":"What to say: Warn SQL is bag-oriented unless DISTINCT is used.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/nz1t3j","slide":31,"title":"WHERE conditions and pattern matching","textShapes":13}
+{"kind":"shape","id":"sh/a5o3ux8v","slide":31,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/x8zmpc7m","slide":31,"text":"WHERE conditions and pattern matching","textPreview":"WHERE conditions and pattern matching","textChars":37,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/w76lw7q1","slide":31,"text":"Cover selection conditions.","textPreview":"Cover selection conditions.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/jah4r2pc","slide":31,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/y983yh8r","slide":31,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/lczmtc7i","slide":31,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/kbql07qx","slide":31,"text":"SQL Queries","textPreview":"SQL Queries","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/7yh4vmpo","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/6d832h83","slide":31,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/gz29kn6l","slide":31,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/h0bads76","slide":31,"text":"Comparison","textPreview":"Comparison","textChars":10,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/ux0ridof","slide":31,"text":"=, <, >, <=, >=, <>","textPreview":"=, <, >, <=, >=, <>","textChars":19,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/vytsbip0","slide":31,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/4329on6h","slide":31,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/5obahs72","slide":31,"text":"Logical","textPreview":"Logical","textChars":7,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/i1krmxor","slide":31,"text":"AND, OR and NOT combine conditions.","textPreview":"AND, OR and NOT combine conditions.","textChars":35,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/32tsfipc","slide":31,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/srm9s76t","slide":31,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/dsvalc7e","slide":31,"text":"LIKE","textPreview":"LIKE","textChars":4,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/1ora5sfi","slide":31,"text":"Pattern matching for strings.","textPreview":"Pattern matching for strings.","textChars":29,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/0ni9c7yx","slide":31,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/zm9832hc","slide":31,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/el0raxgr","slide":31,"text":"BETWEEN / IN","textPreview":"BETWEEN / IN","textChars":12,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/9cba9cfe","slide":31,"text":"Range and set membership checks.","textPreview":"Range and set membership checks.","textChars":32,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/nz1t3j","slide":31,"text":"What to say: Use address contains Houston as example from notes.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/grwevm","slide":32,"title":"ORDER BY sorts output","textShapes":8}
+{"kind":"shape","id":"sh/2hgvmpg3","slide":32,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/p4ruxkfe","slide":32,"text":"ORDER BY sorts output","textPreview":"ORDER BY sorts output","textChars":21,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ojidozyt","slide":32,"text":"Explain result ordering.","textPreview":"Explain result ordering.","textChars":24,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/b69czuxk","slide":32,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/a50vqpgz","slide":32,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/x8ru14fq","slide":32,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/c7idszy5","slide":32,"text":"SQL Queries","textPreview":"SQL Queries","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/zatc3exg","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/y90vu9gv","slide":32,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/g3ypsbuh","slide":32,"text":"SELECT Dname, Lname, Fname, Pname\nFROM EMPLOYEE, DEPARTMENT, PROJECT\nWHERE Dno = Dnumber\nORDER BY Dname, Lname;","textPreview":"SELECT Dname, Lname, Fname, Pname | FROM EMPLOYEE, DEPARTMENT, PROJECT | WHERE Dno = Dnumber | ORDER BY Dname, Lname;","textChars":111,"textLines":4,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/h4761wb2","slide":32,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/u1g7q1cr","slide":32,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/f2poz6tw","slide":32,"text":"ORDER BY","textPreview":"ORDER BY","textChars":8,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/47ipwbut","slide":32,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/grwevm","slide":32,"text":"What to say: Explain order is output presentation, not relational table property.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/wdzd6o","slide":33,"title":"INSERT adds tuples","textShapes":8}
+{"kind":"shape","id":"sh/0rypkv2p","slide":33,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/fq5oba14","slide":33,"text":"INSERT adds tuples","textPreview":"INSERT adds tuples","textChars":18,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/epw7i5kj","slide":33,"text":"Show insert.","textPreview":"Show insert.","textChars":12,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/don690je","slide":33,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/sne5gv2t","slide":33,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/rm5o7q18","slide":33,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/qlwnelkn","slide":33,"text":"SQL Updates","textPreview":"SQL Updates","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/5kn65gj2","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/4ju5cb2h","slide":33,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/il8vi90n","slide":33,"text":"INSERT INTO STUDENT(USN, Name, DeptNo, CGPA)\nVALUES ('1VV23CS001', 'Asha', 10, 8.7);","textPreview":"INSERT INTO STUDENT(USN, Name, DeptNo, CGPA) | VALUES ('1VV23CS001', 'Asha', 10, 8.7);","textChars":84,"textLines":2,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/3mhwbe1s","slide":33,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/4nqdkjid","slide":33,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/5ozedojy","slide":33,"text":"INSERT","textPreview":"INSERT","textChars":6,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/uhove9kb","slide":33,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/wdzd6o","slide":33,"text":"What to say: Mention constraints are checked before insertion succeeds.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/7r0x41","slide":34,"title":"DELETE removes tuples","textShapes":8}
+{"kind":"shape","id":"sh/03qpw7eh","slide":34,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/z2h8n2xw","slide":34,"text":"DELETE removes tuples","textPreview":"DELETE removes tuples","textChars":21,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/y187uxwb","slide":34,"text":"Show delete.","textPreview":"Show delete.","textChars":12,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/9sjqtcfy","slide":34,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/87ap07ed","slide":34,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/n618rmx8","slide":34,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/m5s7yhwn","slide":34,"text":"SQL Updates","textPreview":"SQL Updates","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/pwf6hsfu","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ob6pone9","slide":34,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/y5o3u983","slide":34,"text":"DELETE FROM STUDENT\nWHERE USN = '1VV23CS001';","textPreview":"DELETE FROM STUDENT | WHERE USN = '1VV23CS001';","textChars":45,"textLines":2,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/z6x43e9o","slide":34,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/k76lwjqt","slide":34,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/l8zm5ore","slide":34,"text":"DELETE","textPreview":"DELETE","textChars":6,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/m983yt8z","slide":34,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/7r0x41","slide":34,"text":"What to say: Explain missing WHERE can delete many rows.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/c16wa8","slide":35,"title":"UPDATE modifies tuples","textShapes":8}
+{"kind":"shape","id":"sh/snq1k32p","slide":35,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/rmh0bylk","slide":35,"text":"UPDATE modifies tuples","textPreview":"UPDATE modifies tuples","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/6l8jitkz","slide":35,"text":"Show update.","textPreview":"Show update.","textChars":12,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/1sj2h8jm","slide":35,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/gra1o321","slide":35,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/fq1kfi1g","slide":35,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/epsjmdkv","slide":35,"text":"SQL Updates","textPreview":"SQL Updates","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/pg32lsji","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ofa1sn2x","slide":35,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/298vy5cr","slide":35,"text":"UPDATE STUDENT\nSET CGPA = 8.9\nWHERE USN = '1VV23CS001';","textPreview":"UPDATE STUDENT | SET CGPA = 8.9 | WHERE USN = '1VV23CS001';","textChars":55,"textLines":3,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/3ahwratw","slide":35,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/4bad0fah","slide":35,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/pcjetkb2","slide":35,"text":"UPDATE","textPreview":"UPDATE","textChars":6,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/qdsv2psn","slide":35,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/c16wa8","slide":35,"text":"What to say: Warn about WHERE clause and key/FK updates.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/oynx9p","slide":36,"title":"Additional SQL features","textShapes":18}
+{"kind":"shape","id":"sh/3i9k7ih4","slide":36,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/4jilgny9","slide":36,"text":"Additional SQL features","textPreview":"Additional SQL features","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/pkr29szu","slide":36,"text":"Cover the remaining feature heading.","textPreview":"Cover the remaining feature heading.","textChars":36,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/utgjadg7","slide":36,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/fupk3ihs","slide":36,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/gvy1cnyd","slide":36,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/hw7258zy","slide":36,"text":"SQL Features","textPreview":"SQL Features","textChars":12,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/epk3mxgr","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/zqtkf2hw","slide":36,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/3mdcvq9w","slide":36,"text":"SQL","textPreview":"SQL","textChars":3,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/il4v25sb","slide":36,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/5ovux0rm","slide":36,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/4nmd4va1","slide":36,"text":"Views","textPreview":"Views","textChars":5,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/rqdwza9s","slide":36,"text":"Virtual tables from queries.","textPreview":"Virtual tables from queries.","textChars":28,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/qp4v65s7","slide":36,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/dsve1kry","slide":36,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/srmd8fad","slide":36,"text":"Assertions","textPreview":"Assertions","textChars":10,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/fuxw3u9o","slide":36,"text":"Database-wide constraints where supported.","textPreview":"Database-wide constraints where supported.","textChars":42,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/etovapsj","slide":36,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/a1s7idgn","slide":36,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/bm1orix8","slide":36,"text":"Triggers","textPreview":"Triggers","textChars":8,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/wnapknyt","slide":36,"text":"Actions fired by events.","textPreview":"Actions fired by events.","textChars":24,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/xoj6tsfe","slide":36,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/mx87edgr","slide":36,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/ny1onyxc","slide":36,"text":"Privileges","textPreview":"Privileges","textChars":10,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/ozapg3yx","slide":36,"text":"Authorization through GRANT/REVOKE.","textPreview":"Authorization through GRANT/REVOKE.","textChars":35,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/90j6p8f2","slide":36,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/6tc7qxgv","slide":36,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/7ul8z2xg","slide":36,"text":"Transactions","textPreview":"Transactions","textChars":12,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/ho7apwzi","slide":36,"text":"COMMIT and ROLLBACK.","textPreview":"COMMIT and ROLLBACK.","textChars":20,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/gne9grid","slide":36,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/fm5snmhs","slide":36,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/ulwre107","slide":36,"text":"Embedded SQL","textPreview":"Embedded SQL","textChars":12,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/tknalwzm","slide":36,"text":"Use SQL inside programs.","textPreview":"Use SQL inside programs.","textChars":24,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/oynx9p","slide":36,"text":"What to say: Keep this as a survey slide for additional SQL features.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/1hspk6","slide":37,"title":"Module 3 mind map","textShapes":18}
+{"kind":"shape","id":"sh/vuh8jedw","slide":37,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/wvqpsjeh","slide":37,"text":"Module 3 mind map","textPreview":"Module 3 mind map","textChars":17,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/xwjql4v2","slide":37,"text":"Connect all major headings.","textPreview":"Connect all major headings.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/ixs7u9wn","slide":37,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/jy18neds","slide":37,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/kzapwjed","slide":37,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/50jqpovy","slide":37,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/61s7ytwj","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/7218ryd4","slide":37,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/r2x4vyl4","slide":37,"text":"Module 3","textPreview":"Module 3","textChars":8,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/q1on2t4j","slide":37,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/doz6x83u","slide":37,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/s3q543m9","slide":37,"text":"Guidelines","textPreview":"Guidelines","textChars":10,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/3yx4rels","slide":37,"text":"Clear semantics.","textPreview":"Clear semantics.","textChars":16,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/ixonyt47","slide":37,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/50fmto3y","slide":37,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/4z650jmd","slide":37,"text":"Anomalies","textPreview":"Anomalies","textChars":9,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/nu1o3ilw","slide":37,"text":"Insert/delete/update.","textPreview":"Insert/delete/update.","textChars":21,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/2t8nad4r","slide":37,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/ypc72hoz","slide":37,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/zql8vm54","slide":37,"text":"FDs","textPreview":"FDs","textChars":3,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/kru94r6p","slide":37,"text":"X determines Y.","textPreview":"X determines Y.","textChars":15,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/ls3qxwna","slide":37,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/mdcr61ov","slide":37,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/7e58zm5g","slide":37,"text":"Normal forms","textPreview":"Normal forms","textChars":12,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/8fe98r61","slide":37,"text":"1NF to 5NF.","textPreview":"1NF to 5NF.","textChars":11,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/tgnq1wnm","slide":37,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/2xs7uxor","slide":37,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/ni18n25c","slide":37,"text":"SQL DDL","textPreview":"SQL DDL","textChars":7,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/5c7a907u","slide":37,"text":"Types and constraints.","textPreview":"Types and constraints.","textChars":22,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/4byt0vq9","slide":37,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/3aps7qpo","slide":37,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/i9gbyl83","slide":37,"text":"SQL DML","textPreview":"SQL DML","textChars":7,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/dgrudk7q","slide":37,"text":"Query and update.","textPreview":"Query and update.","textChars":17,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/1hspk6","slide":37,"text":"What to say: Use this as final overview.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/rn2zjf","slide":38,"title":"Exam and viva focus","textShapes":15}
+{"kind":"shape","id":"sh/qhcf2lsn","slide":38,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/d43yxgby","slide":38,"text":"Exam and viva focus","textPreview":"Exam and viva focus","textChars":19,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/cjux4bat","slide":38,"text":"Convert content into marks.","textPreview":"Convert content into marks.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/3e1g76tw","slide":38,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/2dsfy1sb","slide":38,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/pg3y9gb2","slide":38,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/ofux0bah","slide":38,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/fa1g3mt0","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/e9sfuhsf","slide":38,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/8zuxsbul","slide":38,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/903ylgb6","slide":38,"text":"Define FD and dependency types with examples","textPreview":"Define FD and dependency types with examples","textChars":44,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/mxcfq1cf","slide":38,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/nylgj6t0","slide":38,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/0buxobu9","slide":38,"text":"Explain anomalies using EMP_DEPT-style table","textPreview":"Explain anomalies using EMP_DEPT-style table","textChars":44,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/lw3yhwbu","slide":38,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/y9cfm1cj","slide":38,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/zalgf6t4","slide":38,"text":"Write definitions of 1NF, 2NF, 3NF and BCNF precisely","textPreview":"Write definitions of 1NF, 2NF, 3NF and BCNF precisely","textChars":53,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/k7eh0vut","slide":38,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/5s7yt0be","slide":38,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/to3yd03i","slide":38,"text":"Write CREATE TABLE with keys, foreign keys and CHECK constraints","textPreview":"Write CREATE TABLE with keys, foreign keys and CHECK constraints","textChars":64,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/snuxkvmx","slide":38,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/rm1gbqlc","slide":38,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/6lsfil4r","slide":38,"text":"Write SELECT, INSERT, DELETE and UPDATE syntax carefully","textPreview":"Write SELECT, INSERT, DELETE and UPDATE syntax carefully","textChars":56,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"notes","id":"nt/rn2zjf","slide":38,"text":"What to say: Tell students SQL syntax must be clean for marks.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/rcycdb","slide":39,"title":"20 important viva questions","textShapes":25}
+{"kind":"shape","id":"sh/9o3edwny","slide":39,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/mlsv2h4n","slide":39,"text":"20 important viva questions","textPreview":"20 important viva questions","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/7m1wbm5s","slide":39,"text":"Rapid oral revision.","textPreview":"Rapid oral revision.","textChars":20,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/wbud8rmp","slide":39,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/hc3ehwna","slide":39,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/u9cv614j","slide":39,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/valwf654","slide":39,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/cfqdw7m5","slide":39,"text":"39","textPreview":"39","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/xgju5cnq","slide":39,"text":"1. What is normalization?","textPreview":"1. What is normalization?","textChars":25,"textLines":1,"bbox":[78,156,548,32]}
+{"kind":"textbox","id":"sh/t4rm5gja","slide":39,"text":"2. What is clear semantics?","textPreview":"2. What is clear semantics?","textChars":27,"textLines":1,"bbox":[78,202,548,32]}
+{"kind":"textbox","id":"sh/83ilwb2p","slide":39,"text":"3. What is redundancy?","textPreview":"3. What is redundancy?","textChars":22,"textLines":1,"bbox":[78,248,548,32]}
+{"kind":"textbox","id":"sh/72943614","slide":39,"text":"4. Insertion anomaly?","textPreview":"4. Insertion anomaly?","textChars":21,"textLines":1,"bbox":[78,294,548,32]}
+{"kind":"textbox","id":"sh/6103u1kj","slide":39,"text":"5. Deletion anomaly?","textPreview":"5. Deletion anomaly?","textChars":20,"textLines":1,"bbox":[78,340,548,32]}
+{"kind":"textbox","id":"sh/hsbm9gj6","slide":39,"text":"6. Modification anomaly?","textPreview":"6. Modification anomaly?","textChars":24,"textLines":1,"bbox":[78,386,548,32]}
+{"kind":"textbox","id":"sh/gri50b21","slide":39,"text":"7. What is NULL?","textPreview":"7. What is NULL?","textChars":16,"textLines":1,"bbox":[78,432,548,32]}
+{"kind":"textbox","id":"sh/vq94761g","slide":39,"text":"8. What is spurious tuple?","textPreview":"8. What is spurious tuple?","textChars":26,"textLines":1,"bbox":[78,478,548,32]}
+{"kind":"textbox","id":"sh/u50ny1kv","slide":39,"text":"9. What is FD?","textPreview":"9. What is FD?","textChars":14,"textLines":1,"bbox":[78,524,548,32]}
+{"kind":"textbox","id":"sh/5wbmd0ji","slide":39,"text":"10. Full vs partial FD?","textPreview":"10. Full vs partial FD?","textChars":23,"textLines":1,"bbox":[78,570,548,32]}
+{"kind":"textbox","id":"sh/4v254v2x","slide":39,"text":"11. What is transitive FD?","textPreview":"11. What is transitive FD?","textChars":26,"textLines":1,"bbox":[664,156,548,32]}
+{"kind":"textbox","id":"sh/obuxw3el","slide":39,"text":"12. What is candidate key?","textPreview":"12. What is candidate key?","textChars":26,"textLines":1,"bbox":[664,202,548,32]}
+{"kind":"textbox","id":"sh/9c3ypovq","slide":39,"text":"13. What is 1NF?","textPreview":"13. What is 1NF?","textChars":16,"textLines":1,"bbox":[664,248,548,32]}
+{"kind":"textbox","id":"sh/m9sfutwf","slide":39,"text":"14. What is 2NF?","textPreview":"14. What is 2NF?","textChars":16,"textLines":1,"bbox":[664,294,548,32]}
+{"kind":"textbox","id":"sh/nalgnyd0","slide":39,"text":"15. What is 3NF?","textPreview":"15. What is 3NF?","textChars":16,"textLines":1,"bbox":[664,340,548,32]}
+{"kind":"textbox","id":"sh/wfux03uh","slide":39,"text":"16. What is BCNF?","textPreview":"16. What is BCNF?","textChars":17,"textLines":1,"bbox":[664,386,548,32]}
+{"kind":"textbox","id":"sh/xg3yt8v2","slide":39,"text":"17. What is 4NF?","textPreview":"17. What is 4NF?","textChars":16,"textLines":1,"bbox":[664,432,548,32]}
+{"kind":"textbox","id":"sh/adcfytwb","slide":39,"text":"18. What is CREATE TABLE?","textPreview":"18. What is CREATE TABLE?","textChars":25,"textLines":1,"bbox":[664,478,548,32]}
+{"kind":"textbox","id":"sh/belgrydw","slide":39,"text":"19. What is CHECK?","textPreview":"19. What is CHECK?","textChars":18,"textLines":1,"bbox":[664,524,548,32]}
+{"kind":"textbox","id":"sh/sjaxojed","slide":39,"text":"20. SELECT vs UPDATE?","textPreview":"20. SELECT vs UPDATE?","textChars":21,"textLines":1,"bbox":[664,570,548,32]}
+{"kind":"notes","id":"nt/rcycdb","slide":39,"text":"What to say: Run rapid viva.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/4psizm","slide":40,"title":"Important questions bank","textShapes":20}
+{"kind":"shape","id":"sh/p8fu18b6","slide":40,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/25ob6dsv","slide":40,"text":"Important questions bank","textPreview":"Important questions bank","textChars":24,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/36xszyt0","slide":40,"text":"Provide two, five and ten-mark practice.","textPreview":"Provide two, five and ten-mark practice.","textChars":40,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/cbqtcnax","slide":40,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/xczu5sbi","slide":40,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/a98badsr","slide":40,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/bahc3itc","slide":40,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/kfqtgnat","slide":40,"text":"40","textPreview":"40","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/lgju9sbe","slide":40,"text":"1. 2M: Define FD.","textPreview":"1. 2M: Define FD.","textChars":17,"textLines":1,"bbox":[78,156,548,32]}
+{"kind":"textbox","id":"sh/58fah8ru","slide":40,"text":"2. 2M: Define 1NF.","textPreview":"2. 2M: Define 1NF.","textChars":18,"textLines":1,"bbox":[78,202,548,32]}
+{"kind":"textbox","id":"sh/k76983a9","slide":40,"text":"3. 2M: Define 2NF.","textPreview":"3. 2M: Define 2NF.","textChars":18,"textLines":1,"bbox":[78,248,548,32]}
+{"kind":"textbox","id":"sh/j6xsfy9o","slide":40,"text":"4. 2M: Define 3NF.","textPreview":"4. 2M: Define 3NF.","textChars":18,"textLines":1,"bbox":[78,294,548,32]}
+{"kind":"textbox","id":"sh/i54r6ts3","slide":40,"text":"5. 2M: Define BCNF.","textPreview":"5. 2M: Define BCNF.","textChars":19,"textLines":1,"bbox":[78,340,548,32]}
+{"kind":"textbox","id":"sh/tcfalsrq","slide":40,"text":"6. 5M: Explain anomalies.","textPreview":"6. 5M: Explain anomalies.","textChars":25,"textLines":1,"bbox":[78,386,548,32]}
+{"kind":"textbox","id":"sh/sb69cna5","slide":40,"text":"7. 5M: Explain NULL problems.","textPreview":"7. 5M: Explain NULL problems.","textChars":29,"textLines":1,"bbox":[78,432,548,32]}
+{"kind":"textbox","id":"sh/7axsji90","slide":40,"text":"8. 5M: Explain SQL data types.","textPreview":"8. 5M: Explain SQL data types.","textChars":30,"textLines":1,"bbox":[78,478,548,32]}
+{"kind":"textbox","id":"sh/69oradsf","slide":40,"text":"9. 5M: Explain SQL constraints.","textPreview":"9. 5M: Explain SQL constraints.","textChars":31,"textLines":1,"bbox":[664,156,548,32]}
+{"kind":"textbox","id":"sh/9gvq9orm","slide":40,"text":"10. 5M: Explain basic SELECT query.","textPreview":"10. 5M: Explain basic SELECT query.","textChars":35,"textLines":1,"bbox":[664,202,548,32]}
+{"kind":"textbox","id":"sh/8fm90ja1","slide":40,"text":"11. 10M: Explain normalization up to 3NF.","textPreview":"11. 10M: Explain normalization up to 3NF.","textChars":41,"textLines":1,"bbox":[664,248,548,32]}
+{"kind":"textbox","id":"sh/0j69gjix","slide":40,"text":"12. 10M: Compare 3NF and BCNF.","textPreview":"12. 10M: Compare 3NF and BCNF.","textChars":30,"textLines":1,"bbox":[664,294,548,32]}
+{"kind":"textbox","id":"sh/1kzapozi","slide":40,"text":"13. 10M: Explain SQL DDL and constraints.","textPreview":"13. 10M: Explain SQL DDL and constraints.","textChars":41,"textLines":1,"bbox":[664,340,548,32]}
+{"kind":"textbox","id":"sh/exoret0r","slide":40,"text":"14. 10M: Explain SQL retrieval and updates.","textPreview":"14. 10M: Explain SQL retrieval and updates.","textChars":43,"textLines":1,"bbox":[664,386,548,32]}
+{"kind":"textbox","id":"sh/zixsnyhc","slide":40,"text":"15. VTU previous question placeholders: fill from past papers.","textPreview":"15. VTU previous question placeholders: fill from past papers.","textChars":62,"textLines":1,"bbox":[664,432,548,32]}
+{"kind":"notes","id":"nt/4psizm","slide":40,"text":"What to say: Use as study plan.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}
+{"kind":"slide","id":"sl/70goc8","slide":41,"title":"One-page revision sheet","textShapes":11}
+{"kind":"shape","id":"sh/8je5kjel","slide":41,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ni5obyd0","slide":41,"text":"One-page revision sheet","textPreview":"One-page revision sheet","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/mhwnitwf","slide":41,"text":"End with compact keywords.","textPreview":"End with compact keywords.","textChars":26,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/xo76h8v2","slide":41,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/wny5o3ex","slide":41,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/vmpofydc","slide":41,"text":"DBMS | Module 3","textPreview":"DBMS | Module 3","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/alwnmtwr","slide":41,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/ds3m54vy","slide":41,"text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/cru5czed","slide":41,"bbox":[78,176,1124,174]}
+{"kind":"shape","id":"sh/eds7ax83","slide":41,"bbox":[78,176,8,174]}
+{"kind":"textbox","id":"sh/ze1832po","slide":41,"text":"Keywords","textPreview":"Keywords","textChars":8,"textLines":1,"bbox":[100,190,1086,34]}
+{"kind":"textbox","id":"sh/0fapc7qt","slide":41,"text":"Normalization; clear semantics; redundancy; insertion anomaly; deletion anomaly; modification anomaly; NULL; spurious tuple; functional dependency; full FD; partial FD; transitive FD; trivial FD; superkey; candidate key; prime attribute; 1NF; 2NF; 3NF; BCNF; 4NF; 5NF; SQL; DDL; CREATE TABLE; data type; NOT NULL; DEFAULT; CHECK; PRIMARY KEY; FOREIGN KEY; SELECT; FROM; WHERE; alias; DISTINCT; ORDER BY; INSERT; DELETE; UPDATE.","textPreview":"Normalization; clear semantics; redundancy; insertion anomaly; deletion anomaly; modification anomaly; NULL; spurious tuple; functional d...","textChars":427,"textLines":1,"bbox":[100,230,1086,112]}
+{"kind":"shape","id":"sh/1gjq5c7e","slide":41,"bbox":[78,388,1124,98]}
+{"kind":"shape","id":"sh/mhs7eh8z","slide":41,"bbox":[78,388,8,98]}
+{"kind":"textbox","id":"sh/n2187mpk","slide":41,"text":"Exam answer pattern","textPreview":"Exam answer pattern","textChars":19,"textLines":1,"bbox":[100,402,1086,34]}
+{"kind":"textbox","id":"sh/83apgrq5","slide":41,"text":"For Module 3 answers: show the bad relation, identify dependency/anomaly, decompose or state normal form, then show SQL syntax where relevant.","textPreview":"For Module 3 answers: show the bad relation, identify dependency/anomaly, decompose or state normal form, then show SQL syntax where rele...","textChars":142,"textLines":1,"bbox":[100,442,1086,36]}
+{"kind":"shape","id":"sh/943q9w7q","slide":41,"bbox":[78,530,1124,82]}
+{"kind":"shape","id":"sh/a5c7ih8b","slide":41,"bbox":[78,530,8,82]}
+{"kind":"textbox","id":"sh/v6l8bmpg","slide":41,"text":"Memory trick","textPreview":"Memory trick","textChars":12,"textLines":1,"bbox":[100,544,1086,34]}
+{"kind":"textbox","id":"sh/7alozm5o","slide":41,"text":"Definition -> diagram -> constraints/rules -> example -> common mistake. This sequence works for almost every DBMS long answer.","textPreview":"Definition -> diagram -> constraints/rules -> example -> common mistake. This sequence works for almost every DBMS long answer.","textChars":127,"textLines":1,"bbox":[100,584,1086,20]}
+{"kind":"notes","id":"nt/70goc8","slide":41,"text":"What to say: Close with keyword revision.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS_MODULE_3_Notes.pdf, Module 3 notes: Functional Dependencies, Normalization, SQL Data Definition, Constraints, Retrieval, Insert/Delete/Update, Additional SQL Features."}

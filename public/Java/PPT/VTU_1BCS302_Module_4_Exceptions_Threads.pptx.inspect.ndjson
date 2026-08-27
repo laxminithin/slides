@@ -1,0 +1,996 @@
+{"kind":"deck","id":"pr/ujx938","name":"Deck"}
+{"kind":"layout","layoutId":"07e021a2-9e1a-40d9-a33c-7df60af7412b","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"d9e71396-686d-4c49-8500-56eca2bab8ba","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/zuqn99","slide":1,"title":"Exceptions and Threads","textShapes":8}
+{"kind":"shape","id":"sh/2hofitwf","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/pkzedov6","slide":1,"text":"Exceptions and Threads","textPreview":"Exceptions and Threads","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ojqxkjel","slide":1,"text":"Module 4 teaches robust error handling and concurrent execution.","textPreview":"Module 4 teaches robust error handling and concurrent execution.","textChars":64,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/bmhwfydc","slide":1,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/al8fmtwr","slide":1,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/xozeh8v2","slide":1,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/cnqxo3ex","slide":1,"text":"Opening","textPreview":"Opening","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/rqdw3uxs","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/qp4va9wn","slide":1,"text":"Java\nModule 4","textPreview":"Java | Module 4","textChars":13,"textLines":2,"bbox":[78,184,640,175]}
+{"kind":"textbox","id":"sh/g3q5oz2x","slide":1,"text":"Exception handling • try/catch • throw/throws/finally • custom exceptions • threads","textPreview":"Exception handling • try/catch • throw/throws/finally • custom exceptions • threads","textChars":83,"textLines":1,"bbox":[82,388,700,78]}
+{"kind":"shape","id":"sh/h4j6xk3i","slide":1,"bbox":[790,134,330,330]}
+{"kind":"shape","id":"sh/u18nmpkr","slide":1,"bbox":[875,220,160,160]}
+{"kind":"textbox","id":"sh/v2hovulc","slide":1,"text":"TRY\nTHREAD","textPreview":"TRY | THREAD","textChars":10,"textLines":2,"bbox":[814,238,280,125]}
+{"kind":"notes","id":"nt/zuqn99","slide":1,"text":"What to say: Open by saying programs must survive errors and sometimes run multiple activities at once.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/j4pjd6","slide":2,"title":"Module 4 learning path","textShapes":17}
+{"kind":"shape","id":"sh/c769obqh","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/b6xsv6pw","slide":2,"text":"Module 4 learning path","textPreview":"Module 4 learning path","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/q5orml8b","slide":2,"text":"Use the syllabus as the checklist.","textPreview":"Use the syllabus as the checklist.","textChars":34,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/lwza107y","slide":2,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/0vq9svqt","slide":2,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/zuhszqp8","slide":2,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/y98rql8n","slide":2,"text":"Opening","textPreview":"Opening","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/10fapw7u","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/gzm9grq9","slide":2,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/apsvyxw3","slide":2,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/bq1cr2xo","slide":2,"text":"Explain exception fundamentals, types and uncaught exceptions","textPreview":"Explain exception fundamentals, types and uncaught exceptions","textChars":61,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/crud07e9","slide":2,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/xs3utcfu","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/ytcv2hwf","slide":2,"text":"Use try, catch, multiple catch and nested try","textPreview":"Use try, catch, multiple catch and nested try","textChars":45,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/zulcv2xk","slide":2,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/kvud47e5","slide":2,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/lw3uxcfq","slide":2,"text":"Use throw, throws and finally","textPreview":"Use throw, throws and finally","textChars":29,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/mxcv6hwb","slide":2,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/7ylczmxw","slide":2,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/jm5cnmt4","slide":2,"text":"Use built-in, custom and chained exceptions","textPreview":"Use built-in, custom and chained exceptions","textChars":43,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/ilwbuhcj","slide":2,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/5onupwbu","slide":2,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/4netwrup","slide":2,"text":"Explain Java thread model and main thread","textPreview":"Explain Java thread model and main thread","textChars":41,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"shape","id":"sh/vylcjmts","slide":2,"bbox":[92,453,28,28]}
+{"kind":"textbox","id":"sh/uxcbqhc7","slide":2,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,456,28,18]}
+{"kind":"textbox","id":"sh/hknulcby","slide":2,"text":"Create one or many threads and use isAlive(), join(), priorities and state","textPreview":"Create one or many threads and use isAlive(), join(), priorities and state","textChars":74,"textLines":1,"bbox":[136,449,996,42]}
+{"kind":"notes","id":"nt/j4pjd6","slide":2,"text":"What to say: Preview robustness and concurrency.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/vx3nty","slide":3,"title":"Exceptions separate error handling from normal logic","textShapes":12}
+{"kind":"shape","id":"sh/2lgvu9sr","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/poru5ob2","slide":3,"text":"Exceptions separate error handling from normal logic","textPreview":"Exceptions separate error handling from normal logic","textChars":52,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/4nidwjax","slide":3,"text":"Define exception handling.","textPreview":"Define exception handling.","textChars":26,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/fipczut0","slide":3,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/uhgvq9sf","slide":3,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/hk7u14b6","slide":3,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/gjydszal","slide":3,"text":"Exceptions","textPreview":"Exceptions","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/zetwbytk","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/edkv2tsz","slide":3,"text":"Exception","textPreview":"Exception","textChars":9,"textLines":1,"bbox":[86,175,570,72]}
+{"kind":"textbox","id":"sh/0bahwf6t","slide":3,"text":"An exception is an abnormal condition represented as an object that can be thrown and caught to handle errors safely.","textPreview":"An exception is an abnormal condition represented as an object that can be thrown and caught to handle errors safely.","textChars":117,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/1wjypk7e","slide":3,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/e9szu5on","slide":3,"text":"throw","textPreview":"throw","textChars":5,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/fa1gnap8","slide":3,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/s7ahsf6x","slide":3,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/d8jyl07i","slide":3,"text":"catch","textPreview":"catch","textChars":5,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/q58zq5or","slide":3,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/r6hgjapc","slide":3,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/43qhov6l","slide":3,"text":"try","textPreview":"try","textChars":3,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/54zyh076","slide":3,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/lo765svy","slide":3,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/kny5wned","slide":3,"text":"Exception object","textPreview":"Exception object","textChars":16,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/jmpo3ids","slide":3,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/ylgnudw7","slide":3,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/xk761svm","slide":3,"text":"Recovery","textPreview":"Recovery","textChars":8,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/vx3nty","slide":3,"text":"What to say: Use divide-by-zero and invalid input.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/2aw64x","slide":4,"title":"Exception-handling flow","textShapes":10}
+{"kind":"shape","id":"sh/mxwbehk3","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/t0napw3u","slide":4,"text":"Exception-handling flow","textPreview":"Exception-handling flow","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/8zetgr29","slide":4,"text":"Show runtime process.","textPreview":"Show runtime process.","textChars":21,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/zulsjmls","slide":4,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ytcrah47","slide":4,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/lw3alc3i","slide":4,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/kvu9c72x","slide":4,"text":"Exceptions","textPreview":"Exceptions","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/3qpsv6lw","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ipgbm1kb","slide":4,"bbox":[70,305,194.4,96]}
+{"kind":"textbox","id":"sh/sfu103ml","slide":4,"text":"Code in try","textPreview":"Code in try","textChars":11,"textLines":1,"bbox":[82,324,170.4,58]}
+{"kind":"shape","id":"sh/tg3i98n6","slide":4,"bbox":[272.4,337,26,30]}
+{"kind":"shape","id":"sh/6dcjyt4v","slide":4,"bbox":[306.4,305,194.4,96]}
+{"kind":"textbox","id":"sh/rel07y5g","slide":4,"text":"Exception occurs","textPreview":"Exception occurs","textChars":16,"textLines":1,"bbox":[318.4,324,170.4,58]}
+{"kind":"shape","id":"sh/4bu1wjmp","slide":4,"bbox":[508.8,337,26,30]}
+{"kind":"shape","id":"sh/5c3i5ona","slide":4,"bbox":[542.8,305,194.4,96]}
+{"kind":"textbox","id":"sh/ipszut4j","slide":4,"text":"Object thrown","textPreview":"Object thrown","textChars":13,"textLines":1,"bbox":[554.8,324,170.4,58]}
+{"kind":"shape","id":"sh/jq103e54","slide":4,"bbox":[745.2,337,26,30]}
+{"kind":"shape","id":"sh/wnahsjmt","slide":4,"bbox":[779.2,305,194.4,96]}
+{"kind":"textbox","id":"sh/hoji1ony","slide":4,"text":"Matching catch runs","textPreview":"Matching catch runs","textChars":19,"textLines":1,"bbox":[791.2,324,170.4,58]}
+{"kind":"shape","id":"sh/x4by50f2","slide":4,"bbox":[981.6,337,26,30]}
+{"kind":"shape","id":"sh/wj2xwvyh","slide":4,"bbox":[1015.6,305,194.4,96]}
+{"kind":"textbox","id":"sh/bitg3axw","slide":4,"text":"Program continues or exits","textPreview":"Program continues or exits","textChars":26,"textLines":1,"bbox":[1027.6,324,170.4,58]}
+{"kind":"notes","id":"nt/2aw64x","slide":4,"text":"What to say: Explain catch must match exception type.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/dlh894","slide":5,"title":"Exception types","textShapes":18}
+{"kind":"shape","id":"sh/9c7idsr6","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/m9gz2dsv","slide":5,"text":"Exception types","textPreview":"Exception types","textChars":15,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/7ap0bi90","slide":5,"text":"Classify exception categories.","textPreview":"Classify exception categories.","textChars":30,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/gfih8nax","slide":5,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/h0rihsri","slide":5,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/udgz6dsr","slide":5,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/ve90fi9c","slide":5,"text":"Exceptions","textPreview":"Exceptions","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/43ihc7qt","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/54rilcre","slide":5,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/ds36psn6","slide":5,"text":"Throwable","textPreview":"Throwable","textChars":9,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/sra5wnm1","slide":5,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/rq1oni5g","slide":5,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/qpsnud4v","slide":5,"text":"Error","textPreview":"Error","textChars":5,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/1g36tsni","slide":5,"text":"Serious JVM/system problems.","textPreview":"Serious JVM/system problems.","textChars":28,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/0fu50nmx","slide":5,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/felori5c","slide":5,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/etcnyd4r","slide":5,"text":"Exception","textPreview":"Exception","textChars":9,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/hkzmh8ny","slide":5,"text":"Program conditions that can be handled.","textPreview":"Program conditions that can be handled.","textChars":39,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/gjq5o3mt","slide":5,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/83u543e9","slide":5,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/9436d8vu","slide":5,"text":"RuntimeException","textPreview":"RuntimeException","textChars":16,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/m1cn2twj","slide":5,"text":"Unchecked programming/runtime issues.","textPreview":"Unchecked programming/runtime issues.","textChars":37,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/72lobyd4","slide":5,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/w7e583ul","slide":5,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/h8n6h8v6","slide":5,"text":"Checked exceptions","textPreview":"Checked exceptions","textChars":18,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/u5cn6dwf","slide":5,"text":"Compiler requires handling or declaration.","textPreview":"Compiler requires handling or declaration.","textChars":42,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/v65ofid0","slide":5,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/4vepcnuh","slide":5,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/5wn6lsv2","slide":5,"text":"Built-in","textPreview":"Built-in","textChars":8,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/fq98bmxk","slide":5,"text":"Provided by Java.","textPreview":"Provided by Java.","textChars":17,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/ep0r2hwz","slide":5,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/1srqdwfa","slide":5,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/gri94rep","slide":5,"text":"Custom","textPreview":"Custom","textChars":6,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/r2p872x8","slide":5,"text":"Program-defined.","textPreview":"Program-defined.","textChars":16,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/dlh894","slide":5,"text":"What to say: Mention Error is usually not caught in ordinary application code.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/tdz8i4","slide":6,"title":"Uncaught exceptions terminate the thread","textShapes":10}
+{"kind":"shape","id":"sh/vadofm9s","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/wbmp87qd","slide":6,"text":"Uncaught exceptions terminate the thread","textPreview":"Uncaught exceptions terminate the thread","textChars":40,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/xcvqhcry","slide":6,"text":"Explain default behavior.","textPreview":"Explain default behavior.","textChars":25,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/id47ah8j","slide":6,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/jed8jm94","slide":6,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/kfmpcrq9","slide":6,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/50fqlw7u","slide":6,"text":"Exceptions","textPreview":"Exceptions","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/61o7e18f","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/72x8n6p0","slide":6,"bbox":[70,305,194.4,96]}
+{"kind":"textbox","id":"sh/7alsj2lk","slide":6,"text":"Exception thrown","textPreview":"Exception thrown","textChars":16,"textLines":1,"bbox":[82,324,170.4,58]}
+{"kind":"shape","id":"sh/69cbax4z","slide":6,"bbox":[272.4,337,26,30]}
+{"kind":"shape","id":"sh/tc3als3q","slide":6,"bbox":[306.4,305,194.4,96]}
+{"kind":"textbox","id":"sh/sbutc7m5","slide":6,"text":"No matching catch","textPreview":"No matching catch","textChars":17,"textLines":1,"bbox":[318.4,324,170.4,58]}
+{"kind":"shape","id":"sh/j6lsfil8","slide":6,"bbox":[508.8,337,26,30]}
+{"kind":"shape","id":"sh/i5cr6d43","slide":6,"bbox":[542.8,305,194.4,96]}
+{"kind":"textbox","id":"sh/583ahs3e","slide":6,"text":"Call stack unwinds","textPreview":"Call stack unwinds","textChars":18,"textLines":1,"bbox":[554.8,324,170.4,58]}
+{"kind":"shape","id":"sh/k7ut8nmt","slide":6,"bbox":[745.2,337,26,30]}
+{"kind":"shape","id":"sh/325srmls","slide":6,"bbox":[779.2,305,194.4,96]}
+{"kind":"textbox","id":"sh/21wbihk7","slide":6,"text":"Default handler reports","textPreview":"Default handler reports","textChars":23,"textLines":1,"bbox":[791.2,324,170.4,58]}
+{"kind":"shape","id":"sh/yx0valof","slide":6,"bbox":[981.6,337,26,30]}
+{"kind":"shape","id":"sh/zy9wjq50","slide":6,"bbox":[1015.6,305,194.4,96]}
+{"kind":"textbox","id":"sh/0zidcbml","slide":6,"text":"Thread terminates","textPreview":"Thread terminates","textChars":17,"textLines":1,"bbox":[1027.6,324,170.4,58]}
+{"kind":"notes","id":"nt/tdz8i4","slide":6,"text":"What to say: Show why try/catch matters.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/3dekg7","slide":7,"title":"try and catch handle failures","textShapes":8}
+{"kind":"shape","id":"sh/dobm5svy","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/qlknudc7","slide":7,"text":"try and catch handle failures","textPreview":"try and catch handle failures","textChars":29,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/rmt43ids","slide":7,"text":"Show basic syntax.","textPreview":"Show basic syntax.","textChars":18,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/0r250nu9","slide":7,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/1svm9svu","slide":7,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/epknyxcj","slide":7,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/zqt47ido","slide":7,"text":"try-catch","textPreview":"try-catch","textChars":9,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/ofm547ul","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/9gvmdcv6","slide":7,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/18na14f2","slide":7,"text":"try {\n    int x = a / b;\n    System.out.println(x);\n} catch (ArithmeticException e) {\n    System.out.println(\"Cannot divide by zero\");\n}","textPreview":"try { |     int x = a / b; |     System.out.println(x); | } catch (ArithmeticException e) { |     System.out.println(\"Cannot divide by ze...","textChars":136,"textLines":6,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/0net8jeh","slide":7,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/fmlszexw","slide":7,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/elcb69wb","slide":7,"text":"try / catch","textPreview":"try / catch","textChars":11,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/pcnu5ofy","slide":7,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/3dekg7","slide":7,"text":"What to say: Ask students what happens when b is 0.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/ga301p","slide":8,"title":"Multiple catch clauses handle specific cases","textShapes":8}
+{"kind":"shape","id":"sh/07atg76l","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/z61cn2p0","slide":8,"text":"Multiple catch clauses handle specific cases","textPreview":"Multiple catch clauses handle specific cases","textChars":44,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/e5sbexof","slide":8,"text":"Explain ordering.","textPreview":"Explain ordering.","textChars":17,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/9w3utc72","slide":8,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ovutk76h","slide":8,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/nulcr2pc","slide":8,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/mtcbixor","slide":8,"text":"try-catch","textPreview":"try-catch","textChars":9,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/x0nuxc7e","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/wzetor6t","slide":8,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/i5kri1ob","slide":8,"text":"try {\n    int n = Integer.parseInt(s);\n    int x = 100 / n;\n} catch (NumberFormatException e) {\n    System.out.println(\"Bad number\");\n} catch (ArithmeticException e) {\n    System.out.println(\"Zero not allowed\");\n}","textPreview":"try { |     int n = Integer.parseInt(s); |     int x = 100 / n; | } catch (NumberFormatException e) { |     System.out.println(\"Bad numbe...","textChars":213,"textLines":8,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/j6tsr65w","slide":8,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/4r29kb6h","slide":8,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/5svatgn2","slide":8,"text":"Multiple catch","textPreview":"Multiple catch","textChars":14,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/6t4rmlon","slide":8,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/ga301p","slide":8,"text":"What to say: More specific exceptions should appear before broader ones.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/i5bp48","slide":9,"title":"Nested try statements localize risk","textShapes":13}
+{"kind":"shape","id":"sh/mpkr2loz","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/9sbadg7q","slide":9,"text":"Nested try statements localize risk","textPreview":"Nested try statements localize risk","textChars":35,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/8r294b65","slide":9,"text":"Explain nested try.","textPreview":"Explain nested try.","textChars":19,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/zm9s76po","slide":9,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/yl0ry1o3","slide":9,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/loba9g7u","slide":9,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/0ni90b69","slide":9,"text":"try-catch","textPreview":"try-catch","textChars":9,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/jidsjaps","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ih4ba5o7","slide":9,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/grytcb2t","slide":9,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/hs7a5g3e","slide":9,"text":"Outer try","textPreview":"Outer try","textChars":9,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/upgba1k3","slide":9,"text":"Handles broad operation-level failures.","textPreview":"Handles broad operation-level failures.","textChars":39,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/vqps36l8","slide":9,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/8net8b2x","slide":9,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/tona1g3i","slide":9,"text":"Inner try","textPreview":"Inner try","textChars":9,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/mlwb61kr","slide":9,"text":"Handles a smaller risky block.","textPreview":"Handles a smaller risky block.","textChars":30,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/7m5sz6lc","slide":9,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/kzet4r2l","slide":9,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/l0naxw36","slide":9,"text":"Local recovery","textPreview":"Local recovery","textChars":14,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/1gfq1sva","slide":9,"text":"Fix error close to where it occurs.","textPreview":"Fix error close to where it occurs.","textChars":35,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/0f698nep","slide":9,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/zex8zid4","slide":9,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/etor6dwj","slide":9,"text":"Readability","textPreview":"Readability","textChars":11,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/dsvqx8vy","slide":9,"text":"Use nesting only when it clarifies responsibility.","textPreview":"Use nesting only when it clarifies responsibility.","textChars":50,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/i5bp48","slide":9,"text":"What to say: Mention nested try can catch inner exception or let it propagate.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/xgjjw4","slide":10,"title":"throw creates an exception event","textShapes":8}
+{"kind":"shape","id":"sh/cnipobat","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/bmp8f698","slide":10,"text":"throw creates an exception event","textPreview":"throw creates an exception event","textChars":32,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/qlg7m1sn","slide":10,"text":"Explain throw.","textPreview":"Explain throw.","textChars":14,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/lcrqlgra","slide":10,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/0bi9sbap","slide":10,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/za98jq9k","slide":10,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/yp07qlsz","slide":10,"text":"throw/throws","textPreview":"throw/throws","textChars":12,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/1g7q9wr6","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/gfepgral","slide":10,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/e9kjetor","slide":10,"text":"if (b == 0) {\n    throw new ArithmeticException(\"Division by zero\");\n}","textPreview":"if (b == 0) { |     throw new ArithmeticException(\"Division by zero\"); | }","textChars":70,"textLines":3,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/fat07y5c","slide":10,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/0bm1g36h","slide":10,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/1cvi98n2","slide":10,"text":"throw","textPreview":"throw","textChars":5,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/2d4jidon","slide":10,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/xgjjw4","slide":10,"text":"What to say: throw is used to explicitly raise an exception.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/uo9m2s","slide":11,"title":"throws declares possible exceptions","textShapes":8}
+{"kind":"shape","id":"sh/xgjatsnq","slide":11,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/adsrixoz","slide":11,"text":"throws declares possible exceptions","textPreview":"throws declares possible exceptions","textChars":35,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ve1sri5k","slide":11,"text":"Explain throws.","textPreview":"Explain throws.","textChars":15,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/8bq9gn69","slide":11,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/9cjapsnu","slide":11,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/m98redo3","slide":11,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/nahsni5o","slide":11,"text":"throw/throws","textPreview":"throw/throws","textChars":12,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/s7uts76d","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/t83a1cny","slide":11,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/5cnq587e","slide":11,"text":"static void readFile(String name) throws IOException {\n    // file reading code\n}","textPreview":"static void readFile(String name) throws IOException { |     // file reading code | }","textChars":81,"textLines":3,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/4ru9w3qt","slide":11,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/jql83yp8","slide":11,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/ipcrut8n","slide":11,"text":"throws","textPreview":"throws","textChars":6,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/ho3q1o7i","slide":11,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/uo9m2s","slide":11,"text":"What to say: Explain checked exceptions often require throws or catch.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/9btxaw","slide":12,"title":"finally runs cleanup code","textShapes":8}
+{"kind":"shape","id":"sh/je1kzq9w","slide":12,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/kfalsvah","slide":12,"text":"finally runs cleanup code","textPreview":"finally runs cleanup code","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/lgj210r2","slide":12,"text":"Explain finally.","textPreview":"Explain finally.","textChars":16,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/61c3u5s7","slide":12,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/72lk3a9s","slide":12,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/83ulwfad","slide":12,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/t4325kry","slide":12,"text":"finally","textPreview":"finally","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/m58ji1s3","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/n6hkr69o","slide":12,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/7el4bel4","slide":12,"text":"try {\n    process();\n} catch (Exception e) {\n    System.out.println(e.getMessage());\n} finally {\n    System.out.println(\"cleanup\");\n}","textPreview":"try { |     process(); | } catch (Exception e) { |     System.out.println(e.getMessage()); | } finally { |     System.out.println(\"cleanu...","textChars":133,"textLines":7,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/6dcni9kj","slide":12,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/t03mdo3a","slide":12,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/szu5kj2p","slide":12,"text":"finally","textPreview":"finally","textChars":7,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/jal47ul8","slide":12,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/9btxaw","slide":12,"text":"What to say: Explain finally runs whether exception occurs or not, except unusual termination.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/y4vnyy","slide":13,"title":"Built-in exceptions cover common failures","textShapes":13}
+{"kind":"shape","id":"sh/3qpovqdo","slide":13,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/4rypobet","slide":13,"text":"Built-in exceptions cover common failures","textPreview":"Built-in exceptions cover common failures","textChars":41,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/psr6xgve","slide":13,"text":"List common exceptions.","textPreview":"List common exceptions.","textChars":23,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/qt07qlwz","slide":13,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ru9ozqdk","slide":13,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/cvipsve5","slide":13,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/dwr610vq","slide":13,"text":"Built-in","textPreview":"Built-in","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/6xwne1wv","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/7y5on6xg","slide":13,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/vexsjilo","slide":13,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/udobqdkj","slide":13,"text":"ArithmeticException","textPreview":"ArithmeticException","textChars":19,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/hgfal83u","slide":13,"text":"Invalid arithmetic operation such as divide by zero.","textPreview":"Invalid arithmetic operation such as divide by zero.","textChars":52,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/gf6tsn29","slide":13,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/7adsfyls","slide":13,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/694bmtk7","slide":13,"text":"ArrayIndexOutOfBoundsException","textPreview":"ArrayIndexOutOfBoundsException","textChars":30,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/tcfah83y","slide":13,"text":"Array index outside valid range.","textPreview":"Array index outside valid range.","textChars":32,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/8bmto32d","slide":13,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/jmdsbylw","slide":13,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/yl4bitkb","slide":13,"text":"NullPointerException","textPreview":"NullPointerException","textChars":20,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/mhkbuto3","slide":13,"text":"Using a null reference as object.","textPreview":"Using a null reference as object.","textChars":33,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/nitc3e5o","slide":13,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/oj2twj69","slide":13,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/9kbu5one","slide":13,"text":"NumberFormatException","textPreview":"NumberFormatException","textChars":21,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/a54bytoz","slide":13,"text":"Invalid string-to-number conversion.","textPreview":"Invalid string-to-number conversion.","textChars":36,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/y4vnyy","slide":13,"text":"What to say: Ask students which module 1 mistakes cause these.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/jcon7e","slide":14,"title":"Custom exceptions model application rules","textShapes":8}
+{"kind":"shape","id":"sh/w7e9sjyl","slide":14,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/bm5szeh0","slide":14,"text":"Custom exceptions model application rules","textPreview":"Custom exceptions model application rules","textChars":41,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/alwrq9gf","slide":14,"text":"Define custom exception.","textPreview":"Define custom exception.","textChars":24,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/lc7a5of2","slide":14,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/kbytw3yx","slide":14,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/japs3yxc","slide":14,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/y9grutgr","slide":14,"text":"Custom","textPreview":"Custom","textChars":6,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/tgra98fe","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/8fyt03yt","slide":14,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/ilcbyh0z","slide":14,"text":"class DivisionByZeroException extends Exception {\n    DivisionByZeroException(String msg) {\n        super(msg);\n    }\n}","textPreview":"class DivisionByZeroException extends Exception { |     DivisionByZeroException(String msg) { |         super(msg); |     } | }","textChars":119,"textLines":5,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/jmlsrmhk","slide":14,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/knut07ip","slide":14,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/5o3atcza","slide":14,"text":"Custom exception","textPreview":"Custom exception","textChars":16,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/69cb2h0v","slide":14,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/jcon7e","slide":14,"text":"What to say: Connect to lab program for user-defined division-by-zero exception.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/w6gwb4","slide":15,"title":"Chained exceptions preserve root cause","textShapes":13}
+{"kind":"shape","id":"sh/10z2tsfq","slide":15,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/exo3ixgf","slide":15,"text":"Chained exceptions preserve root cause","textPreview":"Chained exceptions preserve root cause","textChars":38,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/fyxkrix0","slide":15,"text":"Explain chained exceptions.","textPreview":"Explain chained exceptions.","textChars":27,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/sb6lgny9","slide":15,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/tcf2psfu","slide":15,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/69o3edg3","slide":15,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/raxknixo","slide":15,"text":"Chained","textPreview":"Chained","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/47m1c3yd","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/58f2l8fy","slide":15,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/dwjmtsnm","slide":15,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/sva5kn61","slide":15,"text":"Cause","textPreview":"Cause","textChars":5,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/ru14ri5g","slide":15,"text":"One exception can wrap another.","textPreview":"One exception can wrap another.","textChars":31,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/qtsnidob","slide":15,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/5sjmp8nq","slide":15,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/4ra5g365","slide":15,"text":"Use","textPreview":"Use","textChars":3,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/3q14ny5k","slide":15,"text":"Report high-level failure while preserving low-level cause.","textPreview":"Report high-level failure while preserving low-level cause.","textChars":59,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/ip83etoz","slide":15,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/hozml8ne","slide":15,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/gnqlc36t","slide":15,"text":"Constructors","textPreview":"Constructors","textChars":12,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/8jedoni1","slide":15,"text":"Many exception types accept a cause.","textPreview":"Many exception types accept a cause.","textChars":36,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/tknehszm","slide":15,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/6hwvmx0v","slide":15,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/7i5wfihg","slide":15,"text":"Debugging","textPreview":"Debugging","textChars":9,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/kfudkni5","slide":15,"text":"Stack trace shows the chain.","textPreview":"Stack trace shows the chain.","textChars":28,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/w6gwb4","slide":15,"text":"What to say: Keep this conceptual.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/9tik97","slide":16,"title":"A thread is a path of execution","textShapes":12}
+{"kind":"shape","id":"sh/tsru94z6","slide":16,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/6p0ve90v","slide":16,"text":"A thread is a path of execution","textPreview":"A thread is a path of execution","textChars":31,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/7q9c7eh0","slide":16,"text":"Define thread.","textPreview":"Define thread.","textChars":14,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/knidczip","slide":16,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/loru54za","slide":16,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/yl0bap0j","slide":16,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/jm9c3uh4","slide":16,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/wjyt8fid","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/xk7u1kzy","slide":16,"text":"Thread","textPreview":"Thread","textChars":6,"textLines":1,"bbox":[86,175,570,72]}
+{"kind":"textbox","id":"sh/hwby5wbe","slide":16,"text":"A thread is an independent path of execution within a program, allowing multiple activities to run concurrently.","textPreview":"A thread is an independent path of execution within a program, allowing multiple activities to run concurrently.","textChars":112,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/gv2xcrat","slide":16,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/vutg3mt8","slide":16,"text":"Execution path","textPreview":"Execution path","textChars":14,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/utkfahsn","slide":16,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/tsry1cb2","slide":16,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/8rix87ah","slide":16,"text":"Concurrency","textPreview":"Concurrency","textChars":11,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/7q9wzmtc","slide":16,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/mp0f6hsr","slide":16,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/lorexcb6","slide":16,"text":"main","textPreview":"main","textChars":4,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/k3ix47al","slide":16,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/c7mxk72h","slide":16,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/d8vydcj2","slide":16,"text":"run","textPreview":"run","textChars":3,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/q5kfixkb","slide":16,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/b6dgb21w","slide":16,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/o32xg725","slide":16,"text":"Scheduling","textPreview":"Scheduling","textChars":10,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/9tik97","slide":16,"text":"What to say: Explain every Java program starts with main thread.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/jg4awh","slide":17,"title":"Java thread model","textShapes":12}
+{"kind":"shape","id":"sh/3mtsrml4","slide":17,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/4n2t072p","slide":17,"text":"Java thread model","textPreview":"Java thread model","textChars":17,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/58batc3a","slide":17,"text":"Show thread model basics.","textPreview":"Show thread model basics.","textChars":25,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/uh0rux4n","slide":17,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/vitsn2l8","slide":17,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/gj29w7mt","slide":17,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/hkbapc3e","slide":17,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/ed4b61kr","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/fedsz6lc","slide":17,"bbox":[112,220,158.4,96]}
+{"kind":"textbox","id":"sh/j6d0rq1g","slide":17,"text":"main thread","textPreview":"main thread","textChars":11,"textLines":1,"bbox":[124,239,134.4,58]}
+{"kind":"shape","id":"sh/i54zylkv","slide":17,"bbox":[278.4,252,26,30]}
+{"kind":"shape","id":"sh/58fit0j6","slide":17,"bbox":[312.4,220,158.4,96]}
+{"kind":"textbox","id":"sh/47mh0v21","slide":17,"text":"create Thread","textPreview":"create Thread","textChars":13,"textLines":1,"bbox":[324.4,239,134.4,58]}
+{"kind":"shape","id":"sh/rux0va1c","slide":17,"bbox":[478.8,252,26,30]}
+{"kind":"shape","id":"sh/6toz250r","slide":17,"bbox":[512.8,220,158.4,96]}
+{"kind":"textbox","id":"sh/twfixkji","slide":17,"text":"start()","textPreview":"start()","textChars":7,"textLines":1,"bbox":[524.8,239,134.4,58]}
+{"kind":"shape","id":"sh/sv614fix","slide":17,"bbox":[679.2,252,26,30]}
+{"kind":"shape","id":"sh/fyx0za1o","slide":17,"bbox":[713.2,220,158.4,96]}
+{"kind":"textbox","id":"sh/exoj6503","slide":17,"text":"run() executes","textPreview":"run() executes","textChars":14,"textLines":1,"bbox":[725.2,239,134.4,58]}
+{"kind":"shape","id":"sh/ats3y9kb","slide":17,"bbox":[879.6,252,26,30]}
+{"kind":"shape","id":"sh/bu1krelw","slide":17,"bbox":[913.6,220,158.4,96]}
+{"kind":"textbox","id":"sh/cval0j21","slide":17,"text":"join() waits","textPreview":"join() waits","textChars":12,"textLines":1,"bbox":[925.6,239,134.4,58]}
+{"kind":"shape","id":"sh/xwj2to3m","slide":17,"bbox":[244,430,790,130]}
+{"kind":"shape","id":"sh/2p83u94z","slide":17,"bbox":[244,430,8,130]}
+{"kind":"textbox","id":"sh/nqhk3elk","slide":17,"text":"Concurrent execution","textPreview":"Concurrent execution","textChars":20,"textLines":1,"bbox":[266,444,752,34]}
+{"kind":"textbox","id":"sh/oralwj25","slide":17,"text":"The main thread and child threads can make progress independently, so scheduling order is not guaranteed.","textPreview":"The main thread and child threads can make progress independently, so scheduling order is not guaranteed.","textChars":105,"textLines":1,"bbox":[266,484,752,68]}
+{"kind":"notes","id":"nt/jg4awh","slide":17,"text":"What to say: Explain start begins a new call path that invokes run.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/t3lffb","slide":18,"title":"The main thread","textShapes":13}
+{"kind":"shape","id":"sh/bmx0zup0","slide":18,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/cn61szql","slide":18,"text":"The main thread","textPreview":"The main thread","textChars":15,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/xofi1476","slide":18,"text":"Explain initial thread.","textPreview":"Explain initial thread.","textChars":23,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/2xojmp83","slide":18,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/nyx0vupo","slide":18,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/oz61ozq9","slide":18,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/p0fixk7u","slide":18,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/mt8jy98n","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/7uh07ep8","slide":18,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/ri9w3qtk","slide":18,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/6h0falsz","slide":18,"text":"Created by JVM","textPreview":"Created by JVM","textChars":14,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/t4re5gbq","slide":18,"text":"main starts inside the main thread.","textPreview":"main starts inside the main thread.","textChars":35,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/s3ixcva5","slide":18,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/f69w7qtw","slide":18,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/e50felsb","slide":18,"text":"Can create children","textPreview":"Can create children","textChars":19,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/18by90bm","slide":18,"text":"main can launch additional threads.","textPreview":"main can launch additional threads.","textChars":35,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/g72xgva1","slide":18,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/3atgbats","slide":18,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/29kfi5s7","slide":18,"text":"Can finish early","textPreview":"Can finish early","textChars":16,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/y54za9cf","slide":18,"text":"Program may continue while child threads run.","textPreview":"Program may continue while child threads run.","textChars":45,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/z6x03ed0","slide":18,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/076hczul","slide":18,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/l8fi54v6","slide":18,"text":"Control","textPreview":"Control","textChars":7,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/q14z6pcj","slide":18,"text":"main can use join to wait.","textPreview":"main can use join to wait.","textChars":26,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/t3lffb","slide":18,"text":"What to say: Mention main thread is just a thread with special starting role.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/wcf8jf","slide":19,"title":"Creating a thread with Runnable","textShapes":8}
+{"kind":"shape","id":"sh/md4r2tcf","slide":19,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/9gfqxob6","slide":19,"text":"Creating a thread with Runnable","textPreview":"Creating a thread with Runnable","textChars":31,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/of6943ul","slide":19,"text":"Show Runnable pattern.","textPreview":"Show Runnable pattern.","textChars":22,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/zad8redo","slide":19,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/e947y9cj","slide":19,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/1cvqtovu","slide":19,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/0bm90ju9","slide":19,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/j6h83it8","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/y5oradcn","slide":19,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/s3ut4fq5","slide":19,"text":"class MyTask implements Runnable {\n    public void run() {\n        System.out.println(\"child\");\n    }\n}\nThread t = new Thread(new MyTask());\nt.start();","textPreview":"class MyTask implements Runnable { |     public void run() { |         System.out.println(\"child\"); |     } | } | Thread t = new Thread(n...","textChars":151,"textLines":7,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/d4naxkra","slide":19,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/q1cr258z","slide":19,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/r2lsva9k","slide":19,"text":"Runnable","textPreview":"Runnable","textChars":8,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/4zu90vqt","slide":19,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/wcf8jf","slide":19,"text":"What to say: Runnable separates task from Thread object.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/qq8scr","slide":20,"title":"Creating a thread by extending Thread","textShapes":8}
+{"kind":"shape","id":"sh/oj69srut","slide":20,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/3yd8jmt8","slide":20,"text":"Creating a thread by extending Thread","textPreview":"Creating a thread by extending Thread","textChars":37,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/2x4rqhcn","slide":20,"text":"Show Thread subclass pattern.","textPreview":"Show Thread subclass pattern.","textChars":29,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/dofqpwba","slide":20,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/cn69wrap","slide":20,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/bmx8nmt4","slide":20,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/qloruhcj","slide":20,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/lszqtwb6","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/0rq9kbal","slide":20,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/2p4j6947","slide":20,"text":"class MyThread extends Thread {\n    public void run() {\n        System.out.println(\"running\");\n    }\n}\nnew MyThread().start();","textPreview":"class MyThread extends Thread { |     public void run() { |         System.out.println(\"running\"); |     } | } | new MyThread().start();","textChars":126,"textLines":6,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/3qd0zels","slide":20,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/orm18jmd","slide":20,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/psvi1o3y","slide":20,"text":"extends Thread","textPreview":"extends Thread","textChars":14,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/qt4jatkj","slide":20,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/qq8scr","slide":20,"text":"What to say: Compare with Runnable; Runnable is usually more flexible.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/ldifio","slide":21,"title":"Creating multiple threads","textShapes":10}
+{"kind":"shape","id":"sh/vmt0n21o","slide":21,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/gn21g7i9","slide":21,"text":"Creating multiple threads","textPreview":"Creating multiple threads","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/hob2pcju","slide":21,"text":"Explain concurrency and scheduling.","textPreview":"Explain concurrency and scheduling.","textChars":35,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/ipkjih0z","slide":21,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/3qtkrm1k","slide":21,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/4r21kri5","slide":21,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/5sv2twjq","slide":21,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/qt4jmh0b","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/rudkvm1w","slide":21,"bbox":[70,305,194.4,96]}
+{"kind":"textbox","id":"sh/ril4vepo","slide":21,"text":"Create t1","textPreview":"Create t1","textChars":9,"textLines":1,"bbox":[82,324,170.4,58]}
+{"kind":"shape","id":"sh/qhcnm983","slide":21,"bbox":[272.4,337,26,30]}
+{"kind":"shape","id":"sh/dknmxo7u","slide":21,"bbox":[306.4,305,194.4,96]}
+{"kind":"textbox","id":"sh/cje5ojq9","slide":21,"text":"Create t2","textPreview":"Create t2","textChars":9,"textLines":1,"bbox":[318.4,324,170.4,58]}
+{"kind":"shape","id":"sh/3ul4reps","slide":21,"bbox":[508.8,337,26,30]}
+{"kind":"shape","id":"sh/2tcni987","slide":21,"bbox":[542.8,305,194.4,96]}
+{"kind":"textbox","id":"sh/pw3mto7y","slide":21,"text":"start t1","textPreview":"start t1","textChars":8,"textLines":1,"bbox":[554.8,324,170.4,58]}
+{"kind":"shape","id":"sh/4vu5kjqd","slide":21,"bbox":[745.2,337,26,30]}
+{"kind":"shape","id":"sh/nqpo3ypw","slide":21,"bbox":[779.2,305,194.4,96]}
+{"kind":"textbox","id":"sh/mpwnut8b","slide":21,"text":"start t2","textPreview":"start t2","textChars":8,"textLines":1,"bbox":[791.2,324,170.4,58]}
+{"kind":"shape","id":"sh/ixkzi1wv","slide":21,"bbox":[981.6,337,26,30]}
+{"kind":"shape","id":"sh/jitgb6dg","slide":21,"bbox":[1015.6,305,194.4,96]}
+{"kind":"textbox","id":"sh/4j2hkbe1","slide":21,"text":"Scheduler interleaves execution","textPreview":"Scheduler interleaves execution","textChars":31,"textLines":1,"bbox":[1027.6,324,170.4,58]}
+{"kind":"notes","id":"nt/ldifio","slide":21,"text":"What to say: Warn output order is not guaranteed.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/qq709r","slide":22,"title":"isAlive and join coordinate threads","textShapes":8}
+{"kind":"shape","id":"sh/c7a1wj29","slide":22,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/b610ne1o","slide":22,"text":"isAlive and join coordinate threads","textPreview":"isAlive and join coordinate threads","textChars":35,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/q5sju9k3","slide":22,"text":"Show coordination methods.","textPreview":"Show coordination methods.","textChars":26,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/lw3itojq","slide":22,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/kvu10j25","slide":22,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/zu10re1k","slide":22,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/ytsjy9kz","slide":22,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/903ixojm","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/8zu1432h","slide":22,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/mhsn214v","slide":22,"text":"t.start();\nSystem.out.println(t.isAlive());\nt.join();\nSystem.out.println(\"child finished\");","textPreview":"t.start(); | System.out.println(t.isAlive()); | t.join(); | System.out.println(\"child finished\");","textChars":91,"textLines":4,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/ni1ov65g","slide":22,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/oja54bm1","slide":22,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/9kj6xgnm","slide":22,"text":"isAlive / join","textPreview":"isAlive / join","textChars":14,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/a5sn6l47","slide":22,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/qq709r","slide":22,"text":"What to say: join makes one thread wait for another to finish.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/2adhgb","slide":23,"title":"Thread priorities influence scheduling","textShapes":13}
+{"kind":"shape","id":"sh/e9cj6x0r","slide":23,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/1c3i1cji","slide":23,"text":"Thread priorities influence scheduling","textPreview":"Thread priorities influence scheduling","textChars":38,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/gbu187ix","slide":23,"text":"Explain priority.","textPreview":"Explain priority.","textChars":17,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/3e503218","slide":23,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/2dwjax0n","slide":23,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/pgni5cje","slide":23,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/ofe1c7it","slide":23,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/ji10ri14","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ihszyd0j","slide":23,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/8vitk3u9","slide":23,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/9wrut8bu","slide":23,"text":"Priority value","textPreview":"Priority value","textChars":14,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/mtgbitc3","slide":23,"text":"Threads have priority constants such as MIN_PRIORITY, NORM_PRIORITY and MAX_PRIORITY.","textPreview":"Threads have priority constants such as MIN_PRIORITY, NORM_PRIORITY and MAX_PRIORITY.","textChars":85,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/nupcryto","slide":23,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/wzitonu5","slide":23,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/x0rux8bq","slide":23,"text":"Scheduler hint","textPreview":"Scheduler hint","textChars":14,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/ax0bmdcf","slide":23,"text":"Priority can influence scheduling but does not guarantee order.","textPreview":"Priority can influence scheduling but does not guarantee order.","textChars":63,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/vy9cvitk","slide":23,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/c3etcju1","slide":23,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/d47alobm","slide":23,"text":"Portable caution","textPreview":"Portable caution","textChars":16,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/dkzqpkna","slide":23,"text":"Behavior can vary by platform and JVM.","textPreview":"Behavior can vary by platform and JVM.","textChars":38,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/sz69gfmp","slide":23,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/ryx8na54","slide":23,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/qxore54z","slide":23,"text":"Best practice","textPreview":"Best practice","textChars":13,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/1ozatknm","slide":23,"text":"Do not depend on priority for correctness.","textPreview":"Do not depend on priority for correctness.","textChars":42,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/2adhgb","slide":23,"text":"What to say: Stress correctness should use coordination, not priority.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/c4alim","slide":24,"title":"Thread states describe lifecycle","textShapes":18}
+{"kind":"shape","id":"sh/mt0vad03","slide":24,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/9gbul8zu","slide":24,"text":"Thread states describe lifecycle","textPreview":"Thread states describe lifecycle","textChars":32,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/8fidc3i9","slide":24,"text":"Explain state names.","textPreview":"Explain state names.","textChars":20,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/zq9cfyhc","slide":24,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/yp0v6t07","slide":24,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/lsruh8zi","slide":24,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/krid83ix","slide":24,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/3mtwr2hw","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ilkvix0b","slide":24,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/kj6tgf6x","slide":24,"text":"Thread state","textPreview":"Thread state","textChars":12,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/5kfupk7i","slide":24,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/ihobe5or","slide":24,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/jixcnapc","slide":24,"text":"NEW","textPreview":"NEW","textChars":3,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/wf6tcf61","slide":24,"text":"Created, not started.","textPreview":"Created, not started.","textChars":21,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/xgfulk7m","slide":24,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/ad4ba5ov","slide":24,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/vedsjapg","slide":24,"text":"RUNNABLE","textPreview":"RUNNABLE","textChars":8,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/8rmt8vqp","slide":24,"text":"Eligible to run.","textPreview":"Eligible to run.","textChars":16,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/9svah07a","slide":24,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/pw3ipsv2","slide":24,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/ovuhwneh","slide":24,"text":"BLOCKED","textPreview":"BLOCKED","textChars":7,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/3ul0nidw","slide":24,"text":"Waiting for monitor lock.","textPreview":"Waiting for monitor lock.","textChars":25,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/29czuxwb","slide":24,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/183ilsvq","slide":24,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/g7uhsne5","slide":24,"text":"WAITING/TIMED","textPreview":"WAITING/TIMED","textChars":13,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/f6l0jid0","slide":24,"text":"Waiting for signal or time.","textPreview":"Waiting for signal or time.","textChars":27,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/e5szqdwf","slide":24,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/l4nixcva","slide":24,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/03e147ep","slide":24,"text":"TERMINATED","textPreview":"TERMINATED","textChars":10,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/i98fi9c7","slide":24,"text":"Finished.","textPreview":"Finished.","textChars":9,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/jahgrets","slide":24,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/kbqxkjux","slide":24,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/5czytobi","slide":24,"text":"getState()","textPreview":"getState()","textChars":10,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/a5ofe9cv","slide":24,"text":"Obtains current state.","textPreview":"Obtains current state.","textChars":22,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/c4alim","slide":24,"text":"What to say: Use getState from syllabus.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/5ft7ia","slide":25,"title":"Module 4 lab connection","textShapes":13}
+{"kind":"shape","id":"sh/yhonmlcr","slide":25,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/lkf6xgb2","slide":25,"text":"Module 4 lab connection","textPreview":"Module 4 lab connection","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/0j65obux","slide":25,"text":"Map concepts to practicals.","textPreview":"Map concepts to practicals.","textChars":27,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/redor6t0","slide":25,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/qt4ni1cf","slide":25,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/dgf6tgb6","slide":25,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/cf65kbul","slide":25,"text":"Lab Link","textPreview":"Lab Link","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/3qd4nmt4","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/2p4ne1cj","slide":25,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/4jelgbmx","slide":25,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/5knm9g3i","slide":25,"text":"Custom exception","textPreview":"Custom exception","textChars":16,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/ihw3el4r","slide":25,"text":"Use try, catch, throw and finally for DivisionByZero.","textPreview":"Use try, catch, throw and finally for DivisionByZero.","textChars":53,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/ji547qlc","slide":25,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/wvelcbm1","slide":25,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/hwnm5g36","slide":25,"text":"MyThread","textPreview":"MyThread","textChars":8,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/utw3a14v","slide":25,"text":"Call super constructor and start the child thread.","textPreview":"Call super constructor and start the child thread.","textChars":50,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/vu5436lg","slide":25,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/gry58vm5","slide":25,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/1srmh03q","slide":25,"text":"Concurrent output","textPreview":"Concurrent output","textChars":17,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/p8nm10vu","slide":25,"text":"Observe main and child thread interleaving.","textPreview":"Observe main and child thread interleaving.","textChars":43,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/o7elsvu9","slide":25,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/n6l4zqdo","slide":25,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/25c3q5w3","slide":25,"text":"Common error","textPreview":"Common error","textChars":12,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/143mx0vi","slide":25,"text":"Calling run() directly does not start a new thread.","textPreview":"Calling run() directly does not start a new thread.","textChars":51,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/5ft7ia","slide":25,"text":"What to say: Connect to lab experiments 7 and 8.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/9fy3ux","slide":26,"title":"Checked vs unchecked exceptions","textShapes":19}
+{"kind":"shape","id":"sh/8vypw36t","slide":26,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/nupo3ip8","slide":26,"text":"Checked vs unchecked exceptions","textPreview":"Checked vs unchecked exceptions","textChars":31,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/mtg7udon","slide":26,"text":"Make exception categories clearer.","textPreview":"Make exception categories clearer.","textChars":34,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/x0r69s7a","slide":26,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/wzyp0n6p","slide":26,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/vypo7ip4","slide":26,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/axg7ydoj","slide":26,"text":"Exceptions","textPreview":"Exceptions","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/d4n6xo76","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/c3e5ojql","slide":26,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/m5w3uto7","slide":26,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/n6543y5s","slide":26,"text":"Checked","textPreview":"Checked","textChars":7,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/87e5w3md","slide":26,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/987m58ny","slide":26,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/a9gnyd4j","slide":26,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/vap47i5o","slide":26,"text":"Unchecked","textPreview":"Unchecked","textChars":9,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/wby503m9","slide":26,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/xc7m98nu","slide":26,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/idgn2d4f","slide":26,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/jep4bi50","slide":26,"text":"Compiler checks handling","textPreview":"Compiler checks handling","textChars":24,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/f294zil8","slide":26,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/u103qdkn","slide":26,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/h4rm1s3y","slide":26,"text":"Use catch or throws","textPreview":"Use catch or throws","textChars":19,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/g3ilsn2t","slide":26,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/7epkvilw","slide":26,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/6dg3mdkb","slide":26,"text":"Often external failures such as I/O","textPreview":"Often external failures such as I/O","textChars":35,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/tgrmx832","slide":26,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/sfilon2h","slide":26,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/japkryl0","slide":26,"text":"RuntimeException family","textPreview":"RuntimeException family","textChars":23,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/i9g3itkf","slide":26,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/8fu1szid","slide":26,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/9gnil4ji","slide":26,"text":"Often programming mistakes","textPreview":"Often programming mistakes","textChars":26,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/mdcjqp07","slide":26,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/nel0ju1s","slide":26,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/wje1wji9","slide":26,"text":"Compiler does not force handling","textPreview":"Compiler does not force handling","textChars":32,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"notes","id":"nt/9fy3ux","slide":26,"text":"What to say: Clarify why some exceptions produce compile errors if not handled.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/ejb9xj","slide":27,"title":"Exception stack unwinding","textShapes":10}
+{"kind":"shape","id":"sh/q54fmdwv","slide":27,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/d8feh8v6","slide":27,"text":"Exception stack unwinding","textPreview":"Exception stack unwinding","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/c7mxone1","slide":27,"text":"Explain propagation.","textPreview":"Explain propagation.","textChars":20,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/32dwbyd4","slide":27,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/214fitwj","slide":27,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/p4ved8va","slide":27,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/o3mxk3ep","slide":27,"text":"Exceptions","textPreview":"Exceptions","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/fetwnyd8","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/edkvetwn","slide":27,"bbox":[70,305,194.4,96]}
+{"kind":"textbox","id":"sh/0bqtc7el","slide":27,"text":"Exception thrown in method C","textPreview":"Exception thrown in method C","textChars":28,"textLines":1,"bbox":[82,324,170.4,58]}
+{"kind":"shape","id":"sh/lczalcf6","slide":27,"bbox":[272.4,337,26,30]}
+{"kind":"shape","id":"sh/y98baxwf","slide":27,"bbox":[306.4,305,194.4,96]}
+{"kind":"textbox","id":"sh/zahsj2x0","slide":27,"text":"C has no catch","textPreview":"C has no catch","textChars":14,"textLines":1,"bbox":[318.4,324,170.4,58]}
+{"kind":"shape","id":"sh/c7qt87e9","slide":27,"bbox":[508.8,337,26,30]}
+{"kind":"shape","id":"sh/d8zahsfu","slide":27,"bbox":[542.8,305,194.4,96]}
+{"kind":"textbox","id":"sh/qlob6xwj","slide":27,"text":"Return to method B","textPreview":"Return to method B","textChars":18,"textLines":1,"bbox":[554.8,324,170.4,58]}
+{"kind":"shape","id":"sh/bmhsf2x4","slide":27,"bbox":[745.2,337,26,30]}
+{"kind":"shape","id":"sh/w3atkret","slide":27,"bbox":[779.2,305,194.4,96]}
+{"kind":"textbox","id":"sh/x4jutwfe","slide":27,"text":"Return to method A","textPreview":"Return to method A","textChars":18,"textLines":1,"bbox":[791.2,324,170.4,58]}
+{"kind":"shape","id":"sh/50zadw7i","slide":27,"bbox":[981.6,337,26,30]}
+{"kind":"shape","id":"sh/4z6t4r6x","slide":27,"bbox":[1015.6,305,194.4,96]}
+{"kind":"textbox","id":"sh/jyxsbmpc","slide":27,"text":"Matching catch handles","textPreview":"Matching catch handles","textChars":22,"textLines":1,"bbox":[1027.6,324,170.4,58]}
+{"kind":"notes","id":"nt/ejb9xj","slide":27,"text":"What to say: Explain the JVM searches back through the call stack.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/noarcz","slide":28,"title":"Catch order matters","textShapes":8}
+{"kind":"shape","id":"sh/18ju1gjq","slide":28,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/e5sv6lkz","slide":28,"text":"Catch order matters","textPreview":"Catch order matters","textChars":19,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/f61czq1k","slide":28,"text":"Prevent unreachable catch errors.","textPreview":"Prevent unreachable catch errors.","textChars":33,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/s3qd4b2t","slide":28,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/t4zuxgje","slide":28,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/6h8v21k3","slide":28,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/rihcv618","slide":28,"text":"try-catch","textPreview":"try-catch","textChars":9,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/czudgvid","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/d03e90ji","slide":28,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/hg7218ju","slide":28,"text":"try {\n    risky();\n} catch (ArithmeticException e) {\n    System.out.println(\"specific\");\n} catch (Exception e) {\n    System.out.println(\"general\");\n}","textPreview":"try { |     risky(); | } catch (ArithmeticException e) { |     System.out.println(\"specific\"); | } catch (Exception e) { |     System.out...","textChars":149,"textLines":7,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/gfelsn29","slide":28,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/ve5kzi1o","slide":28,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/udw3qdk3","slide":28,"text":"Catch order","textPreview":"Catch order","textChars":11,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/tcn2x8jy","slide":28,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/noarcz","slide":28,"text":"What to say: Explain specific exceptions must come before general Exception.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/wq87pi","slide":29,"title":"finally is for cleanup, not normal logic","textShapes":13}
+{"kind":"shape","id":"sh/gbe183qd","slide":29,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/vq5kfy98","slide":29,"text":"finally is for cleanup, not normal logic","textPreview":"finally is for cleanup, not normal logic","textChars":40,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/upwj6d8n","slide":29,"text":"Clarify proper use.","textPreview":"Clarify proper use.","textChars":19,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/5g725sra","slide":29,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/4fylcnqp","slide":29,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/3e5k3i94","slide":29,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/idwjad8j","slide":29,"text":"finally","textPreview":"finally","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/dk729sr6","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/cjylgnql","slide":29,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/qtgbmxwj","slide":29,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/ru9sf2x4","slide":29,"text":"Good use","textPreview":"Good use","textChars":8,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/svito7ep","slide":29,"text":"Close files, release resources, print final status.","textPreview":"Close files, release resources, print final status.","textChars":51,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/dwruhcfa","slide":29,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/ex0bqxwf","slide":29,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/fy9cj2x0","slide":29,"text":"Runs after try/catch","textPreview":"Runs after try/catch","textChars":20,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/0zits7el","slide":29,"text":"Usually executes whether exception happens or not.","textPreview":"Usually executes whether exception happens or not.","textChars":50,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/10rulcf6","slide":29,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/u1wbedgb","slide":29,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/v2ps7ixw","slide":29,"text":"Not for decisions","textPreview":"Not for decisions","textChars":17,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/j6l8fedo","slide":29,"text":"Do not hide main program logic inside finally.","textPreview":"Do not hide main program logic inside finally.","textChars":46,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/y5c7m9c3","slide":29,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/l83qhovu","slide":29,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/k7upoju9","slide":29,"text":"Modern note","textPreview":"Modern note","textChars":11,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/b218buds","slide":29,"text":"try-with-resources exists, but this module focuses on finally.","textPreview":"try-with-resources exists, but this module focuses on finally.","textChars":62,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/wq87pi","slide":29,"text":"What to say: Make finally's role memorable.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/m79smb","slide":30,"title":"Worked lab plan: DivisionByZero exception","textShapes":10}
+{"kind":"shape","id":"sh/fmdwjupk","slide":30,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/gnmdczq5","slide":30,"text":"Worked lab plan: DivisionByZero exception","textPreview":"Worked lab plan: DivisionByZero exception","textChars":41,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/1ovelk7q","slide":30,"text":"Break custom exception lab into steps.","textPreview":"Break custom exception lab into steps.","textChars":38,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/2p4vep8b","slide":30,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/3qdwnupw","slide":30,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ormdgzqh","slide":30,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/psvep47m","slide":30,"text":"Custom","textPreview":"Custom","textChars":6,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/qtovi987","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/buxwreps","slide":30,"bbox":[70,305,194.4,96]}
+{"kind":"textbox","id":"sh/nu1krihc","slide":30,"text":"Create exception class","textPreview":"Create exception class","textChars":22,"textLines":1,"bbox":[82,324,170.4,58]}
+{"kind":"shape","id":"sh/mtsjid0r","slide":30,"bbox":[272.4,337,26,30]}
+{"kind":"shape","id":"sh/9wj2tszi","slide":30,"bbox":[306.4,305,194.4,96]}
+{"kind":"textbox","id":"sh/8valknix","slide":30,"text":"Read numerator/denominator","textPreview":"Read numerator/denominator","textChars":26,"textLines":1,"bbox":[318.4,324,170.4,58]}
+{"kind":"shape","id":"sh/zqhknyhg","slide":30,"bbox":[508.8,337,26,30]}
+{"kind":"shape","id":"sh/yp8jet0v","slide":30,"bbox":[542.8,305,194.4,96]}
+{"kind":"textbox","id":"sh/lsz2p8z6","slide":30,"text":"If denominator is zero, throw","textPreview":"If denominator is zero, throw","textChars":29,"textLines":1,"bbox":[554.8,324,170.4,58]}
+{"kind":"shape","id":"sh/0rq1g3il","slide":30,"bbox":[745.2,337,26,30]}
+{"kind":"shape","id":"sh/jmlkz2hk","slide":30,"bbox":[779.2,305,194.4,96]}
+{"kind":"textbox","id":"sh/ilc3qx0z","slide":30,"text":"catch and display message","textPreview":"catch and display message","textChars":25,"textLines":1,"bbox":[791.2,324,170.4,58]}
+{"kind":"shape","id":"sh/ehwny1k7","slide":30,"bbox":[981.6,337,26,30]}
+{"kind":"shape","id":"sh/fi5or61s","slide":30,"bbox":[1015.6,305,194.4,96]}
+{"kind":"textbox","id":"sh/gjy50b2d","slide":30,"text":"finally prints completion","textPreview":"finally prints completion","textChars":25,"textLines":1,"bbox":[1027.6,324,170.4,58]}
+{"kind":"notes","id":"nt/m79smb","slide":30,"text":"What to say: Use the lab as a complete learning path.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/0nysyg","slide":31,"title":"start() and run() are not the same","textShapes":19}
+{"kind":"shape","id":"sh/kzilkr2h","slide":31,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/zy9krm1w","slide":31,"text":"start() and run() are not the same","textPreview":"start() and run() are not the same","textChars":34,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/yx03ihkr","slide":31,"text":"Clarify crucial thread mistake.","textPreview":"Clarify crucial thread mistake.","textChars":31,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/9obmxwje","slide":31,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/8n2lor2t","slide":31,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/7m94vm18","slide":31,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/ml03mhkn","slide":31,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/ps72lcju","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/orylc729","slide":31,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/i1sje9o7","slide":31,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/jmlkne5s","slide":31,"text":"Calling run()","textPreview":"Calling run()","textChars":13,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/knu1gj6x","slide":31,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/5o32poni","slide":31,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/6pcjito3","slide":31,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/7qlkre5o","slide":31,"text":"Calling start()","textPreview":"Calling start()","textChars":15,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/srulkj69","slide":31,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/ts32tonu","slide":31,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/utc3mtof","slide":31,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/fu5kvy5k","slide":31,"text":"Normal method call","textPreview":"Normal method call","textChars":18,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/ry503yls","slide":31,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/qxwjatk7","slide":31,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/dkn2583y","slide":31,"text":"Runs on current thread","textPreview":"Runs on current thread","textChars":22,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/cze1c32d","slide":31,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/3u50zylw","slide":31,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/2tcj6t4b","slide":31,"text":"No new thread created","textPreview":"No new thread created","textChars":21,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/pwni1o32","slide":31,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/4ve18j2h","slide":31,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/fql0velk","slide":31,"text":"Creates new thread of execution","textPreview":"Creates new thread of execution","textChars":31,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/upcj294z","slide":31,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/kjqpgvel","slide":31,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/lkzqpgf6","slide":31,"text":"JVM calls run internally","textPreview":"JVM calls run internally","textChars":24,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/yx87elgv","slide":31,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/jyhonqxg","slide":31,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/8nqpkvex","slide":31,"text":"Main and child can run concurrently","textPreview":"Main and child can run concurrently","textChars":35,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"notes","id":"nt/0nysyg","slide":31,"text":"What to say: This is the top thread misconception.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/j89fr2","slide":32,"title":"Runnable vs extending Thread","textShapes":19}
+{"kind":"shape","id":"sh/9c3upcve","slide":32,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/m9sbexw3","slide":32,"text":"Runnable vs extending Thread","textPreview":"Runnable vs extending Thread","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/na1cn2d8","slide":32,"text":"Compare creation approaches.","textPreview":"Compare creation approaches.","textChars":28,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/wzutk7e5","slide":32,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/x03utcvq","slide":32,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/axcbihwz","slide":32,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/bylcrmdk","slide":32,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/c3qt8nel","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/d4zahsv6","slide":32,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/tore9c3u","slide":32,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/8nixg729","slide":32,"text":"Runnable","textPreview":"Runnable","textChars":8,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/7m9w72lo","slide":32,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/6l0fexkj","slide":32,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/hsbydw36","slide":32,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/gr2xkr2l","slide":32,"text":"extends Thread","textPreview":"extends Thread","textChars":14,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/vq9wbml0","slide":32,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/up0fihkf","slide":32,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/pgbyhw32","slide":32,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/4f2xor2h","slide":32,"text":"Separates task from thread","textPreview":"Separates task from thread","textChars":26,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/ozahkfat","slide":32,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/p0jid0re","slide":32,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/2xszi5sn","slide":32,"text":"Class can still extend another class","textPreview":"Class can still extend another class","textChars":36,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/ny10bat8","slide":32,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/cnuhofap","slide":32,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/xo3ihkra","slide":32,"text":"Preferred for many designs","textPreview":"Preferred for many designs","textChars":26,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/alszm5sz","slide":32,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/bml0fa94","slide":32,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/srqhcval","slide":32,"text":"Simple for small demos","textPreview":"Simple for small demos","textChars":22,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/dszy5gb6","slide":32,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/vmpkryto","slide":32,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/ulwjitc3","slide":32,"text":"Task is tied to Thread subclass","textPreview":"Task is tied to Thread subclass","textChars":31,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/ho72tobu","slide":32,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/wnylkju9","slide":32,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/7i5knetc","slide":32,"text":"Cannot extend another class","textPreview":"Cannot extend another class","textChars":27,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"notes","id":"nt/j89fr2","slide":32,"text":"What to say: Explain why Runnable is more flexible.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/n1om12","slide":33,"title":"Output order in threads is not guaranteed","textShapes":8}
+{"kind":"shape","id":"sh/ovadc3it","slide":33,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/3u1cjyho","slide":33,"text":"Output order in threads is not guaranteed","textPreview":"Output order in threads is not guaranteed","textChars":41,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/2tsvad03","slide":33,"text":"Explain scheduler behavior.","textPreview":"Explain scheduler behavior.","textChars":27,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/1sjuh8zi","slide":33,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/grad83ix","slide":33,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/fq1cfyhc","slide":33,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/e5sv6t0r","slide":33,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/t4zudoz6","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/s3qd4ji1","slide":33,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/ul07yps3","slide":33,"text":"t1.start();\nt2.start();\nSystem.out.println(\"main\");\n\n// Possible outputs can vary because\n// the scheduler decides execution order.","textPreview":"t1.start(); | t2.start(); | System.out.println(\"main\"); |  | // Possible outputs can vary because | // the scheduler decides execution or...","textChars":131,"textLines":6,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/fm987uto","slide":33,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/gnip0za9","slide":33,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/horq94bu","slide":33,"text":"Thread scheduling","textPreview":"Thread scheduling","textChars":17,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/6xg7u5c7","slide":33,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/n1om12","slide":33,"text":"What to say: Warn students not to memorize one output order unless join is used.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/a5t97l","slide":34,"title":"join creates a predictable checkpoint","textShapes":10}
+{"kind":"shape","id":"sh/s3exwfqh","slide":34,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/725w3upw","slide":34,"text":"join creates a predictable checkpoint","textPreview":"join creates a predictable checkpoint","textChars":37,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/61wvup8b","slide":34,"text":"Explain coordination.","textPreview":"Explain coordination.","textChars":21,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/50ne1k7q","slide":34,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/kzedsfql","slide":34,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/jy5wzap0","slide":34,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/ixwv658f","slide":34,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/pwred47a","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/4vyx4zqp","slide":34,"bbox":[70,305,194.4,96]}
+{"kind":"textbox","id":"sh/294repsz","slide":34,"text":"Start child thread","textPreview":"Start child thread","textChars":18,"textLines":1,"bbox":[82,324,170.4,58]}
+{"kind":"shape","id":"sh/3ax87utk","slide":34,"bbox":[272.4,337,26,30]}
+{"kind":"shape","id":"sh/ov69gza5","slide":34,"bbox":[306.4,305,194.4,96]}
+{"kind":"textbox","id":"sh/pwfq94bq","slide":34,"text":"Main continues","textPreview":"Main continues","textChars":14,"textLines":1,"bbox":[318.4,324,170.4,58]}
+{"kind":"shape","id":"sh/e547aps3","slide":34,"bbox":[508.8,337,26,30]}
+{"kind":"shape","id":"sh/f6d83uto","slide":34,"bbox":[542.8,305,194.4,96]}
+{"kind":"textbox","id":"sh/g7mpcfa9","slide":34,"text":"Main calls join","textPreview":"Main calls join","textChars":15,"textLines":1,"bbox":[554.8,324,170.4,58]}
+{"kind":"shape","id":"sh/18vq5kbu","slide":34,"bbox":[745.2,337,26,30]}
+{"kind":"shape","id":"sh/y1orm9s7","slide":34,"bbox":[779.2,305,194.4,96]}
+{"kind":"textbox","id":"sh/z2h8fets","slide":34,"text":"Main waits","textPreview":"Main waits","textChars":10,"textLines":1,"bbox":[791.2,324,170.4,58]}
+{"kind":"shape","id":"sh/v69o7694","slide":34,"bbox":[981.6,337,26,30]}
+{"kind":"shape","id":"sh/u50ne18z","slide":34,"bbox":[1015.6,305,194.4,96]}
+{"kind":"textbox","id":"sh/h8r69gra","slide":34,"text":"Child finishes then main resumes","textPreview":"Child finishes then main resumes","textChars":32,"textLines":1,"bbox":[1027.6,324,170.4,58]}
+{"kind":"notes","id":"nt/a5t97l","slide":34,"text":"What to say: Show join as a synchronization checkpoint.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/exzhr3","slide":35,"title":"Thread state reading guide","textShapes":13}
+{"kind":"shape","id":"sh/e9o76h0f","slide":35,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/1wfq1cz6","slide":35,"text":"Thread state reading guide","textPreview":"Thread state reading guide","textChars":26,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/gv6p87il","slide":35,"text":"Explain getState output.","textPreview":"Explain getState output.","textChars":24,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/r6d8v2ho","slide":35,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/65472x03","slide":35,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/t8fqxczu","slide":35,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/s7mp47i9","slide":35,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/b2h876h8","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/q18re10n","slide":35,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/kzulcf61","slide":35,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/50325knm","slide":35,"text":"NEW","textPreview":"NEW","textChars":3,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/ixc3apov","slide":35,"text":"Thread object exists but start not called.","textPreview":"Thread object exists but start not called.","textChars":42,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/jylk3u5g","slide":35,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/wbu18f65","slide":35,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/xc321k7a","slide":35,"text":"RUNNABLE","textPreview":"RUNNABLE","textChars":8,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/a9sj65oz","slide":35,"text":"Ready or running according to scheduler.","textPreview":"Ready or running according to scheduler.","textChars":40,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/va1kzapk","slide":35,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/87a14v6t","slide":35,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/98j2x07e","slide":35,"text":"WAITING/TIMED_WAITING","textPreview":"WAITING/TIMED_WAITING","textChars":21,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/p4bi1wz2","slide":35,"text":"Waiting for another thread or timeout.","textPreview":"Waiting for another thread or timeout.","textChars":38,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/o32h8ryh","slide":35,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/n2t0zmhc","slide":35,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/21kz6hgr","slide":35,"text":"TERMINATED","textPreview":"TERMINATED","textChars":10,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/10bixwz6","slide":35,"text":"run method has completed.","textPreview":"run method has completed.","textChars":25,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/exzhr3","slide":35,"text":"What to say: Give simple interpretation of common states.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/yrtgdl","slide":36,"title":"Thread common mistakes","textShapes":15}
+{"kind":"shape","id":"sh/w7ed8j6l","slide":36,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/b65cfe50","slide":36,"text":"Thread common mistakes","textPreview":"Thread common mistakes","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/a5wv69of","slide":36,"text":"Prevent beginner bugs.","textPreview":"Prevent beginner bugs.","textChars":22,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/lw7elon2","slide":36,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/kvedcj6h","slide":36,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ju5wje5c","slide":36,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/y9wva9or","slide":36,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/103u9kny","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/0zud0z6d","slide":36,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/6dozipob","slide":36,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/rehgbu5w","slide":36,"text":"Calling run instead of start","textPreview":"Calling run instead of start","textChars":28,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/sfqhkz6h","slide":36,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/tgzyd4nm","slide":36,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/eh8zm9o7","slide":36,"text":"Calling start twice on same Thread object","textPreview":"Calling start twice on same Thread object","textChars":41,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/fihgfu5s","slide":36,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/gjqhoz6d","slide":36,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/1kzyh4ny","slide":36,"text":"Assuming fixed output order without join","textPreview":"Assuming fixed output order without join","textChars":40,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/2l8zq9oj","slide":36,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/3m1gje54","slide":36,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/zq1g7elw","slide":36,"text":"Depending on priority for correctness","textPreview":"Depending on priority for correctness","textChars":37,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/ypsfy9kb","slide":36,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/lcjy9o32","slide":36,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/0bax0j2h","slide":36,"text":"Ignoring exceptions inside child threads","textPreview":"Ignoring exceptions inside child threads","textChars":40,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"notes","id":"nt/yrtgdl","slide":36,"text":"What to say: These help students debug lab outputs.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/1axpjp","slide":37,"title":"Worked lab plan: MyThread","textShapes":10}
+{"kind":"shape","id":"sh/uxofql87","slide":37,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/h0fylg7i","slide":37,"text":"Worked lab plan: MyThread","textPreview":"Worked lab plan: MyThread","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/gz6xsv6x","slide":37,"text":"Break thread lab into steps.","textPreview":"Break thread lab into steps.","textChars":28,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/7udgf6pg","slide":37,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/6t4fm18v","slide":37,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/twvyhg7m","slide":37,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/svmxobq1","slide":37,"text":"Lab Link","textPreview":"Lab Link","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/rqhgrapk","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/qp8zy5oz","slide":37,"bbox":[70,305,194.4,96]}
+{"kind":"textbox","id":"sh/87i9onqh","slide":37,"text":"Create MyThread class","textPreview":"Create MyThread class","textChars":21,"textLines":1,"bbox":[82,324,170.4,58]}
+{"kind":"shape","id":"sh/98rqh87m","slide":37,"bbox":[272.4,337,26,30]}
+{"kind":"shape","id":"sh/ml0rmd8b","slide":37,"bbox":[306.4,305,194.4,96]}
+{"kind":"textbox","id":"sh/7698fipw","slide":37,"text":"Call super in constructor","textPreview":"Call super in constructor","textChars":25,"textLines":1,"bbox":[318.4,324,170.4,58]}
+{"kind":"shape","id":"sh/kji9k3q5","slide":37,"bbox":[508.8,337,26,30]}
+{"kind":"shape","id":"sh/lkrqd87q","slide":37,"bbox":[542.8,305,194.4,96]}
+{"kind":"textbox","id":"sh/yhgrit8z","slide":37,"text":"Override run","textPreview":"Override run","textChars":12,"textLines":1,"bbox":[554.8,324,170.4,58]}
+{"kind":"shape","id":"sh/zip8bypk","slide":37,"bbox":[745.2,337,26,30]}
+{"kind":"shape","id":"sh/cfy9gjq9","slide":37,"bbox":[779.2,305,194.4,96]}
+{"kind":"textbox","id":"sh/xg7q9o7e","slide":37,"text":"Create object","textPreview":"Create object","textChars":13,"textLines":1,"bbox":[791.2,324,170.4,58]}
+{"kind":"shape","id":"sh/dcz6dkzi","slide":37,"bbox":[981.6,337,26,30]}
+{"kind":"shape","id":"sh/cbqpkfix","slide":37,"bbox":[1015.6,305,194.4,96]}
+{"kind":"textbox","id":"sh/rahobahc","slide":37,"text":"Call start and observe concurrency","textPreview":"Call start and observe concurrency","textChars":34,"textLines":1,"bbox":[1027.6,324,170.4,58]}
+{"kind":"notes","id":"nt/1axpjp","slide":37,"text":"What to say: Connect exactly to the syllabus lab.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/0vfckq","slide":38,"title":"Module 4 mind map","textShapes":18}
+{"kind":"shape","id":"sh/98zup8zm","slide":38,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/m5obet0v","slide":38,"text":"Module 4 mind map","textPreview":"Module 4 mind map","textChars":17,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/n6xcnyhg","slide":38,"text":"Connect all major headings.","textPreview":"Connect all major headings.","textChars":27,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/0j6tcji5","slide":38,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/l4fulozq","slide":38,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/yhobat0z","slide":38,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/zixcjehk","slide":38,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/cfmt8jit","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/dgfuhoze","slide":38,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/lor6tozy","slide":38,"text":"Module 4","textPreview":"Module 4","textChars":8,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/knip0jyd","slide":38,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/zm9orehs","slide":38,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/yl07y90n","slide":38,"text":"Exceptions","textPreview":"Exceptions","textChars":10,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/xkr6p4z2","slide":38,"text":"Thrown objects.","textPreview":"Thrown objects.","textChars":15,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/czipwzih","slide":38,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/by9onuhw","slide":38,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/ax07u90b","slide":38,"text":"try/catch","textPreview":"try/catch","textChars":9,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/pw76l4zq","slide":38,"text":"Handle failures.","textPreview":"Handle failures.","textChars":16,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/ovypszi5","slide":38,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/gz2p8zq1","slide":38,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/h0bq147m","slide":38,"text":"throw/throws","textPreview":"throw/throws","textChars":12,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/udk76p8b","slide":38,"text":"Raise/declare.","textPreview":"Raise/declare.","textChars":14,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/fetozupg","slide":38,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/sb2p4fq5","slide":38,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/tcb6xk7q","slide":38,"text":"finally","textPreview":"finally","textChars":7,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/69072p8z","slide":38,"text":"Cleanup.","textPreview":"Cleanup.","textChars":8,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/7a9ovupk","slide":38,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/c7mpgjq9","slide":38,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/d8vq9o7u","slide":38,"text":"Threads","textPreview":"Threads","textChars":7,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/7eh0vmd8","slide":38,"text":"Concurrency.","textPreview":"Concurrency.","textChars":12,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/md8jmhwn","slide":38,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/90j2xcve","slide":38,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/8fa1o7et","slide":38,"text":"join/state","textPreview":"join/state","textChars":10,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/v21kzmdk","slide":38,"text":"Coordination.","textPreview":"Coordination.","textChars":13,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/0vfckq","slide":38,"text":"What to say: Use as final overview.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/hizg3h","slide":39,"title":"Viva and exam focus","textShapes":15}
+{"kind":"shape","id":"sh/n2lgzud0","slide":39,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/83uh8fel","slide":39,"text":"Viva and exam focus","textPreview":"Viva and exam focus","textChars":19,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/943y1kv6","slide":39,"text":"Convert content into marks.","textPreview":"Convert content into marks.","textChars":27,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/a5czapwr","slide":39,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/v6lg3udc","slide":39,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/w7uhczex","slide":39,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/x8ny54v2","slide":39,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/i9wze9wn","slide":39,"text":"39","textPreview":"39","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ju5g7ed8","slide":39,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/bu9g3m1k","slide":39,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/atgfah0z","slide":39,"text":"Draw exception flow from try to catch","textPreview":"Draw exception flow from try to catch","textChars":37,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/xwry5wja","slide":39,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/wvixcrip","slide":39,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/nqpgzm18","slide":39,"text":"Differentiate throw and throws","textPreview":"Differentiate throw and throws","textChars":30,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/m5gf6h0n","slide":39,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/9s7y1cje","slide":39,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/oryx87it","slide":39,"text":"Write custom exception syntax","textPreview":"Write custom exception syntax","textChars":29,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/7mtgb6hc","slide":39,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/6lkfi107","slide":39,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/ih4ja5kf","slide":39,"text":"Compare Runnable and Thread approaches","textPreview":"Compare Runnable and Thread approaches","textChars":38,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/3id03a1k","slide":39,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/4jm1cf25","slide":39,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/5kvi5kjq","slide":39,"text":"Explain start, run, isAlive, join, priority and thread states","textPreview":"Explain start, run, isAlive, join, priority and thread states","textChars":61,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"notes","id":"nt/hizg3h","slide":39,"text":"What to say: Tell students output order in thread programs may vary.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/3kgtuc","slide":40,"title":"20 important viva questions","textShapes":25}
+{"kind":"shape","id":"sh/tk72tk7i","slide":40,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/6hw3y587","slide":40,"text":"20 important viva questions","textPreview":"20 important viva questions","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/7i5krapc","slide":40,"text":"Rapid oral revision.","textPreview":"Rapid oral revision.","textChars":20,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/kfelwfq1","slide":40,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/lgn2p07m","slide":40,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ydw3u58v","slide":40,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/je5knapg","slide":40,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/4bil8zq5","slide":40,"text":"40","textPreview":"40","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/5crm147q","slide":40,"text":"1. What is exception?","textPreview":"1. What is exception?","textChars":21,"textLines":1,"bbox":[78,154,548,32]}
+{"kind":"textbox","id":"sh/543ql8bm","slide":40,"text":"2. What is try?","textPreview":"2. What is try?","textChars":15,"textLines":1,"bbox":[78,199,548,32]}
+{"kind":"textbox","id":"sh/43u9c3u1","slide":40,"text":"3. What is catch?","textPreview":"3. What is catch?","textChars":17,"textLines":1,"bbox":[78,244,548,32]}
+{"kind":"textbox","id":"sh/j2l8jytg","slide":40,"text":"4. Checked vs unchecked?","textPreview":"4. Checked vs unchecked?","textChars":24,"textLines":1,"bbox":[78,289,548,32]}
+{"kind":"textbox","id":"sh/i1cratcv","slide":40,"text":"5. What is uncaught exception?","textPreview":"5. What is uncaught exception?","textChars":30,"textLines":1,"bbox":[78,334,548,32]}
+{"kind":"textbox","id":"sh/h03qhoba","slide":40,"text":"6. Multiple catch?","textPreview":"6. Multiple catch?","textChars":18,"textLines":1,"bbox":[78,379,548,32]}
+{"kind":"textbox","id":"sh/wza98jup","slide":40,"text":"7. Nested try?","textPreview":"7. Nested try?","textChars":14,"textLines":1,"bbox":[78,424,548,32]}
+{"kind":"textbox","id":"sh/ve18fet4","slide":40,"text":"8. throw vs throws?","textPreview":"8. throw vs throws?","textChars":19,"textLines":1,"bbox":[78,469,548,32]}
+{"kind":"textbox","id":"sh/udsrm9cj","slide":40,"text":"9. Use of finally?","textPreview":"9. Use of finally?","textChars":18,"textLines":1,"bbox":[78,514,548,32]}
+{"kind":"textbox","id":"sh/1wnatsbe","slide":40,"text":"10. Built-in exceptions?","textPreview":"10. Built-in exceptions?","textChars":24,"textLines":1,"bbox":[78,559,548,32]}
+{"kind":"textbox","id":"sh/0ve9knu9","slide":40,"text":"11. Custom exception?","textPreview":"11. Custom exception?","textChars":21,"textLines":1,"bbox":[664,154,548,32]}
+{"kind":"textbox","id":"sh/0fmtwri5","slide":40,"text":"12. Chained exception?","textPreview":"12. Chained exception?","textChars":22,"textLines":1,"bbox":[664,199,548,32]}
+{"kind":"textbox","id":"sh/lgvupwjq","slide":40,"text":"13. What is thread?","textPreview":"13. What is thread?","textChars":19,"textLines":1,"bbox":[664,244,548,32]}
+{"kind":"textbox","id":"sh/yd4buh0z","slide":40,"text":"14. What is main thread?","textPreview":"14. What is main thread?","textChars":24,"textLines":1,"bbox":[664,289,548,32]}
+{"kind":"textbox","id":"sh/zedcnm1k","slide":40,"text":"15. Runnable?","textPreview":"15. Runnable?","textChars":13,"textLines":1,"bbox":[664,334,548,32]}
+{"kind":"textbox","id":"sh/cbmtsri9","slide":40,"text":"16. Extending Thread?","textPreview":"16. Extending Thread?","textChars":21,"textLines":1,"bbox":[664,379,548,32]}
+{"kind":"textbox","id":"sh/dcvulcju","slide":40,"text":"17. start vs run?","textPreview":"17. start vs run?","textChars":17,"textLines":1,"bbox":[664,424,548,32]}
+{"kind":"textbox","id":"sh/q9kbqh03","slide":40,"text":"18. What is join?","textPreview":"18. What is join?","textChars":17,"textLines":1,"bbox":[664,469,548,32]}
+{"kind":"textbox","id":"sh/batsjm1o","slide":40,"text":"19. What is isAlive?","textPreview":"19. What is isAlive?","textChars":20,"textLines":1,"bbox":[664,514,548,32]}
+{"kind":"textbox","id":"sh/o72to7ix","slide":40,"text":"20. Thread states?","textPreview":"20. Thread states?","textChars":18,"textLines":1,"bbox":[664,559,548,32]}
+{"kind":"notes","id":"nt/3kgtuc","slide":40,"text":"What to say: Run rapid viva.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}
+{"kind":"slide","id":"sl/sw16my","slide":41,"title":"One-page revision sheet","textShapes":11}
+{"kind":"shape","id":"sh/3ahgzit0","slide":41,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/4bqh8nal","slide":41,"text":"One-page revision sheet","textPreview":"One-page revision sheet","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/pczy1sb6","slide":41,"text":"End with compact keywords.","textPreview":"End with compact keywords.","textChars":26,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/u5oz2dcj","slide":41,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/f6xgvit4","slide":41,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/g7qh4nap","slide":41,"text":"1BCS302 Java | Module 4","textPreview":"1BCS302 Java | Module 4","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/h8zyx8ba","slide":41,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/e1szexsn","slide":41,"text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/z21072t8","slide":41,"bbox":[78,176,1124,174]}
+{"kind":"shape","id":"sh/f2l4bylw","slide":41,"bbox":[78,176,8,174]}
+{"kind":"textbox","id":"sh/u1cnit4b","slide":41,"text":"Keywords","textPreview":"Keywords","textChars":8,"textLines":1,"bbox":[100,190,1086,34]}
+{"kind":"textbox","id":"sh/h4nmd832","slide":41,"text":"Exception; Throwable; Error; Exception; RuntimeException; checked; unchecked; uncaught; try; catch; multiple catch; nested try; throw; throws; finally; built-in exception; custom exception; chained exception; Thread; Runnable; main thread; start; run; multiple threads; scheduler; isAlive; join; priority; getState; NEW; RUNNABLE; BLOCKED; WAITING; TIMED_WAITING; TERMINATED.","textPreview":"Exception; Throwable; Error; Exception; RuntimeException; checked; unchecked; uncaught; try; catch; multiple catch; nested try; throw; th...","textChars":375,"textLines":1,"bbox":[100,230,1086,112]}
+{"kind":"shape","id":"sh/g3e5k3mh","slide":41,"bbox":[78,388,1124,98]}
+{"kind":"shape","id":"sh/3q5ofyls","slide":41,"bbox":[78,388,8,98]}
+{"kind":"textbox","id":"sh/2pwnmd47","slide":41,"text":"Exam answer pattern","textPreview":"Exam answer pattern","textChars":19,"textLines":1,"bbox":[100,402,1086,34]}
+{"kind":"textbox","id":"sh/psn6h83y","slide":41,"text":"For Module 4 answers: write the syntax, trace the runtime flow, state the common mistake, and connect exception handling or threads to the lab task.","textPreview":"For Module 4 answers: write the syntax, trace the runtime flow, state the common mistake, and connect exception handling or threads to th...","textChars":148,"textLines":1,"bbox":[100,442,1086,36]}
+{"kind":"shape","id":"sh/4re5o3md","slide":41,"bbox":[78,530,1124,82]}
+{"kind":"shape","id":"sh/ru5ojil4","slide":41,"bbox":[78,530,8,82]}
+{"kind":"textbox","id":"sh/qtwnqd4j","slide":41,"text":"Lab memory trick","textPreview":"Lab memory trick","textChars":16,"textLines":1,"bbox":[100,544,1086,34]}
+{"kind":"textbox","id":"sh/mp07ihor","slide":41,"text":"Write the smallest working program first, compile, predict output, then add one feature at a time.","textPreview":"Write the smallest working program first, compile, predict output, then add one feature at a time.","textChars":98,"textLines":1,"bbox":[100,584,1086,20]}
+{"kind":"notes","id":"nt/sw16my","slide":41,"text":"What to say: Close with keyword revision.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 4 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 10-11."}

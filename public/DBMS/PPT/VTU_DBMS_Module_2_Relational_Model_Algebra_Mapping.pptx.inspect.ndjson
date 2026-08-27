@@ -1,0 +1,1180 @@
+{"kind":"deck","id":"pr/athlrj","name":"Deck"}
+{"kind":"layout","layoutId":"18a3663a-431c-4247-87aa-3ab924c17378","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"a2c5616c-4316-41c9-8f54-1777ed10758c","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/jnb0p0","slide":1,"title":"Relational Model and Algebra","textShapes":8}
+{"kind":"shape","id":"sh/4j29snuh","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/3itsjidw","slide":1,"text":"Relational Model and Algebra","textPreview":"Relational Model and Algebra","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ihkrqdcb","slide":1,"text":"Module 2 turns ER ideas into relations and query operations.","textPreview":"Module 2 turns ER ideas into relations and query operations.","textChars":60,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/hgbah8vq","slide":1,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/wfi9o3u5","slide":1,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ve9sfydk","slide":1,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/ud0rmtcf","slide":1,"text":"Opening","textPreview":"Opening","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/1cvatsba","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/0bmt07up","slide":1,"text":"DBMS\nModule 2","textPreview":"DBMS | Module 2","textChars":13,"textLines":2,"bbox":[78,184,640,175]}
+{"kind":"textbox","id":"sh/al0f65k3","slide":1,"text":"Relational concepts • Constraints • Updates • Algebra • ER mapping","textPreview":"Relational concepts • Constraints • Updates • Algebra • ER mapping","textChars":66,"textLines":1,"bbox":[82,388,700,78]}
+{"kind":"shape","id":"sh/v69wzq1o","slide":1,"bbox":[790,134,330,330]}
+{"kind":"shape","id":"sh/w7ix8v29","slide":1,"bbox":[875,220,160,160]}
+{"kind":"textbox","id":"sh/x8re10je","slide":1,"text":"TABLE\nKEY\nJOIN","textPreview":"TABLE | KEY | JOIN","textChars":14,"textLines":3,"bbox":[814,238,280,125]}
+{"kind":"notes","id":"nt/jnb0p0","slide":1,"text":"What to say: Open by saying Module 1 designed concepts; Module 2 turns them into relational tables and operations.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/93j7sr","slide":2,"title":"Module 2 learning path","textShapes":17}
+{"kind":"shape","id":"sh/8ryd4fe5","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/7qpwbadk","slide":2,"text":"Module 2 learning path","textPreview":"Module 2 learning path","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/mpgv25wz","slide":2,"text":"Use the supplied notes as the checklist.","textPreview":"Use the supplied notes as the checklist.","textChars":40,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/hgrehkv2","slide":2,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/wfix8feh","slide":2,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ve9wfadw","slide":2,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/ud0f6pwb","slide":2,"text":"Opening","textPreview":"Opening","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/5krel4vy","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/4jixczed","slide":2,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/e14bqdwj","slide":2,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/f2dczydo","slide":2,"text":"Explain domains, attributes, tuples, relations and relation schemas","textPreview":"Explain domains, attributes, tuples, relations and relation schemas","textChars":67,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/g3mts3e9","slide":2,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/14vu18vu","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/254vudwf","slide":2,"text":"Explain relation characteristics and relational notation","textPreview":"Explain relation characteristics and relational notation","textChars":56,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/36dc3id0","slide":2,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/o7mdwnel","slide":2,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/p8fu5sv6","slide":2,"text":"Explain domain, key, NULL, entity and referential integrity constraints","textPreview":"Explain domain, key, NULL, entity and referential integrity constraints","textChars":71,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/i9kbi9wb","slide":2,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/jatcredg","slide":2,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/nep8zat8","slide":2,"text":"Explain insert, delete, update and transaction constraint violations","textPreview":"Explain insert, delete, update and transaction constraint violations","textChars":68,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/mdgrqpc3","slide":2,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/9g7q1kbe","slide":2,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/8fy9sfut","slide":2,"text":"Explain select, project, rename, set operations, product, join and division","textPreview":"Explain select, project, rename, set operations, product, join and division","textChars":75,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"shape","id":"sh/zap8vatc","slide":2,"bbox":[92,453,28,28]}
+{"kind":"textbox","id":"sh/y9wrm5cr","slide":2,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,456,28,18]}
+{"kind":"textbox","id":"sh/lc7qxkbi","slide":2,"text":"Map ER designs into relational schemas","textPreview":"Map ER designs into relational schemas","textChars":38,"textLines":1,"bbox":[136,449,996,42]}
+{"kind":"notes","id":"nt/93j7sr","slide":2,"text":"What to say: Preview the journey from table structure to algebra to mapping.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/wg5u1z","slide":3,"title":"Why tables became the dominant model","textShapes":10}
+{"kind":"shape","id":"sh/3ahoj6lg","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ovqpsb2l","slide":3,"text":"Why tables became the dominant model","textPreview":"Why tables became the dominant model","textChars":36,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/pwz6lg36","slide":3,"text":"Motivate the relational model.","textPreview":"Motivate the relational model.","textChars":30,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/qx87ulkr","slide":3,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/byhonq1c","slide":3,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/czqpwb2x","slide":3,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/d0j6pgji","slide":3,"text":"Relational Model","textPreview":"Relational Model","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/y1s7ylk3","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/z218rq18","slide":3,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/bexkfa18","slide":3,"text":"Real-world facts","textPreview":"Real-world facts","textChars":16,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/qdo365kn","slide":3,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/dgf2hkjy","slide":3,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/cf6l8f2d","slide":3,"text":"Relations as tables","textPreview":"Relations as tables","textChars":19,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/3qdkbalw","slide":3,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/2p4j25kb","slide":3,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/pcf2d0j2","slide":3,"text":"Keys identify rows","textPreview":"Keys identify rows","textChars":18,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/or6l4v2h","slide":3,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/7mhknu10","slide":3,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/ml83epkv","slide":3,"text":"Constraints protect meaning","textPreview":"Constraints protect meaning","textChars":27,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/ihsnmt43","slide":3,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/j2lofylo","slide":3,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/43u5o3mt","slide":3,"text":"Algebra queries data","textPreview":"Algebra queries data","textChars":20,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/wg5u1z","slide":3,"text":"What to say: Explain that relational model is simple for users and formal for DBMS.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/g55aoy","slide":4,"title":"Relation basics","textShapes":12}
+{"kind":"shape","id":"sh/s3m1gjax","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/72dk7y9c","slide":4,"text":"Relation basics","textPreview":"Relation basics","textChars":15,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/614jetsr","slide":4,"text":"Define the main vocabulary.","textPreview":"Define the main vocabulary.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/50vi5or6","slide":4,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/kfm1cjal","slide":4,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/jet03et0","slide":4,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/idkja9sv","slide":4,"text":"Relational Model","textPreview":"Relational Model","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/xcbi14ba","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/wb218zap","slide":4,"text":"Relation","textPreview":"Relation","textChars":8,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/q5c729wn","slide":4,"text":"A relation is a table-like set of tuples where each column is an attribute defined over a domain.","textPreview":"A relation is a table-like set of tuples where each column is an attribute defined over a domain.","textChars":97,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/rqlovex8","slide":4,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/crup4jet","slide":4,"text":"Domain","textPreview":"Domain","textChars":6,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/ds36x4fy","slide":4,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/21s7ypwb","slide":4,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/32loruxw","slide":4,"text":"Attribute","textPreview":"Attribute","textChars":9,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/43up0zeh","slide":4,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/p436t4f2","slide":4,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/uxsnupwf","slide":4,"text":"Tuple","textPreview":"Tuple","textChars":5,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/fy1onux0","slide":4,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/j2x4vqds","slide":4,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/i1o32lc7","slide":4,"text":"Relation","textPreview":"Relation","textChars":8,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/54zmxgvy","slide":4,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/k3ql4vud","slide":4,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/76h4zqdo","slide":4,"text":"Schema","textPreview":"Schema","textChars":6,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/g55aoy","slide":4,"text":"What to say: Use STUDENT(USN, Name, Dept, CGPA).\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/4g6je2","slide":5,"title":"Domain, attribute, tuple and relation","textShapes":13}
+{"kind":"shape","id":"sh/472ponmt","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/36tofi58","slide":5,"text":"Domain, attribute, tuple and relation","textPreview":"Domain, attribute, tuple and relation","textChars":37,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/i5k7md43","slide":5,"text":"Separate the four core ideas.","textPreview":"Separate the four core ideas.","textChars":29,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/dwvqlsnq","slide":5,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/svmpsnm5","slide":5,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/rudoji5k","slide":5,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/qtk7qx4z","slide":5,"text":"Relational Model","textPreview":"Relational Model","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/10vqpcnm","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/0zmpw7m1","slide":5,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/6dsf65or","slide":5,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/re1wfa5c","slide":5,"text":"Domain","textPreview":"Domain","textChars":6,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/sfax8vmx","slide":5,"text":"Allowed set of atomic values for an attribute.","textPreview":"Allowed set of atomic values for an attribute.","textChars":46,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/tgjeh0n2","slide":5,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/e1sfa54n","slide":5,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/f21wja58","slide":5,"text":"Attribute","textPreview":"Attribute","textChars":9,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/g3axcfmt","slide":5,"text":"Column name with meaning and domain.","textPreview":"Column name with meaning and domain.","textChars":36,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/14jylkne","slide":5,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/u5ofyloj","slide":5,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/v6hw7q54","slide":5,"text":"Tuple","textPreview":"Tuple","textChars":5,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/zqdczmlw","slide":5,"text":"One row containing related values.","textPreview":"One row containing related values.","textChars":34,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/yp4b6h4b","slide":5,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/lcvu1c32","slide":5,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/kbmt87mh","slide":5,"text":"Relation","textPreview":"Relation","textChars":8,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/bmtcv2lk","slide":5,"text":"Set of tuples under one schema.","textPreview":"Set of tuples under one schema.","textChars":31,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/4g6je2","slide":5,"text":"What to say: Ask students to identify each part in a student table.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/uj3nv9","slide":6,"title":"Relation schema and database schema","textShapes":21}
+{"kind":"shape","id":"sh/zi5cbipo","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/0jytknq9","slide":6,"text":"Relation schema and database schema","textPreview":"Relation schema and database schema","textChars":35,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/lk7uds7u","slide":6,"text":"Explain relation-level and database-level schemas.","textPreview":"Explain relation-level and database-level schemas.","textChars":50,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/qtwbed87","slide":6,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/bu5c7i9c","slide":6,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/cvetgnqx","slide":6,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/dgnu987i","slide":6,"text":"Relational Model","textPreview":"Relational Model","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/apgvqx8b","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/vq9cj2pw","slide":6,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/ni5gvqdc","slide":6,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/mhwz25wr","slide":6,"text":"Relation schema","textPreview":"Relation schema","textChars":15,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/9knyx0v2","slide":6,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/8jeh4veh","slide":6,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/v6pgzad8","slide":6,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/algz65wn","slide":6,"text":"Database schema","textPreview":"Database schema","textChars":15,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/x87i1kve","slide":6,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/w7yh8fet","slide":6,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/jap03ad4","slide":6,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/i9gzapcz","slide":6,"text":"Name of relation","textPreview":"Name of relation","textChars":16,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/e5kj29g7","slide":6,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/f6tkvexc","slide":6,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/g7214jex","slide":6,"text":"List of attributes","textPreview":"List of attributes","textChars":18,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/18b2xofi","slide":6,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/610jy9gv","slide":6,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/729krexg","slide":6,"text":"Domains and constraints","textPreview":"Domains and constraints","textChars":23,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/s3i10jy1","slide":6,"bbox":[110,407,28,28]}
+{"kind":"textbox","id":"sh/t4r2tofm","slide":6,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[110,410,28,18]}
+{"kind":"textbox","id":"sh/qx43atwz","slide":6,"text":"Example: STUDENT(...)","textPreview":"Example: STUDENT(...)","textChars":21,"textLines":1,"bbox":[154,403,396,42]}
+{"kind":"shape","id":"sh/bydk3yxk","slide":6,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/lsfmtcz2","slide":6,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/0r6507yh","slide":6,"text":"Collection of relation schemas","textPreview":"Collection of relation schemas","textChars":30,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/zqx4r2hw","slide":6,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/y5onyx0b","slide":6,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/d4fmpszq","slide":6,"text":"Includes constraints across relations","textPreview":"Includes constraints across relations","textChars":37,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/c3m5wni5","slide":6,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/b2d4nihk","slide":6,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/q14nud0f","slide":6,"text":"Represents full database design","textPreview":"Represents full database design","textChars":31,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"notes","id":"nt/uj3nv9","slide":6,"text":"What to say: Mention relational database state as current relation instances.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/jt9gbn","slide":7,"title":"Characteristics of relations","textShapes":15}
+{"kind":"shape","id":"sh/ovi9obit","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/3u98v6ho","slide":7,"text":"Characteristics of relations","textPreview":"Characteristics of relations","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/2tgrm103","slide":7,"text":"Cover table properties.","textPreview":"Cover table properties.","textChars":23,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/d0rq1gzq","slide":7,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/czi9sbi5","slide":7,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/by98z6hk","slide":7,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/qx0rql0z","slide":7,"text":"Relational Model","textPreview":"Relational Model","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/loba50zm","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/0n29wvy1","slide":7,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/69w3mx0b","slide":7,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/7a54v21w","slide":7,"text":"Ordering of tuples has no meaning in a relation","textPreview":"Ordering of tuples has no meaning in a relation","textChars":47,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/sbelonih","slide":7,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/tc7mxsj2","slide":7,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/udg3qx0n","slide":7,"text":"Ordering of values follows attribute order in a tuple notation","textPreview":"Ordering of values follows attribute order in a tuple notation","textChars":62,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/fep4z21s","slide":7,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/gzyls7id","slide":7,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/h07m1cjy","slide":7,"text":"Tuple values are atomic and may include NULL where allowed","textPreview":"Tuple values are atomic and may include NULL where allowed","textChars":58,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/ahc3ed03","slide":7,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/vilkni1o","slide":7,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/fahszad4","slide":7,"text":"Each relation has an intended meaning or interpretation","textPreview":"Each relation has an intended meaning or interpretation","textChars":55,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/e98r65cj","slide":7,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/1cza1kva","slide":7,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/0bq98fup","slide":7,"text":"Duplicate tuples are not part of the pure relational model","textPreview":"Duplicate tuples are not part of the pure relational model","textChars":58,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"notes","id":"nt/jt9gbn","slide":7,"text":"What to say: Explain why SQL tables can appear ordered but relational theory does not depend on it.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/a5785y","slide":8,"title":"Relational model notation","textShapes":13}
+{"kind":"shape","id":"sh/ra5gvuxk","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/sbexoze5","slide":8,"text":"Relational model notation","textPreview":"Relational model notation","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/tcnyx4fq","slide":8,"text":"Teach notation used in answers.","textPreview":"Teach notation used in answers.","textChars":31,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/i5cfi5w3","slide":8,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/j65grax8","slide":8,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/k7exkfet","slide":8,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/58nytkfe","slide":8,"text":"Notation","textPreview":"Notation","textChars":8,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/ahcfe5wr","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/vilwnaxc","slide":8,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/36d8fyxw","slide":8,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/i5k76twb","slide":8,"text":"R(A1, A2, ... An)","textPreview":"R(A1, A2, ... An)","textChars":17,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/58vqhofm","slide":8,"text":"Relation schema R with attributes.","textPreview":"Relation schema R with attributes.","textChars":34,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/47mp8jeh","slide":8,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/rad8jyds","slide":8,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/q947atw7","slide":8,"text":"r(R)","textPreview":"r(R)","textChars":4,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/dcvql8vy","slide":8,"text":"Current relation state or instance.","textPreview":"Current relation state or instance.","textChars":35,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/sbmpc3ed","slide":8,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/7et87exo","slide":8,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/md07y9w3","slide":8,"text":"t[Ai]","textPreview":"t[Ai]","textChars":5,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/a98b6hgr","slide":8,"text":"Value of attribute Ai in tuple t.","textPreview":"Value of attribute Ai in tuple t.","textChars":33,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/buhsf2xc","slide":8,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/cvqt87yh","slide":8,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/xwjahcf2","slide":8,"text":"Q, S, R","textPreview":"Q, S, R","textChars":7,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/258b2xgf","slide":8,"text":"Common symbols for relation schemas or states.","textPreview":"Common symbols for relation schemas or states.","textChars":46,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/a5785y","slide":8,"text":"What to say: Tell students notation earns clarity in algebra answers.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/4tgjal","slide":9,"title":"Relational constraints protect meaning","textShapes":12}
+{"kind":"shape","id":"sh/yl4nqh4n","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/lof6lc3y","slide":9,"text":"Relational constraints protect meaning","textPreview":"Relational constraints protect meaning","textChars":38,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/kn65srmd","slide":9,"text":"Classify constraint types.","textPreview":"Classify constraint types.","textChars":26,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/7qxonml4","slide":9,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/6ponuh4j","slide":9,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/tsf6pw3a","slide":9,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/8r65wrmp","slide":9,"text":"Constraints","textPreview":"Constraints","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/nut4b25k","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/mtknix4f","slide":9,"text":"Constraint","textPreview":"Constraint","textChars":10,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/o7mx8jul","slide":9,"text":"A constraint is a rule that restricts allowed database states so stored data remains valid and meaningful.","textPreview":"A constraint is a rule that restricts allowed database states so stored data remains valid and meaningful.","textChars":106,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/p8vy1ob6","slide":9,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/254f69cf","slide":9,"text":"Implicit","textPreview":"Implicit","textChars":8,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/n6dgzet0","slide":9,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/cbmhcjuh","slide":9,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/xcfy5ob2","slide":9,"text":"Schema-based","textPreview":"Schema-based","textChars":12,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/a94fatcb","slide":9,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/badg3etw","slide":9,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/sf2x0zud","slide":9,"text":"Application-based","textPreview":"Application-based","textChars":17,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/dgbyt4by","slide":9,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/tw3exgnm","slide":9,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/svud4vm1","slide":9,"text":"Integrity","textPreview":"Integrity","textChars":9,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/7alwvq5g","slide":9,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/69cv2l4v","slide":9,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/h03e10ni","slide":9,"text":"Validity","textPreview":"Validity","textChars":8,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/4tgjal","slide":9,"text":"What to say: Use marks out of 100 and existing department references.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/pjhx7p","slide":10,"title":"Constraint categories","textShapes":11}
+{"kind":"shape","id":"sh/58fih03y","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ilozm547","slide":10,"text":"Constraint categories","textPreview":"Constraint categories","textChars":21,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/3mx0fals","slide":10,"text":"Cover three categories from notes.","textPreview":"Cover three categories from notes.","textChars":34,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/gj6hkvmh","slide":10,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/hkfid032","slide":10,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/uh4zil4b","slide":10,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/vid0bqlw","slide":10,"text":"Constraints","textPreview":"Constraints","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/8fmhgbm5","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/tgvi9g3q","slide":10,"bbox":[90,215,320,260]}
+{"kind":"shape","id":"sh/1szapkbe","slide":10,"bbox":[90,215,8,260]}
+{"kind":"textbox","id":"sh/0rq9wfut","slide":10,"text":"Inherent","textPreview":"Inherent","textChars":8,"textLines":1,"bbox":[112,229,282,34]}
+{"kind":"textbox","id":"sh/zqhsnat8","slide":10,"text":"Built into the data model, such as relation tuple uniqueness.","textPreview":"Built into the data model, such as relation tuple uniqueness.","textChars":61,"textLines":1,"bbox":[112,269,282,198]}
+{"kind":"shape","id":"sh/ep8ru5cn","slide":10,"bbox":[470,215,320,260]}
+{"kind":"shape","id":"sh/dozal0b2","slide":10,"bbox":[470,215,8,260]}
+{"kind":"textbox","id":"sh/cnq9svuh","slide":10,"text":"Schema-based","textPreview":"Schema-based","textChars":12,"textLines":1,"bbox":[492,229,282,34]}
+{"kind":"textbox","id":"sh/rmhsjqtc","slide":10,"text":"Expressed directly in schemas: domains, keys, NULLs and foreign keys.","textPreview":"Expressed directly in schemas: domains, keys, NULLs and foreign keys.","textChars":69,"textLines":1,"bbox":[492,269,282,198]}
+{"kind":"shape","id":"sh/qlorqlcr","slide":10,"bbox":[850,215,320,260]}
+{"kind":"shape","id":"sh/pkfah0b6","slide":10,"bbox":[850,215,8,260]}
+{"kind":"textbox","id":"sh/4z69ovul","slide":10,"text":"Application-based","textPreview":"Application-based","textChars":17,"textLines":1,"bbox":[872,229,282,34]}
+{"kind":"textbox","id":"sh/gfu1kf6t","slide":10,"text":"Business rules that may need programs, assertions or triggers.","textPreview":"Business rules that may need programs, assertions or triggers.","textChars":62,"textLines":1,"bbox":[872,269,282,198]}
+{"kind":"notes","id":"nt/pjhx7p","slide":10,"text":"What to say: Explain schema-based constraints are the main Module 2 focus.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/93wawa","slide":11,"title":"Domain constraints","textShapes":12}
+{"kind":"shape","id":"sh/ypkjm9wz","slide":11,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/lsv2hovq","slide":11,"text":"Domain constraints","textPreview":"Domain constraints","textChars":18,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/kr21oje5","slide":11,"text":"Explain allowed values.","textPreview":"Explain allowed values.","textChars":23,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/7udkjydg","slide":11,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/mt4jqtcv","slide":11,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/9wv2lovm","slide":11,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/8vm1sju1","slide":11,"text":"Constraints","textPreview":"Constraints","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/vydknyds","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/ux4jutc7","slide":11,"text":"Domain constraint","textPreview":"Domain constraint","textChars":17,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/kv654vy1","slide":11,"text":"Each attribute value must be atomic and drawn from the domain specified for that attribute.","textPreview":"Each attribute value must be atomic and drawn from the domain specified for that attribute.","textChars":91,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/5wfmd0zm","slide":11,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/ito32lgv","slide":11,"text":"Atomic","textPreview":"Atomic","textChars":6,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/jux4bqhg","slide":11,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/sj658vyx","slide":11,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/tkfmh0zi","slide":11,"text":"Type","textPreview":"Type","textChars":4,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/6xon65g7","slide":11,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/7ix4fqhs","slide":11,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/gnq5cfy9","slide":11,"text":"Range","textPreview":"Range","textChars":5,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/hozmlkzu","slide":11,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/p4vm5kry","slide":11,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/o3mlwfqd","slide":11,"text":"Format","textPreview":"Format","textChars":6,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/3id43a9s","slide":11,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/2h43u587","slide":11,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/d8fm9kru","slide":11,"text":"Validity","textPreview":"Validity","textChars":8,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/93wawa","slide":11,"text":"What to say: Examples: salary numeric, gender code, date format.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/hzl4fp","slide":12,"title":"Keys and NULL constraints","textShapes":13}
+{"kind":"shape","id":"sh/ets7a1cb","slide":12,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/1wjqlwv2","slide":12,"text":"Keys and NULL constraints","textPreview":"Keys and NULL constraints","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/gva9cbuh","slide":12,"text":"Explain superkey, key and primary key.","textPreview":"Explain superkey, key and primary key.","textChars":38,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/3y18n6ts","slide":12,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/2xsre1cn","slide":12,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/pk3qpgby","slide":12,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/oju9gbud","slide":12,"text":"Constraints","textPreview":"Constraints","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/j2h8bmdo","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/i1872hc3","slide":12,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/47alwbeh","slide":12,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/58j25gvm","slide":12,"text":"Superkey","textPreview":"Superkey","textChars":8,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/il83ulwb","slide":12,"text":"A set of attributes that uniquely identifies tuples.","textPreview":"A set of attributes that uniquely identifies tuples.","textChars":52,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/361k36dw","slide":12,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/sbal0vud","slide":12,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/dcj290vy","slide":12,"text":"Key","textPreview":"Key","textChars":3,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/q9s3ylw7","slide":12,"text":"A minimal superkey.","textPreview":"A minimal superkey.","textChars":19,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/ra1k7qds","slide":12,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/8fq1ore9","slide":12,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/tgz2xwvu","slide":12,"text":"Candidate key","textPreview":"Candidate key","textChars":13,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/9crilsni","slide":12,"text":"Any key that can be selected as primary.","textPreview":"Any key that can be selected as primary.","textChars":40,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/8bihsn6x","slide":12,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/nap0ji5c","slide":12,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/m9gzqdor","slide":12,"text":"Primary key","textPreview":"Primary key","textChars":11,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/x0ripsne","slide":12,"text":"Chosen key; cannot contain NULL values.","textPreview":"Chosen key; cannot contain NULL values.","textChars":39,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/hzl4fp","slide":12,"text":"What to say: Stress minimality: removing any attribute breaks a key.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/wmrlj2","slide":13,"title":"Entity and referential integrity","textShapes":19}
+{"kind":"shape","id":"sh/obax0ne1","slide":13,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/3a1wridg","slide":13,"text":"Entity and referential integrity","textPreview":"Entity and referential integrity","textChars":32,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/29svydwv","slide":13,"text":"Explain the two central relational rules.","textPreview":"Explain the two central relational rules.","textChars":41,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/18jepsva","slide":13,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/g7adwne5","slide":13,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/f61wnidk","slide":13,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/e5svudwz","slide":13,"text":"Constraints","textPreview":"Constraints","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/l4ne1cvu","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/03ux87e9","slide":13,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/u5s3el8j","slide":13,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/v61476p4","slide":13,"text":"Entity integrity","textPreview":"Entity integrity","textChars":16,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/w7algbqp","slide":13,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/h8jm9g7a","slide":13,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/m183a18n","slide":13,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/72h436ps","slide":13,"text":"Referential integrity","textPreview":"Referential integrity","textChars":21,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/83alcbqd","slide":13,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/94jm5g7y","slide":13,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/6xc3m58r","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/ryl4fqpc","slide":13,"text":"Primary key cannot be NULL","textPreview":"Primary key cannot be NULL","textChars":26,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/nid0725o","slide":13,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/2h4jexo3","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/pkfi9snu","slide":13,"text":"Every tuple must be identifiable","textPreview":"Every tuple must be identifiable","textChars":32,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/ojm1gn69","slide":13,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/b6x0b25k","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/a5ojixof","slide":13,"text":"Applies within one relation","textPreview":"Applies within one relation","textChars":27,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/x8fidcnq","slide":13,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/c761k765","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/zax0fm5w","slide":13,"text":"Foreign key must match referenced primary key or be NULL","textPreview":"Foreign key must match referenced primary key or be NULL","textChars":56,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/y9ojmhob","slide":13,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/wfqhwr29","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/hgzi5c3u","slide":13,"text":"Connects relations","textPreview":"Connects relations","textChars":18,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/ud8zuhkj","slide":13,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/veh03ml4","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/8bqhs72d","slide":13,"text":"Prevents dangling references","textPreview":"Prevents dangling references","textChars":28,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"notes","id":"nt/wmrlj2","slide":13,"text":"What to say: Use EMPLOYEE.Dno referencing DEPARTMENT.Dnumber.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/f730ya","slide":14,"title":"Foreign key conditions","textShapes":15}
+{"kind":"shape","id":"sh/8za90f6h","slide":14,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ny187apw","slide":14,"text":"Foreign key conditions","textPreview":"Foreign key conditions","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/mx8ry5or","slide":14,"text":"Cover FK requirements.","textPreview":"Cover FK requirements.","textChars":22,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/lwzq5076","slide":14,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/0vq9wvql","slide":14,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/zuh83qp0","slide":14,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/yt8rul8f","slide":14,"text":"Constraints","textPreview":"Constraints","textChars":11,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/5s3ah47a","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/kru98z6p","slide":14,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/m98bul07","slide":14,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/nahsnqhs","slide":14,"text":"Foreign key attributes have same domains as referenced primary key attributes","textPreview":"Foreign key attributes have same domains as referenced primary key attributes","textChars":77,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/8vqtwvid","slide":14,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/9wzap0zy","slide":14,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/e5obql0b","slide":14,"text":"Each non-NULL foreign key value must exist in referenced relation","textPreview":"Each non-NULL foreign key value must exist in referenced relation","textChars":65,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/z6xsjqhw","slide":14,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/076tsbi1","slide":14,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/18zalgzm","slide":14,"text":"Foreign key may be NULL only if relationship is optional","textPreview":"Foreign key may be NULL only if relationship is optional","textChars":56,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/i1sb25gf","slide":14,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/j21cvah0","slide":14,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/f6t8n2xc","slide":14,"text":"Referential actions handle update or delete of referenced tuples","textPreview":"Referential actions handle update or delete of referenced tuples","textChars":64,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/ulk7exgr","slide":14,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/h8bqpcfi","slide":14,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/g72pg7yx","slide":14,"text":"Foreign keys implement relationships from ER design","textPreview":"Foreign keys implement relationships from ER design","textChars":51,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"notes","id":"nt/f730ya","slide":14,"text":"What to say: Explain FK as the bridge between tables.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/w902hy","slide":15,"title":"Update operations can violate constraints","textShapes":10}
+{"kind":"shape","id":"sh/dgna5cv6","slide":15,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/qdcbuhwf","slide":15,"text":"Update operations can violate constraints","textPreview":"Update operations can violate constraints","textChars":41,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/rels3md0","slide":15,"text":"Introduce insert, delete and update problems.","textPreview":"Introduce insert, delete and update problems.","textChars":45,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/0jet0rex","slide":15,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/1knu9wv2","slide":15,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ehwbyhwr","slide":15,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/zi5s7mdc","slide":15,"text":"Updates","textPreview":"Updates","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/o7yt4ret","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/987udwve","slide":15,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/tg369wbq","slide":15,"text":"User submits operation","textPreview":"User submits operation","textChars":22,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/8fup0ru5","slide":15,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/7elo76t0","slide":15,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/6dc7y1cf","slide":15,"text":"DBMS checks constraints","textPreview":"DBMS checks constraints","textChars":23,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/h4nqdgb2","slide":15,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/gjep4buh","slide":15,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/vi5ob6tw","slide":15,"text":"Violation found?","textPreview":"Violation found?","textChars":16,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/uhc721cb","slide":15,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/x8j61cbi","slide":15,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/wnaps7ux","slide":15,"text":"Reject or cascade action","textPreview":"Reject or cascade action","textChars":24,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/o3yx4b65","slide":15,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/947yxg7q","slide":15,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/m1gf21oz","slide":15,"text":"Commit valid state","textPreview":"Commit valid state","textChars":18,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/w902hy","slide":15,"text":"What to say: Explain DBMS guards every database state.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/20812g","slide":16,"title":"Insert operation violations","textShapes":15}
+{"kind":"shape","id":"sh/oj2x8jy9","slide":16,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/nitgfeh4","slide":16,"text":"Insert operation violations","textPreview":"Insert operation violations","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/mhkf69gj","slide":16,"text":"Cover four violation types.","textPreview":"Cover four violation types.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/xovyl8z6","slide":16,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/wnmxc3yl","slide":16,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/bmtgjyh0","slide":16,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/alkfatgf","slide":16,"text":"Updates","textPreview":"Updates","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/dsre94zm","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/crix0zyh","slide":16,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/itsfud4z","slide":16,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/julg3ilk","slide":16,"text":"Domain violation: value outside allowed domain","textPreview":"Domain violation: value outside allowed domain","textChars":46,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/kvuxwnm5","slide":16,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/5w3y5s3q","slide":16,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/6xcfyx4v","slide":16,"text":"Key violation: duplicate key value","textPreview":"Key violation: duplicate key value","textChars":34,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/7ylg72lg","slide":16,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/szux0nm1","slide":16,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/t03y9s3m","slide":16,"text":"Entity integrity violation: primary key is NULL","textPreview":"Entity integrity violation: primary key is NULL","textChars":47,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/ulwf2x47","slide":16,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/fm5gb2ls","slide":16,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/rq5wz210","slide":16,"text":"Referential integrity violation: foreign key references missing tuple","textPreview":"Referential integrity violation: foreign key references missing tuple","textChars":69,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/qpwfqx0f","slide":16,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/ds7e1cjq","slide":16,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/crexs7i5","slide":16,"text":"DBMS rejects or requires correction before insertion","textPreview":"DBMS rejects or requires correction before insertion","textChars":52,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"notes","id":"nt/20812g","slide":16,"text":"What to say: Use inserting employee with nonexistent department number.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/5mz7tc","slide":17,"title":"Delete operation choices","textShapes":13}
+{"kind":"shape","id":"sh/md4v2dc3","slide":17,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/9gfuxsbu","slide":17,"text":"Delete operation choices","textPreview":"Delete operation choices","textChars":24,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/8f6d4nu9","slide":17,"text":"Explain referential actions.","textPreview":"Explain referential actions.","textChars":28,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/zadcrids","slide":17,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/y94vydc7","slide":17,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/lcvutsvi","slide":17,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/0bmd0nud","slide":17,"text":"Updates","textPreview":"Updates","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/rmdcnydg","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/qlkbutcv","slide":17,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/snmlonad","slide":17,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/dovmx8by","slide":17,"text":"Restrict / reject","textPreview":"Restrict / reject","textChars":17,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/qlk3mds7","slide":17,"text":"Do not delete if other tuples reference it.","textPreview":"Do not delete if other tuples reference it.","textChars":43,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/rmd4vits","slide":17,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/4z2lk3a1","slide":17,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/5kbmt8bm","slide":17,"text":"Cascade","textPreview":"Cascade","textChars":7,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/ixk3itsb","slide":17,"text":"Delete referencing tuples automatically.","textPreview":"Delete referencing tuples automatically.","textChars":40,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/3yt4rytw","slide":17,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/ov6lw7al","slide":17,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/pgfm5sb6","slide":17,"text":"Set NULL","textPreview":"Set NULL","textChars":8,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/xcbmps3a","slide":17,"text":"Set referencing foreign key to NULL if allowed.","textPreview":"Set referencing foreign key to NULL if allowed.","textChars":47,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/wb2lgn2p","slide":17,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/bat4n2l4","slide":17,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/a9k3exkj","slide":17,"text":"Set default","textPreview":"Set default","textChars":11,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/98rmls3y","slide":17,"text":"Replace foreign key with default value if defined.","textPreview":"Replace foreign key with default value if defined.","textChars":50,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/5mz7tc","slide":17,"text":"What to say: Use deleting a department referenced by employees.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/cay0l9","slide":18,"title":"Update operation violations","textShapes":13}
+{"kind":"shape","id":"sh/szmpgfyl","slide":18,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ryd87ax0","slide":18,"text":"Update operation violations","textPreview":"Update operation violations","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/qx47e5gf","slide":18,"text":"Explain modify risks.","textPreview":"Explain modify risks.","textChars":21,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/5wvq50fu","slide":18,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/4v2pcfy9","slide":18,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/3ut83axo","slide":18,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/i9k7a5g3","slide":18,"text":"Updates","textPreview":"Updates","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/psfqh4fy","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/or69ozyd","slide":18,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/utcb6twv","slide":18,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/vulszyxg","slide":18,"text":"Non-key attribute","textPreview":"Non-key attribute","textChars":17,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/gvut83e1","slide":18,"text":"Usually safe if domain constraints hold.","textPreview":"Usually safe if domain constraints hold.","textChars":40,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/hw3u18fm","slide":18,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/65sb2twz","slide":18,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/761svyxk","slide":18,"text":"Primary key","textPreview":"Primary key","textChars":11,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/87ut43ep","slide":18,"text":"May break entity and referential integrity.","textPreview":"May break entity and referential integrity.","textChars":43,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/t83axofa","slide":18,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/q1wbedw3","slide":18,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/r25c7ido","slide":18,"text":"Foreign key","textPreview":"Foreign key","textChars":11,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/n6x8zad0","slide":18,"text":"Must still reference an existing tuple or be allowed NULL.","textPreview":"Must still reference an existing tuple or be allowed NULL.","textChars":58,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/m5o7q5cf","slide":18,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/98zq1kv6","slide":18,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/o7qpsful","slide":18,"text":"Transaction","textPreview":"Transaction","textChars":11,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/bah83udc","slide":18,"text":"Groups operations and should leave database consistent.","textPreview":"Groups operations and should leave database consistent.","textChars":55,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/cay0l9","slide":18,"text":"What to say: Explain that updating a PK resembles deleting old key and inserting new key.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/fpqddw","slide":19,"title":"Relational algebra is a query language foundation","textShapes":12}
+{"kind":"shape","id":"sh/wfah0vyh","slide":19,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/be1graxw","slide":19,"text":"Relational algebra is a query language foundation","textPreview":"Relational algebra is a query language foundation","textChars":49,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/adszy5gr","slide":19,"text":"Motivate algebra before operators.","textPreview":"Motivate algebra before operators.","textChars":34,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/lk3ixkfe","slide":19,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/kjuh4fyt","slide":19,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/jil0vax8","slide":19,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/yhsz25gn","slide":19,"text":"Algebra","textPreview":"Algebra","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/1ozylgfu","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/0nqhsby9","slide":19,"text":"Relational algebra","textPreview":"Relational algebra","textChars":18,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/u5sj6pwn","slide":19,"text":"Relational algebra is a formal set of operations that takes relations as input and produces relations as output.","textPreview":"Relational algebra is a formal set of operations that takes relations as input and produces relations as output.","textChars":112,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/v61kfud8","slide":19,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/w7a18zet","slide":19,"text":"Input relation","textPreview":"Input relation","textChars":14,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/h8j2h4ve","slide":19,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/i9s3a9wz","slide":19,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/ja1kjedk","slide":19,"text":"Operator","textPreview":"Operator","textChars":8,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/4bulcze5","slide":19,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/5c32l4va","slide":19,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/6xc3e9wv","slide":19,"text":"Output relation","textPreview":"Output relation","textChars":15,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/rylknedg","slide":19,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/325kveto","slide":19,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/21cj29c3","slide":19,"text":"Closure","textPreview":"Closure","textChars":7,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/p4n2xobu","slide":19,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/o3e14ja9","slide":19,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/fyl0rets","slide":19,"text":"Query tree","textPreview":"Query tree","textChars":10,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/fpqddw","slide":19,"text":"What to say: Emphasize closure: every result can feed another operation.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/d7z0io","slide":20,"title":"SELECT filters rows","textShapes":8}
+{"kind":"shape","id":"sh/zal8bu1c","slide":20,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/0vep4zih","slide":20,"text":"SELECT filters rows","textPreview":"SELECT filters rows","textChars":19,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/1wnqd4j2","slide":20,"text":"Explain selection.","textPreview":"Explain selection.","textChars":18,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/q5c7ypkf","slide":20,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/r6lo7u10","slide":20,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/s7up0fil","slide":20,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/d8369kj6","slide":20,"text":"Algebra","textPreview":"Algebra","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/a1w7a90z","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/b258je14","slide":20,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/765cfitc","slide":20,"text":"σ Dno=5 (EMPLOYEE)\n\nMeaning:\nChoose EMPLOYEE tuples\nwhere department number is 5.","textPreview":"σ Dno=5 (EMPLOYEE) |  | Meaning: | Choose EMPLOYEE tuples | where department number is 5.","textChars":81,"textLines":5,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/65wb6dcr","slide":20,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/t8nuh8bi","slide":20,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/87et83ux","slide":20,"text":"Selection","textPreview":"Selection","textChars":9,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/fapcjit8","slide":20,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/d7z0io","slide":20,"text":"What to say: Point to condition as row filter.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/nrlifi","slide":21,"title":"PROJECT chooses columns","textShapes":8}
+{"kind":"shape","id":"sh/sn2xcnmh","slide":21,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/7mtw3ilw","slide":21,"text":"PROJECT chooses columns","textPreview":"PROJECT chooses columns","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/6lkfad4b","slide":21,"text":"Explain projection.","textPreview":"Explain projection.","textChars":19,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/hsvy9s3y","slide":21,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/grmxgnmd","slide":21,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/fqdg7ils","slide":21,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/up4fed47","slide":21,"text":"Algebra","textPreview":"Algebra","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/pgfydc3u","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/4fmxk7mp","slide":21,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/ul8b2lon","slide":21,"text":"π Lname, Fname, Salary (EMPLOYEE)\n\nMeaning:\nReturn only selected attributes\nand remove duplicate tuples.","textPreview":"π Lname, Fname, Salary (EMPLOYEE) |  | Meaning: | Return only selected attributes | and remove duplicate tuples.","textChars":104,"textLines":5,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/fm1cb65s","slide":21,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/g7at4b6d","slide":21,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/h8judgny","slide":21,"text":"Projection","textPreview":"Projection","textChars":10,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/29sb6loj","slide":21,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/nrlifi","slide":21,"text":"What to say: Explain why projection can remove duplicates.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/qktcoi","slide":22,"title":"RENAME labels intermediate results","textShapes":8}
+{"kind":"shape","id":"sh/5gz2p4vm","slide":22,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/idojepcv","slide":22,"text":"RENAME labels intermediate results","textPreview":"RENAME labels intermediate results","textChars":34,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/jexknudg","slide":22,"text":"Explain rename operator.","textPreview":"Explain rename operator.","textChars":24,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/sjq1kjud","slide":22,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/tkz2tovi","slide":22,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/6h8ji9c7","slide":22,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/rihkreds","slide":22,"text":"Algebra","textPreview":"Algebra","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/g7aloju9","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/18j2xovu","slide":22,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/xw7q1kbu","slide":22,"text":"ρ WORKER(Fname, Lname, Salary)\n  (π Fname, Lname, Salary (EMPLOYEE))\n\nUse rename when result names\nmust be clearer or reused.","textPreview":"ρ WORKER(Fname, Lname, Salary) |   (π Fname, Lname, Salary (EMPLOYEE)) |  | Use rename when result names | must be clearer or reused.","textChars":125,"textLines":5,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/cby9sfa9","slide":22,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/bap8zato","slide":22,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/q9grq5sj","slide":22,"text":"Rename","textPreview":"Rename","textChars":6,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/l0rq5kb6","slide":22,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/qktcoi","slide":22,"text":"What to say: Mention rename helps self-joins and query trees.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/z7xda3","slide":23,"title":"Sequences become query trees","textShapes":10}
+{"kind":"shape","id":"sh/vylofe94","slide":23,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/wzup8jq9","slide":23,"text":"Sequences become query trees","textPreview":"Sequences become query trees","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/x0n6horu","slide":23,"text":"Show composition of operations.","textPreview":"Show composition of operations.","textChars":31,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/m9c72p87","slide":23,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/nalobu9s","slide":23,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/8vup4zqd","slide":23,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/9w36d4ry","slide":23,"text":"Algebra","textPreview":"Algebra","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/y5s7yp8b","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/z61o7u9w","slide":23,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/rmp0r6lk","slide":23,"text":"Input relations","textPreview":"Input relations","textChars":15,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/qlgji1kz","slide":23,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/doritg3q","slide":23,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/sni1kb25","slide":23,"text":"Apply SELECT","textPreview":"Apply SELECT","textChars":12,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/fq90v6lg","slide":23,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/ep0jmlkb","slide":23,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/1srixgjm","slide":23,"text":"Apply JOIN","textPreview":"Apply JOIN","textChars":10,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/0ri1ob21","slide":23,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/vu50jmlc","slide":23,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/utwzahkr","slide":23,"text":"Apply PROJECT","textPreview":"Apply PROJECT","textChars":13,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/y943ip4f","slide":23,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/zad4ru50","slide":23,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/kbmlkzml","slide":23,"text":"Output relation","textPreview":"Output relation","textChars":15,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/z7xda3","slide":23,"text":"What to say: Explain queries are built by stacking algebra operators.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/nwl16h","slide":24,"title":"Set operations require compatible relations","textShapes":12}
+{"kind":"shape","id":"sh/wbmdkva9","slide":24,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/vadcbqto","slide":24,"text":"Set operations require compatible relations","textPreview":"Set operations require compatible relations","textChars":43,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/u94vilsj","slide":24,"text":"Explain union compatibility.","textPreview":"Explain union compatibility.","textChars":28,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/5gfuh0b6","slide":24,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/4f6dofal","slide":24,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/jedcfat0","slide":24,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/id4vm5sf","slide":24,"text":"Set Operations","textPreview":"Set Operations","textChars":14,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/t4fulkb2","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/s36dsfah","slide":24,"text":"Union compatibility","textPreview":"Union compatibility","textChars":19,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/et0zapcn","slide":24,"text":"Two relations are union compatible when they have the same number of attributes and corresponding attributes have compatible domains.","textPreview":"Two relations are union compatible when they have the same number of attributes and corresponding attributes have compatible domains.","textChars":133,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/zut03uds","slide":24,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/0f2hczud","slide":24,"text":"Same degree","textPreview":"Same degree","textChars":11,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/1gbi5kvy","slide":24,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/mhkzepcj","slide":24,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/nit07ud4","slide":24,"text":"Compatible domains","textPreview":"Compatible domains","textChars":18,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/oj2hgzup","slide":24,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/9kbi94va","slide":24,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/ilgz25cf","slide":24,"text":"UNION","textPreview":"UNION","textChars":5,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/3mpgvadk","slide":24,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/7q5w36tc","slide":24,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/6pwfa1s7","slide":24,"text":"INTERSECTION","textPreview":"INTERSECTION","textChars":12,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/tsne5wbi","slide":24,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/8rexcbax","slide":24,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/j2lwzmtg","slide":24,"text":"MINUS","textPreview":"MINUS","textChars":5,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/nwl16h","slide":24,"text":"What to say: Use employee names and dependent names if domains match.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/t0j4eu","slide":25,"title":"UNION, INTERSECTION and MINUS","textShapes":13}
+{"kind":"shape","id":"sh/6t0vqpon","slide":25,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/twrel4ny","slide":25,"text":"UNION, INTERSECTION and MINUS","textPreview":"UNION, INTERSECTION and MINUS","textChars":29,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/svidsz6d","slide":25,"text":"Compare set operators.","textPreview":"Compare set operators.","textChars":22,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/fytwne54","slide":25,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/exkvu9oj","slide":25,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/10bepona","slide":25,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/0z2dwj6p","slide":25,"text":"Set Operations","textPreview":"Set Operations","textChars":14,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/n2twre50","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/21kvy9of","slide":25,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/0nmpcnyx","slide":25,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/lovqlsf2","slide":25,"text":"UNION","textPreview":"UNION","textChars":5,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/ylk7adgr","slide":25,"text":"Tuples in either relation.","textPreview":"Tuples in either relation.","textChars":26,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/zmt8jixc","slide":25,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/8rm9gnyt","slide":25,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/9svqpsfe","slide":25,"text":"INTERSECTION","textPreview":"INTERSECTION","textChars":12,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/mp47exgn","slide":25,"text":"Tuples common to both relations.","textPreview":"Tuples common to both relations.","textChars":32,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/nqd8n2x8","slide":25,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/wf69k7yp","slide":25,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/xgfqdcfa","slide":25,"text":"MINUS","textPreview":"MINUS","textChars":5,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/5cbqxc7e","slide":25,"text":"Tuples in first relation but not second.","textPreview":"Tuples in first relation but not second.","textChars":40,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/4b2p47q9","slide":25,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/jat8v2po","slide":25,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/i9072x83","slide":25,"text":"Duplicates","textPreview":"Duplicates","textChars":10,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/t0bq1c7q","slide":25,"text":"Pure relational algebra treats results as sets.","textPreview":"Pure relational algebra treats results as sets.","textChars":47,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/t0j4eu","slide":25,"text":"What to say: Stress compatibility before applying set operations.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/g0cl55","slide":26,"title":"CARTESIAN PRODUCT combines every pair","textShapes":12}
+{"kind":"shape","id":"sh/krm9cjq5","slide":26,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/jqt83epk","slide":26,"text":"CARTESIAN PRODUCT combines every pair","textPreview":"CARTESIAN PRODUCT combines every pair","textChars":37,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ypkra98z","slide":26,"text":"Explain cross product.","textPreview":"Explain cross product.","textChars":22,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/tgva9o7m","slide":26,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/8fm9gjq1","slide":26,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/7eds7epg","slide":26,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/6d4re98v","slide":26,"text":"Set Operations","textPreview":"Set Operations","textChars":14,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/9kbqxkri","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/oj294zqx","slide":26,"text":"Cartesian product","textPreview":"Cartesian product","textChars":17,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/itkvi14j","slide":26,"text":"R × S combines every tuple of R with every tuple of S, creating all possible pairings.","textPreview":"R × S combines every tuple of R with every tuple of S, creating all possible pairings.","textChars":86,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/jutwr654","slide":26,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/kv2dkbmp","slide":26,"text":"Pairing","textPreview":"Pairing","textChars":7,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/5wbetgnu","slide":26,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/6x4vml4f","slide":26,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/7ydwvq50","slide":26,"text":"Degree adds","textPreview":"Degree adds","textChars":11,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/szmdovml","slide":26,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/t0vexgn6","slide":26,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/u14vql4r","slide":26,"text":"Tuple count multiplies","textPreview":"Tuple count multiplies","textChars":22,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/f2dwzq5c","slide":26,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/rqxc7q14","slide":26,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/q5ovelkz","slide":26,"text":"Basis for join","textPreview":"Basis for join","textChars":14,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/dsfu90ja","slide":26,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/cr6dgv2p","slide":26,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/32dc3ql8","slide":26,"text":"May be huge","textPreview":"May be huge","textChars":11,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/g0cl55","slide":26,"text":"What to say: Warn that product without conditions can explode.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/yw3itn","slide":27,"title":"JOIN adds meaning to product","textShapes":8}
+{"kind":"shape","id":"sh/cr29wfu1","slide":27,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/rqt8nadw","slide":27,"text":"JOIN adds meaning to product","textPreview":"JOIN adds meaning to product","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/q5kru5cb","slide":27,"text":"Explain join.","textPreview":"Explain join.","textChars":13,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/p4bql0vq","slide":27,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/4329svu5","slide":27,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/32t8jqdk","slide":27,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/210rqlcz","slide":27,"text":"Join","textPreview":"Join","textChars":4,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/h0rqhgve","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/gzi9ove9","slide":27,"bbox":[94,174,730,390]}
+{"kind":"textbox","id":"sh/apcfatkz","slide":27,"text":"EMPLOYEE ⋈ Dno=Dnumber DEPARTMENT\n\nMeaning:\nPair employees with matching departments\ninstead of every possible department.","textPreview":"EMPLOYEE ⋈ Dno=Dnumber DEPARTMENT |  | Meaning: | Pair employees with matching departments | instead of every possible department.","textChars":122,"textLines":5,"bbox":[124,205,675,320]}
+{"kind":"shape","id":"sh/bq5gje1k","slide":27,"bbox":[862,260,300,210]}
+{"kind":"shape","id":"sh/wrexcj25","slide":27,"bbox":[862,260,8,210]}
+{"kind":"textbox","id":"sh/xsnylojq","slide":27,"text":"Join","textPreview":"Join","textChars":4,"textLines":1,"bbox":[884,274,262,34]}
+{"kind":"textbox","id":"sh/mlcf69k3","slide":27,"text":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textPreview":"Read the pattern by identifying input relation, condition, projected attributes, constraints, and result relation.","textChars":114,"textLines":1,"bbox":[884,314,262,148]}
+{"kind":"notes","id":"nt/yw3itn","slide":27,"text":"What to say: Explain join as product plus selection, often followed by projection.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/kt7e2h","slide":28,"title":"Equijoin and natural join","textShapes":19}
+{"kind":"shape","id":"sh/5w7eh4rm","slide":28,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/i9gfm9sv","slide":28,"text":"Equijoin and natural join","textPreview":"Equijoin and natural join","textChars":25,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/3upwfe9g","slide":28,"text":"Compare join variations.","textPreview":"Compare join variations.","textChars":24,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/szyxsjax","slide":28,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/d0relori","slide":28,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/qxgfq9s7","slide":28,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/rypwje9s","slide":28,"text":"Join","textPreview":"Join","textChars":4,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/83edgfat","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/t4ne9kre","slide":28,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/h8v2x4r6","slide":28,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/g7m14zal","slide":28,"text":"Equijoin","textPreview":"Equijoin","textChars":8,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/v6t0vu90","slide":28,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/u5kj2psf","slide":28,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/pwv214r2","slide":28,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/4vm18zqx","slide":28,"text":"Natural join","textPreview":"Natural join","textChars":12,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/3udkzu9c","slide":28,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/it4j6p8r","slide":28,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/d0f25ore","slide":28,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/cz61cjqt","slide":28,"text":"Join condition uses equality","textPreview":"Join condition uses equality","textChars":28,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/c3el8ny5","slide":28,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/x4nm1szq","slide":28,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/a1c36dgz","slide":28,"text":"Keeps both join attributes unless projected","textPreview":"Keeps both join attributes unless projected","textChars":43,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/b254zihk","slide":28,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/k7elcny1","slide":28,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/l8nm5szm","slide":28,"text":"Example: Dno = Dnumber","textPreview":"Example: Dno = Dnumber","textChars":22,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/y5w3axgv","slide":28,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/z65432hg","slide":28,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/0bul03yx","slide":28,"text":"Matches same-named attributes automatically","textPreview":"Matches same-named attributes automatically","textChars":43,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/1c32t8zi","slide":28,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/jq9oz610","slide":28,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/ip07610f","slide":28,"text":"Removes duplicate join column","textPreview":"Removes duplicate join column","textChars":29,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/5sr61gjq","slide":28,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/4rip8bil","slide":28,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/v29ovm1o","slide":28,"text":"Needs careful attribute names","textPreview":"Needs careful attribute names","textChars":29,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"notes","id":"nt/kt7e2h","slide":28,"text":"What to say: Warn natural join can surprise if names are accidental.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/cnujsw","slide":29,"title":"Outer joins preserve unmatched tuples","textShapes":13}
+{"kind":"shape","id":"sh/udkz6t4n","slide":29,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/hgvyho3y","slide":29,"text":"Outer joins preserve unmatched tuples","textPreview":"Outer joins preserve unmatched tuples","textChars":37,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/wf2h83mt","slide":29,"text":"Cover left, right and full outer join.","textPreview":"Cover left, right and full outer join.","textChars":38,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/jidgjyl4","slide":29,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ih4zat4j","slide":29,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/5kvil83a","slide":29,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/4jmhc3mp","slide":29,"text":"Join","textPreview":"Join","textChars":4,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/rmd0nilg","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/6l4zed4v","slide":29,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/obihkvmh","slide":29,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/9cryd032","slide":29,"text":"Left outer","textPreview":"Left outer","textChars":10,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/mp0zil4r","slide":29,"text":"Keeps all tuples from left relation.","textPreview":"Keeps all tuples from left relation.","textChars":36,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/na9gbqlc","slide":29,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/wf2hofmt","slide":29,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/xgbyhk3e","slide":29,"text":"Right outer","textPreview":"Right outer","textChars":11,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/ad0zm54n","slide":29,"text":"Keeps all tuples from right relation.","textPreview":"Keeps all tuples from right relation.","textChars":37,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/be9gfal8","slide":29,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/kj2hsfmp","slide":29,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/lkbilk3a","slide":29,"text":"Full outer","textPreview":"Full outer","textChars":10,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/to7qpgri","slide":29,"text":"Keeps unmatched tuples from both sides.","textPreview":"Keeps unmatched tuples from both sides.","textChars":39,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/8nepgvax","slide":29,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/7m58nq9c","slide":29,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/6lw7elsr","slide":29,"text":"NULL padding","textPreview":"NULL padding","textChars":12,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/hs7qt0re","slide":29,"text":"Missing matching side appears as NULLs.","textPreview":"Missing matching side appears as NULLs.","textChars":39,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/cnujsw","slide":29,"text":"What to say: Use employees without departments or departments without employees.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/v3k7ne","slide":30,"title":"Division answers 'for all' queries","textShapes":12}
+{"kind":"shape","id":"sh/ixcj6xgn","slide":30,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/50n2hczy","slide":30,"text":"Division answers 'for all' queries","textPreview":"Division answers 'for all' queries","textChars":34,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/4ze187yt","slide":30,"text":"Explain division.","textPreview":"Explain division.","textChars":17,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/vulkb2hw","slide":30,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/utcj2xgb","slide":30,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/hw32dcz2","slide":30,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/wvu147yh","slide":30,"text":"Advanced Algebra","textPreview":"Advanced Algebra","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/fqpknmxg","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/epw3ehgv","slide":30,"text":"Division","textPreview":"Division","textChars":8,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/8r6tkz6d","slide":30,"text":"Division finds tuples in one relation that are associated with all tuples in another relation.","textPreview":"Division finds tuples in one relation that are associated with all tuples in another relation.","textChars":94,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/9sfud4ny","slide":30,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/mpobipon","slide":30,"text":"For all","textPreview":"For all","textChars":7,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/nqxcbu5s","slide":30,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/0n6tgf6h","slide":30,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/lofu9kn2","slide":30,"text":"Required set","textPreview":"Required set","textChars":12,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/yl4bepob","slide":30,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/zmxc7u5w","slide":30,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/czmtcf65","slide":30,"text":"Matching","textPreview":"Matching","textChars":8,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/d0vu5knq","slide":30,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/t43itcbi","slide":30,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/s3u1k7ux","slide":30,"text":"R ÷ S","textPreview":"R ÷ S","textChars":5,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/7il0r2tc","slide":30,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/6hcjixcr","slide":30,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/5g3ipsb6","slide":30,"text":"Universal query","textPreview":"Universal query","textChars":15,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/v3k7ne","slide":30,"text":"What to say: Use students who took all required courses.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/blof0w","slide":31,"title":"Complete set of algebra operations","textShapes":18}
+{"kind":"shape","id":"sh/c7yhsrad","slide":31,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/b6pgzm9s","slide":31,"text":"Complete set of algebra operations","textPreview":"Complete set of algebra operations","textChars":34,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/a5gzqhs7","slide":31,"text":"Summarize core operators.","textPreview":"Summarize core operators.","textChars":25,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/lwry5gru","slide":31,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/kvihwba9","slide":31,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/za9g369o","slide":31,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/y90zu1sj","slide":31,"text":"Advanced Algebra","textPreview":"Advanced Algebra","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/90by9gr6","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/8zih0bal","slide":31,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/ut4ryx8b","slide":31,"text":"Algebra","textPreview":"Algebra","textChars":7,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/vuxs729g","slide":31,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/wv6907q1","slide":31,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/hwfa9crm","slide":31,"text":"SELECT","textPreview":"SELECT","textChars":6,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/ixor2h87","slide":31,"text":"Rows","textPreview":"Rows","textChars":4,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/jyxsbm9s","slide":31,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/4z6t47qd","slide":31,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/50fadcry","slide":31,"text":"PROJECT","textPreview":"PROJECT","textChars":7,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/y1kr6ds3","slide":31,"text":"Columns","textPreview":"Columns","textChars":7,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/z2tszi9o","slide":31,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/3upgrul4","slide":31,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/2tgfip4j","slide":31,"text":"UNION","textPreview":"UNION","textChars":5,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/pw7ytk3u","slide":31,"text":"Either set","textPreview":"Either set","textChars":10,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/ovyxkfmp","slide":31,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/f6pgnals","slide":31,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/e5wfe547","slide":31,"text":"MINUS","textPreview":"MINUS","textChars":5,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/1s7ypk3y","slide":31,"text":"Difference","textPreview":"Difference","textChars":10,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/gryxgfmd","slide":31,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/z29gjelc","slide":31,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/y10zq9kr","slide":31,"text":"PRODUCT","textPreview":"PRODUCT","textChars":7,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/w7udkr29","slide":31,"text":"Pair all","textPreview":"Pair all","textChars":8,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/x83udwju","slide":31,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/a5svi1k3","slide":31,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/v61cb61o","slide":31,"text":"JOIN","textPreview":"JOIN","textChars":4,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/kbudob25","slide":31,"text":"Match meaning","textPreview":"Match meaning","textChars":13,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/blof0w","slide":31,"text":"What to say: Mention division and intersection can be derived from core operations.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/a16w5l","slide":32,"title":"Aggregate and grouping operations","textShapes":13}
+{"kind":"shape","id":"sh/2hgvq5cz","slide":32,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/pk7e1kvq","slide":32,"text":"Aggregate and grouping operations","textPreview":"Aggregate and grouping operations","textChars":33,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/4jydsfu5","slide":32,"text":"Cover additional relational operations.","textPreview":"Cover additional relational operations.","textChars":39,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/fepcvado","slide":32,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/udgvm5c3","slide":32,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/hg7uxkve","slide":32,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/gfydofu9","slide":32,"text":"Advanced Algebra","textPreview":"Advanced Algebra","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/za9w7uds","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/e90vypc7","slide":32,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/8vahkvux","slide":32,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/9wjit0vi","slide":32,"text":"Aggregate functions","textPreview":"Aggregate functions","textChars":19,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/m9szi5wr","slide":32,"text":"COUNT, SUM, AVG, MIN and MAX summarize values.","textPreview":"COUNT, SUM, AVG, MIN and MAX summarize values.","textChars":46,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/7a1grqdc","slide":32,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/k7qhgvel","slide":32,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/l8jyp0v6","slide":32,"text":"Grouping","textPreview":"Grouping","textChars":8,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/y58zelwv","slide":32,"text":"Partitions tuples by grouping attributes before aggregation.","textPreview":"Partitions tuples by grouping attributes before aggregation.","textChars":60,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/z6hgnqd0","slide":32,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/c3qhcbep","slide":32,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/x4zylgva","slide":32,"text":"Generalized projection","textPreview":"Generalized projection","textChars":22,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/to76t8jm","slide":32,"text":"Allows functions and expressions in projection.","textPreview":"Allows functions and expressions in projection.","textChars":47,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/sny50n21","slide":32,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/rmpori1w","slide":32,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/6lgnydkb","slide":32,"text":"Recursive closure","textPreview":"Recursive closure","textChars":17,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/5k76p8jq","slide":32,"text":"Useful for transitive relationships such as prerequisite paths.","textPreview":"Useful for transitive relationships such as prerequisite paths.","textChars":63,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/a16w5l","slide":32,"text":"What to say: Connect aggregates to SQL GROUP BY later.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/rama68","slide":33,"title":"Outer union and recursive closure","textShapes":11}
+{"kind":"shape","id":"sh/x87yh0r6","slide":33,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/a5gz6lsv","slide":33,"text":"Outer union and recursive closure","textPreview":"Outer union and recursive closure","textChars":33,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/v6pgfq9g","slide":33,"text":"Cover less common operators.","textPreview":"Cover less common operators.","textChars":28,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/kbihcvqx","slide":33,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/5cri50ri","slide":33,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/i9gzalsr","slide":33,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/ja903q9c","slide":33,"text":"Advanced Algebra","textPreview":"Advanced Algebra","textChars":16,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/0feh0bat","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/lgny9wry","slide":33,"bbox":[90,215,320,260]}
+{"kind":"shape","id":"sh/l876hsbi","slide":33,"bbox":[90,215,8,260]}
+{"kind":"textbox","id":"sh/k7y587ax","slide":33,"text":"Outer union","textPreview":"Outer union","textChars":11,"textLines":1,"bbox":[112,229,282,34]}
+{"kind":"textbox","id":"sh/j6pof2ts","slide":33,"text":"Combines partially compatible relations and fills missing attributes with NULLs.","textPreview":"Combines partially compatible relations and fills missing attributes with NULLs.","textChars":80,"textLines":1,"bbox":[112,269,282,198]}
+{"kind":"shape","id":"sh/y5gn6xs7","slide":33,"bbox":[470,215,320,260]}
+{"kind":"shape","id":"sh/tcr6lcbu","slide":33,"bbox":[470,215,8,260]}
+{"kind":"textbox","id":"sh/8bi5c7a9","slide":33,"text":"Recursive closure","textPreview":"Recursive closure","textChars":17,"textLines":1,"bbox":[492,229,282,34]}
+{"kind":"textbox","id":"sh/7a9oj2to","slide":33,"text":"Repeatedly follows relationships until no new tuples appear.","textPreview":"Repeatedly follows relationships until no new tuples appear.","textChars":60,"textLines":1,"bbox":[492,269,282,198]}
+{"kind":"shape","id":"sh/690naxs3","slide":33,"bbox":[850,215,320,260]}
+{"kind":"shape","id":"sh/h0b6pcbq","slide":33,"bbox":[850,215,8,260]}
+{"kind":"textbox","id":"sh/gzi5gra5","slide":33,"text":"Use case","textPreview":"Use case","textChars":8,"textLines":1,"bbox":[872,229,282,34]}
+{"kind":"textbox","id":"sh/0jqpcvih","slide":33,"text":"Organizational supervision chains or course prerequisite chains.","textPreview":"Organizational supervision chains or course prerequisite chains.","textChars":64,"textLines":1,"bbox":[872,269,282,198]}
+{"kind":"notes","id":"nt/rama68","slide":33,"text":"What to say: Explain these extend the core algebra for practical cases.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/2zioo0","slide":34,"title":"Logical design maps ER into relations","textShapes":10}
+{"kind":"shape","id":"sh/ra1sfa10","slide":34,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/cba98vil","slide":34,"text":"Logical design maps ER into relations","textPreview":"Logical design maps ER into relations","textChars":37,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/dcjah0j6","slide":34,"text":"Introduce mapping process.","textPreview":"Introduce mapping process.","textChars":26,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/edsba50r","slide":34,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ze1sja1c","slide":34,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/0fatcfih","slide":34,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/1g3alkj2","slide":34,"text":"Mapping","textPreview":"Mapping","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/mhcbep0n","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/nilsnu18","slide":34,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/za9cj2hw","slide":34,"text":"ER entities","textPreview":"ER entities","textChars":11,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/y90bqx0b","slide":34,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/lwrulczm","slide":34,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/kbits7i1","slide":34,"text":"Regular entity relations","textPreview":"Regular entity relations","textChars":24,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/b69sf2hk","slide":34,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/a5gbmx0z","slide":34,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/x8rahczq","slide":34,"text":"Weak entity relations","textPreview":"Weak entity relations","textChars":21,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/c7ito7i5","slide":34,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/v2tcrmho","slide":34,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/u1kbyhgj","slide":34,"text":"Relationship relations / foreign keys","textPreview":"Relationship relations / foreign keys","textChars":37,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/6xofqlkr","slide":34,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/ryxwjq1w","slide":34,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/sz6xsvih","slide":34,"text":"Final relational schema","textPreview":"Final relational schema","textChars":23,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/2zioo0","slide":34,"text":"What to say: Explain mapping preserves meaning and constraints from ER design.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/mbb7tn","slide":35,"title":"Map regular entity types","textShapes":13}
+{"kind":"shape","id":"sh/wnqx0b25","slide":35,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/vmhgr61k","slide":35,"text":"Map regular entity types","textPreview":"Map regular entity types","textChars":24,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ul8fy1kz","slide":35,"text":"Explain Step 1.","textPreview":"Explain Step 1.","textChars":15,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/5sjyxgjm","slide":35,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/4rah4bi1","slide":35,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/jqhgv61g","slide":35,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/ip8f2l0v","slide":35,"text":"Mapping","textPreview":"Mapping","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/lwfylwji","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/kv6xsr2x","slide":35,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/qtw3qtwv","slide":35,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/ru54zydg","slide":35,"text":"Relation","textPreview":"Relation","textChars":8,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/cvels3el","slide":35,"text":"Create one relation for each regular entity type.","textPreview":"Create one relation for each regular entity type.","textChars":49,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/dwnm18v6","slide":35,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/exw3udwr","slide":35,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/zyp43idc","slide":35,"text":"Attributes","textPreview":"Attributes","textChars":10,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/0zylwnex","slide":35,"text":"Include simple attributes; expand composite attributes.","textPreview":"Include simple attributes; expand composite attributes.","textChars":55,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/1k7m5svi","slide":35,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/mlg3yxw3","slide":35,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/nmp47ido","slide":35,"text":"Key","textPreview":"Key","textChars":3,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/jq9kf2tg","slide":35,"text":"Choose the entity key as primary key.","textPreview":"Choose the entity key as primary key.","textChars":37,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/yp03mxcv","slide":35,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/lsr2hsbm","slide":35,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/krilona1","slide":35,"text":"Derived","textPreview":"Derived","textChars":7,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/bmpkbitk","slide":35,"text":"Usually not stored unless needed for performance.","textPreview":"Usually not stored unless needed for performance.","textChars":49,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/mbb7tn","slide":35,"text":"What to say: Use EMPLOYEE as example.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/01sm9b","slide":36,"title":"Map weak entity types","textShapes":13}
+{"kind":"shape","id":"sh/up8re9ov","slide":36,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/hsja9o7m","slide":36,"text":"Map weak entity types","textPreview":"Map weak entity types","textChars":21,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/gra9gj61","slide":36,"text":"Explain weak entity mapping.","textPreview":"Explain weak entity mapping.","textChars":28,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/3e1sbyps","slide":36,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/itsr2to7","slide":36,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/5gjad87i","slide":36,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/4fa9436x","slide":36,"text":"Mapping","textPreview":"Mapping","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/jih8zup8","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/yxor6pon","slide":36,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/k7yt43el","slide":36,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/l87ax8f6","slide":36,"text":"Create relation","textPreview":"Create relation","textChars":15,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/y5gb2twf","slide":36,"text":"Include weak entity attributes.","textPreview":"Include weak entity attributes.","textChars":31,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/z6psvyx0","slide":36,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/8vit83eh","slide":36,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/9wru18f2","slide":36,"text":"Owner key","textPreview":"Owner key","textChars":9,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/mtgb6dwr","slide":36,"text":"Add primary key of owner entity as foreign key.","textPreview":"Add primary key of owner entity as foreign key.","textChars":47,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/7u9szyxw","slide":36,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/ozetwjyd","slide":36,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/p0napofy","slide":36,"text":"Primary key","textPreview":"Primary key","textChars":11,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/5kvidg3a","slide":36,"text":"Owner key plus partial key.","textPreview":"Owner key plus partial key.","textChars":27,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/4jmh4bm5","slide":36,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/jid0b6lk","slide":36,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/ih4z214z","slide":36,"text":"Constraint","textPreview":"Constraint","textChars":10,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/tofihg3m","slide":36,"text":"Represents identifying relationship and existence dependency.","textPreview":"Represents identifying relationship and existence dependency.","textChars":61,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/01sm9b","slide":36,"text":"What to say: Use DEPENDENT with employee SSN.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/7qbzdv","slide":37,"title":"Map binary 1:1 relationships","textShapes":13}
+{"kind":"shape","id":"sh/or2dcjad","slide":37,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/nq9c3e9s","slide":37,"text":"Map binary 1:1 relationships","textPreview":"Map binary 1:1 relationships","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/2p0vats7","slide":37,"text":"Cover mapping choices.","textPreview":"Cover mapping choices.","textChars":22,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/xgbe98ru","slide":37,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/cf2dg3qp","slide":37,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/betw7y94","slide":37,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/adkvetsj","slide":37,"text":"Mapping","textPreview":"Mapping","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/dkrux4rq","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/sjid4za5","slide":37,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/ahgzadkr","slide":37,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/vip03i1c","slide":37,"text":"Foreign key option","textPreview":"Foreign key option","textChars":18,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/wjyhcn2x","slide":37,"text":"Place FK in one relation, preferably total participation side.","textPreview":"Place FK in one relation, preferably total participation side.","textChars":62,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/xk7i5sj2","slide":37,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/ilgjexkn","slide":37,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/jm907218","slide":37,"text":"Merged relation","textPreview":"Merged relation","textChars":15,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/k7i1gn2t","slide":37,"text":"Possible when both sides have total participation.","textPreview":"Possible when both sides have total participation.","textChars":50,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/58ri9sje","slide":37,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/690jixkz","slide":37,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/7a90b21k","slide":37,"text":"Relationship attributes","textPreview":"Relationship attributes","textChars":23,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/3et0z2hc","slide":37,"text":"Store with the chosen foreign key.","textPreview":"Store with the chosen foreign key.","textChars":34,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/2dkzqxgr","slide":37,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/pgbi1czi","slide":37,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/of2hs7yx","slide":37,"text":"NULLs","textPreview":"NULLs","textChars":5,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/fa9gv2hg","slide":37,"text":"Avoid many NULLs by choosing the right side.","textPreview":"Avoid many NULLs by choosing the right side.","textChars":44,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/7qbzdv","slide":37,"text":"What to say: Use department-manager relationship.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/w6lf0g","slide":38,"title":"Map binary 1:N relationships","textShapes":12}
+{"kind":"shape","id":"sh/4nmdszit","slide":38,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/32dwjuh8","slide":38,"text":"Map binary 1:N relationships","textPreview":"Map binary 1:N relationships","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/214vqp0n","slide":38,"text":"Cover the common FK rule.","textPreview":"Cover the common FK rule.","textChars":25,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/h0vehkz2","slide":38,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/gzmdofih","slide":38,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/fydcfahc","slide":38,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/ux4vmp0r","slide":38,"text":"Mapping","textPreview":"Mapping","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/1wzetozm","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/0vqd0ji1","slide":38,"text":"1:N mapping","textPreview":"1:N mapping","textChars":11,"textLines":1,"bbox":[86,175,540,72]}
+{"kind":"textbox","id":"sh/yh43y5c7","slide":38,"text":"Place the primary key of the 1-side as a foreign key in the relation on the N-side.","textPreview":"Place the primary key of the 1-side as a foreign key in the relation on the N-side.","textChars":83,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/zidkrads","slide":38,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/0jml0fud","slide":38,"text":"One side","textPreview":"One side","textChars":8,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/lkv2tkvi","slide":38,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/qtkju5cv","slide":38,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/butknadg","slide":38,"text":"Many side","textPreview":"Many side","textChars":9,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/cv21wvu1","slide":38,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/dwv2p0vm","slide":38,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/apo36pcf","slide":38,"text":"Foreign key","textPreview":"Foreign key","textChars":11,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/vqxkzut0","slide":38,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/7up0rmtc","slide":38,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/6tgzihsr","slide":38,"text":"Relationship attributes","textPreview":"Relationship attributes","textChars":23,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/tw7itwb2","slide":38,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/svyhkrax","slide":38,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/fy90v6t8","slide":38,"text":"Referential integrity","textPreview":"Referential integrity","textChars":21,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/w6lf0g","slide":38,"text":"What to say: Use department has many employees.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/6sxlvp","slide":39,"title":"Map binary M:N relationships","textShapes":10}
+{"kind":"shape","id":"sh/1sjipo36","slide":39,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ep8zetkf","slide":39,"text":"Map binary M:N relationships","textPreview":"Map binary M:N relationships","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/fqh0nyl0","slide":39,"text":"Explain relationship relation.","textPreview":"Explain relationship relation.","textChars":30,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/snqhcj2p","slide":39,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/dozilo3a","slide":39,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/q18za9kj","slide":39,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/r2hgjel4","slide":39,"text":"Mapping","textPreview":"Mapping","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/cjuho32t","slide":39,"text":"39","textPreview":"39","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/xk3ix8je","slide":39,"bbox":[72,305,193.6,96]}
+{"kind":"textbox","id":"sh/x0nil8ja","slide":39,"text":"Create new relation","textPreview":"Create new relation","textChars":19,"textLines":1,"bbox":[84,324,169.6,58]}
+{"kind":"shape","id":"sh/wzehc3ip","slide":39,"bbox":[273.6,337,26,30]}
+{"kind":"shape","id":"sh/by50jy14","slide":39,"bbox":[307.6,305,193.6,96]}
+{"kind":"textbox","id":"sh/axwzat0j","slide":39,"text":"Add PKs of both entities as FKs","textPreview":"Add PKs of both entities as FKs","textChars":31,"textLines":1,"bbox":[319.6,324,169.6,58]}
+{"kind":"shape","id":"sh/9wnihojy","slide":39,"bbox":[509.2,337,26,30]}
+{"kind":"shape","id":"sh/oveh8jid","slide":39,"bbox":[543.2,305,193.6,96]}
+{"kind":"textbox","id":"sh/nu50fy18","slide":39,"text":"Combine FKs as primary key","textPreview":"Combine FKs as primary key","textChars":26,"textLines":1,"bbox":[555.2,324,169.6,58]}
+{"kind":"shape","id":"sh/mtcz6t0n","slide":39,"bbox":[744.8,337,26,30]}
+{"kind":"shape","id":"sh/ts7itsji","slide":39,"bbox":[778.8,305,193.6,96]}
+{"kind":"textbox","id":"sh/sryhknix","slide":39,"text":"Add relationship attributes","textPreview":"Add relationship attributes","textChars":27,"textLines":1,"bbox":[790.8,324,169.6,58]}
+{"kind":"shape","id":"sh/c7qtcvu5","slide":39,"bbox":[980.4,337,26,30]}
+{"kind":"shape","id":"sh/d8za50bq","slide":39,"bbox":[1014.4,305,193.6,96]}
+{"kind":"textbox","id":"sh/ql8balcz","slide":39,"text":"Enforce references","textPreview":"Enforce references","textChars":18,"textLines":1,"bbox":[1026.4,324,169.6,58]}
+{"kind":"notes","id":"nt/6sxlvp","slide":39,"text":"What to say: Use WORKS_ON with Hours attribute.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/ce0rqd","slide":40,"title":"Map multivalued attributes","textShapes":13}
+{"kind":"shape","id":"sh/7ylcvyt8","slide":40,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/8zudo3ud","slide":40,"text":"Map multivalued attributes","textPreview":"Map multivalued attributes","textChars":26,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/t03ux8by","slide":40,"text":"Explain separate relation.","textPreview":"Explain separate relation.","textChars":26,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/u1cvqdsj","slide":40,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/v2lczit4","slide":40,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/g3edsnap","slide":40,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/h4nu1sba","slide":40,"text":"Mapping","textPreview":"Mapping","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/i5wvuxsv","slide":40,"text":"40","textPreview":"40","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/365w3it0","slide":40,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/v2hg72x0","slide":40,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/a18fyxgf","slide":40,"text":"New relation","textPreview":"New relation","textChars":12,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/xojy9cf6","slide":40,"text":"Create relation for the multivalued attribute.","textPreview":"Create relation for the multivalued attribute.","textChars":46,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/w3ax07yl","slide":40,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/nyhw32xo","slide":40,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/mx8fuxgj","slide":40,"text":"Owner key","textPreview":"Owner key","textChars":9,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/90ze5sfu","slide":40,"text":"Include owner entity primary key as foreign key.","textPreview":"Include owner entity primary key as foreign key.","textChars":48,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/8zqxw7y9","slide":40,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/7ulgfmx8","slide":40,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/6tsf6hwn","slide":40,"text":"Attribute value","textPreview":"Attribute value","textChars":15,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/2pwjelgv","slide":40,"text":"Include the multivalued attribute as a column.","textPreview":"Include the multivalued attribute as a column.","textChars":46,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/3q507qhg","slide":40,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/ore1gvy1","slide":40,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/psni90z6","slide":40,"text":"Primary key","textPreview":"Primary key","textChars":11,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/qdgj25gr","slide":40,"text":"Owner key plus attribute value or suitable key.","textPreview":"Owner key plus attribute value or suitable key.","textChars":47,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/ce0rqd","slide":40,"text":"What to say: Use department locations.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/6h7vm5","slide":41,"title":"Map n-ary relationships","textShapes":13}
+{"kind":"shape","id":"sh/tgv6xwny","slide":41,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/6d4n2hon","slide":41,"text":"Map n-ary relationships","textPreview":"Map n-ary relationships","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/redovm58","slide":41,"text":"Cover higher-degree relationships.","textPreview":"Cover higher-degree relationships.","textChars":34,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/4bm5076h","slide":41,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/5cv6tcn2","slide":41,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/i9knyhob","slide":41,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/jatorm5w","slide":41,"text":"Mapping","textPreview":"Mapping","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/wn25w76l","slide":41,"text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/h8b6pcn6","slide":41,"bbox":[98,186,466,142]}
+{"kind":"shape","id":"sh/1c3y5wbi","slide":41,"bbox":[98,186,8,142]}
+{"kind":"textbox","id":"sh/0buhwrux","slide":41,"text":"New relation","textPreview":"New relation","textChars":12,"textLines":1,"bbox":[120,200,428,34]}
+{"kind":"textbox","id":"sh/falg3mtc","slide":41,"text":"Create relation for the relationship.","textPreview":"Create relation for the relationship.","textChars":37,"textLines":1,"bbox":[120,240,428,80]}
+{"kind":"shape","id":"sh/e9cfuhcr","slide":41,"bbox":[658,186,466,142]}
+{"kind":"shape","id":"sh/do3y1wb6","slide":41,"bbox":[658,186,8,142]}
+{"kind":"textbox","id":"sh/snaxsru1","slide":41,"text":"Foreign keys","textPreview":"Foreign keys","textChars":12,"textLines":1,"bbox":[680,200,428,34]}
+{"kind":"textbox","id":"sh/rm1gzmtg","slide":41,"text":"Include primary keys of all participating entity types.","textPreview":"Include primary keys of all participating entity types.","textChars":55,"textLines":1,"bbox":[680,240,428,80]}
+{"kind":"shape","id":"sh/qlsf6hcv","slide":41,"bbox":[98,370,466,142]}
+{"kind":"shape","id":"sh/5kjyxcba","slide":41,"bbox":[98,370,8,142]}
+{"kind":"textbox","id":"sh/4jax47up","slide":41,"text":"Attributes","textPreview":"Attributes","textChars":10,"textLines":1,"bbox":[120,384,428,34]}
+{"kind":"textbox","id":"sh/w3ehk72l","slide":41,"text":"Include relationship attributes.","textPreview":"Include relationship attributes.","textChars":32,"textLines":1,"bbox":[120,424,428,80]}
+{"kind":"shape","id":"sh/honydcj6","slide":41,"bbox":[658,370,466,142]}
+{"kind":"shape","id":"sh/u1wzihkf","slide":41,"bbox":[658,370,8,142]}
+{"kind":"textbox","id":"sh/v25gb210","slide":41,"text":"Primary key","textPreview":"Primary key","textChars":11,"textLines":1,"bbox":[680,384,428,34]}
+{"kind":"textbox","id":"sh/8zuxg72p","slide":41,"text":"Depends on cardinality constraints and participating keys.","textPreview":"Depends on cardinality constraints and participating keys.","textChars":58,"textLines":1,"bbox":[680,424,428,80]}
+{"kind":"notes","id":"nt/6h7vm5","slide":41,"text":"What to say: Explain ternary relationships cannot always be decomposed safely.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/49145w","slide":42,"title":"Module 2 mind map","textShapes":18}
+{"kind":"shape","id":"sh/0futcnu5","slide":42,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/zelcjitk","slide":42,"text":"Module 2 mind map","textPreview":"Module 2 mind map","textChars":17,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ydcbadcz","slide":42,"text":"Connect all major headings.","textPreview":"Connect all major headings.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/943upsbm","slide":42,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/83utgnu1","slide":42,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/n2lcnitg","slide":42,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/mhcbedcb","slide":42,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/x8nudcby","slide":42,"text":"42","textPreview":"42","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/w7edk7ud","slide":42,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/mpo3e9o7","slide":42,"text":"Module 2","textPreview":"Module 2","textChars":8,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/nqxk7eps","slide":42,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/or6lgj6d","slide":42,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/9sfm9o7y","slide":42,"text":"Relations","textPreview":"Relations","textChars":9,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/ato3itoj","slide":42,"text":"Domains, tuples, schemas.","textPreview":"Domains, tuples, schemas.","textChars":25,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/buh4bypo","slide":42,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/wvqlk369","slide":42,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/xwzmdo7u","slide":42,"text":"Constraints","textPreview":"Constraints","textChars":11,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/qx436poz","slide":42,"text":"Domains, keys, integrity.","textPreview":"Domains, keys, integrity.","textChars":25,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/rydkzupk","slide":42,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/f2907q5c","slide":42,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/u10zel4r","slide":42,"text":"Updates","textPreview":"Updates","textChars":7,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/h4bi90ni","slide":42,"text":"Insert/delete/update checks.","textPreview":"Insert/delete/update checks.","textChars":28,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/g32hgvmx","slide":42,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/7y903q5g","slide":42,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/6x0zal4v","slide":42,"text":"Algebra","textPreview":"Algebra","textChars":7,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/t0ri5gn6","slide":42,"text":"Operators and query trees.","textPreview":"Operators and query trees.","textChars":26,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/szihcvm1","slide":42,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/rud0fa5k","slide":42,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/qtkjm54z","slide":42,"text":"Joins","textPreview":"Joins","textChars":5,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/o3u5kny5","slide":42,"text":"Equi, natural, outer.","textPreview":"Equi, natural, outer.","textChars":21,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/p436t8zq","slide":42,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/21cnidgf","slide":42,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/n2lorihk","slide":42,"text":"Mapping","textPreview":"Mapping","textChars":7,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/c7eponyh","slide":42,"text":"ER to relational schema.","textPreview":"ER to relational schema.","textChars":24,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/49145w","slide":42,"text":"What to say: Use this as final overview.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/zu3jr4","slide":43,"title":"Exam and viva focus","textShapes":15}
+{"kind":"shape","id":"sh/c3q9w7qd","slide":43,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/b2hs329s","slide":43,"text":"Exam and viva focus","textPreview":"Exam and viva focus","textChars":19,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/q18rux87","slide":43,"text":"Convert content into marks.","textPreview":"Convert content into marks.","textChars":27,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/p0za1sr2","slide":43,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ozq9snqh","slide":43,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/3yhszi9w","slide":43,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/2x8rqx8b","slide":43,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/1wfqxsrq","slide":43,"text":"43","textPreview":"43","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/gv69onq5","slide":43,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/yhw3adwb","slide":43,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/ji5kjixw","slide":43,"text":"Define relation vocabulary precisely","textPreview":"Define relation vocabulary precisely","textChars":36,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/kjylcneh","slide":43,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/lk725sfm","slide":43,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/adw36twz","slide":43,"text":"Differentiate key, superkey, candidate key and primary key","textPreview":"Differentiate key, superkey, candidate key and primary key","textChars":58,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/be5kfyxk","slide":43,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/wfel83e5","slide":43,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/xgn2h8fq","slide":43,"text":"Explain entity and referential integrity with examples","textPreview":"Explain entity and referential integrity with examples","textChars":54,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/mpc32tg3","slide":43,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/nqlkbyxo","slide":43,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/ru103udg","slide":43,"text":"Write relational algebra notation for select, project and join","textPreview":"Write relational algebra notation for select, project and join","textChars":62,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/qtszapcv","slide":43,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/dwji54vm","slide":43,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/cvahczu1","slide":43,"text":"Explain ER-to-relational mapping rules step by step","textPreview":"Explain ER-to-relational mapping rules step by step","textChars":51,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"notes","id":"nt/zu3jr4","slide":43,"text":"What to say: Tell students Module 2 rewards notation and examples.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/26gl0u","slide":44,"title":"20 important viva questions","textShapes":25}
+{"kind":"shape","id":"sh/25gfq5sr","slide":44,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/p87ylkr2","slide":44,"text":"20 important viva questions","textPreview":"20 important viva questions","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/47yxsfax","slide":44,"text":"Rapid oral revision.","textPreview":"Rapid oral revision.","textChars":20,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/f2pwfa90","slide":44,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/uhgfm5sf","slide":44,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/h47ehkr6","slide":44,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/g3yxofal","slide":44,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/7e5wbq94","slide":44,"text":"44","textPreview":"44","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/6dwfilsj","slide":44,"text":"1. What is relation?","textPreview":"1. What is relation?","textChars":20,"textLines":1,"bbox":[78,156,548,32]}
+{"kind":"textbox","id":"sh/g76toz6x","slide":44,"text":"2. What is domain?","textPreview":"2. What is domain?","textChars":18,"textLines":1,"bbox":[78,202,548,32]}
+{"kind":"textbox","id":"sh/h8faxk7i","slide":44,"text":"3. What is tuple?","textPreview":"3. What is tuple?","textChars":17,"textLines":1,"bbox":[78,248,548,32]}
+{"kind":"textbox","id":"sh/u54bmpor","slide":44,"text":"4. What is schema?","textPreview":"4. What is schema?","textChars":18,"textLines":1,"bbox":[78,294,548,32]}
+{"kind":"textbox","id":"sh/v6xsvupc","slide":44,"text":"5. Relation schema vs state?","textPreview":"5. Relation schema vs state?","textChars":28,"textLines":1,"bbox":[78,340,548,32]}
+{"kind":"textbox","id":"sh/83m9kf61","slide":44,"text":"6. What is key?","textPreview":"6. What is key?","textChars":15,"textLines":1,"bbox":[78,386,548,32]}
+{"kind":"textbox","id":"sh/t4vatk7m","slide":44,"text":"7. Superkey vs key?","textPreview":"7. Superkey vs key?","textChars":19,"textLines":1,"bbox":[78,432,548,32]}
+{"kind":"textbox","id":"sh/614ri5ov","slide":44,"text":"8. What is primary key?","textPreview":"8. What is primary key?","textChars":23,"textLines":1,"bbox":[78,478,548,32]}
+{"kind":"textbox","id":"sh/72dsrapg","slide":44,"text":"9. What is foreign key?","textPreview":"9. What is foreign key?","textChars":23,"textLines":1,"bbox":[78,524,548,32]}
+{"kind":"textbox","id":"sh/czqtwj65","slide":44,"text":"10. Entity integrity?","textPreview":"10. Entity integrity?","textChars":21,"textLines":1,"bbox":[78,570,548,32]}
+{"kind":"textbox","id":"sh/d0za547q","slide":44,"text":"11. Referential integrity?","textPreview":"11. Referential integrity?","textChars":26,"textLines":1,"bbox":[664,156,548,32]}
+{"kind":"textbox","id":"sh/lgvap4zu","slide":44,"text":"12. Insert violation types?","textPreview":"12. Insert violation types?","textChars":27,"textLines":1,"bbox":[664,202,548,32]}
+{"kind":"textbox","id":"sh/0vmtgzy9","slide":44,"text":"13. What is relational algebra?","textPreview":"13. What is relational algebra?","textChars":31,"textLines":1,"bbox":[664,248,548,32]}
+{"kind":"textbox","id":"sh/zudsnuho","slide":44,"text":"14. SELECT vs PROJECT?","textPreview":"14. SELECT vs PROJECT?","textChars":22,"textLines":1,"bbox":[664,294,548,32]}
+{"kind":"textbox","id":"sh/yt4re9g3","slide":44,"text":"15. What is union compatibility?","textPreview":"15. What is union compatibility?","textChars":32,"textLines":1,"bbox":[664,340,548,32]}
+{"kind":"textbox","id":"sh/dsbal4zy","slide":44,"text":"16. What is Cartesian product?","textPreview":"16. What is Cartesian product?","textChars":30,"textLines":1,"bbox":[664,386,548,32]}
+{"kind":"textbox","id":"sh/cr29czyd","slide":44,"text":"17. What is join?","textPreview":"17. What is join?","textChars":17,"textLines":1,"bbox":[664,432,548,32]}
+{"kind":"textbox","id":"sh/bqtsjuhs","slide":44,"text":"18. Equijoin vs natural join?","textPreview":"18. Equijoin vs natural join?","textChars":29,"textLines":1,"bbox":[664,478,548,32]}
+{"kind":"textbox","id":"sh/qpkrapg7","slide":44,"text":"19. What is division?","textPreview":"19. What is division?","textChars":21,"textLines":1,"bbox":[664,524,548,32]}
+{"kind":"textbox","id":"sh/pobahkzm","slide":44,"text":"20. How map M:N relationship?","textPreview":"20. How map M:N relationship?","textChars":29,"textLines":1,"bbox":[664,570,548,32]}
+{"kind":"notes","id":"nt/26gl0u","slide":44,"text":"What to say: Use these as viva prompts.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/fgmx6x","slide":45,"title":"Important questions bank","textShapes":20}
+{"kind":"shape","id":"sh/uh8jipw7","slide":45,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/hkj2t4vi","slide":45,"text":"Important questions bank","textPreview":"Important questions bank","textChars":24,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/wja1kzex","slide":45,"text":"Provide two, five and ten-mark practice.","textPreview":"Provide two, five and ten-mark practice.","textChars":40,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/7eh0nudg","slide":45,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/md8jepwv","slide":45,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/9gz2pkvm","slide":45,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/8fq1gze1","slide":45,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/ralkzedk","slide":45,"text":"45","textPreview":"45","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/69cjq9wz","slide":45,"text":"1. 2M: Define domain.","textPreview":"1. 2M: Define domain.","textChars":21,"textLines":1,"bbox":[78,156,548,32]}
+{"kind":"textbox","id":"sh/sbitoryd","slide":45,"text":"2. 2M: Define tuple.","textPreview":"2. 2M: Define tuple.","textChars":20,"textLines":1,"bbox":[78,202,548,32]}
+{"kind":"textbox","id":"sh/tcrahwfy","slide":45,"text":"3. 2M: Define foreign key.","textPreview":"3. 2M: Define foreign key.","textChars":26,"textLines":1,"bbox":[78,248,548,32]}
+{"kind":"textbox","id":"sh/69grmhgn","slide":45,"text":"4. 2M: What is selection?","textPreview":"4. 2M: What is selection?","textChars":25,"textLines":1,"bbox":[78,294,548,32]}
+{"kind":"textbox","id":"sh/rapsfmxs","slide":45,"text":"5. 2M: What is division?","textPreview":"5. 2M: What is division?","textChars":24,"textLines":1,"bbox":[78,340,548,32]}
+{"kind":"textbox","id":"sh/47y9k7yh","slide":45,"text":"6. 5M: Explain relational constraints.","textPreview":"6. 5M: Explain relational constraints.","textChars":38,"textLines":1,"bbox":[78,386,548,32]}
+{"kind":"textbox","id":"sh/587adcf2","slide":45,"text":"7. 5M: Explain update violations.","textPreview":"7. 5M: Explain update violations.","textChars":33,"textLines":1,"bbox":[78,432,548,32]}
+{"kind":"textbox","id":"sh/i5grixgb","slide":45,"text":"8. 5M: Explain join types.","textPreview":"8. 5M: Explain join types.","textChars":26,"textLines":1,"bbox":[78,478,548,32]}
+{"kind":"textbox","id":"sh/j6psb2xw","slide":45,"text":"9. 5M: Explain aggregate/grouping operations.","textPreview":"9. 5M: Explain aggregate/grouping operations.","textChars":45,"textLines":1,"bbox":[664,156,548,32]}
+{"kind":"textbox","id":"sh/wjy9g7y5","slide":45,"text":"10. 5M: Explain weak entity mapping.","textPreview":"10. 5M: Explain weak entity mapping.","textChars":36,"textLines":1,"bbox":[664,202,548,32]}
+{"kind":"textbox","id":"sh/h47a9cfq","slide":45,"text":"11. 10M: Explain relational model concepts and constraints.","textPreview":"11. 10M: Explain relational model concepts and constraints.","textChars":59,"textLines":1,"bbox":[664,248,548,32]}
+{"kind":"textbox","id":"sh/x0zqdoru","slide":45,"text":"12. 10M: Explain relational algebra operations.","textPreview":"12. 10M: Explain relational algebra operations.","textChars":47,"textLines":1,"bbox":[664,294,548,32]}
+{"kind":"textbox","id":"sh/wzqpkjq9","slide":45,"text":"13. 10M: Explain ER-to-relational mapping rules.","textPreview":"13. 10M: Explain ER-to-relational mapping rules.","textChars":48,"textLines":1,"bbox":[664,340,548,32]}
+{"kind":"textbox","id":"sh/byx8by9o","slide":45,"text":"14. 10M: Solve relational algebra queries.","textPreview":"14. 10M: Solve relational algebra queries.","textChars":42,"textLines":1,"bbox":[664,386,548,32]}
+{"kind":"textbox","id":"sh/axo7it83","slide":45,"text":"15. VTU previous question placeholders: fill from past papers.","textPreview":"15. VTU previous question placeholders: fill from past papers.","textChars":62,"textLines":1,"bbox":[664,432,548,32]}
+{"kind":"notes","id":"nt/fgmx6x","slide":45,"text":"What to say: Use this slide as the study list.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}
+{"kind":"slide","id":"sl/2fsb3e","slide":46,"title":"One-page revision sheet","textShapes":11}
+{"kind":"shape","id":"sh/hc7adcru","slide":46,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/a9wbixs3","slide":46,"text":"One-page revision sheet","textPreview":"One-page revision sheet","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/vapsb29o","slide":46,"text":"End with compact keywords.","textPreview":"End with compact keywords.","textChars":26,"textLines":1,"bbox":[62,92,910,30]}
+{"kind":"shape","id":"sh/87etg7ax","slide":46,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/98na9sri","slide":46,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/m5wbexs7","slide":46,"text":"DBMS | Module 2","textPreview":"DBMS | Module 2","textChars":15,"textLines":1,"bbox":[44,696,260,20]}
+{"kind":"textbox","id":"sh/n65s729s","slide":46,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[450,696,390,20]}
+{"kind":"textbox","id":"sh/0jetcna1","slide":46,"text":"46","textPreview":"46","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/lkna5sbm","slide":46,"bbox":[78,176,1124,174]}
+{"kind":"shape","id":"sh/lobuh0nq","slide":46,"bbox":[78,176,8,174]}
+{"kind":"textbox","id":"sh/kn2d8vm5","slide":46,"text":"Keywords","textPreview":"Keywords","textChars":8,"textLines":1,"bbox":[100,190,1086,34]}
+{"kind":"textbox","id":"sh/jmtcfq5k","slide":46,"text":"Domain; attribute; tuple; relation; relation schema; database schema; state; NULL; superkey; key; candidate key; primary key; foreign key; entity integrity; referential integrity; insert; delete; update; transaction; relational algebra; select; project; rename; union; intersection; minus; Cartesian product; join; equijoin; natural join; outer join; division; grouping; aggregate; query tree; ER mapping.","textPreview":"Domain; attribute; tuple; relation; relation schema; database schema; state; NULL; superkey; key; candidate key; primary key; foreign key...","textChars":405,"textLines":1,"bbox":[100,230,1086,112]}
+{"kind":"shape","id":"sh/yl0b6l4z","slide":46,"bbox":[78,388,1124,98]}
+{"kind":"shape","id":"sh/xkrudgne","slide":46,"bbox":[78,388,8,98]}
+{"kind":"textbox","id":"sh/wjit4vmt","slide":46,"text":"Exam answer pattern","textPreview":"Exam answer pattern","textChars":19,"textLines":1,"bbox":[100,402,1086,34]}
+{"kind":"textbox","id":"sh/bi9cbq5o","slide":46,"text":"For Module 2 answers: define vocabulary, write notation, state constraints, give one table example, and finish with mapping or query result logic.","textPreview":"For Module 2 answers: define vocabulary, write notation, state constraints, give one table example, and finish with mapping or query resu...","textChars":146,"textLines":1,"bbox":[100,442,1086,36]}
+{"kind":"shape","id":"sh/ah0b2l43","slide":46,"bbox":[78,530,1124,82]}
+{"kind":"shape","id":"sh/9gru9gni","slide":46,"bbox":[78,530,8,82]}
+{"kind":"textbox","id":"sh/ovit0bmx","slide":46,"text":"Memory trick","textPreview":"Memory trick","textChars":12,"textLines":1,"bbox":[100,544,1086,34]}
+{"kind":"textbox","id":"sh/gz2dgbut","slide":46,"text":"Definition -> diagram -> constraints/rules -> example -> common mistake. This sequence works for almost every DBMS long answer.","textPreview":"Definition -> diagram -> constraints/rules -> example -> common mistake. This sequence works for almost every DBMS long answer.","textChars":127,"textLines":1,"bbox":[100,584,1086,20]}
+{"kind":"notes","id":"nt/2fsb3e","slide":46,"text":"What to say: Close with rapid keyword revision.\nPause cue: pause after the visual appears, then restate the core term in one simple sentence.\nPointing cue: point left-to-right through process arrows; for diagrams, point first to the center concept and then to each connected part.\nQuestion to ask students: Ask students to explain the slide using one real database example.\nAnimation instructions: Fade title; appear cards one by one; wipe arrows in process order; highlight keywords word by word.\nTransition style: Fade.\n[Sources] Supplied DBMS module 2 notes.pdf, Module 2 notes: Relational Model; Relational Constraints; Update Operations; Relational Algebra; ER-to-Relational Mapping."}

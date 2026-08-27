@@ -1,0 +1,432 @@
+{"kind":"deck","id":"pr/4ns8he","name":"Deck"}
+{"kind":"layout","layoutId":"99a03235-d7e5-43cc-963a-ddba66c876ff","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"229d035b-82c6-489d-bc58-7d37078e0a64","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/p72le1","slide":1,"title":"BCA701 Deep Learning","textShapes":8}
+{"kind":"textbox","id":"sh/dcr2h4ne","slide":1,"text":"BCA701 Deep Learning","textPreview":"BCA701 Deep Learning","textChars":20,"textLines":1,"bbox":[42,40,540,36]}
+{"kind":"textbox","id":"sh/q9g36p4n","slide":1,"text":"Module 5: Sequence Modeling with Recurrent and Recursive Nets","textPreview":"Module 5: Sequence Modeling with Recurrent and Recursive Nets","textChars":61,"textLines":1,"bbox":[42,135,850,180]}
+{"kind":"textbox","id":"sh/bapkfu58","slide":1,"text":"Unfolded computational graphs, RNNs, bidirectional models, encoder-decoder sequence architectures, deep recurrent stacks, recursive neural networks, LSTMs, and gated RNNs.","textPreview":"Unfolded computational graphs, RNNs, bidirectional models, encoder-decoder sequence architectures, deep recurrent stacks, recursive neura...","textChars":171,"textLines":1,"bbox":[42,382,690,112]}
+{"kind":"shape","id":"sh/o7yl4fmx","slide":1,"bbox":[820,78,330,510]}
+{"kind":"shape","id":"sh/p872dkni","slide":1,"bbox":[880,260,88,64]}
+{"kind":"textbox","id":"sh/25g32p4r","slide":1,"text":"h1","textPreview":"h1","textChars":2,"textLines":1,"bbox":[892,279,64,26]}
+{"kind":"shape","id":"sh/36pkbu5c","slide":1,"bbox":[968,292,2,0]}
+{"kind":"shape","id":"sh/g3el0fml","slide":1,"bbox":[970,260,88,64]}
+{"kind":"textbox","id":"sh/14729kn6","slide":1,"text":"h2","textPreview":"h2","textChars":2,"textLines":1,"bbox":[982,279,64,26]}
+{"kind":"shape","id":"sh/x4z6dgb6","slide":1,"bbox":[1058,292,2,0]}
+{"kind":"shape","id":"sh/w3q54bu1","slide":1,"bbox":[1060,260,88,64]}
+{"kind":"textbox","id":"sh/b2h4bqtg","slide":1,"text":"h3","textPreview":"h3","textChars":2,"textLines":1,"bbox":[1072,279,64,26]}
+{"kind":"shape","id":"sh/a18n2lcv","slide":1,"bbox":[925,228,0,32]}
+{"kind":"shape","id":"sh/90fm9gva","slide":1,"bbox":[1015,228,0,32]}
+{"kind":"shape","id":"sh/oz650bup","slide":1,"bbox":[1105,228,0,32]}
+{"kind":"textbox","id":"sh/nyx476d4","slide":1,"text":"x1     x2     x3","textPreview":"x1     x2     x3","textChars":16,"textLines":1,"bbox":[870,190,280,30]}
+{"kind":"textbox","id":"sh/mdony1cj","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"notes","id":"nt/p72le1","slide":1,"text":"Title slide for Module 5, aligned to the local VTU syllabus and Goodfellow et al. sequence modeling content.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/yhgg8v","slide":2,"title":"BCA701 Deep Learning | Module 5","textShapes":3}
+{"kind":"textbox","id":"sh/54nylora","slide":2,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/i1wzq9sj","slide":2,"text":"Module 5 is about learning from order, context, and structure","textPreview":"Module 5 is about learning from order, context, and structure","textChars":61,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/j25gje94","slide":2,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/wfehozat","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/g3q5sjqh","slide":2,"name":"","rows":8,"cols":3,"preview":"# | Syllabus checkpoint | What students should know","bbox":[54,195,1172,400]}
+{"kind":"notes","id":"nt/yhgg8v","slide":2,"text":"This slide maps every phrase in Module 5 of the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/ipkqxw","slide":3,"title":"BCA701 Deep Learning | Module 5","textShapes":11}
+{"kind":"textbox","id":"sh/ih0z6587","slide":3,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/5kry1kry","slide":3,"text":"Sequence models handle inputs where order changes meaning","textPreview":"Sequence models handle inputs where order changes meaning","textChars":57,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/4jih8fqd","slide":3,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/rmt03u9o","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/ql0zap8j","slide":3,"bbox":[72,210,500,150]}
+{"kind":"textbox","id":"sh/dobi5kru","slide":3,"text":"Text","textPreview":"Text","textChars":4,"textLines":1,"bbox":[94,232,456,34]}
+{"kind":"textbox","id":"sh/sn2hcfq9","slide":3,"text":"Word order changes meaning and sentiment.","textPreview":"Word order changes meaning and sentiment.","textChars":41,"textLines":1,"bbox":[94,278,456,62]}
+{"kind":"shape","id":"sh/7qpgrq9k","slide":3,"bbox":[680,210,500,150]}
+{"kind":"textbox","id":"sh/6pgzylsz","slide":3,"text":"Speech and audio","textPreview":"Speech and audio","textChars":16,"textLines":1,"bbox":[702,232,456,34]}
+{"kind":"textbox","id":"sh/kry90zq5","slide":3,"text":"Signals unfold over time.","textPreview":"Signals unfold over time.","textChars":25,"textLines":1,"bbox":[702,278,456,62]}
+{"kind":"shape","id":"sh/ls7a947q","slide":3,"bbox":[72,420,500,150]}
+{"kind":"textbox","id":"sh/ypgryp8f","slide":3,"text":"Time series","textPreview":"Time series","textChars":11,"textLines":1,"bbox":[94,442,456,34]}
+{"kind":"textbox","id":"sh/jqps7up0","slide":3,"text":"Forecasts depend on earlier values.","textPreview":"Forecasts depend on earlier values.","textChars":35,"textLines":1,"bbox":[94,488,456,62]}
+{"kind":"shape","id":"sh/sfi94zqh","slide":3,"bbox":[680,420,500,150]}
+{"kind":"textbox","id":"sh/tgrad472","slide":3,"text":"Structured data","textPreview":"Structured data","textChars":15,"textLines":1,"bbox":[702,442,456,34]}
+{"kind":"textbox","id":"sh/6dgr2p8b","slide":3,"text":"Trees and nested objects carry relationships.","textPreview":"Trees and nested objects carry relationships.","textChars":45,"textLines":1,"bbox":[702,488,456,62]}
+{"kind":"notes","id":"nt/ipkqxw","slide":3,"text":"Introduces Sequence Modeling and why recurrent/recursive models are needed.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/33lh55","slide":4,"title":"BCA701 Deep Learning | Module 5","textShapes":16}
+{"kind":"textbox","id":"sh/y5oje10n","slide":4,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/lsf29gze","slide":4,"text":"A computational graph can be unfolded through time","textPreview":"A computational graph can be unfolded through time","textChars":50,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/kr61gbit","slide":4,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/7uxkbqh4","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/mto3ilgz","slide":4,"bbox":[170,300,88,64]}
+{"kind":"textbox","id":"sh/9wf2dgza","slide":4,"text":"h","textPreview":"h","textChars":1,"textLines":1,"bbox":[182,319,64,26]}
+{"kind":"shape","id":"sh/8v6lkbyp","slide":4,"bbox":[258,332,90,0]}
+{"kind":"shape","id":"sh/nydkzmh0","slide":4,"bbox":[360,300,88,64]}
+{"kind":"textbox","id":"sh/2xkj6h0f","slide":4,"text":"h","textPreview":"h","textChars":1,"textLines":1,"bbox":[372,319,64,26]}
+{"kind":"shape","id":"sh/0rax0bid","slide":4,"bbox":[448,332,90,0]}
+{"kind":"shape","id":"sh/1sjytgzy","slide":4,"bbox":[550,300,88,64]}
+{"kind":"textbox","id":"sh/epsfy10n","slide":4,"text":"h","textPreview":"h","textChars":1,"textLines":1,"bbox":[562,319,64,26]}
+{"kind":"shape","id":"sh/zq1gr61s","slide":4,"bbox":[638,332,90,0]}
+{"kind":"shape","id":"sh/ovux4bip","slide":4,"bbox":[740,300,88,64]}
+{"kind":"textbox","id":"sh/9w3yxgza","slide":4,"text":"h","textPreview":"h","textChars":1,"textLines":1,"bbox":[752,319,64,26]}
+{"kind":"textbox","id":"sh/mtsf210j","slide":4,"text":"x1","textPreview":"x1","textChars":2,"textLines":1,"bbox":[190,225,48,30]}
+{"kind":"shape","id":"sh/nulgv6h4","slide":4,"bbox":[214,255,0,45]}
+{"kind":"textbox","id":"sh/4zqxsri5","slide":4,"text":"x2","textPreview":"x2","textChars":2,"textLines":1,"bbox":[380,225,48,30]}
+{"kind":"shape","id":"sh/50zelcjq","slide":4,"bbox":[404,255,0,45]}
+{"kind":"textbox","id":"sh/lk7m9o7i","slide":4,"text":"x3","textPreview":"x3","textChars":2,"textLines":1,"bbox":[570,225,48,30]}
+{"kind":"shape","id":"sh/kjyl0j6x","slide":4,"bbox":[594,255,0,45]}
+{"kind":"textbox","id":"sh/jip47epc","slide":4,"text":"x4","textPreview":"x4","textChars":2,"textLines":1,"bbox":[760,225,48,30]}
+{"kind":"shape","id":"sh/yhg3y9or","slide":4,"bbox":[784,255,0,45]}
+{"kind":"shape","id":"sh/t8rmdo7e","slide":4,"bbox":[214,364,0,45]}
+{"kind":"textbox","id":"sh/87i54j6t","slide":4,"text":"y1","textPreview":"y1","textChars":2,"textLines":1,"bbox":[190,416,48,30]}
+{"kind":"shape","id":"sh/7694bepo","slide":4,"bbox":[404,364,0,45]}
+{"kind":"textbox","id":"sh/65g32to3","slide":4,"text":"y2","textPreview":"y2","textChars":2,"textLines":1,"bbox":[380,416,48,30]}
+{"kind":"shape","id":"sh/hcrmh87q","slide":4,"bbox":[594,364,0,45]}
+{"kind":"textbox","id":"sh/gbi58365","slide":4,"text":"y3","textPreview":"y3","textChars":2,"textLines":1,"bbox":[570,416,48,30]}
+{"kind":"shape","id":"sh/ehcj254n","slide":4,"bbox":[784,364,0,45]}
+{"kind":"textbox","id":"sh/zil0ba58","slide":4,"text":"y4","textPreview":"y4","textChars":2,"textLines":1,"bbox":[760,416,48,30]}
+{"kind":"textbox","id":"sh/0ju14vmt","slide":4,"text":"The same recurrent computation is reused at each time step.","textPreview":"The same recurrent computation is reused at each time step.","textChars":59,"textLines":1,"bbox":[208,522,820,38]}
+{"kind":"notes","id":"nt/33lh55","slide":4,"text":"Covers Unfolding Computational Graphs.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/68s2x7","slide":5,"title":"BCA701 Deep Learning | Module 5","textShapes":7}
+{"kind":"textbox","id":"sh/8vy9gn2d","slide":5,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/7up8nils","slide":5,"text":"Unfolding makes parameter sharing visible","textPreview":"Unfolding makes parameter sharing visible","textChars":41,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/6tgredk7","slide":5,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/hkrads3u","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/gji9kn2p","slide":5,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/vi9sril4","slide":5,"text":"h(t) = φ( Wxh x(t) + Whh h(t-1) + b )","textPreview":"h(t) = φ( Wxh x(t) + Whh h(t-1) + b )","textChars":37,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/uh0rixkj","slide":5,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/xonqh83q","slide":5,"text":"Wxh maps the current input into hidden state.","textPreview":"Wxh maps the current input into hidden state.","textChars":45,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/cne98325","slide":5,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/i90ba5w7","slide":5,"text":"Whh carries information from the previous hidden state.","textPreview":"Whh carries information from the previous hidden state.","textChars":55,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/3a9sjadc","slide":5,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/4bitcvex","slide":5,"text":"The same weights are reused across sequence positions.","textPreview":"The same weights are reused across sequence positions.","textChars":54,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/68s2x7","slide":5,"text":"Formula for a basic recurrent state update.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/9tzo7k","slide":6,"title":"BCA701 Deep Learning | Module 5","textShapes":7}
+{"kind":"textbox","id":"sh/m9cfy1sn","slide":6,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/9cnytgbe","slide":6,"text":"Backpropagation through time trains unfolded recurrent graphs","textPreview":"Backpropagation through time trains unfolded recurrent graphs","textChars":61,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/8bex0bat","slide":6,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/ve5gv6t4","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/adwf21sj","slide":6,"text":"Forward through time","textPreview":"Forward through time","textChars":20,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/xgnyxgba","slide":6,"text":"The RNN reads sequence elements one by one, updating hidden state and producing outputs.","textPreview":"The RNN reads sequence elements one by one, updating hidden state and producing outputs.","textChars":88,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/wfeh4bap","slide":6,"text":"Backward through time","textPreview":"Backward through time","textChars":21,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/jipgzqtg","slide":6,"text":"Errors are propagated backward across the unfolded graph so shared recurrent weights receive accumulated gradients.","textPreview":"Errors are propagated backward across the unfolded graph so shared recurrent weights receive accumulated gradients.","textChars":115,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/9tzo7k","slide":6,"text":"Training recurrent networks uses backpropagation through time.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/r4ycq0","slide":7,"title":"BCA701 Deep Learning | Module 5","textShapes":7}
+{"kind":"textbox","id":"sh/j69gnupc","slide":7,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/k7ixgz6x","slide":7,"text":"Recurrent neural networks keep a hidden state","textPreview":"Recurrent neural networks keep a hidden state","textChars":45,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/58ryp47i","slide":7,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/a1gfapov","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/v2pgjap0","slide":7,"text":"Memory mechanism","textPreview":"Memory mechanism","textChars":16,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/w3yxcf6l","slide":7,"text":"The hidden state acts as a summary of previous inputs, allowing the model to condition current predictions on earlier context.","textPreview":"The hidden state acts as a summary of previous inputs, allowing the model to condition current predictions on earlier context.","textChars":126,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/x4rylk76","slide":7,"text":"Use cases","textPreview":"Use cases","textChars":9,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/uxkzm9oz","slide":7,"text":"RNNs are used for language modeling, tagging, sentiment analysis, speech, forecasting, and other sequence tasks.","textPreview":"RNNs are used for language modeling, tagging, sentiment analysis, speech, forecasting, and other sequence tasks.","textChars":112,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/r4ycq0","slide":7,"text":"Covers Recurrent Neural Networks.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/5vwr6x","slide":8,"title":"BCA701 Deep Learning | Module 5","textShapes":3}
+{"kind":"textbox","id":"sh/i94nep8n","slide":8,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/5cv6p47y","slide":8,"text":"RNN input-output patterns depend on the task","textPreview":"RNN input-output patterns depend on the task","textChars":44,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/4bmpgz6t","slide":8,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/v6tojupw","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/7i9on2hw","slide":8,"name":"","rows":6,"cols":3,"preview":"Pattern | Example task | Output behavior","bbox":[60,205,1160,380]}
+{"kind":"notes","id":"nt/5vwr6x","slide":8,"text":"Task patterns clarify how RNN outputs are used.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/hv9b6x","slide":9,"title":"BCA701 Deep Learning | Module 5","textShapes":7}
+{"kind":"textbox","id":"sh/vatgb65s","slide":9,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/wv2h4bmd","slide":9,"text":"Standard RNNs struggle with long-range dependencies","textPreview":"Standard RNNs struggle with long-range dependencies","textChars":51,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/xwbydgny","slide":9,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/ixkz6l4j","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/jytgzq54","slide":9,"bbox":[94,229,9,9]}
+{"kind":"textbox","id":"sh/kz2h8bmp","slide":9,"text":"Gradients repeatedly pass through recurrent connections across many time steps.","textPreview":"Gradients repeatedly pass through recurrent connections across many time steps.","textChars":79,"textLines":1,"bbox":[118,220,1040,60]}
+{"kind":"shape","id":"sh/50bi1gnu","slide":9,"bbox":[94,293,9,9]}
+{"kind":"textbox","id":"sh/y1gzuh4f","slide":9,"text":"They can shrink, making early information hard to learn from.","textPreview":"They can shrink, making early information hard to learn from.","textChars":61,"textLines":1,"bbox":[118,284,1040,60]}
+{"kind":"shape","id":"sh/z29g3m5k","slide":9,"bbox":[94,357,9,9]}
+{"kind":"textbox","id":"sh/futczu58","slide":9,"text":"They can also grow, causing unstable updates.","textPreview":"They can also grow, causing unstable updates.","textChars":45,"textLines":1,"bbox":[118,348,1040,60]}
+{"kind":"shape","id":"sh/utkbqp4n","slide":9,"bbox":[94,421,9,9]}
+{"kind":"textbox","id":"sh/hwbu1kne","slide":9,"text":"Gated RNNs such as LSTMs were designed to manage these problems better.","textPreview":"Gated RNNs such as LSTMs were designed to manage these problems better.","textChars":71,"textLines":1,"bbox":[118,412,1040,60]}
+{"kind":"notes","id":"nt/hv9b6x","slide":9,"text":"Introduces the motivation for gated RNNs and LSTMs.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/mt7kjj","slide":10,"title":"BCA701 Deep Learning | Module 5","textShapes":16}
+{"kind":"textbox","id":"sh/n21kfu14","slide":10,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/83alozip","slide":10,"text":"Bidirectional RNNs use context from both directions","textPreview":"Bidirectional RNNs use context from both directions","textChars":51,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/9432h4za","slide":10,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/yxs3i50n","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/zy1kba18","slide":10,"bbox":[210,260,88,64]}
+{"kind":"textbox","id":"sh/0zalkfit","slide":10,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[222,279,64,26]}
+{"kind":"shape","id":"sh/l0j2dkje","slide":10,"bbox":[210,390,88,64]}
+{"kind":"textbox","id":"sh/itc3u90r","slide":10,"text":"←","textPreview":"←","textChars":1,"textLines":1,"bbox":[222,409,64,26]}
+{"kind":"shape","id":"sh/jul4nehc","slide":10,"bbox":[298,292,72,0]}
+{"kind":"shape","id":"sh/j6tk7ux8","slide":10,"bbox":[370,422,72,0]}
+{"kind":"textbox","id":"sh/i5k3e9gn","slide":10,"text":"x1","textPreview":"x1","textChars":2,"textLines":1,"bbox":[230,205,45,28]}
+{"kind":"shape","id":"sh/5sb294fe","slide":10,"bbox":[254,233,0,27]}
+{"kind":"shape","id":"sh/kr2lgzyt","slide":10,"bbox":[370,260,88,64]}
+{"kind":"textbox","id":"sh/7utkbex4","slide":10,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[382,279,64,26]}
+{"kind":"shape","id":"sh/6tk3i9gz","slide":10,"bbox":[370,390,88,64]}
+{"kind":"textbox","id":"sh/twvmdofa","slide":10,"text":"←","textPreview":"←","textChars":1,"textLines":1,"bbox":[382,409,64,26]}
+{"kind":"shape","id":"sh/sv2lkjyp","slide":10,"bbox":[458,292,72,0]}
+{"kind":"shape","id":"sh/fyd4fexg","slide":10,"bbox":[530,422,72,0]}
+{"kind":"textbox","id":"sh/ux43mtgv","slide":10,"text":"x2","textPreview":"x2","textChars":2,"textLines":1,"bbox":[390,205,45,28]}
+{"kind":"shape","id":"sh/qtoned03","slide":10,"bbox":[414,233,0,27]}
+{"kind":"shape","id":"sh/ruxoniho","slide":10,"bbox":[530,260,88,64]}
+{"kind":"textbox","id":"sh/cvq5gni9","slide":10,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[542,279,64,26]}
+{"kind":"shape","id":"sh/dwz6pszu","slide":10,"bbox":[530,390,88,64]}
+{"kind":"textbox","id":"sh/2ponad07","slide":10,"text":"←","textPreview":"←","textChars":1,"textLines":1,"bbox":[542,409,64,26]}
+{"kind":"shape","id":"sh/3qxojihc","slide":10,"bbox":[618,292,72,0]}
+{"kind":"shape","id":"sh/4r65cnix","slide":10,"bbox":[690,422,72,0]}
+{"kind":"textbox","id":"sh/psf6lszi","slide":10,"text":"x3","textPreview":"x3","textChars":2,"textLines":1,"bbox":[550,205,45,28]}
+{"kind":"shape","id":"sh/ml87mx0b","slide":10,"bbox":[574,233,0,27]}
+{"kind":"shape","id":"sh/nmhov2hw","slide":10,"bbox":[690,260,88,64]}
+{"kind":"textbox","id":"sh/hsni10na","slide":10,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[702,279,64,26]}
+{"kind":"shape","id":"sh/wruh8v6p","slide":10,"bbox":[690,390,88,64]}
+{"kind":"textbox","id":"sh/vql0zq54","slide":10,"text":"←","textPreview":"←","textChars":1,"textLines":1,"bbox":[702,409,64,26]}
+{"kind":"textbox","id":"sh/upcz6loj","slide":10,"text":"x4","textPreview":"x4","textChars":2,"textLines":1,"bbox":[710,205,45,28]}
+{"kind":"shape","id":"sh/9o3ix0ny","slide":10,"bbox":[734,233,0,27]}
+{"kind":"textbox","id":"sh/8nuh4v6t","slide":10,"text":"Forward state reads left to right; backward state reads right to left.","textPreview":"Forward state reads left to right; backward state reads right to left.","textChars":70,"textLines":1,"bbox":[220,540,820,38]}
+{"kind":"notes","id":"nt/mt7kjj","slide":10,"text":"Covers Bidirectional RNNs.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/6dnmf0","slide":11,"title":"BCA701 Deep Learning | Module 5","textShapes":7}
+{"kind":"textbox","id":"sh/pc3q1gzu","slide":11,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/29cr61g3","slide":11,"text":"Bidirectional context helps when the full sequence is available","textPreview":"Bidirectional context helps when the full sequence is available","textChars":63,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/3al8z6ho","slide":11,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/cze9cby5","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/d0na5gzq","slide":11,"text":"Why it helps","textPreview":"Why it helps","textChars":12,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/qdwra1gf","slide":11,"text":"A prediction at position t can use information from earlier and later positions, not only the past.","textPreview":"A prediction at position t can use information from earlier and later positions, not only the past.","textChars":99,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/re5836h0","slide":11,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/s3a90ri1","slide":11,"text":"Bidirectional RNNs are useful for tagging, sequence labeling, and text understanding tasks where the whole input sequence is known.","textPreview":"Bidirectional RNNs are useful for tagging, sequence labeling, and text understanding tasks where the whole input sequence is known.","textChars":131,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/6dnmf0","slide":11,"text":"Use-case framing for bidirectional RNNs.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/0dudja","slide":12,"title":"BCA701 Deep Learning | Module 5","textShapes":7}
+{"kind":"textbox","id":"sh/m1s3y90b","slide":12,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/94jmtozm","slide":12,"text":"Encoder-decoder models map one sequence into another","textPreview":"Encoder-decoder models map one sequence into another","textChars":52,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/o3al0jih","slide":12,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/zeh4nuhk","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/ed83u90z","slide":12,"bbox":[120,285,230,125]}
+{"kind":"textbox","id":"sh/10jmp4zq","slide":12,"text":"Input\nsequence","textPreview":"Input | sequence","textChars":14,"textLines":2,"bbox":[155,322,160,52]}
+{"kind":"shape","id":"sh/0fqlwzi5","slide":12,"bbox":[350,347,140,0]}
+{"kind":"shape","id":"sh/jal4zyh4","slide":12,"bbox":[500,260,220,175]}
+{"kind":"textbox","id":"sh/y9cn6tgj","slide":12,"text":"Encoder\nstate","textPreview":"Encoder | state","textChars":13,"textLines":2,"bbox":[535,318,150,58]}
+{"kind":"shape","id":"sh/oj6tkb6d","slide":12,"bbox":[720,347,140,0]}
+{"kind":"shape","id":"sh/pkfudgni","slide":12,"bbox":[870,285,230,125]}
+{"kind":"textbox","id":"sh/2hobi1o7","slide":12,"text":"Output\nsequence","textPreview":"Output | sequence","textChars":15,"textLines":2,"bbox":[905,322,160,52]}
+{"kind":"textbox","id":"sh/3ixcb65s","slide":12,"text":"The encoder summarizes the source sequence; the decoder generates the target sequence.","textPreview":"The encoder summarizes the source sequence; the decoder generates the target sequence.","textChars":86,"textLines":1,"bbox":[175,515,930,38]}
+{"kind":"notes","id":"nt/0dudja","slide":12,"text":"Covers Encoder-Decoder Sequence-to-Sequence Architectures.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/athp28","slide":13,"title":"BCA701 Deep Learning | Module 5","textShapes":3}
+{"kind":"textbox","id":"sh/7el8rmh8","slide":13,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/8fu90ryt","slide":13,"text":"Sequence-to-sequence architecture supports unequal lengths","textPreview":"Sequence-to-sequence architecture supports unequal lengths","textChars":58,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/tg3qtwzy","slide":13,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/uhcr21gj","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/m5cf6lsz","slide":13,"name":"","rows":5,"cols":3,"preview":"Task | Input sequence | Output sequence","bbox":[76,215,1128,330]}
+{"kind":"notes","id":"nt/athp28","slide":13,"text":"Examples for sequence-to-sequence modeling.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/whq4bp","slide":14,"title":"BCA701 Deep Learning | Module 5","textShapes":12}
+{"kind":"textbox","id":"sh/ax0b2tcv","slide":14,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/x0budob6","slide":14,"text":"Deep recurrent networks stack sequence processing layers","textPreview":"Deep recurrent networks stack sequence processing layers","textChars":56,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/wz2d4jul","slide":14,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/jmtcfytc","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/ylkv6tcr","slide":14,"bbox":[190,410,88,64]}
+{"kind":"textbox","id":"sh/lobuh8bi","slide":14,"text":"h1","textPreview":"h1","textChars":2,"textLines":1,"bbox":[202,429,64,26]}
+{"kind":"shape","id":"sh/kn2d83ux","slide":14,"bbox":[190,300,88,64]}
+{"kind":"textbox","id":"sh/zq9c3ut8","slide":14,"text":"h2","textPreview":"h2","textChars":2,"textLines":1,"bbox":[202,319,64,26]}
+{"kind":"shape","id":"sh/epgbu9cn","slide":14,"bbox":[278,442,72,0]}
+{"kind":"shape","id":"sh/snudob2t","slide":14,"bbox":[278,332,72,0]}
+{"kind":"shape","id":"sh/tonuhg3y","slide":14,"bbox":[234,364,0,46]}
+{"kind":"shape","id":"sh/6lcbm1kn","slide":14,"bbox":[350,410,88,64]}
+{"kind":"textbox","id":"sh/7mlcf6l8","slide":14,"text":"h1","textPreview":"h1","textChars":2,"textLines":1,"bbox":[362,429,64,26]}
+{"kind":"shape","id":"sh/gredsb2p","slide":14,"bbox":[350,300,88,64]}
+{"kind":"textbox","id":"sh/hsnulg3a","slide":14,"text":"h2","textPreview":"h2","textChars":2,"textLines":1,"bbox":[362,319,64,26]}
+{"kind":"shape","id":"sh/upwvq1kj","slide":14,"bbox":[438,442,72,0]}
+{"kind":"shape","id":"sh/fq5cj6l4","slide":14,"bbox":[438,332,72,0]}
+{"kind":"shape","id":"sh/wvatgrml","slide":14,"bbox":[394,364,0,46]}
+{"kind":"shape","id":"sh/xw3u9c36","slide":14,"bbox":[510,410,88,64]}
+{"kind":"textbox","id":"sh/d0bixori","slide":14,"text":"h1","textPreview":"h1","textChars":2,"textLines":1,"bbox":[522,429,64,26]}
+{"kind":"shape","id":"sh/cf21ojax","slide":14,"bbox":[510,300,88,64]}
+{"kind":"textbox","id":"sh/re90ve9c","slide":14,"text":"h2","textPreview":"h2","textChars":2,"textLines":1,"bbox":[522,319,64,26]}
+{"kind":"shape","id":"sh/qd0jm9s7","slide":14,"bbox":[598,442,72,0]}
+{"kind":"shape","id":"sh/14b21oru","slide":14,"bbox":[598,332,72,0]}
+{"kind":"shape","id":"sh/0321sja9","slide":14,"bbox":[554,364,0,46]}
+{"kind":"shape","id":"sh/z2t0ze9o","slide":14,"bbox":[670,410,88,64]}
+{"kind":"textbox","id":"sh/e1kjqts3","slide":14,"text":"h1","textPreview":"h1","textChars":2,"textLines":1,"bbox":[682,429,64,26]}
+{"kind":"shape","id":"sh/98v258rq","slide":14,"bbox":[670,300,88,64]}
+{"kind":"textbox","id":"sh/o7m1w3a5","slide":14,"text":"h2","textPreview":"h2","textChars":2,"textLines":1,"bbox":[682,319,64,26]}
+{"kind":"shape","id":"sh/6dwfq58n","slide":14,"bbox":[714,364,0,46]}
+{"kind":"textbox","id":"sh/7e5gzap8","slide":14,"text":"Lower recurrent layers process raw temporal patterns; higher layers learn more abstract temporal representations.","textPreview":"Lower recurrent layers process raw temporal patterns; higher layers learn more abstract temporal representations.","textChars":113,"textLines":1,"bbox":[164,535,950,42]}
+{"kind":"notes","id":"nt/whq4bp","slide":14,"text":"Covers Deep Recurrent Networks.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/q2eilr","slide":15,"title":"BCA701 Deep Learning | Module 5","textShapes":3}
+{"kind":"textbox","id":"sh/fexs7alo","slide":15,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/gf6t0f29","slide":15,"text":"Depth can mean stacked layers, recurrence depth, or both","textPreview":"Depth can mean stacked layers, recurrence depth, or both","textChars":56,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/1gfa9k3u","slide":15,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/2hob2pkz","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/6h8vex4z","slide":15,"name":"","rows":4,"cols":3,"preview":"Depth type | Meaning | Effect","bbox":[86,220,1108,310]}
+{"kind":"notes","id":"nt/q2eilr","slide":15,"text":"Explains what deep recurrent networks can mean in practice.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/hlott9","slide":16,"title":"BCA701 Deep Learning | Module 5","textShapes":5}
+{"kind":"textbox","id":"sh/itsvqxkv","slide":16,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/5wje1c36","slide":16,"text":"Recursive neural networks process tree structures","textPreview":"Recursive neural networks process tree structures","textChars":49,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/kvads721","slide":16,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/7ylw3mlc","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/6xcvuhkr","slide":16,"bbox":[570,210,90,70]}
+{"kind":"textbox","id":"sh/t03e5w3i","slide":16,"text":"root","textPreview":"root","textChars":4,"textLines":1,"bbox":[590,232,50,26]}
+{"kind":"shape","id":"sh/szuxwr2x","slide":16,"bbox":[420,350,90,70]}
+{"kind":"shape","id":"sh/n2hwril8","slide":16,"bbox":[720,350,90,70]}
+{"kind":"shape","id":"sh/m18vidkn","slide":16,"bbox":[330,500,90,70]}
+{"kind":"shape","id":"sh/kjid0ja9","slide":16,"bbox":[510,500,90,70]}
+{"kind":"shape","id":"sh/5kretobu","slide":16,"bbox":[465,280,105,70]}
+{"kind":"shape","id":"sh/ihgvytsj","slide":16,"bbox":[660,245,60,105]}
+{"kind":"shape","id":"sh/jipwret4","slide":16,"bbox":[375,420,45,80]}
+{"kind":"shape","id":"sh/s7id43al","slide":16,"bbox":[510,420,45,80]}
+{"kind":"textbox","id":"sh/t8rex8b6","slide":16,"text":"Unlike an RNN over a line of time steps, a recursive net composes representations according to a tree.","textPreview":"Unlike an RNN over a line of time steps, a recursive net composes representations according to a tree.","textChars":102,"textLines":1,"bbox":[160,615,960,38]}
+{"kind":"notes","id":"nt/hlott9","slide":16,"text":"Covers Recursive Neural Networks.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/k0b5jq","slide":17,"title":"BCA701 Deep Learning | Module 5","textShapes":7}
+{"kind":"textbox","id":"sh/nadsfqpk","slide":17,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/obm9obq5","slide":17,"text":"Recursive nets fit compositional structure","textPreview":"Recursive nets fit compositional structure","textChars":42,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/pcvahg7a","slide":17,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/elkri18n","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/f6t8b6p8","slide":17,"text":"Where they help","textPreview":"Where they help","textChars":15,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/0729kbqt","slide":17,"text":"They can model parse trees, expression trees, hierarchical documents, and nested structures.","textPreview":"They can model parse trees, expression trees, hierarchical documents, and nested structures.","textChars":92,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/18bqdg7e","slide":17,"text":"Core operation","textPreview":"Core operation","textChars":14,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/qh0re18r","slide":17,"text":"Child representations are combined to form a parent representation, and this repeats upward through the tree.","textPreview":"Child representations are combined to form a parent representation, and this repeats upward through the tree.","textChars":109,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/k0b5jq","slide":17,"text":"Explains the use and computation of recursive neural networks.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/z3tm97","slide":18,"title":"BCA701 Deep Learning | Module 5","textShapes":11}
+{"kind":"textbox","id":"sh/6d4zmxon","slide":18,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/t0vyxc7y","slide":18,"text":"LSTMs add a memory cell and gates","textPreview":"LSTMs add a memory cell and gates","textChars":33,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/8fmho76d","slide":18,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/v2dgz254","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/u14zqhoj","slide":18,"bbox":[72,210,500,150]}
+{"kind":"textbox","id":"sh/h4fy1cna","slide":18,"text":"Cell state","textPreview":"Cell state","textChars":10,"textLines":1,"bbox":[94,232,456,34]}
+{"kind":"textbox","id":"sh/g36hs76p","slide":18,"text":"A path designed to carry information over many time steps.","textPreview":"A path designed to carry information over many time steps.","textChars":58,"textLines":1,"bbox":[94,278,456,62]}
+{"kind":"shape","id":"sh/b6tgnip0","slide":18,"bbox":[680,210,500,150]}
+{"kind":"textbox","id":"sh/a5kfedof","slide":18,"text":"Input gate","textPreview":"Input gate","textChars":10,"textLines":1,"bbox":[702,232,456,34]}
+{"kind":"textbox","id":"sh/gbuhw72d","slide":18,"text":"Controls how much new information enters memory.","textPreview":"Controls how much new information enters memory.","textChars":48,"textLines":1,"bbox":[702,278,456,62]}
+{"kind":"shape","id":"sh/hc3y5c3y","slide":18,"bbox":[72,420,500,150]}
+{"kind":"textbox","id":"sh/u9czuxk7","slide":18,"text":"Forget gate","textPreview":"Forget gate","textChars":11,"textLines":1,"bbox":[94,442,456,34]}
+{"kind":"textbox","id":"sh/falg32ls","slide":18,"text":"Controls how much old information is retained.","textPreview":"Controls how much old information is retained.","textChars":46,"textLines":1,"bbox":[94,488,456,62]}
+{"kind":"shape","id":"sh/4feh0r29","slide":18,"bbox":[680,420,500,150]}
+{"kind":"textbox","id":"sh/pgny9w3u","slide":18,"text":"Output gate","textPreview":"Output gate","textChars":11,"textLines":1,"bbox":[702,442,456,34]}
+{"kind":"textbox","id":"sh/2dczyhkj","slide":18,"text":"Controls how much memory influences the hidden output.","textPreview":"Controls how much memory influences the hidden output.","textChars":54,"textLines":1,"bbox":[702,488,456,62]}
+{"kind":"notes","id":"nt/z3tm97","slide":18,"text":"Covers The Long Short-Term Memory.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/11wagv","slide":19,"title":"BCA701 Deep Learning | Module 5","textShapes":8}
+{"kind":"textbox","id":"sh/vmpcnql0","slide":19,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/gnytwbml","slide":19,"text":"LSTM gates regulate write, keep, and read operations","textPreview":"LSTM gates regulate write, keep, and read operations","textChars":52,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/ho7upg36","slide":19,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/ipgbyl4r","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/3apcrqlc","slide":19,"bbox":[160,310,830,90]}
+{"kind":"textbox","id":"sh/4byt0vmx","slide":19,"text":"cell state","textPreview":"cell state","textChars":10,"textLines":1,"bbox":[500,340,150,32]}
+{"kind":"shape","id":"sh/5crut032","slide":19,"bbox":[220,230,100,66]}
+{"kind":"textbox","id":"sh/ytwbm14n","slide":19,"text":"forget","textPreview":"forget","textChars":6,"textLines":1,"bbox":[235,252,70,24]}
+{"kind":"shape","id":"sh/je5sfmls","slide":19,"bbox":[270,296,0,14]}
+{"kind":"shape","id":"sh/fupg7u58","slide":19,"bbox":[490,230,100,66]}
+{"kind":"textbox","id":"sh/utwfep4n","slide":19,"text":"input","textPreview":"input","textChars":5,"textLines":1,"bbox":[505,252,70,24]}
+{"kind":"shape","id":"sh/hg7y9kne","slide":19,"bbox":[540,296,0,14]}
+{"kind":"shape","id":"sh/gvyxgfmt","slide":19,"bbox":[760,230,100,66]}
+{"kind":"textbox","id":"sh/7q5g3a5c","slide":19,"text":"output","textPreview":"output","textChars":6,"textLines":1,"bbox":[775,252,70,24]}
+{"kind":"shape","id":"sh/6pwfa54r","slide":19,"bbox":[810,296,0,14]}
+{"kind":"shape","id":"sh/tsny5kn2","slide":19,"bbox":[120,355,40,0]}
+{"kind":"shape","id":"sh/srexcfmh","slide":19,"bbox":[990,355,70,0]}
+{"kind":"textbox","id":"sh/jmlgzq50","slide":19,"text":"Gates are learned functions that decide how information moves through memory.","textPreview":"Gates are learned functions that decide how information moves through memory.","textChars":77,"textLines":1,"bbox":[180,510,900,38]}
+{"kind":"notes","id":"nt/11wagv","slide":19,"text":"Visual explanation of LSTM gates.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/fqmn7x","slide":20,"title":"BCA701 Deep Learning | Module 5","textShapes":7}
+{"kind":"textbox","id":"sh/5kzytczy","slide":20,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/ihozyh07","slide":20,"text":"Gated RNNs reduce the long-dependency problem","textPreview":"Gated RNNs reduce the long-dependency problem","textChars":45,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/3ixgrmhs","slide":20,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/gf6xw7ih","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/hgfypcz2","slide":20,"text":"Plain RNN","textPreview":"Plain RNN","textChars":9,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/udofux0b","slide":20,"text":"Repeated multiplication through many time steps can weaken or destabilize gradient signals.","textPreview":"Repeated multiplication through many time steps can weaken or destabilize gradient signals.","textChars":91,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/vexgn2hw","slide":20,"text":"Gated RNN","textPreview":"Gated RNN","textChars":9,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/0bah8byl","slide":20,"text":"Gates create controlled paths for remembering, forgetting, and exposing information, making long-range dependency learning easier.","textPreview":"Gates create controlled paths for remembering, forgetting, and exposing information, making long-range dependency learning easier.","textChars":130,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/fqmn7x","slide":20,"text":"Why LSTM and gated RNNs matter.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/f607gl","slide":21,"title":"BCA701 Deep Learning | Module 5","textShapes":3}
+{"kind":"textbox","id":"sh/k7i1k7md","slide":21,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/z6p0b258","slide":21,"text":"Other gated RNNs simplify the same idea","textPreview":"Other gated RNNs simplify the same idea","textChars":39,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/y5gjix4n","slide":21,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/d47i9sn2","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/h4zmpc3y","slide":21,"name":"","rows":4,"cols":3,"preview":"Model family | Gate idea | Main intuition","bbox":[82,220,1116,315]}
+{"kind":"notes","id":"nt/f607gl","slide":21,"text":"Covers Other Gated RNNs from the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/bzmft5","slide":22,"title":"BCA701 Deep Learning | Module 5","textShapes":3}
+{"kind":"textbox","id":"sh/6lcnuhoz","slide":22,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/to3mpw7q","slide":22,"text":"Choose the sequence model by available context and structure","textPreview":"Choose the sequence model by available context and structure","textChars":60,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/snu5wr65","slide":22,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/jyl4j2po","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/juh8rqhs","slide":22,"name":"","rows":6,"cols":3,"preview":"Need | Useful model | Reason","bbox":[60,205,1160,380]}
+{"kind":"notes","id":"nt/bzmft5","slide":22,"text":"Comparison across all Module 5 model families.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/3cw0bm","slide":23,"title":"BCA701 Deep Learning | Module 5","textShapes":7}
+{"kind":"textbox","id":"sh/mpsfidor","slide":23,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/9sjydsni","slide":23,"text":"Training sequence models requires care over time","textPreview":"Training sequence models requires care over time","textChars":48,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/8rahkn6x","slide":23,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/zmhg7i5g","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/yl8fedov","slide":23,"bbox":[94,229,9,9]}
+{"kind":"textbox","id":"sh/lojy98n6","slide":23,"text":"Backpropagation through time can be computationally expensive for long sequences.","textPreview":"Backpropagation through time can be computationally expensive for long sequences.","textChars":81,"textLines":1,"bbox":[118,220,1040,60]}
+{"kind":"shape","id":"sh/0naxgn61","slide":23,"bbox":[94,293,9,9]}
+{"kind":"textbox","id":"sh/byhg3y54","slide":23,"text":"Gradients may vanish or explode across many recurrent steps.","textPreview":"Gradients may vanish or explode across many recurrent steps.","textChars":60,"textLines":1,"bbox":[118,284,1040,60]}
+{"kind":"shape","id":"sh/qx8fatoj","slide":23,"bbox":[94,357,9,9]}
+{"kind":"textbox","id":"sh/gr698fa1","slide":23,"text":"Truncating the time horizon trades efficiency for limited long-range credit assignment.","textPreview":"Truncating the time horizon trades efficiency for limited long-range credit assignment.","textChars":87,"textLines":1,"bbox":[118,348,1040,60]}
+{"kind":"shape","id":"sh/hsfa1kr6","slide":23,"bbox":[94,421,9,9]}
+{"kind":"textbox","id":"sh/upor65sv","slide":23,"text":"Gating, careful initialization, clipping, and batching are common practical aids.","textPreview":"Gating, careful initialization, clipping, and batching are common practical aids.","textChars":81,"textLines":1,"bbox":[118,412,1040,60]}
+{"kind":"notes","id":"nt/3cw0bm","slide":23,"text":"Practical training concerns for recurrent models.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/yjz0tf","slide":24,"title":"BCA701 Deep Learning | Module 5","textShapes":11}
+{"kind":"textbox","id":"sh/judkn6dk","slide":24,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/4vmlwbe5","slide":24,"text":"A good exam answer should identify the flow of information","textPreview":"A good exam answer should identify the flow of information","textChars":58,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/5wv2pgvq","slide":24,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/u5kjqhw3","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/v6tkjmdo","slide":24,"bbox":[72,210,500,150]}
+{"kind":"textbox","id":"sh/w721sre9","slide":24,"text":"Unfolded graph","textPreview":"Unfolded graph","textChars":14,"textLines":1,"bbox":[94,232,456,34]}
+{"kind":"textbox","id":"sh/h8v2lwvu","slide":24,"text":"Same recurrent computation repeated over time.","textPreview":"Same recurrent computation repeated over time.","textChars":46,"textLines":1,"bbox":[94,278,456,62]}
+{"kind":"shape","id":"sh/e1o32lw7","slide":24,"bbox":[680,210,500,150]}
+{"kind":"textbox","id":"sh/f2xkvqds","slide":24,"text":"Bidirectional","textPreview":"Bidirectional","textChars":13,"textLines":1,"bbox":[702,232,456,34]}
+{"kind":"textbox","id":"sh/rapsje9c","slide":24,"text":"Forward and backward context are combined.","textPreview":"Forward and backward context are combined.","textChars":42,"textLines":1,"bbox":[702,278,456,62]}
+{"kind":"shape","id":"sh/69grq9s7","slide":24,"bbox":[72,420,500,150]}
+{"kind":"textbox","id":"sh/tcralori","slide":24,"text":"Encoder-decoder","textPreview":"Encoder-decoder","textChars":15,"textLines":1,"bbox":[94,442,456,34]}
+{"kind":"textbox","id":"sh/sby9sjax","slide":24,"text":"One network reads; another generates.","textPreview":"One network reads; another generates.","textChars":37,"textLines":1,"bbox":[94,488,456,62]}
+{"kind":"shape","id":"sh/fe9sne9o","slide":24,"bbox":[680,420,500,150]}
+{"kind":"textbox","id":"sh/ed0ru9s3","slide":24,"text":"LSTM gates","textPreview":"LSTM gates","textChars":10,"textLines":1,"bbox":[702,442,456,34]}
+{"kind":"textbox","id":"sh/1graporu","slide":24,"text":"Memory is controlled by learned gates.","textPreview":"Memory is controlled by learned gates.","textChars":38,"textLines":1,"bbox":[702,488,456,62]}
+{"kind":"notes","id":"nt/yjz0tf","slide":24,"text":"Exam-oriented synthesis for Module 5.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/jw9o1j","slide":25,"title":"BCA701 Deep Learning | Module 5","textShapes":3}
+{"kind":"textbox","id":"sh/y5w3i5kr","slide":25,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/l87mtkji","slide":25,"text":"Module 5 vocabulary students must own","textPreview":"Module 5 vocabulary students must own","textChars":37,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/k7ylkf2x","slide":25,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/b254nql0","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/zmd4jyp4","slide":25,"name":"","rows":9,"cols":2,"preview":"Term | Meaning","bbox":[72,195,1136,405]}
+{"kind":"notes","id":"nt/jw9o1j","slide":25,"text":"Vocabulary review for all Module 5 topics.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/sbbyhl","slide":26,"title":"BCA701 Deep Learning | Module 5","textShapes":8}
+{"kind":"textbox","id":"sh/2lofi98r","slide":26,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/pofyt47i","slide":26,"text":"Mini activity: match task to sequence architecture","textPreview":"Mini activity: match task to sequence architecture","textChars":50,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/on6xkzqx","slide":26,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/fydwnupg","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/ex4fep8v","slide":26,"bbox":[94,229,9,9]}
+{"kind":"textbox","id":"sh/1kfep476","slide":26,"text":"Sentiment of a review: many-to-one RNN or LSTM.","textPreview":"Sentiment of a review: many-to-one RNN or LSTM.","textChars":47,"textLines":1,"bbox":[118,220,1040,54]}
+{"kind":"shape","id":"sh/gzmxgzq1","slide":26,"bbox":[94,287,9,9]}
+{"kind":"textbox","id":"sh/zuhgzepk","slide":26,"text":"Part-of-speech tagging: bidirectional aligned sequence model.","textPreview":"Part-of-speech tagging: bidirectional aligned sequence model.","textChars":61,"textLines":1,"bbox":[118,278,1040,54]}
+{"kind":"shape","id":"sh/yt8fqt8z","slide":26,"bbox":[94,345,9,9]}
+{"kind":"textbox","id":"sh/8vypo3mt","slide":26,"text":"Translation: encoder-decoder sequence-to-sequence model.","textPreview":"Translation: encoder-decoder sequence-to-sequence model.","textChars":56,"textLines":1,"bbox":[118,336,1040,54]}
+{"kind":"shape","id":"sh/tw7qh83e","slide":26,"bbox":[94,403,9,9]}
+{"kind":"textbox","id":"sh/69g7mt43","slide":26,"text":"Parsing expression trees: recursive neural network.","textPreview":"Parsing expression trees: recursive neural network.","textChars":51,"textLines":1,"bbox":[118,394,1040,54]}
+{"kind":"shape","id":"sh/7apofylo","slide":26,"bbox":[94,461,9,9]}
+{"kind":"textbox","id":"sh/k7epk3mx","slide":26,"text":"Long time-series dependency: LSTM or another gated RNN.","textPreview":"Long time-series dependency: LSTM or another gated RNN.","textChars":55,"textLines":1,"bbox":[118,452,1040,54]}
+{"kind":"notes","id":"nt/sbbyhl","slide":26,"text":"Classroom activity aligned with all Module 5 model types.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/71zc4n","slide":27,"title":"BCA701 Deep Learning | Module 5","textShapes":10}
+{"kind":"textbox","id":"sh/t8rmp4nu","slide":27,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/6503upoj","slide":27,"text":"Module 5 closes with a complete sequence-modeling chain","textPreview":"Module 5 closes with a complete sequence-modeling chain","textChars":55,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/r694nu54","slide":27,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/43ylsf6d","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/547mlkny","slide":27,"bbox":[66,310,135,96]}
+{"kind":"textbox","id":"sh/i1g3q5o7","slide":27,"text":"Sequence","textPreview":"Sequence","textChars":8,"textLines":1,"bbox":[76,337,115,44]}
+{"kind":"shape","id":"sh/j2p4ja5s","slide":27,"bbox":[201,358,55,0]}
+{"kind":"shape","id":"sh/wzylof6h","slide":27,"bbox":[256,310,135,96]}
+{"kind":"textbox","id":"sh/h07mhknm","slide":27,"text":"Unfolded\ngraph","textPreview":"Unfolded | graph","textChars":14,"textLines":2,"bbox":[266,337,115,44]}
+{"kind":"shape","id":"sh/hg32103a","slide":27,"bbox":[391,358,55,0]}
+{"kind":"shape","id":"sh/gfa18vmp","slide":27,"bbox":[446,310,135,96]}
+{"kind":"textbox","id":"sh/fe1kzql4","slide":27,"text":"Hidden\nstate","textPreview":"Hidden | state","textChars":12,"textLines":2,"bbox":[456,337,115,44]}
+{"kind":"shape","id":"sh/udsj654z","slide":27,"bbox":[581,358,55,0]}
+{"kind":"shape","id":"sh/tcj2x03e","slide":27,"bbox":[636,310,135,96]}
+{"kind":"textbox","id":"sh/sba14vmt","slide":27,"text":"Context","textPreview":"Context","textChars":7,"textLines":1,"bbox":[646,337,115,44]}
+{"kind":"shape","id":"sh/7q1kvql8","slide":27,"bbox":[771,358,55,0]}
+{"kind":"shape","id":"sh/6psj2l4n","slide":27,"bbox":[826,310,135,96]}
+{"kind":"textbox","id":"sh/5ojitg32","slide":27,"text":"Memory\ngates","textPreview":"Memory | gates","textChars":12,"textLines":2,"bbox":[836,337,115,44]}
+{"kind":"shape","id":"sh/knq10bmh","slide":27,"bbox":[961,358,55,0]}
+{"kind":"shape","id":"sh/wru1gvud","slide":27,"bbox":[1016,310,135,96]}
+{"kind":"textbox","id":"sh/xs329gby","slide":27,"text":"Prediction","textPreview":"Prediction","textChars":10,"textLines":1,"bbox":[1026,337,115,44]}
+{"kind":"textbox","id":"sh/a5cjelcn","slide":27,"text":"The module moves from representing time to choosing architectures that preserve useful context.","textPreview":"The module moves from representing time to choosing architectures that preserve useful context.","textChars":95,"textLines":1,"bbox":[135,510,1010,42]}
+{"kind":"notes","id":"nt/71zc4n","slide":27,"text":"Closing synthesis for Module 5.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/fcp6en","slide":28,"title":"BCA701 Deep Learning | Module 5","textShapes":3}
+{"kind":"textbox","id":"sh/8bmds3q9","slide":28,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/7adcjypo","slide":28,"text":"Coverage checklist: every Module 5 phrase is included","textPreview":"Coverage checklist: every Module 5 phrase is included","textChars":53,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/m94vqt83","slide":28,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/l8vuho7i","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/pw36d47i","slide":28,"name":"","rows":10,"cols":2,"preview":"Syllabus phrase | Covered in slides","bbox":[72,205,1136,390]}
+{"kind":"notes","id":"nt/fcp6en","slide":28,"text":"This checklist verifies full Module 5 syllabus coverage.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/7elfg9","slide":29,"title":"BCA701 Deep Learning | Module 5","textShapes":6}
+{"kind":"textbox","id":"sh/k7ihwfmx","slide":29,"text":"BCA701 Deep Learning | Module 5","textPreview":"BCA701 Deep Learning | Module 5","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/z69g3ulc","slide":29,"text":"Prescribed textbook reference for Module 5","textPreview":"Prescribed textbook reference for Module 5","textChars":42,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/y50zup4r","slide":29,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/twbi943e","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/8vih0zmt","slide":29,"bbox":[94,239,9,9]}
+{"kind":"textbox","id":"sh/7u9g7ul8","slide":29,"text":"Primary reference: Goodfellow, Bengio, and Courville, Deep Learning, MIT Press, 2016.","textPreview":"Primary reference: Goodfellow, Bengio, and Courville, Deep Learning, MIT Press, 2016.","textChars":85,"textLines":1,"bbox":[118,230,1050,68]}
+{"kind":"shape","id":"sh/mt0zyp4n","slide":29,"bbox":[94,311,9,9]}
+{"kind":"textbox","id":"sh/p07yx03a","slide":29,"text":"Use the textbook for computational graph unfolding, RNNs, bidirectional RNNs, sequence-to-sequence architectures, deep recurrent nets, recursive nets, LSTMs, and gated RNNs.","textPreview":"Use the textbook for computational graph unfolding, RNNs, bidirectional RNNs, sequence-to-sequence architectures, deep recurrent nets, re...","textChars":173,"textLines":1,"bbox":[118,302,1050,68]}
+{"kind":"shape","id":"sh/ozyhovmp","slide":29,"bbox":[94,383,9,9]}
+{"kind":"textbox","id":"sh/q9gvup0f","slide":29,"text":"Use the VTU syllabus as the boundary for what belongs in Module 5.","textPreview":"Use the VTU syllabus as the boundary for what belongs in Module 5.","textChars":66,"textLines":1,"bbox":[118,374,1050,68]}
+{"kind":"notes","id":"nt/7elfg9","slide":29,"text":"Final reference slide with the prescribed textbook and syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}

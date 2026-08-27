@@ -1,0 +1,420 @@
+{"kind":"deck","id":"pr/n4ers9","name":"Deck"}
+{"kind":"layout","layoutId":"06bdf9bd-ebf0-4ba4-a345-841ff97107e3","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"73ae796d-b4b8-4c68-acbb-614b05827e6a","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/mkazml","slide":1,"title":"BCA701 Deep Learning","textShapes":4}
+{"kind":"textbox","id":"sh/o7el83a1","slide":1,"text":"BCA701 Deep Learning","textPreview":"BCA701 Deep Learning","textChars":20,"textLines":1,"bbox":[42,40,540,36]}
+{"kind":"textbox","id":"sh/36l4zytg","slide":1,"text":"Module 2: Multilayer Perceptrons","textPreview":"Module 2: Multilayer Perceptrons","textChars":32,"textLines":1,"bbox":[42,158,820,150]}
+{"kind":"textbox","id":"sh/25c36tsv","slide":1,"text":"From single perceptrons to trainable hidden layers: batch learning, online learning, backpropagation, XOR, optimization heuristics, and differentiation.","textPreview":"From single perceptrons to trainable hidden layers: batch learning, online learning, backpropagation, XOR, optimization heuristics, and d...","textChars":152,"textLines":1,"bbox":[42,372,650,112]}
+{"kind":"shape","id":"sh/dcnm58bi","slide":1,"bbox":[800,78,350,510]}
+{"kind":"shape","id":"sh/cbelc3ax","slide":1,"bbox":[860,230,56,56]}
+{"kind":"shape","id":"sh/ba543ytc","slide":1,"bbox":[860,320,56,56]}
+{"kind":"shape","id":"sh/q9w3atsr","slide":1,"bbox":[860,410,56,56]}
+{"kind":"shape","id":"sh/tg3mtobe","slide":1,"bbox":[980,205,56,56]}
+{"kind":"shape","id":"sh/sful0jat","slide":1,"bbox":[980,295,56,56]}
+{"kind":"shape","id":"sh/y9g3axwn","slide":1,"bbox":[980,385,56,56]}
+{"kind":"shape","id":"sh/zap432d8","slide":1,"bbox":[980,475,56,56]}
+{"kind":"shape","id":"sh/0by5c7et","slide":1,"bbox":[1100,292,56,56]}
+{"kind":"shape","id":"sh/lc7m5cve","slide":1,"bbox":[1100,382,56,56]}
+{"kind":"shape","id":"sh/mdgnehwz","slide":1,"bbox":[916,233,64,25]}
+{"kind":"shape","id":"sh/nep47mdk","slide":1,"bbox":[916,323,64,25]}
+{"kind":"shape","id":"sh/8fy5grep","slide":1,"bbox":[1036,323,64,0]}
+{"kind":"textbox","id":"sh/9grm9cva","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"notes","id":"nt/mkazml","slide":1,"text":"Title slide for Module 2, aligned to the local VTU BCA701 syllabus and Haykin textbook.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/8iezkp","slide":2,"title":"BCA701 Deep Learning | Module 2","textShapes":3}
+{"kind":"textbox","id":"sh/jm5szm5o","slide":2,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/knetsrm9","slide":2,"text":"Module 2 has six syllabus checkpoints","textPreview":"Module 2 has six syllabus checkpoints","textChars":37,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/lona1w3u","slide":2,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/axcrmh47","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/6t0b2xoz","slide":2,"name":"","rows":7,"cols":3,"preview":"# | Checkpoint | What students should know","bbox":[56,205,1168,350]}
+{"kind":"notes","id":"nt/8iezkp","slide":2,"text":"This slide maps every phrase in Module 2 of the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/dvs3rs","slide":3,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/jyxs7ups","slide":3,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/kz6t0f6d","slide":3,"text":"Multilayer perceptrons add hidden layers between input and output","textPreview":"Multilayer perceptrons add hidden layers between input and output","textChars":65,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/l0fu9k7y","slide":3,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/a94bu58b","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/buxs3apw","slide":3,"text":"What changes from Module 1","textPreview":"What changes from Module 1","textChars":26,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/cv6twf6h","slide":3,"text":"A single perceptron can only draw a linear boundary. An MLP adds hidden neurons so the network can build intermediate representations before making an output decision.","textPreview":"A single perceptron can only draw a linear boundary. An MLP adds hidden neurons so the network can build intermediate representations bef...","textChars":167,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/xwfa5k72","slide":3,"text":"Why it matters","textPreview":"Why it matters","textChars":14,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/up8b69of","slide":3,"text":"Hidden layers allow nonlinear input-output mappings, making the MLP a foundation for later deep neural networks.","textPreview":"Hidden layers allow nonlinear input-output mappings, making the MLP a foundation for later deep neural networks.","textChars":112,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/dvs3rs","slide":3,"text":"Covers Multilayer Perceptrons: Introduction and links to Module 1 perceptron limitations.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/42fb75","slide":4,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/of618f65","slide":4,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/nex0fa5k","slide":4,"text":"An MLP is a directed, layered computation graph","textPreview":"An MLP is a directed, layered computation graph","textChars":47,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/2toj65of","slide":4,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/xkz2lkn2","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/cjq1cfmh","slide":4,"text":"Input layer","textPreview":"Input layer","textChars":11,"textLines":1,"bbox":[130,230,150,30]}
+{"kind":"textbox","id":"sh/bixkja5w","slide":4,"text":"Hidden layer","textPreview":"Hidden layer","textChars":12,"textLines":1,"bbox":[535,230,170,30]}
+{"kind":"textbox","id":"sh/ahojap4b","slide":4,"text":"Output layer","textPreview":"Output layer","textChars":12,"textLines":1,"bbox":[940,230,170,30]}
+{"kind":"shape","id":"sh/loz294ny","slide":4,"bbox":[170,302,62,62]}
+{"kind":"shape","id":"sh/knq1gzmd","slide":4,"bbox":[170,392,62,62]}
+{"kind":"shape","id":"sh/q1wfelcv","slide":4,"bbox":[170,482,62,62]}
+{"kind":"shape","id":"sh/b25wnqdg","slide":4,"bbox":[585,282,62,62]}
+{"kind":"shape","id":"sh/c3exgvu1","slide":4,"bbox":[585,372,62,62]}
+{"kind":"shape","id":"sh/d4nep0vm","slide":4,"bbox":[585,462,62,62]}
+{"kind":"shape","id":"sh/y5wfi5c7","slide":4,"bbox":[585,552,62,62]}
+{"kind":"shape","id":"sh/z65grads","slide":4,"bbox":[1000,360,62,62]}
+{"kind":"shape","id":"sh/0rexkfud","slide":4,"bbox":[1000,460,62,62]}
+{"kind":"shape","id":"sh/ls7ytkvi","slide":4,"bbox":[232,313,353,20]}
+{"kind":"shape","id":"sh/e9cf61cn","slide":4,"bbox":[232,423,353,0]}
+{"kind":"shape","id":"sh/falwf6d8","slide":4,"bbox":[232,513,353,20]}
+{"kind":"shape","id":"sh/jehcn2t0","slide":4,"bbox":[647,313,353,78]}
+{"kind":"shape","id":"sh/id8bexsf","slide":4,"bbox":[647,491,353,92]}
+{"kind":"textbox","id":"sh/5gzupcb6","slide":4,"text":"Signals flow forward; learning sends error information backward.","textPreview":"Signals flow forward; learning sends error information backward.","textChars":64,"textLines":1,"bbox":[110,632,900,34]}
+{"kind":"notes","id":"nt/42fb75","slide":4,"text":"Shows the layered architecture of an MLP and sets up backpropagation.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/p0rvyc","slide":5,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/qd07ix87","slide":5,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/dgb6dsry","slide":5,"text":"Each layer applies the same neuron logic to new learned features","textPreview":"Each layer applies the same neuron logic to new learned features","textChars":64,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/sf2pk7qd","slide":5,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/fit8f29o","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/ehk7mx8j","slide":5,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/14bqhcru","slide":5,"text":"a(l) = φ( W(l) a(l-1) + b(l) )","textPreview":"a(l) = φ( W(l) a(l-1) + b(l) )","textChars":30,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/032po7q9","slide":5,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/vmpo3i9k","slide":5,"text":"a(l-1) is the previous layer's activation vector.","textPreview":"a(l-1) is the previous layer's activation vector.","textChars":49,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/ulg7ad8z","slide":5,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/0n6xofyt","slide":5,"text":"W(l) and b(l) are the trainable weights and biases for layer l.","textPreview":"W(l) and b(l) are the trainable weights and biases for layer l.","textChars":63,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/1ofeh0ze","slide":5,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/elofm5gn","slide":5,"text":"φ is applied to create the next layer's representation.","textPreview":"φ is applied to create the next layer's representation.","textChars":55,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/p0rvyc","slide":5,"text":"Layer-wise notation summarizes the MLP forward computation.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/xczozn","slide":6,"title":"BCA701 Deep Learning | Module 2","textShapes":3}
+{"kind":"textbox","id":"sh/gr6dw7ql","slide":6,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/fqxc32p0","slide":6,"text":"Batch and online learning differ in when weights are updated","textPreview":"Batch and online learning differ in when weights are updated","textChars":60,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/epobux8f","slide":6,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/tofu1s7u","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/psbyxo3m","slide":6,"name":"","rows":4,"cols":4,"preview":"Mode | Update timing | Strength | Trade-off","bbox":[72,215,1136,330]}
+{"kind":"notes","id":"nt/xczozn","slide":6,"text":"Covers Batch Learning and On-Line Learning from the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/fvuvvh","slide":7,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/pczq9kba","slide":7,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/2pore5cj","slide":7,"text":"Batch learning views training as reducing total error","textPreview":"Batch learning views training as reducing total error","textChars":53,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/nax87at4","slide":7,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/0n69cvut","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/1ofq50by","slide":7,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/eloralcn","slide":7,"text":"Etotal = Σp Ep","textPreview":"Etotal = Σp Ep","textChars":14,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/fmx83qt8","slide":7,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/sjmp8vuh","slide":7,"text":"Each pattern p contributes an error term.","textPreview":"Each pattern p contributes an error term.","textChars":41,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/tkfq10b2","slide":7,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/lovm9gr2","slide":7,"text":"Weights are adjusted after the aggregate error or gradient is computed.","textPreview":"Weights are adjusted after the aggregate error or gradient is computed.","textChars":71,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/k3ml0bah","slide":7,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/z2t47q9w","slide":7,"text":"Batch updates are less noisy because they use the whole training set.","textPreview":"Batch updates are less noisy because they use the whole training set.","textChars":69,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/fvuvvh","slide":7,"text":"Explains the objective viewpoint behind batch learning.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/gt13iu","slide":8,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/pwz61wn2","slide":8,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/2t8nqhor","slide":8,"text":"Online learning updates immediately from each example","textPreview":"Online learning updates immediately from each example","textChars":53,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/nuhozm5c","slide":8,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/czq5wr6t","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/x0j65wne","slide":8,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/ax8nu1on","slide":8,"text":"w ← w + Δwp","textPreview":"w ← w + Δwp","textChars":11,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/byho3m58","slide":8,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/s365k76p","slide":8,"text":"One pattern is presented, prediction is made, error is computed, and weights are changed.","textPreview":"One pattern is presented, prediction is made, error is computed, and weights are changed.","textChars":89,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/d4fmtcnu","slide":8,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/dw3e94j2","slide":8,"text":"The next example sees the newly updated network.","textPreview":"The next example sees the newly updated network.","textChars":48,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/cvudgzih","slide":8,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/ru1w7u1w","slide":8,"text":"The update path can fluctuate, but learning can respond quickly.","textPreview":"The update path can fluctuate, but learning can respond quickly.","textChars":64,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/gt13iu","slide":8,"text":"Explains online learning as pattern-by-pattern adaptation.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/0i2kww","slide":9,"title":"BCA701 Deep Learning | Module 2","textShapes":11}
+{"kind":"textbox","id":"sh/on694321","slide":9,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/nmx8vylg","slide":9,"text":"Backpropagation is gradient descent made efficient for layered networks","textPreview":"Backpropagation is gradient descent made efficient for layered networks","textChars":71,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/ml472tkv","slide":9,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/xcfq183i","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/wr69832x","slide":9,"bbox":[72,210,500,150]}
+{"kind":"textbox","id":"sh/bqx8zylc","slide":9,"text":"Forward pass","textPreview":"Forward pass","textChars":12,"textLines":1,"bbox":[94,232,456,34]}
+{"kind":"textbox","id":"sh/apor6tkr","slide":9,"text":"Compute activations from input to output.","textPreview":"Compute activations from input to output.","textChars":41,"textLines":1,"bbox":[94,278,456,62]}
+{"kind":"shape","id":"sh/dwvqpo3y","slide":9,"bbox":[680,210,500,150]}
+{"kind":"textbox","id":"sh/cvmpwjmt","slide":9,"text":"Loss","textPreview":"Loss","textChars":4,"textLines":1,"bbox":[702,232,456,34]}
+{"kind":"textbox","id":"sh/ad8v6d0j","slide":9,"text":"Measure the difference between output and target.","textPreview":"Measure the difference between output and target.","textChars":49,"textLines":1,"bbox":[702,278,456,62]}
+{"kind":"shape","id":"sh/behczi14","slide":9,"bbox":[72,420,500,150]}
+{"kind":"textbox","id":"sh/wfqd83ip","slide":9,"text":"Backward pass","textPreview":"Backward pass","textChars":13,"textLines":1,"bbox":[94,442,456,34]}
+{"kind":"textbox","id":"sh/xgzu18ja","slide":9,"text":"Propagate error signals from output to hidden layers.","textPreview":"Propagate error signals from output to hidden layers.","textChars":53,"textLines":1,"bbox":[94,488,456,62]}
+{"kind":"shape","id":"sh/yh8vad0v","slide":9,"bbox":[680,420,500,150]}
+{"kind":"textbox","id":"sh/ji1c3i10","slide":9,"text":"Update","textPreview":"Update","textChars":6,"textLines":1,"bbox":[702,442,456,34]}
+{"kind":"textbox","id":"sh/kjadcnil","slide":9,"text":"Adjust weights in the direction that reduces error.","textPreview":"Adjust weights in the direction that reduces error.","textChars":51,"textLines":1,"bbox":[702,488,456,62]}
+{"kind":"notes","id":"nt/0i2kww","slide":9,"text":"Covers The Back-Propagation Algorithm at a high level.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/5q70sv","slide":10,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/6p0b250b","slide":10,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/tsbudkz2","slide":10,"text":"Backpropagation starts with a forward pass","textPreview":"Backpropagation starts with a forward pass","textChars":42,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/8r2t4fih","slide":10,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/jm9s7ahk","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/yl0by50z","slide":10,"bbox":[94,234,9,9]}
+{"kind":"textbox","id":"sh/loru90zq","slide":10,"text":"Present an input vector to the input layer.","textPreview":"Present an input vector to the input layer.","textChars":43,"textLines":1,"bbox":[118,225,1040,60]}
+{"kind":"shape","id":"sh/knit0vi5","slide":10,"bbox":[94,298,9,9]}
+{"kind":"textbox","id":"sh/3idcjuh4","slide":10,"text":"Compute weighted sums and activations layer by layer.","textPreview":"Compute weighted sums and activations layer by layer.","textChars":53,"textLines":1,"bbox":[118,289,1040,60]}
+{"kind":"shape","id":"sh/2hkbap0j","slide":10,"bbox":[94,362,9,9]}
+{"kind":"textbox","id":"sh/wfq90v69","slide":10,"text":"Produce the network output.","textPreview":"Produce the network output.","textChars":27,"textLines":1,"bbox":[118,353,1040,60]}
+{"kind":"shape","id":"sh/hgza907e","slide":10,"bbox":[94,426,9,9]}
+{"kind":"textbox","id":"sh/udorylo3","slide":10,"text":"Store intermediate activations because the backward pass needs them.","textPreview":"Store intermediate activations because the backward pass needs them.","textChars":68,"textLines":1,"bbox":[118,417,1040,60]}
+{"kind":"notes","id":"nt/5q70sv","slide":10,"text":"First phase of backpropagation: forward computation.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/u06cud","slide":11,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/byt8r6l4","slide":11,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/wz2pkb2p","slide":11,"text":"The output error tells the network what must change","textPreview":"The output error tells the network what must change","textChars":51,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/x0bqtg3a","slide":11,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/y1k7mlkv","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/j2t8vqlg","slide":11,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/k3mpov21","slide":11,"text":"e = d - y","textPreview":"e = d - y","textChars":9,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/l4vqh03m","slide":11,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/e507ah4r","slide":11,"text":"d is the desired response for the training example.","textPreview":"d is the desired response for the training example.","textChars":51,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/z698jmlw","slide":11,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/zax432p8","slide":11,"text":"y is the network output.","textPreview":"y is the network output.","textChars":24,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/e9onaxon","slide":11,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/1cfm5s7e","slide":11,"text":"The error signal is converted into gradients for the output-layer weights.","textPreview":"The error signal is converted into gradients for the output-layer weights.","textChars":74,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/u06cud","slide":11,"text":"Defines the output error signal in supervised learning.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/fua58f","slide":12,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/pw3qt4zm","slide":12,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/29c7ip0v","slide":12,"text":"The backward pass assigns responsibility to earlier layers","textPreview":"The backward pass assigns responsibility to earlier layers","textChars":58,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/nal8ruhg","slide":12,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/wzepojid","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/x0nqxozi","slide":12,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/axw7m907","slide":12,"text":"δj = φ'(vj) Σk δk wkj","textPreview":"δj = φ'(vj) Σk δk wkj","textChars":21,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/by58vehs","slide":12,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/s3apcfit","slide":12,"text":"δ is the local gradient or error responsibility for a neuron.","textPreview":"δ is the local gradient or error responsibility for a neuron.","textChars":61,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/d4j6lkze","slide":12,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/xkjid0zu","slide":12,"text":"Output-layer errors are pushed backward through connection weights.","textPreview":"Output-layer errors are pushed backward through connection weights.","textChars":67,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/cja14vi9","slide":12,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/bi10bqho","slide":12,"text":"The derivative of the activation controls how strongly a neuron can change.","textPreview":"The derivative of the activation controls how strongly a neuron can change.","textChars":75,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/fua58f","slide":12,"text":"Backpropagation computes hidden-layer local gradients using downstream error signals.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/i4zc3p","slide":13,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/dkjehorm","slide":13,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/qh8fm9sb","slide":13,"text":"Weight updates use local information at each connection","textPreview":"Weight updates use local information at each connection","textChars":55,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/bihwfe9w","slide":13,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/ofqxkja5","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/pgzed4rq","slide":13,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/2d8vi9sz","slide":13,"text":"Δwji = η δj yi","textPreview":"Δwji = η δj yi","textChars":14,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/3ehwbe9k","slide":13,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/8buxw3q9","slide":13,"text":"η is the learning-rate parameter.","textPreview":"η is the learning-rate parameter.","textChars":33,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/9c3ep8ru","slide":13,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/hw7ud0v2","slide":13,"text":"δj is the local gradient at the destination neuron.","textPreview":"δj is the local gradient at the destination neuron.","textChars":51,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/gved4vex","slide":13,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/fu5cbqdc","slide":13,"text":"yi is the activation arriving from the source neuron.","textPreview":"yi is the activation arriving from the source neuron.","textChars":53,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/i4zc3p","slide":13,"text":"Standard backpropagation weight-correction form.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/9sa39f","slide":14,"title":"BCA701 Deep Learning | Module 2","textShapes":3}
+{"kind":"textbox","id":"sh/7650fqxk","slide":14,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/s7y1obe5","slide":14,"text":"Backpropagation can be read as a four-step algorithm","textPreview":"Backpropagation can be read as a four-step algorithm","textChars":52,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/t87ihgfa","slide":14,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/u9gjqlwv","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/6dcn6hwf","slide":14,"name":"","rows":5,"cols":3,"preview":"Step | Action | Output of the step","bbox":[76,215,1128,310]}
+{"kind":"notes","id":"nt/9sa39f","slide":14,"text":"Summarizes the backpropagation algorithm in exam-ready sequence.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/taoko6","slide":15,"title":"BCA701 Deep Learning | Module 2","textShapes":6}
+{"kind":"textbox","id":"sh/uxsbqho3","slide":15,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/h03ulwne","slide":15,"text":"The XOR problem exposes why hidden layers are needed","textPreview":"The XOR problem exposes why hidden layers are needed","textChars":52,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/wzadsr6t","slide":15,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/nu1cf25c","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/9wjuhcni","slide":15,"bbox":[690,259,9,9]}
+{"kind":"textbox","id":"sh/8vato76x","slide":15,"text":"No single straight line separates the 1s from the 0s.","textPreview":"No single straight line separates the 1s from the 0s.","textChars":53,"textLines":1,"bbox":[714,250,440,58]}
+{"kind":"shape","id":"sh/z6hcb25g","slide":15,"bbox":[690,321,9,9]}
+{"kind":"textbox","id":"sh/y58bixov","slide":15,"text":"Two hidden neurons can create two intermediate linear regions.","textPreview":"Two hidden neurons can create two intermediate linear regions.","textChars":62,"textLines":1,"bbox":[714,312,440,58]}
+{"kind":"shape","id":"sh/gju9wzyx","slide":15,"bbox":[690,383,9,9]}
+{"kind":"textbox","id":"sh/hk3ap4zi","slide":15,"text":"The output neuron combines those hidden regions to solve XOR.","textPreview":"The output neuron combines those hidden regions to solve XOR.","textChars":61,"textLines":1,"bbox":[714,374,440,58]}
+{"kind":"table","id":"tb/3qxsvqlk","slide":15,"name":"","rows":5,"cols":3,"preview":"x1 | x2 | XOR target","bbox":[110,230,430,300]}
+{"kind":"notes","id":"nt/taoko6","slide":15,"text":"Covers XOR Problem from the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/7o929x","slide":16,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/epcj6d0z","slide":16,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/1cn21szq","slide":16,"text":"A hidden layer can turn XOR into a separable representation","textPreview":"A hidden layer can turn XOR into a separable representation","textChars":59,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/gbe18ni5","slide":16,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/rml0vih8","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/6lcj2d03","slide":16,"bbox":[120,220,340,330]}
+{"kind":"shape","id":"sh/to3ix8ze","slide":16,"bbox":[150,500,260,0]}
+{"kind":"shape","id":"sh/snu143it","slide":16,"bbox":[170,270,0,250]}
+{"kind":"shape","id":"sh/bipk72hs","slide":16,"bbox":[210,445,20,20]}
+{"kind":"shape","id":"sh/qhwjexg7","slide":16,"bbox":[360,300,20,20]}
+{"kind":"shape","id":"sh/s3qxsve5","slide":16,"bbox":[210,300,22,22]}
+{"kind":"shape","id":"sh/t4zy10fq","slide":16,"bbox":[360,445,22,22]}
+{"kind":"shape","id":"sh/6h8fqlwf","slide":16,"bbox":[205,315,200,80]}
+{"kind":"shape","id":"sh/r2hgzqx0","slide":16,"bbox":[205,360,200,80]}
+{"kind":"textbox","id":"sh/4f6xobe9","slide":16,"text":"Two hidden boundaries","textPreview":"Two hidden boundaries","textChars":21,"textLines":1,"bbox":[172,568,260,32]}
+{"kind":"shape","id":"sh/5gfyxgfu","slide":16,"bbox":[650,269,9,9]}
+{"kind":"textbox","id":"sh/idofmlw3","slide":16,"text":"One hidden neuron can detect one half-space.","textPreview":"One hidden neuron can detect one half-space.","textChars":44,"textLines":1,"bbox":[674,260,470,58]}
+{"kind":"shape","id":"sh/jexgv6xo","slide":16,"bbox":[650,331,9,9]}
+{"kind":"textbox","id":"sh/wb6xkbed","slide":16,"text":"Another hidden neuron can detect a second half-space.","textPreview":"Another hidden neuron can detect a second half-space.","textChars":53,"textLines":1,"bbox":[674,322,470,58]}
+{"kind":"shape","id":"sh/xcfytgfi","slide":16,"bbox":[650,393,9,9]}
+{"kind":"textbox","id":"sh/x87exs7m","slide":16,"text":"The output layer combines hidden activations into the XOR answer.","textPreview":"The output layer combines hidden activations into the XOR answer.","textChars":65,"textLines":1,"bbox":[674,384,470,58]}
+{"kind":"notes","id":"nt/7o929x","slide":16,"text":"Shows why the XOR problem motivates multilayer perceptrons.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/pirvfk","slide":17,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/qtw3at4z","slide":17,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/dg7m5o3a","slide":17,"text":"Learning rate is the first backpropagation heuristic to tune","textPreview":"Learning rate is the first backpropagation heuristic to tune","textChars":60,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/svelcjmp","slide":17,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/fip47ylg","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/ehg3et4v","slide":17,"text":"Too small","textPreview":"Too small","textChars":9,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/1k7m983m","slide":17,"text":"Learning is stable but slow. The error decreases gradually and may require many epochs.","textPreview":"Learning is stable but slow. The error decreases gradually and may require many epochs.","textChars":87,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/0jylg3m1","slide":17,"text":"Too large","textPreview":"Too large","textChars":9,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/nmp4bylc","slide":17,"text":"Updates can overshoot useful directions. Training may oscillate or diverge.","textPreview":"Updates can overshoot useful directions. Training may oscillate or diverge.","textChars":75,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/pirvfk","slide":17,"text":"Covers heuristics for making backpropagation perform better: learning-rate choice.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/dn4gm3","slide":18,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/nidc3qtw","slide":18,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/ojmtwvuh","slide":18,"text":"Momentum smooths noisy updates and helps cross shallow regions","textPreview":"Momentum smooths noisy updates and helps cross shallow regions","textChars":62,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/9kvu50b2","slide":18,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/edkbqlcf","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/zedszqtk","slide":18,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/0fmtsvu5","slide":18,"text":"Δw(t) = η δ y + α Δw(t-1)","textPreview":"Δw(t) = η δ y + α Δw(t-1)","textChars":25,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/1gvu1gbq","slide":18,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/qpkbm1c3","slide":18,"text":"η δ y is the current gradient-based correction.","textPreview":"η δ y is the current gradient-based correction.","textChars":47,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/ratsv6to","slide":18,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/7qxw7q9g","slide":18,"text":"α Δw(t-1) carries part of the previous correction forward.","textPreview":"α Δw(t-1) carries part of the previous correction forward.","textChars":58,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/6pofylsb","slide":18,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/tcfy90rm","slide":18,"text":"Momentum can reduce zig-zag movement across narrow error surfaces.","textPreview":"Momentum can reduce zig-zag movement across narrow error surfaces.","textChars":66,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/dn4gm3","slide":18,"text":"Momentum is a common practical heuristic in Haykin-style backpropagation discussions.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/d49ppe","slide":19,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/c3q9k76l","slide":19,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/b2h8r2p0","slide":19,"text":"Initialization matters because symmetry blocks learning","textPreview":"Initialization matters because symmetry blocks learning","textChars":55,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/q18rixov","slide":19,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/p0zqps7a","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/oz69g76p","slide":19,"bbox":[94,234,9,9]}
+{"kind":"textbox","id":"sh/3yx8n2p4","slide":19,"text":"If hidden neurons start with identical weights, they receive identical gradients.","textPreview":"If hidden neurons start with identical weights, they receive identical gradients.","textChars":81,"textLines":1,"bbox":[118,225,1040,60]}
+{"kind":"shape","id":"sh/2xorexoj","slide":19,"bbox":[94,298,9,9]}
+{"kind":"textbox","id":"sh/1wfqls7y","slide":19,"text":"Small random weights break symmetry between neurons.","textPreview":"Small random weights break symmetry between neurons.","textChars":52,"textLines":1,"bbox":[118,289,1040,60]}
+{"kind":"shape","id":"sh/gv69cn6d","slide":19,"bbox":[94,362,9,9]}
+{"kind":"textbox","id":"sh/y9cfut4b","slide":19,"text":"Weights should not start so large that activations saturate.","textPreview":"Weights should not start so large that activations saturate.","textChars":60,"textLines":1,"bbox":[118,353,1040,60]}
+{"kind":"shape","id":"sh/za5wnylw","slide":19,"bbox":[94,426,9,9]}
+{"kind":"textbox","id":"sh/0bexw3m1","slide":19,"text":"Good initialization keeps signals and gradients in useful ranges.","textPreview":"Good initialization keeps signals and gradients in useful ranges.","textChars":65,"textLines":1,"bbox":[118,417,1040,60]}
+{"kind":"notes","id":"nt/d49ppe","slide":19,"text":"Covers weight initialization as a backpropagation performance heuristic.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/8kr8n0","slide":20,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/50nedk3m","slide":20,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/idcvi54v","slide":20,"text":"Activation saturation slows backpropagation","textPreview":"Activation saturation slows backpropagation","textChars":43,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/jelwbalg","slide":20,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/s3edofmd","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/t4nehk3i","slide":20,"text":"The issue","textPreview":"The issue","textChars":9,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/61wvm547","slide":20,"text":"For sigmoid-like functions, very large positive or negative inputs create nearly flat output regions.","textPreview":"For sigmoid-like functions, very large positive or negative inputs create nearly flat output regions.","textChars":101,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/725wfals","slide":20,"text":"The effect","textPreview":"The effect","textChars":10,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/g7ydszm9","slide":20,"text":"When φ'(v) is close to zero, local gradients become small and weight updates lose strength.","textPreview":"When φ'(v) is close to zero, local gradients become small and weight updates lose strength.","textChars":91,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/8kr8n0","slide":20,"text":"Connects activation derivatives to practical backpropagation behavior.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/piim4s","slide":21,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/qtwrupov","slide":21,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/dw7a54n6","slide":21,"text":"Data scaling helps gradients behave consistently","textPreview":"Data scaling helps gradients behave consistently","textChars":48,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/cve9wz61","slide":21,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/3q58za54","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/2pwrqpoj","slide":21,"bbox":[94,234,9,9]}
+{"kind":"textbox","id":"sh/psnq1kna","slide":21,"text":"Normalize or standardize input features before training.","textPreview":"Normalize or standardize input features before training.","textChars":56,"textLines":1,"bbox":[118,225,1040,60]}
+{"kind":"shape","id":"sh/4re9sf6p","slide":21,"bbox":[94,298,9,9]}
+{"kind":"textbox","id":"sh/nmpsbe5o","slide":21,"text":"Avoid one feature numerically dominating the weighted sum.","textPreview":"Avoid one feature numerically dominating the weighted sum.","textChars":58,"textLines":1,"bbox":[118,289,1040,60]}
+{"kind":"shape","id":"sh/mlgr2943","slide":21,"bbox":[94,362,9,9]}
+{"kind":"textbox","id":"sh/gf2pw3ml","slide":21,"text":"Scaled data often permits more reliable learning-rate choices.","textPreview":"Scaled data often permits more reliable learning-rate choices.","textChars":62,"textLines":1,"bbox":[118,353,1040,60]}
+{"kind":"shape","id":"sh/hgb658n6","slide":21,"bbox":[94,426,9,9]}
+{"kind":"textbox","id":"sh/utk7ut4f","slide":21,"text":"Output encoding should match the activation and loss function.","textPreview":"Output encoding should match the activation and loss function.","textChars":62,"textLines":1,"bbox":[118,417,1040,60]}
+{"kind":"notes","id":"nt/piim4s","slide":21,"text":"Feature scaling and encoding are practical heuristics for improving backpropagation.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/xqlsap","slide":22,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/rm5onitw","slide":22,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/snepg3u1","slide":22,"text":"Stopping and validation prevent training from chasing noise","textPreview":"Stopping and validation prevent training from chasing noise","textChars":59,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/do76p8bm","slide":22,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/ihw7atcz","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/3i5ojytk","slide":22,"text":"Training error","textPreview":"Training error","textChars":14,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/4jepc3u5","slide":22,"text":"Backpropagation can continue reducing error on the training set as weights adapt.","textPreview":"Backpropagation can continue reducing error on the training set as weights adapt.","textChars":81,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/5kn6l8bq","slide":22,"text":"Validation signal","textPreview":"Validation signal","textChars":17,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/utcn6tc3","slide":22,"text":"A separate validation set helps decide when additional training no longer improves generalization.","textPreview":"A separate validation set helps decide when additional training no longer improves generalization.","textChars":98,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/xqlsap","slide":22,"text":"Validation and stopping criteria are part of practical backpropagation control.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/v0grv2","slide":23,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/vixsz61g","slide":23,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/w3698bi1","slide":23,"text":"Backpropagation is repeated application of the chain rule","textPreview":"Backpropagation is repeated application of the chain rule","textChars":57,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/h4za1gzm","slide":23,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/i58ral07","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/j6hs3qhs","slide":23,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/47q9cvix","slide":23,"text":"∂E/∂w = (∂E/∂y)(∂y/∂v)(∂v/∂w)","textPreview":"∂E/∂w = (∂E/∂y)(∂y/∂v)(∂v/∂w)","textChars":29,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/58za5gzi","slide":23,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/698rel03","slide":23,"text":"The error depends on the output.","textPreview":"The error depends on the output.","textChars":32,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/rahs7qho","slide":23,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/3qx8v610","slide":23,"text":"The output depends on the neuron's local field.","textPreview":"The output depends on the neuron's local field.","textChars":47,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/ip4721kv","slide":23,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/5cfqxwj6","slide":23,"text":"The local field depends on the weight being updated.","textPreview":"The local field depends on the weight being updated.","textChars":52,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/v0grv2","slide":23,"text":"Covers Back Propagation and Differentiation from the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/9d6q5b","slide":24,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/7e9k7u18","slide":24,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/szi10z2d","slide":24,"text":"Differentiation explains why smooth activations help","textPreview":"Differentiation explains why smooth activations help","textChars":52,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/t0r294jy","slide":24,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/u1kj2pkj","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/f2tkbu14","slide":24,"text":"Perceptron threshold","textPreview":"Perceptron threshold","textChars":20,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/g3214z2p","slide":24,"text":"A hard threshold is not useful for gradient-based learning because it is not smoothly differentiable.","textPreview":"A hard threshold is not useful for gradient-based learning because it is not smoothly differentiable.","textChars":101,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/h4b2d4ja","slide":24,"text":"MLP activations","textPreview":"MLP activations","textChars":15,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/25k369kv","slide":24,"text":"Differentiable nonlinear activations allow gradients to flow backward through layers.","textPreview":"Differentiable nonlinear activations allow gradients to flow backward through layers.","textChars":85,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/9d6q5b","slide":24,"text":"Explains the link between differentiability and backpropagation.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/897ft8","slide":25,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/wfylob2p","slide":25,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/vepkf614","slide":25,"text":"The same chain-rule logic scales from one neuron to many layers","textPreview":"The same chain-rule logic scales from one neuron to many layers","textChars":63,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/adg3m1kj","slide":25,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/9s72dwje","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/orylkr2t","slide":25,"bbox":[94,234,9,9]}
+{"kind":"textbox","id":"sh/nq5kb618","slide":25,"text":"For an output neuron, compute the derivative of error with respect to its weights directly.","textPreview":"For an output neuron, compute the derivative of error with respect to its weights directly.","textChars":91,"textLines":1,"bbox":[118,225,1040,60]}
+{"kind":"shape","id":"sh/mpw3i1kn","slide":25,"bbox":[94,298,9,9]}
+{"kind":"textbox","id":"sh/tormp0ji","slide":25,"text":"For a hidden neuron, multiply downstream error by the derivative of its activation.","textPreview":"For a hidden neuron, multiply downstream error by the derivative of its activation.","textChars":83,"textLines":1,"bbox":[118,289,1040,60]}
+{"kind":"shape","id":"sh/snilwv2x","slide":25,"bbox":[94,362,9,9]}
+{"kind":"textbox","id":"sh/69k76dwv","slide":25,"text":"Repeat this layer by layer until every weight has a gradient.","textPreview":"Repeat this layer by layer until every weight has a gradient.","textChars":61,"textLines":1,"bbox":[118,353,1040,60]}
+{"kind":"shape","id":"sh/rutozidg","slide":25,"bbox":[94,426,9,9]}
+{"kind":"textbox","id":"sh/sv2p8ne1","slide":25,"text":"Update all trainable parameters using the chosen learning mode.","textPreview":"Update all trainable parameters using the chosen learning mode.","textChars":63,"textLines":1,"bbox":[118,417,1040,60]}
+{"kind":"notes","id":"nt/897ft8","slide":25,"text":"Reinforces the chain-rule structure of multilayer backpropagation.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/bxi1ac","slide":26,"title":"BCA701 Deep Learning | Module 2","textShapes":11}
+{"kind":"textbox","id":"sh/214bepoj","slide":26,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/p4vapk7u","slide":26,"text":"A good exam answer should connect algorithm, geometry, and calculus","textPreview":"A good exam answer should connect algorithm, geometry, and calculus","textChars":67,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/o3mtgf6p","slide":26,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/bqdcrup0","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/a54bipof","slide":26,"bbox":[72,210,500,150]}
+{"kind":"textbox","id":"sh/xsfut476","slide":26,"text":"MLP need","textPreview":"MLP need","textChars":8,"textLines":1,"bbox":[94,232,456,34]}
+{"kind":"textbox","id":"sh/cr6tkz6l","slide":26,"text":"Hidden layers address nonlinear tasks such as XOR.","textPreview":"Hidden layers address nonlinear tasks such as XOR.","textChars":50,"textLines":1,"bbox":[94,278,456,62]}
+{"kind":"shape","id":"sh/zuxcvepc","slide":26,"bbox":[680,210,500,150]}
+{"kind":"textbox","id":"sh/ytobm9or","slide":26,"text":"Learning mode","textPreview":"Learning mode","textChars":13,"textLines":1,"bbox":[702,232,456,34]}
+{"kind":"textbox","id":"sh/c7atcz6x","slide":26,"text":"Batch and online learning differ by update timing.","textPreview":"Batch and online learning differ by update timing.","textChars":50,"textLines":1,"bbox":[702,278,456,62]}
+{"kind":"shape","id":"sh/d8jal4ni","slide":26,"bbox":[72,420,500,150]}
+{"kind":"textbox","id":"sh/qlsbapo7","slide":26,"text":"Backprop steps","textPreview":"Backprop steps","textChars":14,"textLines":1,"bbox":[94,442,456,34]}
+{"kind":"textbox","id":"sh/bm1sju5c","slide":26,"text":"Forward pass, error, backward pass, update.","textPreview":"Forward pass, error, backward pass, update.","textChars":43,"textLines":1,"bbox":[94,488,456,62]}
+{"kind":"shape","id":"sh/0butgj69","slide":26,"bbox":[680,420,500,150]}
+{"kind":"textbox","id":"sh/lc3aponu","slide":26,"text":"Differentiation","textPreview":"Differentiation","textChars":15,"textLines":1,"bbox":[702,442,456,34]}
+{"kind":"textbox","id":"sh/y9sbe9o3","slide":26,"text":"Local gradients come from the chain rule.","textPreview":"Local gradients come from the chain rule.","textChars":41,"textLines":1,"bbox":[702,488,456,62]}
+{"kind":"notes","id":"nt/bxi1ac","slide":26,"text":"Exam-oriented synthesis of Module 2.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/943vcl","slide":27,"title":"BCA701 Deep Learning | Module 2","textShapes":3}
+{"kind":"textbox","id":"sh/7m90v6pk","slide":27,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/8ni14bq5","slide":27,"text":"Module 2 vocabulary students must own","textPreview":"Module 2 vocabulary students must own","textChars":37,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/9orixg7q","slide":27,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/yxgjy183","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/il43u9cn","slide":27,"name":"","rows":9,"cols":2,"preview":"Term | Meaning","bbox":[72,195,1136,405]}
+{"kind":"notes","id":"nt/943vcl","slide":27,"text":"Vocabulary review for all Module 2 topics.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/3eoa3l","slide":28,"title":"BCA701 Deep Learning | Module 2","textShapes":7}
+{"kind":"textbox","id":"sh/b61kne5o","slide":28,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/cralgj69","slide":28,"text":"Mini activity: solve XOR with hidden features","textPreview":"Mini activity: solve XOR with hidden features","textChars":45,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/dsj2ponu","slide":28,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/yts3itof","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/zu14re50","slide":28,"bbox":[94,234,9,9]}
+{"kind":"textbox","id":"sh/0vulkj6l","slide":28,"text":"Ask students to plot the four XOR points.","textPreview":"Ask students to plot the four XOR points.","textChars":41,"textLines":1,"bbox":[118,225,1040,60]}
+{"kind":"shape","id":"sh/lw3mtonq","slide":28,"bbox":[94,298,9,9]}
+{"kind":"textbox","id":"sh/ex836pob","slide":28,"text":"Confirm that one straight line cannot separate the classes.","textPreview":"Confirm that one straight line cannot separate the classes.","textChars":59,"textLines":1,"bbox":[118,289,1040,60]}
+{"kind":"shape","id":"sh/fyhkfupg","slide":28,"bbox":[94,362,9,9]}
+{"kind":"textbox","id":"sh/z2lsbu9s","slide":28,"text":"Draw two hidden boundaries that isolate the positive cases.","textPreview":"Draw two hidden boundaries that isolate the positive cases.","textChars":59,"textLines":1,"bbox":[118,353,1040,60]}
+{"kind":"shape","id":"sh/y1crip87","slide":28,"bbox":[94,426,9,9]}
+{"kind":"textbox","id":"sh/l43ad4ry","slide":28,"text":"Explain how the output neuron combines hidden decisions.","textPreview":"Explain how the output neuron combines hidden decisions.","textChars":56,"textLines":1,"bbox":[118,417,1040,60]}
+{"kind":"notes","id":"nt/3eoa3l","slide":28,"text":"Classroom activity aligned with the XOR and MLP introduction topics.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/xyzu4d","slide":29,"title":"BCA701 Deep Learning | Module 2","textShapes":10}
+{"kind":"textbox","id":"sh/8jy9k7al","slide":29,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/7ipsb290","slide":29,"text":"Module 2 closes with a complete training chain","textPreview":"Module 2 closes with a complete training chain","textChars":46,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/6hwrixsf","slide":29,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/lgna9sra","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/kfe9g7ap","slide":29,"bbox":[70,310,135,96]}
+{"kind":"textbox","id":"sh/je5s7294","slide":29,"text":"Input","textPreview":"Input","textChars":5,"textLines":1,"bbox":[82,338,111,40]}
+{"kind":"shape","id":"sh/ydwrexsj","slide":29,"bbox":[205,358,55,0]}
+{"kind":"shape","id":"sh/xcna5sry","slide":29,"bbox":[260,310,135,96]}
+{"kind":"textbox","id":"sh/wbe9cnad","slide":29,"text":"Hidden\nfeatures","textPreview":"Hidden | features","textChars":15,"textLines":2,"bbox":[272,338,111,40]}
+{"kind":"shape","id":"sh/axgr658j","slide":29,"bbox":[395,358,55,0]}
+{"kind":"shape","id":"sh/byp8fa94","slide":29,"bbox":[450,310,135,96]}
+{"kind":"textbox","id":"sh/czy98fqp","slide":29,"text":"Output","textPreview":"Output","textChars":6,"textLines":1,"bbox":[462,338,111,40]}
+{"kind":"shape","id":"sh/x07qhkra","slide":29,"bbox":[585,358,55,0]}
+{"kind":"shape","id":"sh/2twr2l8n","slide":29,"bbox":[640,310,135,96]}
+{"kind":"textbox","id":"sh/nup8bq9s","slide":29,"text":"Loss","textPreview":"Loss","textChars":4,"textLines":1,"bbox":[652,338,111,40]}
+{"kind":"shape","id":"sh/ovy94vqd","slide":29,"bbox":[775,358,55,0]}
+{"kind":"shape","id":"sh/pw7qd0ry","slide":29,"bbox":[830,310,135,96]}
+{"kind":"textbox","id":"sh/e5wryl8b","slide":29,"text":"Gradients","textPreview":"Gradients","textChars":9,"textLines":1,"bbox":[842,338,111,40]}
+{"kind":"shape","id":"sh/f6587q9w","slide":29,"bbox":[965,358,55,0]}
+{"kind":"shape","id":"sh/ja1ofmpo","slide":29,"bbox":[1020,310,135,96]}
+{"kind":"textbox","id":"sh/i9sn6ho3","slide":29,"text":"Updated\nweights","textPreview":"Updated | weights","textChars":15,"textLines":2,"bbox":[1032,338,111,40]}
+{"kind":"textbox","id":"sh/5c36hw7u","slide":29,"text":"Forward computation creates predictions; backward differentiation makes learning possible.","textPreview":"Forward computation creates predictions; backward differentiation makes learning possible.","textChars":90,"textLines":1,"bbox":[140,510,1000,44]}
+{"kind":"notes","id":"nt/xyzu4d","slide":29,"text":"Closing synthesis for Module 2.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/2bffi4","slide":30,"title":"BCA701 Deep Learning | Module 2","textShapes":3}
+{"kind":"textbox","id":"sh/tofehsbe","slide":30,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/6lovmxc3","slide":30,"text":"Coverage checklist: every Module 2 phrase is included","textPreview":"Coverage checklist: every Module 2 phrase is included","textChars":53,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/rmxcf2to","slide":30,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/gb6ds7u5","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/kvahc3md","slide":30,"name":"","rows":7,"cols":2,"preview":"Syllabus phrase | Covered in slides","bbox":[72,215,1136,340]}
+{"kind":"notes","id":"nt/2bffi4","slide":30,"text":"This checklist verifies full Module 2 syllabus coverage.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}
+{"kind":"slide","id":"sl/wbthdc","slide":31,"title":"BCA701 Deep Learning | Module 2","textShapes":6}
+{"kind":"textbox","id":"sh/yp4vmtwz","slide":31,"text":"BCA701 Deep Learning | Module 2","textPreview":"BCA701 Deep Learning | Module 2","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/lsvux8fa","slide":31,"text":"Prescribed textbook reference for Module 2","textPreview":"Prescribed textbook reference for Module 2","textChars":42,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/krmdo3ep","slide":31,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/bmtcryx8","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/alkvitwn","slide":31,"bbox":[94,239,9,9]}
+{"kind":"textbox","id":"sh/xobutofe","slide":31,"text":"Primary reference: Simon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education.","textPreview":"Primary reference: Simon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education.","textChars":95,"textLines":1,"bbox":[118,230,1050,68]}
+{"kind":"shape","id":"sh/cn2dkjet","slide":31,"bbox":[94,311,9,9]}
+{"kind":"textbox","id":"sh/nytcnexw","slide":31,"text":"Use Haykin for MLP architecture, batch and online learning, backpropagation, XOR, heuristics, and differentiation.","textPreview":"Use Haykin for MLP architecture, batch and online learning, backpropagation, XOR, heuristics, and differentiation.","textChars":114,"textLines":1,"bbox":[118,302,1050,68]}
+{"kind":"shape","id":"sh/2x0be9gr","slide":31,"bbox":[94,383,9,9]}
+{"kind":"textbox","id":"sh/czm14vel","slide":31,"text":"Use the VTU syllabus as the boundary for what belongs in Module 2.","textPreview":"Use the VTU syllabus as the boundary for what belongs in Module 2.","textChars":66,"textLines":1,"bbox":[118,374,1050,68]}
+{"kind":"notes","id":"nt/wbthdc","slide":31,"text":"Final reference slide with the prescribed textbook and syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nSimon Haykin, Neural Networks and Learning Machines, 3/e, Pearson Education, copyright 2016, ISBN 9789332570313. Pearson listing: https://www.pearsoned.co.in/prc/book/simon-haykin-neural-networks-learning-machines-3e--3/9789332570313"}

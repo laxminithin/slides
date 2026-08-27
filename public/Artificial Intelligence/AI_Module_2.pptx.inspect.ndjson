@@ -1,0 +1,975 @@
+{"kind":"deck","id":"pr/24buc5","name":"Deck"}
+{"kind":"layout","layoutId":"c48eb569-c93a-4f8a-b9d9-694f4a3607ec","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"44460074-4001-433d-82b2-ea530003553b","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/ysx521","slide":1,"title":"Module 2","textShapes":9}
+{"kind":"textbox","id":"sh/gjidwfqd","slide":1,"text":"Module 2","textPreview":"Module 2","textChars":8,"textLines":1,"bbox":[82,88,340,60]}
+{"kind":"textbox","id":"sh/vi9w3ups","slide":1,"text":"Problem Solving and Uninformed Search","textPreview":"Problem Solving and Uninformed Search","textChars":37,"textLines":1,"bbox":[82,166,760,100]}
+{"kind":"textbox","id":"sh/uh0vup8n","slide":1,"text":"• Problem-solving agents\n• Example problems\n• Searching for solutions\n• Uninformed search strategies","textPreview":"• Problem-solving agents | • Example problems | • Searching for solutions | • Uninformed search strategies","textChars":100,"textLines":4,"bbox":[94,342,520,250]}
+{"kind":"textbox","id":"sh/9gre1k72","slide":1,"text":"Problem-solving agents","textPreview":"Problem-solving agents","textChars":22,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/8fidsfqh","slide":1,"text":"Example problems","textPreview":"Example problems","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/7e9wzapw","slide":1,"text":"Searching for solutions","textPreview":"Searching for solutions","textChars":23,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/md0vq58b","slide":1,"text":"Uninformed search strategies","textPreview":"Uninformed search strategies","textChars":28,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/dcved476","slide":1,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/sbmx4jql","slide":1,"text":"VTU BCS515B • Module 2 • 01/50","textPreview":"VTU BCS515B • Module 2 • 01/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ysx521","slide":1,"text":"[Animation]\nUse this as the module reset. Reveal syllabus bullets one by one and connect them to the right-side visual.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/kheedw","slide":2,"title":"VTU syllabus cross-check","textShapes":14}
+{"kind":"textbox","id":"sh/ytw7adwz","slide":2,"text":"VTU syllabus cross-check","textPreview":"VTU syllabus cross-check","textChars":24,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/lg7qlsva","slide":2,"text":"Roadmap for Module 2","textPreview":"Roadmap for Module 2","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/kfepcnep","slide":2,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/bq58fid8","slide":2,"text":"1. Problem-solving agents","textPreview":"1. Problem-solving agents","textChars":25,"textLines":1,"bbox":[76,210,190,70]}
+{"kind":"textbox","id":"sh/apw76dwn","slide":2,"text":"2. Problem formulation","textPreview":"2. Problem formulation","textChars":22,"textLines":1,"bbox":[308,210,190,70]}
+{"kind":"textbox","id":"sh/xsnqh8ve","slide":2,"text":"3. State-space representation","textPreview":"3. State-space representation","textChars":29,"textLines":1,"bbox":[540,210,190,70]}
+{"kind":"textbox","id":"sh/wrep83et","slide":2,"text":"4. Example problems","textPreview":"4. Example problems","textChars":19,"textLines":1,"bbox":[772,210,190,70]}
+{"kind":"textbox","id":"sh/vmp8r2dc","slide":2,"text":"5. Tree and graph search","textPreview":"5. Tree and graph search","textChars":24,"textLines":1,"bbox":[1004,210,190,70]}
+{"kind":"textbox","id":"sh/ulgrixwr","slide":2,"text":"6. Breadth-first search","textPreview":"6. Breadth-first search","textChars":23,"textLines":1,"bbox":[76,342,190,70]}
+{"kind":"textbox","id":"sh/8vm90byx","slide":2,"text":"7. Depth-first search","textPreview":"7. Depth-first search","textChars":21,"textLines":1,"bbox":[308,342,190,70]}
+{"kind":"textbox","id":"sh/9wvq9gfi","slide":2,"text":"8. Uniform-cost search","textPreview":"8. Uniform-cost search","textChars":22,"textLines":1,"bbox":[540,342,190,70]}
+{"kind":"textbox","id":"sh/mtkry1gr","slide":2,"text":"9. Depth-limited search","textPreview":"9. Depth-limited search","textChars":23,"textLines":1,"bbox":[772,342,190,70]}
+{"kind":"textbox","id":"sh/7ud876hc","slide":2,"text":"10. Iterative deepening","textPreview":"10. Iterative deepening","textChars":23,"textLines":1,"bbox":[1004,342,190,70]}
+{"kind":"textbox","id":"sh/0r2pwry1","slide":2,"text":"Every VTU topic is expanded as definition → intuition → workflow → example → exam view","textPreview":"Every VTU topic is expanded as definition → intuition → workflow → example → exam view","textChars":86,"textLines":1,"bbox":[188,552,900,54]}
+{"kind":"textbox","id":"sh/lsbq5wzm","slide":2,"text":"VTU BCS515B • Module 2 • 02/50","textPreview":"VTU BCS515B • Module 2 • 02/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/kheedw","slide":2,"text":"[Animation]\nAnimate the roadmap by row. Pause after each syllabus cluster and state how it will be examined.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/dogmsw","slide":3,"title":"MISSING = 0","textShapes":23}
+{"kind":"textbox","id":"sh/rqtkzmts","slide":3,"text":"MISSING = 0","textPreview":"MISSING = 0","textChars":11,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/cb21srad","slide":3,"text":"Module 2 VTU coverage audit","textPreview":"Module 2 VTU coverage audit","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/dcb21wby","slide":3,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ed4ju1sj","slide":3,"text":"VTU topic","textPreview":"VTU topic","textChars":9,"textLines":1,"bbox":[82,154,310,28]}
+{"kind":"textbox","id":"sh/zedk36t4","slide":3,"text":"Local source coverage","textPreview":"Local source coverage","textChars":21,"textLines":1,"bbox":[430,154,230,28]}
+{"kind":"textbox","id":"sh/0fm1wra9","slide":3,"text":"Status","textPreview":"Status","textChars":6,"textLines":1,"bbox":[700,154,100,28]}
+{"kind":"textbox","id":"sh/1gv25wbu","slide":3,"text":"Action in this deck","textPreview":"Action in this deck","textChars":19,"textLines":1,"bbox":[842,154,320,28]}
+{"kind":"textbox","id":"sh/uh0jixcz","slide":3,"text":"Problem-solving agents","textPreview":"Problem-solving agents","textChars":22,"textLines":1,"bbox":[82,192,310,46]}
+{"kind":"textbox","id":"sh/fi90r2tk","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,192,230,46]}
+{"kind":"textbox","id":"sh/vm90jm9k","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,192,100,46]}
+{"kind":"textbox","id":"sh/u10zahsz","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,192,320,46]}
+{"kind":"textbox","id":"sh/horilwrq","slide":3,"text":"Example problems","textPreview":"Example problems","textChars":16,"textLines":1,"bbox":[82,254,310,46]}
+{"kind":"textbox","id":"sh/wni1cra5","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,254,230,46]}
+{"kind":"textbox","id":"sh/7yp0f29o","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,254,100,46]}
+{"kind":"textbox","id":"sh/mxgz6hs3","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,254,320,46]}
+{"kind":"textbox","id":"sh/90rihcre","slide":3,"text":"Searching for solutions","textPreview":"Searching for solutions","textChars":23,"textLines":1,"bbox":[82,316,310,46]}
+{"kind":"textbox","id":"sh/8zyh87at","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,316,230,46]}
+{"kind":"textbox","id":"sh/zup0b29c","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,316,100,46]}
+{"kind":"textbox","id":"sh/ytgz2xsr","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,316,320,46]}
+{"kind":"textbox","id":"sh/2pwjuxcz","slide":3,"text":"Uninformed search strategies","textPreview":"Uninformed search strategies","textChars":28,"textLines":1,"bbox":[82,378,310,46]}
+{"kind":"textbox","id":"sh/nq50n2d4","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,378,230,46]}
+{"kind":"textbox","id":"sh/ore1g7up","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,378,100,46]}
+{"kind":"textbox","id":"sh/psnipcva","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,378,320,46]}
+{"kind":"textbox","id":"sh/atgjixcv","slide":3,"text":"VTU BCS515B • Module 2 • 03/50","textPreview":"VTU BCS515B • Module 2 • 03/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/dogmsw","slide":3,"text":"[Animation]\nUse this audit slide only if students or reviewers need syllabus mapping. Otherwise keep it as backup.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/e5e87d","slide":4,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":11}
+{"kind":"textbox","id":"sh/ax4jm5c3","slide":4,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/xkfihkvu","slide":4,"text":"Problem-solving agents: definition","textPreview":"Problem-solving agents: definition","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/wzm1ofu9","slide":4,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/jmx0judk","slide":4,"text":"Problem-solving agents plan a sequence before acting.","textPreview":"Problem-solving agents plan a sequence before acting.","textChars":53,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ylojqpcz","slide":4,"text":"• goal formulation\n• problem formulation\n• search\n• execution","textPreview":"• goal formulation | • problem formulation | • search | • execution","textChars":61,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/lof2lkvq","slide":4,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/kn61sfu5","slide":4,"text":"Search is useful when the next action is not obvious.","textPreview":"Search is useful when the next action is not obvious.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/7qxknudw","slide":4,"text":"goal formulation","textPreview":"goal formulation","textChars":16,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/6pojupcb","slide":4,"text":"problem formulation","textPreview":"problem formulation","textChars":19,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/cbapsnmp","slide":4,"text":"search","textPreview":"search","textChars":6,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/xcjq1sna","slide":4,"text":"execution","textPreview":"execution","textChars":9,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/a9s7qd4j","slide":4,"text":"VTU BCS515B • Module 2 • 04/50","textPreview":"VTU BCS515B • Module 2 • 04/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/e5e87d","slide":4,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/r9kahr","slide":5,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/fqpwbi5w","slide":5,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/0ryx436h","slide":5,"text":"Problem-solving agents: intuition","textPreview":"Problem-solving agents: intuition","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/1sryd8n2","slide":5,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qlgfytof","slide":5,"text":"Think of problem-solving agents as a way to make an agent's next choice clearer.","textPreview":"Think of problem-solving agents as a way to make an agent's next choice clearer.","textChars":80,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/rmpw7y5k","slide":5,"text":"• Why it matters: Search is useful when the next action is not obvious.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Search is useful when the next action is not obvious. | • What changes: uncertainty becomes structure | • Teaching cue:...","textChars":171,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/snyx0365","slide":5,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/do7e98nq","slide":5,"text":"Search is useful when the next action is not obvious.","textPreview":"Search is useful when the next action is not obvious.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ixwfuto3","slide":5,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/3y5w3e5o","slide":5,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/filw769g","slide":5,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/ehcve18v","slide":5,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/1kne9gr6","slide":5,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/gjedgbq1","slide":5,"text":"VTU BCS515B • Module 2 • 05/50","textPreview":"VTU BCS515B • Module 2 • 05/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/r9kahr","slide":5,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/uhpr16","slide":6,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/6xorutkj","slide":6,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/t0fq58ja","slide":6,"text":"Problem-solving agents: workflow","textPreview":"Problem-solving agents: workflow","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/sz69w32p","slide":6,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/jad8zy18","slide":6,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/i94rqtkn","slide":6,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/5wfq18jy","slide":6,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/4bm9s32d","slide":6,"text":"Search is useful when the next action is not obvious.","textPreview":"Search is useful when the next action is not obvious.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/v6d8ve1w","slide":6,"text":"goal formulation","textPreview":"goal formulation","textChars":16,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/u547m9kb","slide":6,"text":"problem formulation","textPreview":"problem formulation","textChars":19,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/4j2x8by9","slide":6,"text":"search","textPreview":"search","textChars":6,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/pkbyhgzu","slide":6,"text":"execution","textPreview":"execution","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/ix0f61g3","slide":6,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/3i9gf6ho","slide":6,"text":"VTU BCS515B • Module 2 • 06/50","textPreview":"VTU BCS515B • Module 2 • 06/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/uhpr16","slide":6,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/kul3fp","slide":7,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":15}
+{"kind":"textbox","id":"sh/fm1wrqps","slide":7,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/0nadkvqx","slide":7,"text":"Problem-solving agents: example","textPreview":"Problem-solving agents: example","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/18jet07i","slide":7,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/29svml83","slide":7,"text":"A small classroom example makes problem-solving agents concrete.","textPreview":"A small classroom example makes problem-solving agents concrete.","textChars":64,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/na1wvqpo","slide":7,"text":"• Use the terms: goal formulation, problem formulation\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: goal formulation, problem formulation | • Trace one decision visibly | • Ask which step would change if the environment ...","textChars":140,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/obudovq9","slide":7,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/pc3ex07u","slide":7,"text":"Search is useful when the next action is not obvious.","textPreview":"Search is useful when the next action is not obvious.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/adcvq58f","slide":7,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/belwzapk","slide":7,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/zqtcrq9g","slide":7,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/yp0bylsv","slide":7,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/lsbutgr6","slide":7,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/kr2t0ba1","slide":7,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/bm9sn694","slide":7,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/al0bu1sj","slide":7,"text":"goal formulation","textPreview":"goal formulation","textChars":16,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/xorapgra","slide":7,"text":"VTU BCS515B • Module 2 • 07/50","textPreview":"VTU BCS515B • Module 2 • 07/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/kul3fp","slide":7,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/z6a3bv","slide":8,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/i5gvax47","slide":8,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/58re5c3i","slide":8,"text":"Problem-solving agents: algorithm / exam view","textPreview":"Problem-solving agents: algorithm / exam view","textChars":45,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/47idc7mx","slide":8,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ra9w72lo","slide":8,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/690veh43","slide":8,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Search is useful when the next action is not obvious.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Sea...","textChars":181,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/tcre9c3u","slide":8,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/sbidg7m9","slide":8,"text":"Search is useful when the next action is not obvious.","textPreview":"Search is useful when the next action is not obvious.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/fy9wbmlk","slide":8,"text":"goal formulation","textPreview":"goal formulation","textChars":16,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/ex0vih4z","slide":8,"text":"problem formulation","textPreview":"problem formulation","textChars":19,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/o7ypkzml","slide":8,"text":"search","textPreview":"search","textChars":6,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/9876t4n6","slide":8,"text":"execution","textPreview":"execution","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/m5gni94v","slide":8,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/n6pore50","slide":8,"text":"VTU BCS515B • Module 2 • 08/50","textPreview":"VTU BCS515B • Module 2 • 08/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/z6a3bv","slide":8,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/q629l3","slide":9,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":11}
+{"kind":"textbox","id":"sh/z25kzet4","slide":9,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/0nelsjap","slide":9,"text":"Problem formulation: definition","textPreview":"Problem formulation: definition","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/lon21oba","slide":9,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qxcjm9sn","slide":9,"text":"A problem definition makes the search space precise.","textPreview":"A problem definition makes the search space precise.","textChars":52,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/bylkvet8","slide":9,"text":"• initial state\n• actions\n• transition model\n• goal test","textPreview":"• initial state | • actions | • transition model | • goal test","textChars":56,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/czulojat","slide":9,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/d0n2xobe","slide":9,"text":"A clear formulation is half the algorithm.","textPreview":"A clear formulation is half the algorithm.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/2tcji9sr","slide":9,"text":"initial state","textPreview":"initial state","textChars":13,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/3ulkrutw","slide":9,"text":"actions","textPreview":"actions","textChars":7,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/z61c3eh0","slide":9,"text":"transition model","textPreview":"transition model","textChars":16,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/y5svu9gf","slide":9,"text":"goal test","textPreview":"goal test","textChars":9,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/l83u5ozq","slide":9,"text":"VTU BCS515B • Module 2 • 09/50","textPreview":"VTU BCS515B • Module 2 • 09/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/q629l3","slide":9,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/iecpi3","slide":10,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/xcfuxcri","slide":10,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/a9ob2xs7","slide":10,"text":"Problem formulation: intuition","textPreview":"Problem formulation: intuition","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/vaxcv29c","slide":10,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/876t07a1","slide":10,"text":"Think of problem formulation as a way to make an agent's next choice clearer.","textPreview":"Think of problem formulation as a way to make an agent's next choice clearer.","textChars":77,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/98fatcrm","slide":10,"text":"• Why it matters: A clear formulation is half the algorithm.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: A clear formulation is half the algorithm. | • What changes: uncertainty becomes structure | • Teaching cue: connect th...","textChars":160,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/m54byxsv","slide":10,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/n6xsr29g","slide":10,"text":"A clear formulation is half the algorithm.","textPreview":"A clear formulation is half the algorithm.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/0jmtwnap","slide":10,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/lkvapsra","slide":10,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/lcv2psza","slide":10,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/0b2lwnyp","slide":10,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/zatkn2h4","slide":10,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/y9k3uxgj","slide":10,"text":"VTU BCS515B • Module 2 • 10/50","textPreview":"VTU BCS515B • Module 2 • 10/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/iecpi3","slide":10,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/rkbgg3","slide":11,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/8vmlwze1","slide":11,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/7udk3uxw","slide":11,"text":"Problem formulation: workflow","textPreview":"Problem formulation: workflow","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/6tk3upwb","slide":11,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/lsb21kfq","slide":11,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/kr2lsfe5","slide":11,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/jqtkzuxk","slide":11,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ypkj6pwz","slide":11,"text":"A clear formulation is half the algorithm.","textPreview":"A clear formulation is half the algorithm.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/5ofmdovu","slide":11,"text":"initial state","textPreview":"initial state","textChars":13,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/4n6l4je9","slide":11,"text":"actions","textPreview":"actions","textChars":7,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/upcnax0j","slide":11,"text":"transition model","textPreview":"transition model","textChars":16,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/fql43iho","slide":11,"text":"goal test","textPreview":"goal test","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/gre5cni9","slide":11,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/hsnm5szu","slide":11,"text":"VTU BCS515B • Module 2 • 11/50","textPreview":"VTU BCS515B • Module 2 • 11/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/rkbgg3","slide":11,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/7e11d1","slide":12,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":15}
+{"kind":"textbox","id":"sh/9wrytkve","slide":12,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/m9gzypc3","slide":12,"text":"Problem formulation: example","textPreview":"Problem formulation: example","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/nupgrado","slide":12,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/wzih4zu5","slide":12,"text":"A small classroom example makes problem formulation concrete.","textPreview":"A small classroom example makes problem formulation concrete.","textChars":61,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/x0ryx4vq","slide":12,"text":"• Use the terms: initial state, actions\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: initial state, actions | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":125,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ax0z2pcz","slide":12,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/vy9gvudk","slide":12,"text":"A clear formulation is half the algorithm.","textPreview":"A clear formulation is half the algorithm.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/c3ehsvul","slide":12,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/d47yl0v6","slide":12,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/9gz298ve","slide":12,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/ovq103et","slide":12,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/nuhk7ydo","slide":12,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/mt8jytw3","slide":12,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/xkj2d8vq","slide":12,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/wja143e5","slide":12,"text":"initial state","textPreview":"initial state","textChars":13,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/bi1kbydk","slide":12,"text":"VTU BCS515B • Module 2 • 12/50","textPreview":"VTU BCS515B • Module 2 • 12/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/7e11d1","slide":12,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/ji7ur8","slide":13,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/7mtgj294","slide":13,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/8n2hsna9","slide":13,"text":"Problem formulation: algorithm / exam view","textPreview":"Problem formulation: algorithm / exam view","textChars":42,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/tobylsru","slide":13,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/yh0fmds7","slide":13,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ji9gfi9s","slide":13,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: A clear formulation is half the algorithm.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: A c...","textChars":170,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/kjixonad","slide":13,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/lkryhsry","slide":13,"text":"A clear formulation is half the algorithm.","textPreview":"A clear formulation is half the algorithm.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/2d4zyhsr","slide":13,"text":"initial state","textPreview":"initial state","textChars":13,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/3edgrm9c","slide":13,"text":"actions","textPreview":"actions","textChars":7,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/z21onqx8","slide":13,"text":"transition model","textPreview":"transition model","textChars":16,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/e18nulgn","slide":13,"text":"goal test","textPreview":"goal test","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/14j6pgfy","slide":13,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/03a5wbyd","slide":13,"text":"VTU BCS515B • Module 2 • 13/50","textPreview":"VTU BCS515B • Module 2 • 13/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ji7ur8","slide":13,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/kz4aq9","slide":14,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":11}
+{"kind":"textbox","id":"sh/alofuxsj","slide":14,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/xofe5sba","slide":14,"text":"State-space representation: definition","textPreview":"State-space representation: definition","textChars":38,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/wn6xwnap","slide":14,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/jaxw72tg","slide":14,"text":"State-space search explores possible configurations.","textPreview":"State-space search explores possible configurations.","textChars":52,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/y9ofyxsv","slide":14,"text":"• states\n• operators\n• path\n• path cost","textPreview":"• states | • operators | • path | • path cost","textChars":39,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/lcfe9cb6","slide":14,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/kb6x07a1","slide":14,"text":"Abstraction removes irrelevant details.","textPreview":"Abstraction removes irrelevant details.","textChars":39,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/fedwvytw","slide":14,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/etkvmdsr","slide":14,"text":"operators","textPreview":"operators","textChars":9,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/8bm94v2x","slide":14,"text":"path","textPreview":"path","textChars":4,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/tcfqd0ji","slide":14,"text":"path cost","textPreview":"path cost","textChars":9,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/694r2lk7","slide":14,"text":"VTU BCS515B • Module 2 • 14/50","textPreview":"VTU BCS515B • Module 2 • 14/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/kz4aq9","slide":14,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/92qj4r","slide":15,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/wfad0jut","slide":15,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ve1cred8","slide":15,"text":"State-space representation: intuition","textPreview":"State-space representation: intuition","textChars":37,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ad8vy9cn","slide":15,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/54juxoba","slide":15,"text":"Think of state-space representation as a way to make an agent's next choice clearer.","textPreview":"Think of state-space representation as a way to make an agent's next choice clearer.","textChars":84,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/k3ad43up","slide":15,"text":"• Why it matters: Abstraction removes irrelevant details.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Abstraction removes irrelevant details. | • What changes: uncertainty becomes structure | • Teaching cue: connect the i...","textChars":157,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/j21cvyt4","slide":15,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ihsv2tcz","slide":15,"text":"Abstraction removes irrelevant details.","textPreview":"Abstraction removes irrelevant details.","textChars":39,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/l8zul4v6","slide":15,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/07qtszul","slide":15,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/m183q5oj","slide":15,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/72hkzap4","slide":15,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/8nqlsf69","slide":15,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/9oz21k7u","slide":15,"text":"VTU BCS515B • Module 2 • 15/50","textPreview":"VTU BCS515B • Module 2 • 15/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/92qj4r","slide":15,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/9n3yw3","slide":16,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/9g7u1k36","slide":16,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/mdwb654f","slide":16,"text":"State-space representation: workflow","textPreview":"State-space representation: workflow","textChars":36,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ne5cza50","slide":16,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/0ret4vm9","slide":16,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/1snax0nu","slide":16,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/epwb2l4j","slide":16,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/zq5svq5o","slide":16,"text":"Abstraction removes irrelevant details.","textPreview":"Abstraction removes irrelevant details.","textChars":39,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/cnut0vmd","slide":16,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/do3at0ny","slide":16,"text":"operators","textPreview":"operators","textChars":9,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/5obml8z6","slide":16,"text":"path","textPreview":"path","textChars":4,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/kn2lsnil","slide":16,"text":"path cost","textPreview":"path cost","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/jm94jih0","slide":16,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/il03qd0f","slide":16,"text":"VTU BCS515B • Module 2 • 16/50","textPreview":"VTU BCS515B • Module 2 • 16/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/9n3yw3","slide":16,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/u40hcr","slide":17,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":15}
+{"kind":"textbox","id":"sh/uxgve5cf","slide":17,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/h0ru9kbq","slide":17,"text":"State-space representation: example","textPreview":"State-space representation: example","textChars":35,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/wzydgful","slide":17,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7apc3ado","slide":17,"text":"A small classroom example makes state-space representation concrete.","textPreview":"A small classroom example makes state-space representation concrete.","textChars":68,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/m9gva5c3","slide":17,"text":"• Use the terms: states, operators\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: states, operators | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":120,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/9w7u50vu","slide":17,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/8bydcvu9","slide":17,"text":"Abstraction removes irrelevant details.","textPreview":"Abstraction removes irrelevant details.","textChars":39,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/z65czqds","slide":17,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/y5wv6lc7","slide":17,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/wfy54zil","slide":17,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/xg76x4z6","slide":17,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/adgn290v","slide":17,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/bepovehg","slide":17,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/ory50zip","slide":17,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/9s76t4za","slide":17,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/mpwnyp0j","slide":17,"text":"VTU BCS515B • Module 2 • 17/50","textPreview":"VTU BCS515B • Module 2 • 17/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/u40hcr","slide":17,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/62mwdd","slide":18,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/i10z290n","slide":18,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/54ryxozy","slide":18,"text":"State-space representation: algorithm / exam view","textPreview":"State-space representation: algorithm / exam view","textChars":49,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/43ih4jid","slide":18,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/r6tgzeh4","slide":18,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/q50z690j","slide":18,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Abstraction removes irrelevant details.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Abs...","textChars":167,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/d8by1oza","slide":18,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/s72h8jip","slide":18,"text":"Abstraction removes irrelevant details.","textPreview":"Abstraction removes irrelevant details.","textChars":39,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/7apgnu10","slide":18,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/m9gfup0f","slide":18,"text":"operators","textPreview":"operators","textChars":9,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/sva94z6p","slide":18,"text":"path","textPreview":"path","textChars":4,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/dwjad4na","slide":18,"text":"path cost","textPreview":"path cost","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/q98r2poj","slide":18,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/rah8bu54","slide":18,"text":"VTU BCS515B • Module 2 • 18/50","textPreview":"VTU BCS515B • Module 2 • 18/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/62mwdd","slide":18,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/awt427","slide":19,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":11}
+{"kind":"textbox","id":"sh/f6xsvi9g","slide":19,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/07694nq1","slide":19,"text":"Example problems: definition","textPreview":"Example problems: definition","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/18faxs7m","slide":19,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/29or6x87","slide":19,"text":"Toy problems reveal algorithm behavior clearly.","textPreview":"Toy problems reveal algorithm behavior clearly.","textChars":47,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/naxsz2ps","slide":19,"text":"• vacuum world\n• 8-puzzle\n• route finding\n• 8-queens","textPreview":"• vacuum world | • 8-puzzle | • route finding | • 8-queens","textChars":52,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/obq987qx","slide":19,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/pcza1c7i","slide":19,"text":"Examples make completeness and optimality visible.","textPreview":"Examples make completeness and optimality visible.","textChars":50,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ad8rah83","slide":19,"text":"vacuum world","textPreview":"vacuum world","textChars":12,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/behs32po","slide":19,"text":"8-puzzle","textPreview":"8-puzzle","textChars":8,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/fmxkji14","slide":19,"text":"route finding","textPreview":"route finding","textChars":13,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/elojadkj","slide":19,"text":"8-queens","textPreview":"8-queens","textChars":8,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/1of25sja","slide":19,"text":"VTU BCS515B • Module 2 • 19/50","textPreview":"VTU BCS515B • Module 2 • 19/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/awt427","slide":19,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/65b7ap","slide":20,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/fipcr61s","slide":20,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/0jydkb2d","slide":20,"text":"Example problems: intuition","textPreview":"Example problems: intuition","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/1k7utgjy","slide":20,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/2lgvmlkj","slide":20,"text":"Think of example problems as a way to make an agent's next choice clearer.","textPreview":"Think of example problems as a way to make an agent's next choice clearer.","textChars":74,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/nmpcvq1o","slide":20,"text":"• Why it matters: Examples make completeness and optimality visible.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Examples make completeness and optimality visible. | • What changes: uncertainty becomes structure | • Teaching cue: co...","textChars":168,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/o7idovi9","slide":20,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/p8rux0ju","slide":20,"text":"Examples make completeness and optimality visible.","textPreview":"Examples make completeness and optimality visible.","textChars":50,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ipwbahkz","slide":20,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/3q5cjm1k","slide":20,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/7u14fuhg","slide":20,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/6ts36p0v","slide":20,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/tg3mh4zm","slide":20,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/sval8zi1","slide":20,"text":"VTU BCS515B • Module 2 • 20/50","textPreview":"VTU BCS515B • Module 2 • 20/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/65b7ap","slide":20,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/ied5wt","slide":21,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/wr2lgred","slide":21,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/vqtk7mxs","slide":21,"text":"Example problems: workflow","textPreview":"Example problems: workflow","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/upk3ehg7","slide":21,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/5gvmdwfu","slide":21,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/4fmlkre9","slide":21,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/jed4bmxo","slide":21,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/id43i1w3","slide":21,"text":"Examples make completeness and optimality visible.","textPreview":"Examples make completeness and optimality visible.","textChars":50,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/lkr21cfq","slide":21,"text":"vacuum world","textPreview":"vacuum world","textChars":12,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/0jil87y5","slide":21,"text":"8-puzzle","textPreview":"8-puzzle","textChars":8,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/q5cny94b","slide":21,"text":"route finding","textPreview":"route finding","textChars":13,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/r6l47e5g","slide":21,"text":"8-queens","textPreview":"8-queens","textChars":8,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/c7e50jm1","slide":21,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/d8nm9o3m","slide":21,"text":"VTU BCS515B • Module 2 • 21/50","textPreview":"VTU BCS515B • Module 2 • 21/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ied5wt","slide":21,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/xwi78f","slide":22,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":15}
+{"kind":"textbox","id":"sh/3ahgne5k","slide":22,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/obqxgjm5","slide":22,"text":"Example problems: example","textPreview":"Example problems: example","textChars":25,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/pczyp4nq","slide":22,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qd8fi94b","slide":22,"text":"A small classroom example makes example problems concrete.","textPreview":"A small classroom example makes example problems concrete.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/behgre5g","slide":22,"text":"• Use the terms: vacuum world, 8-puzzle\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: vacuum world, 8-puzzle | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":125,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/cfqxkjm1","slide":22,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/dgzytonm","slide":22,"text":"Examples make completeness and optimality visible.","textPreview":"Examples make completeness and optimality visible.","textChars":50,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/yhsfmt47","slide":22,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/zi1gvy5s","slide":22,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/f2hcbapw","slide":22,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/u1ovi5ob","slide":22,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/h4zedk72","slide":22,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/g3qdkf6h","slide":22,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/7yxc7ap0","slide":22,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/6dove5of","slide":22,"text":"vacuum world","textPreview":"vacuum world","textChars":12,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/t0fu907q","slide":22,"text":"VTU BCS515B • Module 2 • 22/50","textPreview":"VTU BCS515B • Module 2 • 22/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/xwi78f","slide":22,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/i71g4q","slide":23,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/bqd8ru5o","slide":23,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/crm9kzm9","slide":23,"text":"Example problems: algorithm / exam view","textPreview":"Example problems: algorithm / exam view","textChars":39,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/xsvqtknu","slide":23,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ytormp4f","slide":23,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/zux8vu50","slide":23,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Examples make completeness and optimality visible.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Exa...","textChars":178,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/kv69ozm5","slide":23,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/lwfqx4nq","slide":23,"text":"Examples make completeness and optimality visible.","textPreview":"Examples make completeness and optimality visible.","textChars":50,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/exk7a5ov","slide":23,"text":"vacuum world","textPreview":"vacuum world","textChars":12,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/fyt8ja5g","slide":23,"text":"8-puzzle","textPreview":"8-puzzle","textChars":8,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/3ypwnupc","slide":23,"text":"route finding","textPreview":"route finding","textChars":13,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/2xgvepo7","slide":23,"text":"8-queens","textPreview":"8-queens","textChars":8,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/p0rep47i","slide":23,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/ozydgz6x","slide":23,"text":"VTU BCS515B • Module 2 • 23/50","textPreview":"VTU BCS515B • Module 2 • 23/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/i71g4q","slide":23,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/ecclm0","slide":24,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":11}
+{"kind":"textbox","id":"sh/03mx8na5","slide":24,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/z2dgzi9k","slide":24,"text":"Tree and graph search: definition","textPreview":"Tree and graph search: definition","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/y14f6dsf","slide":24,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/9sfy5sr2","slide":24,"text":"Search strategy decides which frontier node expands next.","textPreview":"Search strategy decides which frontier node expands next.","textChars":57,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/8r6xcnah","slide":24,"text":"• frontier\n• explored set\n• node expansion\n• repeated states","textPreview":"• frontier | • explored set | • node expansion | • repeated states","textChars":60,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/nqxg3i9w","slide":24,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/mpofadsb","slide":24,"text":"Graph search avoids repeated work.","textPreview":"Graph search avoids repeated work.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/xwfy9cry","slide":24,"text":"frontier","textPreview":"frontier","textChars":8,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/wv6hg7ad","slide":24,"text":"explored set","textPreview":"explored set","textChars":12,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/6dgnqpoj","slide":24,"text":"node expansion","textPreview":"node expansion","textChars":14,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/repozup4","slide":24,"text":"repeated states","textPreview":"repeated states","textChars":15,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/sfypsz6p","slide":24,"text":"VTU BCS515B • Module 2 • 24/50","textPreview":"VTU BCS515B • Module 2 • 24/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ecclm0","slide":24,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/49vr6g","slide":25,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/excrq9sf","slide":25,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/10na14rq","slide":25,"text":"Tree and graph search: intuition","textPreview":"Tree and graph search: intuition","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/0ze9sza5","slide":25,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/n25sne9w","slide":25,"text":"Think of tree and graph search as a way to make an agent's next choice clearer.","textPreview":"Think of tree and graph search as a way to make an agent's next choice clearer.","textChars":79,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/21wru9sb","slide":25,"text":"• Why it matters: Graph search avoids repeated work.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Graph search avoids repeated work. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea t...","textChars":152,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ponapor2","slide":25,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/o3e9wjah","slide":25,"text":"Graph search avoids repeated work.","textPreview":"Graph search avoids repeated work.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/3618rats","slide":25,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/i5srips7","slide":25,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/sralgb6p","slide":25,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/tsjmpg7a","slide":25,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/6p83e1oj","slide":25,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/rqh4n6p4","slide":25,"text":"VTU BCS515B • Module 2 • 25/50","textPreview":"VTU BCS515B • Module 2 • 25/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/49vr6g","slide":25,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/l6gf5k","slide":26,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/zmhkzutk","slide":26,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/0nal8zu5","slide":26,"text":"Tree and graph search: workflow","textPreview":"Tree and graph search: workflow","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/loj214bq","slide":26,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/mps3a9sb","slide":26,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/nq1k3utw","slide":26,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/8ralczah","slide":26,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/9sj254b2","slide":26,"text":"Graph search avoids repeated work.","textPreview":"Graph search avoids repeated work.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/2tojy5c7","slide":26,"text":"frontier","textPreview":"frontier","textChars":8,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/3uxkrats","slide":26,"text":"explored set","textPreview":"explored set","textChars":12,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/nqtgbax4","slide":26,"text":"node expansion","textPreview":"node expansion","textChars":14,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/2pkzi5gj","slide":26,"text":"repeated states","textPreview":"repeated states","textChars":15,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/psbydkfa","slide":26,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/or2hkfyp","slide":26,"text":"VTU BCS515B • Module 2 • 26/50","textPreview":"VTU BCS515B • Module 2 • 26/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/l6gf5k","slide":26,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/c2ug9z","slide":27,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":15}
+{"kind":"textbox","id":"sh/0rqlc3ah","slide":27,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/fqxkjytw","slide":27,"text":"Tree and graph search: example","textPreview":"Tree and graph search: example","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/epo3atsb","slide":27,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/pgz2p8ry","slide":27,"text":"A small classroom example makes tree and graph search concrete.","textPreview":"A small classroom example makes tree and graph search concrete.","textChars":63,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ofqlg3ad","slide":27,"text":"• Use the terms: frontier, explored set\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: frontier, explored set | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":125,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/nehknyts","slide":27,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/2d83ets7","slide":27,"text":"Graph search avoids repeated work.","textPreview":"Graph search avoids repeated work.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/5kf2d4bu","slide":27,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/4j614ja9","slide":27,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/69832hcn","slide":27,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/7ah4bmds","slide":27,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/8bql4rud","slide":27,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/tczmdwvy","slide":27,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/ud8361cj","slide":27,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/vy14f6d4","slide":27,"text":"frontier","textPreview":"frontier","textChars":8,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/gzal8bup","slide":27,"text":"VTU BCS515B • Module 2 • 27/50","textPreview":"VTU BCS515B • Module 2 • 27/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/c2ug9z","slide":27,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/xkes2p","slide":28,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/v2t8viho","slide":28,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/w32poni9","slide":28,"text":"Tree and graph search: algorithm / exam view","textPreview":"Tree and graph search: algorithm / exam view","textChars":44,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/h4bqxszu","slide":28,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/i5krqx0z","slide":28,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/j6t8z2hk","slide":28,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Graph search avoids repeated work.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Gra...","textChars":162,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/4729sni5","slide":28,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/58bq1szq","slide":28,"text":"Graph search avoids repeated work.","textPreview":"Graph search avoids repeated work.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/y9g7et0v","slide":28,"text":"frontier","textPreview":"frontier","textChars":8,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/zap8ny1g","slide":28,"text":"explored set","textPreview":"explored set","textChars":12,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/7qhgbap4","slide":28,"text":"node expansion","textPreview":"node expansion","textChars":14,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/mp8fi5oj","slide":28,"text":"repeated states","textPreview":"repeated states","textChars":15,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/9sjydk7u","slide":28,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/8raxkf6p","slide":28,"text":"VTU BCS515B • Module 2 • 28/50","textPreview":"VTU BCS515B • Module 2 • 28/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/xkes2p","slide":28,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/gtx5j6","slide":29,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":11}
+{"kind":"textbox","id":"sh/q1gzel8v","slide":29,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/d47i90rm","slide":29,"text":"Breadth-first search: definition","textPreview":"Breadth-first search: definition","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/c3yhgvq1","slide":29,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/3e503q94","slide":29,"text":"BFS expands all nodes at depth d before d+1.","textPreview":"BFS expands all nodes at depth d before d+1.","textChars":44,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/2dwzalsz","slide":29,"text":"• FIFO queue\n• shallowest first\n• complete\n• memory heavy","textPreview":"• FIFO queue | • shallowest first | • complete | • memory heavy","textChars":57,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/pg7i5gra","slide":29,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ofyhcbqp","slide":29,"text":"BFS is optimal for equal step costs.","textPreview":"BFS is optimal for equal step costs.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/fa5gz698","slide":29,"text":"FIFO queue","textPreview":"FIFO queue","textChars":10,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/e9wz61sn","slide":29,"text":"shallowest first","textPreview":"shallowest first","textChars":16,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/03uhsn61","slide":29,"text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/l43ylsnm","slide":29,"text":"memory heavy","textPreview":"memory heavy","textChars":12,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/y1czqdov","slide":29,"text":"VTU BCS515B • Module 2 • 29/50","textPreview":"VTU BCS515B • Module 2 • 29/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/gtx5j6","slide":29,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/te64td","slide":30,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/54fupo7u","slide":30,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/i14vut83","slide":30,"text":"Breadth-first search: intuition","textPreview":"Breadth-first search: intuition","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/32dcnypo","slide":30,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/gfmdsjqd","slide":30,"text":"Think of breadth-first search as a way to make an agent's next choice clearer.","textPreview":"Think of breadth-first search as a way to make an agent's next choice clearer.","textChars":78,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/h0vulo7i","slide":30,"text":"• Why it matters: BFS is optimal for equal step costs.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: BFS is optimal for equal step costs. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea...","textChars":154,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ud4vq987","slide":30,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/vedcjeps","slide":30,"text":"BFS is optimal for equal step costs.","textPreview":"BFS is optimal for equal step costs.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/8b2dozq1","slide":30,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/tcbuh47m","slide":30,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/tob6xsfy","slide":30,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/8n2poned","slide":30,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/7mtov2xs","slide":30,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/6l07mxw7","slide":30,"text":"VTU BCS515B • Module 2 • 30/50","textPreview":"VTU BCS515B • Module 2 • 30/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/te64td","slide":30,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/ulzqy4","slide":31,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/pkrqpwv6","slide":31,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/2h0ru1cf","slide":31,"text":"Breadth-first search: workflow","textPreview":"Breadth-first search: workflow","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ni98nmd0","slide":31,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/cn290bux","slide":31,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/xobqtgv2","slide":31,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/al0ry1cr","slide":31,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/bmt8r6dc","slide":31,"text":"BFS is optimal for equal step costs.","textPreview":"BFS is optimal for equal step costs.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/sry9o7ud","slide":31,"text":"FIFO queue","textPreview":"FIFO queue","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/ds7qhcvy","slide":31,"text":"shallowest first","textPreview":"shallowest first","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/hsjapk3y","slide":31,"text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/gra9gzmd","slide":31,"text":"memory heavy","textPreview":"memory heavy","textChars":12,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/vq1snuls","slide":31,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/upsrep47","slide":31,"text":"VTU BCS515B • Module 2 • 31/50","textPreview":"VTU BCS515B • Module 2 • 31/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ulzqy4","slide":31,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/sn4qa6","slide":32,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":15}
+{"kind":"textbox","id":"sh/hgb2d8nq","slide":32,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ud0jid4f","slide":32,"text":"Breadth-first search: example","textPreview":"Breadth-first search: example","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/fetkbi50","slide":32,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/sri1g3m9","slide":32,"text":"A small classroom example makes breadth-first search concrete.","textPreview":"A small classroom example makes breadth-first search concrete.","textChars":62,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/tsr298nu","slide":32,"text":"• Use the terms: FIFO queue, shallowest first\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: FIFO queue, shallowest first | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":131,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/6p0jet43","slide":32,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/7q9k7y5o","slide":32,"text":"BFS is optimal for equal step costs.","textPreview":"BFS is optimal for equal step costs.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/cnmlsnmd","slide":32,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/dov2ls3y","slide":32,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/lwnul4ri","slide":32,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/kvetszqx","slide":32,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/ju5cju9c","slide":32,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/ytwbqp8r","slide":32,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/xsnahkr6","slide":32,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/wretofq1","slide":32,"text":"FIFO queue","textPreview":"FIFO queue","textChars":10,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/bq5sfa9g","slide":32,"text":"VTU BCS515B • Module 2 • 32/50","textPreview":"VTU BCS515B • Module 2 • 32/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/sn4qa6","slide":32,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/bf6oqn","slide":33,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/axorap8r","slide":33,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/x0fql4ri","slide":33,"text":"Breadth-first search: algorithm / exam view","textPreview":"Breadth-first search: algorithm / exam view","textChars":43,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/wz69czqx","slide":33,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/nud8fa90","slide":33,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/mt47658v","slide":33,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: BFS is optimal for equal step costs.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: BFS...","textChars":164,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/9wvqhkr6","slide":33,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/8vm98fql","slide":33,"text":"BFS is optimal for equal step costs.","textPreview":"BFS is optimal for equal step costs.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/7qh8repk","slide":33,"text":"FIFO queue","textPreview":"FIFO queue","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/6p8ri98z","slide":33,"text":"shallowest first","textPreview":"shallowest first","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/8v25cjmh","slide":33,"text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/9wb65o32","slide":33,"text":"memory heavy","textPreview":"memory heavy","textChars":12,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/mt0nat4r","slide":33,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/nuto3elc","slide":33,"text":"VTU BCS515B • Module 2 • 33/50","textPreview":"VTU BCS515B • Module 2 • 33/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/bf6oqn","slide":33,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/pry90h","slide":34,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":11}
+{"kind":"textbox","id":"sh/u9cnql4r","slide":34,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/hc36103i","slide":34,"text":"Depth-first search: definition","textPreview":"Depth-first search: definition","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/gbu5svmx","slide":34,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7614v6lg","slide":34,"text":"DFS follows a branch before trying siblings.","textPreview":"DFS follows a branch before trying siblings.","textChars":44,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/65snml4v","slide":34,"text":"• stack\n• deepest first\n• low memory\n• not optimal","textPreview":"• stack | • deepest first | • low memory | • not optimal","textChars":50,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/t836xg36","slide":34,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/s7a5obml","slide":34,"text":"DFS is memory-light but can get trapped.","textPreview":"DFS is memory-light but can get trapped.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/b25o7alk","slide":34,"text":"stack","textPreview":"stack","textChars":5,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/q1wny5kz","slide":34,"text":"deepest first","textPreview":"deepest first","textChars":13,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/sratcn65","slide":34,"text":"low memory","textPreview":"low memory","textChars":10,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/ts3als7q","slide":34,"text":"not optimal","textPreview":"not optimal","textChars":11,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/6psraxoz","slide":34,"text":"VTU BCS515B • Module 2 • 34/50","textPreview":"VTU BCS515B • Module 2 • 34/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/pry90h","slide":34,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/jrjuqf","slide":35,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/0va5wzml","slide":35,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/za1one50","slide":35,"text":"Depth-first search: intuition","textPreview":"Depth-first search: intuition","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/y9snu94f","slide":35,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/90j6ton2","slide":35,"text":"Think of depth-first search as a way to make an agent's next choice clearer.","textPreview":"Think of depth-first search as a way to make an agent's next choice clearer.","textChars":76,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/8zap0jmh","slide":35,"text":"• Why it matters: DFS is memory-light but can get trapped.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: DFS is memory-light but can get trapped. | • What changes: uncertainty becomes structure | • Teaching cue: connect the ...","textChars":158,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ny1ore5c","slide":35,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/mxsny94r","slide":35,"text":"DFS is memory-light but can get trapped.","textPreview":"DFS is memory-light but can get trapped.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/p4z6hkny","slide":35,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/o3q5ofmd","slide":35,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/yhkrql4f","slide":35,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/zitsjql0","slide":35,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/kj29svm5","slide":35,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/lkbal03q","slide":35,"text":"VTU BCS515B • Module 2 • 35/50","textPreview":"VTU BCS515B • Module 2 • 35/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/jrjuqf","slide":35,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/te4rrl","slide":36,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/3mxo7qhc","slide":36,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/4n6pgbyx","slide":36,"text":"Depth-first search: workflow","textPreview":"Depth-first search: workflow","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/5oz69gzi","slide":36,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/uho7a1gv","slide":36,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/vixo36h0","slide":36,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/wj6pcbyl","slide":36,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/hkf65gz6","slide":36,"text":"DFS is memory-light but can get trapped.","textPreview":"DFS is memory-light but can get trapped.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/mt4761gj","slide":36,"text":"stack","textPreview":"stack","textChars":5,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/7udoz6h4","slide":36,"text":"deepest first","textPreview":"deepest first","textChars":13,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/3e9g76ts","slide":36,"text":"low memory","textPreview":"low memory","textChars":10,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/2d0fe1s7","slide":36,"text":"not optimal","textPreview":"not optimal","textChars":11,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/pgry9gbi","slide":36,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/4fixgbax","slide":36,"text":"VTU BCS515B • Module 2 • 36/50","textPreview":"VTU BCS515B • Module 2 • 36/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/te4rrl","slide":36,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/rc8kc9","slide":37,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":15}
+{"kind":"textbox","id":"sh/cni1snq9","slide":37,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/rm90zi9o","slide":37,"text":"Depth-first search: example","textPreview":"Depth-first search: example","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ql0jqd83","slide":37,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/1sbi5srq","slide":37,"text":"A small classroom example makes depth-first search concrete.","textPreview":"A small classroom example makes depth-first search concrete.","textChars":60,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/0ri1wnql","slide":37,"text":"• Use the terms: stack, deepest first\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: stack, deepest first | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":123,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/zq903i90","slide":37,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ep0jud8f","slide":37,"text":"DFS is memory-light but can get trapped.","textPreview":"DFS is memory-light but can get trapped.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hw7itorm","slide":37,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/gvyhk3q1","slide":37,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/itwbu9c7","slide":37,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/ju5cneds","slide":37,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/kvedwzud","slide":37,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/5wnup4vi","slide":37,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/6xwvy9c3","slide":37,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/7ypcredo","slide":37,"text":"stack","textPreview":"stack","textChars":5,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/szyd0ju9","slide":37,"text":"VTU BCS515B • Module 2 • 37/50","textPreview":"VTU BCS515B • Module 2 • 37/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/rc8kc9","slide":37,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/5gbtxp","slide":38,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/o3aps3ux","slide":38,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/n2hojyds","slide":38,"text":"Depth-first search: algorithm / exam view","textPreview":"Depth-first search: algorithm / exam view","textChars":41,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/2187qtc7","slide":38,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/xsj6p8bu","slide":38,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/crapw3u9","slide":38,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: DFS is memory-light but can get trapped.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: DFS...","textChars":168,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/bq1onyto","slide":38,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/a5s7udc3","slide":38,"text":"DFS is memory-light but can get trapped.","textPreview":"DFS is memory-light but can get trapped.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/lw36tsbq","slide":38,"text":"stack","textPreview":"stack","textChars":5,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/kvup0nu5","slide":38,"text":"deepest first","textPreview":"deepest first","textChars":13,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/yt0vu9kb","slide":38,"text":"low memory","textPreview":"low memory","textChars":10,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/zu9wnelw","slide":38,"text":"not optimal","textPreview":"not optimal","textChars":11,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/0vidwj2h","slide":38,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/lwbepo32","slide":38,"text":"VTU BCS515B • Module 2 • 38/50","textPreview":"VTU BCS515B • Module 2 • 38/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/5gbtxp","slide":38,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/jja3b4","slide":39,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":11}
+{"kind":"textbox","id":"sh/ojipczmx","slide":39,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ni983ulc","slide":39,"text":"Uniform-cost search: definition","textPreview":"Uniform-cost search: definition","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/2h07a94r","slide":39,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/1gr614nm","slide":39,"text":"UCS expands the least-cost frontier node.","textPreview":"UCS expands the least-cost frontier node.","textChars":41,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/0fip8zm1","slide":39,"text":"• priority queue\n• path cost g(n)\n• optimal\n• nonnegative costs","textPreview":"• priority queue | • path cost g(n) | • optimal | • nonnegative costs","textChars":63,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/fe9ozu5g","slide":39,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/et076p4v","slide":39,"text":"UCS generalizes BFS to unequal costs.","textPreview":"UCS generalizes BFS to unequal costs.","textChars":37,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ds76xkna","slide":39,"text":"priority queue","textPreview":"priority queue","textChars":14,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/sryp4fmp","slide":39,"text":"path cost g(n)","textPreview":"path cost g(n)","textChars":14,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/298nuho7","slide":39,"text":"optimal","textPreview":"optimal","textChars":7,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/3aho3mps","slide":39,"text":"nonnegative costs","textPreview":"nonnegative costs","textChars":17,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/obq5wr6d","slide":39,"text":"VTU BCS515B • Module 2 • 39/50","textPreview":"VTU BCS515B • Module 2 • 39/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/jja3b4","slide":39,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/j4mobn","slide":40,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/8j21sbex","slide":40,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/7it0j6xs","slide":40,"text":"Uniform-cost search: intuition","textPreview":"Uniform-cost search: intuition","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/mhkjq1w7","slide":40,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/lgbihgfm","slide":40,"text":"Think of uniform-cost search as a way to make an agent's next choice clearer.","textPreview":"Think of uniform-cost search as a way to make an agent's next choice clearer.","textChars":77,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/0f21obe1","slide":40,"text":"• Why it matters: UCS generalizes BFS to unequal costs.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: UCS generalizes BFS to unequal costs. | • What changes: uncertainty becomes structure | • Teaching cue: connect the ide...","textChars":155,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ze90f6xg","slide":40,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/yd0jm1wv","slide":40,"text":"UCS generalizes BFS to unequal costs.","textPreview":"UCS generalizes BFS to unequal costs.","textChars":37,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/5cv2t0vq","slide":40,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/4bm10ve5","slide":40,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/elgvalsf","slide":40,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/fmpcjqt0","slide":40,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/gnydcval","slide":40,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/1o7el0b6","slide":40,"text":"VTU BCS515B • Module 2 • 40/50","textPreview":"VTU BCS515B • Module 2 • 40/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/j4mobn","slide":40,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/cmbv8x","slide":41,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/il4vq90r","slide":41,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/5oveloj2","slide":41,"text":"Uniform-cost search: workflow","textPreview":"Uniform-cost search: workflow","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/knmdsjix","slide":41,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/vytwfu10","slide":41,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/axkvmp0f","slide":41,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/xkveh4j6","slide":41,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/wjmdozil","slide":41,"text":"UCS generalizes BFS to unequal costs.","textPreview":"UCS generalizes BFS to unequal costs.","textChars":37,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/fuxwry1k","slide":41,"text":"priority queue","textPreview":"priority queue","textChars":14,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/utovyt0z","slide":41,"text":"path cost g(n)","textPreview":"path cost g(n)","textChars":14,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/knapkvil","slide":41,"text":"optimal","textPreview":"optimal","textChars":7,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/5oj6t0j6","slide":41,"text":"nonnegative costs","textPreview":"nonnegative costs","textChars":17,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/ils7il0f","slide":41,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/jm1orq10","slide":41,"text":"VTU BCS515B • Module 2 • 41/50","textPreview":"VTU BCS515B • Module 2 • 41/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/cmbv8x","slide":41,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/65o2rj","slide":42,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":15}
+{"kind":"textbox","id":"sh/2xgra5kb","slide":42,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/p0ralkj2","slide":42,"text":"Uniform-cost search: example","textPreview":"Uniform-cost search: example","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ozi9cf2h","slide":42,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/b29s7u1s","slide":42,"text":"A small classroom example makes uniform-cost search concrete.","textPreview":"A small classroom example makes uniform-cost search concrete.","textChars":61,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/q10repkn","slide":42,"text":"• Use the terms: priority queue, path cost g(n)\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: priority queue, path cost g(n) | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":133,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/d4ra9kjy","slide":42,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/c3i9gf2d","slide":42,"text":"UCS generalizes BFS to unequal costs.","textPreview":"UCS generalizes BFS to unequal costs.","textChars":37,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/r6p8bqlo","slide":42,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/65wr2lk3","slide":42,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/cjyt0n25","slide":42,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/dk7utsjq","slide":42,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/qhgbydkz","slide":42,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/bipcri1k","slide":42,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/0nit4n21","slide":42,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/l8ruxsjm","slide":42,"text":"priority queue","textPreview":"priority queue","textChars":14,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/ylgb2dkb","slide":42,"text":"VTU BCS515B • Module 2 • 42/50","textPreview":"VTU BCS515B • Module 2 • 42/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/65o2rj","slide":42,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/vx5mii","slide":43,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/8j6dcva5","slide":43,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/7ixc3q9k","slide":43,"text":"Uniform-cost search: algorithm / exam view","textPreview":"Uniform-cost search: algorithm / exam view","textChars":42,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/6hovalsz","slide":43,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/lgfu1gre","slide":43,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/kf6d8bat","slide":43,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: UCS generalizes BFS to unequal costs.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: UCS...","textChars":165,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/jexcz698","slide":43,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/yt4v6ls3","slide":43,"text":"UCS generalizes BFS to unequal costs.","textPreview":"UCS generalizes BFS to unequal costs.","textChars":37,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/xsvuxgri","slide":43,"text":"priority queue","textPreview":"priority queue","textChars":14,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/wrmd4bax","slide":43,"text":"path cost g(n)","textPreview":"path cost g(n)","textChars":14,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/e5wjy90b","slide":43,"text":"optimal","textPreview":"optimal","textChars":7,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/f6507ehw","slide":43,"text":"nonnegative costs","textPreview":"nonnegative costs","textChars":17,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/g7e10jih","slide":43,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/18ni9oz2","slide":43,"text":"VTU BCS515B • Module 2 • 43/50","textPreview":"VTU BCS515B • Module 2 • 43/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/vx5mii","slide":43,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/uskuv7","slide":44,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":11}
+{"kind":"textbox","id":"sh/fu1o3ap4","slide":44,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/gvapcf6p","slide":44,"text":"Depth-limited search: definition","textPreview":"Depth-limited search: definition","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/hwj65k7a","slide":44,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/2xs7epov","slide":44,"text":"Depth limits prevent infinite descent.","textPreview":"Depth limits prevent infinite descent.","textChars":38,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/3i1o7upg","slide":44,"text":"• limit\n• cutoff\n• failure\n• incomplete if wrong limit","textPreview":"• limit | • cutoff | • failure | • incomplete if wrong limit","textChars":54,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/4japgz6l","slide":44,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/pkjq9k76","slide":44,"text":"The limit must be chosen carefully.","textPreview":"The limit must be chosen carefully.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/y1on2lob","slide":44,"text":"limit","textPreview":"limit","textChars":5,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/jmhovqpw","slide":44,"text":"cutoff","textPreview":"cutoff","textChars":6,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/ny90bex4","slide":44,"text":"failure","textPreview":"failure","textChars":7,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/mx0z29gj","slide":44,"text":"incomplete if wrong limit","textPreview":"incomplete if wrong limit","textChars":25,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/90bidofu","slide":44,"text":"VTU BCS515B • Module 2 • 44/50","textPreview":"VTU BCS515B • Module 2 • 44/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/uskuv7","slide":44,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/8h36dr","slide":45,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/jq5wruxg","slide":45,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/kredkfy1","slide":45,"text":"Depth-limited search: intuition","textPreview":"Depth-limited search: intuition","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/lcnetkfm","slide":45,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/alcve5gz","slide":45,"text":"Think of depth-limited search as a way to make an agent's next choice clearer.","textPreview":"Think of depth-limited search as a way to make an agent's next choice clearer.","textChars":78,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/bmlwnax4","slide":45,"text":"• Why it matters: The limit must be chosen carefully.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: The limit must be chosen carefully. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea ...","textChars":153,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/cnudgfyp","slide":45,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/xo3epkfa","slide":45,"text":"The limit must be chosen carefully.","textPreview":"The limit must be chosen carefully.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/uhwvq9g3","slide":45,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/vipwzexo","slide":45,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/b6dkf2pc","slide":45,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/q5kj6x8r","slide":45,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/d8v2hc72","slide":45,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/c7ml87qh","slide":45,"text":"VTU BCS515B • Module 2 • 45/50","textPreview":"VTU BCS515B • Module 2 • 45/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/8h36dr","slide":45,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/1xtyv1","slide":46,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/bexgzixc","slide":46,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/cf6xsnex","slide":46,"text":"Depth-limited search: workflow","textPreview":"Depth-limited search: workflow","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/dgfy1sfi","slide":46,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/y1ofuxwn","slide":46,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/z2xg32x8","slide":46,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/03qhw7et","slide":46,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/l4zy5sfe","slide":46,"text":"The limit must be chosen carefully.","textPreview":"The limit must be chosen carefully.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/e54fytgj","slide":46,"text":"limit","textPreview":"limit","textChars":5,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/f6dgryx4","slide":46,"text":"cutoff","textPreview":"cutoff","textChars":6,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/z65kjmp0","slide":46,"text":"failure","textPreview":"failure","textChars":7,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/elw3qhof","slide":46,"text":"incomplete if wrong limit","textPreview":"incomplete if wrong limit","textChars":25,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/187mlw76","slide":46,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/07elsr6l","slide":46,"text":"VTU BCS515B • Module 2 • 46/50","textPreview":"VTU BCS515B • Module 2 • 46/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/1xtyv1","slide":46,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/n6zkkl","slide":47,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":15}
+{"kind":"textbox","id":"sh/m9o3qxw3","slide":47,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/tcz2lcve","slide":47,"text":"Depth-limited search: example","textPreview":"Depth-limited search: example","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/8b6ls7et","slide":47,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zmxkfixc","slide":47,"text":"A small classroom example makes depth-limited search concrete.","textPreview":"A small classroom example makes depth-limited search concrete.","textChars":62,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ylojmxwr","slide":47,"text":"• Use the terms: limit, cutoff\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: limit, cutoff | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":116,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/lof2hsvi","slide":47,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/kn61onex","slide":47,"text":"The limit must be chosen carefully.","textPreview":"The limit must be chosen carefully.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/3ihkrmdw","slide":47,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/ih83yhwb","slide":47,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/s7y9cbyx","slide":47,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/t87algzi","slide":47,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/65gra1gr","slide":47,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/76psj6hc","slide":47,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/kje98ry1","slide":47,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/547qhwzm","slide":47,"text":"limit","textPreview":"limit","textChars":5,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/ihwr6hgv","slide":47,"text":"VTU BCS515B • Module 2 • 47/50","textPreview":"VTU BCS515B • Module 2 • 47/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/n6zkkl","slide":47,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/sf6xzr","slide":48,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/7u547axo","slide":48,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/svelgfy9","slide":48,"text":"Depth-limited search: algorithm / exam view","textPreview":"Depth-limited search: algorithm / exam view","textChars":43,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/tw7m9kfu","slide":48,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ipw3a5g7","slide":48,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/jq543axs","slide":48,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: The limit must be chosen carefully.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: The...","textChars":163,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/krelcfyd","slide":48,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/5snm5kfy","slide":48,"text":"The limit must be chosen carefully.","textPreview":"The limit must be chosen carefully.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/alc365gb","slide":48,"text":"limit","textPreview":"limit","textChars":5,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/vmlkzqxg","slide":48,"text":"cutoff","textPreview":"cutoff","textChars":6,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/32x43q1o","slide":48,"text":"failure","textPreview":"failure","textChars":7,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/21onulk3","slide":48,"text":"incomplete if wrong limit","textPreview":"incomplete if wrong limit","textChars":25,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/p4fm50je","slide":48,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/4365wv2t","slide":48,"text":"VTU BCS515B • Module 2 • 48/50","textPreview":"VTU BCS515B • Module 2 • 48/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/sf6xzr","slide":48,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/i7a8xz","slide":49,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":11}
+{"kind":"textbox","id":"sh/z2xwvyd0","slide":49,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/k36do3el","slide":49,"text":"Iterative deepening: definition","textPreview":"Iterative deepening: definition","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/lozex8v6","slide":49,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/mp8vqdcb","slide":49,"text":"IDS combines BFS completeness with DFS memory.","textPreview":"IDS combines BFS completeness with DFS memory.","textChars":46,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/7qhwzidw","slide":49,"text":"• DLS repeated\n• increasing limit\n• complete\n• low memory","textPreview":"• DLS repeated | • increasing limit | • complete | • low memory","textChars":57,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/8rqdsnuh","slide":49,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/9sze18v2","slide":49,"text":"IDS is practical when solution depth is unknown.","textPreview":"IDS is practical when solution depth is unknown.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ut8vudcn","slide":49,"text":"DLS repeated","textPreview":"DLS repeated","textChars":12,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/vuhw3id8","slide":49,"text":"increasing limit","textPreview":"increasing limit","textChars":16,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/bulon21c","slide":49,"text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/q9s7ux0r","slide":49,"text":"low memory","textPreview":"low memory","textChars":10,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/dw36pcj2","slide":49,"text":"VTU BCS515B • Module 2 • 49/50","textPreview":"VTU BCS515B • Module 2 • 49/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/i7a8xz","slide":49,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/ji2ush","slide":50,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/jqhgby94","slide":50,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/4rqxkjqp","slide":50,"text":"Iterative deepening: intuition","textPreview":"Iterative deepening: intuition","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/5szydora","slide":50,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ulofe98n","slide":50,"text":"Think of iterative deepening as a way to make an agent's next choice clearer.","textPreview":"Think of iterative deepening as a way to make an agent's next choice clearer.","textChars":77,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/vmhw7e9s","slide":50,"text":"• Why it matters: IDS is practical when solution depth is unknown.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: IDS is practical when solution depth is unknown. | • What changes: uncertainty becomes structure | • Teaching cue: conn...","textChars":166,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/wnqxgjqd","slide":50,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/hoze9ory","slide":50,"text":"IDS is practical when solution depth is unknown.","textPreview":"IDS is practical when solution depth is unknown.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ehsfqd8r","slide":50,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/fi1gji9c","slide":50,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/3ql07yhk","slide":50,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/2pcjet0z","slide":50,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/psni98zq","slide":50,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/ore1g3i5","slide":50,"text":"VTU BCS515B • Module 2 • 50/50","textPreview":"VTU BCS515B • Module 2 • 50/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ji2ush","slide":50,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/lm3v1c","slide":51,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/83m9k3a9","slide":51,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/72d8by9o","slide":51,"text":"Iterative deepening: workflow","textPreview":"Iterative deepening: workflow","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/6h4rits3","slide":51,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/h8fqh8rq","slide":51,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/g769o3a5","slide":51,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/v6x8fy9k","slide":51,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/u5ormtsf","slide":51,"text":"IDS is practical when solution depth is unknown.","textPreview":"IDS is practical when solution depth is unknown.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/pczqlsr2","slide":51,"text":"DLS repeated","textPreview":"DLS repeated","textChars":12,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/4bq9snah","slide":51,"text":"increasing limit","textPreview":"increasing limit","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/atc32d07","slide":51,"text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/vulkbi1c","slide":51,"text":"low memory","textPreview":"low memory","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/wvul43ix","slide":51,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/xg32d8ji","slide":51,"text":"VTU BCS515B • Module 2 • 51/50","textPreview":"VTU BCS515B • Module 2 • 51/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/lm3v1c","slide":51,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/095g9p","slide":52,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":15}
+{"kind":"textbox","id":"sh/wze1kbup","slide":52,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ve50rqd4","slide":52,"text":"Iterative deepening: example","textPreview":"Iterative deepening: example","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/adcjilcj","slide":52,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/54nix0v6","slide":52,"text":"A small classroom example makes iterative deepening concrete.","textPreview":"A small classroom example makes iterative deepening concrete.","textChars":61,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/k3e1ovul","slide":52,"text":"• Use the terms: DLS repeated, increasing limit\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: DLS repeated, increasing limit | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":133,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/j250vqd0","slide":52,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/i1wjmlcf","slide":52,"text":"IDS is practical when solution depth is unknown.","textPreview":"IDS is practical when solution depth is unknown.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/t87210v2","slide":52,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/s7y1svux","slide":52,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/e14jqxwn","slide":52,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/f2dkjid8","slide":52,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/g3m1snet","slide":52,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/14f2lsve","slide":52,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/25ojuxwz","slide":52,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/36xkn2d4","slide":52,"text":"DLS repeated","textPreview":"DLS repeated","textChars":12,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/o761w7up","slide":52,"text":"VTU BCS515B • Module 2 • 52/50","textPreview":"VTU BCS515B • Module 2 • 52/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/095g9p","slide":52,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/i85yay","slide":53,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/dkfexsre","slide":53,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/qx4f2x83","slide":53,"text":"Iterative deepening: algorithm / exam view","textPreview":"Iterative deepening: algorithm / exam view","textChars":42,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/rydwvi9o","slide":53,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/4vmx0nqx","slide":53,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/pwvetsri","slide":53,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: IDS is practical when solution depth is unknown.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: IDS...","textChars":176,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/2t4fyd8r","slide":53,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/3udwri9c","slide":53,"text":"IDS is practical when solution depth is unknown.","textPreview":"IDS is practical when solution depth is unknown.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/gr2dw3q1","slide":53,"text":"DLS repeated","textPreview":"DLS repeated","textChars":12,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/hsbep8r6","slide":53,"text":"increasing limit","textPreview":"increasing limit","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/9crm5sbm","slide":53,"text":"complete","textPreview":"complete","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/8bilcnu1","slide":53,"text":"low memory","textPreview":"low memory","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/na943itw","slide":53,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/m903adcb","slide":53,"text":"VTU BCS515B • Module 2 • 53/50","textPreview":"VTU BCS515B • Module 2 • 53/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/i85yay","slide":53,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/py6ido","slide":54,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":11}
+{"kind":"textbox","id":"sh/nexc7ih0","slide":54,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/8f6dgnil","slide":54,"text":"Comparing blind search: definition","textPreview":"Comparing blind search: definition","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/9gfe9sz6","slide":54,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ahovix0b","slide":54,"text":"No uninformed strategy dominates all cases.","textPreview":"No uninformed strategy dominates all cases.","textChars":43,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/vixwb2hw","slide":54,"text":"• completeness\n• optimality\n• time\n• space","textPreview":"• completeness | • optimality | • time | • space","textChars":42,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/wjqdk7ih","slide":54,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/xkzedsz2","slide":54,"text":"Choose strategy from problem constraints.","textPreview":"Choose strategy from problem constraints.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ql4v6t07","slide":54,"text":"completeness","textPreview":"completeness","textChars":12,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/bmdczyhs","slide":54,"text":"optimality","textPreview":"optimality","textChars":10,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/r210zqxg","slide":54,"text":"time","textPreview":"time","textChars":4,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/61szqlwv","slide":54,"text":"space","textPreview":"space","textChars":5,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/toji10fm","slide":54,"text":"VTU BCS515B • Module 2 • 54/50","textPreview":"VTU BCS515B • Module 2 • 54/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/py6ido","slide":54,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/3ckatb","slide":55,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/a9w3y10v","slide":55,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/xw7mtgjm","slide":55,"text":"Comparing blind search: intuition","textPreview":"Comparing blind search: intuition","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/wvyl0bi1","slide":55,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/jyp4vq1c","slide":55,"text":"Think of comparing blind search as a way to make an agent's next choice clearer.","textPreview":"Think of comparing blind search as a way to make an agent's next choice clearer.","textChars":80,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ixg32l0r","slide":55,"text":"• Why it matters: Choose strategy from problem constraints.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Choose strategy from problem constraints. | • What changes: uncertainty becomes structure | • Teaching cue: connect the...","textChars":159,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/507mx0ji","slide":55,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/kzyl4vix","slide":55,"text":"Choose strategy from problem constraints.","textPreview":"Choose strategy from problem constraints.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/z2lkjm18","slide":55,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/e1c3qhkn","slide":55,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/kjmdsnmh","slide":55,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/5kvuls3m","slide":55,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/ih4vqx4b","slide":55,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/jidcj2lw","slide":55,"text":"VTU BCS515B • Module 2 • 55/50","textPreview":"VTU BCS515B • Module 2 • 55/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/3ckatb","slide":55,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/ccgqrc","slide":56,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/hovi5kry","slide":56,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/u14ja587","slide":56,"text":"Comparing blind search: workflow","textPreview":"Comparing blind search: workflow","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/f2d03a9s","slide":56,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/4rm1gfqp","slide":56,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/psvi9kra","slide":56,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/2p4jep8j","slide":56,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/3qd07u94","slide":56,"text":"Choose strategy from problem constraints.","textPreview":"Choose strategy from problem constraints.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/kv214vq5","slide":56,"text":"completeness","textPreview":"completeness","textChars":12,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/lwbix0rq","slide":56,"text":"optimality","textPreview":"optimality","textChars":10,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/58rip4re","slide":56,"text":"time","textPreview":"time","textChars":4,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/47ihgzq9","slide":56,"text":"space","textPreview":"space","textChars":5,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/j690ne9o","slide":56,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/i50ze983","slide":56,"text":"VTU BCS515B • Module 2 • 56/50","textPreview":"VTU BCS515B • Module 2 • 56/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ccgqrc","slide":56,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/cc406k","slide":57,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":15}
+{"kind":"textbox","id":"sh/54jepgba","slide":57,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/i1sve1sz","slide":57,"text":"Comparing blind search: example","textPreview":"Comparing blind search: example","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/j21wn6tk","slide":57,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/s7uxkba1","slide":57,"text":"A small classroom example makes comparing blind search concrete.","textPreview":"A small classroom example makes comparing blind search concrete.","textChars":64,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/t83etgbm","slide":57,"text":"• Use the terms: completeness, optimality\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: completeness, optimality | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":127,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/65sfilsv","slide":57,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/r6lwr6tg","slide":57,"text":"Choose strategy from problem constraints.","textPreview":"Choose strategy from problem constraints.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/8bqd8rax","slide":57,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/9czehwbi","slide":57,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/x07axwve","slide":57,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/cfyt4rut","slide":57,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/bepsv6d8","slide":57,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/adgb21cn","slide":57,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/l4ru1gva","slide":57,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/k3it8bu5","slide":57,"text":"completeness","textPreview":"completeness","textChars":12,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/z29cz6dk","slide":57,"text":"VTU BCS515B • Module 2 • 57/50","textPreview":"VTU BCS515B • Module 2 • 57/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/cc406k","slide":57,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/j2zbrq","slide":58,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/tsj2hojm","slide":58,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/6p8jm90b","slide":58,"text":"Comparing blind search: algorithm / exam view","textPreview":"Comparing blind search: algorithm / exam view","textChars":45,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/7q1kfe1g","slide":58,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/gfa1sjid","slide":58,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/hgj2lojy","slide":58,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Choose strategy from problem constraints.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Cho...","textChars":169,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/udsjqt07","slide":58,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ve1kje1s","slide":58,"text":"Choose strategy from problem constraints.","textPreview":"Choose strategy from problem constraints.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/wjq1gzit","slide":58,"text":"completeness","textPreview":"completeness","textChars":12,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/xkz294je","slide":58,"text":"optimality","textPreview":"optimality","textChars":10,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/lkn6507i","slide":58,"text":"time","textPreview":"time","textChars":4,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/0jepcv6d","slide":58,"text":"space","textPreview":"space","textChars":5,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/zi5o3qps","slide":58,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/yhwnalo7","slide":58,"text":"VTU BCS515B • Module 2 • 58/50","textPreview":"VTU BCS515B • Module 2 • 58/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/j2zbrq","slide":58,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/jermbh","slide":59,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/4b2t8ry5","slide":59,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/3qtcfmxk","slide":59,"text":"Module 2 summary map","textPreview":"Module 2 summary map","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/2p0b6hgz","slide":59,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/dgbulwfm","slide":59,"text":"Problem Solving and Uninformed Search","textPreview":"Problem Solving and Uninformed Search","textChars":37,"textLines":1,"bbox":[500,300,280,74]}
+{"kind":"textbox","id":"sh/cf2tcby1","slide":59,"text":"Problem-solving agents","textPreview":"Problem-solving agents","textChars":22,"textLines":1,"bbox":[120,190,180,58]}
+{"kind":"textbox","id":"sh/betcj6xg","slide":59,"text":"Problem formulation","textPreview":"Problem formulation","textChars":19,"textLines":1,"bbox":[400,190,180,58]}
+{"kind":"textbox","id":"sh/qdkba1gb","slide":59,"text":"State-space representation","textPreview":"State-space representation","textChars":26,"textLines":1,"bbox":[680,190,180,58]}
+{"kind":"textbox","id":"sh/tkra9cfi","slide":59,"text":"Example problems","textPreview":"Example problems","textChars":16,"textLines":1,"bbox":[960,190,180,58]}
+{"kind":"textbox","id":"sh/sjit07yx","slide":59,"text":"Tree and graph search","textPreview":"Tree and graph search","textChars":21,"textLines":1,"bbox":[120,430,180,58]}
+{"kind":"textbox","id":"sh/mlwzud8j","slide":59,"text":"Breadth-first search","textPreview":"Breadth-first search","textChars":20,"textLines":1,"bbox":[400,430,180,58]}
+{"kind":"textbox","id":"sh/nm5g3ip4","slide":59,"text":"Depth-first search","textPreview":"Depth-first search","textChars":18,"textLines":1,"bbox":[680,430,180,58]}
+{"kind":"textbox","id":"sh/onehwn6p","slide":59,"text":"Uniform-cost search","textPreview":"Uniform-cost search","textChars":19,"textLines":1,"bbox":[960,430,180,58]}
+{"kind":"textbox","id":"sh/9ony5s7a","slide":59,"text":"Explain the module by connecting each outer idea back to the center.","textPreview":"Explain the module by connecting each outer idea back to the center.","textChars":68,"textLines":1,"bbox":[254,608,780,34]}
+{"kind":"textbox","id":"sh/apwzyxof","slide":59,"text":"VTU BCS515B • Module 2 • 59/50","textPreview":"VTU BCS515B • Module 2 • 59/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/jermbh","slide":59,"text":"[Animation]\nReveal branches around the center. Ask students to supply one example for each branch.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/kgfdai","slide":60,"title":"Questions","textShapes":21}
+{"kind":"textbox","id":"sh/gfqhsn2t","slide":60,"text":"Questions","textPreview":"Questions","textChars":9,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/feh0ji18","slide":60,"text":"Module 2 exam practice","textPreview":"Module 2 exam practice","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ed8zqdkn","slide":60,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/p4jipsja","slide":60,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,166,46,46]}
+{"kind":"textbox","id":"sh/o3ahwn25","slide":60,"text":"Explain problem-solving agents with a neat diagram.","textPreview":"Explain problem-solving agents with a neat diagram.","textChars":51,"textLines":1,"bbox":[164,158,850,54]}
+{"kind":"textbox","id":"sh/n2h0ni1k","slide":60,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,168,110,36]}
+{"kind":"textbox","id":"sh/2h8zudkz","slide":60,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,242,46,46]}
+{"kind":"textbox","id":"sh/x8jitsjm","slide":60,"text":"Apply problem formulation to a small example and state the takeaway.","textPreview":"Apply problem formulation to a small example and state the takeaway.","textChars":68,"textLines":1,"bbox":[164,234,850,54]}
+{"kind":"textbox","id":"sh/c7ah0721","slide":60,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,244,110,36]}
+{"kind":"textbox","id":"sh/ex07ex0f","slide":60,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,318,46,46]}
+{"kind":"textbox","id":"sh/fi9on2h0","slide":60,"text":"Explain state-space representation with a neat diagram.","textPreview":"Explain state-space representation with a neat diagram.","textChars":55,"textLines":1,"bbox":[164,310,850,54]}
+{"kind":"textbox","id":"sh/0jipg7il","slide":60,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,320,110,36]}
+{"kind":"textbox","id":"sh/1kr6pcz6","slide":60,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,394,46,46]}
+{"kind":"textbox","id":"sh/2l07ih0b","slide":60,"text":"Apply example problems to a small example and state the takeaway.","textPreview":"Apply example problems to a small example and state the takeaway.","textChars":65,"textLines":1,"bbox":[164,386,850,54]}
+{"kind":"textbox","id":"sh/nm9ormhw","slide":60,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,396,110,36]}
+{"kind":"textbox","id":"sh/onipkrih","slide":60,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,470,46,46]}
+{"kind":"textbox","id":"sh/pob6tcz2","slide":60,"text":"Explain tree and graph search with a neat diagram.","textPreview":"Explain tree and graph search with a neat diagram.","textChars":50,"textLines":1,"bbox":[164,462,850,54]}
+{"kind":"textbox","id":"sh/ipgn6d07","slide":60,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,472,110,36]}
+{"kind":"textbox","id":"sh/3qpofihs","slide":60,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,546,46,46]}
+{"kind":"textbox","id":"sh/7ul4nexk","slide":60,"text":"Apply breadth-first search to a small example and state the takeaway.","textPreview":"Apply breadth-first search to a small example and state the takeaway.","textChars":69,"textLines":1,"bbox":[164,538,850,54]}
+{"kind":"textbox","id":"sh/6tc3e9gz","slide":60,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,548,110,36]}
+{"kind":"textbox","id":"sh/tw3mpofq","slide":60,"text":"VTU BCS515B • Module 2 • 60/50","textPreview":"VTU BCS515B • Module 2 • 60/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/kgfdai","slide":60,"text":"[Animation]\nReveal questions one at a time. For each, ask students to first identify keywords from the syllabus.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/hshx4g","slide":61,"title":"Module 2 / Problem Solving and Uninformed Search","textShapes":12}
+{"kind":"textbox","id":"sh/2p4jmt8f","slide":61,"text":"Module 2 / Problem Solving and Uninformed Search","textPreview":"Module 2 / Problem Solving and Uninformed Search","textChars":48,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/psfih87q","slide":61,"text":"Problem-solving agents: algorithm / exam view","textPreview":"Problem-solving agents: algorithm / exam view","textChars":45,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/or61o3ql","slide":61,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/bux0jipw","slide":61,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/qtojqd8b","slide":61,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Search is useful when the next action is not obvious.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Sea...","textChars":181,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/dwf2l872","slide":61,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/cv61snqh","slide":61,"text":"Search is useful when the next action is not obvious.","textPreview":"Search is useful when the next action is not obvious.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ryt07eps","slide":61,"text":"goal formulation","textPreview":"goal formulation","textChars":16,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/6xkze987","slide":61,"text":"problem formulation","textPreview":"problem formulation","textChars":19,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/sbqx8ru1","slide":61,"text":"search","textPreview":"search","textChars":6,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/tczyhwbm","slide":61,"text":"execution","textPreview":"execution","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/698f61cv","slide":61,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/7ahgf6tg","slide":61,"text":"VTU BCS515B • Module 2 • 61/50","textPreview":"VTU BCS515B • Module 2 • 61/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/hshx4g","slide":61,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}
+{"kind":"slide","id":"sl/8jgfqv","slide":62,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/upozih8b","slide":62,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/hcfitw7m","slide":62,"text":"Module 2 summary map","textPreview":"Module 2 summary map","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/wb61kr61","slide":62,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7md0n2pk","slide":62,"text":"Problem Solving and Uninformed Search","textPreview":"Problem Solving and Uninformed Search","textChars":37,"textLines":1,"bbox":[500,300,280,74]}
+{"kind":"textbox","id":"sh/ml4zex8z","slide":62,"text":"Problem-solving agents","textPreview":"Problem-solving agents","textChars":22,"textLines":1,"bbox":[120,190,180,58]}
+{"kind":"textbox","id":"sh/9ofipc7q","slide":62,"text":"Problem formulation","textPreview":"Problem formulation","textChars":19,"textLines":1,"bbox":[400,190,180,58]}
+{"kind":"textbox","id":"sh/8n6hg7q5","slide":62,"text":"State-space representation","textPreview":"State-space representation","textChars":26,"textLines":1,"bbox":[680,190,180,58]}
+{"kind":"textbox","id":"sh/zid0j2po","slide":62,"text":"Example problems","textPreview":"Example problems","textChars":16,"textLines":1,"bbox":[960,190,180,58]}
+{"kind":"textbox","id":"sh/yh4zax83","slide":62,"text":"Tree and graph search","textPreview":"Tree and graph search","textChars":21,"textLines":1,"bbox":[120,430,180,58]}
+{"kind":"textbox","id":"sh/s7y5kfex","slide":62,"text":"Breadth-first search","textPreview":"Breadth-first search","textChars":20,"textLines":1,"bbox":[400,430,180,58]}
+{"kind":"textbox","id":"sh/ds76dkfi","slide":62,"text":"Depth-first search","textPreview":"Depth-first search","textChars":18,"textLines":1,"bbox":[680,430,180,58]}
+{"kind":"textbox","id":"sh/q5wni5wr","slide":62,"text":"Uniform-cost search","textPreview":"Uniform-cost search","textChars":19,"textLines":1,"bbox":[960,430,180,58]}
+{"kind":"textbox","id":"sh/r65obaxc","slide":62,"text":"Explain the module by connecting each outer idea back to the center.","textPreview":"Explain the module by connecting each outer idea back to the center.","textChars":68,"textLines":1,"bbox":[254,608,780,34]}
+{"kind":"textbox","id":"sh/43e5gve1","slide":62,"text":"VTU BCS515B • Module 2 • 62/50","textPreview":"VTU BCS515B • Module 2 • 62/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/8jgfqv","slide":62,"text":"[Animation]\nReveal branches around the center. Ask students to supply one example for each branch.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-2-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-2-textbook.pdf"}

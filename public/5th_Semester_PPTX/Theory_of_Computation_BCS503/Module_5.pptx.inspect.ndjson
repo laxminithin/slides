@@ -1,0 +1,1131 @@
+{"kind":"deck","id":"pr/rzto8s","name":"Deck"}
+{"kind":"layout","layoutId":"cef5bd51-4d07-417a-8836-9bbd010d461b","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"ab42f2d5-70f1-4390-bf10-69b38d3fd9a9","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/dm9tzg","slide":1,"title":"BCS503 | Theory of Computation","textShapes":10}
+{"kind":"textbox","id":"sh/ls3utwv6","slide":1,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ypcvi1cf","slide":1,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/zqlcrmd0","slide":1,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/cnudgru9","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/xo3upwvu","slide":1,"text":"Turing Machines and Undecidability","textPreview":"Turing Machines and Undecidability","textChars":34,"textLines":1,"bbox":[76,98,780,116]}
+{"kind":"textbox","id":"sh/a1svehcj","slide":1,"text":"Theory of Computation | Module 5","textPreview":"Theory of Computation | Module 5","textChars":32,"textLines":1,"bbox":[80,224,780,72]}
+{"kind":"shape","id":"sh/bm1cnmdo","slide":1,"bbox":[82,318,180,7]}
+{"kind":"textbox","id":"sh/wjedsbut","slide":1,"text":"Hook","textPreview":"Hook","textChars":4,"textLines":1,"bbox":[163,430,170,92]}
+{"kind":"textbox","id":"sh/hkne1gvy","slide":1,"text":"Core concept","textPreview":"Core concept","textChars":12,"textLines":1,"bbox":[359,430,170,92]}
+{"kind":"textbox","id":"sh/t4fq54fq","slide":1,"text":"Mechanism","textPreview":"Mechanism","textChars":9,"textLines":1,"bbox":[555,430,170,92]}
+{"kind":"textbox","id":"sh/836pwzy5","slide":1,"text":"Worked example","textPreview":"Worked example","textChars":14,"textLines":1,"bbox":[751,430,170,92]}
+{"kind":"textbox","id":"sh/72x83uxk","slide":1,"text":"Exam-ready recap","textPreview":"Exam-ready recap","textChars":16,"textLines":1,"bbox":[947,430,170,92]}
+{"kind":"shape","id":"sh/61o7upgz","slide":1,"bbox":[333,476,26,0]}
+{"kind":"shape","id":"sh/l0f61kfu","slide":1,"bbox":[529,476,26,0]}
+{"kind":"shape","id":"sh/kz6psfy9","slide":1,"bbox":[725,476,26,0]}
+{"kind":"shape","id":"sh/jyxozaho","slide":1,"bbox":[921,476,26,0]}
+{"kind":"notes","id":"nt/dm9tzg","slide":1,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/dnsrym","slide":2,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/d032dsri","slide":2,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/qxsj2xs7","slide":2,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ry1kb29s","slide":2,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/0nu187q9","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/1o32hcru","slide":2,"text":"Teaching route","textPreview":"Teaching route","textChars":14,"textLines":1,"bbox":[78,112,700,48]}
+{"kind":"shape","id":"sh/elcj6x83","slide":2,"bbox":[96,217,16,16]}
+{"kind":"textbox","id":"sh/fmlkf29o","slide":2,"text":"Start with why the module matters.","textPreview":"Start with why the module matters.","textChars":34,"textLines":1,"bbox":[126,210,990,42]}
+{"kind":"shape","id":"sh/grq1wna5","slide":2,"bbox":[96,293,16,16]}
+{"kind":"textbox","id":"sh/hszi58ra","slide":2,"text":"Build one concept at a time with a diagram or worked trace.","textPreview":"Build one concept at a time with a diagram or worked trace.","textChars":59,"textLines":1,"bbox":[126,286,990,42]}
+{"kind":"shape","id":"sh/dg7at0bm","slide":2,"bbox":[96,369,16,16]}
+{"kind":"textbox","id":"sh/sfy9kvah","slide":2,"text":"Use examples before definitions become abstract.","textPreview":"Use examples before definitions become abstract.","textChars":48,"textLines":1,"bbox":[126,362,990,42]}
+{"kind":"shape","id":"sh/rupsrqtw","slide":2,"bbox":[96,445,16,16]}
+{"kind":"textbox","id":"sh/qtgrilsb","slide":2,"text":"End with definitions, algorithms/formulas, mistakes and practice questions.","textPreview":"End with definitions, algorithms/formulas, mistakes and practice questions.","textChars":75,"textLines":1,"bbox":[126,438,990,42]}
+{"kind":"notes","id":"nt/dnsrym","slide":2,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/dz0j4g","slide":3,"title":"BCS503 | Theory of Computation","textShapes":10}
+{"kind":"textbox","id":"sh/x8zi1836","slide":3,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/a58j6dkv","slide":3,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/b6h0zylg","slide":3,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/kvq1cn2x","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/lwzi5s3i","slide":3,"text":"Module map","textPreview":"Module map","textChars":10,"textLines":1,"bbox":[78,112,700,48]}
+{"kind":"shape","id":"sh/yt8jadkr","slide":3,"bbox":[96,193,16,16]}
+{"kind":"textbox","id":"sh/zuh03ilc","slide":3,"text":"Problems computers cannot solve","textPreview":"Problems computers cannot solve","textChars":31,"textLines":1,"bbox":[126,186,1000,42]}
+{"kind":"shape","id":"sh/0z6h0j2t","slide":3,"bbox":[96,251,16,16]}
+{"kind":"textbox","id":"sh/10fi9o3y","slide":3,"text":"The Turing machine","textPreview":"The Turing machine","textChars":18,"textLines":1,"bbox":[126,244,1000,42]}
+{"kind":"shape","id":"sh/xkz2x4ju","slide":3,"bbox":[96,309,16,16]}
+{"kind":"textbox","id":"sh/cjq14zip","slide":3,"text":"Programming techniques for Turing machines","textPreview":"Programming techniques for Turing machines","textChars":42,"textLines":1,"bbox":[126,302,1000,42]}
+{"kind":"shape","id":"sh/bihkvu14","slide":3,"bbox":[96,367,16,16]}
+{"kind":"textbox","id":"sh/ah8j2p0j","slide":3,"text":"Extensions to the basic Turing machine","textPreview":"Extensions to the basic Turing machine","textChars":38,"textLines":1,"bbox":[126,360,1000,42]}
+{"kind":"shape","id":"sh/l8j214j6","slide":3,"bbox":[96,425,16,16]}
+{"kind":"textbox","id":"sh/k7ql8zil","slide":3,"text":"Undecidability","textPreview":"Undecidability","textChars":14,"textLines":1,"bbox":[126,418,1000,42]}
+{"kind":"shape","id":"sh/z6hkzu10","slide":3,"bbox":[96,483,16,16]}
+{"kind":"textbox","id":"sh/yl8j6p0f","slide":3,"text":"Language not recursively enumerable","textPreview":"Language not recursively enumerable","textChars":35,"textLines":1,"bbox":[126,476,1000,42]}
+{"kind":"notes","id":"nt/dz0j4g","slide":3,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/xnl72g","slide":4,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/mt43exsf","slide":4,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/9gf29cb6","slide":4,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/8v6lg7al","slide":4,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/vixkbmtw","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/aho3ihsb","slide":4,"text":"Problems computers cannot solve","textPreview":"Problems computers cannot solve","textChars":31,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/xkfmdcb2","slide":4,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/wj6lkrah","slide":4,"text":"Problems computers cannot solve is best taught as a formal model problem, not as a memorized definition.","textPreview":"Problems computers cannot solve is best taught as a formal model problem, not as a memorized definition.","textChars":104,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/jmh4fmt8","slide":4,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/il83mhsn","slide":4,"text":"The key mechanism connects input string with rule application so that students can predict the result.","textPreview":"The key mechanism connects input string with rule application so that students can predict the result.","textChars":102,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/gnu1o3yl","slide":4,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/ho3ix8f6","slide":4,"text":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textPreview":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textChars":103,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/ulsjmdgf","slide":4,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/fm10vyx0","slide":4,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/4ru1snyx","slide":4,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/ps3i1sfi","slide":4,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/2pcjqdgr","slide":4,"text":"proof idea","textPreview":"proof idea","textChars":10,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/3ql0zixc","slide":4,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/cve1wnyt","slide":4,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/dwn25sfe","slide":4,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/lcji9s7i","slide":4,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/0ba1gn6x","slide":4,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/za107ipc","slide":4,"text":"This topic explains how problems computers cannot solve changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how problems computers cannot solve changes design decisions, program behaviour, protocol results or proof structure.","textChars":137,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/xnl72g","slide":4,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/glv9hr","slide":5,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/a9wvy9cr","slide":5,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/xwnu9obi","slide":5,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/wved0jux","slide":5,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/n6lc3edg","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/m5cvu9cv","slide":5,"text":"Problems computers cannot solve: transition view","textPreview":"Problems computers cannot solve: transition view","textChars":48,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/98nu5obm","slide":5,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/87udwju1","slide":5,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/r2pwfytk","slide":5,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/61gv6dcz","slide":5,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/8zqdg3ip","slide":5,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/t0zu98ja","slide":5,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/glv9hr","slide":5,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/1ow0ue","slide":6,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/p0zmpsjy","slide":6,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/2d8ned0n","slide":6,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/3eh4ni18","slide":6,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/c3a5knip","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/d4jmtsja","slide":6,"text":"Problems computers cannot solve: worked example","textPreview":"Problems computers cannot solve: worked example","textChars":47,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/q1snid0j","slide":6,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/b214ri14","slide":6,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/s76l83il","slide":6,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/t8fmh8jq","slide":6,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/lobitcby","slide":6,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/0ni1k7ut","slide":6,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/zm90r2t8","slide":6,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/yl0jixcn","slide":6,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/9sbixcba","slide":6,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/8r21orup","slide":6,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/nqt0vmt4","slide":6,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/mpkjmhcj","slide":6,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/xgv21wb6","slide":6,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/wfm1srul","slide":6,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/gzul4vix","slide":6,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/hk32x0ji","slide":6,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/uxs325kr","slide":6,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/vy1kvq1c","slide":6,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/4nul8fi9","slide":6,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/5o3m1kje","slide":6,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/ilc36503","slide":6,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/3ml4za1o","slide":6,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/krqlwb2p","slide":6,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/lsj2pgja","slide":6,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/nmpovels","slide":6,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/mlgn29k7","slide":6,"text":"Use this structure whenever problems computers cannot solve appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever problems computers cannot solve appears as a 10-mark explanation or trace problem.","textChars":110,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/1ow0ue","slide":6,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/073d9z","slide":7,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/l8ralwv2","slide":7,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/y5gbahcr","slide":7,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/z6psjmdw","slide":7,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/c3yt8rul","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/x47ahcv6","slide":7,"text":"The Turing machine","textPreview":"The Turing machine","textChars":18,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/a1gr6hcf","slide":7,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/b2psfmd0","slide":7,"text":"The Turing machine is best taught as a tape problem, not as a memorized definition.","textPreview":"The Turing machine is best taught as a tape problem, not as a memorized definition.","textChars":83,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/wz2tkbup","slide":7,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/h0batgva","slide":7,"text":"The key mechanism connects head with state so that students can predict the result.","textPreview":"The key mechanism connects head with state so that students can predict the result.","textChars":83,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/xc3ilcf6","slide":7,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/wbuhs7el","slide":7,"text":"For exams, draw the model first, label each step, and then explain transition and halt/accept/reject.","textPreview":"For exams, draw the model first, label each step, and then explain transition and halt/accept/reject.","textChars":101,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/bql0j2x0","slide":7,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/apczqxwv","slide":7,"text":"head","textPreview":"head","textChars":4,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/9o3ihsfa","slide":7,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/onaho7ep","slide":7,"text":"transition","textPreview":"transition","textChars":10,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/nm10f2x4","slide":7,"text":"halt/accept/reject","textPreview":"halt/accept/reject","textChars":18,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/mlszmxwj","slide":7,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/tknitwfe","slide":7,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/8je10ret","slide":7,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/cz6tczqh","slide":7,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/d0fal47m","slide":7,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/qxobap8b","slide":7,"text":"This topic explains how the turing machine changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how the turing machine changes design decisions, program behaviour, protocol results or proof structure.","textChars":124,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/073d9z","slide":7,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/ynewaw","slide":8,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/zytcb6p0","slide":8,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/0j2tkb6l","slide":8,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/1kbudg76","slide":8,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/qt0be1oj","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ru9s76p4","slide":8,"text":"The Turing machine: transition view","textPreview":"The Turing machine: transition view","textChars":35,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/cvitgb6p","slide":8,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/dwba9g7a","slide":8,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/ap4bq5on","slide":8,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/bqdcjap8","slide":8,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/7e9kv21s","slide":8,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/6d0jmxk7","slide":8,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/ynewaw","slide":8,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/uwbmsb","slide":9,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/u18fq98j","slide":9,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/h4jyl4ra","slide":9,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/g3axszqp","slide":9,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/7yhgfu98","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/6x8fmp8n","slide":9,"text":"The Turing machine: worked example","textPreview":"The Turing machine: worked example","textChars":34,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/t0zyh4ry","slide":9,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/8zqxozqt","slide":9,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/juxgbu9w","slide":9,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/ytofip8b","slide":9,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/cn69kje5","slide":9,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/xofadofq","slide":9,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/aloritwf","slide":9,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/bmxsbexk","slide":9,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/oj69gje9","slide":9,"text":"Identify head","textPreview":"Identify head","textChars":13,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/pkfa9ofu","slide":9,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/2h4re9w3","slide":9,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/nids7exo","slide":9,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/8fqts3ed","slide":9,"text":"head","textPreview":"head","textChars":4,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/9gzal8fy","slide":9,"text":"Apply state","textPreview":"Apply state","textChars":11,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/hwva5872","slide":9,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/gbm9w36h","slide":9,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/vads3ypw","slide":9,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/u94rutor","slide":9,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/t8va1876","slide":9,"text":"Check transition","textPreview":"Check transition","textChars":16,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/87m9s36l","slide":9,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/76dszyp0","slide":9,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/65krqtof","slide":9,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/l4baxo7u","slide":9,"text":"transition","textPreview":"transition","textChars":10,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/k329oj69","slide":9,"text":"Conclude halt/accept/reject","textPreview":"Conclude halt/accept/reject","textChars":27,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/axgfil0v","slide":9,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/bypgbq1g","slide":9,"text":"Use this structure whenever the turing machine appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever the turing machine appears as a 10-mark explanation or trace problem.","textChars":97,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/uwbmsb","slide":9,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/f4n0vs","slide":10,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/3i5wz2lo","slide":10,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/4jex8729","slide":10,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/5kny1s3u","slide":10,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/qlwfaxkz","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/rm5g32lk","slide":10,"text":"The Turing machine: common confusion","textPreview":"The Turing machine: common confusion","textChars":36,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/snexc725","slide":10,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/dony5c3q","slide":10,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/6psfyd4v","slide":10,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/7qlwrilg","slide":10,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/rahof29k","slide":10,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/q987mxsz","slide":10,"text":"Treating The Turing machine as only a definition","textPreview":"Treating The Turing machine as only a definition","textChars":48,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/dwz6hcrq","slide":10,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/svqpo7a5","slide":10,"text":"Explain tape -> state -> halt/accept/reject","textPreview":"Explain tape -> state -> halt/accept/reject","textChars":43,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/36hobi9o","slide":10,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/i587ids3","slide":10,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/58z6dsre","slide":10,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/47qpknat","slide":10,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/v2xo7i9c","slide":10,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/u1o7edsr","slide":10,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/yd47qdcz","slide":10,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/jyx8zit4","slide":10,"text":"Use terms such as tape, head, state","textPreview":"Use terms such as tape, head, state","textChars":35,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/f4n0vs","slide":10,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/n1vjdy","slide":11,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/wvapczet","slide":11,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/vuho3ed8","slide":11,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/at87a9wn","slide":11,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/5kjq9ova","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/kjapgjep","slide":11,"text":"Programming techniques for Turing machines","textPreview":"Programming techniques for Turing machines","textChars":42,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/ji1o7ed4","slide":11,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/ihs7e9wj","slide":11,"text":"Programming techniques for Turing machines is best taught as a tape problem, not as a memorized definition.","textPreview":"Programming techniques for Turing machines is best taught as a tape problem, not as a memorized definition.","textChars":107,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/to3qdov6","slide":11,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/snupk3u1","slide":11,"text":"The key mechanism connects head with state so that students can predict the result.","textPreview":"The key mechanism connects head with state so that students can predict the result.","textChars":83,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/i5832xwj","slide":11,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/j6hkvix4","slide":11,"text":"For exams, draw the model first, label each step, and then explain transition and halt/accept/reject.","textPreview":"For exams, draw the model first, label each step, and then explain transition and halt/accept/reject.","textChars":101,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/k7al4nep","slide":11,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/5sj2xsfu","slide":11,"text":"head","textPreview":"head","textChars":4,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/6ts36xwf","slide":11,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/7u1kz2x0","slide":11,"text":"transition","textPreview":"transition","textChars":10,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/sval87el","slide":11,"text":"halt/accept/reject","textPreview":"halt/accept/reject","textChars":18,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/twj21cf6","slide":11,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/mxojudwb","slide":11,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/nyxknyxw","slide":11,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/r2d0vudo","slide":11,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/qh4zm9c3","slide":11,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/d4vix4vu","slide":11,"text":"This topic explains how programming techniques for turing machines changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how programming techniques for turing machines changes design decisions, program behaviour, protocol results or proof...","textChars":148,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/n1vjdy","slide":11,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/omku6f","slide":12,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/u583adk7","slide":12,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/hszml8jy","slide":12,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/grqlcn2d","slide":12,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/3uh4ni14","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/it83ed0j","slide":12,"text":"Programming techniques for Turing machines: transition view","textPreview":"Programming techniques for Turing machines: transition view","textChars":59,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/5wjmpsju","slide":12,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/4vq5gni9","slide":12,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/jyx4by1k","slide":12,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/yxo32tkz","slide":12,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/4fihovyt","slide":12,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/5gryh0fe","slide":12,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/omku6f","slide":12,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/yb69m7","slide":13,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/4fetgji5","slide":13,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/3e5c7y1k","slide":13,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/2dwbet0z","slide":13,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/dk7ud8jm","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/cjytk3i1","slide":13,"text":"Programming techniques for Turing machines: worked example","textPreview":"Programming techniques for Turing machines: worked example","textChars":58,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/ri5cby1g","slide":13,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/qhwbit0v","slide":13,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/187uh8ji","slide":13,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/07yto3ix","slide":13,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/qtw7alcr","slide":13,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/bu5o3qtc","slide":13,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/cvepcvux","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/dw7650bi","slide":13,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/yxg7e5c3","slide":13,"text":"Identify head","textPreview":"Identify head","textChars":13,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/zipo7qto","slide":13,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/0jypgvut","slide":13,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/lk7690be","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/e1cn21cj","slide":13,"text":"head","textPreview":"head","textChars":4,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/fmlov6d4","slide":13,"text":"Apply state","textPreview":"Apply state","textChars":11,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/j614329w","slide":13,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/i583axsb","slide":13,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/5sjm5cr2","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/47alc7ah","slide":13,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/v2hkzit0","slide":13,"text":"Check transition","textPreview":"Check transition","textChars":16,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/u1836xsf","slide":13,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/h4z21sbq","slide":13,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/w3ql8nal","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/fyl4bm94","slide":13,"text":"transition","textPreview":"transition","textChars":10,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/exc3ihsj","slide":13,"text":"Conclude halt/accept/reject","textPreview":"Conclude halt/accept/reject","textChars":27,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/c3m1cjq1","slide":13,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/d4vi5orm","slide":13,"text":"Use this structure whenever programming techniques for turing machines appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever programming techniques for turing machines appears as a 10-mark explanation or trace problem.","textChars":121,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/yb69m7","slide":13,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/k5tmgc","slide":14,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/dkvuh47u","slide":14,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/qh4v6p83","slide":14,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ridcfupo","slide":14,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/4f2t4fqx","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/5gvudk7i","slide":14,"text":"Extensions to the basic Turing machine","textPreview":"Extensions to the basic Turing machine","textChars":38,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/itkb2587","slide":14,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/3etcbaps","slide":14,"text":"Extensions to the basic Turing machine is best taught as a tape problem, not as a memorized definition.","textPreview":"Extensions to the basic Turing machine is best taught as a tape problem, not as a memorized definition.","textChars":103,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/ob6dgjqh","slide":14,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/9cfupo72","slide":14,"text":"The key mechanism connects head with state so that students can predict the result.","textPreview":"The key mechanism connects head with state so that students can predict the result.","textChars":83,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/po3a587a","slide":14,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/o3utc3qp","slide":14,"text":"For exams, draw the model first, label each step, and then explain transition and halt/accept/reject.","textPreview":"For exams, draw the model first, label each step, and then explain transition and halt/accept/reject.","textChars":101,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/n2ls3yp4","slide":14,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/21sbat8j","slide":14,"text":"head","textPreview":"head","textChars":4,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/10ja187y","slide":14,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/0za983qd","slide":14,"text":"transition","textPreview":"transition","textChars":10,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/fy1szy98","slide":14,"text":"halt/accept/reject","textPreview":"halt/accept/reject","textChars":18,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/exsr6t8n","slide":14,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/lwnads7i","slide":14,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/kvetknqx","slide":14,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/4b6lwv25","slide":14,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/5cfm50jq","slide":14,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/i943ulkz","slide":14,"text":"This topic explains how extensions to the basic turing machine changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how extensions to the basic turing machine changes design decisions, program behaviour, protocol results or proof str...","textChars":144,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/k5tmgc","slide":14,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/4mx1br","slide":15,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/i5sj6d0j","slide":15,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/5s3218zu","slide":15,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/47ul8ni9","slide":15,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/v21kvyhs","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/u1sj2t07","slide":15,"text":"Extensions to the basic Turing machine: transition view","textPreview":"Extensions to the basic Turing machine: transition view","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/h4j2x8zy","slide":15,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/g3a143id","slide":15,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/7yhkryhw","slide":15,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/6x8jyt0b","slide":15,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/w7m94vul","slide":15,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/h8vad0v6","slide":15,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/4mx1br","slide":15,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/0gy5sc","slide":16,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/lonelsji","slide":16,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/y1cvaxkr","slide":16,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/zm5wj21c","slide":16,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/czud8n2l","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/d03ehsj6","slide":16,"text":"Extensions to the basic Turing machine: worked example","textPreview":"Extensions to the basic Turing machine: worked example","textChars":54,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/qxcv6dkv","slide":16,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/bylwfi1g","slide":16,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/ovud432p","slide":16,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/pw3ed8ja","slide":16,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/d8bmxsr6","slide":16,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/s7254nql","slide":16,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/rmt4vi9g","slide":16,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/qlk32d8v","slide":16,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/5kbmt8ra","slide":16,"text":"Identify head","textPreview":"Identify head","textChars":13,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/4j2l03qp","slide":16,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/3it4ri94","slide":16,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/ih03yd8j","slide":16,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/hgrmp8ry","slide":16,"text":"head","textPreview":"head","textChars":4,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/gfilw3qt","slide":16,"text":"Apply state","textPreview":"Apply state","textChars":11,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/8zm5c3y9","slide":16,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/90vm58zu","slide":16,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/mx4natgj","slide":16,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/7yd43yh4","slide":16,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/kvml83yd","slide":16,"text":"Check transition","textPreview":"Check transition","textChars":16,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/lwvm1ozy","slide":16,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/ytk36t07","slide":16,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/zut4zyhs","slide":16,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/4r65knyh","slide":16,"text":"transition","textPreview":"transition","textChars":10,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/5sfmdsz2","slide":16,"text":"Conclude halt/accept/reject","textPreview":"Conclude halt/accept/reject","textChars":27,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/zy1gzq5g","slide":16,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/exszql4v","slide":16,"text":"Use this structure whenever extensions to the basic turing machine appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever extensions to the basic turing machine appears as a 10-mark explanation or trace problem.","textChars":117,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/0gy5sc","slide":16,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/ry8f2g","slide":17,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/61ojupwz","slide":17,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/t4z2p4vq","slide":17,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/s3q1wze5","slide":17,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/jyx0jado","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ixojq5w3","slide":17,"text":"Undecidability","textPreview":"Undecidability","textChars":14,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/50filkvu","slide":17,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/kz61sfe9","slide":17,"text":"Undecidability is best taught as a formal model problem, not as a memorized definition.","textPreview":"Undecidability is best taught as a formal model problem, not as a memorized definition.","textChars":87,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/3u1kveds","slide":17,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/2t8j29w7","slide":17,"text":"The key mechanism connects input string with rule application so that students can predict the result.","textPreview":"The key mechanism connects input string with rule application so that students can predict the result.","textChars":102,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/k3ipkryx","slide":17,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/l4r6twzi","slide":17,"text":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textPreview":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textChars":103,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/y1g7ihgr","slide":17,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/j29ormhc","slide":17,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/wzypg7yl","slide":17,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/x076pcz6","slide":17,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/axg7ehgv","slide":17,"text":"proof idea","textPreview":"proof idea","textChars":10,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/bypon2hg","slide":17,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/ovypc7yp","slide":17,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/9w76lcza","slide":17,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/5gfet4nm","slide":17,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/4f6d0zmh","slide":17,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/3exwru5w","slide":17,"text":"This topic explains how undecidability changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how undecidability changes design decisions, program behaviour, protocol results or proof structure.","textChars":120,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/ry8f2g","slide":17,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/w027r8","slide":18,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/cvu98bip","slide":18,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/bul8zq14","slide":18,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/qtsr6lkj","slide":18,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/psjqxgjy","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ora94b2d","slide":18,"text":"Undecidability: transition view","textPreview":"Undecidability: transition view","textChars":31,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/3q18v61s","slide":18,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/2psr21k7","slide":18,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/9ona90j2","slide":18,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/8ne9gfih","slide":18,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/mpcnmlgf","slide":18,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/nql4v6h0","slide":18,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/w027r8","slide":18,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/piabwz","slide":19,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/1wved4bu","slide":19,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/etkfipcj","slide":19,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/zutwbut4","slide":19,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/cr2xgzud","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/dsbe94by","slide":19,"text":"Undecidability: worked example","textPreview":"Undecidability: worked example","textChars":30,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/qpkfepc7","slide":19,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/rqtw7uts","slide":19,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/wnmxsjuh","slide":19,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/xofylob2","slide":19,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/hgbmlcbe","slide":19,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/gf25s7ut","slide":19,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/vet4j2to","slide":19,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/udknqxc3","slide":19,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/tcbmhsbi","slide":19,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/8r25o7ux","slide":19,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/7qt4f2tc","slide":19,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/6pk3mxcr","slide":19,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/d8fmtwbm","slide":19,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/cnm50ra1","slide":19,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/crupwvid","slide":19,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/xsn6p0jy","slide":19,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/apc7u507","slide":19,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/bqlona1s","slide":19,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/onupsvih","slide":19,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/po3610jm","slide":19,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/2lc7ql0b","slide":19,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/nmlozq1w","slide":19,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/0japobi5","slide":19,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/1kj6xgjq","slide":19,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/3u1876lc","slide":19,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/it87y147","slide":19,"text":"Use this structure whenever undecidability appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever undecidability appears as a 10-mark explanation or trace problem.","textChars":93,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/piabwz","slide":19,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/5p9py1","slide":20,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/8nat0zy1","slide":20,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/7m1s7uxg","slide":20,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/6lsbypgv","slide":20,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/lkja5kfa","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/kja9wzyp","slide":20,"text":"Undecidability: common confusion","textPreview":"Undecidability: common confusion","textChars":32,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/jihs3uxk","slide":20,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/yh8rupgz","slide":20,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/5g3ahofu","slide":20,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/4fut8jy9","slide":20,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/i1sf2xoj","slide":20,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/j2lgv2p4","slide":20,"text":"Treating Undecidability as only a definition","textPreview":"Treating Undecidability as only a definition","textChars":44,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/k3ux4n6p","slide":20,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/543yxsna","slide":20,"text":"Explain formal model -> rule application -> proof idea","textPreview":"Explain formal model -> rule application -> proof idea","textChars":54,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/axsfydon","slide":20,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/vy1grip8","slide":20,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/wzax0n6t","slide":20,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/x0jyts7e","slide":20,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/etwfahor","slide":20,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/fu5g3m5c","slide":20,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/r2d4fa1s","slide":20,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/q1436507","slide":20,"text":"Use terms such as formal model, input string, rule application","textPreview":"Use terms such as formal model, input string, rule application","textChars":62,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/5p9py1","slide":20,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/di6zou","slide":21,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/zux8v250","slide":21,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/0v6po76l","slide":21,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/1wfqxcn6","slide":21,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/qp47ixoj","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/rqdor254","slide":21,"text":"Language not recursively enumerable","textPreview":"Language not recursively enumerable","textChars":35,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/cr6pk76p","slide":21,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/dsfqtsna","slide":21,"text":"Language not recursively enumerable is best taught as a formal model problem, not as a memorized definition.","textPreview":"Language not recursively enumerable is best taught as a formal model problem, not as a memorized definition.","textChars":108,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/2147edon","slide":21,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/32doni58","slide":21,"text":"The key mechanism connects input string with rule application so that students can predict the result.","textPreview":"The key mechanism connects input string with rule application so that students can predict the result.","textChars":102,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/fexk7ud4","slide":21,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/edojy9cj","slide":21,"text":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textPreview":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textChars":103,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/1gz294va","slide":21,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/0fq10zup","slide":21,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/n2hkbedg","slide":21,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/2h8329cv","slide":21,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/p4z2dov6","slide":21,"text":"proof idea","textPreview":"proof idea","textChars":10,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/o3ql4jul","slide":21,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/j6dkzadw","slide":21,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/il4jqpwb","slide":21,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/m1cnydwz","slide":21,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/72l47ixk","slide":21,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/83u50ne5","slide":21,"text":"This topic explains how language not recursively enumerable changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how language not recursively enumerable changes design decisions, program behaviour, protocol results or proof struct...","textChars":141,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/di6zou","slide":21,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/2fs9by","slide":22,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/l4za1s3e","slide":22,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/yhorqx4n","slide":22,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/jixszil8","slide":22,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/87q9w72p","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/t8za5c3a","slide":22,"text":"Language not recursively enumerable: transition view","textPreview":"Language not recursively enumerable: transition view","textChars":52,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/658ruxkz","slide":22,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/76hs32lk","slide":22,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/gbat0721","slide":22,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/hcja9c3m","slide":22,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/d4n2pojm","slide":22,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/s3elwji1","slide":22,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/2fs9by","slide":22,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/hwi0s5","slide":23,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/2x0fmd8n","slide":23,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/pkryh8ry","slide":23,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ojixo3qd","slide":23,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/bm9gji94","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/al0fqd8j","slide":23,"text":"Language not recursively enumerable: worked example","textPreview":"Language not recursively enumerable: worked example","textChars":51,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/xorylsra","slide":23,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/wnixsnqp","slide":23,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/rqpw7y90","slide":23,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/qpwfet8f","slide":23,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/8n6lgfux","slide":23,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/98fmp0vi","slide":23,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/ml43e5cr","slide":23,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/7md4nadc","slide":23,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/gb6lkfu9","slide":23,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/hcfmtkvu","slide":23,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/u9o3i5c3","slide":23,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/vax4rado","slide":23,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/cfml8vup","slide":23,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/xgvmhgva","slide":23,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/dcn2lcne","slide":23,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/cbe1c76t","slide":23,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ralkj258","slide":23,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/q9cjahon","slide":23,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/1gn2pwna","slide":23,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/0fe1gr6p","slide":23,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/ze5knm54","slide":23,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/edwjehoj","slide":23,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/9472twn6","slide":23,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/o3y1krm1","slide":23,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/6p8zet43","slide":23,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/7qhgnylo","slide":23,"text":"Use this structure whenever language not recursively enumerable appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever language not recursively enumerable appears as a 10-mark explanation or trace problem.","textChars":114,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/hwi0s5","slide":23,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/7jez8u","slide":24,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/lk32dsji","slide":24,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/yhsj2dk7","slide":24,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/zi1kbi1s","slide":24,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/8nu18729","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/9832hsju","slide":24,"text":"Problems computers cannot solve vs The Turing machine","textPreview":"Problems computers cannot solve vs The Turing machine","textChars":53,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/mlcj6xk3","slide":24,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/7mlkf21o","slide":24,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/gbelc725","slide":24,"text":"Problems computers cannot solve","textPreview":"Problems computers cannot solve","textChars":31,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/hcn2lcjq","slide":24,"text":"The Turing machine","textPreview":"The Turing machine","textChars":18,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/pwzexwru","slide":24,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/ovqdorq9","slide":24,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/nuhwvm9o","slide":24,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/2t8vm18j","slide":24,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/x0je1gr6","slide":24,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/czqxsbql","slide":24,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/byhwz690","slide":24,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/ax8vq18f","slide":24,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/d4fepcrm","slide":24,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/s36dg7q1","slide":24,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/4ja5sbm9","slide":24,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/5k3mlg3u","slide":24,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/ixsnq143","slide":24,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/3i14j6lo","slide":24,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/snu5wvml","slide":24,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/do36pg3q","slide":24,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/7jez8u","slide":24,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/6mwzom","slide":25,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/y5sf61kr","slide":25,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/l8je1wji","slide":25,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/k7ax8bix","slide":25,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/b2hwvm1g","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/a18f2hkv","slide":25,"text":"Extensions to the basic Turing machine vs Undecidability","textPreview":"Extensions to the basic Turing machine vs Undecidability","textChars":56,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/x4jexwjm","slide":25,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/c3ax4r21","slide":25,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/vylw7q1k","slide":25,"text":"Extensions to the basic Turing machine","textPreview":"Extensions to the basic Turing machine","textChars":38,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/uxcfel0z","slide":25,"text":"Undecidability","textPreview":"Undecidability","textChars":14,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/gfyxwfqp","slide":25,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/1g7y5k7u","slide":25,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/utgfu58j","slide":25,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/fupg3ap4","slide":25,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/srexsvqd","slide":25,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/ts7y107y","slide":25,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/6pwfq587","slide":25,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/7q5wzqps","slide":25,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/knexovqh","slide":25,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/5onex072","slide":25,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/l8vm5sfe","slide":25,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/07mlcnet","slide":25,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/z6d43ix8","slide":25,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/y543adwn","slide":25,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/d4vm18fi","slide":25,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/c3ml8nex","slide":25,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/6mwzom","slide":25,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/9lu5un","slide":26,"title":"BCS503 | Theory of Computation","textShapes":15}
+{"kind":"textbox","id":"sh/2dkbutcz","slide":26,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/p0ba58vq","slide":26,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/oz2tw3u5","slide":26,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/b2tc7idw","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/q1kbydcb","slide":26,"text":"Module Summary","textPreview":"Module Summary","textChars":14,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"textbox","id":"sh/d4bu9svm","slide":26,"text":"Definitions","textPreview":"Definitions","textChars":11,"textLines":1,"bbox":[163,208,170,92]}
+{"kind":"textbox","id":"sh/c32t0nu1","slide":26,"text":"Models","textPreview":"Models","textChars":6,"textLines":1,"bbox":[359,208,170,92]}
+{"kind":"textbox","id":"sh/z6dcbids","slide":26,"text":"Mechanisms","textPreview":"Mechanisms","textChars":10,"textLines":1,"bbox":[555,208,170,92]}
+{"kind":"textbox","id":"sh/y54b2xc7","slide":26,"text":"Examples","textPreview":"Examples","textChars":8,"textLines":1,"bbox":[751,208,170,92]}
+{"kind":"textbox","id":"sh/ovq10ju5","slide":26,"text":"Exam answer","textPreview":"Exam answer","textChars":11,"textLines":1,"bbox":[947,208,170,92]}
+{"kind":"shape","id":"sh/pwz29obq","slide":26,"bbox":[333,254,26,0]}
+{"kind":"shape","id":"sh/2t8jytcz","slide":26,"bbox":[529,254,26,0]}
+{"kind":"shape","id":"sh/3uhk7ytk","slide":26,"bbox":[725,254,26,0]}
+{"kind":"shape","id":"sh/cjql43u1","slide":26,"bbox":[921,254,26,0]}
+{"kind":"shape","id":"sh/dkj2d8bm","slide":26,"bbox":[110,393,16,16]}
+{"kind":"textbox","id":"sh/qx8j2tcv","slide":26,"text":"Remember: Problems computers cannot solve","textPreview":"Remember: Problems computers cannot solve","textChars":41,"textLines":1,"bbox":[140,386,950,42]}
+{"kind":"shape","id":"sh/byhkbytg","slide":26,"bbox":[110,438,16,16]}
+{"kind":"textbox","id":"sh/0nal8nud","slide":26,"text":"Remember: The Turing machine","textPreview":"Remember: The Turing machine","textChars":28,"textLines":1,"bbox":[140,431,950,42]}
+{"kind":"shape","id":"sh/loj2h8bi","slide":26,"bbox":[110,483,16,16]}
+{"kind":"textbox","id":"sh/94f2l832","slide":26,"text":"Remember: Programming techniques for Turing machines","textPreview":"Remember: Programming techniques for Turing machines","textChars":52,"textLines":1,"bbox":[140,476,950,42]}
+{"kind":"shape","id":"sh/8j61s32h","slide":26,"bbox":[110,528,16,16]}
+{"kind":"textbox","id":"sh/7ixkjylw","slide":26,"text":"Remember: Extensions to the basic Turing machine","textPreview":"Remember: Extensions to the basic Turing machine","textChars":48,"textLines":1,"bbox":[140,521,950,42]}
+{"kind":"shape","id":"sh/mhojqd4b","slide":26,"bbox":[110,573,16,16]}
+{"kind":"textbox","id":"sh/h8z2ps3y","slide":26,"text":"Remember: Undecidability","textPreview":"Remember: Undecidability","textChars":24,"textLines":1,"bbox":[140,566,950,42]}
+{"kind":"shape","id":"sh/w7q1wn2d","slide":26,"bbox":[110,618,16,16]}
+{"kind":"textbox","id":"sh/v6xknils","slide":26,"text":"Remember: Language not recursively enumerable","textPreview":"Remember: Language not recursively enumerable","textChars":45,"textLines":1,"bbox":[140,611,950,42]}
+{"kind":"notes","id":"nt/9lu5un","slide":26,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/a7a3sx","slide":27,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/zap8nyp0","slide":27,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/0bypwjql","slide":27,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/1crqpo7q","slide":27,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/md07yt8b","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ne98rypw","slide":27,"text":"Important Definitions","textPreview":"Important Definitions","textChars":21,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/ozi903qh","slide":27,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/90rqt872","slide":27,"text":"Term","textPreview":"Term","textChars":4,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/2hw7m987","slide":27,"text":"Classroom definition","textPreview":"Classroom definition","textChars":20,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/3i58fe9s","slide":27,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/fih8ryxs","slide":27,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/uh87ytg7","slide":27,"text":"Problems computers cannot solve","textPreview":"Problems computers cannot solve","textChars":31,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/hkzqt8fi","slide":27,"text":"A named concept with conditions, components and result.","textPreview":"A named concept with conditions, components and result.","textChars":55,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/gjqp03yx","slide":27,"text":"Define + draw + example","textPreview":"Define + draw + example","textChars":23,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/7uxonexg","slide":27,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/6to7u9gv","slide":27,"text":"The Turing machine","textPreview":"The Turing machine","textChars":18,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/tgz6pofm","slide":27,"text":"A repeatable process that transforms input into an observable output.","textPreview":"A repeatable process that transforms input into an observable output.","textChars":69,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/sf6pwjy1","slide":27,"text":"Steps + result","textPreview":"Steps + result","textChars":14,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/jqxojexk","slide":27,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ipo7q9gz","slide":27,"text":"Programming techniques for Turing machines","textPreview":"Programming techniques for Turing machines","textChars":42,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/ml47290r","slide":27,"text":"A simplified representation used to reason about a real system.","textPreview":"A simplified representation used to reason about a real system.","textChars":63,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/nmd8ve1c","slide":27,"text":"Assumptions + limits","textPreview":"Assumptions + limits","textChars":20,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/8nmp4zix","slide":27,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/9ovqx4ji","slide":27,"text":"Extensions to the basic Turing machine","textPreview":"Extensions to the basic Turing machine","textChars":38,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/apor6903","slide":27,"text":"The property used to judge correctness, usefulness or performance.","textPreview":"The property used to judge correctness, usefulness or performance.","textChars":66,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/vqx8ze18","slide":27,"text":"Compare + justify","textPreview":"Compare + justify","textChars":17,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/a7a3sx","slide":27,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/p45224","slide":28,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/p0jqtgfy","slide":28,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/2xs7ylgn","slide":28,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/3y18rqxs","slide":28,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/c3ap4vep","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/d43qx0fa","slide":28,"text":"Important Algorithms / Diagrams / Formulas","textPreview":"Important Algorithms / Diagrams / Formulas","textChars":42,"textLines":1,"bbox":[78,104,940,48]}
+{"kind":"shape","id":"sh/q1s72lgj","slide":28,"bbox":[98,217,16,16]}
+{"kind":"textbox","id":"sh/r218vqx4","slide":28,"text":"Draw the central architecture/process before writing long explanation.","textPreview":"Draw the central architecture/process before writing long explanation.","textChars":70,"textLines":1,"bbox":[128,210,1020,42]}
+{"kind":"shape","id":"sh/0rup8fel","slide":28,"bbox":[98,295,16,16]}
+{"kind":"textbox","id":"sh/1s3q10f6","slide":28,"text":"For every algorithm: problem, input, initial state, iterations, final result, interpretation.","textPreview":"For every algorithm: problem, input, initial state, iterations, final result, interpretation.","textChars":93,"textLines":1,"bbox":[128,288,1020,42]}
+{"kind":"shape","id":"sh/x03elsz6","slide":28,"bbox":[98,373,16,16]}
+{"kind":"textbox","id":"sh/wfaxcnil","slide":28,"text":"For code/commands: command or snippet, explanation, execution, output.","textPreview":"For code/commands: command or snippet, explanation, execution, output.","textChars":70,"textLines":1,"bbox":[128,366,1020,42]}
+{"kind":"shape","id":"sh/ve1wjihg","slide":28,"bbox":[98,451,16,16]}
+{"kind":"textbox","id":"sh/adsfad0v","slide":28,"text":"For comparison questions: state basis of comparison first, then fill the table.","textPreview":"For comparison questions: state basis of comparison first, then fill the table.","textChars":79,"textLines":1,"bbox":[128,444,1020,42]}
+{"kind":"notes","id":"nt/p45224","slide":28,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/vuh2ky","slide":29,"title":"BCS503 | Theory of Computation","textShapes":9}
+{"kind":"textbox","id":"sh/rmhgb2lg","slide":29,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/cnqh4721","slide":29,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/dozydc3m","slide":29,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ep8z6hkr","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/zqhgfm1c","slide":29,"text":"Common Mistakes","textPreview":"Common Mistakes","textChars":15,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/0rqh872x","slide":29,"bbox":[98,213,16,16]}
+{"kind":"textbox","id":"sh/lszihcji","slide":29,"text":"Writing only a definition when the question asks to explain working.","textPreview":"Writing only a definition when the question asks to explain working.","textChars":68,"textLines":1,"bbox":[128,206,1010,42]}
+{"kind":"shape","id":"sh/mdszahk3","slide":29,"bbox":[98,291,16,16]}
+{"kind":"textbox","id":"sh/ne10jm1o","slide":29,"text":"Skipping diagrams or leaving labels too vague.","textPreview":"Skipping diagrams or leaving labels too vague.","textChars":46,"textLines":1,"bbox":[128,284,1010,42]}
+{"kind":"shape","id":"sh/jahs7uxs","slide":29,"bbox":[98,369,16,16]}
+{"kind":"textbox","id":"sh/y98bypg7","slide":29,"text":"Mixing similar terms without a comparison basis.","textPreview":"Mixing similar terms without a comparison basis.","textChars":48,"textLines":1,"bbox":[128,362,1010,42]}
+{"kind":"shape","id":"sh/lcza94fi","slide":29,"bbox":[98,447,16,16]}
+{"kind":"textbox","id":"sh/kbqt0zyd","slide":29,"text":"Giving an example that does not match the formal condition.","textPreview":"Giving an example that does not match the formal condition.","textChars":59,"textLines":1,"bbox":[128,440,1010,42]}
+{"kind":"shape","id":"sh/b6xs3axg","slide":29,"bbox":[98,525,16,16]}
+{"kind":"textbox","id":"sh/a5obu5gv","slide":29,"text":"Forgetting assumptions, limitations or failure cases.","textPreview":"Forgetting assumptions, limitations or failure cases.","textChars":53,"textLines":1,"bbox":[128,518,1010,42]}
+{"kind":"notes","id":"nt/vuh2ky","slide":29,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/sgt43c","slide":30,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/2hwrul4j","slide":30,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/pknapg3u","slide":30,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/oje9wbmp","slide":30,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/bmpsrql0","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/alwryl4f","slide":30,"text":"Exam Preparation","textPreview":"Exam Preparation","textChars":16,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/x87at036","slide":30,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/cny90vml","slide":30,"text":"Question type","textPreview":"Question type","textChars":13,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/rqlsfmlw","slide":30,"text":"Answer structure","textPreview":"Answer structure","textChars":16,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/qpcrm14b","slide":30,"text":"What earns marks","textPreview":"What earns marks","textChars":16,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/sby54jed","slide":30,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/dc76dovy","slide":30,"text":"Define/explain","textPreview":"Define/explain","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/q9gn29w7","slide":30,"text":"Definition + labeled diagram + example","textPreview":"Definition + labeled diagram + example","textChars":38,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/rapobeds","slide":30,"text":"Exact terms and scope","textPreview":"Exact terms and scope","textChars":21,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/0fy58je9","slide":30,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/1gr6hovu","slide":30,"text":"Compare","textPreview":"Compare","textChars":7,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/edgn69w3","slide":30,"text":"Basis + table + conclusion","textPreview":"Basis + table + conclusion","textChars":26,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/fepofedo","slide":30,"text":"Clear differentiators","textPreview":"Clear differentiators","textChars":21,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/gje5wze5","slide":30,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/hkn654vq","slide":30,"text":"Algorithm/trace","textPreview":"Algorithm/trace","textChars":15,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/x4vudw32","slide":30,"text":"Input + iterations + final result","textPreview":"Input + iterations + final result","textChars":33,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/w3mdkr2h","slide":30,"text":"Correct step sequence","textPreview":"Correct step sequence","textChars":21,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/b2dcbmlc","slide":30,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/a14vihkr","slide":30,"text":"Application","textPreview":"Application","textChars":11,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/lsfuhw3e","slide":30,"text":"Scenario + model + justification","textPreview":"Scenario + model + justification","textChars":32,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/krmdor2t","slide":30,"text":"Why the choice fits","textPreview":"Why the choice fits","textChars":19,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/sgt43c","slide":30,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/b7plxn","slide":31,"title":"BCS503 | Theory of Computation","textShapes":9}
+{"kind":"textbox","id":"sh/xg3a5gr2","slide":31,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/adsbul8r","slide":31,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ve1s369w","slide":31,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/8batsbql","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/9cja1gr6","slide":31,"text":"Practice Questions","textPreview":"Practice Questions","textChars":18,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/m9sbq1sf","slide":31,"bbox":[98,213,16,16]}
+{"kind":"textbox","id":"sh/na1sz690","slide":31,"text":"Explain Problems computers cannot solve with a neat diagram.","textPreview":"Explain Problems computers cannot solve with a neat diagram.","textChars":60,"textLines":1,"bbox":[128,206,1010,42]}
+{"kind":"shape","id":"sh/07atora9","slide":31,"bbox":[98,291,16,16]}
+{"kind":"textbox","id":"sh/l8jaxwru","slide":31,"text":"Compare two approaches from Turing Machines and Undecidability and justify when each is suitable.","textPreview":"Compare two approaches from Turing Machines and Undecidability and justify when each is suitable.","textChars":97,"textLines":1,"bbox":[128,284,1010,42]}
+{"kind":"shape","id":"sh/dk7m9knm","slide":31,"bbox":[98,369,16,16]}
+{"kind":"textbox","id":"sh/sjyl0f61","slide":31,"text":"Solve a small worked example involving Programming techniques for Turing machines.","textPreview":"Solve a small worked example involving Programming techniques for Turing machines.","textChars":82,"textLines":1,"bbox":[128,362,1010,42]}
+{"kind":"shape","id":"sh/ripk7a5g","slide":31,"bbox":[98,447,16,16]}
+{"kind":"textbox","id":"sh/qhw3ypov","slide":31,"text":"List common mistakes and how to avoid them in Turing Machines and Undecidability.","textPreview":"List common mistakes and how to avoid them in Turing Machines and Undecidability.","textChars":81,"textLines":1,"bbox":[128,440,1010,42]}
+{"kind":"shape","id":"sh/5gn25kna","slide":31,"bbox":[98,525,16,16]}
+{"kind":"textbox","id":"sh/4felwf6p","slide":31,"text":"Redraw the full module map from memory in five minutes.","textPreview":"Redraw the full module map from memory in five minutes.","textChars":55,"textLines":1,"bbox":[128,518,1010,42]}
+{"kind":"notes","id":"nt/b7plxn","slide":31,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/hp8ake","slide":32,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/7alsjqp8","slide":32,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/8butsv6t","slide":32,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/9c3al07e","slide":32,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/uxcbu5oz","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/vylsnapk","slide":32,"text":"Problems computers cannot solve vs The Turing machine","textPreview":"Problems computers cannot solve vs The Turing machine","textChars":53,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/gzutwf65","slide":32,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/h0nupk7a","slide":32,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/i1wbypov","slide":32,"text":"Problems computers cannot solve","textPreview":"Problems computers cannot solve","textChars":31,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/325crapg","slide":32,"text":"The Turing machine","textPreview":"The Turing machine","textChars":18,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/raxs7mdo","slide":32,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/q94by1w3","slide":32,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/dcfa9wve","slide":32,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/sb6t0re9","slide":32,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/36ds3mdc","slide":32,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/i54bahwr","slide":32,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/58va5wvi","slide":32,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/47mtcrex","slide":32,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/n2hcf6dw","slide":32,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/21ob6lwb","slide":32,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/yxsve5gj","slide":32,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/zy1w7ax4","slide":32,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/kzadgfy9","slide":32,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/l0je9kfu","slide":32,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/m1cvipgf","slide":32,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/72lwbux0","slide":32,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/hp8ake","slide":32,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/3kdot1","slide":33,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/2xcv6pwf","slide":33,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/p03uhkvq","slide":33,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ozud8fel","slide":33,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/falcbado","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/e9sb25w3","slide":33,"text":"The Turing machine: worked example","textPreview":"The Turing machine: worked example","textChars":34,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/1w3udkvu","slide":33,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/0but4fe9","slide":33,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/r61c7qds","slide":33,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/q5sbylw7","slide":33,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/wjqtcza1","slide":33,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/xkzu54rm","slide":33,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/ahobapsv","slide":33,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/bihc3u9g","slide":33,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/of6t8za5","slide":33,"text":"Identify head","textPreview":"Identify head","textChars":13,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/9gfu1krq","slide":33,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/mdob6psz","slide":33,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/nexszu9k","slide":33,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/8batkjq9","slide":33,"text":"head","textPreview":"head","textChars":4,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/tcjudoru","slide":33,"text":"Apply state","textPreview":"Apply state","textChars":11,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/hgv21kfm","slide":33,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/gfml8fe1","slide":33,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/vedkzaxw","slide":33,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/ut436pwb","slide":33,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/tsv2xkfq","slide":33,"text":"Check transition","textPreview":"Check transition","textChars":16,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/8rm14fe5","slide":33,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/7qtkvaxk","slide":33,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/6pkj25wz","slide":33,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/lob2t0fe","slide":33,"text":"transition","textPreview":"transition","textChars":10,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/kn210ve9","slide":33,"text":"Conclude halt/accept/reject","textPreview":"Conclude halt/accept/reject","textChars":27,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/at0za1cr","slide":33,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/bu9036dc","slide":33,"text":"Use this structure whenever the turing machine appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever the turing machine appears as a 10-mark explanation or trace problem.","textChars":97,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/3kdot1","slide":33,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/7plknq","slide":34,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/3qlgnmt8","slide":34,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/4rexwrat","slide":34,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/pcnypwbe","slide":34,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ulcfqhsr","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/fmlgjmtc","slide":34,"text":"Programming techniques for Turing machines: common confusion","textPreview":"Programming techniques for Turing machines: common confusion","textChars":60,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/gnuxsrax","slide":34,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/ho3ylwbi","slide":34,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/6hsfmxsf","slide":34,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/7i1wf2t0","slide":34,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/ry5svqlg","slide":34,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/qxwb2lkv","slide":34,"text":"Treating Programming techniques for Turing machines as only a definition","textPreview":"Treating Programming techniques for Turing machines as only a definition","textChars":72,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/d0nax03m","slide":34,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/szet4v21","slide":34,"text":"Explain tape -> state -> halt/accept/reject","textPreview":"Explain tape -> state -> halt/accept/reject","textChars":43,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/f2pszals","slide":34,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/e1wb65k7","slide":34,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/147a103i","slide":34,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/03yt8f2x","slide":34,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/v6lsn6l8","slide":34,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/u5cru1kn","slide":34,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/y1kv294b","slide":34,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/jmtwbe5w","slide":34,"text":"Use terms such as tape, head, state","textPreview":"Use terms such as tape, head, state","textChars":35,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/7plknq","slide":34,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/ke2zsw","slide":35,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/wbi58zmd","slide":35,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/va94fu58","slide":35,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/a90n6p4n","slide":35,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/98rmdkn2","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/o7i54zmh","slide":35,"text":"Extensions to the basic Turing machine: transition view","textPreview":"Extensions to the basic Turing machine: transition view","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/nm94bu5w","slide":35,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/ml0n2p4b","slide":35,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/t4v69on6","slide":35,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/s3m5gjml","slide":35,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/mh0fe1o7","slide":35,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/729w76ps","slide":35,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/ke2zsw","slide":35,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/y37qxx","slide":36,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/ixgj290b","slide":36,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/50r2x4zm","slide":36,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/kzi14zi1","slide":36,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/vupkruhk","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/atgjyp0z","slide":36,"text":"Undecidability vs Language not recursively enumerable","textPreview":"Undecidability vs Language not recursively enumerable","textChars":53,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/xw72t4zq","slide":36,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/wvy10zi5","slide":36,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/n65knaho","slide":36,"text":"Undecidability","textPreview":"Undecidability","textChars":14,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/m5wju503","slide":36,"text":"Language not recursively enumerable","textPreview":"Language not recursively enumerable","textChars":35,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/wji50j6t","slide":36,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/xkrm9o7e","slide":36,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/ah0ny9on","slide":36,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/vi947ep8","slide":36,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/8fi5wz6h","slide":36,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/9grm5472","slide":36,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/mtg3upob","slide":36,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/ne943upw","slide":36,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/sb258361","slide":36,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/tcbmh876","slide":36,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/18rmlozq","slide":36,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/g7y5s3y5","slide":36,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/f6p4jyhk","slide":36,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/e5gnqtgz","slide":36,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/t47mhoze","slide":36,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/s3ylojyt","slide":36,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/y37qxx","slide":36,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/szwux6","slide":37,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/vyh8bmtg","slide":37,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/wzq9kra1","slide":37,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/h0zqdwbm","slide":37,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/m9orehsj","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/7ax87mt4","slide":37,"text":"Language not recursively enumerable: worked example","textPreview":"Language not recursively enumerable: worked example","textChars":51,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/8bq9grap","slide":37,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/9czq9cba","slide":37,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/y5oraxsn","slide":37,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/z6x832t8","slide":37,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/vi5szm18","slide":37,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/uhwrqhkn","slide":37,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/hk7a1cje","slide":37,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/gjetsr2t","slide":37,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/36ps3m14","slide":37,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/ilgbuhkz","slide":37,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/587a5wja","slide":37,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/47ytwr2p","slide":37,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/jqlsr2l0","slide":37,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/ypcrixkf","slide":37,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/25kvq543","slide":37,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/n6twzalo","slide":37,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/o72dsfm9","slide":37,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/p8be103u","slide":37,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/e10vml47","slide":37,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/f29cvqlc","slide":37,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/032dovmx","slide":37,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/14bux03i","slide":37,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/qd0vil4v","slide":37,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/re9crq5g","slide":37,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/tsfyxony","slide":37,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/8r6xoj6d","slide":37,"text":"Use this structure whenever language not recursively enumerable appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever language not recursively enumerable appears as a 10-mark explanation or trace problem.","textChars":114,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/szwux6","slide":37,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/ga6mnx","slide":38,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/vq1c7ytw","slide":38,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/wrat03uh","slide":38,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/xsju98b2","slide":38,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/itsb2dcn","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ju1cbit8","slide":38,"text":"Problems computers cannot solve: common confusion","textPreview":"Problems computers cannot solve: common confusion","textChars":49,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/kvat4nat","slide":38,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/5wjudsbe","slide":38,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/yxobqtcj","slide":38,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/zyxczet4","slide":38,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/j210nqlw","slide":38,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/i1sjelkb","slide":38,"text":"Treating Problems computers cannot solve as only a definition","textPreview":"Treating Problems computers cannot solve as only a definition","textChars":61,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/5ojip032","slide":38,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/4na1gv2h","slide":38,"text":"Explain formal model -> rule application -> proof idea","textPreview":"Explain formal model -> rule application -> proof idea","textChars":54,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/vy10jqlk","slide":38,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/ux8zalkz","slide":38,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/h0jil03q","slide":38,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/wzahcv25","slide":38,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/7uh0f6lo","slide":38,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/mt8z6143","slide":38,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/q5oji1ov","slide":38,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/bqh0r65g","slide":38,"text":"Use terms such as formal model, input string, rule application","textPreview":"Use terms such as formal model, input string, rule application","textChars":62,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/ga6mnx","slide":38,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/u9wkr1","slide":39,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/lkb2d4fi","slide":39,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/yhkj29w7","slide":39,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/jitkbuxc","slide":39,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/wfi10ze1","slide":39,"text":"39","textPreview":"39","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/xgb294fm","slide":39,"text":"The Turing machine: transition view","textPreview":"The Turing machine: transition view","textChars":35,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/ad0jypgv","slide":39,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/be9k7uxg","slide":39,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/gbm1cje5","slide":39,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/hcv2lofq","slide":39,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/x0z61s72","slide":39,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/wzq5s76x","slide":39,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/u9wkr1","slide":39,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/knmj3j","slide":40,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/7i10361g","slide":40,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/8ju1cb21","slide":40,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/tk3i5gjm","slide":40,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ulcjelkr","slide":40,"text":"40","textPreview":"40","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/vml07q1c","slide":40,"text":"Programming techniques for Turing machines vs Extensions to the basic Turing machine","textPreview":"Programming techniques for Turing machines vs Extensions to the basic Turing machine","textChars":84,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/gnu1gv2x","slide":40,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/h83i90ji","slide":40,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/ap8z21kn","slide":40,"text":"Programming techniques for Turing machines","textPreview":"Programming techniques for Turing machines","textChars":42,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/bqh0vm18","slide":40,"text":"Extensions to the basic Turing machine","textPreview":"Extensions to the basic Turing machine","textChars":38,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/falw3e18","slide":40,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/u9cva90n","slide":40,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/hwne5oje","slide":40,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/gbudcjit","slide":40,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/76lwzu1c","slide":40,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/65cv6p0r","slide":40,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/t83e14ji","slide":40,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/s7ud8zix","slide":40,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/j21cvu10","slide":40,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/i1sv2p0v","slide":40,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/mdsfep4n","slide":40,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/ny1wnul8","slide":40,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/8zaxgfmt","slide":40,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/90jepk3y","slide":40,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/a1sfip4j","slide":40,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/v21wrul4","slide":40,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/knmj3j","slide":40,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/kj020j","slide":41,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/58f2pgn2","slide":41,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/i5oju1or","slide":41,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/j6xkn65w","slide":41,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/w3m1sr6l","slide":41,"text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/x4f2lwn6","slide":41,"text":"Extensions to the basic Turing machine: worked example","textPreview":"Extensions to the basic Turing machine: worked example","textChars":54,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/a14jq1of","slide":41,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/v2dkj650","slide":41,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/8zm1or69","slide":41,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/90v2hwnu","slide":41,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/xg7q5kjq","slide":41,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/cfe9wfi5","slide":41,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/bu583u1k","slide":41,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/atwrup0z","slide":41,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/psnq1kje","slide":41,"text":"Identify head","textPreview":"Identify head","textChars":13,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/ore9sfit","slide":41,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/nq58za1o","slide":41,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/2pwrq503","slide":41,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/1onqx0ji","slide":41,"text":"head","textPreview":"head","textChars":4,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/0nu9ovix","slide":41,"text":"Apply state","textPreview":"Apply state","textChars":11,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/s7y9kfqt","slide":41,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/t87qdkre","slide":41,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/65gri58n","slide":41,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/r6p8ba98","slide":41,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/43y9gvqh","slide":41,"text":"Check transition","textPreview":"Check transition","textChars":16,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/547q90r2","slide":41,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/i1wrel8r","slide":41,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/j2p87q9c","slide":41,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/ozi9szq1","slide":41,"text":"transition","textPreview":"transition","textChars":10,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/p0ral4rm","slide":41,"text":"Conclude halt/accept/reject","textPreview":"Conclude halt/accept/reject","textChars":27,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/zudcbyto","slide":41,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/yt4bits3","slide":41,"text":"Use this structure whenever extensions to the basic turing machine appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever extensions to the basic turing machine appears as a 10-mark explanation or trace problem.","textChars":117,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/kj020j","slide":41,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/be9deh","slide":42,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/9crmp0nm","slide":42,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/m9g3ulob","slide":42,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/na94nq5w","slide":42,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/07ylsb65","slide":42,"text":"42","textPreview":"42","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/l872lg7q","slide":42,"text":"Undecidability: common confusion","textPreview":"Undecidability: common confusion","textChars":32,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/y5g3q1oz","slide":42,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/z6pkj6pk","slide":42,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/432l4f69","slide":42,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/54bmxknu","slide":42,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/9wrypsvi","slide":42,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/ovyxgnex","slide":42,"text":"Treating Undecidability as only a definition","textPreview":"Treating Undecidability as only a definition","textChars":44,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/nupgnidc","slide":42,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/mtgfedwr","slide":42,"text":"Explain formal model -> rule application -> proof idea","textPreview":"Explain formal model -> rule application -> proof idea","textChars":54,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/1s7yl8v6","slide":42,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/0ryxc3e1","slide":42,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/zqpgjydg","slide":42,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/epgfadwv","slide":42,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/5obyxcvq","slide":42,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/kn2ho7e5","slide":42,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/4ra1kb2h","slide":42,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/5sjitg3m","slide":42,"text":"Use terms such as formal model, input string, rule application","textPreview":"Use terms such as formal model, input string, rule application","textChars":62,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/be9deh","slide":42,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/pvvacq","slide":43,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/zqxcvyl0","slide":43,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/0r6do3ml","slide":43,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/1sfux836","slide":43,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/mtovqd4b","slide":43,"text":"43","textPreview":"43","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/nuxczilw","slide":43,"text":"Language not recursively enumerable: transition view","textPreview":"Language not recursively enumerable: transition view","textChars":52,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/ov6dsnmh","slide":43,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/9wfe1s32","slide":43,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/2xkvet47","slide":43,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/3ydcnels","slide":43,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/riloz65o","slide":43,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/qhsnq1o3","slide":43,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/pvvacq","slide":43,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/qzfnfn","slide":44,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/vm1obyxs","slide":44,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/wnapkjyd","slide":44,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/hoj6dofy","slide":44,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/mx87e9gb","slide":44,"text":"44","textPreview":"44","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/7iho7exg","slide":44,"text":"Problems computers cannot solve vs The Turing machine","textPreview":"Problems computers cannot solve vs The Turing machine","textChars":53,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/8japgjy1","slide":44,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/9kj69ofm","slide":44,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/6dc7qdgf","slide":44,"text":"Problems computers cannot solve","textPreview":"Problems computers cannot solve","textChars":31,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/rel8jix0","slide":44,"text":"The Turing machine","textPreview":"The Turing machine","textChars":18,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/7mdsn6p4","slide":44,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/6l4be1oj","slide":44,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/tovupg7a","slide":44,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/snmtgb6p","slide":44,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/fqxcrqp0","slide":44,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/upobilov","slide":44,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/hsfut076","slide":44,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/gr6tkv6l","slide":44,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/3uxcvqpc","slide":44,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/2tobmlor","slide":44,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/y9svep8z","slide":44,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/za1wnu9k","slide":44,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/0baxgzq5","slide":44,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/lcjep4rq","slide":44,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/ql8vap83","slide":44,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/rmhwju98","slide":44,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/qzfnfn","slide":44,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/7uj3uh","slide":45,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/sfitgf2p","slide":45,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/7u9s7a14","slide":45,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/6t0be5kj","slide":45,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/5sra50jy","slide":45,"text":"45","textPreview":"45","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/krytcv2d","slide":45,"text":"The Turing machine: worked example","textPreview":"The Turing machine: worked example","textChars":34,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/jqps3a1s","slide":45,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/ipgba5k7","slide":45,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/xo7a10j2","slide":45,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/wny98v2h","slide":45,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/yl4nad4j","slide":45,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/jmdo3yl4","slide":45,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/knm5c3mp","slide":45,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/lov6583a","slide":45,"text":"tape","textPreview":"tape","textChars":4,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/axkn6t4n","slide":45,"text":"Identify head","textPreview":"Identify head","textChars":13,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/byd4zyl8","slide":45,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/wzm583mt","slide":45,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/xkv6183e","slide":45,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/mtkn2t4r","slide":45,"text":"head","textPreview":"head","textChars":4,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/nut4velw","slide":45,"text":"Apply state","textPreview":"Apply state","textChars":11,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/rypk3u1o","slide":45,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/qxg3upkj","slide":45,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/d0r25kju","slide":45,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/czilwf29","slide":45,"text":"state","textPreview":"state","textChars":5,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/z29k7u10","slide":45,"text":"Check transition","textPreview":"Check transition","textChars":16,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/e103ypkf","slide":45,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/14r294j6","slide":45,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/03il0z2l","slide":45,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/f65kvqlw","slide":45,"text":"transition","textPreview":"transition","textChars":10,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/u5wjm5kb","slide":45,"text":"Conclude halt/accept/reject","textPreview":"Conclude halt/accept/reject","textChars":27,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/kza9g7ex","slide":45,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/l0jq9cv2","slide":45,"text":"Use this structure whenever the turing machine appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever the turing machine appears as a 10-mark explanation or trace problem.","textChars":97,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/7uj3uh","slide":45,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/h597r9","slide":46,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/43ets3q5","slide":46,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/j25cjy90","slide":46,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/i1wbqt8f","slide":46,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/hgnuhoru","slide":46,"text":"46","textPreview":"46","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/wfeto3q9","slide":46,"text":"Programming techniques for Turing machines: common confusion","textPreview":"Programming techniques for Turing machines: common confusion","textChars":60,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/ve5cfy9o","slide":46,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/udcbmt83","slide":46,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/9c3udori","slide":46,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/8butkjqd","slide":46,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/mlgvuxwz","slide":46,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/nmpw32dk","slide":46,"text":"Treating Programming techniques for Turing machines as only a definition","textPreview":"Treating Programming techniques for Turing machines as only a definition","textChars":72,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/onydw7e5","slide":46,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/9o7e5cvq","slide":46,"text":"Explain tape -> state -> halt/accept/reject","textPreview":"Explain tape -> state -> halt/accept/reject","textChars":43,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/ehwvqxw3","slide":46,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/zi5wz2d8","slide":46,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/0jeds7et","slide":46,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/1k7e1cve","slide":46,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/qtwvmdwr","slide":46,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ru5cvidc","slide":46,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/vmhk7ups","slide":46,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/ul8jep87","slide":46,"text":"Use terms such as tape, head, state","textPreview":"Use terms such as tape, head, state","textChars":35,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/h597r9","slide":46,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/5x1ms4","slide":47,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/mhsjel43","slide":47,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/9k3i90nu","slide":47,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/oju1gvm9","slide":47,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ze10365s","slide":47,"text":"47","textPreview":"47","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/edsjal47","slide":47,"text":"Extensions to the basic Turing machine: transition view","textPreview":"Extensions to the basic Turing machine: transition view","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/1gji5gni","slide":47,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/0fa1cbmx","slide":47,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/ja5kfa5w","slide":47,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/y9cjm54b","slide":47,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/cba5gjq9","slide":47,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/dcjm9o7u","slide":47,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/5x1ms4","slide":47,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/toysgj","slide":48,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/yhc3et4b","slide":48,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/lknmpo32","slide":48,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/kjelgjmh","slide":48,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/7m54ryls","slide":48,"text":"48","textPreview":"48","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/6lw3it47","slide":48,"text":"Undecidability vs Language not recursively enumerable","textPreview":"Undecidability vs Language not recursively enumerable","textChars":53,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/tonmt83y","slide":48,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/8nelk3md","slide":48,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/vq54vil4","slide":48,"text":"Undecidability","textPreview":"Undecidability","textChars":14,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/upw3md4j","slide":48,"text":"Language not recursively enumerable","textPreview":"Language not recursively enumerable","textChars":35,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/onm9sj69","slide":48,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/povq1o7u","slide":48,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/214rq9oj","slide":48,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/32d8zepo","slide":48,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/crm9wj6l","slide":48,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/dsvq5on6","slide":48,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/qp4rutof","slide":48,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/bqd83e50","slide":48,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/0v69036h","slide":48,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/lwfq98n2","slide":48,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/9cbqt8f6","slide":48,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/8b29k3yl","slide":48,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/7at8ryx0","slide":48,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/m9k7itgv","slide":48,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/hgvqx8fi","slide":48,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/wfm9o3yx","slide":48,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/toysgj","slide":48,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/1ik2gy","slide":49,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/fy9g7e5o","slide":49,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/0zihgjm9","slide":49,"text":"Module 5: Turing Machines and Undecidability","textPreview":"Module 5: Turing Machines and Undecidability","textChars":44,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/10ry9onu","slide":49,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/qtgfa947","slide":49,"text":"49","textPreview":"49","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/rupg3u5s","slide":49,"text":"Previous VTU Questions","textPreview":"Previous VTU Questions","textChars":22,"textLines":1,"bbox":[78,104,820,48]}
+{"kind":"textbox","id":"sh/svixczmd","slide":49,"text":"No genuine previous-year VTU questions were found locally for this module during this pass, so this deck does not fabricate PYQs.","textPreview":"No genuine previous-year VTU questions were found locally for this module during this pass, so this deck does not fabricate PYQs.","textChars":129,"textLines":1,"bbox":[96,212,990,90]}
+{"kind":"shape","id":"sh/dwry54ny","slide":49,"bbox":[112,372,16,16]}
+{"kind":"textbox","id":"sh/i5gf6p4v","slide":49,"text":"Use the practice questions as model revision prompts.","textPreview":"Use the practice questions as model revision prompts.","textChars":53,"textLines":1,"bbox":[142,365,950,42]}
+{"kind":"shape","id":"sh/3qpgzu5g","slide":49,"bbox":[112,444,16,16]}
+{"kind":"textbox","id":"sh/zyts7qx8","slide":49,"text":"Add authentic PYQs later only from a verified VTU source.","textPreview":"Add authentic PYQs later only from a verified VTU source.","textChars":57,"textLines":1,"bbox":[142,437,950,42]}
+{"kind":"shape","id":"sh/edkrelgn","slide":49,"bbox":[112,516,16,16]}
+{"kind":"textbox","id":"sh/10va90fe","slide":49,"text":"Do not label instructor-created questions as previous-year questions.","textPreview":"Do not label instructor-created questions as previous-year questions.","textChars":69,"textLines":1,"bbox":[142,509,950,42]}
+{"kind":"notes","id":"nt/1ik2gy","slide":49,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}

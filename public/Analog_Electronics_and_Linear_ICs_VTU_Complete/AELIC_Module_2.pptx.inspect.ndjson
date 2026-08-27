@@ -1,0 +1,857 @@
+{"kind":"deck","id":"pr/60d8wk","name":"Deck"}
+{"kind":"layout","layoutId":"03ffd322-3a20-4c16-bb23-fd3f3138e168","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"18840717-6d8a-432b-9437-a4981c6247b6","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/886vfv","slide":1,"title":"Module 2","textShapes":11}
+{"kind":"textbox","id":"sh/mp8j6p0r","slide":1,"text":"Module 2","textPreview":"Module 2","textChars":8,"textLines":1,"bbox":[82,86,330,60]}
+{"kind":"textbox","id":"sh/9sjih4j2","slide":1,"text":"MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":65,"textLines":1,"bbox":[82,162,780,112]}
+{"kind":"textbox","id":"sh/8ra18zih","slide":1,"text":"9 teaching hours","textPreview":"9 teaching hours","textChars":16,"textLines":1,"bbox":[88,300,220,48]}
+{"kind":"textbox","id":"sh/ve10ju18","slide":1,"text":"• Fixing VGS\n• Fixing VG\n• Drain-to-gate feedback resistor\n• DC bias point\n• Signal current in drain\n• Voltage gain\n• Small-signal equivalent circuit models\n• Transconductance","textPreview":"• Fixing VGS | • Fixing VG | • Drain-to-gate feedback resistor | • DC bias point | • Signal current in drain | • Voltage gain | • Small-s...","textChars":175,"textLines":8,"bbox":[92,378,540,230]}
+{"kind":"textbox","id":"sh/utsja90n","slide":1,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/hgj2l4je","slide":1,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/wfa1czit","slide":1,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/ji1kne14","slide":1,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/ihsje90j","slide":1,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/8va1crat","slide":1,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/twj2lwbe","slide":1,"text":"VTU 1BEC304 • Module 2 • 01/50","textPreview":"VTU 1BEC304 • Module 2 • 01/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/886vfv","slide":1,"text":"[Animation]\nUse this slide as a section reset. Reveal syllabus cluster first, then the big visual.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/moi4yg","slide":2,"title":"COVERED / MISSING = 0","textShapes":49}
+{"kind":"textbox","id":"sh/xsnixwbe","slide":2,"text":"COVERED / MISSING = 0","textPreview":"COVERED / MISSING = 0","textChars":21,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/apwz21c3","slide":2,"text":"Module 2 syllabus audit","textPreview":"Module 2 syllabus audit","textChars":23,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/bq50vmt8","slide":2,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/onuh0rux","slide":2,"text":"VTU syllabus topic","textPreview":"VTU syllabus topic","textChars":18,"textLines":1,"bbox":[82,152,560,28]}
+{"kind":"textbox","id":"sh/9onitwbi","slide":2,"text":"Coverage","textPreview":"Coverage","textChars":8,"textLines":1,"bbox":[702,152,220,28]}
+{"kind":"textbox","id":"sh/mlczyhcr","slide":2,"text":"Status","textPreview":"Status","textChars":6,"textLines":1,"bbox":[985,152,140,28]}
+{"kind":"textbox","id":"sh/nmlgrmtc","slide":2,"text":"1. Fixing VGS","textPreview":"1. Fixing VGS","textChars":13,"textLines":1,"bbox":[88,190,560,24]}
+{"kind":"textbox","id":"sh/0zuhw7ul","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,190,220,24]}
+{"kind":"textbox","id":"sh/1k3ypcb6","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,190,120,24]}
+{"kind":"textbox","id":"sh/9gbihwjq","slide":2,"text":"2. Fixing VG","textPreview":"2. Fixing VG","textChars":12,"textLines":1,"bbox":[88,218,560,24]}
+{"kind":"textbox","id":"sh/8f21obi5","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,218,220,24]}
+{"kind":"textbox","id":"sh/ne90f61k","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,218,120,24]}
+{"kind":"textbox","id":"sh/md0jm10z","slide":2,"text":"3. Drain-to-gate feedback resistor","textPreview":"3. Drain-to-gate feedback resistor","textChars":34,"textLines":1,"bbox":[88,246,560,24]}
+{"kind":"textbox","id":"sh/lcridwje","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,246,220,24]}
+{"kind":"textbox","id":"sh/0bihkrit","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,246,120,24]}
+{"kind":"textbox","id":"sh/za90bm1o","slide":2,"text":"4. DC bias point","textPreview":"4. DC bias point","textChars":16,"textLines":1,"bbox":[88,274,560,24]}
+{"kind":"textbox","id":"sh/y90zih03","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,274,220,24]}
+{"kind":"textbox","id":"sh/d8ri9cji","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,274,120,24]}
+{"kind":"textbox","id":"sh/c7ihgr2x","slide":2,"text":"5. Signal current in drain","textPreview":"5. Signal current in drain","textChars":26,"textLines":1,"bbox":[88,302,560,24]}
+{"kind":"textbox","id":"sh/4r21wrat","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,302,220,24]}
+{"kind":"textbox","id":"sh/psbipwre","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,302,120,24]}
+{"kind":"textbox","id":"sh/2pkjuhsn","slide":2,"text":"6. Voltage gain","textPreview":"6. Voltage gain","textChars":15,"textLines":1,"bbox":[88,330,560,24]}
+{"kind":"textbox","id":"sh/3qt0nm98","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,330,220,24]}
+{"kind":"textbox","id":"sh/gn21s7ah","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,330,120,24]}
+{"kind":"textbox","id":"sh/hobilcr2","slide":2,"text":"7. Small-signal equivalent circuit models","textPreview":"7. Small-signal equivalent circuit models","textChars":41,"textLines":1,"bbox":[88,358,560,24]}
+{"kind":"textbox","id":"sh/ulkzqxsr","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,358,220,24]}
+{"kind":"textbox","id":"sh/fmt0j29c","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,358,120,24]}
+{"kind":"textbox","id":"sh/0jm14bq1","slide":2,"text":"8. Transconductance","textPreview":"8. Transconductance","textChars":19,"textLines":1,"bbox":[88,386,560,24]}
+{"kind":"textbox","id":"sh/1kf2xgrm","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,386,220,24]}
+{"kind":"textbox","id":"sh/beh43ato","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,386,120,24]}
+{"kind":"textbox","id":"sh/ad83u5s3","slide":2,"text":"9. Equivalent circuit model","textPreview":"9. Equivalent circuit model","textChars":27,"textLines":1,"bbox":[88,414,560,24]}
+{"kind":"textbox","id":"sh/xgzm5kbu","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,414,220,24]}
+{"kind":"textbox","id":"sh/wfqlwfa9","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,414,120,24]}
+{"kind":"textbox","id":"sh/jih47atk","slide":2,"text":"10. Basic configurations","textPreview":"10. Basic configurations","textChars":24,"textLines":1,"bbox":[88,442,560,24]}
+{"kind":"textbox","id":"sh/yh83y5sz","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,442,220,24]}
+{"kind":"textbox","id":"sh/lkjm9kbq","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,442,120,24]}
+{"kind":"textbox","id":"sh/kjal0fa5","slide":2,"text":"11. Characterizing amplifiers","textPreview":"11. Characterizing amplifiers","textChars":29,"textLines":1,"bbox":[88,470,560,24]}
+{"kind":"textbox","id":"sh/zmxkvqtg","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,470,220,24]}
+{"kind":"textbox","id":"sh/elo3mlcv","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,470,120,24]}
+{"kind":"textbox","id":"sh/q1svypo3","slide":2,"text":"12. CS amplifier with and without source resistance","textPreview":"12. CS amplifier with and without source resistance","textChars":51,"textLines":1,"bbox":[88,498,560,24]}
+{"kind":"textbox","id":"sh/r21cra5o","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,498,220,24]}
+{"kind":"textbox","id":"sh/c3ud0f69","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,498,120,24]}
+{"kind":"textbox","id":"sh/d43utkne","slide":2,"text":"13. Common-gate amplifier","textPreview":"13. Common-gate amplifier","textChars":25,"textLines":1,"bbox":[88,526,560,24]}
+{"kind":"textbox","id":"sh/e5cv2poz","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,526,220,24]}
+{"kind":"textbox","id":"sh/z6lcvu5k","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,526,120,24]}
+{"kind":"textbox","id":"sh/07ud4z65","slide":2,"text":"14. Source follower","textPreview":"14. Source follower","textChars":19,"textLines":1,"bbox":[88,554,560,24]}
+{"kind":"textbox","id":"sh/183ux4nq","slide":2,"text":"Syllabus + textbook support","textPreview":"Syllabus + textbook support","textChars":27,"textLines":1,"bbox":[710,554,220,24]}
+{"kind":"textbox","id":"sh/m9cv69ob","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1000,554,120,24]}
+{"kind":"textbox","id":"sh/na5wze5w","slide":2,"text":"Final status: no missing topics","textPreview":"Final status: no missing topics","textChars":31,"textLines":1,"bbox":[388,625,500,42]}
+{"kind":"textbox","id":"sh/x47yp87y","slide":2,"text":"VTU 1BEC304 • Module 2 • 02/50","textPreview":"VTU 1BEC304 • Module 2 • 02/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/moi4yg","slide":2,"text":"[Animation]\nThis is the internal cross-check slide. Reveal final status only after all rows are discussed.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/yru6n7","slide":3,"title":"Teaching sequence","textShapes":14}
+{"kind":"textbox","id":"sh/vax0z21s","slide":3,"text":"Teaching sequence","textPreview":"Teaching sequence","textChars":17,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/wb6187id","slide":3,"text":"Roadmap for Module 2","textPreview":"Roadmap for Module 2","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/xcfi1cjy","slide":3,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/m54z2d0b","slide":3,"text":"1. Fixing VGS","textPreview":"1. Fixing VGS","textChars":13,"textLines":1,"bbox":[76,220,190,74]}
+{"kind":"textbox","id":"sh/n6d0vi1w","slide":3,"text":"2. Fixing VG","textPreview":"2. Fixing VG","textChars":12,"textLines":1,"bbox":[308,220,190,74]}
+{"kind":"textbox","id":"sh/87614nih","slide":3,"text":"3. Drain-to-gate feedback bias","textPreview":"3. Drain-to-gate feedback bias","textChars":30,"textLines":1,"bbox":[540,220,190,74]}
+{"kind":"textbox","id":"sh/98fixsj2","slide":3,"text":"4. DC bias point","textPreview":"4. DC bias point","textChars":16,"textLines":1,"bbox":[772,220,190,74]}
+{"kind":"textbox","id":"sh/618jeh0f","slide":3,"text":"5. Signal current and voltage gain","textPreview":"5. Signal current and voltage gain","textChars":34,"textLines":1,"bbox":[1004,220,190,74]}
+{"kind":"textbox","id":"sh/72h07m10","slide":3,"text":"6. Small-signal equivalent models","textPreview":"6. Small-signal equivalent models","textChars":33,"textLines":1,"bbox":[76,356,190,74]}
+{"kind":"textbox","id":"sh/fyxk76pk","slide":3,"text":"7. Transconductance","textPreview":"7. Transconductance","textChars":19,"textLines":1,"bbox":[308,356,190,74]}
+{"kind":"textbox","id":"sh/uxo3e18z","slide":3,"text":"8. Common-source amplifier","textPreview":"8. Common-source amplifier","textChars":26,"textLines":1,"bbox":[540,356,190,74]}
+{"kind":"textbox","id":"sh/10f29g7a","slide":3,"text":"9. Common-gate amplifier","textPreview":"9. Common-gate amplifier","textChars":24,"textLines":1,"bbox":[772,356,190,74]}
+{"kind":"textbox","id":"sh/gz6lgb6p","slide":3,"text":"10. Source follower","textPreview":"10. Source follower","textChars":19,"textLines":1,"bbox":[1004,356,190,74]}
+{"kind":"textbox","id":"sh/32xkb6pg","slide":3,"text":"Each topic becomes: concept -> circuit -> analysis -> example","textPreview":"Each topic becomes: concept -> circuit -> analysis -> example","textChars":61,"textLines":1,"bbox":[232,562,820,54]}
+{"kind":"textbox","id":"sh/21o3i1ov","slide":3,"text":"VTU 1BEC304 • Module 2 • 03/50","textPreview":"VTU 1BEC304 • Module 2 • 03/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/yru6n7","slide":3,"text":"[Animation]\nReveal the roadmap row by row. Use it to set expectations for problem-solving and diagrams.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/22u9mb","slide":4,"title":"Exam quick reference","textShapes":15}
+{"kind":"textbox","id":"sh/dwzy9cn2","slide":4,"text":"Exam quick reference","textPreview":"Exam quick reference","textChars":20,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/q9ozex4b","slide":4,"text":"Module 2 formula and design checkpoints","textPreview":"Module 2 formula and design checkpoints","textChars":39,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ruxg725w","slide":4,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/476hc7m5","slide":4,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,178,52,52]}
+{"kind":"textbox","id":"sh/58fy5snq","slide":4,"text":"id = gm vgs","textPreview":"id = gm vgs","textChars":11,"textLines":1,"bbox":[194,170,830,58]}
+{"kind":"textbox","id":"sh/i5ozax4f","slide":4,"text":"core","textPreview":"core","textChars":4,"textLines":1,"bbox":[1055,184,92,36]}
+{"kind":"textbox","id":"sh/36xg3250","slide":4,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,270,52,52]}
+{"kind":"textbox","id":"sh/g36h8n69","slide":4,"text":"Av roughly -gm RD","textPreview":"Av roughly -gm RD","textChars":17,"textLines":1,"bbox":[194,262,830,58]}
+{"kind":"textbox","id":"sh/h4fy1snu","slide":4,"text":"core","textPreview":"core","textChars":4,"textLines":1,"bbox":[1055,276,92,36]}
+{"kind":"textbox","id":"sh/5czq9kb6","slide":4,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,362,52,52]}
+{"kind":"textbox","id":"sh/4bqp0fu1","slide":4,"text":"Source resistance lowers gain","textPreview":"Source resistance lowers gain","textChars":29,"textLines":1,"bbox":[194,354,830,58]}
+{"kind":"textbox","id":"sh/3ah87atg","slide":4,"text":"check","textPreview":"check","textChars":5,"textLines":1,"bbox":[1055,368,92,36]}
+{"kind":"textbox","id":"sh/i987ypcv","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[110,454,52,52]}
+{"kind":"textbox","id":"sh/hozq5kba","slide":4,"text":"Follower gain is below unity","textPreview":"Follower gain is below unity","textChars":28,"textLines":1,"bbox":[194,446,830,58]}
+{"kind":"textbox","id":"sh/gn6pwfup","slide":4,"text":"check","textPreview":"check","textChars":5,"textLines":1,"bbox":[1055,460,92,36]}
+{"kind":"textbox","id":"sh/vmx83at4","slide":4,"text":"VTU 1BEC304 • Module 2 • 04/50","textPreview":"VTU 1BEC304 • Module 2 • 04/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/22u9mb","slide":4,"text":"[Animation]\nReveal formulas one at a time. Ask students to name the assumptions behind each checkpoint.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/qziba0","slide":5,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/10ri9gza","slide":5,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ed0ze10j","slide":5,"text":"Fixing VGS: core idea","textPreview":"Fixing VGS: core idea","textChars":21,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/fy9076h4","slide":5,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/o321kbil","slide":5,"text":"Fixing VGS sets the MOSFET operating current from the transfer characteristic.","textPreview":"Fixing VGS sets the MOSFET operating current from the transfer characteristic.","textChars":78,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/p4bidgz6","slide":5,"text":"• gate-source voltage\n• bias\n• threshold\n• drain current","textPreview":"• gate-source voltage | • bias | • threshold | • drain current","textChars":56,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/210jil0f","slide":5,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/n2t0b6h0","slide":5,"text":"Bias must place the device in the intended operating region.","textPreview":"Bias must place the device in the intended operating region.","textChars":60,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/c721ovix","slide":5,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/x8bih0z2","slide":5,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/5wrylk3q","slide":5,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/kvihsf25","slide":5,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/ju9gjulk","slide":5,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/i90zqp4z","slide":5,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/t0bip43m","slide":5,"text":"VTU 1BEC304 • Module 2 • 05/50","textPreview":"VTU 1BEC304 • Module 2 • 05/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/qziba0","slide":5,"text":"[Animation]\nStart from the names: each term tells what the circuit controls.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/f3laec","slide":6,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/yxk76pw3","slide":6,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/l0v614ve","slide":6,"text":"Fixing VGS: circuit working","textPreview":"Fixing VGS: circuit working","textChars":27,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/kzmp8zet","slide":6,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7md83edk","slide":6,"text":"Follow the signal path and ask what each device or network contributes.","textPreview":"Follow the signal path and ask what each device or network contributes.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/6147a9wz","slide":6,"text":"• Identify input and output nodes\n• Mark DC bias and AC signal path\n• Track phase, gain, impedance, or threshold\n• Connect the result to the application","textPreview":"• Identify input and output nodes | • Mark DC bias and AC signal path | • Track phase, gain, impedance, or threshold | • Connect the resu...","textChars":152,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/tovq5ovq","slide":6,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/8nmpcje5","slide":6,"text":"Bias must place the device in the intended operating region.","textPreview":"Bias must place the device in the intended operating region.","textChars":60,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/vqx87edg","slide":6,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/up47e9wv","slide":6,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/wfa5kzid","slide":6,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/hgj6t4jy","slide":6,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/ud8nip07","slide":6,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/ve1oru1s","slide":6,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/4ja5ozi9","slide":6,"text":"VTU 1BEC304 • Module 2 • 06/50","textPreview":"VTU 1BEC304 • Module 2 • 06/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/f3laec","slide":6,"text":"[Animation]\nReveal the circuit blocks left to right.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/85gx74","slide":7,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/z6987a5g","slide":7,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/k7ipgvm1","slide":7,"text":"Fixing VGS: analysis method","textPreview":"Fixing VGS: analysis method","textChars":27,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/lsrq90n6","slide":7,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/a1g7al4j","slide":7,"text":"Use a small set of equations and assumptions to solve fixing vgs problems.","textPreview":"Use a small set of equations and assumptions to solve fixing vgs problems.","textChars":74,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/b2p83q54","slide":7,"text":"• Draw the equivalent model\n• Write known circuit relations\n• Substitute device parameters\n• State the result: Bias must place the device in the intended operating region.","textPreview":"• Draw the equivalent model | • Write known circuit relations | • Substitute device parameters | • State the result: Bias must place the ...","textChars":171,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/c3ypcvmp","slide":7,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/x47q50na","slide":7,"text":"Bias must place the device in the intended operating region.","textPreview":"Bias must place the device in the intended operating region.","textChars":60,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/uxk7mp43","slide":7,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/vyt8fu5o","slide":7,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/n61k3elw","slide":7,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/25sju9kb","slide":7,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/p8325o32","slide":7,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/o7alwj2h","slide":7,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/balk7el8","slide":7,"text":"VTU 1BEC304 • Module 2 • 07/50","textPreview":"VTU 1BEC304 • Module 2 • 07/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/85gx74","slide":7,"text":"[Animation]\nReveal model, equations, and result separately.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/p8cbxg","slide":8,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/id8ba5sj","slide":8,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/50zu5kru","slide":8,"text":"Fixing VGS: classroom example","textPreview":"Fixing VGS: classroom example","textChars":29,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/4zqtcfq9","slide":8,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/vaxczq9s","slide":8,"text":"A small numerical or waveform example makes fixing vgs exam-ready.","textPreview":"A small numerical or waveform example makes fixing vgs exam-ready.","textChars":66,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/u9ob6ls7","slide":8,"text":"• Given: gate-source voltage and bias\n• Find the target quantity\n• Check units and region of operation\n• Explain the physical meaning","textPreview":"• Given: gate-source voltage and bias | • Find the target quantity | • Check units and region of operation | • Explain the physical meaning","textChars":133,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/hcfu10ry","slide":8,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/wb6t8vad","slide":8,"text":"Bias must place the device in the intended operating region.","textPreview":"Bias must place the device in the intended operating region.","textChars":60,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/f61cbu9w","slide":8,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/e5svip8r","slide":8,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/k7ap8jmx","slide":8,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/lsjqhon2","slide":8,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/y587694r","slide":8,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/j6h8fe5c","slide":8,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/w3qp4jml","slide":8,"text":"VTU 1BEC304 • Module 2 • 08/50","textPreview":"VTU 1BEC304 • Module 2 • 08/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/p8cbxg","slide":8,"text":"[Animation]\nAnimate the givens first, then the solution path.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/nwh3yu","slide":9,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/u9g7m94v","slide":9,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/hc7qx436","slide":9,"text":"Fixing VG: core idea","textPreview":"Fixing VG: core idea","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/gbypojml","slide":9,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7m58rul4","slide":9,"text":"A fixed gate voltage with source feedback stabilizes the operating point.","textPreview":"A fixed gate voltage with source feedback stabilizes the operating point.","textChars":73,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/6lw7ip4j","slide":9,"text":"• voltage divider\n• source resistor\n• self bias\n• stability","textPreview":"• voltage divider | • source resistor | • self bias | • stability","textChars":59,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/t87qt43a","slide":9,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/snypkzmp","slide":9,"text":"Source feedback reduces sensitivity to device variation.","textPreview":"Source feedback reduces sensitivity to device variation.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ji5onu58","slide":9,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/ihw7ep4n","slide":9,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/wfylsnip","slide":9,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/xg72l8ja","slide":9,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/adg3qd0z","slide":9,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/bepkji14","slide":9,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/orylo3it","slide":9,"text":"VTU 1BEC304 • Module 2 • 09/50","textPreview":"VTU 1BEC304 • Module 2 • 09/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/nwh3yu","slide":9,"text":"[Animation]\nStart from the names: each term tells what the circuit controls.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/da5t1t","slide":10,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/3q58rit8","slide":10,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/4re9knat","slide":10,"text":"Fixing VG: circuit working","textPreview":"Fixing VG: circuit working","textChars":26,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/5snqtsbe","slide":10,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ulc7edsr","slide":10,"text":"Follow the signal path and ask what each device or network contributes.","textPreview":"Follow the signal path and ask what each device or network contributes.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/vml8nitc","slide":10,"text":"• Identify input and output nodes\n• Mark DC bias and AC signal path\n• Track phase, gain, impedance, or threshold\n• Connect the result to the application","textPreview":"• Identify input and output nodes | • Mark DC bias and AC signal path | • Track phase, gain, impedance, or threshold | • Connect the resu...","textChars":152,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/gnupgnah","slide":10,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/ho3qpsb2","slide":10,"text":"Source feedback reduces sensitivity to device variation.","textPreview":"Source feedback reduces sensitivity to device variation.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/6xs7atcf","slide":10,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/7y18jyt0","slide":10,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/bq18fep0","slide":10,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/ap8r69of","slide":10,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/xsjqho7q","slide":10,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/cra98j6l","slide":10,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/zu18jypw","slide":10,"text":"VTU 1BEC304 • Module 2 • 10/50","textPreview":"VTU 1BEC304 • Module 2 • 10/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/da5t1t","slide":10,"text":"[Animation]\nReveal the circuit blocks left to right.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/0yse9w","slide":11,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/jqlwnup0","slide":11,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/4redwzql","slide":11,"text":"Fixing VG: analysis method","textPreview":"Fixing VG: analysis method","textChars":26,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/5snep476","slide":11,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/6twfy98r","slide":11,"text":"Use a small set of equations and assumptions to solve fixing vg problems.","textPreview":"Use a small set of equations and assumptions to solve fixing vg problems.","textChars":73,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/re5wrepw","slide":11,"text":"• Draw the equivalent model\n• Write known circuit relations\n• Substitute device parameters\n• State the result: Source feedback reduces sensitivity to device variation.","textPreview":"• Draw the equivalent model | • Write known circuit relations | • Substitute device parameters | • State the result: Source feedback redu...","textChars":167,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/sfex0zqh","slide":11,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/tgnet472","slide":11,"text":"Source feedback reduces sensitivity to device variation.","textPreview":"Source feedback reduces sensitivity to device variation.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/mxsvm587","slide":11,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/ni1wfa9s","slide":11,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/nud4nudk","slide":11,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/29knupwf","slide":11,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/pwvmp4vq","slide":11,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/ovm5wze5","slide":11,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/f6t4judo","slide":11,"text":"VTU 1BEC304 • Module 2 • 11/50","textPreview":"VTU 1BEC304 • Module 2 • 11/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/0yse9w","slide":11,"text":"[Animation]\nReveal model, equations, and result separately.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/au2zlg","slide":12,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/7yp47eh8","slide":12,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/8zy5gzid","slide":12,"text":"Fixing VG: classroom example","textPreview":"Fixing VG: classroom example","textChars":28,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/907694zy","slide":12,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ytwnap0b","slide":12,"text":"A small numerical or waveform example makes fixing vg exam-ready.","textPreview":"A small numerical or waveform example makes fixing vg exam-ready.","textChars":65,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/zu543u1w","slide":12,"text":"• Given: voltage divider and source resistor\n• Find the target quantity\n• Check units and region of operation\n• Explain the physical meaning","textPreview":"• Given: voltage divider and source resistor | • Find the target quantity | • Check units and region of operation | • Explain the physica...","textChars":140,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/kve5czih","slide":12,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/lwnm54z2","slide":12,"text":"Source feedback reduces sensitivity to device variation.","textPreview":"Source feedback reduces sensitivity to device variation.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ipgnmt0v","slide":12,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/jq9ofyh0","slide":12,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/r2tgnids","slide":12,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/q1kfedw7","slide":12,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/d4vypsvy","slide":12,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/c32xgned","slide":12,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/z6dgr2do","slide":12,"text":"VTU 1BEC304 • Module 2 • 12/50","textPreview":"VTU 1BEC304 • Module 2 • 12/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/au2zlg","slide":12,"text":"[Animation]\nAnimate the givens first, then the solution path.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/dovc7v","slide":13,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/zyxwjq10","slide":13,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/kz6dcbil","slide":13,"text":"Drain-to-gate feedback bias: core idea","textPreview":"Drain-to-gate feedback bias: core idea","textChars":38,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/l0zelgj6","slide":13,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qtov610j","slide":13,"text":"Drain-to-gate feedback adjusts gate voltage when drain current shifts.","textPreview":"Drain-to-gate feedback adjusts gate voltage when drain current shifts.","textChars":70,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/buxcf614","slide":13,"text":"• feedback resistor\n• gate current\n• drain voltage\n• self correction","textPreview":"• feedback resistor | • gate current | • drain voltage | • self correction","textChars":68,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/cv6d8bip","slide":13,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/dwfehgja","slide":13,"text":"Feedback makes bias less fragile.","textPreview":"Feedback makes bias less fragile.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/up8vi50n","slide":13,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/vqhwra18","slide":13,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/v2pwfq9g","slide":13,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/u1gvml8v","slide":13,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/h4reh0r6","slide":13,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/g3ydovql","slide":13,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/369wjq9c","slide":13,"text":"VTU 1BEC304 • Module 2 • 13/50","textPreview":"VTU 1BEC304 • Module 2 • 13/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/dovc7v","slide":13,"text":"[Animation]\nStart from the names: each term tells what the circuit controls.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/rtm65a","slide":14,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/v698v61w","slide":14,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/g7ip4b2h","slide":14,"text":"Drain-to-gate feedback bias: circuit working","textPreview":"Drain-to-gate feedback bias: circuit working","textChars":44,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/h8rqxgj2","slide":14,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/m1g7y1kf","slide":14,"text":"Follow the signal path and ask what each device or network contributes.","textPreview":"Follow the signal path and ask what each device or network contributes.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/72p8r610","slide":14,"text":"• Identify input and output nodes\n• Mark DC bias and AC signal path\n• Track phase, gain, impedance, or threshold\n• Connect the result to the application","textPreview":"• Identify input and output nodes | • Mark DC bias and AC signal path | • Track phase, gain, impedance, or threshold | • Connect the resu...","textChars":152,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/83ip0b2l","slide":14,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/94rqtwj6","slide":14,"text":"Feedback makes bias less fragile.","textPreview":"Feedback makes bias less fragile.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ydg7uhkj","slide":14,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/zep8nmlo","slide":14,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/72l4zyxw","slide":14,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/6hcnqtgb","slide":14,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/t43m1ofm","slide":14,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/s3u5sjyh","slide":14,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/f6l43yxs","slide":14,"text":"VTU 1BEC304 • Module 2 • 14/50","textPreview":"VTU 1BEC304 • Module 2 • 14/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/rtm65a","slide":14,"text":"[Animation]\nReveal the circuit blocks left to right.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/ztq63d","slide":15,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/wz21k7ih","slide":15,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/vytkr21w","slide":15,"text":"Drain-to-gate feedback bias: analysis method","textPreview":"Drain-to-gate feedback bias: analysis method","textChars":44,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/axkjix0b","slide":15,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/5ov2xcjy","slide":15,"text":"Use a small set of equations and assumptions to solve drain-to-gate feedback bias problems.","textPreview":"Use a small set of equations and assumptions to solve drain-to-gate feedback bias problems.","textChars":91,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/kn2lo7id","slide":15,"text":"• Draw the equivalent model\n• Write known circuit relations\n• Substitute device parameters\n• State the result: Feedback makes bias less fragile.","textPreview":"• Draw the equivalent model | • Write known circuit relations | • Substitute device parameters | • State the result: Feedback makes bias ...","textChars":144,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/jmtkv21s","slide":15,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/ilkjmx07","slide":15,"text":"Feedback makes bias less fragile.","textPreview":"Feedback makes bias less fragile.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/tsv21wzu","slide":15,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/srmlsrip","slide":15,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/atw7idg3","slide":15,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/bu5orixo","slide":15,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/cvepkny9","slide":15,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/xw76tsfu","slide":15,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/yxg7mxgf","slide":15,"text":"VTU 1BEC304 • Module 2 • 15/50","textPreview":"VTU 1BEC304 • Module 2 • 15/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/ztq63d","slide":15,"text":"[Animation]\nReveal model, equations, and result separately.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/qr7b6f","slide":16,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/cjmhgruh","slide":16,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ridgnmdw","slide":16,"text":"Drain-to-gate feedback bias: classroom example","textPreview":"Drain-to-gate feedback bias: classroom example","textChars":46,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/qh4zehcb","slide":16,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/18fytwvy","slide":16,"text":"A small numerical or waveform example makes drain-to-gate feedback bias exam-ready.","textPreview":"A small numerical or waveform example makes drain-to-gate feedback bias exam-ready.","textChars":83,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/076hkrud","slide":16,"text":"• Given: feedback resistor and gate current\n• Find the target quantity\n• Check units and region of operation\n• Explain the physical meaning","textPreview":"• Given: feedback resistor and gate current | • Find the target quantity | • Check units and region of operation | • Explain the physical...","textChars":139,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/z6xgrmd8","slide":16,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/e5ozi1cn","slide":16,"text":"Feedback makes bias less fragile.","textPreview":"Feedback makes bias less fragile.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/9czixgba","slide":16,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/obqhobup","slide":16,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/ul8fu1wv","slide":16,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/vmhgn6x0","slide":16,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/wnahwbel","slide":16,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/hojypgv6","slide":16,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/ipszylwr","slide":16,"text":"VTU 1BEC304 • Module 2 • 16/50","textPreview":"VTU 1BEC304 • Module 2 • 16/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/qr7b6f","slide":16,"text":"[Animation]\nAnimate the givens first, then the solution path.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/m7ei1b","slide":17,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/x83a5kbe","slide":17,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/a5sbaps3","slide":17,"text":"DC bias point: core idea","textPreview":"DC bias point: core idea","textChars":24,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/b61s3ato","slide":17,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/o3at8fax","slide":17,"text":"The DC bias point determines available signal swing and linearity.","textPreview":"The DC bias point determines available signal swing and linearity.","textChars":66,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/p4ja1kbi","slide":17,"text":"• Q point\n• load line\n• saturation region\n• signal swing","textPreview":"• Q point | • load line | • saturation region | • signal swing","textChars":56,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/21sb65sr","slide":17,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/n21szatc","slide":17,"text":"Poor bias clips the signal before amplification helps.","textPreview":"Poor bias clips the signal before amplification helps.","textChars":54,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/0zqt4vu1","slide":17,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/10jax0bm","slide":17,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/pwra147u","slide":17,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/ovi98zqp","slide":17,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/3u9szu94","slide":17,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/2t0r698j","slide":17,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/1s7qx4ry","slide":17,"text":"VTU 1BEC304 • Module 2 • 17/50","textPreview":"VTU 1BEC304 • Module 2 • 17/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/m7ei1b","slide":17,"text":"[Animation]\nStart from the names: each term tells what the circuit controls.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/iae7ns","slide":18,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/ls7i1w3m","slide":18,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ypwjqh4b","slide":18,"text":"DC bias point: circuit working","textPreview":"DC bias point: circuit working","textChars":30,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/jqp0zmlg","slide":18,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/8vy1wrmd","slide":18,"text":"Follow the signal path and ask what each device or network contributes.","textPreview":"Follow the signal path and ask what each device or network contributes.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/tw7i5w3y","slide":18,"text":"• Identify input and output nodes\n• Mark DC bias and AC signal path\n• Track phase, gain, impedance, or threshold\n• Connect the result to the application","textPreview":"• Identify input and output nodes | • Mark DC bias and AC signal path | • Track phase, gain, impedance, or threshold | • Connect the resu...","textChars":152,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/6tgju147","slide":18,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/7up036ls","slide":18,"text":"Poor bias clips the signal before amplification helps.","textPreview":"Poor bias clips the signal before amplification helps.","textChars":54,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ozehk7mt","slide":18,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/p0nitc3e","slide":18,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/tg7y1wru","slide":18,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/sfyhsbq9","slide":18,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/7epgz69o","slide":18,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/6dgzq183","slide":18,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/hkri5grq","slide":18,"text":"VTU 1BEC304 • Module 2 • 18/50","textPreview":"VTU 1BEC304 • Module 2 • 18/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/iae7ns","slide":18,"text":"[Animation]\nReveal the circuit blocks left to right.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/xq87rd","slide":19,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/alcrqt0j","slide":19,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/x83a1oja","slide":19,"text":"DC bias point: analysis method","textPreview":"DC bias point: analysis method","textChars":30,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/w7u9sjip","slide":19,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ni1sve1s","slide":19,"text":"Use a small set of equations and assumptions to solve dc bias point problems.","textPreview":"Use a small set of equations and assumptions to solve dc bias point problems.","textChars":77,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/mhsrm90n","slide":19,"text":"• Draw the equivalent model\n• Write known circuit relations\n• Substitute device parameters\n• State the result: Poor bias clips the signal before amplification helps.","textPreview":"• Draw the equivalent model | • Write known circuit relations | • Substitute device parameters | • State the result: Poor bias clips the ...","textChars":165,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/9k3axojy","slide":19,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/8ja9ojid","slide":19,"text":"Poor bias clips the signal before amplification helps.","textPreview":"Poor bias clips the signal before amplification helps.","textChars":54,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/7e5s7i1c","slide":19,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/6dwbyd0r","slide":19,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/c76tcb2p","slide":19,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/x8zalgja","slide":19,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/a5oba1kj","slide":19,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/b6xsj614","slide":19,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/oj6t8b2d","slide":19,"text":"VTU 1BEC304 • Module 2 • 19/50","textPreview":"VTU 1BEC304 • Module 2 • 19/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/xq87rd","slide":19,"text":"[Animation]\nReveal model, equations, and result separately.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/wg3u9a","slide":20,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/ad4rud0b","slide":20,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/x0fa5sz2","slide":20,"text":"DC bias point: classroom example","textPreview":"DC bias point: classroom example","textChars":32,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/czm9wnih","slide":20,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/nad8zih0","slide":20,"text":"A small numerical or waveform example makes dc bias point exam-ready.","textPreview":"A small numerical or waveform example makes dc bias point exam-ready.","textChars":69,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/294rqd0f","slide":20,"text":"• Given: Q point and load line\n• Find the target quantity\n• Check units and region of operation\n• Explain the physical meaning","textPreview":"• Given: Q point and load line | • Find the target quantity | • Check units and region of operation | • Explain the physical meaning","textChars":126,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/pcvq1szq","slide":20,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/obm9sni5","slide":20,"text":"Poor bias clips the signal before amplification helps.","textPreview":"Poor bias clips the signal before amplification helps.","textChars":54,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/76xsb2h4","slide":20,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/m5or2h0j","slide":20,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/8r6xobyt","slide":20,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/9sfehgze","slide":20,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/mpofm1g3","slide":20,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/nqxwf6ho","slide":20,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/0nmxkryx","slide":20,"text":"VTU 1BEC304 • Module 2 • 20/50","textPreview":"VTU 1BEC304 • Module 2 • 20/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/wg3u9a","slide":20,"text":"[Animation]\nAnimate the givens first, then the solution path.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/bz1ehw","slide":21,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/7md8f25g","slide":21,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/8nm98nm1","slide":21,"text":"Signal current and voltage gain: core idea","textPreview":"Signal current and voltage gain: core idea","textChars":42,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/9ovqhsn6","slide":21,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/uporax4r","slide":21,"text":"Small drain-current changes through a load create output voltage gain.","textPreview":"Small drain-current changes through a load create output voltage gain.","textChars":70,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/vqx8j25c","slide":21,"text":"• gm\n• drain current\n• load resistance\n• inversion","textPreview":"• gm | • drain current | • load resistance | • inversion","textChars":50,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/wb69c7mx","slide":21,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/hcfalcni","slide":21,"text":"Gain is controlled mainly by transconductance and load resistance.","textPreview":"Gain is controlled mainly by transconductance and load resistance.","textChars":66,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/idoreh43","slide":21,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/jexsnm5o","slide":21,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/rutc3yxs","slide":21,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/69kvatwn","slide":21,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/twbu58fy","slide":21,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/sv2dc3ed","slide":21,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/j6tczexw","slide":21,"text":"VTU 1BEC304 • Module 2 • 21/50","textPreview":"VTU 1BEC304 • Module 2 • 21/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/bz1ehw","slide":21,"text":"[Animation]\nStart from the names: each term tells what the circuit controls.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/hdip6d","slide":22,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/bqlwzud8","slide":22,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/cruxszut","slide":22,"text":"Signal current and voltage gain: circuit working","textPreview":"Signal current and voltage gain: circuit working","textChars":48,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ds3e14ve","slide":22,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ytcfu9cz","slide":22,"text":"Follow the signal path and ask what each device or network contributes.","textPreview":"Follow the signal path and ask what each device or network contributes.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/zu5w3edk","slide":22,"text":"• Identify input and output nodes\n• Mark DC bias and AC signal path\n• Track phase, gain, impedance, or threshold\n• Connect the result to the application","textPreview":"• Identify input and output nodes | • Mark DC bias and AC signal path | • Track phase, gain, impedance, or threshold | • Connect the resu...","textChars":152,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/0vexwjup","slide":22,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/lwne5ova","slide":22,"text":"Gain is controlled mainly by transconductance and load resistance.","textPreview":"Gain is controlled mainly by transconductance and load resistance.","textChars":66,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/mhwfy9cv","slide":22,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/ni5g7edg","slide":22,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/futwze94","slide":22,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/et0vq98j","slide":22,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/1gbe1ora","slide":22,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/gv2xsjqp","slide":22,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/rq9wve98","slide":22,"text":"VTU 1BEC304 • Module 2 • 22/50","textPreview":"VTU 1BEC304 • Module 2 • 22/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/hdip6d","slide":22,"text":"[Animation]\nReveal the circuit blocks left to right.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/huojcx","slide":23,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/xcfylgzm","slide":23,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/apofq10b","slide":23,"text":"Signal current and voltage gain: analysis method","textPreview":"Signal current and voltage gain: analysis method","textChars":48,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/baxgj6hw","slide":23,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/kfqhwvid","slide":23,"text":"Use a small set of equations and assumptions to solve signal current and voltage gain problems.","textPreview":"Use a small set of equations and assumptions to solve signal current and voltage gain problems.","textChars":95,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/lgzypgzy","slide":23,"text":"• Draw the equivalent model\n• Write known circuit relations\n• Substitute device parameters\n• State the result: Gain is controlled mainly by transconductance and load resistance.","textPreview":"• Draw the equivalent model | • Write known circuit relations | • Substitute device parameters | • State the result: Gain is controlled m...","textChars":177,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/yd8zul07","slide":23,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/zehgnqhs","slide":23,"text":"Gain is controlled mainly by transconductance and load resistance.","textPreview":"Gain is controlled mainly by transconductance and load resistance.","textChars":66,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/8jqh0vip","slide":23,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/9kjyt0zu","slide":23,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/t0ba98r2","slide":23,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/sz2903ax","slide":23,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/ryts7y9c","slide":23,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/6xkrytsr","slide":23,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/14vad8re","slide":23,"text":"VTU 1BEC304 • Module 2 • 23/50","textPreview":"VTU 1BEC304 • Module 2 • 23/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/huojcx","slide":23,"text":"[Animation]\nReveal model, equations, and result separately.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/6a0ozi","slide":24,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/1sj694jy","slide":24,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ep8nypk7","slide":24,"text":"Signal current and voltage gain: classroom example","textPreview":"Signal current and voltage gain: classroom example","textChars":50,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/fqho7u1s","slide":24,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/snq5wf21","slide":24,"text":"A small numerical or waveform example makes signal current and voltage gain exam-ready.","textPreview":"A small numerical or waveform example makes signal current and voltage gain exam-ready.","textChars":87,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/doz65kjm","slide":24,"text":"• Given: gm and drain current\n• Find the target quantity\n• Check units and region of operation\n• Explain the physical meaning","textPreview":"• Given: gm and drain current | • Find the target quantity | • Check units and region of operation | • Explain the physical meaning","textChars":125,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/q18nu5kb","slide":24,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/r2ho3a1w","slide":24,"text":"Gain is controlled mainly by transconductance and load resistance.","textPreview":"Gain is controlled mainly by transconductance and load resistance.","textChars":66,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/cjup8j2l","slide":24,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/xk36hoj6","slide":24,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/lgbal03e","slide":24,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/kf2tsv2t","slide":24,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/zutsjql8","slide":24,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/yt0bqlk3","slide":24,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/xsrahg3i","slide":24,"text":"VTU 1BEC304 • Module 2 • 24/50","textPreview":"VTU 1BEC304 • Module 2 • 24/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/6a0ozi","slide":24,"text":"[Animation]\nAnimate the givens first, then the solution path.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/5qhe6w","slide":25,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/knyxcby9","slide":25,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/jmpgj6xo","slide":25,"text":"Small-signal equivalent models: core idea","textPreview":"Small-signal equivalent models: core idea","textChars":41,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ylgfalg3","slide":25,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/tc7yp0fq","slide":25,"text":"A MOSFET model replaces the device with a controlled current source.","textPreview":"A MOSFET model replaces the device with a controlled current source.","textChars":68,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/8byxgvy5","slide":25,"text":"• controlled source\n• input resistance\n• output resistance\n• source resistance","textPreview":"• controlled source | • input resistance | • output resistance | • source resistance","textChars":78,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/7qpgnqxk","slide":25,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/6pgfelgf","slide":25,"text":"The model turns device physics into circuit equations.","textPreview":"The model turns device physics into circuit equations.","textChars":54,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hgryt0f2","slide":25,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/gfihkvyh","slide":25,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/6xorepwr","slide":25,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/ryxsnuxc","slide":25,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/szq9gzex","slide":25,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/t0zap4fi","slide":25,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/el8ri9w3","slide":25,"text":"VTU 1BEC304 • Module 2 • 25/50","textPreview":"VTU 1BEC304 • Module 2 • 25/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/5qhe6w","slide":25,"text":"[Animation]\nStart from the names: each term tells what the circuit controls.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/n0spd1","slide":26,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/4z6dozy5","slide":26,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/3yxwvuhk","slide":26,"text":"Small-signal equivalent models: circuit working","textPreview":"Small-signal equivalent models: circuit working","textChars":47,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/2dovmpgz","slide":26,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/d4ze14z2","slide":26,"text":"Follow the signal path and ask what each device or network contributes.","textPreview":"Follow the signal path and ask what each device or network contributes.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/c36dszyh","slide":26,"text":"• Identify input and output nodes\n• Mark DC bias and AC signal path\n• Track phase, gain, impedance, or threshold\n• Connect the result to the application","textPreview":"• Identify input and output nodes | • Mark DC bias and AC signal path | • Track phase, gain, impedance, or threshold | • Connect the resu...","textChars":152,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/r2xwzehw","slide":26,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/q1ovq9gb","slide":26,"text":"The model turns device physics into circuit equations.","textPreview":"The model turns device physics into circuit equations.","textChars":54,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/t8vepkzi","slide":26,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/s7mdgfyx","slide":26,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/qlgnah43","slide":26,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/rmpojm5o","slide":26,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/cni5crm9","slide":26,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/dor6lwnu","slide":26,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/ep0ne14f","slide":26,"text":"VTU 1BEC304 • Module 2 • 26/50","textPreview":"VTU 1BEC304 • Module 2 • 26/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/n0spd1","slide":26,"text":"[Animation]\nReveal the circuit blocks left to right.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/v1sd3l","slide":27,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/98fet0z6","slide":27,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/m54fi5gv","slide":27,"text":"Small-signal equivalent models: analysis method","textPreview":"Small-signal equivalent models: analysis method","textChars":47,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/n6xwrqh0","slide":27,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/03mxgvyp","slide":27,"text":"Use a small set of equations and assumptions to solve small-signal equivalent models problems.","textPreview":"Use a small set of equations and assumptions to solve small-signal equivalent models problems.","textChars":94,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/l4vep0za","slide":27,"text":"• Draw the equivalent model\n• Write known circuit relations\n• Substitute device parameters\n• State the result: The model turns device physics into circuit equations.","textPreview":"• Draw the equivalent model | • Write known circuit relations | • Substitute device parameters | • State the result: The model turns devi...","textChars":165,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/y14felgj","slide":27,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/z2dwnqh4","slide":27,"text":"The model turns device physics into circuit equations.","textPreview":"The model turns device physics into circuit equations.","textChars":54,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/cfmxcbid","slide":27,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/d0velgzy","slide":27,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/h876xc32","slide":27,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/g7e5o72h","slide":27,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/v65ov2lw","slide":27,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/ulwnmxkb","slide":27,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/tknmts3q","slide":27,"text":"VTU 1BEC304 • Module 2 • 27/50","textPreview":"VTU 1BEC304 • Module 2 • 27/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/v1sd3l","slide":27,"text":"[Animation]\nReveal model, equations, and result separately.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/ug8c42","slide":28,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/3a9o7yd4","slide":28,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/obipg3up","slide":28,"text":"Small-signal equivalent models: classroom example","textPreview":"Small-signal equivalent models: classroom example","textChars":49,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/pcrq9ova","slide":28,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qd07itcv","slide":28,"text":"A small numerical or waveform example makes small-signal equivalent models exam-ready.","textPreview":"A small numerical or waveform example makes small-signal equivalent models exam-ready.","textChars":86,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/bet8bytg","slide":28,"text":"• Given: controlled source and input resistance\n• Find the target quantity\n• Check units and region of operation\n• Explain the physical meaning","textPreview":"• Given: controlled source and input resistance | • Find the target quantity | • Check units and region of operation | • Explain the phys...","textChars":143,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/cz2pk3u1","slide":28,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/d0bqd8b6","slide":28,"text":"The model turns device physics into circuit equations.","textPreview":"The model turns device physics into circuit equations.","textChars":54,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/6hg769cb","slide":28,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/7ipozedw","slide":28,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/fi10nqpk","slide":28,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/eh8jeloz","slide":28,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/1kjipg7q","slide":28,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/gja1gb65","slide":28,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/ruh0j6po","slide":28,"text":"VTU 1BEC304 • Module 2 • 28/50","textPreview":"VTU 1BEC304 • Module 2 • 28/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/ug8c42","slide":28,"text":"[Animation]\nAnimate the givens first, then the solution path.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/pzm31m","slide":29,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/6dkrel4z","slide":29,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/t0ba9gnq","slide":29,"text":"Transconductance: core idea","textPreview":"Transconductance: core idea","textChars":27,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/sz29gbm5","slide":29,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/f2dsbq5w","slide":29,"text":"Transconductance measures how strongly gate voltage controls drain current.","textPreview":"Transconductance measures how strongly gate voltage controls drain current.","textChars":75,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/u14ril4b","slide":29,"text":"• gm\n• slope\n• bias current\n• overdrive","textPreview":"• gm | • slope | • bias current | • overdrive","textChars":39,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/h4vad0nm","slide":29,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/g3m9kvm1","slide":29,"text":"Higher gm usually means higher gain.","textPreview":"Higher gm usually means higher gain.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/v698zm5c","slide":29,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/a50r6hor","slide":29,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/cz6hwjed","slide":29,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/d0fypovy","slide":29,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/qxozutw7","slide":29,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/ryxgnyds","slide":29,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/03qh03ep","slide":29,"text":"VTU 1BEC304 • Module 2 • 29/50","textPreview":"VTU 1BEC304 • Module 2 • 29/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/pzm31m","slide":29,"text":"[Animation]\nStart from the names: each term tells what the circuit controls.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/9hfwsz","slide":30,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/z6ds3ix8","slide":30,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/k7m9wnyd","slide":30,"text":"Transconductance: circuit working","textPreview":"Transconductance: circuit working","textChars":33,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/l8va58fy","slide":30,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/m94rydgj","slide":30,"text":"Follow the signal path and ask what each device or network contributes.","textPreview":"Follow the signal path and ask what each device or network contributes.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/7ads7ix4","slide":30,"text":"• Identify input and output nodes\n• Mark DC bias and AC signal path\n• Track phase, gain, impedance, or threshold\n• Connect the result to the application","textPreview":"• Identify input and output nodes | • Mark DC bias and AC signal path | • Track phase, gain, impedance, or threshold | • Connect the resu...","textChars":152,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/8bm90nyp","slide":30,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/9wva9sfa","slide":30,"text":"Higher gm usually means higher gain.","textPreview":"Higher gm usually means higher gain.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/2d0rmtgf","slide":30,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/netsvyx0","slide":30,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/b650r2hk","slide":30,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/q5wzyx0z","slide":30,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/d8nitcza","slide":30,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/c7eh07i5","slide":30,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/32lgn2h8","slide":30,"text":"VTU 1BEC304 • Module 2 • 30/50","textPreview":"VTU 1BEC304 • Module 2 • 30/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/9hfwsz","slide":30,"text":"[Animation]\nReveal the circuit blocks left to right.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/cdbowd","slide":31,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/ne90fudw","slide":31,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ofihozeh","slide":31,"text":"Transconductance: analysis method","textPreview":"Transconductance: analysis method","textChars":33,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/9grih4vm","slide":31,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/epgzipwz","slide":31,"text":"Use a small set of equations and assumptions to solve transconductance problems.","textPreview":"Use a small set of equations and assumptions to solve transconductance problems.","textChars":80,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/zqp0budk","slide":31,"text":"• Draw the equivalent model\n• Write known circuit relations\n• Substitute device parameters\n• State the result: Higher gm usually means higher gain.","textPreview":"• Draw the equivalent model | • Write known circuit relations | • Substitute device parameters | • State the result: Higher gm usually me...","textChars":147,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/0ryhkze5","slide":31,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/1s7idkvq","slide":31,"text":"Higher gm usually means higher gain.","textPreview":"Higher gm usually means higher gain.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/qlwze5w3","slide":31,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/rm50nado","slide":31,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/vytgrm9s","slide":31,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/uxkzyhs7","slide":31,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/h0bytwri","slide":31,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/gz2h0rax","slide":31,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/32tgv69o","slide":31,"text":"VTU 1BEC304 • Module 2 • 31/50","textPreview":"VTU 1BEC304 • Module 2 • 31/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/cdbowd","slide":31,"text":"[Animation]\nReveal model, equations, and result separately.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/0bfynk","slide":32,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/u1ovahon","slide":32,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/h4zulwny","slide":32,"text":"Transconductance: classroom example","textPreview":"Transconductance: classroom example","textChars":35,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/g3qdcr6t","slide":32,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7yxcfmpw","slide":32,"text":"A small numerical or waveform example makes transconductance exam-ready.","textPreview":"A small numerical or waveform example makes transconductance exam-ready.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/6xov6hob","slide":32,"text":"• Given: gm and slope\n• Find the target quantity\n• Check units and region of operation\n• Explain the physical meaning","textPreview":"• Given: gm and slope | • Find the target quantity | • Check units and region of operation | • Explain the physical meaning","textChars":117,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/t0fuhw72","slide":32,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/sz6d8r6h","slide":32,"text":"Higher gm usually means higher gain.","textPreview":"Higher gm usually means higher gain.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/judcb2p0","slide":32,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/it4v2xof","slide":32,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/g3ylgbqd","slide":32,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/h47m9g7y","slide":32,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/u1g3e187","slide":32,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/v2p476ps","slide":32,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/8fylcrq1","slide":32,"text":"VTU 1BEC304 • Module 2 • 32/50","textPreview":"VTU 1BEC304 • Module 2 • 32/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/0bfynk","slide":32,"text":"[Animation]\nAnimate the givens first, then the solution path.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/g2rjec","slide":33,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/xon2p8ne","slide":33,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/alc3uto3","slide":33,"text":"Common-source amplifier: core idea","textPreview":"Common-source amplifier: core idea","textChars":34,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/bm5kny58","slide":33,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ozulsj6x","slide":33,"text":"The CS amplifier is the MOSFET voltage-gain workhorse.","textPreview":"The CS amplifier is the MOSFET voltage-gain workhorse.","textChars":54,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/p032loni","slide":33,"text":"• CS stage\n• source resistance\n• bypass\n• phase inversion","textPreview":"• CS stage | • source resistance | • bypass | • phase inversion","textChars":57,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/2xc3q9or","slide":33,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/nylkje5c","slide":33,"text":"Source resistance improves stability but lowers gain.","textPreview":"Source resistance improves stability but lowers gain.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/8vyl4n61","slide":33,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/9w7mxsnm","slide":33,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/50zyxkvu","slide":33,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/4zqx4fep","slide":33,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/3yhgvud4","slide":33,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/ix8f2pwj","slide":33,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/hwzytkvy","slide":33,"text":"VTU 1BEC304 • Module 2 • 33/50","textPreview":"VTU 1BEC304 • Module 2 • 33/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/g2rjec","slide":33,"text":"[Animation]\nStart from the names: each term tells what the circuit controls.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/8fkesq","slide":34,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/sbet8zi1","slide":34,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/7a5czu1g","slide":34,"text":"Common-source amplifier: circuit working","textPreview":"Common-source amplifier: circuit working","textChars":40,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/69wb6p0v","slide":34,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/hg7u54zi","slide":34,"text":"Follow the signal path and ask what each device or network contributes.","textPreview":"Follow the signal path and ask what each device or network contributes.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/gfydcjix","slide":34,"text":"• Identify input and output nodes\n• Mark DC bias and AC signal path\n• Track phase, gain, impedance, or threshold\n• Connect the result to the application","textPreview":"• Identify input and output nodes | • Mark DC bias and AC signal path | • Track phase, gain, impedance, or threshold | • Connect the resu...","textChars":152,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/fepc3ehs","slide":34,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/udgba907","slide":34,"text":"Source resistance improves stability but lowers gain.","textPreview":"Source resistance improves stability but lowers gain.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/xk3utkje","slide":34,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/wjut0fit","slide":34,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/u103ipsb","slide":34,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/f29kbu9w","slide":34,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/g3ilkzah","slide":34,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/h4b2d4r2","slide":34,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/25k3m9sn","slide":34,"text":"VTU 1BEC304 • Module 2 • 34/50","textPreview":"VTU 1BEC304 • Module 2 • 34/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/8fkesq","slide":34,"text":"[Animation]\nReveal the circuit blocks left to right.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/v8t2gq","slide":35,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/2pcfqdgz","slide":35,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ps3e18fa","slide":35,"text":"Common-source amplifier: analysis method","textPreview":"Common-source amplifier: analysis method","textChars":40,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/oruxs3y5","slide":35,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/bu5g3ixg","slide":35,"text":"Use a small set of equations and assumptions to solve common-source amplifier problems.","textPreview":"Use a small set of equations and assumptions to solve common-source amplifier problems.","textChars":87,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/qtcfudgv","slide":35,"text":"• Draw the equivalent model\n• Write known circuit relations\n• Substitute device parameters\n• State the result: Source resistance improves stability but lowers gain.","textPreview":"• Draw the equivalent model | • Write known circuit relations | • Substitute device parameters | • State the result: Source resistance im...","textChars":164,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/dwny5sfm","slide":35,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/cvexwny1","slide":35,"text":"Source resistance improves stability but lowers gain.","textPreview":"Source resistance improves stability but lowers gain.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ry1wrexc","slide":35,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/6xsfi9gr","slide":35,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/03y98b6d","slide":35,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/147a1gny","slide":35,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/e1gr61o7","slide":35,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/f2psz65s","slide":35,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/o7i9cb6p","slide":35,"text":"VTU 1BEC304 • Module 2 • 35/50","textPreview":"VTU 1BEC304 • Module 2 • 35/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/v8t2gq","slide":35,"text":"[Animation]\nReveal model, equations, and result separately.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/ghy9zf","slide":36,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/9wrmx0ze","slide":36,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/mt032l0n","slide":36,"text":"Common-source amplifier: classroom example","textPreview":"Common-source amplifier: classroom example","textChars":42,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/7u9kvqh8","slide":36,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/wj2l8fip","slide":36,"text":"A small numerical or waveform example makes common-source amplifier exam-ready.","textPreview":"A small numerical or waveform example makes common-source amplifier exam-ready.","textChars":79,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/hkbm10za","slide":36,"text":"• Given: CS stage and source resistance\n• Find the target quantity\n• Check units and region of operation\n• Explain the physical meaning","textPreview":"• Given: CS stage and source resistance | • Find the target quantity | • Check units and region of operation | • Explain the physical mea...","textChars":135,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/ux03650j","slide":36,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/vy94zah4","slide":36,"text":"Source resistance improves stability but lowers gain.","textPreview":"Source resistance improves stability but lowers gain.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/cnylwbil","slide":36,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/xo72pgj6","slide":36,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/9s769wra","slide":36,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/ory5grap","slide":36,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/nqpo7694","slide":36,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/mpgne1sj","slide":36,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/xgr6dgrm","slide":36,"text":"VTU 1BEC304 • Module 2 • 36/50","textPreview":"VTU 1BEC304 • Module 2 • 36/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/ghy9zf","slide":36,"text":"[Animation]\nAnimate the givens first, then the solution path.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/tq0f0s","slide":37,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/ut07690f","slide":37,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/hwbqhoj6","slide":37,"text":"Common-gate amplifier: core idea","textPreview":"Common-gate amplifier: core idea","textChars":32,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/gvip8jil","slide":37,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/3yt8jy1c","slide":37,"text":"The CG amplifier accepts current-like input with low input resistance.","textPreview":"The CG amplifier accepts current-like input with low input resistance.","textChars":70,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ixkrat0r","slide":37,"text":"• low input resistance\n• current buffer\n• wideband\n• no phase inversion","textPreview":"• low input resistance | • current buffer | • wideband | • no phase inversion","textChars":71,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/50bqloj2","slide":37,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/4z29c3ih","slide":37,"text":"CG stages are useful in wideband interfaces.","textPreview":"CG stages are useful in wideband interfaces.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/r2t8ny18","slide":37,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/q1kret0n","slide":37,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/ojup83e5","slide":37,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/pk3qh8fq","slide":37,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/2hc76dwz","slide":37,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/3il8fixk","slide":37,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/cnupcne1","slide":37,"text":"VTU 1BEC304 • Module 2 • 37/50","textPreview":"VTU 1BEC304 • Module 2 • 37/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/tq0f0s","slide":37,"text":"[Animation]\nStart from the names: each term tells what the circuit controls.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/z3hlby","slide":38,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/sv6t0j29","slide":38,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/7uxc7elo","slide":38,"text":"Common-gate amplifier: circuit working","textPreview":"Common-gate amplifier: circuit working","textChars":38,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/6toby9k3","slide":38,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/h0zudo3q","slide":38,"text":"Follow the signal path and ask what each device or network contributes.","textPreview":"Follow the signal path and ask what each device or network contributes.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/gzqd4j25","slide":38,"text":"• Identify input and output nodes\n• Mark DC bias and AC signal path\n• Track phase, gain, impedance, or threshold\n• Connect the result to the application","textPreview":"• Identify input and output nodes | • Mark DC bias and AC signal path | • Track phase, gain, impedance, or threshold | • Connect the resu...","textChars":152,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/fyhcbyl0","slide":38,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/ux8b2tkf","slide":38,"text":"CG stages are useful in wideband interfaces.","textPreview":"CG stages are useful in wideband interfaces.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/x4vu143m","slide":38,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/w3mtszm1","slide":38,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/ixs7up4b","slide":38,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/jy183ulw","slide":38,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/4zapwzmh","slide":38,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/50jq5432","slide":38,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/61s7yp4n","slide":38,"text":"VTU 1BEC304 • Module 2 • 38/50","textPreview":"VTU 1BEC304 • Module 2 • 38/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/z3hlby","slide":38,"text":"[Animation]\nReveal the circuit blocks left to right.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/gvq7xq","slide":39,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/cfi50zmx","slide":39,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/be947u5c","slide":39,"text":"Common-gate amplifier: analysis method","textPreview":"Common-gate amplifier: analysis method","textChars":38,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/atgny94r","slide":39,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ps7m54nm","slide":39,"text":"Use a small set of equations and assumptions to solve common-gate amplifier problems.","textPreview":"Use a small set of equations and assumptions to solve common-gate amplifier problems.","textChars":85,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ory5wzm1","slide":39,"text":"• Draw the equivalent model\n• Write known circuit relations\n• Substitute device parameters\n• State the result: CG stages are useful in wideband interfaces.","textPreview":"• Draw the equivalent model | • Write known circuit relations | • Substitute device parameters | • State the result: CG stages are useful...","textChars":155,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/nqp43u5g","slide":39,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/2pg3up4v","slide":39,"text":"CG stages are useful in wideband interfaces.","textPreview":"CG stages are useful in wideband interfaces.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/1o7m1kna","slide":39,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/0nylsfmp","slide":39,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/mtc3a503","slide":39,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/7ul4ja1o","slide":39,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/8vulcfi9","slide":39,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/9w3mlkju","slide":39,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/y5s36l07","slide":39,"text":"VTU 1BEC304 • Module 2 • 39/50","textPreview":"VTU 1BEC304 • Module 2 • 39/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/gvq7xq","slide":39,"text":"[Animation]\nReveal model, equations, and result separately.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/fm25ov","slide":40,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/pcje5kvm","slide":40,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/298fapcv","slide":40,"text":"Common-gate amplifier: classroom example","textPreview":"Common-gate amplifier: classroom example","textChars":40,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/3ahw3adg","slide":40,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/g7qx8fup","slide":40,"text":"A small numerical or waveform example makes common-gate amplifier exam-ready.","textPreview":"A small numerical or waveform example makes common-gate amplifier exam-ready.","textChars":77,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/18ze1kva","slide":40,"text":"• Given: low input resistance and current buffer\n• Find the target quantity\n• Check units and region of operation\n• Explain the physical meaning","textPreview":"• Given: low input resistance and current buffer | • Find the target quantity | • Check units and region of operation | • Explain the phy...","textChars":144,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/e58f65cj","slide":40,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/f6hwzad4","slide":40,"text":"CG stages are useful in wideband interfaces.","textPreview":"CG stages are useful in wideband interfaces.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/k3uxkzu9","slide":40,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/l43yd4ve","slide":40,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/lw7adsnu","slide":40,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/kvyt4n69","slide":40,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/zupsbi5o","slide":40,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/ytgb2xo3","slide":40,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/xs7a9sny","slide":40,"text":"VTU 1BEC304 • Module 2 • 40/50","textPreview":"VTU 1BEC304 • Module 2 • 40/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/fm25ov","slide":40,"text":"[Animation]\nAnimate the givens first, then the solution path.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/svij3t","slide":41,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/lobu5sfq","slide":41,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ylkbadwz","slide":41,"text":"Source follower: core idea","textPreview":"Source follower: core idea","textChars":26,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/jmtc3ixk","slide":41,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/8rmdgneh","slide":41,"text":"The source follower provides near-unity gain and strong buffering.","textPreview":"The source follower provides near-unity gain and strong buffering.","textChars":66,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/tsvu9sfm","slide":41,"text":"• common drain\n• buffer\n• high input resistance\n• low output resistance","textPreview":"• common drain | • buffer | • high input resistance | • low output resistance","textChars":71,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/6p4bedwb","slide":41,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/7qdc7ixw","slide":41,"text":"Use it when impedance matching matters more than voltage gain.","textPreview":"Use it when impedance matching matters more than voltage gain.","textChars":62,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/gvmdk7ed","slide":41,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/hgvudcfy","slide":41,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/9kfad0re","slide":41,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/oz6tkvat","slide":41,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/nyxsbq98","slide":41,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/mx4bilsn","slide":41,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/xofuhkra","slide":41,"text":"VTU 1BEC304 • Module 2 • 41/50","textPreview":"VTU 1BEC304 • Module 2 • 41/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/svij3t","slide":41,"text":"[Animation]\nStart from the names: each term tells what the circuit controls.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/1kbrvc","slide":42,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/velcvi94","slide":42,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/wfut4nqp","slide":42,"text":"Source follower: circuit working","textPreview":"Source follower: circuit working","textChars":32,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/hgnuxsra","slide":42,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ihwb6x8v","slide":42,"text":"Follow the signal path and ask what each device or network contributes.","textPreview":"Follow the signal path and ask what each device or network contributes.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ji5cz290","slide":42,"text":"• Identify input and output nodes\n• Mark DC bias and AC signal path\n• Track phase, gain, impedance, or threshold\n• Connect the result to the application","textPreview":"• Identify input and output nodes | • Mark DC bias and AC signal path | • Track phase, gain, impedance, or threshold | • Connect the resu...","textChars":152,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/4jet87ql","slide":42,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/5knu1cr6","slide":42,"text":"Use it when impedance matching matters more than voltage gain.","textPreview":"Use it when impedance matching matters more than voltage gain.","textChars":62,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ylsbudsb","slide":42,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/zm1sny9w","slide":42,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/bqx0nqlo","slide":42,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/qpoju5k3","slide":42,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/dsf2p03u","slide":42,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/cr61wv29","slide":42,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/3md0jqls","slide":42,"text":"VTU 1BEC304 • Module 2 • 42/50","textPreview":"VTU 1BEC304 • Module 2 • 42/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/1kbrvc","slide":42,"text":"[Animation]\nReveal the circuit blocks left to right.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/3ueskc","slide":43,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/ofm9gvmd","slide":43,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/3eds7a5s","slide":43,"text":"Source follower: analysis method","textPreview":"Source follower: analysis method","textChars":32,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/2d4re547","slide":43,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/x4fadknu","slide":43,"text":"Use a small set of equations and assumptions to solve source follower problems.","textPreview":"Use a small set of equations and assumptions to solve source follower problems.","textChars":79,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cj6tkfmp","slide":43,"text":"• Draw the equivalent model\n• Write known circuit relations\n• Substitute device parameters\n• State the result: Use it when impedance matching matters more than voltage gain.","textPreview":"• Draw the equivalent model | • Write known circuit relations | • Substitute device parameters | • State the result: Use it when impedanc...","textChars":173,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/bixsba54","slide":43,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/ah4bi54j","slide":43,"text":"Use it when impedance matching matters more than voltage gain.","textPreview":"Use it when impedance matching matters more than voltage gain.","textChars":62,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/t8ba1gnq","slide":43,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/sn298bm5","slide":43,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/mpkza943","slide":43,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/nqt03e5o","slide":43,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/8rmhcjm9","slide":43,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/9svi5onu","slide":43,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/at4zet4f","slide":43,"text":"VTU 1BEC304 • Module 2 • 43/50","textPreview":"VTU 1BEC304 • Module 2 • 43/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/3ueskc","slide":43,"text":"[Animation]\nReveal model, equations, and result separately.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/h7lv8p","slide":44,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/badwre1k","slide":44,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/cb6dkj25","slide":44,"text":"Source follower: classroom example","textPreview":"Source follower: classroom example","textChars":34,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/dcfetojq","slide":44,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ydovmtkv","slide":44,"text":"A small numerical or waveform example makes source follower exam-ready.","textPreview":"A small numerical or waveform example makes source follower exam-ready.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/zexwvy1g","slide":44,"text":"• Given: common drain and buffer\n• Find the target quantity\n• Check units and region of operation\n• Explain the physical meaning","textPreview":"• Given: common drain and buffer | • Find the target quantity | • Check units and region of operation | • Explain the physical meaning","textChars":128,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/0f6doj21","slide":44,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/lgfexojm","slide":44,"text":"Use it when impedance matching matters more than voltage gain.","textPreview":"Use it when impedance matching matters more than voltage gain.","textChars":62,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ehkvapkr","slide":44,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/fitcju1c","slide":44,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/bi507u58","slide":44,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/qxwzep4n","slide":44,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/dkni9kne","slide":44,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/cjehgzmt","slide":44,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/3ul03a5w","slide":44,"text":"VTU 1BEC304 • Module 2 • 44/50","textPreview":"VTU 1BEC304 • Module 2 • 44/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/h7lv8p","slide":44,"text":"[Animation]\nAnimate the givens first, then the solution path.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/tt5r44","slide":45,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/3yd0vm9o","slide":45,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ojm14ra9","slide":45,"text":"Module 2 summary map","textPreview":"Module 2 summary map","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/pkvixwru","slide":45,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qloj6hsz","slide":45,"text":"MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":65,"textLines":1,"bbox":[472,292,340,80]}
+{"kind":"textbox","id":"sh/bmx0zm9k","slide":45,"text":"Fixing VGS","textPreview":"Fixing VGS","textChars":10,"textLines":1,"bbox":[100,185,190,58]}
+{"kind":"textbox","id":"sh/cn618ra5","slide":45,"text":"Fixing VG","textPreview":"Fixing VG","textChars":9,"textLines":1,"bbox":[380,185,190,58]}
+{"kind":"textbox","id":"sh/dofi1wrq","slide":45,"text":"Drain-to-gate feedback bias","textPreview":"Drain-to-gate feedback bias","textChars":27,"textLines":1,"bbox":[660,185,190,58]}
+{"kind":"textbox","id":"sh/6pkzuxsv","slide":45,"text":"DC bias point","textPreview":"DC bias point","textChars":13,"textLines":1,"bbox":[940,185,190,58]}
+{"kind":"textbox","id":"sh/7qt0n2tg","slide":45,"text":"Signal current and voltage gain","textPreview":"Signal current and voltage gain","textChars":31,"textLines":1,"bbox":[100,430,190,58]}
+{"kind":"textbox","id":"sh/76h8vqxs","slide":45,"text":"Small-signal equivalent models","textPreview":"Small-signal equivalent models","textChars":30,"textLines":1,"bbox":[380,430,190,58]}
+{"kind":"textbox","id":"sh/m587mlw7","slide":45,"text":"Transconductance","textPreview":"Transconductance","textChars":16,"textLines":1,"bbox":[660,430,190,58]}
+{"kind":"textbox","id":"sh/98zqx0fy","slide":45,"text":"Common-source amplifier","textPreview":"Common-source amplifier","textChars":23,"textLines":1,"bbox":[940,430,190,58]}
+{"kind":"textbox","id":"sh/87q9oved","slide":45,"text":"If students can redraw this map, they can revise the module quickly.","textPreview":"If students can redraw this map, they can revise the module quickly.","textChars":68,"textLines":1,"bbox":[222,608,840,36]}
+{"kind":"textbox","id":"sh/zix8r6xg","slide":45,"text":"VTU 1BEC304 • Module 2 • 45/50","textPreview":"VTU 1BEC304 • Module 2 • 45/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/tt5r44","slide":45,"text":"[Animation]\nUse this as a recall activity. Reveal outer topics and ask for one formula or circuit use for each.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/cvsmdi","slide":46,"title":"Practice","textShapes":21}
+{"kind":"textbox","id":"sh/0zq5grqt","slide":46,"text":"Practice","textPreview":"Practice","textChars":8,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/zyho7m98","slide":46,"text":"Module 2 exam-focused questions","textPreview":"Module 2 exam-focused questions","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/yx8neh8n","slide":46,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/9oj6dwra","slide":46,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,158,46,46]}
+{"kind":"textbox","id":"sh/8na5krqp","slide":46,"text":"Explain fixing vgs with a neat circuit diagram.","textPreview":"Explain fixing vgs with a neat circuit diagram.","textChars":47,"textLines":1,"bbox":[164,150,850,54]}
+{"kind":"textbox","id":"sh/nm1obm94","slide":46,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,160,110,36]}
+{"kind":"textbox","id":"sh/m1snih8j","slide":46,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,234,46,46]}
+{"kind":"textbox","id":"sh/psf61sr6","slide":46,"text":"Derive or outline the analysis method for fixing vg.","textPreview":"Derive or outline the analysis method for fixing vg.","textChars":52,"textLines":1,"bbox":[164,226,850,54]}
+{"kind":"textbox","id":"sh/4r6587ql","slide":46,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,236,110,36]}
+{"kind":"textbox","id":"sh/2dsradsb","slide":46,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,310,46,46]}
+{"kind":"textbox","id":"sh/ne18ji9w","slide":46,"text":"Compare drain-to-gate feedback bias and dc bias point.","textPreview":"Compare drain-to-gate feedback bias and dc bias point.","textChars":54,"textLines":1,"bbox":[164,302,850,54]}
+{"kind":"textbox","id":"sh/ofu9c3ah","slide":46,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,312,110,36]}
+{"kind":"textbox","id":"sh/pg3al8r2","slide":46,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,386,46,46]}
+{"kind":"textbox","id":"sh/a1credsn","slide":46,"text":"Solve a numerical design problem based on signal current and voltage gain.","textPreview":"Solve a numerical design problem based on signal current and voltage gain.","textChars":74,"textLines":1,"bbox":[164,378,850,54]}
+{"kind":"textbox","id":"sh/b2lsni9s","slide":46,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,388,110,36]}
+{"kind":"textbox","id":"sh/c3u9gnad","slide":46,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,462,46,46]}
+{"kind":"textbox","id":"sh/x43a9sry","slide":46,"text":"Draw the waveform/response for small-signal equivalent models and explain.","textPreview":"Draw the waveform/response for small-signal equivalent models and explain.","textChars":74,"textLines":1,"bbox":[164,454,850,54]}
+{"kind":"textbox","id":"sh/y5crixsj","slide":46,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,464,110,36]}
+{"kind":"textbox","id":"sh/z6lsb294","slide":46,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,538,46,46]}
+{"kind":"textbox","id":"sh/va58z2pc","slide":46,"text":"Write short notes on transconductance and applications.","textPreview":"Write short notes on transconductance and applications.","textChars":55,"textLines":1,"bbox":[164,530,850,54]}
+{"kind":"textbox","id":"sh/u9wr6xor","slide":46,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,540,110,36]}
+{"kind":"textbox","id":"sh/hcnq1c72","slide":46,"text":"VTU 1BEC304 • Module 2 • 46/50","textPreview":"VTU 1BEC304 • Module 2 • 46/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/cvsmdi","slide":46,"text":"[Animation]\nReveal questions one by one. For each question, ask students to first sketch the circuit or response.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/m3s1rc","slide":47,"title":"Exam quick reference","textShapes":15}
+{"kind":"textbox","id":"sh/zq9g7u1k","slide":47,"text":"Exam quick reference","textPreview":"Exam quick reference","textChars":20,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/krix0zip","slide":47,"text":"Module 2 formula and design checkpoints","textPreview":"Module 2 formula and design checkpoints","textChars":39,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/lsry94ja","slide":47,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/algfu50n","slide":47,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,178,52,52]}
+{"kind":"textbox","id":"sh/bmpg3a18","slide":47,"text":"id = gm vgs","textPreview":"id = gm vgs","textChars":11,"textLines":1,"bbox":[194,170,830,58]}
+{"kind":"textbox","id":"sh/cnyxwfit","slide":47,"text":"core","textPreview":"core","textChars":4,"textLines":1,"bbox":[1055,184,92,36]}
+{"kind":"textbox","id":"sh/xory5kje","slide":47,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,270,52,52]}
+{"kind":"textbox","id":"sh/uhkf6907","slide":47,"text":"Av roughly -gm RD","textPreview":"Av roughly -gm RD","textChars":17,"textLines":1,"bbox":[194,262,830,58]}
+{"kind":"textbox","id":"sh/vitgfe1c","slide":47,"text":"core","textPreview":"core","textChars":4,"textLines":1,"bbox":[1055,276,92,36]}
+{"kind":"textbox","id":"sh/rad87uhk","slide":47,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,362,52,52]}
+{"kind":"textbox","id":"sh/694ryp0z","slide":47,"text":"Source resistance lowers gain","textPreview":"Source resistance lowers gain","textChars":29,"textLines":1,"bbox":[194,354,830,58]}
+{"kind":"textbox","id":"sh/tcva9kza","slide":47,"text":"check","textPreview":"check","textChars":5,"textLines":1,"bbox":[1055,368,92,36]}
+{"kind":"textbox","id":"sh/sbm90fip","slide":47,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[110,454,52,52]}
+{"kind":"textbox","id":"sh/fedsvuhg","slide":47,"text":"Follower gain is below unity","textPreview":"Follower gain is below unity","textChars":28,"textLines":1,"bbox":[194,446,830,58]}
+{"kind":"textbox","id":"sh/ed4r2pgv","slide":47,"text":"check","textPreview":"check","textChars":5,"textLines":1,"bbox":[1055,460,92,36]}
+{"kind":"textbox","id":"sh/1gfax4zm","slide":47,"text":"VTU 1BEC304 • Module 2 • 47/50","textPreview":"VTU 1BEC304 • Module 2 • 47/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/m3s1rc","slide":47,"text":"[Animation]\nReveal formulas one at a time. Ask students to name the assumptions behind each checkpoint.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/rl1r9a","slide":48,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/3i1w3upo","slide":48,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/4jaxcz69","slide":48,"text":"Module 2 summary map","textPreview":"Module 2 summary map","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/pkje547u","slide":48,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qlsfepof","slide":48,"text":"MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":65,"textLines":1,"bbox":[472,292,340,80]}
+{"kind":"textbox","id":"sh/rm1w7up0","slide":48,"text":"Fixing VGS","textPreview":"Fixing VGS","textChars":10,"textLines":1,"bbox":[100,185,190,58]}
+{"kind":"textbox","id":"sh/c7axgz65","slide":48,"text":"Fixing VG","textPreview":"Fixing VG","textChars":9,"textLines":1,"bbox":[380,185,190,58]}
+{"kind":"textbox","id":"sh/d8je947q","slide":48,"text":"Drain-to-gate feedback bias","textPreview":"Drain-to-gate feedback bias","textChars":27,"textLines":1,"bbox":[660,185,190,58]}
+{"kind":"textbox","id":"sh/e9cfi9ob","slide":48,"text":"DC bias point","textPreview":"DC bias point","textChars":13,"textLines":1,"bbox":[940,185,190,58]}
+{"kind":"textbox","id":"sh/zalwbepw","slide":48,"text":"Signal current and voltage gain","textPreview":"Signal current and voltage gain","textChars":31,"textLines":1,"bbox":[100,430,190,58]}
+{"kind":"textbox","id":"sh/rup8repw","slide":48,"text":"Small-signal equivalent models","textPreview":"Small-signal equivalent models","textChars":30,"textLines":1,"bbox":[380,430,190,58]}
+{"kind":"textbox","id":"sh/69gri98b","slide":48,"text":"Transconductance","textPreview":"Transconductance","textChars":16,"textLines":1,"bbox":[660,430,190,58]}
+{"kind":"textbox","id":"sh/tw7ato7m","slide":48,"text":"Common-source amplifier","textPreview":"Common-source amplifier","textChars":23,"textLines":1,"bbox":[940,430,190,58]}
+{"kind":"textbox","id":"sh/svy9kjq1","slide":48,"text":"If students can redraw this map, they can revise the module quickly.","textPreview":"If students can redraw this map, they can revise the module quickly.","textChars":68,"textLines":1,"bbox":[222,608,840,36]}
+{"kind":"textbox","id":"sh/j6p8nepk","slide":48,"text":"VTU 1BEC304 • Module 2 • 48/50","textPreview":"VTU 1BEC304 • Module 2 • 48/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/rl1r9a","slide":48,"text":"[Animation]\nUse this as a recall activity. Reveal outer topics and ask for one formula or circuit use for each.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/bggw4m","slide":49,"title":"Practice","textShapes":21}
+{"kind":"textbox","id":"sh/8jq10rqd","slide":49,"text":"Practice","textPreview":"Practice","textChars":8,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/nih0rm9s","slide":49,"text":"Module 2 exam-focused questions","textPreview":"Module 2 exam-focused questions","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/mh8jyh87","slide":49,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/xoj2xgru","slide":49,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,158,46,46]}
+{"kind":"textbox","id":"sh/wna14bq9","slide":49,"text":"Explain fixing vgs with a neat circuit diagram.","textPreview":"Explain fixing vgs with a neat circuit diagram.","textChars":47,"textLines":1,"bbox":[164,150,850,54]}
+{"kind":"textbox","id":"sh/vm10v694","slide":49,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,160,110,36]}
+{"kind":"textbox","id":"sh/alsj218j","slide":49,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,234,46,46]}
+{"kind":"textbox","id":"sh/5c321gr6","slide":49,"text":"Derive or outline the analysis method for fixing vg.","textPreview":"Derive or outline the analysis method for fixing vg.","textChars":52,"textLines":1,"bbox":[164,226,850,54]}
+{"kind":"textbox","id":"sh/kba18bql","slide":49,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,236,110,36]}
+{"kind":"textbox","id":"sh/ul8n2tof","slide":49,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,310,46,46]}
+{"kind":"textbox","id":"sh/vmhovy50","slide":49,"text":"Compare drain-to-gate feedback bias and dc bias point.","textPreview":"Compare drain-to-gate feedback bias and dc bias point.","textChars":54,"textLines":1,"bbox":[164,302,850,54]}
+{"kind":"textbox","id":"sh/wnqp436l","slide":49,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,312,110,36]}
+{"kind":"textbox","id":"sh/h8z6x8nq","slide":49,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,386,46,46]}
+{"kind":"textbox","id":"sh/i9s76dob","slide":49,"text":"Solve a numerical design problem based on signal current and voltage gain.","textPreview":"Solve a numerical design problem based on signal current and voltage gain.","textChars":74,"textLines":1,"bbox":[164,378,850,54]}
+{"kind":"textbox","id":"sh/ja1ozi5w","slide":49,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,388,110,36]}
+{"kind":"textbox","id":"sh/4bap836h","slide":49,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,462,46,46]}
+{"kind":"textbox","id":"sh/5cj618n2","slide":49,"text":"Draw the waveform/response for small-signal equivalent models and explain.","textPreview":"Draw the waveform/response for small-signal equivalent models and explain.","textChars":74,"textLines":1,"bbox":[164,454,850,54]}
+{"kind":"textbox","id":"sh/ydonu9o7","slide":49,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,464,110,36]}
+{"kind":"textbox","id":"sh/zexone5s","slide":49,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,538,46,46]}
+{"kind":"textbox","id":"sh/3idkvalk","slide":49,"text":"Write short notes on transconductance and applications.","textPreview":"Write short notes on transconductance and applications.","textChars":55,"textLines":1,"bbox":[164,530,850,54]}
+{"kind":"textbox","id":"sh/2xk3m54z","slide":49,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,540,110,36]}
+{"kind":"textbox","id":"sh/pkvmxk3a","slide":49,"text":"VTU 1BEC304 • Module 2 • 49/50","textPreview":"VTU 1BEC304 • Module 2 • 49/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/bggw4m","slide":49,"text":"[Animation]\nReveal questions one by one. For each question, ask students to first sketch the circuit or response.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}
+{"kind":"slide","id":"sl/cefkst","slide":50,"title":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textShapes":13}
+{"kind":"textbox","id":"sh/6lcz6d4v","slide":50,"text":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textPreview":"Module 2 / MOSFET Biasing, Small Signal Models, and Amplifier Configurations","textChars":76,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/to3y1sn6","slide":50,"text":"DC bias point: classroom example","textPreview":"DC bias point: classroom example","textChars":32,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/8nuh8nml","slide":50,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/val03i5c","slide":50,"text":"A small numerical or waveform example makes dc bias point exam-ready.","textPreview":"A small numerical or waveform example makes dc bias point exam-ready.","textChars":69,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/upczax4r","slide":50,"text":"• Given: Q point and load line\n• Find the target quantity\n• Check units and region of operation\n• Explain the physical meaning","textPreview":"• Given: Q point and load line | • Find the target quantity | • Check units and region of operation | • Explain the physical meaning","textChars":126,"textLines":4,"bbox":[94,262,510,210]}
+{"kind":"textbox","id":"sh/hcni5sni","slide":50,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/gbuhcnmx","slide":50,"text":"Poor bias clips the signal before amplification helps.","textPreview":"Poor bias clips the signal before amplification helps.","textChars":54,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/bu1gry58","slide":50,"text":"Gate","textPreview":"Gate","textChars":4,"textLines":1,"bbox":[750,346,88,42]}
+{"kind":"textbox","id":"sh/atszyton","slide":50,"text":"MOSFET","textPreview":"MOSFET","textChars":6,"textLines":1,"bbox":[895,314,112,96]}
+{"kind":"textbox","id":"sh/wje98bmt","slide":50,"text":"RD","textPreview":"RD","textChars":2,"textLines":1,"bbox":[925,217,52,60]}
+{"kind":"textbox","id":"sh/hkna1g3e","slide":50,"text":"RS","textPreview":"RS","textChars":2,"textLines":1,"bbox":[925,452,52,60]}
+{"kind":"textbox","id":"sh/uhwr6l43","slide":50,"text":"Drain output","textPreview":"Drain output","textChars":12,"textLines":1,"bbox":[1045,247,120,44]}
+{"kind":"textbox","id":"sh/vi5sz6lo","slide":50,"text":"gm converts gate voltage into drain current","textPreview":"gm converts gate voltage into drain current","textChars":43,"textLines":1,"bbox":[733,548,470,32]}
+{"kind":"textbox","id":"sh/4ny9cvm5","slide":50,"text":"VTU 1BEC304 • Module 2 • 50/50","textPreview":"VTU 1BEC304 • Module 2 • 50/50","textChars":30,"textLines":1,"bbox":[72,681,600,20]}
+{"kind":"notes","id":"nt/cefkst","slide":50,"text":"[Animation]\nAnimate the givens first, then the solution path.\n\n[Sources]\n- Official VTU 2025 scheme syllabus PDF for 1BEC304.\n- Local syllabus images supplied in public/Analog Electronics and Linear Integrated Circuits/.\n- Local textbook PDFs supplied in public/Analog Electronics and Linear Integrated Circuits/."}

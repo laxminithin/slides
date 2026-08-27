@@ -1,0 +1,946 @@
+{"kind":"deck","id":"pr/s5vshr","name":"Deck"}
+{"kind":"layout","layoutId":"329f4dee-c4a3-4873-93b4-9d1e2c5c70ec","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"e45ae8dd-6ab8-486b-a86a-f65edb11806c","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/7qzyy9","slide":1,"title":"Enums, Wrappers, Autoboxing and Generics","textShapes":8}
+{"kind":"shape","id":"sh/vmxgzqxk","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/wn6hsvy5","slide":1,"text":"Enums, Wrappers, Autoboxing and Generics","textPreview":"Enums, Wrappers, Autoboxing and Generics","textChars":40,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/hofy10fq","slide":1,"text":"Module 5 teaches type-safe constants, object wrappers and generic programming.","textPreview":"Module 5 teaches type-safe constants, object wrappers and generic programming.","textChars":78,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/mx4fm1g3","slide":1,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/nyxgv6xo","slide":1,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/8z6xoby9","slide":1,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/90fyxgfu","slide":1,"text":"Opening","textPreview":"Opening","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/6t8zy5g7","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/ruhg7axs","slide":1,"text":"Java\nModule 5","textPreview":"Java | Module 5","textChars":13,"textLines":2,"bbox":[78,184,640,175]}
+{"kind":"textbox","id":"sh/julofyt4","slide":1,"text":"Enumerations • values/valueOf • wrappers • autoboxing • generic classes","textPreview":"Enumerations • values/valueOf • wrappers • autoboxing • generic classes","textChars":71,"textLines":1,"bbox":[82,388,700,78]}
+{"kind":"shape","id":"sh/ytc7mtcj","slide":1,"bbox":[790,134,330,330]}
+{"kind":"shape","id":"sh/lw36hoba","slide":1,"bbox":[875,220,160,160]}
+{"kind":"textbox","id":"sh/kvupo3up","slide":1,"text":"ENUM\n<T>","textPreview":"ENUM | <T>","textChars":8,"textLines":2,"bbox":[814,238,280,125]}
+{"kind":"notes","id":"nt/7qzyy9","slide":1,"text":"What to say: Open by saying Module 5 is about making Java programs type-safe and expressive.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/3cv4ec","slide":2,"title":"Module 5 learning path","textShapes":17}
+{"kind":"shape","id":"sh/2xof6l8z","slide":2,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/p0fy1g7a","slide":2,"text":"Module 5 learning path","textPreview":"Module 5 learning path","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/4z6x8vqp","slide":2,"text":"Use the syllabus as the checklist.","textPreview":"Use the syllabus as the checklist.","textChars":34,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/r2hg3qpg","slide":2,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/q18fal8v","slide":2,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/dozy507m","slide":2,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/c3qxcvq1","slide":2,"text":"Opening","textPreview":"Opening","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/zqhg7apc","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ep8fe587","slide":2,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/cbutgzmt","slide":2,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/xcnu943e","slide":2,"text":"Explain enumeration fundamentals and enum constants","textPreview":"Explain enumeration fundamentals and enum constants","textChars":51,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/a9cbep4n","slide":2,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/balc7ul8","slide":2,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/kfetkjmp","slide":2,"text":"Use values() and valueOf() methods","textPreview":"Use values() and valueOf() methods","textChars":34,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/lgnud43a","slide":2,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/ydwbi94z","slide":2,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/ze5cbelk","slide":2,"text":"Explain Character, Boolean and numeric type wrappers","textPreview":"Explain Character, Boolean and numeric type wrappers","textChars":52,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/83ytojm1","slide":2,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/947uho3m","slide":2,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/hoj2lkre","slide":2,"text":"Explain autoboxing and unboxing in methods, expressions and boolean/char values","textPreview":"Explain autoboxing and unboxing in methods, expressions and boolean/char values","textChars":79,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/wnalcfat","slide":2,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/vm1kja98","slide":2,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/ulsjaps3","slide":2,"text":"Write a simple generics example","textPreview":"Write a simple generics example","textChars":31,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"shape","id":"sh/5c32p4rq","slide":2,"bbox":[92,453,28,28]}
+{"kind":"textbox","id":"sh/4ralgza5","slide":2,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,456,28,18]}
+{"kind":"textbox","id":"sh/jq1knu9k","slide":2,"text":"Create generic classes with one or two type parameters and the general class form","textPreview":"Create generic classes with one or two type parameters and the general class form","textChars":81,"textLines":1,"bbox":[136,449,996,42]}
+{"kind":"notes","id":"nt/3cv4ec","slide":2,"text":"What to say: Preview constants, wrappers and generics.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/tfnuiq","slide":3,"title":"Enums define named constant sets","textShapes":12}
+{"kind":"shape","id":"sh/lgzu187y","slide":3,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ydob6ton","slide":3,"text":"Enums define named constant sets","textPreview":"Enums define named constant sets","textChars":32,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/jehszyp8","slide":3,"text":"Define enumeration.","textPreview":"Define enumeration.","textChars":19,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/wb6t4j6h","slide":3,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/xcfaxo72","slide":3,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/a9ob2tob","slide":3,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/baxsvepw","slide":3,"text":"Enums","textPreview":"Enums","textChars":5,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/o76t0j65","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/98fato7q","slide":3,"text":"enum","textPreview":"enum","textChars":4,"textLines":1,"bbox":[86,175,570,72]}
+{"kind":"textbox","id":"sh/9wju98ru","slide":3,"text":"An enum is a type-safe set of named constants used when a variable should hold one value from a fixed list.","textPreview":"An enum is a type-safe set of named constants used when a variable should hold one value from a fixed list.","textChars":107,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/8vadg3ap","slide":3,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/nu1c7y94","slide":3,"text":"Type-safe","textPreview":"Type-safe","textChars":9,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/mtsvetsj","slide":3,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/lszu5ory","slide":3,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/0rqdc3ad","slide":3,"text":"Named constants","textPreview":"Named constants","textChars":15,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/zqhc3y9s","slide":3,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/yp8bats7","slide":3,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/dozu1or2","slide":3,"text":"Fixed set","textPreview":"Fixed set","textChars":9,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/cnqt8jah","slide":3,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/47udojid","slide":3,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/p83uhozi","slide":3,"text":"switch","textPreview":"switch","textChars":6,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/25svm907","slide":3,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/36lcfehs","slide":3,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/g3adkji1","slide":3,"text":"Readable","textPreview":"Readable","textChars":8,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/tfnuiq","slide":3,"text":"What to say: Use Department enum from lab.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/k02p9d","slide":4,"title":"Enumeration fundamentals","textShapes":8}
+{"kind":"shape","id":"sh/6tg7qpgf","slide":4,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/tgr6l4fq","slide":4,"text":"Enumeration fundamentals","textPreview":"Enumeration fundamentals","textChars":24,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/8fypszy5","slide":4,"text":"Show enum syntax.","textPreview":"Show enum syntax.","textChars":17,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/jqpofuxo","slide":4,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/ypg7mpg3","slide":4,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ls76h4fu","slide":4,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/krypozy9","slide":4,"text":"Enums","textPreview":"Enums","textChars":5,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/3m98rexs","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/il07y9gn","slide":4,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/0r658va9","slide":4,"text":"enum Department {\n    CSE, ISE, ECE, MECH\n}\n\nDepartment d = Department.CSE;","textPreview":"enum Department { |     CSE, ISE, ECE, MECH | } |  | Department d = Department.CSE;","textChars":75,"textLines":5,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/1cfm10bu","slide":4,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/epon65s3","slide":4,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/zqx4zqto","slide":4,"text":"enum","textPreview":"enum","textChars":4,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/cn654vax","slide":4,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/k02p9d","slide":4,"text":"What to say: Explain enum constants are objects of the enum type.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/k3gzhq","slide":5,"title":"Enums improve code clarity","textShapes":21}
+{"kind":"shape","id":"sh/epkjq50b","slide":5,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/1cb2lkz2","slide":5,"text":"Enums improve code clarity","textPreview":"Enums improve code clarity","textChars":26,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/0b21sfih","slide":5,"text":"Compare strings and enum constants.","textPreview":"Compare strings and enum constants.","textChars":35,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/nedknuhs","slide":5,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/2d4jup0n","slide":5,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/pgv2pkzy","slide":5,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/ofm1wfid","slide":5,"text":"Enums","textPreview":"Enums","textChars":5,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/3i90bqho","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ih0jil03","slide":5,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/cjiporqx","slide":5,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/dkr6xwr2","slide":5,"text":"String constants","textPreview":"String constants","textChars":16,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/qh07mh8r","slide":5,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/bi9ovm9c","slide":5,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/07ipsbqt","slide":5,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/l8b61wre","slide":5,"text":"Enum constants","textPreview":"Enum constants","textChars":14,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/yl07q18n","slide":5,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/zm9oz698","slide":5,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/gby5g7qp","slide":5,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/1c76pcra","slide":5,"text":"Can be misspelled","textPreview":"Can be misspelled","textChars":17,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/h8zmt8jy","slide":5,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/w7q5k32d","slide":5,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/v6h4ry1s","slide":5,"text":"No compiler checking for allowed set","textPreview":"No compiler checking for allowed set","textChars":36,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/u5o3itk7","slide":5,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/5czmx8ju","slide":5,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/4bq5o3i9","slide":5,"text":"Comparisons can be fragile","textPreview":"Comparisons can be fragile","textChars":26,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/jah4vy14","slide":5,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/i98nmd0j","slide":5,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/d0jm1sj6","slide":5,"text":"Compiler checks allowed values","textPreview":"Compiler checks allowed values","textChars":30,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/sfa5snil","slide":5,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/alkjmp03","slide":5,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/bmdkfaho","slide":5,"text":"Readable names","textPreview":"Readable names","textChars":14,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/cnm1ofi9","slide":5,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/xov2hkze","slide":5,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/yp4jqp0z","slide":5,"text":"Works with switch","textPreview":"Works with switch","textChars":17,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"shape","id":"sh/zadkjuhk","slide":5,"bbox":[718,407,28,28]}
+{"kind":"textbox","id":"sh/kbm1szy5","slide":5,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[718,410,28,18]}
+{"kind":"textbox","id":"sh/lcv2l4zq","slide":5,"text":"Can have methods and fields","textPreview":"Can have methods and fields","textChars":27,"textLines":1,"bbox":[762,403,396,42]}
+{"kind":"notes","id":"nt/k3gzhq","slide":5,"text":"What to say: Use department name input as example.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/0f61ay","slide":6,"title":"values() lists all constants","textShapes":8}
+{"kind":"shape","id":"sh/lwv6tg7m","slide":6,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/y947y18b","slide":6,"text":"values() lists all constants","textPreview":"values() lists all constants","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/zado76pg","slide":6,"text":"Explain values method.","textPreview":"Explain values method.","textChars":22,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/c72pwbq5","slide":6,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/x8b65grq","slide":6,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/a5k7u18z","slide":6,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/b6to369k","slide":6,"text":"Enums","textPreview":"Enums","textChars":5,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/g36p8vq9","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/h4fq107u","slide":6,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/9wvu1ofq","slide":6,"text":"for (Department d : Department.values()) {\n    System.out.println(d);\n}","textPreview":"for (Department d : Department.values()) { |     System.out.println(d); | }","textChars":71,"textLines":3,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/8v2tsjy5","slide":6,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/nutczexk","slide":6,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/mtkbq9gf","slide":6,"text":"values()","textPreview":"values()","textChars":8,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/lsbux4fu","slide":6,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/0f61ay","slide":6,"text":"What to say: Explain values returns an array of enum constants.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/uskxhn","slide":7,"title":"valueOf() converts a name to enum","textShapes":8}
+{"kind":"shape","id":"sh/l83ilo7e","slide":7,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/y5cza9on","slide":7,"text":"valueOf() converts a name to enum","textPreview":"valueOf() converts a name to enum","textChars":33,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/z6l0jep8","slide":7,"text":"Explain valueOf.","textPreview":"Explain valueOf.","textChars":16,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/cjah8z6x","slide":7,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/x4jih47i","slide":7,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/ahsz69or","slide":7,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/bi10fupc","slide":7,"text":"Enums","textPreview":"Enums","textChars":5,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/wfe1k361","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/h0nit87m","slide":7,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/d0zmdsbm","slide":7,"text":"String input = \"CSE\";\nDepartment d = Department.valueOf(input);\nSystem.out.println(d);","textPreview":"String input = \"CSE\"; | Department d = Department.valueOf(input); | System.out.println(d);","textChars":86,"textLines":3,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/czqlkna1","slide":7,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/ryh4bitw","slide":7,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/qx83idsb","slide":7,"text":"valueOf()","textPreview":"valueOf()","textChars":9,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/5wz298bq","slide":7,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/uskxhn","slide":7,"text":"What to say: Warn valueOf requires exact name unless input is normalized.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/izqmhw","slide":8,"title":"Enums can be used in switch","textShapes":8}
+{"kind":"shape","id":"sh/y98re9cv","slide":8,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/lczqp4bm","slide":8,"text":"Enums can be used in switch","textPreview":"Enums can be used in switch","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/kbq9gju1","slide":8,"text":"Show enum switch.","textPreview":"Show enum switch.","textChars":17,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/b6h8jutk","slide":8,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/alorapcz","slide":8,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/x8zql4bq","slide":8,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/c7q9czu5","slide":8,"text":"Enums","textPreview":"Enums","textChars":5,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/v21svyto","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/uhsrmtc3","slide":8,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/4nqdg3yx","slide":8,"text":"switch (d) {\ncase CSE -> System.out.println(\"Computer Science\");\ncase ISE -> System.out.println(\"Information Science\");\ndefault -> System.out.println(\"Other branch\");\n}","textPreview":"switch (d) { | case CSE -> System.out.println(\"Computer Science\"); | case ISE -> System.out.println(\"Information Science\"); | default -> ...","textChars":168,"textLines":5,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/5ozep8fi","slide":8,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/ilovedgr","slide":8,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/jmxwnixc","slide":8,"text":"enum switch","textPreview":"enum switch","textChars":11,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/wj6dc3y1","slide":8,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/izqmhw","slide":8,"text":"What to say: Use modern arrow switch but explain traditional case also works.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/9hzjz8","slide":9,"title":"Wrapper classes turn primitives into objects","textShapes":12}
+{"kind":"shape","id":"sh/3u9kv2po","slide":9,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/4vi1o769","slide":9,"text":"Wrapper classes turn primitives into objects","textPreview":"Wrapper classes turn primitives into objects","textChars":44,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/5wr2xc7u","slide":9,"text":"Define wrappers.","textPreview":"Define wrappers.","textChars":16,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/u5gjixo7","slide":9,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/vqp0r2pc","slide":9,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/gry1k76x","slide":9,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/hs7itc7i","slide":9,"text":"Wrappers","textPreview":"Wrappers","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/m1wjedov","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/72p0nipg","slide":9,"text":"Wrapper class","textPreview":"Wrapper class","textChars":13,"textLines":1,"bbox":[86,175,570,72]}
+{"kind":"textbox","id":"sh/j258v2h4","slide":9,"text":"A wrapper class provides an object representation of a primitive value so it can be used where objects are required.","textPreview":"A wrapper class provides an object representation of a primitive value so it can be used where objects are required.","textChars":116,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/i1w7mx0j","slide":9,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/54nqxczu","slide":9,"text":"Primitive","textPreview":"Primitive","textChars":9,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/43epo7i9","slide":9,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/rq58z2h0","slide":9,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/65w7qh0f","slide":9,"text":"Object","textPreview":"Object","textChars":6,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/ts7q1cz6","slide":9,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/sryps7il","slide":9,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/7ulonihw","slide":9,"text":"Box","textPreview":"Box","textChars":3,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/m9c7ed0b","slide":9,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/ap0bmlkz","slide":9,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/bqtsvq14","slide":9,"text":"Unbox","textPreview":"Unbox","textChars":5,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/cr2tov2p","slide":9,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/xsbax0ja","slide":9,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/2l0bi1kn","slide":9,"text":"Collections","textPreview":"Collections","textChars":11,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/9hzjz8","slide":9,"text":"What to say: Explain generics and collections need reference types.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/uw6jup","slide":10,"title":"Wrapper class families","textShapes":13}
+{"kind":"shape","id":"sh/t87udg32","slide":10,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/6lgvil4r","slide":10,"text":"Wrapper class families","textPreview":"Wrapper class families","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/76pcb65c","slide":10,"text":"Classify wrappers.","textPreview":"Classify wrappers.","textChars":18,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/gbidovmt","slide":10,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/hcruh03e","slide":10,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/u9gvml4n","slide":10,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/vapcfql8","slide":10,"text":"Wrappers","textPreview":"Wrappers","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/cfetcrmp","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/xgnu5wnu","slide":10,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/l8ru5c3a","slide":10,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/07idwr2p","slide":10,"text":"Character","textPreview":"Character","textChars":9,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/z69c3mlk","slide":10,"text":"Wraps char values and offers character utilities.","textPreview":"Wraps char values and offers character utilities.","textChars":49,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/y50vuhkz","slide":10,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/9wbu9w3m","slide":10,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/8bid0r21","slide":10,"text":"Boolean","textPreview":"Boolean","textChars":7,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/na9c7mlg","slide":10,"text":"Wraps boolean values.","textPreview":"Wraps boolean values.","textChars":21,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/m90vyhkv","slide":10,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/x0budw3i","slide":10,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/wz2d4b2x","slide":10,"text":"Numeric wrappers","textPreview":"Numeric wrappers","textChars":16,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/gfu5wzel","slide":10,"text":"Byte, Short, Integer, Long, Float and Double.","textPreview":"Byte, Short, Integer, Long, Float and Double.","textChars":45,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/hg36p4v6","slide":10,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/utcnu9wf","slide":10,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/feloned0","slide":10,"text":"Utility methods","textPreview":"Utility methods","textChars":15,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/4ju50jeh","slide":10,"text":"Parsing, conversion and constants such as MAX_VALUE.","textPreview":"Parsing, conversion and constants such as MAX_VALUE.","textChars":52,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/uw6jup","slide":10,"text":"What to say: Mention Integer.parseInt for string-to-int.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/jsr6uo","slide":11,"title":"Numeric wrapper example","textShapes":8}
+{"kind":"shape","id":"sh/7ql8vids","slide":11,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/sruponud","slide":11,"text":"Numeric wrapper example","textPreview":"Numeric wrapper example","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ts3qxsvy","slide":11,"text":"Show wrapper use.","textPreview":"Show wrapper use.","textChars":17,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/utc7qxcj","slide":11,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/fel8z2d4","slide":11,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/gfe9s7u9","slide":11,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/hgnq1cvu","slide":11,"text":"Wrappers","textPreview":"Wrappers","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/axs7edcz","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/vy18nydk","slide":11,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/36dgry9o","slide":11,"text":"String s = \"85\";\nInteger marks = Integer.valueOf(s);\nint total = marks + 10;\nSystem.out.println(total);","textPreview":"String s = \"85\"; | Integer marks = Integer.valueOf(s); | int total = marks + 10; | System.out.println(total);","textChars":103,"textLines":4,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/254zyts3","slide":11,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/psvyt8ru","slide":11,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/o7mh03a9","slide":11,"text":"Wrapper","textPreview":"Wrapper","textChars":7,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/f2tgne9s","slide":11,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/jsr6uo","slide":11,"text":"What to say: Explain valueOf returns wrapper; arithmetic unboxes automatically.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/gpgu9o","slide":12,"title":"Autoboxing reduces wrapper boilerplate","textShapes":12}
+{"kind":"shape","id":"sh/vmt8n2xg","slide":12,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/wn29w7y1","slide":12,"text":"Autoboxing reduces wrapper boilerplate","textPreview":"Autoboxing reduces wrapper boilerplate","textChars":38,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/h8bqpcfm","slide":12,"text":"Define autoboxing.","textPreview":"Define autoboxing.","textChars":18,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/i9kryhg7","slide":12,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/jad8r2xs","slide":12,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/4bm907yd","slide":12,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/5cvqtcfi","slide":12,"text":"Autoboxing","textPreview":"Autoboxing","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/6d4r2hg3","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/redsvmxo","slide":12,"text":"Autoboxing","textPreview":"Autoboxing","textChars":10,"textLines":1,"bbox":[86,175,570,72]}
+{"kind":"textbox","id":"sh/7u5836t0","slide":12,"text":"Autoboxing is Java's automatic conversion from a primitive value to its corresponding wrapper object; unboxing converts back.","textPreview":"Autoboxing is Java's automatic conversion from a primitive value to its corresponding wrapper object; unboxing converts back.","textChars":125,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/6twru1sf","slide":12,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/tgnq5gbq","slide":12,"text":"Primitive","textPreview":"Primitive","textChars":9,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/8ve9wba5","slide":12,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/jql8zmto","slide":12,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/ypcr61s3","slide":12,"text":"Wrapper","textPreview":"Wrapper","textChars":7,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/lsnq1wbu","slide":12,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/kre98ra9","slide":12,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/3mp8bqt8","slide":12,"text":"Boxing","textPreview":"Boxing","textChars":6,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/ilgr2lsn","slide":12,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/eh0bapcv","slide":12,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/fitc3udg","slide":12,"text":"Unboxing","textPreview":"Unboxing","textChars":8,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/0j2tczul","slide":12,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/1kbu54v6","slide":12,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/25kbe9cr","slide":12,"text":"Automatic","textPreview":"Automatic","textChars":9,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/gpgu9o","slide":12,"text":"What to say: Mention compiler inserts conversions.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/mluqlj","slide":13,"title":"Autoboxing with methods","textShapes":8}
+{"kind":"shape","id":"sh/xkf6hwvm","slide":13,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/aho7mhcv","slide":13,"text":"Autoboxing with methods","textPreview":"Autoboxing with methods","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/bixofmdg","slide":13,"text":"Show method parameter conversion.","textPreview":"Show method parameter conversion.","textChars":33,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/of65krup","slide":13,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/pgf6dcva","slide":13,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/2d4nihcz","slide":13,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/nedobmd4","slide":13,"text":"Autoboxing","textPreview":"Autoboxing","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/8bqpwbu9","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/9cz6pgve","slide":13,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/t03ul4be","slide":13,"text":"static void show(Integer x) {\n    System.out.println(x);\n}\n\nshow(100);   // int autoboxed to Integer","textPreview":"static void show(Integer x) { |     System.out.println(x); | } |  | show(100);   // int autoboxed to Integer","textChars":100,"textLines":5,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/szutszat","slide":13,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/rylcjut8","slide":13,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/6xcbqpsn","slide":13,"text":"Autoboxing","textPreview":"Autoboxing","textChars":10,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/5c3uhkb2","slide":13,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/mluqlj","slide":13,"text":"What to say: Explain method expects Integer, argument is int.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/osxh20","slide":14,"title":"Unboxing in expressions","textShapes":8}
+{"kind":"shape","id":"sh/mx07qtwn","slide":14,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/90rql8ve","slide":14,"text":"Unboxing in expressions","textPreview":"Unboxing in expressions","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/8zips3et","slide":14,"text":"Show expression conversion.","textPreview":"Show expression conversion.","textChars":27,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/v2t8nid4","slide":14,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/u107udwz","slide":14,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/h4bqp8va","slide":14,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/w329w3ep","slide":14,"text":"Autoboxing","textPreview":"Autoboxing","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/b6p8bex0","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/a5g7i9wf","slide":14,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/cfydcn6d","slide":14,"text":"Integer a = 10;\nInteger b = 20;\nint sum = a + b;  // a and b unboxed\nSystem.out.println(sum);","textPreview":"Integer a = 10; | Integer b = 20; | int sum = a + b;  // a and b unboxed | System.out.println(sum);","textChars":93,"textLines":4,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/xg7els7y","slide":14,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/adgvado7","slide":14,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/bepwjips","slide":14,"text":"Unboxing","textPreview":"Unboxing","textChars":8,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/kjidg76p","slide":14,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/osxh20","slide":14,"text":"What to say: Explain expression needs primitive arithmetic.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/hjy9nc","slide":15,"title":"Boolean and Character autobox too","textShapes":8}
+{"kind":"shape","id":"sh/nutofu5k","slide":15,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ov2p8zm5","slide":15,"text":"Boolean and Character autobox too","textPreview":"Boolean and Character autobox too","textChars":33,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/pwb6h4nq","slide":15,"text":"Show nonnumeric autoboxing.","textPreview":"Show nonnumeric autoboxing.","textChars":27,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/axk7a94v","slide":15,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/bytojelg","slide":15,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/cj2pcjm1","slide":15,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/xkv6lo3m","slide":15,"text":"Autoboxing","textPreview":"Autoboxing","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/q10ny54r","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/r29o7a5c","slide":15,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/325kfe54","slide":15,"text":"Boolean flag = true;\nif (flag) System.out.println(\"yes\");\n\nCharacter ch = 'J';\nSystem.out.println(ch);","textPreview":"Boolean flag = true; | if (flag) System.out.println(\"yes\"); |  | Character ch = 'J'; | System.out.println(ch);","textChars":102,"textLines":5,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/i1w3694j","slide":15,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/54nmho3u","slide":15,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/43el8jm9","slide":15,"text":"Boolean / Character","textPreview":"Boolean / Character","textChars":19,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/velkbe5s","slide":15,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/hjy9nc","slide":15,"text":"What to say: Explain boolean unboxes in if condition.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/pmgrut","slide":16,"title":"Autoboxing common mistakes","textShapes":15}
+{"kind":"shape","id":"sh/3i18vi9c","slide":16,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/oja943ah","slide":16,"text":"Autoboxing common mistakes","textPreview":"Autoboxing common mistakes","textChars":26,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/pkjax8r2","slide":16,"text":"Prevent misconceptions.","textPreview":"Prevent misconceptions.","textChars":23,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/qlcr6dsn","slide":16,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/bmlszi98","slide":16,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/cnu98nat","slide":16,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/do3a1sre","slide":16,"text":"Autoboxing","textPreview":"Autoboxing","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/6p8rutsj","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/7qh8ny94","slide":16,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/jedk3i18","slide":16,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/yd4judkn","slide":16,"text":"Autoboxing does not remove the difference between primitive and object","textPreview":"Autoboxing does not remove the difference between primitive and object","textChars":70,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/lgv25sje","slide":16,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/kfm1wnit","slide":16,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/bad0zi1c","slide":16,"text":"A wrapper reference can be null; unboxing null causes NullPointerException","textPreview":"A wrapper reference can be null; unboxing null causes NullPointerException","textChars":74,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/a9kjqdkr","slide":16,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/xcv218j2","slide":16,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/wbm1sn2x","slide":16,"text":"Use == carefully with wrapper objects","textPreview":"Use == carefully with wrapper objects","textChars":37,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/n6t0vy10","slide":16,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/mlkjmtkf","slide":16,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/qh0jet4n","slide":16,"text":"Prefer primitives for simple numeric loops when object behavior is not needed","textPreview":"Prefer primitives for simple numeric loops when object behavior is not needed","textChars":77,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/ri9k7yls","slide":16,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/cj2lg3md","slide":16,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/d4b2983y","slide":16,"text":"Use wrappers when APIs require objects or null is meaningful","textPreview":"Use wrappers when APIs require objects or null is meaningful","textChars":60,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"notes","id":"nt/pmgrut","slide":16,"text":"What to say: This gives practical caution.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/0vgdyt","slide":17,"title":"Generics add type parameters","textShapes":12}
+{"kind":"shape","id":"sh/2dg7qh4z","slide":17,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/pg7qlcnq","slide":17,"text":"Generics add type parameters","textPreview":"Generics add type parameters","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ofyps7m5","slide":17,"text":"Define generics.","textPreview":"Define generics.","textChars":16,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/fa58f25o","slide":17,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/e9w7mx43","slide":17,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/1cnqhcnu","slide":17,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/0bepo7m9","slide":17,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/z698rm5s","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/y50ry147","slide":17,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[86,175,570,72]}
+{"kind":"textbox","id":"sh/43apkrid","slide":17,"text":"Generics let classes and methods operate on a type parameter, giving compile-time type safety without rewriting code for each type.","textPreview":"Generics let classes and methods operate on a type parameter, giving compile-time type safety without rewriting code for each type.","textChars":131,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/54j6twjy","slide":17,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/i1s7ih07","slide":17,"text":"Type parameter","textPreview":"Type parameter","textChars":14,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/321orm1s","slide":17,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/gzapgri1","slide":17,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/h0j6pwjm","slide":17,"text":"Type safety","textPreview":"Type safety","textChars":11,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/ux8neh0b","slide":17,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/vyhonm1w","slide":17,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/8vq5c7i5","slide":17,"text":"Reusable","textPreview":"Reusable","textChars":8,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/twz6lcjq","slide":17,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/pg7et472","slide":17,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/ofyd0zqx","slide":17,"text":"Compile-time","textPreview":"Compile-time","textChars":12,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/nepcrupc","slide":17,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/2dgvy98r","slide":17,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/1c7up476","slide":17,"text":"Reference types","textPreview":"Reference types","textChars":15,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/0vgdyt","slide":17,"text":"What to say: Connect to collections storing typed objects.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/cfv0b1","slide":18,"title":"Why generics improve type safety","textShapes":23}
+{"kind":"shape","id":"sh/sbi5k7it","slide":18,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/7a9ob2h8","slide":18,"text":"Why generics improve type safety","textPreview":"Why generics improve type safety","textChars":32,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/690nix0n","slide":18,"text":"Compare before and after generics.","textPreview":"Compare before and after generics.","textChars":34,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/hgb6hwza","slide":18,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/gf25orip","slide":18,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/fe9ofmh4","slide":18,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/ud0nmh0j","slide":18,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/xk765sz6","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/wjy5cnil","slide":18,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/utgrytoj","slide":18,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/feps7yp4","slide":18,"text":"Without generics","textPreview":"Without generics","textChars":16,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/gfi9036p","slide":18,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/hgra987u","slide":18,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/2h0b2dof","slide":18,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/3i9sbip0","slide":18,"text":"With generics","textPreview":"With generics","textChars":13,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/4jit436l","slide":18,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/pkrad876","slide":18,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/ql0b6dor","slide":18,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/rmtsfipc","slide":18,"text":"Uses Object references","textPreview":"Uses Object references","textChars":22,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/nqts3i54","slide":18,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/mpkrud4j","slide":18,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/9cba5s3a","slide":18,"text":"Requires casts","textPreview":"Requires casts","textChars":14,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/or29wnmp","slide":18,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/zmt8zi58","slide":18,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/el0rqd4n","slide":18,"text":"Runtime ClassCastException risk","textPreview":"Runtime ClassCastException risk","textChars":31,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/1obq18ne","slide":18,"bbox":[110,407,28,28]}
+{"kind":"textbox","id":"sh/0n29snmt","slide":18,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[110,410,28,18]}
+{"kind":"textbox","id":"sh/ri98vy5w","slide":18,"text":"Less clear intent","textPreview":"Less clear intent","textChars":17,"textLines":1,"bbox":[154,403,396,42]}
+{"kind":"shape","id":"sh/qh0rmt4r","slide":18,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/gbexgfyd","slide":18,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/hcny90zi","slide":18,"text":"Compiler checks type","textPreview":"Compiler checks type","textChars":20,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/upcfe5g7","slide":18,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/vq5g7ahs","slide":18,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/4fexkfy9","slide":18,"text":"No manual casts in normal use","textPreview":"No manual casts in normal use","textChars":29,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/5gnydkfu","slide":18,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/idwfi5g3","slide":18,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/3e5gbaho","slide":18,"text":"Reusable with many types","textPreview":"Reusable with many types","textChars":24,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"shape","id":"sh/kjux8vy5","slide":18,"bbox":[718,407,28,28]}
+{"kind":"textbox","id":"sh/lk3e1gza","slide":18,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[718,410,28,18]}
+{"kind":"textbox","id":"sh/dszyxk36","slide":18,"text":"Clearer API","textPreview":"Clearer API","textChars":11,"textLines":1,"bbox":[762,403,396,42]}
+{"kind":"notes","id":"nt/cfv0b1","slide":18,"text":"What to say: Explain compiler catches wrong type earlier.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/ihufxz","slide":19,"title":"A simple generic class","textShapes":8}
+{"kind":"shape","id":"sh/idgjixon","slide":19,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/5gr2dc7e","slide":19,"text":"A simple generic class","textPreview":"A simple generic class","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/kfilk76t","slide":19,"text":"Show one type parameter.","textPreview":"Show one type parameter.","textChars":24,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/729kfm5k","slide":19,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/6103mhoz","slide":19,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/t4r2hwna","slide":19,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/s3ilor6p","slide":19,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/n65k3ip0","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/m5wjadof","slide":19,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/cfmd0r29","slide":19,"text":"class Box<T> {\n    private T value;\n    Box(T value) { this.value = value; }\n    T get() { return value; }\n}\n\nBox<Integer> b = new Box<>(10);","textPreview":"class Box<T> { |     private T value; |     Box(T value) { this.value = value; } |     T get() { return value; } | } |  | Box<Integer> b ...","textChars":141,"textLines":7,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/dgvutw3u","slide":19,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/qd4vy1k3","slide":19,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/bedcrmlo","slide":19,"text":"Generic class","textPreview":"Generic class","textChars":13,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/036d4b25","slide":19,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/ihufxz","slide":19,"text":"What to say: Point to T as a placeholder for the real type.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/voweyf","slide":20,"title":"Generic class with two type parameters","textShapes":8}
+{"kind":"shape","id":"sh/mt8jehon","slide":20,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/9wj2pw7e","slide":20,"text":"Generic class with two type parameters","textPreview":"Generic class with two type parameters","textChars":38,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/8va1gr6t","slide":20,"text":"Show two parameters.","textPreview":"Show two parameters.","textChars":20,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/zqh0jmpc","slide":20,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/yp8jah8r","slide":20,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/lsz2lw72","slide":20,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/0rq1cr6h","slide":20,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/jmlkv6pg","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ilcjmlov","slide":20,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/4ry5kju5","slide":20,"text":"class Pair<K, V> {\n    K key;\n    V value;\n    Pair(K k, V v) {\n        key = k; value = v;\n    }\n}","textPreview":"class Pair<K, V> { |     K key; |     V value; |     Pair(K k, V v) { |         key = k; value = v; |     } | }","textChars":99,"textLines":7,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/5c76tobq","slide":20,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/ipwni9cz","slide":20,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/3q5oretk","slide":20,"text":"Two type parameters","textPreview":"Two type parameters","textChars":19,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/gne5gjut","slide":20,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/voweyf","slide":20,"text":"What to say: Use Pair<String,Integer> for name and marks.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/dz5x87","slide":21,"title":"General form of a generic class","textShapes":12}
+{"kind":"shape","id":"sh/4j2p0vmx","slide":21,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/3it87qls","slide":21,"text":"General form of a generic class","textPreview":"General form of a generic class","textChars":31,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/2xk7y547","slide":21,"text":"Explain syntax pattern.","textPreview":"Explain syntax pattern.","textChars":23,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/dovqdk3u","slide":21,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/cnmp4fm9","slide":21,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/bmd8balo","slide":21,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/ql472543","slide":21,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/tsr61gna","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/sripsbmp","slide":21,"text":"Generic form","textPreview":"Generic form","textChars":12,"textLines":1,"bbox":[86,175,570,72]}
+{"kind":"textbox","id":"sh/2hwny1c3","slide":21,"text":"A generic class declares one or more type parameters after the class name and uses them as placeholder types inside the class.","textPreview":"A generic class declares one or more type parameters after the class name and uses them as placeholder types inside the class.","textChars":126,"textLines":1,"bbox":[92,267,1055,128]}
+{"kind":"shape","id":"sh/ni5or6do","slide":21,"bbox":[96,472,178.4,96]}
+{"kind":"textbox","id":"sh/oje50bu9","slide":21,"text":"class Name<T>","textPreview":"class Name<T>","textChars":13,"textLines":1,"bbox":[108,491,154.4,58]}
+{"kind":"shape","id":"sh/pkn6tgvu","slide":21,"bbox":[282.4,504,26,30]}
+{"kind":"shape","id":"sh/alwn2lcf","slide":21,"bbox":[316.4,472,178.4,96]}
+{"kind":"textbox","id":"sh/bm5ov6dk","slide":21,"text":"Type parameter","textPreview":"Type parameter","textChars":14,"textLines":1,"bbox":[328.4,491,154.4,58]}
+{"kind":"shape","id":"sh/cne54bu5","slide":21,"bbox":[502.8,504,26,30]}
+{"kind":"shape","id":"sh/xo76xgvq","slide":21,"bbox":[536.8,472,178.4,96]}
+{"kind":"textbox","id":"sh/ypgn6lcb","slide":21,"text":"Reference type","textPreview":"Reference type","textChars":14,"textLines":1,"bbox":[548.8,491,154.4,58]}
+{"kind":"shape","id":"sh/zapozqdw","slide":21,"bbox":[723.2,504,26,30]}
+{"kind":"shape","id":"sh/vep4nq94","slide":21,"bbox":[757.2,472,178.4,96]}
+{"kind":"textbox","id":"sh/udgnelsj","slide":21,"text":"Reusable","textPreview":"Reusable","textChars":8,"textLines":1,"bbox":[769.2,491,154.4,58]}
+{"kind":"shape","id":"sh/hgrmp0ru","slide":21,"bbox":[943.6,504,26,30]}
+{"kind":"shape","id":"sh/wfi5gvap","slide":21,"bbox":[977.6,472,178.4,96]}
+{"kind":"textbox","id":"sh/7qp4jq9s","slide":21,"text":"Type-safe","textPreview":"Type-safe","textChars":9,"textLines":1,"bbox":[989.6,491,154.4,58]}
+{"kind":"notes","id":"nt/dz5x87","slide":21,"text":"What to say: Mention type argument is supplied when object/reference is declared.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/bxhzg5","slide":22,"title":"Generics work with reference types","textShapes":13}
+{"kind":"shape","id":"sh/mlgrix8r","slide":22,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/987adcr2","slide":22,"text":"Generics work with reference types","textPreview":"Generics work with reference types","textChars":34,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/87y9k7qh","slide":22,"text":"Clarify primitive limitation.","textPreview":"Clarify primitive limitation.","textChars":29,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/zips7290","slide":22,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/yhgrex8f","slide":22,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/lk7a9cr6","slide":22,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/kjy9g7ql","slide":22,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/je9sjm94","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/id0bqh8z","slide":22,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/cbqloza9","slide":22,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/dcz2h4ru","slide":22,"text":"Allowed","textPreview":"Allowed","textChars":7,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/q983mps3","slide":22,"text":"Box<Integer>, Box<String>, Pair<String, Double>.","textPreview":"Box<Integer>, Box<String>, Pair<String, Double>.","textChars":48,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/rahkfuto","slide":22,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/47qlkfad","slide":22,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/p8z2dkbi","slide":22,"text":"Not allowed","textPreview":"Not allowed","textChars":11,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/2lo3i5s7","slide":22,"text":"Box<int> because type arguments must be reference types.","textPreview":"Box<int> because type arguments must be reference types.","textChars":56,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/3mhkbats","slide":22,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/gj6lgfa1","slide":22,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/hkf290bm","slide":22,"text":"Wrappers help","textPreview":"Wrappers help","textChars":13,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/x07idw3a","slide":22,"text":"Use Integer, Double, Character and Boolean.","textPreview":"Use Integer, Double, Character and Boolean.","textChars":43,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/wfy1kr25","slide":22,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/vep0bmlk","slide":22,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/adgji1kz","slide":22,"text":"Autoboxing helps","textPreview":"Autoboxing helps","textChars":16,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/9c7i9w3e","slide":22,"text":"Primitive values can be boxed into wrapper objects.","textPreview":"Primitive values can be boxed into wrapper objects.","textChars":51,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/bxhzg5","slide":22,"text":"What to say: Connect wrappers and generics.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/i3x8do","slide":23,"title":"Raw types should be avoided","textShapes":13}
+{"kind":"shape","id":"sh/5k3yts3q","slide":23,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ihsfyxkz","slide":23,"text":"Raw types should be avoided","textPreview":"Raw types should be avoided","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/3i1gr2lk","slide":23,"text":"Explain legacy compatibility.","textPreview":"Explain legacy compatibility.","textChars":29,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/gvaxwn2t","slide":23,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/hgjyps3e","slide":23,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/utsfudk3","slide":23,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/vu1gnil8","slide":23,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/0ruh872d","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/1cny1c3i","slide":23,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/5svadgv6","slide":23,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/4rm9kbel","slide":23,"text":"Raw type","textPreview":"Raw type","textChars":8,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/3qdsb6d0","slide":23,"text":"Generic class used without type argument.","textPreview":"Generic class used without type argument.","textChars":41,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/ip4ri1wf","slide":23,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/hova9wvu","slide":23,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/gnm9grep","slide":23,"text":"Why exists","textPreview":"Why exists","textChars":10,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/vmds76d4","slide":23,"text":"Compatibility with older Java code.","textPreview":"Compatibility with older Java code.","textChars":35,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/ulkre1wj","slide":23,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/1kfal0ve","slide":23,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/0j6tsvet","slide":23,"text":"Risk","textPreview":"Risk","textChars":4,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/knedoz25","slide":23,"text":"Compiler loses type checking.","textPreview":"Compiler loses type checking.","textChars":29,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/lonuh43a","slide":23,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/ylwvm9kz","slide":23,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/zm5cfulk","slide":23,"text":"Best practice","textPreview":"Best practice","textChars":13,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/czedkz2t","slide":23,"text":"Use parameterized types such as Box<String>.","textPreview":"Use parameterized types such as Box<String>.","textChars":44,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/i3x8do","slide":23,"text":"What to say: Keep this as practical warning.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/tqih0y","slide":24,"title":"Type inference with diamond","textShapes":8}
+{"kind":"shape","id":"sh/9k32l0ry","slide":24,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/mhc3qls7","slide":24,"text":"Type inference with diamond","textPreview":"Type inference with diamond","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/nilkjq9s","slide":24,"text":"Explain <>.","textPreview":"Explain <>.","textChars":11,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/0fu1ovah","slide":24,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/1g32h0rm","slide":24,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/edsjmlsb","slide":24,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/ze1kfq9w","slide":24,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/cba1kba5","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/dcj2dgbq","slide":24,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/9gjm54j2","slide":24,"text":"Box<String> nameBox = new Box<>(\"Java\");\nPair<String, Integer> p = new Pair<>(\"CSE\", 60);","textPreview":"Box<String> nameBox = new Box<>(\"Java\"); | Pair<String, Integer> p = new Pair<>(\"CSE\", 60);","textChars":89,"textLines":2,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/ofalcj2h","slide":24,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/nu143e1w","slide":24,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/mts3a9kb","slide":24,"text":"Diamond operator","textPreview":"Diamond operator","textChars":16,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/1szm14jq","slide":24,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/tqih0y","slide":24,"text":"What to say: Explain compiler infers right-side type arguments from left side.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/jxt75p","slide":25,"title":"Module 5 lab connection","textShapes":13}
+{"kind":"shape","id":"sh/8b25sjmt","slide":25,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/7atojel8","slide":25,"text":"Module 5 lab connection","textPreview":"Module 5 lab connection","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/69knq94n","slide":25,"text":"Map concepts to practicals.","textPreview":"Map concepts to practicals.","textChars":27,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/l8r6h432","slide":25,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/k7i5ozmh","slide":25,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/j694fulw","slide":25,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/y50nmp4b","slide":25,"text":"Lab Link","textPreview":"Lab Link","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/x4rmd436","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/w3i5kzml","slide":25,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/uhkbyh03","slide":25,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/fitc7mho","slide":25,"text":"Department enum","textPreview":"Department enum","textChars":15,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/gj2t0ry9","slide":25,"text":"Use valueOf() to convert input to enum constant.","textPreview":"Use valueOf() to convert input to enum constant.","textChars":48,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/hkbu9czu","slide":25,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/6t0bux07","slide":25,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/7u9c32hs","slide":25,"text":"Marks as strings","textPreview":"Marks as strings","textChars":16,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/svitw7id","slide":25,"text":"Convert with wrappers and calculate total/average.","textPreview":"Convert with wrappers and calculate total/average.","textChars":50,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/tgbu5czy","slide":25,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/ip0bqx0b","slide":25,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/jq9cz2hg","slide":25,"text":"Autoboxing","textPreview":"Autoboxing","textChars":10,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/nu587yx8","slide":25,"text":"Wrapper objects can participate in expressions.","textPreview":"Wrapper objects can participate in expressions.","textChars":47,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/mtwrytg3","slide":25,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/9wnq98fe","slide":25,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/8ve903yt","slide":25,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/vyp8byxk","slide":25,"text":"Create reusable Box, Pair or stack-style containers.","textPreview":"Create reusable Box, Pair or stack-style containers.","textChars":52,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/jxt75p","slide":25,"text":"What to say: Connect to labs 9 and 10.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/enado7","slide":26,"title":"When to use enum instead of int or String","textShapes":13}
+{"kind":"shape","id":"sh/utcju9s3","slide":26,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/hg32p4be","slide":26,"text":"When to use enum instead of int or String","textPreview":"When to use enum instead of int or String","textChars":41,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/wvulwzat","slide":26,"text":"Give practical enum design rule.","textPreview":"Give practical enum design rule.","textChars":32,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/7qlkjutc","slide":26,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/mpsjqpsr","slide":26,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/9s32l4bi","slide":26,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/8ru1szax","slide":26,"text":"Enums","textPreview":"Enums","textChars":5,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/zm1kfutg","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ylsjmpsv","slide":26,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/4vyporm5","slide":26,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/5g76hw3q","slide":26,"text":"Use enum","textPreview":"Use enum","textChars":8,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/itg7mh4f","slide":26,"text":"When values come from a known fixed set.","textPreview":"When values come from a known fixed set.","textChars":40,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/jupofmlk","slide":26,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/wrypk7m9","slide":26,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/hs76dc3u","slide":26,"text":"Avoid raw int","textPreview":"Avoid raw int","textChars":13,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/upw7ix43","slide":26,"text":"Numbers do not explain their meaning.","textPreview":"Numbers do not explain their meaning.","textChars":37,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/vqpob2lo","slide":26,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/0nipwbmd","slide":26,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/1orqpg3y","slide":26,"text":"Avoid free String","textPreview":"Avoid free String","textChars":17,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/94769wv2","slide":26,"text":"Spelling and capitalization mistakes become runtime bugs.","textPreview":"Spelling and capitalization mistakes become runtime bugs.","textChars":57,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/o3ep0beh","slide":26,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/n25o76dw","slide":26,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/m1w7y1wr","slide":26,"text":"Benefit","textPreview":"Benefit","textChars":7,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/1gn65wv6","slide":26,"text":"Compiler protects allowed values.","textPreview":"Compiler protects allowed values.","textChars":33,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/enado7","slide":26,"text":"What to say: Use departments, days, directions and status values.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/jmnmjv","slide":27,"title":"valueOf input handling","textShapes":8}
+{"kind":"shape","id":"sh/6dgzmtwb","slide":27,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/d07ih8v2","slide":27,"text":"valueOf input handling","textPreview":"valueOf input handling","textChars":22,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/szyho3eh","slide":27,"text":"Prevent valueOf runtime mistakes.","textPreview":"Prevent valueOf runtime mistakes.","textChars":33,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/f2p0jyd8","slide":27,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/e1gzqtwn","slide":27,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/14ril8vy","slide":27,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/03ihs3ed","slide":27,"text":"Enums","textPreview":"Enums","textChars":5,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/v65gnedo","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/u5wze9w3","slide":27,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/0j658vyl","slide":27,"text":"String input = \"cse\";\nDepartment d = Department.valueOf(input.toUpperCase());\nSystem.out.println(d);\n\n// Without normalization, \"cse\" fails.","textPreview":"String input = \"cse\"; | Department d = Department.valueOf(input.toUpperCase()); | System.out.println(d); |  | // Without normalization, \"...","textChars":140,"textLines":5,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/1kfm1gz6","slide":27,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/ehon6lgf","slide":27,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/zix4zqh0","slide":27,"text":"Safe valueOf","textPreview":"Safe valueOf","textChars":12,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/onq5cvyh","slide":27,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/jmnmjv","slide":27,"text":"What to say: Explain valueOf is case-sensitive.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/pg43dh","slide":28,"title":"Enum constants can have behavior","textShapes":13}
+{"kind":"shape","id":"sh/ed0zadoj","slide":28,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/10ri5s7u","slide":28,"text":"Enum constants can have behavior","textPreview":"Enum constants can have behavior","textChars":32,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/gzihcn69","slide":28,"text":"Explain enums as richer than constants.","textPreview":"Explain enums as richer than constants.","textChars":39,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/ra90zyps","slide":28,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/690z6d87","slide":28,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/tcri187y","slide":28,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/sbih836d","slide":28,"text":"Enums","textPreview":"Enums","textChars":5,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/b6t0b2pw","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/a5kjixor","slide":28,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/o3exg3a9","slide":28,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/94ny9ore","slide":28,"text":"Enum type","textPreview":"Enum type","textChars":9,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/mhcfets3","slide":28,"text":"An enum is a class-like type.","textPreview":"An enum is a class-like type.","textChars":29,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/n25w7y9o","slide":28,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/0fuxcjax","slide":28,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/1g3elori","slide":28,"text":"Methods","textPreview":"Methods","textChars":7,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/edcfa9sr","slide":28,"text":"Enums can define methods.","textPreview":"Enums can define methods.","textChars":25,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/zelwje9c","slide":28,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/cbux8ja1","slide":28,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/dc3eh4rm","slide":28,"text":"Fields/constructors","textPreview":"Fields/constructors","textChars":19,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/twbmpgzy","slide":28,"text":"Enum constants can carry extra data.","textPreview":"Enum constants can carry extra data.","textChars":36,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/8v2lwbyd","slide":28,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/7ut4n6hs","slide":28,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/6tk3u1gn","slide":28,"text":"Simple module focus","textPreview":"Simple module focus","textChars":19,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/lsrmlwz2","slide":28,"text":"Syllabus requires fundamentals, values and valueOf.","textPreview":"Syllabus requires fundamentals, values and valueOf.","textChars":51,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"notes","id":"nt/pg43dh","slide":28,"text":"What to say: This gently expands textbook context without overloading the module.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/7mq4u1","slide":29,"title":"Why wrappers are needed","textShapes":10}
+{"kind":"shape","id":"sh/rmt8fmpk","slide":29,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/sn298r65","slide":29,"text":"Why wrappers are needed","textPreview":"Why wrappers are needed","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/tobqhw7q","slide":29,"text":"Make wrapper motivation clear.","textPreview":"Make wrapper motivation clear.","textChars":30,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/ixk72h83","slide":29,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/jyt8bmpo","slide":29,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/4z2p4rq9","slide":29,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/50bqdw7e","slide":29,"text":"Wrappers","textPreview":"Wrappers","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/2t4relo7","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/3ud8n6ps","slide":29,"bbox":[70,305,194.4,96]}
+{"kind":"textbox","id":"sh/ned47yhs","slide":29,"text":"Primitive value","textPreview":"Primitive value","textChars":15,"textLines":1,"bbox":[82,324,170.4,58]}
+{"kind":"shape","id":"sh/md43et07","slide":29,"bbox":[272.4,337,26,30]}
+{"kind":"shape","id":"sh/9gfm98zy","slide":29,"bbox":[306.4,305,194.4,96]}
+{"kind":"textbox","id":"sh/8f6lg3id","slide":29,"text":"Need object context","textPreview":"Need object context","textChars":19,"textLines":1,"bbox":[318.4,324,170.4,58]}
+{"kind":"shape","id":"sh/vix4bih4","slide":29,"bbox":[508.8,337,26,30]}
+{"kind":"shape","id":"sh/aho3id0j","slide":29,"bbox":[542.8,305,194.4,96]}
+{"kind":"textbox","id":"sh/x4fmd8zu","slide":29,"text":"Use wrapper","textPreview":"Use wrapper","textChars":11,"textLines":1,"bbox":[554.8,324,170.4,58]}
+{"kind":"shape","id":"sh/w36lk3i9","slide":29,"bbox":[745.2,337,26,30]}
+{"kind":"shape","id":"sh/j6h4fih0","slide":29,"bbox":[779.2,305,194.4,96]}
+{"kind":"textbox","id":"sh/i5onmd0f","slide":29,"text":"Autoboxing reduces code","textPreview":"Autoboxing reduces code","textChars":23,"textLines":1,"bbox":[791.2,324,170.4,58]}
+{"kind":"shape","id":"sh/edcfuloz","slide":29,"bbox":[981.6,337,26,30]}
+{"kind":"shape","id":"sh/felg3q5k","slide":29,"bbox":[1015.6,305,194.4,96]}
+{"kind":"textbox","id":"sh/0fuxwb65","slide":29,"text":"Generic/collection APIs work","textPreview":"Generic/collection APIs work","textChars":28,"textLines":1,"bbox":[1027.6,324,170.4,58]}
+{"kind":"notes","id":"nt/7mq4u1","slide":29,"text":"What to say: Connect wrappers to generics in the same module.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/fyc0lb","slide":30,"title":"Parsing strings with wrappers","textShapes":8}
+{"kind":"shape","id":"sh/qhg7yhs3","slide":30,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/dkr69wre","slide":30,"text":"Parsing strings with wrappers","textPreview":"Parsing strings with wrappers","textChars":29,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/cjyp0rat","slide":30,"text":"Show lab-relevant conversion.","textPreview":"Show lab-relevant conversion.","textChars":29,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/z69ob69k","slide":30,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/y50721sz","slide":30,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/l8r6dwrq","slide":30,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/07ip4bq5","slide":30,"text":"Wrappers","textPreview":"Wrappers","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/na9of69g","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/m907618v","slide":30,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/07yt0va1","slide":30,"text":"String m1 = \"85\";\nString m2 = \"90\";\nInteger a = Integer.valueOf(m1);\nInteger b = Integer.valueOf(m2);\nint total = a + b;","textPreview":"String m1 = \"85\"; | String m2 = \"90\"; | Integer a = Integer.valueOf(m1); | Integer b = Integer.valueOf(m2); | int total = a + b;","textChars":120,"textLines":5,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/187a90bm","slide":30,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/e5wbylsb","slide":30,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/f6ps7qtw","slide":30,"text":"String to wrapper","textPreview":"String to wrapper","textChars":17,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/obyt4vad","slide":30,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/fyc0lb","slide":30,"text":"What to say: Connect directly to marks-as-strings lab.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/er2gze","slide":31,"title":"Autoboxing behind the scenes","textShapes":19}
+{"kind":"shape","id":"sh/x0n6hcva","slide":31,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/axw7mhwz","slide":31,"text":"Autoboxing behind the scenes","textPreview":"Autoboxing behind the scenes","textChars":28,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/by5of2xk","slide":31,"text":"Reveal compiler-inserted conversion.","textPreview":"Reveal compiler-inserted conversion.","textChars":36,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/ovupk7et","slide":31,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/pw36dcfe","slide":31,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/2tc7ixwn","slide":31,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/nulob2x8","slide":31,"text":"Autoboxing","textPreview":"Autoboxing","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/8rypwrex","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/ts7qpwvi","slide":31,"bbox":[76,168,520,420]}
+{"kind":"shape","id":"sh/p8nq9gji","slide":31,"bbox":[76,168,8,420]}
+{"kind":"textbox","id":"sh/47epgb2d","slide":31,"text":"What you write","textPreview":"What you write","textChars":14,"textLines":1,"bbox":[98,182,482,34]}
+{"kind":"shape","id":"sh/3m58761s","slide":31,"bbox":[98,222,482,358]}
+{"kind":"shape","id":"sh/2lw7elk7","slide":31,"bbox":[684,168,520,420]}
+{"kind":"shape","id":"sh/hknq5gjm","slide":31,"bbox":[684,168,8,420]}
+{"kind":"textbox","id":"sh/gjupcb21","slide":31,"text":"What it means","textPreview":"What it means","textChars":13,"textLines":1,"bbox":[706,182,482,34]}
+{"kind":"shape","id":"sh/fil8361g","slide":31,"bbox":[706,222,482,358]}
+{"kind":"shape","id":"sh/uhc7a1kv","slide":31,"bbox":[110,242,28,28]}
+{"kind":"textbox","id":"sh/1g7qh0jq","slide":31,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[110,245,28,18]}
+{"kind":"textbox","id":"sh/0fy9ov25","slide":31,"text":"Integer x = 10;","textPreview":"Integer x = 10;","textChars":15,"textLines":1,"bbox":[154,238,396,42]}
+{"kind":"shape","id":"sh/kj6tkjqh","slide":31,"bbox":[110,297,28,28]}
+{"kind":"textbox","id":"sh/lkfador2","slide":31,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[110,300,28,18]}
+{"kind":"textbox","id":"sh/yhori98b","slide":31,"text":"int y = x + 5;","textPreview":"int y = x + 5;","textChars":14,"textLines":1,"bbox":[154,293,396,42]}
+{"kind":"shape","id":"sh/zixsbe9w","slide":31,"bbox":[110,352,28,28]}
+{"kind":"textbox","id":"sh/cfm9gzql","slide":31,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[110,355,28,18]}
+{"kind":"textbox","id":"sh/xgfa94r6","slide":31,"text":"Looks automatic","textPreview":"Looks automatic","textChars":15,"textLines":1,"bbox":[154,348,396,42]}
+{"kind":"shape","id":"sh/at4rep8f","slide":31,"bbox":[718,242,28,28]}
+{"kind":"textbox","id":"sh/beds7u90","slide":31,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[718,245,28,18]}
+{"kind":"textbox","id":"sh/orm9czq9","slide":31,"text":"Integer.valueOf(10)","textPreview":"Integer.valueOf(10)","textChars":19,"textLines":1,"bbox":[762,238,396,42]}
+{"kind":"shape","id":"sh/psva54ru","slide":31,"bbox":[718,297,28,28]}
+{"kind":"textbox","id":"sh/rmtsfutw","slide":31,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[718,300,28,18]}
+{"kind":"textbox","id":"sh/qlkbmpcb","slide":31,"text":"x.intValue() + 5","textPreview":"x.intValue() + 5","textChars":16,"textLines":1,"bbox":[762,293,396,42]}
+{"kind":"shape","id":"sh/dovahkbm","slide":31,"bbox":[718,352,28,28]}
+{"kind":"textbox","id":"sh/sn2tofu1","slide":31,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[718,355,28,18]}
+{"kind":"textbox","id":"sh/fqdcjuts","slide":31,"text":"Compiler inserts conversions","textPreview":"Compiler inserts conversions","textChars":28,"textLines":1,"bbox":[762,348,396,42]}
+{"kind":"notes","id":"nt/er2gze","slide":31,"text":"What to say: This makes autoboxing understandable instead of magical.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/w5wcgu","slide":32,"title":"Wrapper comparison warning","textShapes":8}
+{"kind":"shape","id":"sh/0fi5kfup","slide":32,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ze94radk","slide":32,"text":"Wrapper comparison warning","textPreview":"Wrapper comparison warning","textChars":26,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ed03i5wz","slide":32,"text":"Clarify == vs equals.","textPreview":"Clarify == vs equals.","textChars":21,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/94bmxkvm","slide":32,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/o325ofu1","slide":32,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/n294vudg","slide":32,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/m10nmpcv","slide":32,"text":"Autoboxing","textPreview":"Autoboxing","textChars":10,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/p87ml0v2","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/47ylcvex","slide":32,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/ytkvud4n","slide":32,"text":"Integer a = 200;\nInteger b = 200;\n\nSystem.out.println(a == b);      // compares references\nSystem.out.println(a.equals(b)); // compares values","textPreview":"Integer a = 200; | Integer b = 200; |  | System.out.println(a == b);      // compares references | System.out.println(a.equals(b)); // co...","textChars":142,"textLines":5,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/jutc3il8","slide":32,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/kv2dwnmt","slide":32,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/lwbu5s3e","slide":32,"text":"Wrapper comparison","textPreview":"Wrapper comparison","textChars":18,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/6hkvyx4z","slide":32,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/w5wcgu","slide":32,"text":"What to say: Explain equals is the safer value comparison for wrappers.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/n8w6tn","slide":33,"title":"Generic type parameter naming","textShapes":15}
+{"kind":"shape","id":"sh/d8vy9cbq","slide":33,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ql4fexsf","slide":33,"text":"Generic type parameter naming","textPreview":"Generic type parameter naming","textChars":29,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/rmdg72t0","slide":33,"text":"Explain common names.","textPreview":"Explain common names.","textChars":21,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/0b6xkrah","slide":33,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/1cfydwb2","slide":33,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/e94fihsb","slide":33,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/zadgbmtw","slide":33,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/of6xorad","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/9gfyhwby","slide":33,"bbox":[98,184,466,142]}
+{"kind":"shape","id":"sh/5wb65oji","slide":33,"bbox":[98,184,8,142]}
+{"kind":"textbox","id":"sh/kv2pc3ix","slide":33,"text":"T","textPreview":"T","textChars":1,"textLines":1,"bbox":[120,198,428,34]}
+{"kind":"textbox","id":"sh/ju9o3y1c","slide":33,"text":"Type.","textPreview":"Type.","textChars":5,"textLines":1,"bbox":[120,238,428,80]}
+{"kind":"shape","id":"sh/y907at0r","slide":33,"bbox":[658,184,466,142]}
+{"kind":"shape","id":"sh/t0bq98je","slide":33,"bbox":[658,184,8,142]}
+{"kind":"textbox","id":"sh/sz2pg3it","slide":33,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[680,198,428,34]}
+{"kind":"textbox","id":"sh/7yt87y1o","slide":33,"text":"Element, common in collections.","textPreview":"Element, common in collections.","textChars":31,"textLines":1,"bbox":[680,238,428,80]}
+{"kind":"shape","id":"sh/6xk7et03","slide":33,"bbox":[98,368,466,142]}
+{"kind":"shape","id":"sh/94r6x4ja","slide":33,"bbox":[98,368,8,142]}
+{"kind":"textbox","id":"sh/o3yp4jip","slide":33,"text":"K","textPreview":"K","textChars":1,"textLines":1,"bbox":[120,382,428,34]}
+{"kind":"textbox","id":"sh/0n2pkjal","slide":33,"text":"Key.","textPreview":"Key.","textChars":4,"textLines":1,"bbox":[120,422,428,80]}
+{"kind":"shape","id":"sh/1obqtor6","slide":33,"bbox":[658,368,466,142]}
+{"kind":"shape","id":"sh/elk7i9sf","slide":33,"bbox":[658,368,8,142]}
+{"kind":"textbox","id":"sh/fmtore90","slide":33,"text":"V","textPreview":"V","textChars":1,"textLines":1,"bbox":[680,382,428,34]}
+{"kind":"textbox","id":"sh/obmpojqh","slide":33,"text":"Value.","textPreview":"Value.","textChars":6,"textLines":1,"bbox":[680,422,428,80]}
+{"kind":"shape","id":"sh/pcvqxor2","slide":33,"bbox":[98,552,466,142]}
+{"kind":"shape","id":"sh/2p47mt8r","slide":33,"bbox":[98,552,8,142]}
+{"kind":"textbox","id":"sh/nad8ve9c","slide":33,"text":"Meaning","textPreview":"Meaning","textChars":7,"textLines":1,"bbox":[120,566,428,34]}
+{"kind":"textbox","id":"sh/cfmps3qt","slide":33,"text":"Names are conventions; the compiler checks the actual type argument.","textPreview":"Names are conventions; the compiler checks the actual type argument.","textChars":68,"textLines":1,"bbox":[120,606,428,80]}
+{"kind":"notes","id":"nt/n8w6tn","slide":33,"text":"What to say: Students often ask what T means; answer directly.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/wuezvm","slide":34,"title":"Compile-time type safety example","textShapes":8}
+{"kind":"shape","id":"sh/gbelcru9","slide":34,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/va54jmdo","slide":34,"text":"Compile-time type safety example","textPreview":"Compile-time type safety example","textChars":32,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/u9w3ahc3","slide":34,"text":"Show wrong type rejected.","textPreview":"Show wrong type rejected.","textChars":25,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/t83mhcvi","slide":34,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/87ul87ed","slide":34,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/76l4f2ds","slide":34,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/65c36xw7","slide":34,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/d47mtwv2","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/s3y5kbuh","slide":34,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/6xozi98n","slide":34,"text":"Box<Integer> box = new Box<>(10);\n// box = new Box<String>(\"Java\"); // wrong type\n// box.set(\"Java\");              // compiler rejects\n\nInteger n = box.get();","textPreview":"Box<Integer> box = new Box<>(10); | // box = new Box<String>(\"Java\"); // wrong type | // box.set(\"Java\");              // compiler reject...","textChars":158,"textLines":5,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/7yx0bep8","slide":34,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/8z6hkjqd","slide":34,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/t0fido7y","slide":34,"text":"Type safety","textPreview":"Type safety","textChars":11,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/yt4ze98b","slide":34,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/wuezvm","slide":34,"text":"What to say: Explain generics catch the bug before the program runs.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/w9bcr4","slide":35,"title":"Two-parameter generic use case","textShapes":8}
+{"kind":"shape","id":"sh/9sry10fu","slide":35,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/m50z6lwj","slide":35,"text":"Two-parameter generic use case","textPreview":"Two-parameter generic use case","textChars":30,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/nq9gzqxo","slide":35,"text":"Make Pair practical.","textPreview":"Make Pair practical.","textChars":20,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/wv2hcvel","slide":35,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/xwbi50f6","slide":35,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/at0za5wf","slide":35,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/vut03qx0","slide":35,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/kz2hgfeh","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/50bi9kv2","slide":35,"bbox":[90,170,760,405]}
+{"kind":"textbox","id":"sh/dkzytsji","slide":35,"text":"Pair<String, Integer> record =\n    new Pair<>(\"CSE\", 60);\n\n// K is String, V is Integer\n// Useful for key-value style data.","textPreview":"Pair<String, Integer> record = |     new Pair<>(\"CSE\", 60); |  | // K is String, V is Integer | // Useful for key-value style data.","textChars":123,"textLines":5,"bbox":[122,200,700,345]}
+{"kind":"shape","id":"sh/sj6xkn2x","slide":35,"bbox":[882,260,300,220]}
+{"kind":"shape","id":"sh/rixwri1c","slide":35,"bbox":[882,260,8,220]}
+{"kind":"textbox","id":"sh/qhofidkr","slide":35,"text":"Pair<K,V>","textPreview":"Pair<K,V>","textChars":9,"textLines":1,"bbox":[904,274,262,34]}
+{"kind":"textbox","id":"sh/1ozyxsje","slide":35,"text":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textPreview":"Read the code by finding the declaration, the key Java keyword, the runtime action, and the output or object state.","textChars":115,"textLines":1,"bbox":[904,314,262,158]}
+{"kind":"notes","id":"nt/w9bcr4","slide":35,"text":"What to say: Connect K/V to map-like data.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/48p04y","slide":36,"title":"Common generic mistakes","textShapes":15}
+{"kind":"shape","id":"sh/vu5oralg","slide":36,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/wvep0f21","slide":36,"text":"Common generic mistakes","textPreview":"Common generic mistakes","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/xwn6tk36","slide":36,"text":"Prevent syntax and concept errors.","textPreview":"Prevent syntax and concept errors.","textChars":34,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/m5c7ulkj","slide":36,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/n65onql4","slide":36,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/87epwv2p","slide":36,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/9sn6p03a","slide":36,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/y1c7qlkn","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/z2lojql8","slide":36,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/vetwjep8","slide":36,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/udkfa9on","slide":36,"text":"Using primitive type argument such as Box<int>","textPreview":"Using primitive type argument such as Box<int>","textChars":46,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/hgvelo7y","slide":36,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/wfmxcj6t","slide":36,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/jidgne54","slide":36,"text":"Forgetting the type argument and creating raw types","textPreview":"Forgetting the type argument and creating raw types","textChars":51,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/ih4fe9oj","slide":36,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/54vypona","slide":36,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/43mxgj6p","slide":36,"text":"Assuming generics change runtime primitive behavior","textPreview":"Assuming generics change runtime primitive behavior","textChars":51,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/zm9wbup0","slide":36,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/yl0f2pof","slide":36,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/218zqx83","slide":36,"text":"Using unclear type parameter names in larger code","textPreview":"Using unclear type parameter names in larger code","textChars":49,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/n2h0j2po","slide":36,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/o3qhs7qt","slide":36,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/p4zilc7e","slide":36,"text":"Ignoring compiler warnings about unchecked operations","textPreview":"Ignoring compiler warnings about unchecked operations","textChars":53,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"notes","id":"nt/48p04y","slide":36,"text":"What to say: These are practical warnings before lab and exams.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/djg98t","slide":37,"title":"Worked lab plan: marks with wrappers","textShapes":10}
+{"kind":"shape","id":"sh/ovatc3yp","slide":37,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/nuhc3yx4","slide":37,"text":"Worked lab plan: marks with wrappers","textPreview":"Worked lab plan: marks with wrappers","textChars":36,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/mt8batgj","slide":37,"text":"Break wrapper lab into steps.","textPreview":"Break wrapper lab into steps.","textChars":29,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/xkju9sfm","slide":37,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/wjatgny1","slide":37,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/by1c7ixg","slide":37,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/axsbedgv","slide":37,"text":"Lab Link","textPreview":"Lab Link","textChars":8,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/dozuxof2","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/cnqt4jyh","slide":37,"bbox":[70,305,194.4,96]}
+{"kind":"textbox","id":"sh/ex4zuxcv","slide":37,"text":"Read marks as strings","textPreview":"Read marks as strings","textChars":21,"textLines":1,"bbox":[82,324,170.4,58]}
+{"kind":"shape","id":"sh/zydgn2tg","slide":37,"bbox":[272.4,337,26,30]}
+{"kind":"shape","id":"sh/0zmhw7u1","slide":37,"bbox":[306.4,305,194.4,96]}
+{"kind":"textbox","id":"sh/l0vipcbm","slide":37,"text":"Convert to Integer wrappers","textPreview":"Convert to Integer wrappers","textChars":27,"textLines":1,"bbox":[318.4,324,170.4,58]}
+{"kind":"shape","id":"sh/m1ozyhc7","slide":37,"bbox":[508.8,337,26,30]}
+{"kind":"shape","id":"sh/n2x0r2ts","slide":37,"bbox":[542.8,305,194.4,96]}
+{"kind":"textbox","id":"sh/836h07ux","slide":37,"text":"Unbox in total expression","textPreview":"Unbox in total expression","textChars":25,"textLines":1,"bbox":[554.8,324,170.4,58]}
+{"kind":"shape","id":"sh/94fitcbi","slide":37,"bbox":[745.2,337,26,30]}
+{"kind":"shape","id":"sh/a5oz2hc3","slide":37,"bbox":[779.2,305,194.4,96]}
+{"kind":"textbox","id":"sh/vqx0vmto","slide":37,"text":"Compute average","textPreview":"Compute average","textChars":15,"textLines":1,"bbox":[791.2,324,170.4,58]}
+{"kind":"shape","id":"sh/7uhgjm9w","slide":37,"bbox":[981.6,337,26,30]}
+{"kind":"shape","id":"sh/6t8zqhsb","slide":37,"bbox":[1015.6,305,194.4,96]}
+{"kind":"textbox","id":"sh/twzylwrm","slide":37,"text":"Display result","textPreview":"Display result","textChars":14,"textLines":1,"bbox":[1027.6,324,170.4,58]}
+{"kind":"notes","id":"nt/djg98t","slide":37,"text":"What to say: Connect directly to syllabus practical 10.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/eymfz3","slide":38,"title":"Module 5 mind map","textShapes":18}
+{"kind":"shape","id":"sh/wbih4bih","slide":38,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/ba90b61w","slide":38,"text":"Module 5 mind map","textPreview":"Module 5 mind map","textChars":17,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/a90z210b","slide":38,"text":"Connect all major headings.","textPreview":"Connect all major headings.","textChars":27,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/50bih0jy","slide":38,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/kz2h8vid","slide":38,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/jyt0fq1s","slide":38,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/ix0z6l07","slide":38,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/t4bil0ju","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/s32hcvi9","slide":38,"bbox":[504,292,272,112]}
+{"kind":"textbox","id":"sh/ex4vm5on","slide":38,"text":"Module 5","textPreview":"Module 5","textChars":8,"textLines":1,"bbox":[528,324,224,40]}
+{"kind":"shape","id":"sh/zydwfa58","slide":38,"bbox":[92,196,286,84]}
+{"kind":"shape","id":"sh/0z6dof6t","slide":38,"bbox":[92,196,8,84]}
+{"kind":"textbox","id":"sh/10fehkne","slide":38,"text":"Enums","textPreview":"Enums","textChars":5,"textLines":1,"bbox":[114,210,248,34]}
+{"kind":"textbox","id":"sh/m1ovq5oz","slide":38,"text":"Named constants.","textPreview":"Named constants.","textChars":16,"textLines":1,"bbox":[114,250,248,22]}
+{"kind":"shape","id":"sh/n2xwja5k","slide":38,"bbox":[500,166,286,84]}
+{"kind":"shape","id":"sh/on6xsf6p","slide":38,"bbox":[500,166,8,84]}
+{"kind":"textbox","id":"sh/9ofelkna","slide":38,"text":"values","textPreview":"values","textChars":6,"textLines":1,"bbox":[522,180,248,34]}
+{"kind":"textbox","id":"sh/25kvelof","slide":38,"text":"List constants.","textPreview":"List constants.","textChars":15,"textLines":1,"bbox":[522,220,248,22]}
+{"kind":"shape","id":"sh/36tw7q50","slide":38,"bbox":[902,196,286,84]}
+{"kind":"shape","id":"sh/7a9sfmls","slide":38,"bbox":[902,196,8,84]}
+{"kind":"textbox","id":"sh/690bmh47","slide":38,"text":"valueOf","textPreview":"valueOf","textChars":7,"textLines":1,"bbox":[924,210,248,34]}
+{"kind":"textbox","id":"sh/tcrahw3y","slide":38,"text":"Convert name.","textPreview":"Convert name.","textChars":13,"textLines":1,"bbox":[924,250,248,22]}
+{"kind":"shape","id":"sh/8bit8rmd","slide":38,"bbox":[92,468,286,84]}
+{"kind":"shape","id":"sh/j6psb2lw","slide":38,"bbox":[92,468,8,84]}
+{"kind":"textbox","id":"sh/y5gbix4b","slide":38,"text":"Wrappers","textPreview":"Wrappers","textChars":8,"textLines":1,"bbox":[114,482,248,34]}
+{"kind":"textbox","id":"sh/l8radc32","slide":38,"text":"Primitive as object.","textPreview":"Primitive as object.","textChars":20,"textLines":1,"bbox":[114,522,248,22]}
+{"kind":"shape","id":"sh/k7ytk7mh","slide":38,"bbox":[500,510,286,84]}
+{"kind":"shape","id":"sh/32tcn6l0","slide":38,"bbox":[500,510,8,84]}
+{"kind":"textbox","id":"sh/21kbe14f","slide":38,"text":"Autoboxing","textPreview":"Autoboxing","textChars":10,"textLines":1,"bbox":[522,524,248,34]}
+{"kind":"textbox","id":"sh/0nup832x","slide":38,"text":"Automatic conversion.","textPreview":"Automatic conversion.","textChars":21,"textLines":1,"bbox":[522,564,248,22]}
+{"kind":"shape","id":"sh/183qh8ji","slide":38,"bbox":[902,468,286,84]}
+{"kind":"shape","id":"sh/elc76tk7","slide":38,"bbox":[902,468,8,84]}
+{"kind":"textbox","id":"sh/zml8fy1c","slide":38,"text":"Generics","textPreview":"Generics","textChars":8,"textLines":1,"bbox":[924,482,248,34]}
+{"kind":"textbox","id":"sh/obepc329","slide":38,"text":"Type-safe reuse.","textPreview":"Type-safe reuse.","textChars":16,"textLines":1,"bbox":[924,522,248,22]}
+{"kind":"notes","id":"nt/eymfz3","slide":38,"text":"What to say: Use as final overview.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/0xdokd","slide":39,"title":"Viva and exam focus","textShapes":15}
+{"kind":"shape","id":"sh/gzqx0ra5","slide":39,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/fyhgrm9k","slide":39,"text":"Viva and exam focus","textPreview":"Viva and exam focus","textChars":19,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/ux8fy1sz","slide":39,"text":"Convert content into marks.","textPreview":"Convert content into marks.","textChars":27,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/p4jyxgrm","slide":39,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/o3qx4bah","slide":39,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/32hgv69w","slide":39,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/218f21sb","slide":39,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/58fylcri","slide":39,"text":"39","textPreview":"39","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/k76xs7ax","slide":39,"bbox":[92,178,28,28]}
+{"kind":"textbox","id":"sh/a94nupkf","slide":39,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,181,28,18]}
+{"kind":"textbox","id":"sh/vadonul0","slide":39,"text":"Write enum syntax and use values/valueOf","textPreview":"Write enum syntax and use values/valueOf","textChars":40,"textLines":1,"bbox":[136,174,996,42]}
+{"kind":"shape","id":"sh/wbm5wf2l","slide":39,"bbox":[92,233,28,28]}
+{"kind":"textbox","id":"sh/xcv6pk3q","slide":39,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,236,28,18]}
+{"kind":"textbox","id":"sh/id4nypkb","slide":39,"text":"Explain wrapper classes and why they exist","textPreview":"Explain wrapper classes and why they exist","textChars":42,"textLines":1,"bbox":[136,229,996,42]}
+{"kind":"shape","id":"sh/jydorulw","slide":39,"bbox":[92,288,28,28]}
+{"kind":"textbox","id":"sh/kz650z2h","slide":39,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,291,28,18]}
+{"kind":"textbox","id":"sh/50f6t432","slide":39,"text":"Trace autoboxing/unboxing in methods and expressions","textPreview":"Trace autoboxing/unboxing in methods and expressions","textChars":52,"textLines":1,"bbox":[136,284,996,42]}
+{"kind":"shape","id":"sh/61on29kn","slide":39,"bbox":[92,343,28,28]}
+{"kind":"textbox","id":"sh/72xovel8","slide":39,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,346,28,18]}
+{"kind":"textbox","id":"sh/36h4jeh0","slide":39,"text":"Write a generic class with T","textPreview":"Write a generic class with T","textChars":28,"textLines":1,"bbox":[136,339,996,42]}
+{"kind":"shape","id":"sh/25ona90v","slide":39,"bbox":[92,398,28,28]}
+{"kind":"textbox","id":"sh/p8zml4z6","slide":39,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,401,28,18]}
+{"kind":"textbox","id":"sh/47q5cjil","slide":39,"text":"Explain two type parameters and why primitives need wrappers","textPreview":"Explain two type parameters and why primitives need wrappers","textChars":60,"textLines":1,"bbox":[136,394,996,42]}
+{"kind":"notes","id":"nt/0xdokd","slide":39,"text":"What to say: Tell students Module 5 is syntax plus conceptual type safety.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/53i11q","slide":40,"title":"20 important viva questions","textShapes":25}
+{"kind":"shape","id":"sh/ehgnylwj","slide":40,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/14rmt0fu","slide":40,"text":"20 important viva questions","textPreview":"20 important viva questions","textChars":27,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/g3y50ve9","slide":40,"text":"Rapid oral revision.","textPreview":"Rapid oral revision.","textChars":20,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/369ovax0","slide":40,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/250n25wf","slide":40,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/p8r6xkf6","slide":40,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/o7i54fel","slide":40,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/ja54j6xw","slide":40,"text":"40","textPreview":"40","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"textbox","id":"sh/i9wnq1wb","slide":40,"text":"1. What is enum?","textPreview":"1. What is enum?","textChars":16,"textLines":1,"bbox":[78,154,548,32]}
+{"kind":"textbox","id":"sh/wvyxkbul","slide":40,"text":"2. Why enum?","textPreview":"2. Why enum?","textChars":12,"textLines":1,"bbox":[78,199,548,32]}
+{"kind":"textbox","id":"sh/hw7ytgb6","slide":40,"text":"3. What is values()?","textPreview":"3. What is values()?","textChars":20,"textLines":1,"bbox":[78,244,548,32]}
+{"kind":"textbox","id":"sh/utgfi1cf","slide":40,"text":"4. What is valueOf()?","textPreview":"4. What is valueOf()?","textChars":21,"textLines":1,"bbox":[78,289,548,32]}
+{"kind":"textbox","id":"sh/vupgr6t0","slide":40,"text":"5. Enum in switch?","textPreview":"5. Enum in switch?","textChars":18,"textLines":1,"bbox":[78,334,548,32]}
+{"kind":"textbox","id":"sh/4zixovuh","slide":40,"text":"6. What is wrapper class?","textPreview":"6. What is wrapper class?","textChars":25,"textLines":1,"bbox":[78,379,548,32]}
+{"kind":"textbox","id":"sh/50ryx0b2","slide":40,"text":"7. Character wrapper?","textPreview":"7. Character wrapper?","textChars":21,"textLines":1,"bbox":[78,424,548,32]}
+{"kind":"textbox","id":"sh/ixgfmlcb","slide":40,"text":"8. Boolean wrapper?","textPreview":"8. Boolean wrapper?","textChars":19,"textLines":1,"bbox":[78,469,548,32]}
+{"kind":"textbox","id":"sh/jypgvqtw","slide":40,"text":"9. Numeric wrappers?","textPreview":"9. Numeric wrappers?","textChars":20,"textLines":1,"bbox":[78,514,548,32]}
+{"kind":"textbox","id":"sh/k3excrud","slide":40,"text":"10. What is parseInt?","textPreview":"10. What is parseInt?","textChars":21,"textLines":1,"bbox":[78,559,548,32]}
+{"kind":"textbox","id":"sh/l4nelwby","slide":40,"text":"11. What is autoboxing?","textPreview":"11. What is autoboxing?","textChars":23,"textLines":1,"bbox":[664,154,548,32]}
+{"kind":"textbox","id":"sh/10fepsnm","slide":40,"text":"12. What is unboxing?","textPreview":"12. What is unboxing?","textChars":21,"textLines":1,"bbox":[664,199,548,32]}
+{"kind":"textbox","id":"sh/0z6dgnm1","slide":40,"text":"13. Autoboxing in method?","textPreview":"13. Autoboxing in method?","textChars":25,"textLines":1,"bbox":[664,244,548,32]}
+{"kind":"textbox","id":"sh/fyxcni5g","slide":40,"text":"14. Autoboxing in expression?","textPreview":"14. Autoboxing in expression?","textChars":29,"textLines":1,"bbox":[664,289,548,32]}
+{"kind":"textbox","id":"sh/exoved4v","slide":40,"text":"15. Wrapper null risk?","textPreview":"15. Wrapper null risk?","textChars":22,"textLines":1,"bbox":[664,334,548,32]}
+{"kind":"textbox","id":"sh/pozetsni","slide":40,"text":"16. What is generics?","textPreview":"16. What is generics?","textChars":21,"textLines":1,"bbox":[664,379,548,32]}
+{"kind":"textbox","id":"sh/onqdknmd","slide":40,"text":"17. What is type parameter?","textPreview":"17. What is type parameter?","textChars":27,"textLines":1,"bbox":[664,424,548,32]}
+{"kind":"textbox","id":"sh/nmxwr25s","slide":40,"text":"18. What is Box<T>?","textPreview":"18. What is Box<T>?","textChars":19,"textLines":1,"bbox":[664,469,548,32]}
+{"kind":"textbox","id":"sh/21ovix47","slide":40,"text":"19. Two type parameters?","textPreview":"19. Two type parameters?","textChars":24,"textLines":1,"bbox":[664,514,548,32]}
+{"kind":"textbox","id":"sh/xszexc3u","slide":40,"text":"20. Can generics use int?","textPreview":"20. Can generics use int?","textChars":25,"textLines":1,"bbox":[664,559,548,32]}
+{"kind":"notes","id":"nt/53i11q","slide":40,"text":"What to say: Run rapid viva.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}
+{"kind":"slide","id":"sl/zcx66l","slide":41,"title":"One-page revision sheet","textShapes":11}
+{"kind":"shape","id":"sh/n6dgb6pc","slide":41,"bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/o7mxkb6x","slide":41,"text":"One-page revision sheet","textPreview":"One-page revision sheet","textChars":23,"textLines":1,"bbox":[58,36,1010,54]}
+{"kind":"textbox","id":"sh/p8fydw7i","slide":41,"text":"End with compact keywords.","textPreview":"End with compact keywords.","textChars":26,"textLines":1,"bbox":[62,92,920,30]}
+{"kind":"shape","id":"sh/e14fehov","slide":41,"bbox":[58,132,104,5]}
+{"kind":"shape","id":"sh/f2dg7mpg","slide":41,"bbox":[0,692,1280,28]}
+{"kind":"textbox","id":"sh/03mxgr61","slide":41,"text":"1BCS302 Java | Module 5","textPreview":"1BCS302 Java | Module 5","textChars":23,"textLines":1,"bbox":[44,696,280,20]}
+{"kind":"textbox","id":"sh/14vy9w7m","slide":41,"text":"Summary","textPreview":"Summary","textChars":7,"textLines":1,"bbox":[470,696,340,20]}
+{"kind":"textbox","id":"sh/qdkfahoz","slide":41,"text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[1170,696,64,20]}
+{"kind":"shape","id":"sh/retg3mpk","slide":41,"bbox":[78,176,1124,174]}
+{"kind":"shape","id":"sh/f214by9k","slide":41,"bbox":[78,176,8,174]}
+{"kind":"textbox","id":"sh/u1s32d8z","slide":41,"text":"Keywords","textPreview":"Keywords","textChars":8,"textLines":1,"bbox":[100,190,1086,34]}
+{"kind":"textbox","id":"sh/h4jmd8rq","slide":41,"text":"enum; enum constant; Department; values(); valueOf(); switch; type-safe constant; wrapper; Character; Boolean; Byte; Short; Integer; Long; Float; Double; valueOf; parseInt; autoboxing; unboxing; NullPointerException; generics; type parameter; T; K; V; Box<T>; Pair<K,V>; generic class; reference type; wrapper with generics; raw type; diamond operator.","textPreview":"enum; enum constant; Department; values(); valueOf(); switch; type-safe constant; wrapper; Character; Boolean; Byte; Short; Integer; Long...","textChars":352,"textLines":1,"bbox":[100,230,1086,112]}
+{"kind":"shape","id":"sh/g3al43q5","slide":41,"bbox":[78,388,1124,98]}
+{"kind":"shape","id":"sh/3614fi9w","slide":41,"bbox":[78,388,8,98]}
+{"kind":"textbox","id":"sh/25s36d8b","slide":41,"text":"Exam answer pattern","textPreview":"Exam answer pattern","textChars":19,"textLines":1,"bbox":[100,402,1086,34]}
+{"kind":"textbox","id":"sh/p8jmhsr2","slide":41,"text":"For Module 5 answers: define the type feature, write a compact code example, explain compiler type safety, then mention one common runtime or syntax mistake.","textPreview":"For Module 5 answers: define the type feature, write a compact code example, explain compiler type safety, then mention one common runtim...","textChars":157,"textLines":1,"bbox":[100,442,1086,36]}
+{"kind":"shape","id":"sh/47al8nqh","slide":41,"bbox":[78,530,1124,82]}
+{"kind":"shape","id":"sh/jah43e9c","slide":41,"bbox":[78,530,8,82]}
+{"kind":"textbox","id":"sh/i9o3ut87","slide":41,"text":"Lab memory trick","textPreview":"Lab memory trick","textChars":16,"textLines":1,"bbox":[100,544,1086,34]}
+{"kind":"textbox","id":"sh/mpw721sf","slide":41,"text":"Write the smallest working program first, compile, predict output, then add one feature at a time.","textPreview":"Write the smallest working program first, compile, predict output, then add one feature at a time.","textChars":98,"textLines":1,"bbox":[100,584,1086,20]}
+{"kind":"notes","id":"nt/zcx66l","slide":41,"text":"What to say: Close with keyword revision.\nPause cue: pause after the code or diagram appears; ask students to read it from top to bottom before revealing the rule.\nPointing cue: point first to the keyword or operator, then to the data flow, object relation, or runtime behavior.\nQuestion to ask students: Ask students to predict the output or identify the Java rule used here.\nAnimation instructions: Fade title; appear bullets/cards one by one; wipe arrows in process order; highlight code keywords word by word.\nTransition style: Fade.\n[Sources] 1BCS302 Object Oriented Programming with Java syllabus PDF, Module 5 checklist; Herbert Schildt and Danny Coward, Java: The Complete Reference, 13th ed., McGraw-Hill, 2024, chapters 12 and 14."}

@@ -1,0 +1,1067 @@
+{"kind":"deck","id":"pr/1qr7zn","name":"Deck"}
+{"kind":"layout","layoutId":"631d5b04-b734-4bae-b52c-f544a44db0ff","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"2ad82732-c1a7-4d38-b042-0ec01e0260e3","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/atm1lz","slide":1,"title":"BCS515D | Distributed Systems","textShapes":10}
+{"kind":"textbox","id":"sh/hwzmdkbi","slide":1,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/uto325c7","slide":1,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/vuh4bats","slide":1,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/4zql8fu9","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/p0zmhkbu","slide":1,"text":"Transactions and Replication","textPreview":"Transactions and Replication","textChars":28,"textLines":1,"bbox":[76,98,780,116]}
+{"kind":"textbox","id":"sh/2x836pc3","slide":1,"text":"Distributed Systems | Module 5","textPreview":"Distributed Systems | Module 5","textChars":30,"textLines":1,"bbox":[80,224,780,72]}
+{"kind":"shape","id":"sh/3yh4fato","slide":1,"bbox":[82,318,180,7]}
+{"kind":"textbox","id":"sh/cnalczul","slide":1,"text":"Hook","textPreview":"Hook","textChars":4,"textLines":1,"bbox":[163,430,170,92]}
+{"kind":"textbox","id":"sh/dojml4bq","slide":1,"text":"Core concept","textPreview":"Core concept","textChars":12,"textLines":1,"bbox":[359,430,170,92]}
+{"kind":"textbox","id":"sh/9cnep4fq","slide":1,"text":"Mechanism","textPreview":"Mechanism","textChars":9,"textLines":1,"bbox":[555,430,170,92]}
+{"kind":"textbox","id":"sh/8bexgze5","slide":1,"text":"Worked example","textPreview":"Worked example","textChars":14,"textLines":1,"bbox":[751,430,170,92]}
+{"kind":"textbox","id":"sh/na5wnuxk","slide":1,"text":"Exam-ready recap","textPreview":"Exam-ready recap","textChars":16,"textLines":1,"bbox":[947,430,170,92]}
+{"kind":"shape","id":"sh/mpwfepwz","slide":1,"bbox":[333,476,26,0]}
+{"kind":"shape","id":"sh/xg7yt4fm","slide":1,"bbox":[529,476,26,0]}
+{"kind":"shape","id":"sh/wfyxkze1","slide":1,"bbox":[725,476,26,0]}
+{"kind":"shape","id":"sh/vepwruxg","slide":1,"bbox":[921,476,26,0]}
+{"kind":"notes","id":"nt/atm1lz","slide":1,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/cmr30m","slide":2,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/694jmhgz","slide":2,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/tcf2hwza","slide":2,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/8b61oryp","slide":2,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/j6d0b2h8","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/y54jixgn","slide":2,"text":"Teaching route","textPreview":"Teaching route","textChars":14,"textLines":1,"bbox":[78,112,700,48]}
+{"kind":"shape","id":"sh/l8vidcze","slide":2,"bbox":[96,217,16,16]}
+{"kind":"textbox","id":"sh/k7m1k7yt","slide":2,"text":"Start with why the module matters.","textPreview":"Start with why the module matters.","textChars":34,"textLines":1,"bbox":[126,210,990,42]}
+{"kind":"shape","id":"sh/32hkn6hc","slide":2,"bbox":[96,293,16,16]}
+{"kind":"textbox","id":"sh/i1oju1gr","slide":2,"text":"Build one concept at a time with a diagram or worked trace.","textPreview":"Build one concept at a time with a diagram or worked trace.","textChars":59,"textLines":1,"bbox":[126,286,990,42]}
+{"kind":"shape","id":"sh/oraxsby1","slide":2,"bbox":[96,369,16,16]}
+{"kind":"textbox","id":"sh/psjylgfm","slide":2,"text":"Use examples before definitions become abstract.","textPreview":"Use examples before definitions become abstract.","textChars":48,"textLines":1,"bbox":[126,362,990,42]}
+{"kind":"shape","id":"sh/2psfq1gb","slide":2,"bbox":[96,445,16,16]}
+{"kind":"textbox","id":"sh/nq1gj6xw","slide":2,"text":"End with definitions, algorithms/formulas, mistakes and practice questions.","textPreview":"End with definitions, algorithms/formulas, mistakes and practice questions.","textChars":75,"textLines":1,"bbox":[126,438,990,42]}
+{"kind":"notes","id":"nt/cmr30m","slide":2,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/gcp2r2","slide":3,"title":"BCS515D | Distributed Systems","textShapes":11}
+{"kind":"textbox","id":"sh/a1snelsv","slide":3,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/x43mpgbm","slide":3,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/w3u5gba1","slide":3,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/j6l4rq9c","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/y5cnils7","slide":3,"text":"Module map","textPreview":"Module map","textChars":10,"textLines":1,"bbox":[78,112,700,48]}
+{"kind":"shape","id":"sh/l836t0ri","slide":3,"bbox":[96,193,16,16]}
+{"kind":"textbox","id":"sh/k7u5kvax","slide":3,"text":"Flat distributed transactions","textPreview":"Flat distributed transactions","textChars":29,"textLines":1,"bbox":[126,186,1000,42]}
+{"kind":"shape","id":"sh/zah4fmt8","slide":3,"bbox":[96,251,16,16]}
+{"kind":"textbox","id":"sh/e98n61sn","slide":3,"text":"Nested distributed transactions","textPreview":"Nested distributed transactions","textChars":31,"textLines":1,"bbox":[126,244,1000,42]}
+{"kind":"shape","id":"sh/4jmho7mt","slide":3,"bbox":[96,309,16,16]}
+{"kind":"textbox","id":"sh/5kvixc3y","slide":3,"text":"Atomic commit protocols","textPreview":"Atomic commit protocols","textChars":23,"textLines":1,"bbox":[126,302,1000,42]}
+{"kind":"shape","id":"sh/ih4zmx4n","slide":3,"bbox":[96,367,16,16]}
+{"kind":"textbox","id":"sh/3id0v2l8","slide":3,"text":"Concurrency control","textPreview":"Concurrency control","textChars":19,"textLines":1,"bbox":[126,360,1000,42]}
+{"kind":"shape","id":"sh/sn6hs7mp","slide":3,"bbox":[96,425,16,16]}
+{"kind":"textbox","id":"sh/dofi1c3a","slide":3,"text":"Distributed deadlocks","textPreview":"Distributed deadlocks","textChars":21,"textLines":1,"bbox":[126,418,1000,42]}
+{"kind":"shape","id":"sh/qlozqh4j","slide":3,"bbox":[96,483,16,16]}
+{"kind":"textbox","id":"sh/rmx0z2l4","slide":3,"text":"Transaction recovery","textPreview":"Transaction recovery","textChars":20,"textLines":1,"bbox":[126,476,1000,42]}
+{"kind":"shape","id":"sh/8r2hgnml","slide":3,"bbox":[96,541,16,16]}
+{"kind":"textbox","id":"sh/9sbyps36","slide":3,"text":"Replication","textPreview":"Replication","textChars":11,"textLines":1,"bbox":[126,534,1000,42]}
+{"kind":"notes","id":"nt/gcp2r2","slide":3,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/rydi51","slide":4,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/6dgnapk3","slide":4,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/tg76l4je","slide":4,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/sfy5cz29","slide":4,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/fiponu1k","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/uhgne9kz","slide":4,"text":"Flat distributed transactions","textPreview":"Flat distributed transactions","textChars":29,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/hkr6p4jq","slide":4,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/gjy5gz25","slide":4,"text":"Flat distributed transactions is best taught as a coordinator problem, not as a memorized definition.","textPreview":"Flat distributed transactions is best taught as a coordinator problem, not as a memorized definition.","textChars":101,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/3m9ore1w","slide":4,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/2l0ni9kb","slide":4,"text":"The key mechanism connects participants with prepare so that students can predict the result.","textPreview":"The key mechanism connects participants with prepare so that students can predict the result.","textChars":93,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/kvqh8rml","slide":4,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/lwzihcn6","slide":4,"text":"For exams, draw the model first, label each step, and then explain vote and commit/abort.","textPreview":"For exams, draw the model first, label each step, and then explain vote and commit/abort.","textChars":89,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/y98z6h4f","slide":4,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/jah0fm50","slide":4,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/8zahcrmh","slide":4,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/t0jilwn2","slide":4,"text":"vote","textPreview":"vote","textChars":4,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/6x8zah4r","slide":4,"text":"commit/abort","textPreview":"commit/abort","textChars":12,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/7y10jm5w","slide":4,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/g3a1gbmt","slide":4,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/h4jipwne","slide":4,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/58fqdcr6","slide":4,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/4769k7al","slide":4,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/36d8b290","slide":4,"text":"This topic explains how flat distributed transactions changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how flat distributed transactions changes design decisions, program behaviour, protocol results or proof structure.","textChars":135,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/rydi51","slide":4,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/37evv6","slide":5,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/hozudkf2","slide":5,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/u18vipgr","slide":5,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/v2hcbuxc","slide":5,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/8zqdgfyl","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/90zu9kf6","slide":5,"text":"Flat distributed transactions: message movement","textPreview":"Flat distributed transactions: message movement","textChars":47,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/mxove5gf","slide":5,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/7yhc7ah0","slide":5,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/svadsjyp","slide":5,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/twjel4fa","slide":5,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/1onul0fq","slide":5,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/0netsvyl","slide":5,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/37evv6","slide":5,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/twrgt7","slide":6,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/32p8vmpk","slide":6,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/o3yporq5","slide":6,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/p47qxw7q","slide":6,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/a5g7q18b","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/bqp8z6pg","slide":6,"text":"Flat distributed transactions: worked example","textPreview":"Flat distributed transactions: worked example","textChars":45,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/cry9sbq1","slide":6,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/xsrq1g7m","slide":6,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/yt0rul87","slide":6,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/zu983qps","slide":6,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/3u50jexg","slide":6,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/2twzq9gv","slide":6,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/pwnilofm","slide":6,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/4vehsjy1","slide":6,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/fq5gfuxk","slide":6,"text":"Identify participants","textPreview":"Identify participants","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/upwzmpgz","slide":6,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/hsnih4fa","slide":6,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/grehozy5","slide":6,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/zmp0ryxo","slide":6,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/elgzytg3","slide":6,"text":"Apply prepare","textPreview":"Apply prepare","textChars":13,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/ahk3qx0b","slide":6,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/bitkj2hw","slide":6,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/wj2ls7ih","slide":6,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/xkb2lsz2","slide":6,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/ylk3ux0n","slide":6,"text":"Check vote","textPreview":"Check vote","textChars":10,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/jmtkn2hs","slide":6,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/k7mlw7id","slide":6,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/l8v2pczy","slide":6,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/ep0jid03","slide":6,"text":"vote","textPreview":"vote","textChars":4,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/zq9kbiho","slide":6,"text":"Conclude commit/abort","textPreview":"Conclude commit/abort","textChars":21,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/1gzed0ni","slide":6,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/gfqx4f6x","slide":6,"text":"Use this structure whenever flat distributed transactions appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever flat distributed transactions appears as a 10-mark explanation or trace problem.","textChars":108,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/twrgt7","slide":6,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/r9lbnz","slide":7,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/vq5g7q9g","slide":7,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/wreh0bq1","slide":7,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/xsny9gr6","slide":7,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/itwz2l8r","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ju5gbq9c","slide":7,"text":"Nested distributed transactions","textPreview":"Nested distributed transactions","textChars":31,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/kveh4vqx","slide":7,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/5wnyd0ri","slide":7,"text":"Nested distributed transactions is best taught as a coordinator problem, not as a memorized definition.","textPreview":"Nested distributed transactions is best taught as a coordinator problem, not as a memorized definition.","textChars":103,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/yxsfq1sn","slide":7,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/zylgz698","slide":7,"text":"The key mechanism connects participants with prepare so that students can predict the result.","textPreview":"The key mechanism connects participants with prepare so that students can predict the result.","textChars":93,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/761gnuhc","slide":7,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/m5sfupgr","slide":7,"text":"For exams, draw the model first, label each step, and then explain vote and commit/abort.","textPreview":"For exams, draw the model first, label each step, and then explain vote and commit/abort.","textChars":89,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/983ypkzi","slide":7,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/87uxwfyx","slide":7,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/z21gjah0","slide":7,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/y1sfq5gv","slide":7,"text":"vote","textPreview":"vote","textChars":4,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/l4jylkz6","slide":7,"text":"commit/abort","textPreview":"commit/abort","textChars":12,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/k3axsfyl","slide":7,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/behwfah4","slide":7,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/ad8fm5gj","slide":7,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/e98zy5kb","slide":7,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/fahgrq1w","slide":7,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/0bqh0vih","slide":7,"text":"This topic explains how nested distributed transactions changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how nested distributed transactions changes design decisions, program behaviour, protocol results or proof structure.","textChars":137,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/r9lbnz","slide":7,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/8y6cff","slide":8,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/axgfatsv","slide":8,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/xk7e58bm","slide":8,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/wzyxc3a1","slide":8,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/jm9w7yts","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/il0fets7","slide":8,"text":"Nested distributed transactions: message movement","textPreview":"Nested distributed transactions: message movement","textChars":49,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/5ore98bi","slide":8,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/knixg3ad","slide":8,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/rq9wbito","slide":8,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/6p0fids3","slide":8,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/8zq94zap","slide":8,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/90zqd4ba","slide":8,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/8y6cff","slide":8,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/o97d4l","slide":9,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/76tw3ado","slide":9,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/s72xwfe9","slide":9,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/t8be5kvu","slide":9,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/u94fy5cf","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/fadw7ad0","slide":9,"text":"Nested distributed transactions: worked example","textPreview":"Nested distributed transactions: worked example","textChars":47,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/gbmx0ful","slide":9,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/1cvy9kvq","slide":9,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/2d4f2pcb","slide":9,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/3edgbudw","slide":9,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/nqpkvu94","slide":9,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/2pg32psj","slide":9,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/pcr2xkru","slide":9,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/obil4fap","slide":9,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/fmpkra9s","slide":9,"text":"Identify participants","textPreview":"Identify participants","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/elg3y5s7","slide":9,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/1o72tkry","slide":9,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/0nyl0fad","slide":9,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/zit43e9c","slide":9,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/yh03a98r","slide":9,"text":"Apply prepare","textPreview":"Apply prepare","textChars":13,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/ud4n2dcz","slide":9,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/vedovytk","slide":9,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/wfm543ap","slide":9,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/h0v6x8ba","slide":9,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/i1o76dsv","slide":9,"text":"Check vote","textPreview":"Check vote","textChars":10,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/j2xozitg","slide":9,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/436p8na1","slide":9,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/54f61sbm","slide":9,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/y5knutcr","slide":9,"text":"vote","textPreview":"vote","textChars":4,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/z6tonetc","slide":9,"text":"Conclude commit/abort","textPreview":"Conclude commit/abort","textChars":21,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/10jq9wvu","slide":9,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/gzq90ru9","slide":9,"text":"Use this structure whenever nested distributed transactions appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever nested distributed transactions appears as a 10-mark explanation or trace problem.","textChars":110,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/o97d4l","slide":9,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/g0nqzp","slide":10,"title":"BCS515D | Distributed Systems","textShapes":16}
+{"kind":"textbox","id":"sh/25kbmpgv","slide":10,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/p8bahkfm","slide":10,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/o72tofe1","slide":10,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/f2tsbaxk","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/e10ri5gz","slide":10,"text":"Nested distributed transactions: common confusion","textPreview":"Nested distributed transactions: common confusion","textChars":49,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/14badkfq","slide":10,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/g32tkfy5","slide":10,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/re9s7qx8","slide":10,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/6d0re5g3","slide":10,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/0valgj29","slide":10,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/lwj29o3u","slide":10,"text":"Treating Nested distributed transactions as only a definition","textPreview":"Treating Nested distributed transactions as only a definition","textChars":61,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/yts3e9kj","slide":10,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/zu1k7el4","slide":10,"text":"Explain coordinator -> prepare -> commit/abort","textPreview":"Explain coordinator -> prepare -> commit/abort","textChars":46,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/cra1cz2d","slide":10,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/dsj2543y","slide":10,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/qp8japk7","slide":10,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/bq1k3uls","slide":10,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/wnulo32h","slide":10,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/xo32h832","slide":10,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/54j21ob6","slide":10,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/43qls3ul","slide":10,"text":"Use terms such as coordinator, participants, prepare","textPreview":"Use terms such as coordinator, participants, prepare","textChars":52,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/g0nqzp","slide":10,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/c0szgt","slide":11,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/x0vilgjq","slide":11,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/axkjalkf","slide":11,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/byt0j610","slide":11,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/k3m1gv2h","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/54vip0j2","slide":11,"text":"Atomic commit protocols","textPreview":"Atomic commit protocols","textChars":23,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/i14jelkb","slide":11,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/j2d0nq1w","slide":11,"text":"Atomic commit protocols is best taught as a coordinator problem, not as a memorized definition.","textPreview":"Atomic commit protocols is best taught as a coordinator problem, not as a memorized definition.","textChars":95,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/s761kv2t","slide":11,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/tsf2t0jy","slide":11,"text":"The key mechanism connects participants with prepare so that students can predict the result.","textPreview":"The key mechanism connects participants with prepare so that students can predict the result.","textChars":93,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/9ob25gjy","slide":11,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/8n2lwb2d","slide":11,"text":"For exams, draw the model first, label each step, and then explain vote and commit/abort.","textPreview":"For exams, draw the model first, label each step, and then explain vote and commit/abort.","textChars":89,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/nmtk361s","slide":11,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/mlk3u1k7","slide":11,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/xcv29gju","slide":11,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/wbml0b29","slide":11,"text":"vote","textPreview":"vote","textChars":4,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/vadk761o","slide":11,"text":"commit/abort","textPreview":"commit/abort","textChars":12,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/a943y1k3","slide":11,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/dgr2xwjq","slide":11,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/cfi1or25","slide":11,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/ob6t0bex","slide":11,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/pcfutgvi","slide":11,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/29obylw7","slide":11,"text":"This topic explains how atomic commit protocols changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how atomic commit protocols changes design decisions, program behaviour, protocol results or proof structure.","textChars":129,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/c0szgt","slide":11,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/uev9dl","slide":12,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/z25o7yhw","slide":12,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/k3epg3yh","slide":12,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/l4n698z2","slide":12,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/qxcnatgf","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/bylo3yh0","slide":12,"text":"Atomic commit protocols: message movement","textPreview":"Atomic commit protocols: message movement","textChars":41,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/cze5c3y5","slide":12,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/d0n65ozq","slide":12,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/29cn69g3","slide":12,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/3ulozeho","slide":12,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/7ep4vml4","slide":12,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/mdgnmhkj","slide":12,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/uev9dl","slide":12,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/3tt1u9","slide":13,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/s3e10n6l","slide":13,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/r2l07ip0","slide":13,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/q1cjydof","slide":13,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/503i587u","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/4zuhw369","slide":13,"text":"Atomic commit protocols: worked example","textPreview":"Atomic commit protocols: worked example","textChars":39,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/3yl03ypo","slide":13,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/ixczud8j","slide":13,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/hw3i187y","slide":13,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/gvahs3qd","slide":13,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/edk3uxkf","slide":13,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/fetknil0","slide":13,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/0fmlwn2l","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/1gv2ps36","slide":13,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/6pk3qdkj","slide":13,"text":"Identify participants","textPreview":"Identify participants","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/rqtkjilo","slide":13,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/sr2lsn29","slide":13,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/dcb2ls3u","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/il03mdk7","slide":13,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/jm9kfyls","slide":13,"text":"Apply prepare","textPreview":"Apply prepare","textChars":13,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/7qp0ne1k","slide":13,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/mpgzu90z","slide":13,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/9s7ip4jq","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/8ryhwzi5","slide":13,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/vup0re1g","slide":13,"text":"Check vote","textPreview":"Check vote","textChars":10,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/utgzy90b","slide":13,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/hwritojm","slide":13,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/wvy10ji1","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/by50fu1c","slide":13,"text":"vote","textPreview":"vote","textChars":4,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/axwzmp0r","slide":13,"text":"Conclude commit/abort","textPreview":"Conclude commit/abort","textChars":21,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/03axwbyp","slide":13,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/14jepgza","slide":13,"text":"Use this structure whenever atomic commit protocols appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever atomic commit protocols appears as a 10-mark explanation or trace problem.","textChars":102,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/3tt1u9","slide":13,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/hbixos","slide":14,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/lwru1gzq","slide":14,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/yt0b610z","slide":14,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/zu9cz6hk","slide":14,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/crit4bit","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/dsruxwze","slide":14,"text":"Concurrency control","textPreview":"Concurrency control","textChars":19,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/qpgb2103","slide":14,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/bqpcv6ho","slide":14,"text":"Concurrency control is best taught as a nodes problem, not as a memorized definition.","textPreview":"Concurrency control is best taught as a nodes problem, not as a memorized definition.","textChars":85,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/o3yt0rix","slide":14,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/po7utwzi","slide":14,"text":"The key mechanism connects network with shared resource so that students can predict the result.","textPreview":"The key mechanism connects network with shared resource so that students can predict the result.","textChars":96,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/54ji98z2","slide":14,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/43ah03yh","slide":14,"text":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textPreview":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textChars":96,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/321g7yhw","slide":14,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/i18zytgb","slide":14,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/hgzy5ozq","slide":14,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/gfqhwjy5","slide":14,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/vehg3eh0","slide":14,"text":"failure concern","textPreview":"failure concern","textChars":15,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/ud8zu9gf","slide":14,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/tczy1ozu","slide":14,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/8bqhsjy9","slide":14,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/kvuhoj65","slide":14,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/lw3iho7q","slide":14,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/ytszm9oz","slide":14,"text":"This topic explains how concurrency control changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how concurrency control changes design decisions, program behaviour, protocol results or proof structure.","textChars":125,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/hbixos","slide":14,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/hekqdc","slide":15,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/o36don69","slide":15,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/n2xwvip4","slide":15,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/m1ovmdoj","slide":15,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/xsze1s76","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/wrqdsn6l","slide":15,"text":"Concurrency control: message movement","textPreview":"Concurrency control: message movement","textChars":37,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/b6hwzip0","slide":15,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/a58vqdof","slide":15,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/dwvupo7m","slide":15,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/cvmdgj6h","slide":15,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/y1kb2dg7","slide":15,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/z2tcvixs","slide":15,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/hekqdc","slide":15,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/af081g","slide":16,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/n25s3elo","slide":16,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/83etcj29","slide":16,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/94na543u","slide":16,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/a5wbe9kz","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/v65c7elk","slide":16,"text":"Concurrency control: worked example","textPreview":"Concurrency control: worked example","textChars":35,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/w7ytgj25","slide":16,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/x87u9o3q","slide":16,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/q9cb2pkv","slide":16,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/balsbulg","slide":16,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/zy50jmho","slide":16,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/exwzqh03","slide":16,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/107ilwze","slide":16,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/0zyhsri9","slide":16,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/ru50fmhc","slide":16,"text":"Identify network","textPreview":"Identify network","textChars":16,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/qtwzmh0r","slide":16,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/dwnihwzi","slide":16,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/cvehorix","slide":16,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/3qlgb2hg","slide":16,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/ipczix0v","slide":16,"text":"Apply shared resource","textPreview":"Apply shared resource","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/61cjuxkn","slide":16,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/72l0n2l8","slide":16,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/83u1w72t","slide":16,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/to3ipc3e","slide":16,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/upcjyhkz","slide":16,"text":"Check protocol","textPreview":"Check protocol","textChars":14,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/vql0rmlk","slide":16,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/gru10r2p","slide":16,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/hsnitc3a","slide":16,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/itwj2hkv","slide":16,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/3u50vm1g","slide":16,"text":"Conclude failure concern","textPreview":"Conclude failure concern","textChars":24,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/do7m1gni","slide":16,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/cnylsbmx","slide":16,"text":"Use this structure whenever concurrency control appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever concurrency control appears as a 10-mark explanation or trace problem.","textChars":98,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/af081g","slide":16,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/ywuahv","slide":17,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/29kbup8r","slide":17,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/pwbu5kri","slide":17,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/4v2twfqx","slide":17,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/f6tsza9g","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/u5kbq58v","slide":17,"text":"Distributed deadlocks","textPreview":"Distributed deadlocks","textChars":21,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/h8bu1kr6","slide":17,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/g72tsfql","slide":17,"text":"Distributed deadlocks is best taught as a nodes problem, not as a memorized definition.","textPreview":"Distributed deadlocks is best taught as a nodes problem, not as a memorized definition.","textChars":87,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/729svq94","slide":17,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/610bm58j","slide":17,"text":"The key mechanism connects network with shared resource so that students can predict the result.","textPreview":"The key mechanism connects network with shared resource so that students can predict the result.","textChars":96,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/4jmlk365","slide":17,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/pkfmt87q","slide":17,"text":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textPreview":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textChars":96,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/2h43itoz","slide":17,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/3id4rypk","slide":17,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/gvmlg36t","slide":17,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/hwvmpo7e","slide":17,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/ut43eto3","slide":17,"text":"failure concern","textPreview":"failure concern","textChars":15,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/fud4nypo","slide":17,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/0r65sn6d","slide":17,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/1szm1s7y","slide":17,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/98vmlsz2","slide":17,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/87mlcnyh","slide":17,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/n6t4jihw","slide":17,"text":"This topic explains how distributed deadlocks changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how distributed deadlocks changes design decisions, program behaviour, protocol results or proof structure.","textChars":127,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/ywuahv","slide":17,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/goyil6","slide":18,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/0ja50jq5","slide":18,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/zyhorepk","slide":18,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/yx8ny98z","slide":18,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/dwz6p47e","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/cvq5wjqt","slide":18,"text":"Distributed deadlocks: message movement","textPreview":"Distributed deadlocks: message movement","textChars":39,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/buhonepo","slide":18,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/qt8nu983","slide":18,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/hs36187y","slide":18,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/wrup83qd","slide":18,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/ad43epsb","slide":18,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/bed47utw","slide":18,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/goyil6","slide":18,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/164xbb","slide":19,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/j6hsn2hk","slide":19,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/k7q9g7y5","slide":19,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/58zapczq","slide":19,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/a1orax03","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/v2xsj2ho","slide":19,"text":"Distributed deadlocks: worked example","textPreview":"Distributed deadlocks: worked example","textChars":37,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/w369c7y9","slide":19,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/x4zalczu","slide":19,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/uxsrm1g7","slide":19,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/fy1svmhs","slide":19,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/bmtov6to","slide":19,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/alknm1cj","slide":19,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/xov6xgbu","slide":19,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/cnm5obu9","slide":19,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/zqdozqt0","slide":19,"text":"Identify network","textPreview":"Identify network","textChars":16,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/yp4nqlcf","slide":19,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/lsv61gb6","slide":19,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/krm5svul","slide":19,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/7exo3qtw","slide":19,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/mt4nulsb","slide":19,"text":"Apply shared resource","textPreview":"Apply shared resource","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/i98rmpwj","slide":19,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/jah8vud4","slide":19,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/4bq9ozup","slide":19,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/5czqx4va","slide":19,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/ulo7ipwn","slide":19,"text":"Check protocol","textPreview":"Check protocol","textChars":14,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/vmh8rud8","slide":19,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/wnq9kzet","slide":19,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/h8zqtkve","slide":19,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/ehsru9cr","slide":19,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/fi183edc","slide":19,"text":"Conclude failure concern","textPreview":"Conclude failure concern","textChars":24,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/pcnut8fu","slide":19,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/obutk3e9","slide":19,"text":"Use this structure whenever distributed deadlocks appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever distributed deadlocks appears as a 10-mark explanation or trace problem.","textChars":100,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/164xbb","slide":19,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/3eqf8a","slide":20,"title":"BCS515D | Distributed Systems","textShapes":16}
+{"kind":"textbox","id":"sh/adcvixcr","slide":20,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/x03udcvi","slide":20,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/wfudk7ux","slide":20,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/j2lwfmdo","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/y1cvmhc3","slide":20,"text":"Distributed deadlocks: common confusion","textPreview":"Distributed deadlocks: common confusion","textChars":39,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/l4nehcve","slide":20,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/k3udoru9","slide":20,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/765wjmtk","slide":20,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/65wvqhcz","slide":20,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/kb6dsbud","slide":20,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/lcfe1gby","slide":20,"text":"Treating Distributed deadlocks as only a definition","textPreview":"Treating Distributed deadlocks as only a definition","textChars":51,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/ypovqlc7","slide":20,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/zaxwz6ds","slide":20,"text":"Explain nodes -> shared resource -> failure concern","textPreview":"Explain nodes -> shared resource -> failure concern","textChars":51,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/8fqdwvu9","slide":20,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/9gze50bu","slide":20,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/mdovulcj","slide":20,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/7ehw3qt4","slide":20,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/wjqx0vul","slide":20,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/hkze90b6","slide":20,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/5ovmxwzy","slide":20,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/4nm54bid","slide":20,"text":"Use terms such as nodes, network, shared resource","textPreview":"Use terms such as nodes, network, shared resource","textChars":49,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/3eqf8a","slide":20,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/tvbtgb","slide":21,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/h0jmhsj6","slide":21,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ud83mx0v","slide":21,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ve14fi1g","slide":21,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/43a5s7ix","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/54jmlcji","slide":21,"text":"Transaction recovery","textPreview":"Transaction recovery","textChars":20,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/i1snqx0r","slide":21,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/j214j21c","slide":21,"text":"Transaction recovery is best taught as a coordinator problem, not as a memorized definition.","textPreview":"Transaction recovery is best taught as a coordinator problem, not as a memorized definition.","textChars":92,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/s7u5w7it","slide":21,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/t83mpcje","slide":21,"text":"The key mechanism connects participants with prepare so that students can predict the result.","textPreview":"The key mechanism connects participants with prepare so that students can predict the result.","textChars":93,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/tsfid8j2","slide":21,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/sr6143ih","slide":21,"text":"For exams, draw the model first, label each step, and then explain vote and commit/abort.","textPreview":"For exams, draw the model first, label each step, and then explain vote and commit/abort.","textChars":89,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/rqx0by1w","slide":21,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/6poj2d0r","slide":21,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/1wz2hsje","slide":21,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/gvq18nit","slide":21,"text":"vote","textPreview":"vote","textChars":4,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/fux0fi18","slide":21,"text":"commit/abort","textPreview":"commit/abort","textChars":12,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/etoj6d0n","slide":21,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/h0vi5oju","slide":21,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/wzm1wji9","slide":21,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/8fa98nuh","slide":21,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/9gja1sv2","slide":21,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/md8r6dcb","slide":21,"text":"This topic explains how transaction recovery changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how transaction recovery changes design decisions, program behaviour, protocol results or proof structure.","textChars":126,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/tvbtgb","slide":21,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/c40ccd","slide":22,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/hkr2hojm","slide":22,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/uxgjm9kv","slide":22,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/vypkfe1g","slide":22,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/4ni1s32x","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/5or2l8ji","slide":22,"text":"Transaction recovery: message movement","textPreview":"Transaction recovery: message movement","textChars":38,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/il0jqtk7","slide":22,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/jm9kjy1s","slide":22,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/sr21w329","slide":22,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/tsb2p8ju","slide":22,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/5ozqdkbq","slide":22,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/4nq94fa5","slide":22,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/c40ccd","slide":22,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/pqzcfn","slide":23,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/y98rm98b","slide":23,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/lwjqxo72","slide":23,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/0vq9ojqh","slide":23,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/b6h8re90","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/q58ri98f","slide":23,"text":"Transaction recovery: worked example","textPreview":"Transaction recovery: worked example","textChars":36,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/d8zqt476","slide":23,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/c7q9kjql","slide":23,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/32x8nu9o","slide":23,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/21o7ep8j","slide":23,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/cr6l83eh","slide":23,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/xsf218v2","slide":23,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/apo36dwr","slide":23,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/bqxkzydc","slide":23,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/onml43el","slide":23,"text":"Identify participants","textPreview":"Identify participants","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/pof2x8v6","slide":23,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/2l432twf","slide":23,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/nmdkvyd0","slide":23,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/8jqlgnup","slide":23,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/9kzm9sva","slide":23,"text":"Apply prepare","textPreview":"Apply prepare","textChars":13,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/h0v2tsne","slide":23,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/gzml0nmt","slide":23,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/vedkri5o","slide":23,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/ud43yd43","slide":23,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/tcv2psni","slide":23,"text":"Check vote","textPreview":"Check vote","textChars":10,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/8bmlwnmx","slide":23,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/7atkni5c","slide":23,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/69k3udor","slide":23,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/l8b2l8n6","slide":23,"text":"vote","textPreview":"vote","textChars":4,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/k72ls361","slide":23,"text":"Conclude commit/abort","textPreview":"Conclude commit/abort","textChars":21,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/ad0z29kj","slide":23,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/be90vel4","slide":23,"text":"Use this structure whenever transaction recovery appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever transaction recovery appears as a 10-mark explanation or trace problem.","textChars":99,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/pqzcfn","slide":23,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/32sgyx","slide":24,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/krm10byl","slide":24,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/jqdkr6hg","slide":24,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ip4jy1gv","slide":24,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/xovipwza","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/wnm1wryp","slide":24,"text":"Replication","textPreview":"Replication","textChars":11,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/vmd0nmh4","slide":24,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/al4juhgj","slide":24,"text":"Replication is best taught as a nodes problem, not as a memorized definition.","textPreview":"Replication is best taught as a nodes problem, not as a memorized definition.","textChars":77,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/1kz210fe","slide":24,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/gj618vyt","slide":24,"text":"The key mechanism connects network with shared resource so that students can predict the result.","textPreview":"The key mechanism connects network with shared resource so that students can predict the result.","textChars":96,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/mhozepk7","slide":24,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/7ix0nu1s","slide":24,"text":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textPreview":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textChars":96,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/8j6hgz2d","slide":24,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/9kfipkji","slide":24,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/yd4za5kv","slide":24,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/zed0ja1g","slide":24,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/kfmhcf21","slide":24,"text":"failure concern","textPreview":"failure concern","textChars":15,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/lgvilkjm","slide":24,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/i98jm9kf","slide":24,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/jah0ve10","slide":24,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/fu9w76hc","slide":24,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/et0fe10r","slide":24,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/1wre9gzi","slide":24,"text":"This topic explains how replication changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how replication changes design decisions, program behaviour, protocol results or proof structure.","textChars":117,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/32sgyx","slide":24,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/8ul29i","slide":25,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/zqlovetg","slide":25,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/0rupoju1","slide":25,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/1sn6x4bm","slide":25,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/q1c7ypcz","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/r2lorut4","slide":25,"text":"Replication: message movement","textPreview":"Replication: message movement","textChars":29,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/c3up0zup","slide":25,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/d436t4ba","slide":25,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/axw7utc3","slide":25,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/vy583yto","slide":25,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/zu1czux0","slide":25,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/etsb6pgf","slide":25,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/8ul29i","slide":25,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/dz2g3p","slide":26,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/k7qd4bqt","slide":26,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/z6hwb6p8","slide":26,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/y58v218n","slide":26,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/twjehg7a","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/8vad8vq5","slide":26,"text":"Replication: worked example","textPreview":"Replication: worked example","textChars":27,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/7u1wfqpk","slide":26,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/6t8v6l8z","slide":26,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/p0fu5w76","slide":26,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/oz6dwrql","slide":26,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/6p03axo7","slide":26,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/7q9432ps","slide":26,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/srilc76d","slide":26,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/tsrm5s7y","slide":26,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/ut03exoj","slide":26,"text":"Identify network","textPreview":"Identify network","textChars":16,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/fut472po","slide":26,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/gv2lg769","slide":26,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/hwbm9c7u","slide":26,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/2xknihof","slide":26,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/3yt4bmp0","slide":26,"text":"Apply shared resource","textPreview":"Apply shared resource","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/z2dkzml8","slide":26,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/y143qh4n","slide":26,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/lov21w3y","slide":26,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/0nmlsrmt","slide":26,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/rytkv2lw","slide":26,"text":"Check protocol","textPreview":"Check protocol","textChars":14,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/qxk3mx4b","slide":26,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/d0b2xc32","slide":26,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/cz2lo7mh","slide":26,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/3utkr250","slide":26,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/2t03ix4f","slide":26,"text":"Conclude failure concern","textPreview":"Conclude failure concern","textChars":24,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/szyhs32d","slide":26,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/t07i18ji","slide":26,"text":"Use this structure whenever replication appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever replication appears as a 10-mark explanation or trace problem.","textChars":90,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/dz2g3p","slide":26,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/r4zg09","slide":27,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/k32ts72l","slide":27,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/j29cz2l0","slide":27,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/y10bqhkv","slide":27,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/tsbu5w3i","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/s72twr2x","slide":27,"text":"Flat distributed transactions vs Nested distributed transactions","textPreview":"Flat distributed transactions vs Nested distributed transactions","textChars":64,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/76tc3mlc","slide":27,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/65kbuhkr","slide":27,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/9crats3y","slide":27,"text":"Flat distributed transactions","textPreview":"Flat distributed transactions","textChars":29,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/obytkn2d","slide":27,"text":"Nested distributed transactions","textPreview":"Nested distributed transactions","textChars":31,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/uhsvyhg3","slide":27,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/f21cr2h8","slide":27,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/g3ad07yt","slide":27,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/h4jutcze","slide":27,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/25sv2hgz","slide":27,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/361cvmxk","slide":27,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/47ud4ry5","slide":27,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/p83uxwfq","slide":27,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/q9cv61gb","slide":27,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ralcz6xg","slide":27,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/ne5cn6do","slide":27,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/mdcbu1w3","slide":27,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/90nupwvu","slide":27,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/8zetwbe9","slide":27,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/zalcjmds","slide":27,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/e9cbqhw7","slide":27,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/r4zg09","slide":27,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/bzkfs3","slide":28,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/v6dw3ypc","slide":28,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/g76xw3qx","slide":28,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/h8fe587i","slide":28,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/itofyd83","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/3uxw7ip8","slide":28,"text":"Concurrency control vs Distributed deadlocks","textPreview":"Concurrency control vs Distributed deadlocks","textChars":44,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/4v6x03qt","slide":28,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/5wfe987e","slide":28,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/yxkvm98j","slide":28,"text":"Concurrency control","textPreview":"Concurrency control","textChars":19,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/zytwvep4","slide":28,"text":"Distributed deadlocks","textPreview":"Distributed deadlocks","textChars":21,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/ve10jmtk","slide":28,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/udsjqhcz","slide":28,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/hgjilwbq","slide":28,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/wfa1sru5","slide":28,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/7ah0fmto","slide":28,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/m98jmhc3","slide":28,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/9cjihcbe","slide":28,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/8ba1orut","slide":28,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/zmh0b2tc","slide":28,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/yl8jixcr","slide":28,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/2hojuxwj","slide":28,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/nixk32x4","slide":28,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/ojq1w7ep","slide":28,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/pkz25cfa","slide":28,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/al8jyhwv","slide":28,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/bmhk7mxg","slide":28,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/bzkfs3","slide":28,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/ml5cx1","slide":29,"title":"BCS515D | Distributed Systems","textShapes":15}
+{"kind":"textbox","id":"sh/o7yt8na1","slide":29,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/36pczitg","slide":29,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/25gb6dsv","slide":29,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/14nax8ba","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/g3et43a5","slide":29,"text":"Module Summary","textPreview":"Module Summary","textChars":14,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"textbox","id":"sh/f25svytk","slide":29,"text":"Definitions","textPreview":"Definitions","textChars":11,"textLines":1,"bbox":[163,208,170,92]}
+{"kind":"textbox","id":"sh/e1wb2tsz","slide":29,"text":"Models","textPreview":"Models","textChars":6,"textLines":1,"bbox":[359,208,170,92]}
+{"kind":"textbox","id":"sh/t0natobe","slide":29,"text":"Mechanisms","textPreview":"Mechanisms","textChars":10,"textLines":1,"bbox":[555,208,170,92]}
+{"kind":"textbox","id":"sh/szet0jat","slide":29,"text":"Examples","textPreview":"Examples","textChars":8,"textLines":1,"bbox":[751,208,170,92]}
+{"kind":"textbox","id":"sh/ydoba5kb","slide":29,"text":"Exam answer","textPreview":"Exam answer","textChars":11,"textLines":1,"bbox":[947,208,170,92]}
+{"kind":"shape","id":"sh/jexcja1g","slide":29,"bbox":[333,254,26,0]}
+{"kind":"shape","id":"sh/kfqtcf21","slide":29,"bbox":[529,254,26,0]}
+{"kind":"shape","id":"sh/lgzulkjm","slide":29,"bbox":[725,254,26,0]}
+{"kind":"shape","id":"sh/apob65kz","slide":29,"bbox":[921,254,26,0]}
+{"kind":"shape","id":"sh/bqxcfa1k","slide":29,"bbox":[110,393,16,16]}
+{"kind":"textbox","id":"sh/wr6t8v25","slide":29,"text":"Remember: Flat distributed transactions","textPreview":"Remember: Flat distributed transactions","textChars":39,"textLines":1,"bbox":[140,386,950,42]}
+{"kind":"shape","id":"sh/xsfuh0jq","slide":29,"bbox":[110,438,16,16]}
+{"kind":"textbox","id":"sh/ml4bilk3","slide":29,"text":"Remember: Nested distributed transactions","textPreview":"Remember: Nested distributed transactions","textChars":41,"textLines":1,"bbox":[140,431,950,42]}
+{"kind":"shape","id":"sh/nmdcbq18","slide":29,"bbox":[110,483,16,16]}
+{"kind":"textbox","id":"sh/rqt8jmh0","slide":29,"text":"Remember: Atomic commit protocols","textPreview":"Remember: Atomic commit protocols","textChars":33,"textLines":1,"bbox":[140,476,950,42]}
+{"kind":"shape","id":"sh/qpkrah0v","slide":29,"bbox":[110,528,16,16]}
+{"kind":"textbox","id":"sh/dsbqlwz6","slide":29,"text":"Remember: Concurrency control","textPreview":"Remember: Concurrency control","textChars":29,"textLines":1,"bbox":[140,521,950,42]}
+{"kind":"shape","id":"sh/sr29cril","slide":29,"bbox":[110,573,16,16]}
+{"kind":"textbox","id":"sh/futsn6hc","slide":29,"text":"Remember: Distributed deadlocks","textPreview":"Remember: Distributed deadlocks","textChars":31,"textLines":1,"bbox":[140,566,950,42]}
+{"kind":"shape","id":"sh/etkre10r","slide":29,"bbox":[110,618,16,16]}
+{"kind":"textbox","id":"sh/1wvapwzi","slide":29,"text":"Remember: Transaction recovery","textPreview":"Remember: Transaction recovery","textChars":30,"textLines":1,"bbox":[140,611,950,42]}
+{"kind":"notes","id":"nt/ml5cx1","slide":29,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/59vgqz","slide":30,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/kr6dor61","slide":30,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/zqdcvm5g","slide":30,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/yp4vmhov","slide":30,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/9wfu1wny","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/8v6dsr6d","slide":30,"text":"Important Definitions","textPreview":"Important Definitions","textChars":21,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/7uxczm5s","slide":30,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/mtovq1o7","slide":30,"text":"Term","textPreview":"Term","textChars":4,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/p0vupcne","slide":30,"text":"Classroom definition","textPreview":"Classroom definition","textChars":20,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/oz2tg76t","slide":30,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/upszupo7","slide":30,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/fqlg3u5s","slide":30,"text":"Flat distributed transactions","textPreview":"Flat distributed transactions","textChars":29,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/gruhwz6d","slide":30,"text":"A named concept with conditions, components and result.","textPreview":"A named concept with conditions, components and result.","textChars":55,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/1s3y54ny","slide":30,"text":"Define + draw + example","textPreview":"Define + draw + example","textChars":23,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/2tczy9o3","slide":30,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/3ulg7e5o","slide":30,"text":"Nested distributed transactions","textPreview":"Nested distributed transactions","textChars":31,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/ovuh0j69","slide":30,"text":"A repeatable process that transforms input into an observable output.","textPreview":"A repeatable process that transforms input into an observable output.","textChars":69,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/pw3i94nu","slide":30,"text":"Steps + result","textPreview":"Steps + result","textChars":14,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/qxwz29of","slide":30,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/bi50be50","slide":30,"text":"Atomic commit protocols","textPreview":"Atomic commit protocols","textChars":23,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/nm5gjel8","slide":30,"text":"A simplified representation used to reason about a real system.","textPreview":"A simplified representation used to reason about a real system.","textChars":63,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/mlwfq9kn","slide":30,"text":"Assumptions + limits","textPreview":"Assumptions + limits","textChars":20,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/9o7ylo3y","slide":30,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/8nexsj2d","slide":30,"text":"Concurrency control","textPreview":"Concurrency control","textChars":19,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/zy5gfelw","slide":30,"text":"The property used to judge correctness, usefulness or performance.","textPreview":"The property used to judge correctness, usefulness or performance.","textChars":66,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/yxwfm9kb","slide":30,"text":"Compare + justify","textPreview":"Compare + justify","textChars":17,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/59vgqz","slide":30,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/t56gfo","slide":31,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/fax8bi5g","slide":31,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/gb69knml","slide":31,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/hczqdsn6","slide":31,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/2d8rmx4r","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/3ehsfi5c","slide":31,"text":"Important Algorithms / Diagrams / Formulas","textPreview":"Important Algorithms / Diagrams / Formulas","textChars":42,"textLines":1,"bbox":[78,104,940,48]}
+{"kind":"shape","id":"sh/4fq9onmx","slide":31,"bbox":[98,217,16,16]}
+{"kind":"textbox","id":"sh/pgzahsni","slide":31,"text":"Draw the central architecture/process before writing long explanation.","textPreview":"Draw the central architecture/process before writing long explanation.","textChars":70,"textLines":1,"bbox":[128,210,1020,42]}
+{"kind":"shape","id":"sh/yh4rat4n","slide":31,"bbox":[98,295,16,16]}
+{"kind":"textbox","id":"sh/jid83y58","slide":31,"text":"For every algorithm: problem, input, initial state, iterations, final result, interpretation.","textPreview":"For every algorithm: problem, input, initial state, iterations, final result, interpretation.","textChars":93,"textLines":1,"bbox":[128,288,1020,42]}
+{"kind":"shape","id":"sh/f618bix4","slide":31,"bbox":[98,373,16,16]}
+{"kind":"textbox","id":"sh/e5sr2dgj","slide":31,"text":"For code/commands: command or snippet, explanation, execution, output.","textPreview":"For code/commands: command or snippet, explanation, execution, output.","textChars":70,"textLines":1,"bbox":[128,366,1020,42]}
+{"kind":"shape","id":"sh/18jqd8fa","slide":31,"bbox":[98,451,16,16]}
+{"kind":"textbox","id":"sh/g7a943yp","slide":31,"text":"For comparison questions: state basis of comparison first, then fill the table.","textPreview":"For comparison questions: state basis of comparison first, then fill the table.","textChars":79,"textLines":1,"bbox":[128,444,1020,42]}
+{"kind":"notes","id":"nt/t56gfo","slide":31,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/8wztft","slide":32,"title":"BCS515D | Distributed Systems","textShapes":9}
+{"kind":"textbox","id":"sh/xgrel8vq","slide":32,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/at0fadcz","slide":32,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/be9wjydk","slide":32,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/orix83u9","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/9sreh8vu","slide":32,"text":"Common Mistakes","textPreview":"Common Mistakes","textChars":15,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/mpgf6tc3","slide":32,"bbox":[98,213,16,16]}
+{"kind":"textbox","id":"sh/nqpwfydo","slide":32,"text":"Writing only a definition when the question asks to explain working.","textPreview":"Writing only a definition when the question asks to explain working.","textChars":68,"textLines":1,"bbox":[128,206,1010,42]}
+{"kind":"shape","id":"sh/8n2xknud","slide":32,"bbox":[98,291,16,16]}
+{"kind":"textbox","id":"sh/tobytsvy","slide":32,"text":"Skipping diagrams or leaving labels too vague.","textPreview":"Skipping diagrams or leaving labels too vague.","textChars":46,"textLines":1,"bbox":[128,284,1010,42]}
+{"kind":"shape","id":"sh/hs7ep8ny","slide":32,"bbox":[98,369,16,16]}
+{"kind":"textbox","id":"sh/wryxw36t","slide":32,"text":"Mixing similar terms without a comparison basis.","textPreview":"Mixing similar terms without a comparison basis.","textChars":48,"textLines":1,"bbox":[128,362,1010,42]}
+{"kind":"shape","id":"sh/vq5wny58","slide":32,"bbox":[98,447,16,16]}
+{"kind":"textbox","id":"sh/upwvuton","slide":32,"text":"Giving an example that does not match the formal condition.","textPreview":"Giving an example that does not match the formal condition.","textChars":59,"textLines":1,"bbox":[128,440,1010,42]}
+{"kind":"shape","id":"sh/9onelon2","slide":32,"bbox":[98,525,16,16]}
+{"kind":"textbox","id":"sh/8nedsj6h","slide":32,"text":"Forgetting assumptions, limitations or failure cases.","textPreview":"Forgetting assumptions, limitations or failure cases.","textChars":53,"textLines":1,"bbox":[128,518,1010,42]}
+{"kind":"notes","id":"nt/8wztft","slide":32,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/kdl9gy","slide":33,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/ap8ry9or","slide":33,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/xszq94n2","slide":33,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/wrq90z6h","slide":33,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/nmx83up0","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/mlo7upof","slide":33,"text":"Exam Preparation","textPreview":"Exam Preparation","textChars":16,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/9ofq54n6","slide":33,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/8n6pwz6l","slide":33,"text":"Question type","textPreview":"Question type","textChars":13,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/zix8zup4","slide":33,"text":"Answer structure","textPreview":"Answer structure","textChars":16,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/yx47qpoj","slide":33,"text":"What earns marks","textPreview":"What earns marks","textChars":16,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/knqd4z6h","slide":33,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/lozex472","slide":33,"text":"Define/explain","textPreview":"Define/explain","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/ylov2pob","slide":33,"text":"Definition + labeled diagram + example","textPreview":"Definition + labeled diagram + example","textChars":38,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/jmhwvupw","slide":33,"text":"Exact terms and scope","textPreview":"Exact terms and scope","textChars":21,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/wj6d0f6l","slide":33,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/xkfetk7q","slide":33,"text":"Compare","textPreview":"Compare","textChars":7,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/ahovy5of","slide":33,"text":"Basis + table + conclusion","textPreview":"Basis + table + conclusion","textChars":26,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/bixwrap0","slide":33,"text":"Clear differentiators","textPreview":"Clear differentiators","textChars":21,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/gfaxcj6p","slide":33,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/hgje5o7a","slide":33,"text":"Algorithm/trace","textPreview":"Algorithm/trace","textChars":15,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/pcfep4ze","slide":33,"text":"Input + iterations + final result","textPreview":"Input + iterations + final result","textChars":33,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/4b6dwjyt","slide":33,"text":"Correct step sequence","textPreview":"Correct step sequence","textChars":21,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/3axwneh8","slide":33,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/29ovu9gn","slide":33,"text":"Application","textPreview":"Application","textChars":11,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/h8vel4z2","slide":33,"text":"Scenario + model + justification","textPreview":"Scenario + model + justification","textChars":32,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/g7mdszyx","slide":33,"text":"Why the choice fits","textPreview":"Why the choice fits","textChars":19,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/kdl9gy","slide":33,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/qjz9m5","slide":34,"title":"BCS515D | Distributed Systems","textShapes":9}
+{"kind":"textbox","id":"sh/idwfitwv","slide":34,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/5gnyt8vm","slide":34,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/4fehk3e1","slide":34,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/valgnyd4","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/u9cfetwz","slide":34,"text":"Practice Questions","textPreview":"Practice Questions","textChars":18,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/hcnypova","slide":34,"bbox":[98,213,16,16]}
+{"kind":"textbox","id":"sh/gbuxg3ep","slide":34,"text":"Explain Flat distributed transactions with a neat diagram.","textPreview":"Explain Flat distributed transactions with a neat diagram.","textChars":58,"textLines":1,"bbox":[128,206,1010,42]}
+{"kind":"shape","id":"sh/f6pgzido","slide":34,"bbox":[98,291,16,16]}
+{"kind":"textbox","id":"sh/e5gzqdw3","slide":34,"text":"Compare two approaches from Transactions and Replication and justify when each is suitable.","textPreview":"Compare two approaches from Transactions and Replication and justify when each is suitable.","textChars":91,"textLines":1,"bbox":[128,284,1010,42]}
+{"kind":"shape","id":"sh/o3adgje1","slide":34,"bbox":[98,369,16,16]}
+{"kind":"textbox","id":"sh/p4ju9ovm","slide":34,"text":"Solve a small worked example involving Atomic commit protocols.","textPreview":"Solve a small worked example involving Atomic commit protocols.","textChars":63,"textLines":1,"bbox":[128,362,1010,42]}
+{"kind":"shape","id":"sh/21sve9wb","slide":34,"bbox":[98,447,16,16]}
+{"kind":"textbox","id":"sh/321c7edg","slide":34,"text":"List common mistakes and how to avoid them in Transactions and Replication.","textPreview":"List common mistakes and how to avoid them in Transactions and Replication.","textChars":75,"textLines":1,"bbox":[128,440,1010,42]}
+{"kind":"shape","id":"sh/gzqtcje5","slide":34,"bbox":[98,525,16,16]}
+{"kind":"textbox","id":"sh/10zu54vq","slide":34,"text":"Redraw the full module map from memory in five minutes.","textPreview":"Redraw the full module map from memory in five minutes.","textChars":55,"textLines":1,"bbox":[128,518,1010,42]}
+{"kind":"notes","id":"nt/qjz9m5","slide":34,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/hkqz6s","slide":35,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/5sr2do3q","slide":35,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ipgji94f","slide":35,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/3q9kbel0","slide":35,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/gny1gjm9","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ho7i943u","slide":35,"text":"Flat distributed transactions vs Nested distributed transactions","textPreview":"Flat distributed transactions vs Nested distributed transactions","textChars":64,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/ulgje943","slide":35,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/vmp07elo","slide":35,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/0j21s3md","slide":35,"text":"Flat distributed transactions","textPreview":"Flat distributed transactions","textChars":29,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/1kb2l83y","slide":35,"text":"Nested distributed transactions","textPreview":"Nested distributed transactions","textChars":31,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/98z6xkra","slide":35,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/87q54zqp","slide":35,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/76hovu94","slide":35,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/m58n2p8j","slide":35,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/l4z6tkry","slide":35,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/k3q50fqd","slide":35,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/z2h4ra9s","slide":35,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/yhony587","slide":35,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/50j654r2","slide":35,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/4za5cjqx","slide":35,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/4jip8nyt","slide":35,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/pkrq1sze","slide":35,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/2h076dgn","slide":35,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/3i98zih8","slide":35,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/gfip43yx","slide":35,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/hgrqx8zi","slide":35,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/hkqz6s","slide":35,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/6qlwlu","slide":36,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/f2dsnmxg","slide":36,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/03m9wry1","slide":36,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/14vapwf6","slide":36,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/qdkrqhgj","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ret8jmx4","slide":36,"text":"Nested distributed transactions: worked example","textPreview":"Nested distributed transactions: worked example","textChars":47,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/sfm9s7yp","slide":36,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/d0valcfa","slide":36,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/i9krmxgn","slide":36,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/3at8f2x8","slide":36,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/7a1wbex4","slide":36,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/69sv29wj","slide":36,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/tc3edofa","slide":36,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/8bad4jep","slide":36,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/velwfedg","slide":36,"text":"Identify participants","textPreview":"Identify participants","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/udcv6twv","slide":36,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/hg3ehov6","slide":36,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/gfud8jel","slide":36,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/bihc3uxw","slide":36,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/ah8vupwb","slide":36,"text":"Apply prepare","textPreview":"Apply prepare","textChars":13,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/exgf2xgz","slide":36,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/fypgb2xk","slide":36,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/0zyh47y5","slide":36,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/107ydcfq","slide":36,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/q9wfydg3","slide":36,"text":"Check vote","textPreview":"Check vote","textChars":10,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/ra5g7iho","slide":36,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/sbex0nyt","slide":36,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/dw7y9sfe","slide":36,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/i5wfudgr","slide":36,"text":"vote","textPreview":"vote","textChars":4,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/365g3ihc","slide":36,"text":"Conclude commit/abort","textPreview":"Conclude commit/abort","textChars":21,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/l0bi9gzu","slide":36,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/kz21gbi9","slide":36,"text":"Use this structure whenever nested distributed transactions appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever nested distributed transactions appears as a 10-mark explanation or trace problem.","textChars":110,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/6qlwlu","slide":36,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/dr5wzl","slide":37,"title":"BCS515D | Distributed Systems","textShapes":16}
+{"kind":"textbox","id":"sh/ad4vi94v","slide":37,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/xgved43m","slide":37,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/wfmxkzm1","slide":37,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/jixwfelc","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ih4fm9kr","slide":37,"text":"Atomic commit protocols: common confusion","textPreview":"Atomic commit protocols: common confusion","textChars":41,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/54feho3i","slide":37,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/436xoj2x","slide":37,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/zmtw3al8","slide":37,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/ylkva54n","slide":37,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/o7q14fi1","slide":37,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/p8zidkjm","slide":37,"text":"Treating Atomic commit protocols as only a definition","textPreview":"Treating Atomic commit protocols as only a definition","textChars":53,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/258j2p0v","slide":37,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/36h0ba1g","slide":37,"text":"Explain coordinator -> prepare -> commit/abort","textPreview":"Explain coordinator -> prepare -> commit/abort","textChars":46,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/cbq18zid","slide":37,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/dcjih4jy","slide":37,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/q98j6p07","slide":37,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/bah0fu1s","slide":37,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/sf6hwv2t","slide":37,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/tgfi50je","slide":37,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/9w7y9wbi","slide":37,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/8vyh0rux","slide":37,"text":"Use terms such as coordinator, participants, prepare","textPreview":"Use terms such as coordinator, participants, prepare","textChars":52,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/dr5wzl","slide":37,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/wptz9i","slide":38,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/ry5ofulo","slide":38,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/szep8fm9","slide":38,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/t0n6hk3e","slide":38,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/itcn254r","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/julobalc","slide":38,"text":"Concurrency control: message movement","textPreview":"Concurrency control: message movement","textChars":37,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/4vup4fmx","slide":38,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/5w36dk3i","slide":38,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/u5cny54v","slide":38,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/v6lo7a5g","slide":38,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/z2dgrel8","slide":38,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/y14zi9kn","slide":38,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/wptz9i","slide":38,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/9lsg54","slide":39,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/of6xc3e1","slide":39,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/3exw3yxg","slide":39,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/2dofatwv","slide":39,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/dkzy98fi","slide":39,"text":"39","textPreview":"39","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/cjqxg3ex","slide":39,"text":"Distributed deadlocks vs Transaction recovery","textPreview":"Distributed deadlocks vs Transaction recovery","textChars":45,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/bixg7yxc","slide":39,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/qhofetwr","slide":39,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/l8zydsvu","slide":39,"text":"Distributed deadlocks","textPreview":"Distributed deadlocks","textChars":21,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/07qxkne9","slide":39,"text":"Transaction recovery","textPreview":"Transaction recovery","textChars":20,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/mp0ra5c7","slide":39,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/nq9s3ats","slide":39,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/8r29cfud","slide":39,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/9sba5kby","slide":39,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/atkrepcj","slide":39,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/vuts7uto","slide":39,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/wv29gzu9","slide":39,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/xwba94bu","slide":39,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/qxgr2lcz","slide":39,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ryp8vqdk","slide":39,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/f25o3mtc","slide":39,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/u1w7ahsr","slide":39,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/h4n65wbi","slide":39,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/g3epcrax","slide":39,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/7elozmtg","slide":39,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/6dcn6hsv","slide":39,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/9lsg54","slide":39,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/d9u6yd","slide":40,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/l47yd4ru","slide":40,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/y1wfi983","slide":40,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/j25gbu9o","slide":40,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/87yxojq5","slide":40,"text":"40","textPreview":"40","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/t87yhorq","slide":40,"text":"Transaction recovery: worked example","textPreview":"Transaction recovery: worked example","textChars":36,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/65gfm98f","slide":40,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/76pgfe90","slide":40,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/gvixsjqh","slide":40,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/hwrylor2","slide":40,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/p8fydony","slide":40,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/o76hk36d","slide":40,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/36dgby5s","slide":40,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/254zito7","slide":40,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/dcfih8nu","slide":40,"text":"Identify participants","textPreview":"Identify participants","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/cb6ho369","slide":40,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/baxgfy5o","slide":40,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/q9ozmtoj","slide":40,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/tgvy54nq","slide":40,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/sf2hcj65","slide":40,"text":"Apply prepare","textPreview":"Apply prepare","textChars":13,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/4vqp83id","slide":40,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/5wzqh8zi","slide":40,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/i9876t07","slide":40,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/jah8fyhs","slide":40,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/sza9cni9","slide":40,"text":"Check vote","textPreview":"Check vote","textChars":10,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/t0jqlszu","slide":40,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/6x87ad03","slide":40,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/ry18jiho","slide":40,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/g3a9gni5","slide":40,"text":"vote","textPreview":"vote","textChars":4,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/14jqpszq","slide":40,"text":"Conclude commit/abort","textPreview":"Conclude commit/abort","textChars":21,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/by5sfm18","slide":40,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/qxcb6hkn","slide":40,"text":"Use this structure whenever transaction recovery appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever transaction recovery appears as a 10-mark explanation or trace problem.","textChars":99,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/d9u6yd","slide":40,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/84ful8","slide":41,"title":"BCS515D | Distributed Systems","textShapes":16}
+{"kind":"textbox","id":"sh/pgb2psz2","slide":41,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/idk3ex0r","slide":41,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/3etknihc","slide":41,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/cjmlk7it","slide":41,"text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/dkv2tcze","slide":41,"text":"Replication: common confusion","textPreview":"Replication: common confusion","textChars":29,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/qh43ix0n","slide":41,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/ridkr2h8","slide":41,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/07mlo7yp","slide":41,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/18fmxcza","slide":41,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/lwzatcze","slide":41,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/kvqtkrit","slide":41,"text":"Treating Replication as only a definition","textPreview":"Treating Replication as only a definition","textChars":41,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/juhsrmh8","slide":41,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/ytobih0n","slide":41,"text":"Explain nodes -> shared resource -> failure concern","textPreview":"Explain nodes -> shared resource -> failure concern","textChars":51,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/tkzaxwza","slide":41,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/8jqtorip","slide":41,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/7ihsvmhk","slide":41,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/6h8bmh0z","slide":41,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/9ofalsz6","slide":41,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/on69cnil","slide":41,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/07qt87qh","slide":41,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/18ja1c72","slide":41,"text":"Use terms such as nodes, network, shared resource","textPreview":"Use terms such as nodes, network, shared resource","textChars":49,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/84ful8","slide":41,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/4ow60v","slide":42,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/sna58fi1","slide":42,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/rm14fahg","slide":42,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/6l8n6p0v","slide":42,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/1cj6l4zi","slide":42,"text":"42","textPreview":"42","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/gba5czix","slide":42,"text":"Flat distributed transactions: message movement","textPreview":"Flat distributed transactions: message movement","textChars":47,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/fa14juhs","slide":42,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/epsnap07","slide":42,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/hgzm90ze","slide":42,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/wfq50vit","slide":42,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/2dsrmd0f","slide":42,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/ne1svi10","slide":42,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/4ow60v","slide":42,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/vm8cx3","slide":43,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/lcra1szu","slide":43,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/y9gb6d03","slide":43,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/zapsziho","slide":43,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/8fitcnil","slide":43,"text":"43","textPreview":"43","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/tgra5szq","slide":43,"text":"Nested distributed transactions vs Atomic commit protocols","textPreview":"Nested distributed transactions vs Atomic commit protocols","textChars":58,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/md0bax0f","slide":43,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/7e9s32h0","slide":43,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/gjitg7ih","slide":43,"text":"Nested distributed transactions","textPreview":"Nested distributed transactions","textChars":31,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/h4ba9cz2","slide":43,"text":"Atomic commit protocols","textPreview":"Atomic commit protocols","textChars":23,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/dkbmlw3u","slide":43,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/cj25crmp","slide":43,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/rit4jml4","slide":43,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/qhknah4j","slide":43,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/1ovmpw36","slide":43,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/0nm5gbml","slide":43,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/zmt4n6l0","slide":43,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/elkne14f","slide":43,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/hsrmdc32","slide":43,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/gril47mh","slide":43,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/sn6dgby9","slide":43,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/t8fe9gzu","slide":43,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/6l4ve1gj","slide":43,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/7mxw76ho","slide":43,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/gb6dkbyl","slide":43,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/hcfedgf6","slide":43,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/vm8cx3","slide":43,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/lp7eqd","slide":44,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/5gj21kze","slide":44,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/idsjqpg3","slide":44,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/je1kzuho","slide":44,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/wba1ofyx","slide":44,"text":"44","textPreview":"44","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/hcj2xkzi","slide":44,"text":"Atomic commit protocols: worked example","textPreview":"Atomic commit protocols: worked example","textChars":39,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/u98jm5gr","slide":44,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/vahkvahc","slide":44,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/87q1kfyl","slide":44,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/98z2t0z6","slide":44,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/t43u1gju","slide":44,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/sjudsbi9","slide":44,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/7ilcz61o","slide":44,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/6hcvq103","slide":44,"text":"coordinator","textPreview":"coordinator","textChars":11,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/5g3uxgji","slide":44,"text":"Identify participants","textPreview":"Identify participants","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/kfudobix","slide":44,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/jelcv61s","slide":44,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/idsvm107","slide":44,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/xcjutwjm","slide":44,"text":"participants","textPreview":"participants","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/wbatkri1","slide":44,"text":"Apply prepare","textPreview":"Apply prepare","textChars":13,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/ovedgrax","slide":44,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/9wnu9wri","slide":44,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/mtwve1sr","slide":44,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/nu5c7m9c","slide":44,"text":"prepare","textPreview":"prepare","textChars":7,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/0redcral","slide":44,"text":"Check vote","textPreview":"Check vote","textChars":10,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/1snu5wr6","slide":44,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/epcvahsv","slide":44,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/fqlc3m9g","slide":44,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/knydobq5","slide":44,"text":"vote","textPreview":"vote","textChars":4,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/lo7ehgrq","slide":44,"text":"Conclude commit/abort","textPreview":"Conclude commit/abort","textChars":21,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/futo3ex4","slide":44,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/utk7u9wj","slide":44,"text":"Use this structure whenever atomic commit protocols appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever atomic commit protocols appears as a 10-mark explanation or trace problem.","textChars":102,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/lp7eqd","slide":44,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/7y343t","slide":45,"title":"BCS515D | Distributed Systems","textShapes":16}
+{"kind":"textbox","id":"sh/m1k7yps3","slide":45,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/94bq9kbu","slide":45,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/832p0fa9","slide":45,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/zy983atc","slide":45,"text":"45","textPreview":"45","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/yx07u5sr","slide":45,"text":"Concurrency control: common confusion","textPreview":"Concurrency control: common confusion","textChars":37,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/l0bq5kbi","slide":45,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/0z2pwfax","slide":45,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/jud8futw","slide":45,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/it4r69sb","slide":45,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/czqh8vud","slide":45,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/x0zy10by","slide":45,"text":"Treating Concurrency control as only a definition","textPreview":"Treating Concurrency control as only a definition","textChars":49,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/ax8z65c7","slide":45,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/byhgzats","slide":45,"text":"Explain nodes -> shared resource -> failure concern","textPreview":"Explain nodes -> shared resource -> failure concern","textChars":51,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/ovqh4vu1","slide":45,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/pwzyx0bm","slide":45,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/2toz2lcb","slide":45,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/nuxgvqtw","slide":45,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/0r6h0bu5","slide":45,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/1sfytgbq","slide":45,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/hcn6h8z2","slide":45,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/wbe58nix","slide":45,"text":"Use terms such as nodes, network, shared resource","textPreview":"Use terms such as nodes, network, shared resource","textChars":49,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/7y343t","slide":45,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/kvdtp9","slide":46,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/kbip4vyd","slide":46,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/za98vqhs","slide":46,"text":"Module 5: Transactions and Replication","textPreview":"Module 5: Transactions and Replication","textChars":38,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/y9072lg7","slide":46,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/xo76tgz2","slide":46,"text":"46","textPreview":"46","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/cnyp0byh","slide":46,"text":"Previous VTU Questions","textPreview":"Previous VTU Questions","textChars":22,"textLines":1,"bbox":[78,104,820,48]}
+{"kind":"textbox","id":"sh/bmpor6hw","slide":46,"text":"No genuine previous-year VTU questions were found locally for this module during this pass, so this deck does not fabricate PYQs.","textPreview":"No genuine previous-year VTU questions were found locally for this module during this pass, so this deck does not fabricate PYQs.","textChars":129,"textLines":1,"bbox":[96,212,990,90]}
+{"kind":"shape","id":"sh/alg7y1gb","slide":46,"bbox":[112,372,16,16]}
+{"kind":"textbox","id":"sh/hkbq5kz6","slide":46,"text":"Use the practice questions as model revision prompts.","textPreview":"Use the practice questions as model revision prompts.","textChars":53,"textLines":1,"bbox":[142,365,950,42]}
+{"kind":"shape","id":"sh/wj2pcfyl","slide":46,"bbox":[112,444,16,16]}
+{"kind":"textbox","id":"sh/qhsvat8j","slide":46,"text":"Add authentic PYQs later only from a verified VTU source.","textPreview":"Add authentic PYQs later only from a verified VTU source.","textChars":57,"textLines":1,"bbox":[142,437,950,42]}
+{"kind":"shape","id":"sh/ri1cjep4","slide":46,"bbox":[112,516,16,16]}
+{"kind":"textbox","id":"sh/cjadcjqp","slide":46,"text":"Do not label instructor-created questions as previous-year questions.","textPreview":"Do not label instructor-created questions as previous-year questions.","textChars":69,"textLines":1,"bbox":[142,509,950,42]}
+{"kind":"notes","id":"nt/kvdtp9","slide":46,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}

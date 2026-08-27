@@ -1,0 +1,862 @@
+{"kind":"deck","id":"pr/qo2dg0","name":"Deck"}
+{"kind":"layout","layoutId":"cd614ba1-4f07-40bf-a3d4-05dc513e7b3d","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"a975a5d6-295a-4a25-a5f1-792f8ae96557","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/19txlz","slide":1,"title":"Module 2","textShapes":10}
+{"kind":"textbox","id":"sh/21czapcn","slide":1,"text":"Module 2","textPreview":"Module 2","textChars":8,"textLines":1,"bbox":[82,86,330,60]}
+{"kind":"textbox","id":"sh/p43ilkbe","slide":1,"text":"Stacks, Stack Applications, and Queues","textPreview":"Stacks, Stack Applications, and Queues","textChars":38,"textLines":1,"bbox":[82,162,800,112]}
+{"kind":"textbox","id":"sh/o3uhcfut","slide":1,"text":"8 teaching hours","textPreview":"8 teaching hours","textChars":16,"textLines":1,"bbox":[88,300,220,48]}
+{"kind":"textbox","id":"sh/b6l0nut4","slide":1,"text":"• Stack definition\n• Stack operations\n• Array representation of stacks\n• Stacks using dynamic arrays\n• Polish notation\n• Infix to postfix conversion\n• Postfix evaluation\n• Queue definition","textPreview":"• Stack definition | • Stack operations | • Array representation of stacks | • Stacks using dynamic arrays | • Polish notation | • Infix ...","textChars":188,"textLines":8,"bbox":[92,378,540,230]}
+{"kind":"textbox","id":"sh/q5czepcz","slide":1,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/dsnip4ba","slide":1,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/crehgzup","slide":1,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/ra1gbqt0","slide":1,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/69sz25cf","slide":1,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/kvipsvad","slide":1,"text":"VTU 1BCS305 • Module 2 • 01/50","textPreview":"VTU 1BCS305 • Module 2 • 01/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/19txlz","slide":1,"text":"[Animation]\nUse this slide as a section reset. Reveal syllabus bullets one by one.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/c07qhx","slide":2,"title":"COVERED / MISSING = 0","textShapes":37}
+{"kind":"textbox","id":"sh/rup4za54","slide":2,"text":"COVERED / MISSING = 0","textPreview":"COVERED / MISSING = 0","textChars":21,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/cvylsf6p","slide":2,"text":"Module 2 syllabus audit","textPreview":"Module 2 syllabus audit","textChars":23,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/dw7m1kna","slide":2,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ex03upov","slide":2,"text":"Syllabus topic","textPreview":"Syllabus topic","textChars":14,"textLines":1,"bbox":[82,152,590,28]}
+{"kind":"textbox","id":"sh/zy943u5g","slide":2,"text":"Source","textPreview":"Source","textChars":6,"textLines":1,"bbox":[725,152,210,28]}
+{"kind":"textbox","id":"sh/0jilwz61","slide":2,"text":"Status","textPreview":"Status","textChars":6,"textLines":1,"bbox":[1010,152,120,28]}
+{"kind":"textbox","id":"sh/1krm5kn6","slide":2,"text":"1. Stack definition","textPreview":"1. Stack definition","textChars":19,"textLines":1,"bbox":[88,190,590,24]}
+{"kind":"textbox","id":"sh/ml03ypor","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,190,210,24]}
+{"kind":"textbox","id":"sh/nm947u5c","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,190,120,24]}
+{"kind":"textbox","id":"sh/ruh8zudc","slide":2,"text":"2. Stack operations","textPreview":"2. Stack operations","textChars":19,"textLines":1,"bbox":[88,228,590,24]}
+{"kind":"textbox","id":"sh/qt87qpcr","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,228,210,24]}
+{"kind":"textbox","id":"sh/dwjq1kvi","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,228,120,24]}
+{"kind":"textbox","id":"sh/svapsfux","slide":2,"text":"3. Array representation of stacks","textPreview":"3. Array representation of stacks","textChars":33,"textLines":1,"bbox":[88,266,590,24]}
+{"kind":"textbox","id":"sh/3qhovadg","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,266,210,24]}
+{"kind":"textbox","id":"sh/ip87m5cv","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,266,120,24]}
+{"kind":"textbox","id":"sh/5sz6xkv6","slide":2,"text":"4. Stacks using dynamic arrays","textPreview":"4. Stacks using dynamic arrays","textChars":30,"textLines":1,"bbox":[88,304,590,24]}
+{"kind":"textbox","id":"sh/4rqpoful","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,304,210,24]}
+{"kind":"textbox","id":"sh/nm187edk","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,304,120,24]}
+{"kind":"textbox","id":"sh/mls7y9cz","slide":2,"text":"5. Polish notation","textPreview":"5. Polish notation","textChars":18,"textLines":1,"bbox":[88,342,590,24]}
+{"kind":"textbox","id":"sh/yhwbqdw7","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,342,210,24]}
+{"kind":"textbox","id":"sh/ji5szyxs","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,342,120,24]}
+{"kind":"textbox","id":"sh/kjets3ed","slide":2,"text":"6. Infix to postfix conversion","textPreview":"6. Infix to postfix conversion","textChars":30,"textLines":1,"bbox":[88,380,590,24]}
+{"kind":"textbox","id":"sh/lkna18fy","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,380,210,24]}
+{"kind":"textbox","id":"sh/6lwbudw3","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,380,120,24]}
+{"kind":"textbox","id":"sh/7mps3ixo","slide":2,"text":"7. Postfix evaluation","textPreview":"7. Postfix evaluation","textChars":21,"textLines":1,"bbox":[88,418,590,24]}
+{"kind":"textbox","id":"sh/87ytwne9","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,418,210,24]}
+{"kind":"textbox","id":"sh/t87a5sfu","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,418,120,24]}
+{"kind":"textbox","id":"sh/mpcritwz","slide":2,"text":"8. Queue definition","textPreview":"8. Queue definition","textChars":19,"textLines":1,"bbox":[88,456,590,24]}
+{"kind":"textbox","id":"sh/nqlsrexk","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,456,210,24]}
+{"kind":"textbox","id":"sh/54rexwz2","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,456,120,24]}
+{"kind":"textbox","id":"sh/43idoryh","slide":2,"text":"9. Array representation of queues","textPreview":"9. Array representation of queues","textChars":33,"textLines":1,"bbox":[88,494,590,24]}
+{"kind":"textbox","id":"sh/329cvmhw","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,494,210,24]}
+{"kind":"textbox","id":"sh/i10vmhgb","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,494,120,24]}
+{"kind":"textbox","id":"sh/d8be1wzy","slide":2,"text":"10. Queue operations","textPreview":"10. Queue operations","textChars":20,"textLines":1,"bbox":[88,532,590,24]}
+{"kind":"textbox","id":"sh/s72dsryt","slide":2,"text":"Syllabus + textbook","textPreview":"Syllabus + textbook","textChars":19,"textLines":1,"bbox":[732,532,210,24]}
+{"kind":"textbox","id":"sh/r6twzmh8","slide":2,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[1018,532,120,24]}
+{"kind":"textbox","id":"sh/q5kvq1gn","slide":2,"text":"Final status: no missing topics","textPreview":"Final status: no missing topics","textChars":31,"textLines":1,"bbox":[388,625,500,42]}
+{"kind":"textbox","id":"sh/tc7upczu","slide":2,"text":"VTU 1BCS305 • Module 2 • 02/50","textPreview":"VTU 1BCS305 • Module 2 • 02/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/c07qhx","slide":2,"text":"[Animation]\nReveal rows quickly and end on MISSING = 0.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/whhokx","slide":3,"title":"Teaching sequence","textShapes":14}
+{"kind":"textbox","id":"sh/1sbapgru","slide":3,"text":"Teaching sequence","textPreview":"Teaching sequence","textChars":17,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/epkbe1s3","slide":3,"text":"Roadmap for Module 2","textPreview":"Roadmap for Module 2","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/fqtsn69o","slide":3,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ov2tkva5","slide":3,"text":"1. Stack ADT","textPreview":"1. Stack ADT","textChars":12,"textLines":1,"bbox":[76,220,190,74]}
+{"kind":"textbox","id":"sh/pwvatgrq","slide":3,"text":"2. Stack operations","textPreview":"2. Stack operations","textChars":19,"textLines":1,"bbox":[308,220,190,74]}
+{"kind":"textbox","id":"sh/2tkbilsf","slide":3,"text":"3. Array stack","textPreview":"3. Array stack","textChars":14,"textLines":1,"bbox":[540,220,190,74]}
+{"kind":"textbox","id":"sh/3utsrq90","slide":3,"text":"4. Dynamic-array stack","textPreview":"4. Dynamic-array stack","textChars":22,"textLines":1,"bbox":[772,220,190,74]}
+{"kind":"textbox","id":"sh/4zit8ra1","slide":3,"text":"5. Polish notation","textPreview":"5. Polish notation","textChars":18,"textLines":1,"bbox":[1004,220,190,74]}
+{"kind":"textbox","id":"sh/50rahwrm","slide":3,"text":"6. Infix to postfix conversion","textPreview":"6. Infix to postfix conversion","textChars":30,"textLines":1,"bbox":[76,356,190,74]}
+{"kind":"textbox","id":"sh/10v6pc7a","slide":3,"text":"7. Postfix evaluation","textPreview":"7. Postfix evaluation","textChars":21,"textLines":1,"bbox":[308,356,190,74]}
+{"kind":"textbox","id":"sh/0zm5w76p","slide":3,"text":"8. Queue ADT","textPreview":"8. Queue ADT","textChars":12,"textLines":1,"bbox":[540,356,190,74]}
+{"kind":"textbox","id":"sh/zydon2p4","slide":3,"text":"9. Array queue","textPreview":"9. Array queue","textChars":14,"textLines":1,"bbox":[772,356,190,74]}
+{"kind":"textbox","id":"sh/ex4nuxoz","slide":3,"text":"10. Queue operations","textPreview":"10. Queue operations","textChars":20,"textLines":1,"bbox":[1004,356,190,74]}
+{"kind":"textbox","id":"sh/9of6tc7m","slide":3,"text":"Each topic becomes: concept -> operations -> algorithm -> example","textPreview":"Each topic becomes: concept -> operations -> algorithm -> example","textChars":65,"textLines":1,"bbox":[230,562,825,54]}
+{"kind":"textbox","id":"sh/onm50761","slide":3,"text":"VTU 1BCS305 • Module 2 • 03/50","textPreview":"VTU 1BCS305 • Module 2 • 03/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/whhokx","slide":3,"text":"[Animation]\nReveal roadmap by row and connect each unit to implementation.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/57vhcq","slide":4,"title":"Exam quick reference","textShapes":21}
+{"kind":"textbox","id":"sh/4f21wvex","slide":4,"text":"Exam quick reference","textPreview":"Exam quick reference","textChars":20,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/je9k3qxs","slide":4,"text":"Module 2 complexity checkpoints","textPreview":"Module 2 complexity checkpoints","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/id0julw7","slide":4,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/hcr21gfm","slide":4,"text":"Stack ADT","textPreview":"Stack ADT","textChars":9,"textLines":1,"bbox":[96,172,330,48]}
+{"kind":"textbox","id":"sh/wbi1sbe1","slide":4,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,176,270,36]}
+{"kind":"textbox","id":"sh/va9kz6xg","slide":4,"text":"Representation decides cost","textPreview":"Representation decides cost","textChars":27,"textLines":1,"bbox":[790,176,330,36]}
+{"kind":"textbox","id":"sh/u90jqlwv","slide":4,"text":"Stack operations","textPreview":"Stack operations","textChars":16,"textLines":1,"bbox":[96,244,330,48]}
+{"kind":"textbox","id":"sh/98rixgfa","slide":4,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,248,270,36]}
+{"kind":"textbox","id":"sh/87i1obep","slide":4,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,248,330,36]}
+{"kind":"textbox","id":"sh/mpw7q5s7","slide":4,"text":"Array stack","textPreview":"Array stack","textChars":11,"textLines":1,"bbox":[96,316,330,48]}
+{"kind":"textbox","id":"sh/nq58za9s","slide":4,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,320,270,36]}
+{"kind":"textbox","id":"sh/8repsfad","slide":4,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,320,330,36]}
+{"kind":"textbox","id":"sh/9cnq1kry","slide":4,"text":"Dynamic-array stack","textPreview":"Dynamic-array stack","textChars":19,"textLines":1,"bbox":[96,388,330,48]}
+{"kind":"textbox","id":"sh/elc7mlsb","slide":4,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,392,270,36]}
+{"kind":"textbox","id":"sh/zml8vqtw","slide":4,"text":"Representation decides cost","textPreview":"Representation decides cost","textChars":27,"textLines":1,"bbox":[790,392,330,36]}
+{"kind":"textbox","id":"sh/0nupovah","slide":4,"text":"Polish notation","textPreview":"Polish notation","textChars":15,"textLines":1,"bbox":[96,460,330,48]}
+{"kind":"textbox","id":"sh/lonqx0b2","slide":4,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,464,270,36]}
+{"kind":"textbox","id":"sh/qhc7ilsf","slide":4,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,464,330,36]}
+{"kind":"textbox","id":"sh/rilorqtk","slide":4,"text":"Infix to postfix conversion","textPreview":"Infix to postfix conversion","textChars":27,"textLines":1,"bbox":[96,532,330,48]}
+{"kind":"textbox","id":"sh/fmh4jm9c","slide":4,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,536,270,36]}
+{"kind":"textbox","id":"sh/u18nqh87","slide":4,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,536,330,36]}
+{"kind":"textbox","id":"sh/hozmlwri","slide":4,"text":"VTU 1BCS305 • Module 2 • 04/50","textPreview":"VTU 1BCS305 • Module 2 • 04/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/57vhcq","slide":4,"text":"[Animation]\nReveal one row at a time; ask students to justify the complexity from representation.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/remzil","slide":5,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/zaloryp4","slide":5,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/0ve5k36p","slide":5,"text":"Stack ADT: core idea","textPreview":"Stack ADT: core idea","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/lwn6t87a","slide":5,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/mxwnmdov","slide":5,"text":"A stack allows insertion and deletion at one end called top.","textPreview":"A stack allows insertion and deletion at one end called top.","textChars":60,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ny5ovipg","slide":5,"text":"• LIFO\n• top\n• push\n• pop","textPreview":"• LIFO | • top | • push | • pop","textChars":25,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/8ze5o36l","slide":5,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/90n6x876","slide":5,"text":"The last item inserted is the first removed.","textPreview":"The last item inserted is the first removed.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/a1wnqdor","slide":5,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/v25ozipc","slide":5,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/fmhoru10","slide":5,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/el8nypkf","slide":5,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/18z6t4jq","slide":5,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/gnqp0z2l","slide":5,"text":"VTU 1BCS305 • Module 2 • 05/50","textPreview":"VTU 1BCS305 • Module 2 • 05/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/remzil","slide":5,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/8aqlll","slide":6,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/svadw7y5","slide":6,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ru1cn2hk","slide":6,"text":"Stack ADT: operations","textPreview":"Stack ADT: operations","textChars":21,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/6tsbuxgz","slide":6,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/103utwzm","slide":6,"text":"Understand stack adt by tracing the operations it supports.","textPreview":"Understand stack adt by tracing the operations it supports.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/gzad0ry1","slide":6,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/fy1crmhg","slide":6,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/exsvyhgv","slide":6,"text":"The last item inserted is the first removed.","textPreview":"The last item inserted is the first removed.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/p43uxwzi","slide":6,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/o3ud4ryx","slide":6,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/mxsfyp0v","slide":6,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/ny1gru1g","slide":6,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/ozah0zi1","slide":6,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/903yt4jm","slide":6,"text":"VTU 1BCS305 • Module 2 • 06/50","textPreview":"VTU 1BCS305 • Module 2 • 06/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/8aqlll","slide":6,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/a3v3u7","slide":7,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/3qp8jal8","slide":7,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/4rypcfmt","slide":7,"text":"Stack ADT: algorithm pattern","textPreview":"Stack ADT: algorithm pattern","textChars":28,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ps7q5k3e","slide":7,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qtg7ep4z","slide":7,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/rup87ulk","slide":7,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: The last item inserted is the first removed.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: The last item inserted is the first removed.","textChars":128,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/cvypgfmp","slide":7,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/dw7q9k3a","slide":7,"text":"The last item inserted is the first removed.","textPreview":"The last item inserted is the first removed.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/6xc72l4f","slide":7,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/7y5obql0","slide":7,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/f21o3als","slide":7,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/e1snu547","slide":7,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/14j65k3y","slide":7,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/03a5wfmd","slide":7,"text":"VTU 1BCS305 • Module 2 • 07/50","textPreview":"VTU 1BCS305 • Module 2 • 07/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/a3v3u7","slide":7,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/rk0n08","slide":8,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/98ji9gvi","slide":8,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/m5szylwr","slide":8,"text":"Stack ADT: classroom example","textPreview":"Stack ADT: classroom example","textChars":28,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/n61076dc","slide":8,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/03ahwbe1","slide":8,"text":"A small trace makes stack adt exam-ready.","textPreview":"A small trace makes stack adt exam-ready.","textChars":41,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/l4ji5gvm","slide":8,"text":"• Use terms: LIFO, top\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: LIFO, top | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":107,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/y18zu1wv","slide":8,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/z2h036dg","slide":8,"text":"The last item inserted is the first removed.","textPreview":"The last item inserted is the first removed.","textChars":44,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/czqhsrep","slide":8,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/d0zi1wva","slide":8,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/lkf618f2","slide":8,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/kj65s3yh","slide":8,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/jix4zixw","slide":8,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/yhonqdgb","slide":8,"text":"VTU 1BCS305 • Module 2 • 08/50","textPreview":"VTU 1BCS305 • Module 2 • 08/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/rk0n08","slide":8,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/ip4c60","slide":9,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/gfi5c3yp","slide":9,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/fe9ojyh4","slide":9,"text":"Stack operations: core idea","textPreview":"Stack operations: core idea","textChars":27,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ud0natgj","slide":9,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/tc76hozy","slide":9,"text":"Stack operations update top while preserving LIFO order.","textPreview":"Stack operations update top while preserving LIFO order.","textChars":56,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/8by583yd","slide":9,"text":"• push\n• pop\n• peek\n• isEmpty","textPreview":"• push | • pop | • peek | • isEmpty","textChars":29,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/7ap4fyh8","slide":9,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/6pgn6tgn","slide":9,"text":"Underflow and overflow are part of the specification.","textPreview":"Underflow and overflow are part of the specification.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/lo7mdoz2","slide":9,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/kny54jyh","slide":9,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/e10vm58v","slide":9,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/f29cvqp0","slide":9,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/g3idovql","slide":9,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/14rex076","slide":9,"text":"VTU 1BCS305 • Module 2 • 09/50","textPreview":"VTU 1BCS305 • Module 2 • 09/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/ip4c60","slide":9,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/kq0m2h","slide":10,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/hsvqxsfe","slide":10,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/up4rmdwn","slide":10,"text":"Stack operations: operations","textPreview":"Stack operations: operations","textChars":28,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/vqd8vix8","slide":10,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/4v69s7ep","slide":10,"text":"Understand stack operations by tracing the operations it supports.","textPreview":"Understand stack operations by tracing the operations it supports.","textChars":66,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/5wfq1sfa","slide":10,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/it4rqxwz","slide":10,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/3ud8z2x4","slide":10,"text":"Underflow and overflow are part of the specification.","textPreview":"Underflow and overflow are part of the specification.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/kz2pg3el","slide":10,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/l0bqp8f6","slide":10,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/pg32t0ji","slide":10,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/oful0vix","slide":10,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/3ulkrq1s","slide":10,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/2tcjy507","slide":10,"text":"VTU 1BCS305 • Module 2 • 10/50","textPreview":"VTU 1BCS305 • Module 2 • 10/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/kq0m2h","slide":10,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/zg8qdg","slide":11,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/honyx0be","slide":11,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/ulcfmlc3","slide":11,"text":"Stack operations: algorithm pattern","textPreview":"Stack operations: algorithm pattern","textChars":35,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/fmlgvqto","slide":11,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/sjuxkbux","slide":11,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/tk3ytgbi","slide":11,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Underflow and overflow are part of the specification.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Underflow and overflow are part of the specific...","textChars":137,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/6hcfi1cr","slide":11,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/7ilgr6tc","slide":11,"text":"Underflow and overflow are part of the specification.","textPreview":"Underflow and overflow are part of the specification.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/cfehwfu1","slide":11,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/dg7y5kbm","slide":11,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/h832t0b6","slide":11,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/w7ulkvul","slide":11,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/v6lkrqtg","slide":11,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/u5c3ilcv","slide":11,"text":"VTU 1BCS305 • Module 2 • 11/50","textPreview":"VTU 1BCS305 • Module 2 • 11/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/zg8qdg","slide":11,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/a1awhw","slide":12,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/3294n2ds","slide":12,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/o3i5g7ed","slide":12,"text":"Stack operations: classroom example","textPreview":"Stack operations: classroom example","textChars":35,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/p4r6pcvy","slide":12,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/q5knihwj","slide":12,"text":"A small trace makes stack operations exam-ready.","textPreview":"A small trace makes stack operations exam-ready.","textChars":48,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/b6tormd4","slide":12,"text":"• Use terms: push, pop\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: push, pop | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":107,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/c725krep","slide":12,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/d8b6tcvu","slide":12,"text":"Underflow and overflow are part of the specification.","textPreview":"Underflow and overflow are part of the specification.","textChars":53,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/69gn6dwf","slide":12,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/rap4fidk","slide":12,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/3ex4fixg","slide":12,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/idonmdwv","slide":12,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/5gfmh8f6","slide":12,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/4f65o3e1","slide":12,"text":"VTU 1BCS305 • Module 2 • 12/50","textPreview":"VTU 1BCS305 • Module 2 • 12/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/a1awhw","slide":12,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/nzujtz","slide":13,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/94bqxkry","slide":13,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/mhkr25sn","slide":13,"text":"Array stack: core idea","textPreview":"Array stack: core idea","textChars":22,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/nit8va9s","slide":13,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/0fi90vah","slide":13,"text":"Array representation stores stack elements in consecutive positions.","textPreview":"Array representation stores stack elements in consecutive positions.","textChars":68,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/1gbqt0r2","slide":13,"text":"• top index\n• MAX\n• overflow\n• underflow","textPreview":"• top index | • MAX | • overflow | • underflow","textChars":40,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/ed0ry5sb","slide":13,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/ze98ra9w","slide":13,"text":"Simple representation needs size checks.","textPreview":"Simple representation needs size checks.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/cbi9wva5","slide":13,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/dcrqp0rq","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/ds3qxsf6","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/sruponyl","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/rqlov2x0","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/qpc7mxgf","slide":13,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/5o36tsfu","slide":13,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/43apkny9","slide":13,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/321orixo","slide":13,"text":"VTU 1BCS305 • Module 2 • 13/50","textPreview":"VTU 1BCS305 • Module 2 • 13/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/nzujtz","slide":13,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/vs0may","slide":14,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/c7u9sfyp","slide":14,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/r6lszah4","slide":14,"text":"Array stack: operations","textPreview":"Array stack: operations","textChars":23,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/q5crq5gz","slide":14,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/p43qx0ze","slide":14,"text":"Understand array stack by tracing the operations it supports.","textPreview":"Understand array stack by tracing the operations it supports.","textChars":61,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/4ja9ovyt","slide":14,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/3i18vqh8","slide":14,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/2hsrmlgn","slide":14,"text":"Simple representation needs size checks.","textPreview":"Simple representation needs size checks.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/90na9kzi","slide":14,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/ofe90zyx","slide":14,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/utwfqlcj","slide":14,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/ve5wj6d4","slide":14,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/gfexsbup","slide":14,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/hg7elgva","slide":14,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/6pwfm1wn","slide":14,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/7q5wf6d8","slide":14,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/8rexobut","slide":14,"text":"VTU 1BCS305 • Module 2 • 14/50","textPreview":"VTU 1BCS305 • Module 2 • 14/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/vs0may","slide":14,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/54559v","slide":15,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/ux4zydwb","slide":15,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/h0vitsf2","slide":15,"text":"Array stack: algorithm pattern","textPreview":"Array stack: algorithm pattern","textChars":30,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/gzmh0neh","slide":15,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/32x0v2x8","slide":15,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/i14z2xwn","slide":15,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Simple representation needs size checks.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Simple representation needs size checks.","textChars":124,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/5ofixcfy","slide":15,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/436h47ed","slide":15,"text":"Simple representation needs size checks.","textPreview":"Simple representation needs size checks.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/rqx0z2x4","slide":15,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/qpoz6xwj","slide":15,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/4vilcnmx","slide":15,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/5wr258ni","slide":15,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/itg3ador","slide":15,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/3upk3i5c","slide":15,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/sjilgnm9","slide":15,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/dkrm9snu","slide":15,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/qx03ed43","slide":15,"text":"VTU 1BCS305 • Module 2 • 15/50","textPreview":"VTU 1BCS305 • Module 2 • 15/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/54559v","slide":15,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/e07urk","slide":16,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/4fyh0jid","slide":16,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/3epg7y1s","slide":16,"text":"Array stack: classroom example","textPreview":"Array stack: classroom example","textChars":30,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/2tgfyt07","slide":16,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/dkryd8ju","slide":16,"text":"A small trace makes array stack exam-ready.","textPreview":"A small trace makes array stack exam-ready.","textChars":43,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cjih43i9","slide":16,"text":"• Use terms: top index, MAX\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: top index, MAX | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":112,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/ripgby1o","slide":16,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/qhgz2t03","slide":16,"text":"Simple representation needs size checks.","textPreview":"Simple representation needs size checks.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/1oryh8jq","slide":16,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/0nih83i5","slide":16,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/a1876l0f","slide":16,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/b218f6h0","slide":16,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/c3ap8bil","slide":16,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/x4jqhgz6","slide":16,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/y5s7al0r","slide":16,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/j618jqhc","slide":16,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/k7apcvih","slide":16,"text":"VTU 1BCS305 • Module 2 • 16/50","textPreview":"VTU 1BCS305 • Module 2 • 16/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/e07urk","slide":16,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/4nnr5g","slide":17,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/0netoj6l","slide":17,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/zmlcfyp0","slide":17,"text":"Dynamic-array stack: core idea","textPreview":"Dynamic-array stack: core idea","textChars":30,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ylcbmtof","slide":17,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/dk3udo7u","slide":17,"text":"Dynamic stacks grow when capacity is exceeded.","textPreview":"Dynamic stacks grow when capacity is exceeded.","textChars":46,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cjutkj69","slide":17,"text":"• capacity\n• resize\n• amortized cost\n• realloc idea","textPreview":"• capacity | • resize | • amortized cost | • realloc idea","textChars":51,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/bilcbepo","slide":17,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/qhcbi9oj","slide":17,"text":"Resizing trades occasional copying for flexibility.","textPreview":"Resizing trades occasional copying for flexibility.","textChars":51,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hg7up87e","slide":17,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/wfydw36t","slide":17,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/65wje5of","slide":17,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/76p0napk","slide":17,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/s7y1gv65","slide":17,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/t872p07q","slide":17,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/yhwjqlo3","slide":17,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/ji50jqpo","slide":17,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/k3e1cv69","slide":17,"text":"VTU 1BCS305 • Module 2 • 17/50","textPreview":"VTU 1BCS305 • Module 2 • 17/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/4nnr5g","slide":17,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/go5rv5","slide":18,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/2xsjyh07","slide":18,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/p0j2twjy","slide":18,"text":"Dynamic-array stack: operations","textPreview":"Dynamic-array stack: operations","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/4za10rid","slide":18,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/r21kv61o","slide":18,"text":"Understand dynamic-array stack by tracing the operations it supports.","textPreview":"Understand dynamic-array stack by tracing the operations it supports.","textChars":69,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/q1sj210j","slide":18,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/d4j2xwju","slide":18,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/c3a14bi9","slide":18,"text":"Resizing trades occasional copying for flexibility.","textPreview":"Resizing trades occasional copying for flexibility.","textChars":51,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/76h0j21k","slide":18,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/65ojqx0z","slide":18,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/oz29gny1","slide":18,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/p0ba98fm","slide":18,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/2d0redgb","slide":18,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/3yts7ixw","slide":18,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/c329knyd","slide":18,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/d4badsfy","slide":18,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/q1kridg7","slide":18,"text":"VTU 1BCS305 • Module 2 • 18/50","textPreview":"VTU 1BCS305 • Module 2 • 18/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/go5rv5","slide":18,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/h3zche","slide":19,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/dkrq9cne","slide":19,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/qh07yx4n","slide":19,"text":"Dynamic-array stack: algorithm pattern","textPreview":"Dynamic-array stack: algorithm pattern","textChars":38,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ri987258","slide":19,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/07ip47mp","slide":19,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/18bqdcna","slide":19,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Resizing trades occasional copying for flexibility.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Resizing trades occasional copying for flexibil...","textChars":135,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/e5072x4z","slide":19,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/z698b254","slide":19,"text":"Resizing trades occasional copying for flexibility.","textPreview":"Resizing trades occasional copying for flexibility.","textChars":51,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ob2p8rm1","slide":19,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/9cbqhw3m","slide":19,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/1wjih0n6","slide":19,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/0vq18v6l","slide":19,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/zah0fq50","slide":19,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/e98j6lof","slide":19,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/90j2l0n2","slide":19,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/oza1cv6x","slide":19,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/ny1kja5c","slide":19,"text":"VTU 1BCS305 • Module 2 • 19/50","textPreview":"VTU 1BCS305 • Module 2 • 19/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/h3zche","slide":19,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/1fikje","slide":20,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/gzm1wneh","slide":20,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/fyd03ixw","slide":20,"text":"Dynamic-array stack: classroom example","textPreview":"Dynamic-array stack: classroom example","textChars":38,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ux4zudwb","slide":20,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/twvi18fq","slide":20,"text":"A small trace makes dynamic-array stack exam-ready.","textPreview":"A small trace makes dynamic-array stack exam-ready.","textChars":51,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/svmhs3e5","slide":20,"text":"• Use terms: capacity, resize\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: capacity, resize | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":114,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/7ud0zyxk","slide":20,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/6t4zqtwz","slide":20,"text":"Resizing trades occasional copying for flexibility.","textPreview":"Resizing trades occasional copying for flexibility.","textChars":51,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/5sbixofu","slide":20,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/kr2ho3e9","slide":20,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/q1kfuhsb","slide":20,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/r2twnm9w","slide":20,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/c32xwrah","slide":20,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/d4vypwr2","slide":20,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/2dkfqhsf","slide":20,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/3ytwjmtk","slide":20,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/4z2xs7a5","slide":20,"text":"VTU 1BCS305 • Module 2 • 20/50","textPreview":"VTU 1BCS305 • Module 2 • 20/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/1fikje","slide":20,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/z4bsua","slide":21,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/v25cnuxg","slide":21,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/w3ydgze1","slide":21,"text":"Polish notation: core idea","textPreview":"Polish notation: core idea","textChars":26,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ho7ep4fm","slide":21,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/mxwvapwz","slide":21,"text":"Polish notations remove parentheses by placing operators before or after operands.","textPreview":"Polish notations remove parentheses by placing operators before or after operands.","textChars":82,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/7y5cjuxk","slide":21,"text":"• prefix\n• postfix\n• operator\n• operand","textPreview":"• prefix | • postfix | • operator | • operand","textChars":39,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/8zedcfe5","slide":21,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/90nulkfa","slide":21,"text":"Postfix is easy to evaluate with a stack.","textPreview":"Postfix is easy to evaluate with a stack.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ytcv65wn","slide":21,"text":"prefix","textPreview":"prefix","textChars":6,"textLines":1,"bbox":[715,331,98,62]}
+{"kind":"textbox","id":"sh/zulcfax8","slide":21,"text":"postfix","textPreview":"postfix","textChars":7,"textLines":1,"bbox":[833,367,98,62]}
+{"kind":"textbox","id":"sh/fed0bm1w","slide":21,"text":"operator","textPreview":"operator","textChars":8,"textLines":1,"bbox":[951,331,98,62]}
+{"kind":"textbox","id":"sh/ud4j2h0b","slide":21,"text":"operand","textPreview":"operand","textChars":7,"textLines":1,"bbox":[1069,367,98,62]}
+{"kind":"textbox","id":"sh/h0v2dwj2","slide":21,"text":"State -> operation -> updated state","textPreview":"State -> operation -> updated state","textChars":35,"textLines":1,"bbox":[741,502,430,36]}
+{"kind":"textbox","id":"sh/gzm14rih","slide":21,"text":"VTU 1BCS305 • Module 2 • 21/50","textPreview":"VTU 1BCS305 • Module 2 • 21/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/z4bsua","slide":21,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/bhsycc","slide":22,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/utcnqpsf","slide":22,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/hw3ml4rq","slide":22,"text":"Polish notation: operations","textPreview":"Polish notation: operations","textChars":27,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/gvu5sza5","slide":22,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7q14fato","slide":22,"text":"Understand polish notation by tracing the operations it supports.","textPreview":"Understand polish notation by tracing the operations it supports.","textChars":65,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/6psnm5s3","slide":22,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/tsjmhkru","slide":22,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/sra5ofa9","slide":22,"text":"Postfix is easy to evaluate with a stack.","textPreview":"Postfix is easy to evaluate with a stack.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/rm5ore9s","slide":22,"text":"prefix","textPreview":"prefix","textChars":6,"textLines":1,"bbox":[715,331,98,62]}
+{"kind":"textbox","id":"sh/qlwny9sn","slide":22,"text":"postfix","textPreview":"postfix","textChars":7,"textLines":1,"bbox":[833,367,98,62]}
+{"kind":"textbox","id":"sh/s32hsve5","slide":22,"text":"operator","textPreview":"operator","textChars":8,"textLines":1,"bbox":[951,331,98,62]}
+{"kind":"textbox","id":"sh/t4by10fq","slide":22,"text":"operand","textPreview":"operand","textChars":7,"textLines":1,"bbox":[1069,367,98,62]}
+{"kind":"textbox","id":"sh/61kzqlwz","slide":22,"text":"State -> operation -> updated state","textPreview":"State -> operation -> updated state","textChars":35,"textLines":1,"bbox":[741,502,430,36]}
+{"kind":"textbox","id":"sh/72tgzqxk","slide":22,"text":"VTU 1BCS305 • Module 2 • 22/50","textPreview":"VTU 1BCS305 • Module 2 • 22/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/bhsycc","slide":22,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/34ec6t","slide":23,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/90fi1wbi","slide":23,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/mx4jqhcr","slide":23,"text":"Polish notation: algorithm pattern","textPreview":"Polish notation: algorithm pattern","textChars":34,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/nyd0zmtc","slide":23,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/w361wbut","slide":23,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/h4fi5wbe","slide":23,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Postfix is easy to evaluate with a stack.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Postfix is easy to evaluate with a stack.","textChars":125,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/a1oju1c3","slide":23,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/v2x036to","slide":23,"text":"Postfix is easy to evaluate with a stack.","textPreview":"Postfix is easy to evaluate with a stack.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/c72hk7up","slide":23,"text":"prefix","textPreview":"prefix","textChars":6,"textLines":1,"bbox":[715,331,98,62]}
+{"kind":"textbox","id":"sh/d8vitcba","slide":23,"text":"postfix","textPreview":"postfix","textChars":7,"textLines":1,"bbox":[833,367,98,62]}
+{"kind":"textbox","id":"sh/h0nm98j6","slide":23,"text":"operator","textPreview":"operator","textChars":8,"textLines":1,"bbox":[951,331,98,62]}
+{"kind":"textbox","id":"sh/gzelg32l","slide":23,"text":"operand","textPreview":"operand","textChars":7,"textLines":1,"bbox":[1069,367,98,62]}
+{"kind":"textbox","id":"sh/fy547y10","slide":23,"text":"State -> operation -> updated state","textPreview":"State -> operation -> updated state","textChars":35,"textLines":1,"bbox":[741,502,430,36]}
+{"kind":"textbox","id":"sh/uxw3etkf","slide":23,"text":"VTU 1BCS305 • Module 2 • 23/50","textPreview":"VTU 1BCS305 • Module 2 • 23/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/34ec6t","slide":23,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/2m6jyq","slide":24,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/7654bu58","slide":24,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/87elkzmt","slide":24,"text":"Polish notation: classroom example","textPreview":"Polish notation: classroom example","textChars":34,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/t8nmd4ne","slide":24,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/u9g3m94j","slide":24,"text":"A small trace makes polish notation exam-ready.","textPreview":"A small trace makes polish notation exam-ready.","textChars":47,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/fap4fu54","slide":24,"text":"• Use terms: prefix, postfix\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: prefix, postfix | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":113,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/gby5ozmp","slide":24,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/hc7mh4na","slide":24,"text":"Postfix is easy to evaluate with a stack.","textPreview":"Postfix is easy to evaluate with a stack.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/adc3a5of","slide":24,"text":"prefix","textPreview":"prefix","textChars":6,"textLines":1,"bbox":[715,331,98,62]}
+{"kind":"textbox","id":"sh/bel43a50","slide":24,"text":"postfix","textPreview":"postfix","textChars":7,"textLines":1,"bbox":[833,367,98,62]}
+{"kind":"textbox","id":"sh/vyxcj6hs","slide":24,"text":"operator","textPreview":"operator","textChars":8,"textLines":1,"bbox":[951,331,98,62]}
+{"kind":"textbox","id":"sh/axobq1gn","slide":24,"text":"operand","textPreview":"operand","textChars":7,"textLines":1,"bbox":[1069,367,98,62]}
+{"kind":"textbox","id":"sh/x0fulgzy","slide":24,"text":"State -> operation -> updated state","textPreview":"State -> operation -> updated state","textChars":35,"textLines":1,"bbox":[741,502,430,36]}
+{"kind":"textbox","id":"sh/wz6tsbyd","slide":24,"text":"VTU 1BCS305 • Module 2 • 24/50","textPreview":"VTU 1BCS305 • Module 2 • 24/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/2m6jyq","slide":24,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/dpwi1w","slide":25,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/e5cz6tkz","slide":25,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/183y18jq","slide":25,"text":"Infix to postfix conversion: core idea","textPreview":"Infix to postfix conversion: core idea","textChars":38,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/07uh8325","slide":25,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/r21gve1o","slide":25,"text":"Conversion uses a stack to delay operators until their operands are ready.","textPreview":"Conversion uses a stack to delay operators until their operands are ready.","textChars":74,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/q1sf2tk3","slide":25,"text":"• precedence\n• associativity\n• parentheses\n• operator stack","textPreview":"• precedence | • associativity | • parentheses | • operator stack","textChars":59,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/d43yxoju","slide":25,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/s3ax4j29","slide":25,"text":"The stack encodes precedence decisions.","textPreview":"The stack encodes precedence decisions.","textChars":39,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/by5g7i1s","slide":25,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/axwzedk7","slide":25,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/0rm9ona9","slide":25,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/lsfaxsru","slide":25,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/y54rmds3","slide":25,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/zqdsvi9o","slide":25,"text":"VTU 1BCS305 • Module 2 • 25/50","textPreview":"VTU 1BCS305 • Module 2 • 25/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/dpwi1w","slide":25,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/rm8p61","slide":26,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/ip4725or","slide":26,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/5svqdkn2","slide":26,"text":"Infix to postfix conversion: operations","textPreview":"Infix to postfix conversion: operations","textChars":39,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/4rmp4f6h","slide":26,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/vmdo7a50","slide":26,"text":"Understand infix to postfix conversion by tracing the operations it supports.","textPreview":"Understand infix to postfix conversion by tracing the operations it supports.","textChars":77,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ulk7y5of","slide":26,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/hov690n6","slide":26,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/wnmp0f6l","slide":26,"text":"The stack encodes precedence decisions.","textPreview":"The stack encodes precedence decisions.","textChars":39,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/7yto3q54","slide":26,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/mxk7uloj","slide":26,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/s3q1ozul","slide":26,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/d4j2h4b6","slide":26,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/q18jmpcv","slide":26,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/r2h0fut0","slide":26,"text":"VTU 1BCS305 • Module 2 • 26/50","textPreview":"VTU 1BCS305 • Module 2 • 26/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/rm8p61","slide":26,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/jirgzh","slide":27,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/uh0fe147","slide":27,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/hkbepg3y","slide":27,"text":"Infix to postfix conversion: algorithm pattern","textPreview":"Infix to postfix conversion: algorithm pattern","textChars":46,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/gj2xgbmd","slide":27,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7u9wj6lw","slide":27,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/6t0vq14b","slide":27,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: The stack encodes precedence decisions.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: The stack encodes precedence decisions.","textChars":123,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/tgrelw3m","slide":27,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/sfixsrmh","slide":27,"text":"The stack encodes precedence decisions.","textPreview":"The stack encodes precedence decisions.","textChars":39,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/jq9wfmlk","slide":27,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/ypgvmh4z","slide":27,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/obe5gbqp","slide":27,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/pcn6pg7a","slide":27,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/2pwnel8z","slide":27,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/3q5onqpk","slide":27,"text":"VTU 1BCS305 • Module 2 • 27/50","textPreview":"VTU 1BCS305 • Module 2 • 27/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/jirgzh","slide":27,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/97i4o8","slide":28,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/0bat0ja1","slide":28,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/fahsre9g","slide":28,"text":"Infix to postfix conversion: classroom example","textPreview":"Infix to postfix conversion: classroom example","textChars":46,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/e98by9sv","slide":28,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/p0jaxori","slide":28,"text":"A small trace makes infix to postfix conversion exam-ready.","textPreview":"A small trace makes infix to postfix conversion exam-ready.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ozat4jax","slide":28,"text":"• Use terms: precedence, associativity\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: precedence, associativity | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":123,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/ny1sve9s","slide":28,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/2xsb29s7","slide":28,"text":"The stack encodes precedence decisions.","textPreview":"The stack encodes precedence decisions.","textChars":39,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/54zalkbe","slide":28,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/4369sfat","slide":28,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/ex4v6x8n","slide":28,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/zydcz2p8","slide":28,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/0zmd87qt","slide":28,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/10fu1c7e","slide":28,"text":"VTU 1BCS305 • Module 2 • 28/50","textPreview":"VTU 1BCS305 • Module 2 • 28/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/97i4o8","slide":28,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/maooxn","slide":29,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/8vql0fit","slide":29,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/7uhk7ah8","slide":29,"text":"Postfix evaluation: core idea","textPreview":"Postfix evaluation: core idea","textChars":29,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/6t83yp0n","slide":29,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/lsf25kz2","slide":29,"text":"Postfix evaluation scans left to right and applies operators to stack operands.","textPreview":"Postfix evaluation scans left to right and applies operators to stack operands.","textChars":79,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/k76lwfix","slide":29,"text":"• scan\n• push operand\n• apply operator\n• result","textPreview":"• scan | • push operand | • apply operator | • result","textChars":47,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/z6xk3ahc","slide":29,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/y5o3u50r","slide":29,"text":"Each operator reduces two operands to one value.","textPreview":"Each operator reduces two operands to one value.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/5ojmh4zm","slide":29,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/4nal8zi1","slide":29,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/qd0z21sj","slide":29,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/betgv694","slide":29,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/cz2h4bap","slide":29,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/d0byxgra","slide":29,"text":"VTU 1BCS305 • Module 2 • 29/50","textPreview":"VTU 1BCS305 • Module 2 • 29/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/maooxn","slide":29,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/tw58ay","slide":30,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/sfypgvep","slide":30,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/re587qd4","slide":30,"text":"Postfix evaluation: operations","textPreview":"Postfix evaluation: operations","textChars":30,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/qdw7elwj","slide":30,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/5sn65gvy","slide":30,"text":"Understand postfix evaluation by tracing the operations it supports.","textPreview":"Understand postfix evaluation by tracing the operations it supports.","textChars":68,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/4repcbed","slide":30,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/3q5o3qd8","slide":30,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/ipw7alwn","slide":30,"text":"Each operator reduces two operands to one value.","textPreview":"Each operator reduces two operands to one value.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hon61gv2","slide":30,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/gnup8beh","slide":30,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/m9476h8f","slide":30,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/nax8fm90","slide":30,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/8b6p8rq5","slide":30,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/9wfqhwrq","slide":30,"text":"VTU 1BCS305 • Module 2 • 30/50","textPreview":"VTU 1BCS305 • Module 2 • 30/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/tw58ay","slide":30,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/7jnrff","slide":31,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/pkrapcbi","slide":31,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/2h0rexc7","slide":31,"text":"Postfix evaluation: algorithm pattern","textPreview":"Postfix evaluation: algorithm pattern","textChars":37,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ni9sn2ts","slide":31,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/0fy9c7u1","slide":31,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/1gralcbm","slide":31,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Each operator reduces two operands to one value.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Each operator reduces two operands to one value.","textChars":132,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/etgraxcv","slide":31,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/fepsj2tg","slide":31,"text":"Each operator reduces two operands to one value.","textPreview":"Each operator reduces two operands to one value.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/sry98nu5","slide":31,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/ds7ahsbq","slide":31,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/tszulcvq","slide":31,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/sr6dc7u5","slide":31,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/7qxcj2dk","slide":31,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/6povahcz","slide":31,"text":"VTU 1BCS305 • Module 2 • 31/50","textPreview":"VTU 1BCS305 • Module 2 • 31/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/7jnrff","slide":31,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/hz7j3s","slide":32,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":12}
+{"kind":"textbox","id":"sh/dwbehsn6","slide":32,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/qtkfmx4f","slide":32,"text":"Postfix evaluation: classroom example","textPreview":"Postfix evaluation: classroom example","textChars":37,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/butwf250","slide":32,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/orixknm9","slide":32,"text":"A small trace makes postfix evaluation exam-ready.","textPreview":"A small trace makes postfix evaluation exam-ready.","textChars":50,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/psbedsnu","slide":32,"text":"• Use terms: scan, push operand\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: scan, push operand | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":116,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/250fidoj","slide":32,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/3q9wbi5o","slide":32,"text":"Each operator reduces two operands to one value.","textPreview":"Each operator reduces two operands to one value.","textChars":48,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/g3ixg36d","slide":32,"text":"top","textPreview":"top","textChars":3,"textLines":1,"bbox":[865,226,140,54]}
+{"kind":"textbox","id":"sh/14re98ny","slide":32,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[865,288,140,54]}
+{"kind":"textbox","id":"sh/5cjetkry","slide":32,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[865,350,140,54]}
+{"kind":"textbox","id":"sh/kbax0fqd","slide":32,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[865,412,140,54]}
+{"kind":"textbox","id":"sh/ja1wra9s","slide":32,"text":"Push and pop happen only at top","textPreview":"Push and pop happen only at top","textChars":31,"textLines":1,"bbox":[735,506,420,36]}
+{"kind":"textbox","id":"sh/i9sfy58n","slide":32,"text":"VTU 1BCS305 • Module 2 • 32/50","textPreview":"VTU 1BCS305 • Module 2 • 32/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/hz7j3s","slide":32,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/e702qq","slide":33,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":13}
+{"kind":"textbox","id":"sh/2pwrm54r","slide":33,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/psnaxkni","slide":33,"text":"Queue ADT: core idea","textPreview":"Queue ADT: core idea","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ore9ofmx","slide":33,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/fm58rq50","slide":33,"text":"A queue removes elements in the same order they arrive.","textPreview":"A queue removes elements in the same order they arrive.","textChars":55,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/e1wril4v","slide":33,"text":"• FIFO\n• front\n• rear\n• enqueue","textPreview":"• FIFO | • front | • rear | • enqueue","textChars":31,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/1onqt0n6","slide":33,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/0ne9kvml","slide":33,"text":"Queues model waiting lines and scheduling.","textPreview":"Queues model waiting lines and scheduling.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/zips3u5k","slide":33,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/yxgrup4z","slide":33,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/sjm1k72t","slide":33,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/tkv2dsje","slide":33,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/6h4jixkn","slide":33,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/7idkb218","slide":33,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/kfm1gn2x","slide":33,"text":"VTU 1BCS305 • Module 2 • 33/50","textPreview":"VTU 1BCS305 • Module 2 • 33/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/e702qq","slide":33,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/9uif0y","slide":34,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":13}
+{"kind":"textbox","id":"sh/c7uhgbe5","slide":34,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/r6l076xk","slide":34,"text":"Queue ADT: operations","textPreview":"Queue ADT: operations","textChars":21,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/q5cze1wf","slide":34,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/p43i5gfu","slide":34,"text":"Understand queue adt by tracing the operations it supports.","textPreview":"Understand queue adt by tracing the operations it supports.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/43uhcbe9","slide":34,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/32lg36xo","slide":34,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/i1sza1w3","slide":34,"text":"Queues model waiting lines and scheduling.","textPreview":"Queues model waiting lines and scheduling.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/90nih0fy","slide":34,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/ozehoved","slide":34,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/i5gv2xkn","slide":34,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/j6pwb21s","slide":34,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/47yd472d","slide":34,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/587edcjy","slide":34,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/u1wvyxkb","slide":34,"text":"VTU 1BCS305 • Module 2 • 34/50","textPreview":"VTU 1BCS305 • Module 2 • 34/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/9uif0y","slide":34,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/s41f9w","slide":35,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":13}
+{"kind":"textbox","id":"sh/qdovy5o7","slide":35,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/dgze907i","slide":35,"text":"Queue ADT: algorithm pattern","textPreview":"Queue ADT: algorithm pattern","textChars":28,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/cf6d0v6d","slide":35,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zihwbapo","slide":35,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/eh8v25o3","slide":35,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Queues model waiting lines and scheduling.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Queues model waiting lines and scheduling.","textChars":126,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/1kzedk7u","slide":35,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/0jqd4f69","slide":35,"text":"Queues model waiting lines and scheduling.","textPreview":"Queues model waiting lines and scheduling.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/vmdcz6pk","slide":35,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/ul4vql8z","slide":35,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/c76xojax","slide":35,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/d8fehori","slide":35,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/q5ovm9s7","slide":35,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/r6xwfe9c","slide":35,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/0v6xsjq9","slide":35,"text":"VTU 1BCS305 • Module 2 • 35/50","textPreview":"VTU 1BCS305 • Module 2 • 35/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/s41f9w","slide":35,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/mc1qa9","slide":36,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":13}
+{"kind":"textbox","id":"sh/q1g3yp8z","slide":36,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/do7mt4ra","slide":36,"text":"Queue ADT: classroom example","textPreview":"Queue ADT: classroom example","textChars":28,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/c3yl0zq5","slide":36,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zqp4vu9g","slide":36,"text":"A small trace makes queue adt exam-ready.","textPreview":"A small trace makes queue adt exam-ready.","textChars":41,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ypg32p8v","slide":36,"text":"• Use terms: FIFO, front\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: FIFO, front | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":109,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/lsrmx4rm","slide":36,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/0ryl4zq1","slide":36,"text":"Queues model waiting lines and scheduling.","textPreview":"Queues model waiting lines and scheduling.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/nu94ze9s","slide":36,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/mt0n6987","slide":36,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/w3qhkjyp","slide":36,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/h4zydoza","slide":36,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/u18zi9gz","slide":36,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/v2hgbeh4","slide":36,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/4rahojy1","slide":36,"text":"VTU 1BCS305 • Module 2 • 36/50","textPreview":"VTU 1BCS305 • Module 2 • 36/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/mc1qa9","slide":36,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/36sxox","slide":37,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/dcrmh4ni","slide":37,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/q9g3mpo7","slide":37,"text":"Array queue: core idea","textPreview":"Array queue: core idea","textChars":22,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ra94fu5s","slide":37,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/4nylkf61","slide":37,"text":"Array queues need front and rear indices.","textPreview":"Array queues need front and rear indices.","textChars":41,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/587mdknm","slide":37,"text":"• front index\n• rear index\n• linear queue\n• wasted space","textPreview":"• front index | • rear index | • linear queue | • wasted space","textChars":56,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/ilg3ipov","slide":37,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/3mp4bu5g","slide":37,"text":"Linear queues can waste freed cells.","textPreview":"Linear queues can waste freed cells.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/gjylgf65","slide":37,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/hk729knq","slide":37,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/dozmx4rm","slide":37,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/snq5ozq1","slide":37,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/rmx4vu9g","slide":37,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/qlonmp8b","slide":37,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/5kfmtkrq","slide":37,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/4j6lkfq5","slide":37,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/3ix4ru9k","slide":37,"text":"VTU 1BCS305 • Module 2 • 37/50","textPreview":"VTU 1BCS305 • Module 2 • 37/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/36sxox","slide":37,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/nrposv","slide":38,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/ml0bmts7","slide":38,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/9orah8ry","slide":38,"text":"Array queue: operations","textPreview":"Array queue: operations","textChars":23,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/8nito3ad","slide":38,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zypsbe9w","slide":38,"text":"Understand array queue by tracing the operations it supports.","textPreview":"Understand array queue by tracing the operations it supports.","textChars":61,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/yxgritsb","slide":38,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/lk7adorm","slide":38,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/0jy9kja1","slide":38,"text":"Linear queues can waste freed cells.","textPreview":"Linear queues can waste freed cells.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/jetsni90","slide":38,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/itkbudsf","slide":38,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/4ni1gnal","slide":38,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/por2psrq","slide":38,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/210jedsf","slide":38,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/3m9kni90","slide":38,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/gzy1cna9","slide":38,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/h0r2l8ru","slide":38,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/uxgjads3","slide":38,"text":"VTU 1BCS305 • Module 2 • 38/50","textPreview":"VTU 1BCS305 • Module 2 • 38/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/nrposv","slide":38,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/l800mf","slide":39,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/fu947i14","slide":39,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/gvilgnip","slide":39,"text":"Array queue: algorithm pattern","textPreview":"Array queue: algorithm pattern","textChars":30,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/1wbm9sza","slide":39,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/2xk3id0v","slide":39,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/3yt4bih0","slide":39,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Linear queues can waste freed cells.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Linear queues can waste freed cells.","textChars":120,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/oz25knil","slide":39,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/pkbmdsz6","slide":39,"text":"Linear queues can waste freed cells.","textPreview":"Linear queues can waste freed cells.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/qlknmx0r","slide":39,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/bmt4f2hc","slide":39,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/7ipgbad0","slide":39,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/mhgz25wf","slide":39,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/9k7idkv6","slide":39,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/8jyh4ful","slide":39,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/zu5g7ado","slide":39,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/ytwzy5wj","slide":39,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/lg7y90vu","slide":39,"text":"VTU 1BCS305 • Module 2 • 39/50","textPreview":"VTU 1BCS305 • Module 2 • 39/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/l800mf","slide":39,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/2fm6aw","slide":40,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/zmx072lo","slide":40,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/0n6h0729","slide":40,"text":"Array queue: classroom example","textPreview":"Array queue: classroom example","textChars":30,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/l8fi9c3u","slide":40,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qh4zuxk7","slide":40,"text":"A small trace makes array queue exam-ready.","textPreview":"A small trace makes array queue exam-ready.","textChars":43,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/bidg3ils","slide":40,"text":"• Use terms: front index, rear index\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: front index, rear index | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":121,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/cjmhwn2d","slide":40,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/dkvi5s3y","slide":40,"text":"Linear queues can waste freed cells.","textPreview":"Linear queues can waste freed cells.","textChars":36,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/2d4zqdkb","slide":40,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/3edgzilw","slide":40,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/3it0v6ps","slide":40,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/ihkzm1o7","slide":40,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/5kbixg7y","slide":40,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/4j2hob6d","slide":40,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/rmd0zqp4","slide":40,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/ql4zqloj","slide":40,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/dovi107u","slide":40,"text":"VTU 1BCS305 • Module 2 • 40/50","textPreview":"VTU 1BCS305 • Module 2 • 40/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/2fm6aw","slide":40,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/hxkrab","slide":41,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":13}
+{"kind":"textbox","id":"sh/k3yp4re1","slide":41,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/z2p8bmdg","slide":41,"text":"Queue operations: core idea","textPreview":"Queue operations: core idea","textChars":27,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/y1g72hwv","slide":41,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/9srqhwvi","slide":41,"text":"Queue algorithms maintain FIFO order through front/rear updates.","textPreview":"Queue algorithms maintain FIFO order through front/rear updates.","textChars":64,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/8ri98rex","slide":41,"text":"• insert\n• delete\n• display\n• empty/full","textPreview":"• insert | • delete | • display | • empty/full","textChars":40,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/76p8fmds","slide":41,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/m5g76hw7","slide":41,"text":"Boundary cases decide correctness.","textPreview":"Boundary cases decide correctness.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hwrqlwvu","slide":41,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/wvi9cbe9","slide":41,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/mp4j2pwf","slide":41,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/nad0vudk","slide":41,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/8bm14ze5","slide":41,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/9cvix4vq","slide":41,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/ud4j69wb","slide":41,"text":"VTU 1BCS305 • Module 2 • 41/50","textPreview":"VTU 1BCS305 • Module 2 • 41/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/hxkrab","slide":41,"text":"[Animation]\nReveal the definition first, then label the visual.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/qax5s0","slide":42,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":13}
+{"kind":"textbox","id":"sh/cz21o3qt","slide":42,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/bytkfyp8","slide":42,"text":"Queue operations: operations","textPreview":"Queue operations: operations","textChars":28,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/ad0jmt8n","slide":42,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/l4b2l87a","slide":42,"text":"Understand queue operations by tracing the operations it supports.","textPreview":"Understand queue operations by tracing the operations it supports.","textChars":66,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/k321s365","slide":42,"text":"• Name the ADT state\n• Identify valid operations\n• Update pointers, indices, or links\n• Check boundary cases","textPreview":"• Name the ADT state | • Identify valid operations | • Update pointers, indices, or links | • Check boundary cases","textChars":108,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/z2tkjypk","slide":42,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/y1kjqtoz","slide":42,"text":"Boundary cases decide correctness.","textPreview":"Boundary cases decide correctness.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/18ri9o76","slide":42,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/07i1gjql","slide":42,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/qd4ral0r","slide":42,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/red83q1c","slide":42,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/sfm9cbix","slide":42,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/dgvq5gji","slide":42,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/eh4rel03","slide":42,"text":"VTU 1BCS305 • Module 2 • 42/50","textPreview":"VTU 1BCS305 • Module 2 • 42/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/qax5s0","slide":42,"text":"[Animation]\nAnimate the operation sequence one step at a time.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/1g2xlk","slide":43,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":13}
+{"kind":"textbox","id":"sh/rm5036h0","slide":43,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/sne1cbil","slide":43,"text":"Queue operations: algorithm pattern","textPreview":"Queue operations: algorithm pattern","textChars":35,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/doni5gz6","slide":43,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/epwjelgr","slide":43,"text":"Most textbook procedures are state updates with careful boundary checks.","textPreview":"Most textbook procedures are state updates with careful boundary checks.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/fq507qhc","slide":43,"text":"• Input and preconditions\n• Core update step\n• Failure or empty/full case\n• Result: Boundary cases decide correctness.","textPreview":"• Input and preconditions | • Core update step | • Failure or empty/full case | • Result: Boundary cases decide correctness.","textChars":118,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/0ry1gbyx","slide":43,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/1s7i9gz2","slide":43,"text":"Boundary cases decide correctness.","textPreview":"Boundary cases decide correctness.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/2tgjilgn","slide":43,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/nup0bqh8","slide":43,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/3m90nmp4","slide":43,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/2l0zehoj","slide":43,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/pobipw7a","slide":43,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/4ni1gr6p","slide":43,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/fy90jmps","slide":43,"text":"VTU 1BCS305 • Module 2 • 43/50","textPreview":"VTU 1BCS305 • Module 2 • 43/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/1g2xlk","slide":43,"text":"[Animation]\nReveal precondition, update, and result separately.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/6idol6","slide":44,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":13}
+{"kind":"textbox","id":"sh/gvyt4nml","slide":44,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/fu5cv2l0","slide":44,"text":"Queue operations: classroom example","textPreview":"Queue operations: classroom example","textChars":35,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/etwb2x4v","slide":44,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/p07u1c3i","slide":44,"text":"A small trace makes queue operations exam-ready.","textPreview":"A small trace makes queue operations exam-ready.","textChars":48,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ozyt87mx","slide":44,"text":"• Use terms: insert, delete\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: insert, delete | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":112,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/3ypcz2lc","slide":44,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/2xgb6x4r","slide":44,"text":"Boundary cases decide correctness.","textPreview":"Boundary cases decide correctness.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/doru5c3e","slide":44,"text":"front","textPreview":"front","textChars":5,"textLines":1,"bbox":[705,321,82,56]}
+{"kind":"textbox","id":"sh/cnidc72t","slide":44,"text":"job1","textPreview":"job1","textChars":4,"textLines":1,"bbox":[801,321,82,56]}
+{"kind":"textbox","id":"sh/6lgnuh4f","slide":44,"text":"job2","textPreview":"job2","textChars":4,"textLines":1,"bbox":[897,321,82,56]}
+{"kind":"textbox","id":"sh/7mpo3ml0","slide":44,"text":"job3","textPreview":"job3","textChars":4,"textLines":1,"bbox":[993,321,82,56]}
+{"kind":"textbox","id":"sh/8ny5wrml","slide":44,"text":"rear","textPreview":"rear","textChars":4,"textLines":1,"bbox":[1089,321,82,56]}
+{"kind":"textbox","id":"sh/tor65w36","slide":44,"text":"FIFO: first inserted, first deleted","textPreview":"FIFO: first inserted, first deleted","textChars":35,"textLines":1,"bbox":[745,466,400,36]}
+{"kind":"textbox","id":"sh/u90ny14r","slide":44,"text":"VTU 1BCS305 • Module 2 • 44/50","textPreview":"VTU 1BCS305 • Module 2 • 44/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/6idol6","slide":44,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/r5untx","slide":45,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/8r69kvax","slide":45,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/7qxsbq9c","slide":45,"text":"Module 2 summary map","textPreview":"Module 2 summary map","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/mp4rilsr","slide":45,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/lova9gb6","slide":45,"text":"Stacks, Stack Applications, and Queues","textPreview":"Stacks, Stack Applications, and Queues","textChars":38,"textLines":1,"bbox":[462,300,360,82]}
+{"kind":"textbox","id":"sh/knm9gbal","slide":45,"text":"Stack ADT","textPreview":"Stack ADT","textChars":9,"textLines":1,"bbox":[100,185,190,58]}
+{"kind":"textbox","id":"sh/zmd876t0","slide":45,"text":"Stack operations","textPreview":"Stack operations","textChars":16,"textLines":1,"bbox":[380,185,190,58]}
+{"kind":"textbox","id":"sh/yl4re1sv","slide":45,"text":"Array stack","textPreview":"Array stack","textChars":11,"textLines":1,"bbox":[660,185,190,58]}
+{"kind":"textbox","id":"sh/xkvq5gba","slide":45,"text":"Dynamic-array stack","textPreview":"Dynamic-array stack","textChars":19,"textLines":1,"bbox":[940,185,190,58]}
+{"kind":"textbox","id":"sh/cjm9cbap","slide":45,"text":"Polish notation","textPreview":"Polish notation","textChars":15,"textLines":1,"bbox":[100,430,190,58]}
+{"kind":"textbox","id":"sh/q5sbadgb","slide":45,"text":"Infix to postfix conversion","textPreview":"Infix to postfix conversion","textChars":27,"textLines":1,"bbox":[380,430,190,58]}
+{"kind":"textbox","id":"sh/r61c3ihw","slide":45,"text":"Postfix evaluation","textPreview":"Postfix evaluation","textChars":18,"textLines":1,"bbox":[660,430,190,58]}
+{"kind":"textbox","id":"sh/c7atcnyh","slide":45,"text":"Queue ADT","textPreview":"Queue ADT","textChars":9,"textLines":1,"bbox":[940,430,190,58]}
+{"kind":"textbox","id":"sh/d83u5sz2","slide":45,"text":"Use the map to revise definitions, operations, and one example per structure.","textPreview":"Use the map to revise definitions, operations, and one example per structure.","textChars":77,"textLines":1,"bbox":[192,608,900,36]}
+{"kind":"textbox","id":"sh/2hsb6dgf","slide":45,"text":"VTU 1BCS305 • Module 2 • 45/50","textPreview":"VTU 1BCS305 • Module 2 • 45/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/r5untx","slide":45,"text":"[Animation]\nReveal outer topics and ask students for one operation and one boundary case.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/gok8ig","slide":46,"title":"Practice","textShapes":21}
+{"kind":"textbox","id":"sh/5c32hcr2","slide":46,"text":"Practice","textPreview":"Practice","textChars":8,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/i9cjmx8r","slide":46,"text":"Module 2 exam-focused questions","textPreview":"Module 2 exam-focused questions","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/jalkf29c","slide":46,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/w7a1knql","slide":46,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,158,46,46]}
+{"kind":"textbox","id":"sh/x832dsr6","slide":46,"text":"Define stack adt and explain its representation.","textPreview":"Define stack adt and explain its representation.","textChars":48,"textLines":1,"bbox":[164,150,850,54]}
+{"kind":"textbox","id":"sh/a5sjid8f","slide":46,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,160,110,36]}
+{"kind":"textbox","id":"sh/v61kbi90","slide":46,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,234,46,46]}
+{"kind":"textbox","id":"sh/g3elwrqp","slide":46,"text":"Write an algorithm for stack operations with boundary cases.","textPreview":"Write an algorithm for stack operations with boundary cases.","textChars":60,"textLines":1,"bbox":[164,226,850,54]}
+{"kind":"textbox","id":"sh/14n2pwra","slide":46,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,236,110,36]}
+{"kind":"textbox","id":"sh/honq107m","slide":46,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,310,46,46]}
+{"kind":"textbox","id":"sh/wne98v61","slide":46,"text":"Trace array stack using a small example.","textPreview":"Trace array stack using a small example.","textChars":40,"textLines":1,"bbox":[164,302,850,54]}
+{"kind":"textbox","id":"sh/vml8zqpg","slide":46,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,312,110,36]}
+{"kind":"textbox","id":"sh/ulcr6lov","slide":46,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,386,46,46]}
+{"kind":"textbox","id":"sh/9k3qx07a","slide":46,"text":"Compare two representations used in this module.","textPreview":"Compare two representations used in this module.","textChars":48,"textLines":1,"bbox":[164,378,850,54]}
+{"kind":"textbox","id":"sh/8ju94v6p","slide":46,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,388,110,36]}
+{"kind":"textbox","id":"sh/7yl8vqp4","slide":46,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,462,46,46]}
+{"kind":"textbox","id":"sh/mxcr2l8z","slide":46,"text":"Explain the time complexity of a key operation.","textPreview":"Explain the time complexity of a key operation.","textChars":47,"textLines":1,"bbox":[164,454,850,54]}
+{"kind":"textbox","id":"sh/dg7a9k7e","slide":46,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,464,110,36]}
+{"kind":"textbox","id":"sh/sfy9gf69","slide":46,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,538,46,46]}
+{"kind":"textbox","id":"sh/cbqlsnih","slide":46,"text":"Write short notes on queue operations.","textPreview":"Write short notes on queue operations.","textChars":38,"textLines":1,"bbox":[164,530,850,54]}
+{"kind":"textbox","id":"sh/xcz21sj2","slide":46,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,540,110,36]}
+{"kind":"textbox","id":"sh/a9ojqd0b","slide":46,"text":"VTU 1BCS305 • Module 2 • 46/50","textPreview":"VTU 1BCS305 • Module 2 • 46/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/gok8ig","slide":46,"text":"[Animation]\nReveal questions one by one. Ask students to sketch before answering.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/kh3y0x","slide":47,"title":"Exam quick reference","textShapes":21}
+{"kind":"textbox","id":"sh/3a5oni94","slide":47,"text":"Exam quick reference","textPreview":"Exam quick reference","textChars":20,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/4bepgnap","slide":47,"text":"Module 2 complexity checkpoints","textPreview":"Module 2 complexity checkpoints","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/pcn6p8ra","slide":47,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ulc7atsn","slide":47,"text":"Stack ADT","textPreview":"Stack ADT","textChars":9,"textLines":1,"bbox":[96,172,330,48]}
+{"kind":"textbox","id":"sh/fmlojy9s","slide":47,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,176,270,36]}
+{"kind":"textbox","id":"sh/gnupc3ad","slide":47,"text":"Representation decides cost","textPreview":"Representation decides cost","textChars":27,"textLines":1,"bbox":[790,176,330,36]}
+{"kind":"textbox","id":"sh/h8n6l8ry","slide":47,"text":"Stack operations","textPreview":"Stack operations","textChars":16,"textLines":1,"bbox":[96,244,330,48]}
+{"kind":"textbox","id":"sh/6hc76tsb","slide":47,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,248,270,36]}
+{"kind":"textbox","id":"sh/7ilofy9w","slide":47,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,248,330,36]}
+{"kind":"textbox","id":"sh/vytkfm18","slide":47,"text":"Array stack","textPreview":"Array stack","textChars":11,"textLines":1,"bbox":[96,316,330,48]}
+{"kind":"textbox","id":"sh/axkj6h0n","slide":47,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,320,270,36]}
+{"kind":"textbox","id":"sh/x0b2hwze","slide":47,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,320,330,36]}
+{"kind":"textbox","id":"sh/wz218rit","slide":47,"text":"Dynamic-array stack","textPreview":"Dynamic-array stack","textChars":19,"textLines":1,"bbox":[96,388,330,48]}
+{"kind":"textbox","id":"sh/jmdkjmhk","slide":47,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,392,270,36]}
+{"kind":"textbox","id":"sh/i14jah0z","slide":47,"text":"Representation decides cost","textPreview":"Representation decides cost","textChars":27,"textLines":1,"bbox":[790,392,330,36]}
+{"kind":"textbox","id":"sh/5ov2lwza","slide":47,"text":"Polish notation","textPreview":"Polish notation","textChars":15,"textLines":1,"bbox":[96,460,330,48]}
+{"kind":"textbox","id":"sh/knm1cri5","slide":47,"text":"O(1) core access or pointer update","textPreview":"O(1) core access or pointer update","textChars":34,"textLines":1,"bbox":[470,464,270,36]}
+{"kind":"textbox","id":"sh/zq907210","slide":47,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,464,330,36]}
+{"kind":"textbox","id":"sh/y50jyx0f","slide":47,"text":"Infix to postfix conversion","textPreview":"Infix to postfix conversion","textChars":27,"textLines":1,"bbox":[96,532,330,48]}
+{"kind":"textbox","id":"sh/2l8n65k3","slide":47,"text":"O(n) scan/update","textPreview":"O(n) scan/update","textChars":16,"textLines":1,"bbox":[470,536,270,36]}
+{"kind":"textbox","id":"sh/3mh4fa1o","slide":47,"text":"Watch boundary cases","textPreview":"Watch boundary cases","textChars":20,"textLines":1,"bbox":[790,536,330,36]}
+{"kind":"textbox","id":"sh/4nq58f29","slide":47,"text":"VTU 1BCS305 • Module 2 • 47/50","textPreview":"VTU 1BCS305 • Module 2 • 47/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/kh3y0x","slide":47,"text":"[Animation]\nReveal one row at a time; ask students to justify the complexity from representation.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/mvzbt0","slide":48,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/v2583ixw","slide":48,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/g3epcnyh","slide":48,"text":"Module 2 summary map","textPreview":"Module 2 summary map","textChars":20,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/h47q5sf2","slide":48,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/i5grexg7","slide":48,"text":"Stacks, Stack Applications, and Queues","textPreview":"Stacks, Stack Applications, and Queues","textChars":38,"textLines":1,"bbox":[462,300,360,82]}
+{"kind":"textbox","id":"sh/36p872xs","slide":48,"text":"Stack ADT","textPreview":"Stack ADT","textChars":9,"textLines":1,"bbox":[100,185,190,58]}
+{"kind":"textbox","id":"sh/47y9g7yd","slide":48,"text":"Stack operations","textPreview":"Stack operations","textChars":16,"textLines":1,"bbox":[380,185,190,58]}
+{"kind":"textbox","id":"sh/587q9cfy","slide":48,"text":"Array stack","textPreview":"Array stack","textChars":11,"textLines":1,"bbox":[660,185,190,58]}
+{"kind":"textbox","id":"sh/q9grixgj","slide":48,"text":"Dynamic-array stack","textPreview":"Dynamic-array stack","textChars":19,"textLines":1,"bbox":[940,185,190,58]}
+{"kind":"textbox","id":"sh/rup8b2x4","slide":48,"text":"Polish notation","textPreview":"Polish notation","textChars":15,"textLines":1,"bbox":[100,430,190,58]}
+{"kind":"textbox","id":"sh/n6x4f2tc","slide":48,"text":"Infix to postfix conversion","textPreview":"Infix to postfix conversion","textChars":27,"textLines":1,"bbox":[380,430,190,58]}
+{"kind":"textbox","id":"sh/m543mxcr","slide":48,"text":"Postfix evaluation","textPreview":"Postfix evaluation","textChars":18,"textLines":1,"bbox":[660,430,190,58]}
+{"kind":"textbox","id":"sh/9sfmhcb2","slide":48,"text":"Queue ADT","textPreview":"Queue ADT","textChars":9,"textLines":1,"bbox":[940,430,190,58]}
+{"kind":"textbox","id":"sh/o765o7uh","slide":48,"text":"Use the map to revise definitions, operations, and one example per structure.","textPreview":"Use the map to revise definitions, operations, and one example per structure.","textChars":77,"textLines":1,"bbox":[192,608,900,36]}
+{"kind":"textbox","id":"sh/z2d4bit0","slide":48,"text":"VTU 1BCS305 • Module 2 • 48/50","textPreview":"VTU 1BCS305 • Module 2 • 48/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/mvzbt0","slide":48,"text":"[Animation]\nReveal outer topics and ask students for one operation and one boundary case.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/572qyb","slide":49,"title":"Practice","textShapes":21}
+{"kind":"textbox","id":"sh/o36dgfa1","slide":49,"text":"Practice","textPreview":"Practice","textChars":8,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/n2xwna9g","slide":49,"text":"Module 2 exam-focused questions","textPreview":"Module 2 exam-focused questions","textChars":31,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/m1ove5sv","slide":49,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/10fel0ra","slide":49,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,158,46,46]}
+{"kind":"textbox","id":"sh/0zmdcfa5","slide":49,"text":"Define stack adt and explain its representation.","textPreview":"Define stack adt and explain its representation.","textChars":48,"textLines":1,"bbox":[164,150,850,54]}
+{"kind":"textbox","id":"sh/zydwja9k","slide":49,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,160,110,36]}
+{"kind":"textbox","id":"sh/ex4va5sz","slide":49,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,234,46,46]}
+{"kind":"textbox","id":"sh/lwzex4ru","slide":49,"text":"Write an algorithm for stack operations with boundary cases.","textPreview":"Write an algorithm for stack operations with boundary cases.","textChars":60,"textLines":1,"bbox":[164,226,850,54]}
+{"kind":"textbox","id":"sh/kvqxozq9","slide":49,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,236,110,36]}
+{"kind":"textbox","id":"sh/2lojihw3","slide":49,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,310,46,46]}
+{"kind":"textbox","id":"sh/nmxkrmxo","slide":49,"text":"Trace array stack using a small example.","textPreview":"Trace array stack using a small example.","textChars":40,"textLines":1,"bbox":[164,302,850,54]}
+{"kind":"textbox","id":"sh/onq1kret","slide":49,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,312,110,36]}
+{"kind":"textbox","id":"sh/poz2twfe","slide":49,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,386,46,46]}
+{"kind":"textbox","id":"sh/ehojehwr","slide":49,"text":"Compare two representations used in this module.","textPreview":"Compare two representations used in this module.","textChars":48,"textLines":1,"bbox":[164,378,850,54]}
+{"kind":"textbox","id":"sh/fixkn2xc","slide":49,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,388,110,36]}
+{"kind":"textbox","id":"sh/0j61g7ex","slide":49,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,462,46,46]}
+{"kind":"textbox","id":"sh/1kf2pcfi","slide":49,"text":"Explain the time complexity of a key operation.","textPreview":"Explain the time complexity of a key operation.","textChars":47,"textLines":1,"bbox":[164,454,850,54]}
+{"kind":"textbox","id":"sh/yd8jq1wb","slide":49,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,464,110,36]}
+{"kind":"textbox","id":"sh/zehkz6xg","slide":49,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,538,46,46]}
+{"kind":"textbox","id":"sh/vytgryd8","slide":49,"text":"Write short notes on queue operations.","textPreview":"Write short notes on queue operations.","textChars":38,"textLines":1,"bbox":[164,530,850,54]}
+{"kind":"textbox","id":"sh/uxkzitwn","slide":49,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,540,110,36]}
+{"kind":"textbox","id":"sh/h0byt8vy","slide":49,"text":"VTU 1BCS305 • Module 2 • 49/50","textPreview":"VTU 1BCS305 • Module 2 • 49/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/572qyb","slide":49,"text":"[Animation]\nReveal questions one by one. Ask students to sketch before answering.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}
+{"kind":"slide","id":"sl/3syot1","slide":50,"title":"Module 2 / Stacks, Stack Applications, and Queues","textShapes":15}
+{"kind":"textbox","id":"sh/l4jmh0ja","slide":50,"text":"Module 2 / Stacks, Stack Applications, and Queues","textPreview":"Module 2 / Stacks, Stack Applications, and Queues","textChars":49,"textLines":1,"bbox":[72,30,900,28]}
+{"kind":"textbox","id":"sh/yhsn6lkj","slide":50,"text":"Dynamic-array stack: classroom example","textPreview":"Dynamic-array stack: classroom example","textChars":38,"textLines":1,"bbox":[72,62,1085,54]}
+{"kind":"shape","id":"sh/z214fq14","slide":50,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/87u5cv2l","slide":50,"text":"A small trace makes dynamic-array stack exam-ready.","textPreview":"A small trace makes dynamic-array stack exam-ready.","textChars":51,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/9836l0j6","slide":50,"text":"• Use terms: capacity, resize\n• Trace at least three operations\n• Show final structure\n• State time and space idea","textPreview":"• Use terms: capacity, resize | • Trace at least three operations | • Show final structure | • State time and space idea","textChars":114,"textLines":4,"bbox":[94,260,510,210]}
+{"kind":"textbox","id":"sh/m5cnalkv","slide":50,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[94,528,138,42]}
+{"kind":"textbox","id":"sh/76l4jq10","slide":50,"text":"Resizing trades occasional copying for flexibility.","textPreview":"Resizing trades occasional copying for flexibility.","textChars":51,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/obq50b2h","slide":50,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[717,286,52,52]}
+{"kind":"textbox","id":"sh/pczm9gj2","slide":50,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[775,286,52,52]}
+{"kind":"textbox","id":"sh/lsf61orm","slide":50,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[833,286,52,52]}
+{"kind":"textbox","id":"sh/0r658ja1","slide":50,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[891,286,52,52]}
+{"kind":"textbox","id":"sh/z6xozy9g","slide":50,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[949,286,52,52]}
+{"kind":"textbox","id":"sh/y5on6tsv","slide":50,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[1007,286,52,52]}
+{"kind":"textbox","id":"sh/9wz658ri","slide":50,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1065,286,52,52]}
+{"kind":"textbox","id":"sh/8vqpc3ax","slide":50,"text":"Contiguous cells -> index gives direct access","textPreview":"Contiguous cells -> index gives direct access","textChars":45,"textLines":1,"bbox":[725,406,430,44]}
+{"kind":"textbox","id":"sh/nuxo3y9c","slide":50,"text":"VTU 1BCS305 • Module 2 • 50/50","textPreview":"VTU 1BCS305 • Module 2 • 50/50","textChars":30,"textLines":1,"bbox":[72,681,620,20]}
+{"kind":"notes","id":"nt/3syot1","slide":50,"text":"[Animation]\nBuild the trace from left to right.\n\n[Sources]\n- Local syllabus PDF: public/Data Structures/DS and DS lab syllabus.pdf\n- Local syllabus PDF: public/Data Structures/syllabus 3rd sem-part-2.pdf\n- Local textbook PDF: TEXT_fundamentals-of-data-structures-in-c-by-ellis-horowitz-sartaj-sahni-and-susan-anderson-freed.pdf\n- Local reference PDF: REFERENCE_data-structures-with-c-by-seymour-lipschutz.pdf"}

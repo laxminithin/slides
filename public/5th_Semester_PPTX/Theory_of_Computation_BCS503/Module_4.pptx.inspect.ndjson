@@ -1,0 +1,1120 @@
+{"kind":"deck","id":"pr/gnwmgt","name":"Deck"}
+{"kind":"layout","layoutId":"08a79157-1079-4cbd-b54e-7842c218c833","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"43dba921-7779-4f69-ad77-8cee0061dccf","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/30dupu","slide":1,"title":"BCS503 | Theory of Computation","textShapes":10}
+{"kind":"textbox","id":"sh/nid4ny9s","slide":1,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ojm5g3ad","slide":1,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/9kv6p8ry","slide":1,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/alonidsj","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/bmxori94","slide":1,"text":"Normal Forms and CFL Properties","textPreview":"Normal Forms and CFL Properties","textChars":31,"textLines":1,"bbox":[76,98,780,116]}
+{"kind":"textbox","id":"sh/wn65knap","slide":1,"text":"Theory of Computation | Module 4","textPreview":"Theory of Computation | Module 4","textChars":32,"textLines":1,"bbox":[80,224,780,72]}
+{"kind":"shape","id":"sh/xof6t8ra","slide":1,"bbox":[82,318,180,7]}
+{"kind":"textbox","id":"sh/yponmdsv","slide":1,"text":"Hook","textPreview":"Hook","textChars":4,"textLines":1,"bbox":[163,430,170,92]}
+{"kind":"textbox","id":"sh/jqxovi90","slide":1,"text":"Core concept","textPreview":"Core concept","textChars":12,"textLines":1,"bbox":[359,430,170,92]}
+{"kind":"textbox","id":"sh/fm1ovipg","slide":1,"text":"Mechanism","textPreview":"Mechanism","textChars":9,"textLines":1,"bbox":[555,430,170,92]}
+{"kind":"textbox","id":"sh/elsn2d8v","slide":1,"text":"Worked example","textPreview":"Worked example","textChars":14,"textLines":1,"bbox":[751,430,170,92]}
+{"kind":"textbox","id":"sh/1836xs7m","slide":1,"text":"Exam-ready recap","textPreview":"Exam-ready recap","textChars":16,"textLines":1,"bbox":[947,430,170,92]}
+{"kind":"shape","id":"sh/0na54n61","slide":1,"bbox":[333,476,26,0]}
+{"kind":"shape","id":"sh/ri1orip4","slide":1,"bbox":[529,476,26,0]}
+{"kind":"shape","id":"sh/6hsnyd8z","slide":1,"bbox":[725,476,26,0]}
+{"kind":"shape","id":"sh/dkj6ts7a","slide":1,"bbox":[921,476,26,0]}
+{"kind":"notes","id":"nt/30dupu","slide":1,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/bbj3t7","slide":2,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/4ny1sj2d","slide":2,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/j2p0jels","slide":2,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/i1gzqtk7","slide":2,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/tsrip83u","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/sry1w329","slide":2,"text":"Teaching route","textPreview":"Teaching route","textChars":14,"textLines":1,"bbox":[78,112,700,48]}
+{"kind":"shape","id":"sh/rqp0nylo","slide":2,"bbox":[96,217,16,16]}
+{"kind":"textbox","id":"sh/6pgjutkj","slide":2,"text":"Start with why the module matters.","textPreview":"Start with why the module matters.","textChars":34,"textLines":1,"bbox":[126,210,990,42]}
+{"kind":"shape","id":"sh/9wnid43q","slide":2,"bbox":[96,293,16,16]}
+{"kind":"textbox","id":"sh/8vehkz25","slide":2,"text":"Build one concept at a time with a diagram or worked trace.","textPreview":"Build one concept at a time with a diagram or worked trace.","textChars":59,"textLines":1,"bbox":[126,286,990,42]}
+{"kind":"shape","id":"sh/utkby1gb","slide":2,"bbox":[96,369,16,16]}
+{"kind":"textbox","id":"sh/vutsr6hw","slide":2,"text":"Use examples before definitions become abstract.","textPreview":"Use examples before definitions become abstract.","textChars":48,"textLines":1,"bbox":[126,362,990,42]}
+{"kind":"shape","id":"sh/gv2t0byh","slide":2,"bbox":[96,445,16,16]}
+{"kind":"textbox","id":"sh/hwbatgz2","slide":2,"text":"End with definitions, algorithms/formulas, mistakes and practice questions.","textPreview":"End with definitions, algorithms/formulas, mistakes and practice questions.","textChars":75,"textLines":1,"bbox":[126,438,990,42]}
+{"kind":"notes","id":"nt/bbj3t7","slide":2,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/nqbjca","slide":3,"title":"BCS503 | Theory of Computation","textShapes":7}
+{"kind":"textbox","id":"sh/l43ulc7u","slide":3,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/y1svax8j","slide":3,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/z2lcj2p4","slide":3,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/8rudg7ql","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/9s3upc76","slide":3,"text":"Module map","textPreview":"Module map","textChars":10,"textLines":1,"bbox":[78,112,700,48]}
+{"kind":"shape","id":"sh/m5cveh8f","slide":3,"bbox":[96,193,16,16]}
+{"kind":"textbox","id":"sh/n6lcnmp0","slide":3,"text":"Normal forms for context-free grammars","textPreview":"Normal forms for context-free grammars","textChars":38,"textLines":1,"bbox":[126,186,1000,42]}
+{"kind":"shape","id":"sh/wvedkr6h","slide":3,"bbox":[96,251,16,16]}
+{"kind":"textbox","id":"sh/xwnetw72","slide":3,"text":"Pumping lemma for context-free languages","textPreview":"Pumping lemma for context-free languages","textChars":40,"textLines":1,"bbox":[126,244,1000,42]}
+{"kind":"shape","id":"sh/5ojmp8zy","slide":3,"bbox":[96,309,16,16]}
+{"kind":"textbox","id":"sh/4nalw3id","slide":3,"text":"Closure properties of context-free languages","textPreview":"Closure properties of context-free languages","textChars":44,"textLines":1,"bbox":[126,302,1000,42]}
+{"kind":"notes","id":"nt/nqbjca","slide":3,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/c85pcu","slide":4,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/cru5czih","slide":4,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/rqlo3u1w","slide":4,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/qpcnap0b","slide":4,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/lgn694jy","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/0fu5gzid","slide":4,"text":"Normal forms for context-free grammars","textPreview":"Normal forms for context-free grammars","textChars":38,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/zelo7u1s","slide":4,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/etcnep07","slide":4,"text":"Normal forms for context-free grammars is best taught as a variables problem, not as a memorized definition.","textPreview":"Normal forms for context-free grammars is best taught as a variables problem, not as a memorized definition.","textChars":108,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/9kn6d4zu","slide":4,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/8je5kji9","slide":4,"text":"The key mechanism connects terminals with productions so that students can predict the result.","textPreview":"The key mechanism connects terminals with productions so that students can predict the result.","textChars":94,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/q9kjy9cb","slide":4,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/bat0redg","slide":4,"text":"For exams, draw the model first, label each step, and then explain start symbol and derivation.","textPreview":"For exams, draw the model first, label each step, and then explain start symbol and derivation.","textChars":95,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/cb210ju1","slide":4,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/dcbitovm","slide":4,"text":"terminals","textPreview":"terminals","textChars":9,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/yxkj2tc7","slide":4,"text":"productions","textPreview":"productions","textChars":11,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/zyt0vyds","slide":4,"text":"start symbol","textPreview":"start symbol","textChars":12,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/0z2143ud","slide":4,"text":"derivation","textPreview":"derivation","textChars":10,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/l0vixovy","slide":4,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/e10zqpc3","slide":4,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/f290judo","slide":4,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/jm5grqtg","slide":4,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/ilwfilsv","slide":4,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/58nyt0b6","slide":4,"text":"This topic explains how normal forms for context-free grammars changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how normal forms for context-free grammars changes design decisions, program behaviour, protocol results or proof str...","textChars":144,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/c85pcu","slide":4,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/jv7kew","slide":5,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/cfq1sb2d","slide":5,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/rehkj6ls","slide":5,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/qd8jq1k7","slide":5,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/lkj2pgju","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/0jqlwb29","slide":5,"text":"Normal forms for context-free grammars: transition view","textPreview":"Normal forms for context-free grammars: transition view","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/zihkn61o","slide":5,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/yh83ulk3","slide":5,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/hof2dw3q","slide":5,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/gn61kr25","slide":5,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/2x0j6ls3","slide":5,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/3ytkzq98","slide":5,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/jv7kew","slide":5,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/uq3bqn","slide":6,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/ylo3u9s7","slide":6,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/l8fmpory","slide":6,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/0n6lwjad","slide":6,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/nah4ry94","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/m9o3ytsj","slide":6,"text":"Normal forms for context-free grammars: worked example","textPreview":"Normal forms for context-free grammars: worked example","textChars":54,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/9czmt8ru","slide":6,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/8bq503ap","slide":6,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/3ed4futk","slide":6,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/2d43mpsf","slide":6,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/gbq9sfad","slide":6,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/1czq1kry","slide":6,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/e9orq5s7","slide":6,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/fax8za9s","slide":6,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/ofq9wfa9","slide":6,"text":"Identify terminals","textPreview":"Identify terminals","textChars":18,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/pgza5kru","slide":6,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/2d8rupsj","slide":6,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/3eh83u94","slide":6,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/4jm9kva5","slide":6,"text":"terminals","textPreview":"terminals","textChars":9,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/5kfqt0rq","slide":6,"text":"Apply productions","textPreview":"Apply productions","textChars":17,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/lony1sfi","slide":6,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/0nex8nyx","slide":6,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/z2lgzixc","slide":6,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/y1cf6dgr","slide":6,"text":"productions","textPreview":"productions","textChars":11,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/9sny5cfe","slide":6,"text":"Check start symbol","textPreview":"Check start symbol","textChars":18,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/8rexc7yt","slide":6,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/nq5g32x8","slide":6,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/mpwfaxgn","slide":6,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/xw7y9cfa","slide":6,"text":"start symbol","textPreview":"start symbol","textChars":12,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/wvyxg7y5","slide":6,"text":"Conclude derivation","textPreview":"Conclude derivation","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/e18vu9w7","slide":6,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/f2hc3eds","slide":6,"text":"Use this structure whenever normal forms for context-free grammars appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever normal forms for context-free grammars appears as a 10-mark explanation or trace problem.","textChars":117,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/uq3bqn","slide":6,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/kqdwbt","slide":7,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/f2dwf6lk","slide":7,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/g3mxob25","slide":7,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/h4vehg3q","slide":7,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/254fqlkv","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/3qdwjqlg","slide":7,"text":"Pumping lemma for context-free languages","textPreview":"Pumping lemma for context-free languages","textChars":40,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/4r6xsb21","slide":7,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/psfylg3m","slide":7,"text":"Pumping lemma for context-free languages is best taught as a assume regular/CFL problem, not as a memorized definition.","textPreview":"Pumping lemma for context-free languages is best taught as a assume regular/CFL problem, not as a memorized definition.","textChars":119,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/qtofulk7","slide":7,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/ruxgnqls","slide":7,"text":"The key mechanism connects choose long string with split by rule so that students can predict the result.","textPreview":"The key mechanism connects choose long string with split by rule so that students can predict the result.","textChars":105,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/zed8b69o","slide":7,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/yd47i1s3","slide":7,"text":"For exams, draw the model first, label each step, and then explain pump and contradict language.","textPreview":"For exams, draw the model first, label each step, and then explain pump and contradict language.","textChars":96,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/lgvqdwru","slide":7,"text":"assume regular/CFL","textPreview":"assume regular/CFL","textChars":18,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/0fmpkba9","slide":7,"text":"choose long string","textPreview":"choose long string","textChars":18,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/bat87m9s","slide":7,"text":"split by rule","textPreview":"split by rule","textChars":13,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/qpk7ehs7","slide":7,"text":"pump","textPreview":"pump","textChars":4,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/dcbq9wri","slide":7,"text":"contradict language","textPreview":"contradict language","textChars":19,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/cb2pgrax","slide":7,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/v6x8jq9w","slide":7,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/alorqlsb","slide":7,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/618bipcj","slide":7,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/72hsbut4","slide":7,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/s3qtkzup","slide":7,"text":"This topic explains how pumping lemma for context-free languages changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how pumping lemma for context-free languages changes design decisions, program behaviour, protocol results or proof s...","textChars":146,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/kqdwbt","slide":7,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/91o5uf","slide":8,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/xc3e1gz2","slide":8,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/a9cv610b","slide":8,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/balwz6hw","slide":8,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/onad4ri5","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/pojedwzq","slide":8,"text":"Pumping lemma for context-free languages: transition view","textPreview":"Pumping lemma for context-free languages: transition view","textChars":57,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/2lsv2h0f","slide":8,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/nm1cbmh0","slide":8,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/0jad0ri9","slide":8,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/1kju9wzu","slide":8,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/1grulozq","slide":8,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/0fydcjy5","slide":8,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/91o5uf","slide":8,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/xr4pqp","slide":9,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/b2hsfi1o","slide":9,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/c3qto329","slide":9,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/x4zuh8je","slide":9,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/2xobitkr","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/nyhsby1c","slide":9,"text":"Pumping lemma for context-free languages: worked example","textPreview":"Pumping lemma for context-free languages: worked example","textChars":56,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/ozqtk32x","slide":9,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/p0zad8ji","slide":9,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/mtsbuxkb","slide":9,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/7u1cn21w","slide":9,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/ve9sbuxg","slide":9,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/ad0r2pwv","slide":9,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/x0bad4f6","slide":9,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/wf294ze1","slide":9,"text":"assume regular/CFL","textPreview":"assume regular/CFL","textChars":18,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/j2tsfuxc","slide":9,"text":"Identify choose long string","textPreview":"Identify choose long string","textChars":27,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/i1kr6pwr","slide":9,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/54ba14fi","slide":9,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/k3298zex","slide":9,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/76ts3exo","slide":9,"text":"choose long string","textPreview":"choose long string","textChars":18,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/65kra9w3","slide":9,"text":"Apply split by rule","textPreview":"Apply split by rule","textChars":19,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/21ov2dgb","slide":9,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/32xcbihw","slide":9,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/o36d4nyh","slide":9,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/p4fud8zm","slide":9,"text":"split by rule","textPreview":"split by rule","textChars":13,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/ex4bytgz","slide":9,"text":"Check pump","textPreview":"Check pump","textChars":10,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/fyxc7yhk","slide":9,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/gz6d03y5","slide":9,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/10fu98zq","slide":9,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/yt8vaxgj","slide":9,"text":"pump","textPreview":"pump","textChars":4,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/zuhcj2x4","slide":9,"text":"Conclude contradict language","textPreview":"Conclude contradict language","textChars":28,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/9ojy9wj6","slide":9,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/8nax0ril","slide":9,"text":"Use this structure whenever pumping lemma for context-free languages appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever pumping lemma for context-free languages appears as a 10-mark explanation or trace problem.","textChars":119,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/xr4pqp","slide":9,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/i7ta7y","slide":10,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/fax0z2xk","slide":10,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/0b61s7e5","slide":10,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/1czi1cfq","slide":10,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/2d8juhwb","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/neh03mdw","slide":10,"text":"Pumping lemma for context-free languages: common confusion","textPreview":"Pumping lemma for context-free languages: common confusion","textChars":58,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/ofq1wreh","slide":10,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/p0zi5wv2","slide":10,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/ih4zidw7","slide":10,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/3id0rixc","slide":10,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/z2dsbapk","slide":10,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/y1kb25oz","slide":10,"text":"Treating Pumping lemma for context-free languages as only a definition","textPreview":"Treating Pumping lemma for context-free languages as only a definition","textChars":70,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/l4vad07q","slide":10,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/03mt4f65","slide":10,"text":"Explain assume regular/CFL -> split by rule -> contradict language","textPreview":"Explain assume regular/CFL -> split by rule -> contradict language","textChars":66,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/bets7qpo","slide":10,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/qdkbylo3","slide":10,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/d0ba907e","slide":10,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/cz2t0v6t","slide":10,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/3a9s3qpc","slide":10,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/290rulor","slide":10,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/650b6lsj","slide":10,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/r69cf694","slide":10,"text":"Use terms such as assume regular/CFL, choose long string, split by rule","textPreview":"Use terms such as assume regular/CFL, choose long string, split by rule","textChars":71,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/i7ta7y","slide":10,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/2nqnc9","slide":11,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/jad0nehg","slide":11,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/kbmhwjy1","slide":11,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/5cfipozm","slide":11,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/6dozi9g7","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/7yx0rehc","slide":11,"text":"Closure properties of context-free languages","textPreview":"Closure properties of context-free languages","textChars":44,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/sz6hkjyx","slide":11,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/t0fitozi","slide":11,"text":"Closure properties of context-free languages is best taught as a formal model problem, not as a memorized definition.","textPreview":"Closure properties of context-free languages is best taught as a formal model problem, not as a memorized definition.","textChars":117,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/mhkzmp0n","slide":11,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/nitgfuh8","slide":11,"text":"The key mechanism connects input string with rule application so that students can predict the result.","textPreview":"The key mechanism connects input string with rule application so that students can predict the result.","textChars":102,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/3exwryd8","slide":11,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/2dofitwn","slide":11,"text":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textPreview":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textChars":103,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/pgfetove","slide":11,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/4f6xk3et","slide":11,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/vaxwnedc","slide":11,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/u94fe9wr","slide":11,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/hcfepov2","slide":11,"text":"proof idea","textPreview":"proof idea","textChars":10,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/gb6xgjex","slide":11,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/76dwjed0","slide":11,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/6l4va9wf","slide":11,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/ahkfm9gn","slide":11,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/bitgveh8","slide":11,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/wjmxozyd","slide":11,"text":"This topic explains how closure properties of context-free languages changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how closure properties of context-free languages changes design decisions, program behaviour, protocol results or pro...","textChars":150,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/2nqnc9","slide":11,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/w9jwk1","slide":12,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/vadof6xs","slide":12,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/gbm5obyd","slide":12,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/hcv6hwfy","slide":12,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/id4nq1gj","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/3exoj6x4","slide":12,"text":"Closure properties of context-free languages: transition view","textPreview":"Closure properties of context-free languages: transition view","textChars":61,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/4f65sbyp","slide":12,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/5gf6lgfu","slide":12,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/q1onulgf","slide":12,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/r2xonqx0","slide":12,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/r21wbm9w","slide":12,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/61sv2hsb","slide":12,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/w9jwk1","slide":12,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/9pdo7u","slide":13,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/m90rmpg3","slide":13,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/9wbah4fu","slide":13,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ov29ozy9","slide":13,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/bytsjux0","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/axkrqpgf","slide":13,"text":"Closure properties of context-free languages: worked example","textPreview":"Closure properties of context-free languages: worked example","textChars":60,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/x0bal4f6","slide":13,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/wz29szyl","slide":13,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/r29s7axg","slide":13,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/q1gre5gb","slide":13,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/w3etozid","slide":13,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/honah4jy","slide":13,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/u1wbm90n","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/v25sfu1s","slide":13,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/4rytsjip","slide":13,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/5s7uloza","slide":13,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/ipgbq90j","slide":13,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/jqpsjeh4","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/kvutgfi5","slide":13,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/lw3a9kjq","slide":13,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/1svqdgbu","slide":13,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/0rm9kba9","slide":13,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/zqd8b6to","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/ep4ri1s3","slide":13,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/9wfqhgbq","slide":13,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/ov69oba5","slide":13,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/nux8fqtk","slide":13,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/mt4rmlsz","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/xkfal0bm","slide":13,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/wj69svah","slide":13,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/utgfqt4n","slide":13,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/vupwzy58","slide":13,"text":"Use this structure whenever closure properties of context-free languages appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever closure properties of context-free languages appears as a 10-mark explanation or trace problem.","textChars":123,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/9pdo7u","slide":13,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/i4or1a","slide":14,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/g3mpknul","slide":14,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/f2dobitg","slide":14,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/u147ixcv","slide":14,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/t0v69sba","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/sf25gnup","slide":14,"text":"Normal forms for context-free grammars vs Pumping lemma for context-free languages","textPreview":"Normal forms for context-free grammars vs Pumping lemma for context-free languages","textChars":82,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/7eto7it4","slide":14,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/6dknedcj","slide":14,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/5cb658by","slide":14,"text":"Normal forms for context-free grammars","textPreview":"Normal forms for context-free grammars","textChars":38,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/kb25c3ut","slide":14,"text":"Pumping lemma for context-free languages","textPreview":"Pumping lemma for context-free languages","textChars":40,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/m98ju907","slide":14,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/nahkne1s","slide":14,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/obq1wjid","slide":14,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/9cz2pojy","slide":14,"text":"assume regular/CFL","textPreview":"assume regular/CFL","textChars":18,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/elojq90b","slide":14,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/zmxkju1w","slide":14,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/0n61szih","slide":14,"text":"productions","textPreview":"productions","textChars":11,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/18f2l4j2","slide":14,"text":"split by rule","textPreview":"split by rule","textChars":13,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/qh4jmp0z","slide":14,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/rix0fu1k","slide":14,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/fmtgnqhc","slide":14,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/ulkzulgr","slide":14,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/hobyp0zi","slide":14,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/gn2hwvyx","slide":14,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/3qdgraho","slide":14,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/2pkzy5g3","slide":14,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/i4or1a","slide":14,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/axtt90","slide":15,"title":"BCS503 | Theory of Computation","textShapes":12}
+{"kind":"textbox","id":"sh/mtcje1cn","slide":15,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/9g329wvy","slide":15,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ofu1gbud","slide":15,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/bi5kb6d4","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ahwji1cj","slide":15,"text":"Module Summary","textPreview":"Module Summary","textChars":14,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"textbox","id":"sh/xkn2dgva","slide":15,"text":"Definitions","textPreview":"Definitions","textChars":11,"textLines":1,"bbox":[163,208,170,92]}
+{"kind":"textbox","id":"sh/wje1kbup","slide":15,"text":"Models","textPreview":"Models","textChars":6,"textLines":1,"bbox":[359,208,170,92]}
+{"kind":"textbox","id":"sh/jm5kfqd0","slide":15,"text":"Mechanisms","textPreview":"Mechanisms","textChars":10,"textLines":1,"bbox":[555,208,170,92]}
+{"kind":"textbox","id":"sh/ylw3mlcv","slide":15,"text":"Examples","textPreview":"Examples","textChars":8,"textLines":1,"bbox":[751,208,170,92]}
+{"kind":"textbox","id":"sh/43ex83ix","slide":15,"text":"Exam answer","textPreview":"Exam answer","textChars":11,"textLines":1,"bbox":[947,208,170,92]}
+{"kind":"shape","id":"sh/547yh8ji","slide":15,"bbox":[333,254,26,0]}
+{"kind":"shape","id":"sh/i1wf6t0r","slide":15,"bbox":[529,254,26,0]}
+{"kind":"shape","id":"sh/325gfy1c","slide":15,"bbox":[725,254,26,0]}
+{"kind":"shape","id":"sh/sryxc3it","slide":15,"bbox":[921,254,26,0]}
+{"kind":"shape","id":"sh/ds7yl8je","slide":15,"bbox":[110,393,16,16]}
+{"kind":"textbox","id":"sh/q5gfat03","slide":15,"text":"Remember: Normal forms for context-free grammars","textPreview":"Remember: Normal forms for context-free grammars","textChars":48,"textLines":1,"bbox":[140,386,950,42]}
+{"kind":"shape","id":"sh/r6pgjy18","slide":15,"bbox":[110,438,16,16]}
+{"kind":"textbox","id":"sh/0vyhgni5","slide":15,"text":"Remember: Pumping lemma for context-free languages","textPreview":"Remember: Pumping lemma for context-free languages","textChars":50,"textLines":1,"bbox":[140,431,950,42]}
+{"kind":"shape","id":"sh/1wrypsjq","slide":15,"bbox":[110,483,16,16]}
+{"kind":"textbox","id":"sh/9cny98bu","slide":15,"text":"Remember: Closure properties of context-free languages","textPreview":"Remember: Closure properties of context-free languages","textChars":54,"textLines":1,"bbox":[140,476,950,42]}
+{"kind":"notes","id":"nt/axtt90","slide":15,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/dj7but","slide":16,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/4f6ts32l","slide":16,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/3exsjyl0","slide":16,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/2dorqtkf","slide":16,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/dkzap832","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/cjqtw32h","slide":16,"text":"Important Definitions","textPreview":"Important Definitions","textChars":21,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/rixsnylw","slide":16,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/qhobutkb","slide":16,"text":"Term","textPreview":"Term","textChars":4,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/tovad43y","slide":16,"text":"Classroom definition","textPreview":"Classroom definition","textChars":20,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/snm9kj2d","slide":16,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/ulgbud87","slide":16,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/vmpcnips","slide":16,"text":"Normal forms for context-free grammars","textPreview":"Normal forms for context-free grammars","textChars":38,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/gnytwnqd","slide":16,"text":"A named concept with conditions, components and result.","textPreview":"A named concept with conditions, components and result.","textChars":55,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/h87ups7y","slide":16,"text":"Define + draw + example","textPreview":"Define + draw + example","textChars":23,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/i9gbyx8j","slide":16,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/3apcr2p4","slide":16,"text":"Pumping lemma for context-free languages","textPreview":"Pumping lemma for context-free languages","textChars":40,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/4byt07qp","slide":16,"text":"A repeatable process that transforms input into an observable output.","textPreview":"A repeatable process that transforms input into an observable output.","textChars":69,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/5c7uts7a","slide":16,"text":"Steps + result","textPreview":"Steps + result","textChars":14,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/qd0b2x8f","slide":16,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/re9cv2p0","slide":16,"text":"Closure properties of context-free languages","textPreview":"Closure properties of context-free languages","textChars":44,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/ni9sj258","slide":16,"text":"A simplified representation used to reason about a real system.","textPreview":"A simplified representation used to reason about a real system.","textChars":63,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/2h0baxon","slide":16,"text":"Assumptions + limits","textPreview":"Assumptions + limits","textChars":20,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/pkbalcne","slide":16,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/ojitc76t","slide":16,"text":"Quality criterion","textPreview":"Quality criterion","textChars":17,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/fe9sf25c","slide":16,"text":"The property used to judge correctness, usefulness or performance.","textPreview":"The property used to judge correctness, usefulness or performance.","textChars":66,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/ed0r6xor","slide":16,"text":"Compare + justify","textPreview":"Compare + justify","textChars":17,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/dj7but","slide":16,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/vq7mqt","slide":17,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/2toji5s7","slide":17,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/pwzidkri","slide":17,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ovq1kfad","slide":17,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/byh0fa9o","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/qx8jmps3","slide":17,"text":"Important Algorithms / Diagrams / Formulas","textPreview":"Important Algorithms / Diagrams / Formulas","textChars":42,"textLines":1,"bbox":[78,104,940,48]}
+{"kind":"shape","id":"sh/d0zihkru","slide":17,"bbox":[98,217,16,16]}
+{"kind":"textbox","id":"sh/czq1ofq9","slide":17,"text":"Draw the central architecture/process before writing long explanation.","textPreview":"Draw the central architecture/process before writing long explanation.","textChars":70,"textLines":1,"bbox":[128,210,1020,42]}
+{"kind":"shape","id":"sh/z210ju90","slide":17,"bbox":[98,295,16,16]}
+{"kind":"textbox","id":"sh/y18jqp8f","slide":17,"text":"For every algorithm: problem, input, initial state, iterations, final result, interpretation.","textPreview":"For every algorithm: problem, input, initial state, iterations, final result, interpretation.","textChars":93,"textLines":1,"bbox":[128,288,1020,42]}
+{"kind":"shape","id":"sh/szm1836x","slide":17,"bbox":[98,373,16,16]}
+{"kind":"textbox","id":"sh/t0vi18ni","slide":17,"text":"For code/commands: command or snippet, explanation, execution, output.","textPreview":"For code/commands: command or snippet, explanation, execution, output.","textChars":70,"textLines":1,"bbox":[128,366,1020,42]}
+{"kind":"shape","id":"sh/6x4j6dor","slide":17,"bbox":[98,451,16,16]}
+{"kind":"textbox","id":"sh/7yd0zi5c","slide":17,"text":"For comparison questions: state basis of comparison first, then fill the table.","textPreview":"For comparison questions: state basis of comparison first, then fill the table.","textChars":79,"textLines":1,"bbox":[128,444,1020,42]}
+{"kind":"notes","id":"nt/vq7mqt","slide":17,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/4hw7kd","slide":18,"title":"BCS503 | Theory of Computation","textShapes":9}
+{"kind":"textbox","id":"sh/d0fm9oba","slide":18,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/qxo3e9cj","slide":18,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ryx47et4","slide":18,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/0n65kja1","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/1ofmdob6","slide":18,"text":"Common Mistakes","textPreview":"Common Mistakes","textChars":15,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/elonitcv","slide":18,"bbox":[98,213,16,16]}
+{"kind":"textbox","id":"sh/fmx4bytg","slide":18,"text":"Writing only a definition when the question asks to explain working.","textPreview":"Writing only a definition when the question asks to explain working.","textChars":68,"textLines":1,"bbox":[128,206,1010,42]}
+{"kind":"shape","id":"sh/grml8zuh","slide":18,"bbox":[98,291,16,16]}
+{"kind":"textbox","id":"sh/hsvm14b2","slide":18,"text":"Skipping diagrams or leaving labels too vague.","textPreview":"Skipping diagrams or leaving labels too vague.","textChars":46,"textLines":1,"bbox":[128,284,1010,42]}
+{"kind":"shape","id":"sh/l4n29sve","slide":18,"bbox":[98,369,16,16]}
+{"kind":"textbox","id":"sh/03elgne9","slide":18,"text":"Mixing similar terms without a comparison basis.","textPreview":"Mixing similar terms without a comparison basis.","textChars":48,"textLines":1,"bbox":[128,362,1010,42]}
+{"kind":"shape","id":"sh/z25k7ido","slide":18,"bbox":[98,447,16,16]}
+{"kind":"textbox","id":"sh/y1w3edw3","slide":18,"text":"Giving an example that does not match the formal condition.","textPreview":"Giving an example that does not match the formal condition.","textChars":59,"textLines":1,"bbox":[128,440,1010,42]}
+{"kind":"shape","id":"sh/9872dsvq","slide":18,"bbox":[98,525,16,16]}
+{"kind":"textbox","id":"sh/87elknu5","slide":18,"text":"Forgetting assumptions, limitations or failure cases.","textPreview":"Forgetting assumptions, limitations or failure cases.","textChars":53,"textLines":1,"bbox":[128,518,1010,42]}
+{"kind":"notes","id":"nt/4hw7kd","slide":18,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/a84707","slide":19,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/xc7m1o3a","slide":19,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/apg3q9kj","slide":19,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/bqp4zel4","slide":19,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/kfi5wj2l","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/lgrm5o36","slide":19,"text":"Exam Preparation","textPreview":"Exam Preparation","textChars":16,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/ydgnutkf","slide":19,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/jep43yl0","slide":19,"text":"Question type","textPreview":"Question type","textChars":13,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/8ji5032x","slide":19,"text":"Answer structure","textPreview":"Answer structure","textChars":16,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/tkrm9832","slide":19,"text":"What earns marks","textPreview":"What earns marks","textChars":16,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/107etwnq","slide":19,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/0zyx0rm5","slide":19,"text":"Define/explain","textPreview":"Define/explain","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/zy5wr65k","slide":19,"text":"Definition + labeled diagram + example","textPreview":"Definition + labeled diagram + example","textChars":38,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/exwfy14f","slide":19,"text":"Exact terms and scope","textPreview":"Exact terms and scope","textChars":21,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/947exgn2","slide":19,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/o3yx4bmh","slide":19,"text":"Compare","textPreview":"Compare","textChars":7,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/n2pwv65w","slide":19,"text":"Basis + table + conclusion","textPreview":"Basis + table + conclusion","textChars":26,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/m1gf214b","slide":19,"text":"Clear differentiators","textPreview":"Clear differentiators","textChars":21,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/p8nelcni","slide":19,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/47exs76x","slide":19,"text":"Algorithm/trace","textPreview":"Algorithm/trace","textChars":15,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/gbyx8ret","slide":19,"text":"Input + iterations + final result","textPreview":"Input + iterations + final result","textChars":33,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/hcrehcve","slide":19,"text":"Correct step sequence","textPreview":"Correct step sequence","textChars":21,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/u9gf6hw3","slide":19,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/vapwfmd8","slide":19,"text":"Application","textPreview":"Application","textChars":11,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/4fixcre5","slide":19,"text":"Scenario + model + justification","textPreview":"Scenario + model + justification","textChars":32,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/5grylwvq","slide":19,"text":"Why the choice fits","textPreview":"Why the choice fits","textChars":19,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/a84707","slide":19,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/y41whg","slide":20,"title":"BCS503 | Theory of Computation","textShapes":9}
+{"kind":"textbox","id":"sh/qxszehgv","slide":20,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/d03ypwz6","slide":20,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/czahgry1","slide":20,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/3u1gj2h4","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/itszahgj","slide":20,"text":"Practice Questions","textPreview":"Practice Questions","textChars":18,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/5wjylcza","slide":20,"bbox":[98,213,16,16]}
+{"kind":"textbox","id":"sh/4vahc7yp","slide":20,"text":"Explain Normal forms for context-free grammars with a neat diagram.","textPreview":"Explain Normal forms for context-free grammars with a neat diagram.","textChars":67,"textLines":1,"bbox":[128,206,1010,42]}
+{"kind":"shape","id":"sh/nql0v6ho","slide":20,"bbox":[98,291,16,16]}
+{"kind":"textbox","id":"sh/mpczm1g3","slide":20,"text":"Compare two approaches from Normal Forms and CFL Properties and justify when each is suitable.","textPreview":"Compare two approaches from Normal Forms and CFL Properties and justify when each is suitable.","textChars":94,"textLines":1,"bbox":[128,284,1010,42]}
+{"kind":"shape","id":"sh/wnixszyh","slide":20,"bbox":[98,369,16,16]}
+{"kind":"textbox","id":"sh/hory14z2","slide":20,"text":"Solve a small worked example involving Closure properties of context-free languages.","textPreview":"Solve a small worked example involving Closure properties of context-free languages.","textChars":84,"textLines":1,"bbox":[128,362,1010,42]}
+{"kind":"shape","id":"sh/ul0fqpgb","slide":20,"bbox":[98,447,16,16]}
+{"kind":"textbox","id":"sh/vm9gzuhw","slide":20,"text":"List common mistakes and how to avoid them in Normal Forms and CFL Properties.","textPreview":"List common mistakes and how to avoid them in Normal Forms and CFL Properties.","textChars":78,"textLines":1,"bbox":[128,440,1010,42]}
+{"kind":"shape","id":"sh/8jixozy5","slide":20,"bbox":[98,525,16,16]}
+{"kind":"textbox","id":"sh/9kryx4zq","slide":20,"text":"Redraw the full module map from memory in five minutes.","textPreview":"Redraw the full module map from memory in five minutes.","textChars":55,"textLines":1,"bbox":[128,518,1010,42]}
+{"kind":"notes","id":"nt/y41whg","slide":20,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/d82g4y","slide":21,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/mp876dcv","slide":21,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/9szq18bm","slide":21,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/orqp83u1","slide":21,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/bu183itc","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ats7adc7","slide":21,"text":"Normal forms for context-free grammars vs Pumping lemma for context-free languages","textPreview":"Normal forms for context-free grammars vs Pumping lemma for context-free languages","textChars":82,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/xgjq5sbi","slide":21,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/wvapcnux","slide":21,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/ji187ito","slide":21,"text":"Normal forms for context-free grammars","textPreview":"Normal forms for context-free grammars","textChars":38,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/yhs7exc3","slide":21,"text":"Pumping lemma for context-free languages","textPreview":"Pumping lemma for context-free languages","textChars":40,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/8nelobe5","slide":21,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/tonmhgvq","slide":21,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/6lw3m1wz","slide":21,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/7m54f6dk","slide":21,"text":"assume regular/CFL","textPreview":"assume regular/CFL","textChars":18,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/grylsbe1","slide":21,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/hs7mlgvm","slide":21,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/upw3qlwb","slide":21,"text":"productions","textPreview":"productions","textChars":11,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/vq54j6dw","slide":21,"text":"split by rule","textPreview":"split by rule","textChars":13,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/4vylwved","slide":21,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/5g7mp0vy","slide":21,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/dc3m9gn2","slide":21,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/cbul0v6h","slide":21,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/ralk7q5w","slide":21,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/q9c3ylob","slide":21,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/l0nmd0ny","slide":21,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/0fel4v6d","slide":21,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/d82g4y","slide":21,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/q2xca8","slide":22,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/ve9onuho","slide":22,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/wfipgzi9","slide":22,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/xgr6p4ze","slide":22,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ihk7i90z","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/jit8rehk","slide":22,"text":"Pumping lemma for context-free languages: worked example","textPreview":"Pumping lemma for context-free languages: worked example","textChars":56,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/kj2pkji5","slide":22,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/5kbqt4zq","slide":22,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/ylg7650v","slide":22,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/zmpofa1g","slide":22,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/7yhwjuxs","slide":22,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/mx8fapg7","slide":22,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/t0zel4fy","slide":22,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/8zqxczed","slide":22,"text":"assume regular/CFL","textPreview":"assume regular/CFL","textChars":18,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/zuxwfuxw","slide":22,"text":"Identify choose long string","textPreview":"Identify choose long string","textChars":27,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/ytof6pgb","slide":22,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/lwzehkf2","slide":22,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/kv6x8fyh","slide":22,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/b6xwbaxk","slide":22,"text":"choose long string","textPreview":"choose long string","textChars":18,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/a5of25gf","slide":22,"text":"Apply split by rule","textPreview":"Apply split by rule","textChars":19,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/e14fe507","slide":22,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/f2dgnahs","slide":22,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/03mxgfid","slide":22,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/14vypkzi","slide":22,"text":"split by rule","textPreview":"split by rule","textChars":13,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/25ofip03","slide":22,"text":"Check pump","textPreview":"Check pump","textChars":10,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/n6xgraho","slide":22,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/or6xkfi9","slide":22,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/psfytkzu","slide":22,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/atozmp0f","slide":22,"text":"pump","textPreview":"pump","textChars":4,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/buxgvuh0","slide":22,"text":"Conclude contradict language","textPreview":"Conclude contradict language","textChars":28,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/lojiloj2","slide":22,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/knq1cj2h","slide":22,"text":"Use this structure whenever pumping lemma for context-free languages appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever pumping lemma for context-free languages appears as a 10-mark explanation or trace problem.","textChars":119,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/q2xca8","slide":22,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/cx88jy","slide":23,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/wved8vqt","slide":23,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/bu5wzq9o","slide":23,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/atwv6l83","slide":23,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/l0ne50rq","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/kzedwvq5","slide":23,"text":"Closure properties of context-free languages: common confusion","textPreview":"Closure properties of context-free languages: common confusion","textChars":62,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/jy5w3a9k","slide":23,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/yxwva58z","slide":23,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/to7e9krm","slide":23,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/8nyd0fq1","slide":23,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/ylgzypsr","slide":23,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/jmp0ru9c","slide":23,"text":"Treating Closure properties of context-free languages as only a definition","textPreview":"Treating Closure properties of context-free languages as only a definition","textChars":74,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/knyh0zax","slide":23,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/lo7it4r2","slide":23,"text":"Explain formal model -> rule application -> proof idea","textPreview":"Explain formal model -> rule application -> proof idea","textChars":54,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/6pgz29sn","slide":23,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/7qp0ve98","slide":23,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/srih4jat","slide":23,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/tsrix4re","slide":23,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/mtwzq5sj","slide":23,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/nu5gjat4","slide":23,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/ry1wr6pw","slide":23,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/qxsfi18b","slide":23,"text":"Use terms such as formal model, input string, rule application","textPreview":"Use terms such as formal model, input string, rule application","textChars":62,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/cx88jy","slide":23,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/l02h5b","slide":24,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/1ojixov6","slide":24,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/el8zm9cv","slide":24,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/fmh0vedg","slide":24,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/sjqhkzep","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/dkzyt4va","slide":24,"text":"Normal forms for context-free grammars: transition view","textPreview":"Normal forms for context-free grammars: transition view","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/qh8zi9wj","slide":24,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/rihgrud4","slide":24,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/cfahw3ut","slide":24,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/xg3i58ve","slide":24,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/lc3a1cfu","slide":24,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/kbu987y9","slide":24,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/l02h5b","slide":24,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/pbi20k","slide":25,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/qt0z2xo3","slide":25,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/dwryxcne","slide":25,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/cvih476t","slide":25,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/3qpgr25c","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/2pgzyxor","slide":25,"text":"Pumping lemma for context-free languages vs Closure properties of context-free languages","textPreview":"Pumping lemma for context-free languages vs Closure properties of context-free languages","textChars":88,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/psrytsni","slide":25,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/4ryh076x","slide":25,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/nmt03m5g","slide":25,"text":"Pumping lemma for context-free languages","textPreview":"Pumping lemma for context-free languages","textChars":40,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/mlkzah4v","slide":25,"text":"Closure properties of context-free languages","textPreview":"Closure properties of context-free languages","textChars":44,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/wje98fa9","slide":25,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/hknq1kbu","slide":25,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/uhwr65s3","slide":25,"text":"assume regular/CFL","textPreview":"assume regular/CFL","textChars":18,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/vi58zato","slide":25,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/8vep4fad","slide":25,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/9gnqxkby","slide":25,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/mtw725c7","slide":25,"text":"split by rule","textPreview":"split by rule","textChars":13,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/7u58vats","slide":25,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/krup0vu1","slide":25,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ls3qt0bm","slide":25,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/1ov6xw3a","slide":25,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/0nm5orm5","slide":25,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/zmdovmlk","slide":25,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/el4nmh4z","slide":25,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/dkv6tc3e","slide":25,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/cjm5k7mt","slide":25,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/pbi20k","slide":25,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/6iokln","slide":26,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/5076t076","slide":26,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ixwnilov","slide":26,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/jyporqpg","slide":26,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/wbe5gb6p","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/hcn6pg7a","slide":26,"text":"Closure properties of context-free languages: worked example","textPreview":"Closure properties of context-free languages: worked example","textChars":60,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/u9wneloj","slide":26,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/va5onqp4","slide":26,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/87e5cb6t","slide":26,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/98nmlg7e","slide":26,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/98bmxwzy","slide":26,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/87i54ryd","slide":26,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/n694vmh8","slide":26,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/m50n2hgn","slide":26,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/l4rmtcz2","slide":26,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/03i507yh","slide":26,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/z294rmhw","slide":26,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/yh0nyhgb","slide":26,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/dgrm5czq","slide":26,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/cfy5w7yl","slide":26,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/4j25c761","slide":26,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/5kb6lc7m","slide":26,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ixknaxob","slide":26,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/3it4j2pw","slide":26,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/gv2587q5","slide":26,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/hwbmhs7q","slide":26,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/ut0n6x8z","slide":26,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/vut4f2pk","slide":26,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/0rm5kr69","slide":26,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/1sv6tw7u","slide":26,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/bmh8jq9w","slide":26,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/al87al8r","slide":26,"text":"Use this structure whenever closure properties of context-free languages appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever closure properties of context-free languages appears as a 10-mark explanation or trace problem.","textChars":123,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/6iokln","slide":26,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/gof6qd","slide":27,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/rq9kvilo","slide":27,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/srilonm9","slide":27,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/dsr2xs3u","slide":27,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/et03qx4f","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/fu9kz2l0","slide":27,"text":"Normal forms for context-free grammars: common confusion","textPreview":"Normal forms for context-free grammars: common confusion","textChars":56,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/0vils7ml","slide":27,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/1wr21c3q","slide":27,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/uxwjet4b","slide":27,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/vypknylg","slide":27,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/bq50batw","slide":27,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/apwj25cb","slide":27,"text":"Treating Normal forms for context-free grammars as only a definition","textPreview":"Treating Normal forms for context-free grammars as only a definition","textChars":68,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/xsnid0bm","slide":27,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/wre14vuh","slide":27,"text":"Explain variables -> productions -> derivation","textPreview":"Explain variables -> productions -> derivation","textChars":46,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/nml07qtk","slide":27,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/2lcjylcz","slide":27,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/9oni90bq","slide":27,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/one10vu5","slide":27,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/fil03qto","slide":27,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ehczulc3","slide":27,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/itsj61wv","slide":27,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/3u1kf6xg","slide":27,"text":"Use terms such as variables, terminals, productions","textPreview":"Use terms such as variables, terminals, productions","textChars":51,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/gof6qd","slide":27,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/ostve4","slide":28,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/98b218bu","slide":28,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ml03qtc3","slide":28,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/n69kzyto","slide":28,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/wb2lwnal","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/xcb25sbq","slide":28,"text":"Pumping lemma for context-free languages: transition view","textPreview":"Pumping lemma for context-free languages: transition view","textChars":57,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/a9k3udsf","slide":28,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/batk3it0","slide":28,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/cfi1kju1","slide":28,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/dgr2tobm","slide":28,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/lszutsna","slide":28,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/0rqdknmp","slide":28,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/ostve4","slide":28,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/6d5kwj","slide":29,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/j6x4j2lg","slide":29,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/k765s721","slide":29,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/58f6ls3m","slide":29,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/6t8nuxk7","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/7uhon2ls","slide":29,"text":"Closure properties of context-free languages vs Normal forms for context-free grammars","textPreview":"Closure properties of context-free languages vs Normal forms for context-free grammars","textChars":86,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/svq5w72d","slide":29,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/twz6pc3y","slide":29,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/mx4nidk3","slide":29,"text":"Closure properties of context-free languages","textPreview":"Closure properties of context-free languages","textChars":44,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/nyd4bilo","slide":29,"text":"Normal forms for context-free grammars","textPreview":"Normal forms for context-free grammars","textChars":38,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/fmh4ne5o","slide":29,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/el83u9oj","slide":29,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/1ojmponu","slide":29,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/gnalwj69","slide":29,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/rih4ju5s","slide":29,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/6h83q9o7","slide":29,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/tkzml4ny","slide":29,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/sjqlsz6d","slide":29,"text":"productions","textPreview":"productions","textChars":11,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/jex4fu5g","slide":29,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ito3mpob","slide":29,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/mponyp83","slide":29,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/7qx47u9o","slide":29,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/8r650zq9","slide":29,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/9cfm9kre","slide":29,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/udon2p8z","slide":29,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/vex4bu9k","slide":29,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/6d5kwj","slide":29,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/00r8op","slide":30,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/xwry5gr6","slide":30,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/at0za1sv","slide":30,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/bu9g3690","slide":30,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/kz2hgvax","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/l0bi90ri","slide":30,"text":"Normal forms for context-free grammars: worked example","textPreview":"Normal forms for context-free grammars: worked example","textChars":54,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/yx0zelsr","slide":30,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/zytg7q9c","slide":30,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/8n2hkvqt","slide":30,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/9obid0re","slide":30,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/x03610rq","slide":30,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/czu5sva5","slide":30,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/bylozq9k","slide":30,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/axcnqlsz","slide":30,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/l4n650rm","slide":30,"text":"Identify terminals","textPreview":"Identify terminals","textChars":18,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/k3u5wva1","slide":30,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/z2lo3q9g","slide":30,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/y1cnu5sv","slide":30,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/18jmtgbi","slide":30,"text":"terminals","textPreview":"terminals","textChars":9,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/07a5kbax","slide":30,"text":"Apply productions","textPreview":"Apply productions","textChars":17,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/sre5gbit","slide":30,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/tcn69gjy","slide":30,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/6pcne10n","slide":30,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/rq5o7618","slide":30,"text":"productions","textPreview":"productions","textChars":11,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/gfe5kvip","slide":30,"text":"Check start symbol","textPreview":"Check start symbol","textChars":18,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/1gn6dgja","slide":30,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/edwnil0j","slide":30,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/fe5obq14","slide":30,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/ojy5ovi1","slide":30,"text":"start symbol","textPreview":"start symbol","textChars":12,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/pk76h0z6","slide":30,"text":"Conclude derivation","textPreview":"Conclude derivation","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/zqt03ypk","slide":30,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/ypkzutof","slide":30,"text":"Use this structure whenever normal forms for context-free grammars appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever normal forms for context-free grammars appears as a 10-mark explanation or trace problem.","textChars":117,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/00r8op","slide":30,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/d7ophv","slide":31,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/658zq5oj","slide":31,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/d8jy1kna","slide":31,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/s7qhsf6p","slide":31,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/jihgvq58","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ih8fmlon","slide":31,"text":"Pumping lemma for context-free languages: common confusion","textPreview":"Pumping lemma for context-free languages: common confusion","textChars":58,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/54zyx0ny","slide":31,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/4jqhov6t","slide":31,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/vexgrq5w","slide":31,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/udofilob","slide":31,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/gze5ob2t","slide":31,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/10n6hg3e","slide":31,"text":"Treating Pumping lemma for context-free languages as only a definition","textPreview":"Treating Pumping lemma for context-free languages as only a definition","textChars":70,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/exwnm1kn","slide":31,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/fy5of6l8","slide":31,"text":"Explain assume regular/CFL -> split by rule -> contradict language","textPreview":"Explain assume regular/CFL -> split by rule -> contradict language","textChars":66,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/sbe5kr2h","slide":31,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/twn6dw32","slide":31,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/69wni1kr","slide":31,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/ra54bmlc","slide":31,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/c7y5wv21","slide":31,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/dsr6p03m","slide":31,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/lon690vq","slide":31,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/kne50vu5","slide":31,"text":"Use terms such as assume regular/CFL, choose long string, split by rule","textPreview":"Use terms such as assume regular/CFL, choose long string, split by rule","textChars":71,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/d7ophv","slide":31,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/dn43tv","slide":32,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/1kv25wnq","slide":32,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/exk3a14z","slide":32,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/fytk3m5k","slide":32,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/onmlgbm1","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/pov29g3m","slide":32,"text":"Closure properties of context-free languages: transition view","textPreview":"Closure properties of context-free languages: transition view","textChars":61,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/2l43e14b","slide":32,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/nmdk76lw","slide":32,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/4ri147mx","slide":32,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/5sb2xcni","slide":32,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/tojilcn6","slide":32,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/8nqhc7ml","slide":32,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/dn43tv","slide":32,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/yurkdi","slide":33,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/o725w3ih","slide":33,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/36t4nyhw","slide":33,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/25knut0b","slide":33,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/14bmlozq","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/g325sji5","slide":33,"text":"Normal forms for context-free grammars vs Pumping lemma for context-free languages","textPreview":"Normal forms for context-free grammars vs Pumping lemma for context-free languages","textChars":82,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/f294jyh0","slide":33,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/eh0nqt0f","slide":33,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/l0v6xsza","slide":33,"text":"Normal forms for context-free grammars","textPreview":"Normal forms for context-free grammars","textChars":38,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/0zm54nip","slide":33,"text":"Pumping lemma for context-free languages","textPreview":"Pumping lemma for context-free languages","textChars":40,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/6dw72p0j","slide":33,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/7y5obuh4","slide":33,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/8zep4fip","slide":33,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/t07qdkza","slide":33,"text":"assume regular/CFL","textPreview":"assume regular/CFL","textChars":18,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/y9w7y50n","slide":33,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/ja5o7ah8","slide":33,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/kbep0fit","slide":33,"text":"productions","textPreview":"productions","textChars":11,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/lcn69kzy","slide":33,"text":"split by rule","textPreview":"split by rule","textChars":13,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/i5g7a90r","slide":33,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/36p8jehc","slide":33,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/fyhcf2ts","slide":33,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/ex8vmxc7","slide":33,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/10zehcbi","slide":33,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/gzqdo7ux","slide":33,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/n2hwjmto","slide":33,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/218vqhc3","slide":33,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/yurkdi","slide":33,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/eq0t43","slide":34,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/by14bmd0","slide":34,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/cza54rel","slide":34,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/x03mdwv6","slide":34,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/y1cn61wr","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/z2l4f6dw","slide":34,"text":"Pumping lemma for context-free languages: worked example","textPreview":"Pumping lemma for context-free languages: worked example","textChars":56,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/k3u58reh","slide":34,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/l43mhwv2","slide":34,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/m5cna1wn","slide":34,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/7qloj6d8","slide":34,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/fads7mpw","slide":34,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/e94byh8b","slide":34,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/1wvu9c7m","slide":34,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/gbmt07qh","slide":34,"text":"assume regular/CFL","textPreview":"assume regular/CFL","textChars":18,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/r6ts32pk","slide":34,"text":"Identify choose long string","textPreview":"Identify choose long string","textChars":27,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/65kbux8z","slide":34,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/t8va5c7q","slide":34,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/s7mtw7q5","slide":34,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/b2xcf6p4","slide":34,"text":"choose long string","textPreview":"choose long string","textChars":18,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/q1ob618j","slide":34,"text":"Apply split by rule","textPreview":"Apply split by rule","textChars":19,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/mx8vy5sr","slide":34,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/ny1w7a9c","slide":34,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/8zad0vah","slide":34,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/90je90r2","slide":34,"text":"split by rule","textPreview":"split by rule","textChars":13,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/alsf25sn","slide":34,"text":"Check pump","textPreview":"Check pump","textChars":10,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/vm1wba98","slide":34,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/wnax4fat","slide":34,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/xojedkre","slide":34,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/q5ovqlsj","slide":34,"text":"pump","textPreview":"pump","textChars":4,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/bqhwz694","slide":34,"text":"Conclude contradict language","textPreview":"Conclude contradict language","textChars":28,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/tkny5obm","slide":34,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/sjehwju1","slide":34,"text":"Use this structure whenever pumping lemma for context-free languages appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever pumping lemma for context-free languages appears as a 10-mark explanation or trace problem.","textChars":119,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/eq0t43","slide":34,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/9pch51","slide":35,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/6xo36pwn","slide":35,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/t0f2h4vy","slide":35,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/8z6l8zed","slide":35,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/judkbudw","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/y9432pwb","slide":35,"text":"Closure properties of context-free languages: common confusion","textPreview":"Closure properties of context-free languages: common confusion","textChars":62,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/lwf2dkv2","slide":35,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/kvml4zeh","slide":35,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/b6dk7ad0","slide":35,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/a54jy5wf","slide":35,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/k7etgf2p","slide":35,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/58nu9kja","slide":35,"text":"Treating Closure properties of context-free languages as only a definition","textPreview":"Treating Closure properties of context-free languages as only a definition","textChars":74,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/i5wbe5kj","slide":35,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/j65c7a14","slide":35,"text":"Explain formal model -> rule application -> proof idea","textPreview":"Explain formal model -> rule application -> proof idea","textChars":54,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/w3etcv2t","slide":35,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/x4nu50je","slide":35,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/a1cba5kn","slide":35,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/v25c3q18","slide":35,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/gzydoz2x","slide":35,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/h07uh4ji","slide":35,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/pwnu14bm","slide":35,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/ovutszu1","slide":35,"text":"Use terms such as formal model, input string, rule application","textPreview":"Use terms such as formal model, input string, rule application","textChars":62,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/9pch51","slide":35,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/794trp","slide":36,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/8ji18vup","slide":36,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ni9kzqd4","slide":36,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/mhgj6lcj","slide":36,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/x8r250v6","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/w7i1cful","slide":36,"text":"Normal forms for context-free grammars: transition view","textPreview":"Normal forms for context-free grammars: transition view","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/v69k3ad0","slide":36,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/a50ja5cv","slide":36,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/dc72tgv2","slide":36,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/cby10beh","slide":36,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/e5ov6x0f","slide":36,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/f6xwfih0","slide":36,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/794trp","slide":36,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/kekl88","slide":37,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/7u9cvmtk","slide":37,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/sf2d4ru5","slide":37,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/tgbuxwbq","slide":37,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ip0vyhc3","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/jq9crmto","slide":37,"text":"Pumping lemma for context-free languages vs Closure properties of context-free languages","textPreview":"Pumping lemma for context-free languages vs Closure properties of context-free languages","textChars":88,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/krid0ru9","slide":37,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/5srutcbu","slide":37,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/algvuxc7","slide":37,"text":"Pumping lemma for context-free languages","textPreview":"Pumping lemma for context-free languages","textChars":40,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/vmpcn2ts","slide":37,"text":"Closure properties of context-free languages","textPreview":"Closure properties of context-free languages","textChars":44,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/zu10nud0","slide":37,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/y9szupwf","slide":37,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/lw3ip4v6","slide":37,"text":"assume regular/CFL","textPreview":"assume regular/CFL","textChars":18,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/kvahwzel","slide":37,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/7yl0redc","slide":37,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/mxcjy9wr","slide":37,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/903itov2","slide":37,"text":"split by rule","textPreview":"split by rule","textChars":13,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/8zu10jex","slide":37,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/n2h0fads","slide":37,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/218zm5w7","slide":37,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/6xg3udgv","slide":37,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/rypknixg","slide":37,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/sjylwny1","slide":37,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/dk72psfm","slide":37,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/itw3qdgz","slide":37,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/ju5kjixk","slide":37,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/kekl88","slide":37,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/pza3fb","slide":38,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/wvydk7qd","slide":38,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/bupwr2ps","slide":38,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/a9gvih87","slide":38,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/987epc7m","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/o7ydg7qh","slide":38,"text":"Closure properties of context-free languages: worked example","textPreview":"Closure properties of context-free languages: worked example","textChars":60,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/n6pwn29w","slide":38,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/m5wvex8b","slide":38,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/t4re1w76","slide":38,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/s3ixsrql","slide":38,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/6l4r65cr","slide":38,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/7md8fadc","slide":38,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/8nm98fuh","slide":38,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/tovahkv2","slide":38,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/yhkr2lcf","slide":38,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/jit8bqd0","slide":38,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/kjm94vul","slide":38,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/lkvqd0v6","slide":38,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/idorepcz","slide":38,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/3exsnud4","slide":38,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/zypofmtw","slide":38,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/exgn6hsb","slide":38,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/10r6hwbm","slide":38,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/0zyp8rah","slide":38,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/nm9ojmts","slide":38,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/ml07ahs7","slide":38,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/9or6lwby","slide":38,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/onipcrad","slide":38,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/bq9on6t4","slide":38,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/ap07e1sj","slide":38,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/8v254bqh","slide":38,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/twb6xg72","slide":38,"text":"Use this structure whenever closure properties of context-free languages appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever closure properties of context-free languages appears as a 10-mark explanation or trace problem.","textChars":123,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/pza3fb","slide":38,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/qbust4","slide":39,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/7ihsz6h0","slide":39,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/sja98bil","slide":39,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/tkja1gz6","slide":39,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/id8r210j","slide":39,"text":"39","textPreview":"39","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/jehsv6h4","slide":39,"text":"Normal forms for context-free grammars: common confusion","textPreview":"Normal forms for context-free grammars: common confusion","textChars":56,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/kfq94bip","slide":39,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/5gzaxgza","slide":39,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/29sbe5gn","slide":39,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/3als7ah8","slide":39,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/je5ovidk","slide":39,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/idcnmdcz","slide":39,"text":"Treating Normal forms for context-free grammars as only a definition","textPreview":"Treating Normal forms for context-free grammars as only a definition","textChars":68,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/50n6x8vq","slide":39,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/kze5o3u5","slide":39,"text":"Explain variables -> productions -> derivation","textPreview":"Explain variables -> productions -> derivation","textChars":46,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/725ozidg","slide":39,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/61wnqdcb","slide":39,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/t4n61svm","slide":39,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/s3e5snu1","slide":39,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/f6po32ds","slide":39,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/u5gnuxc7","slide":39,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/q10rm1wf","slide":39,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/r298vmx0","slide":39,"text":"Use terms such as variables, terminals, productions","textPreview":"Use terms such as variables, terminals, productions","textChars":51,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/qbust4","slide":39,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/3pnxbi","slide":40,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/i5g7ep83","slide":40,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/5s7q947e","slide":40,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/kry9gzqt","slide":40,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/v2p83a9c","slide":40,"text":"40","textPreview":"40","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/a1w7a58r","slide":40,"text":"Pumping lemma for context-free languages: transition view","textPreview":"Pumping lemma for context-free languages: transition view","textChars":57,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/x47q5kri","slide":40,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/w3ypcfqx","slide":40,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/ny58za90","slide":40,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/mxw7658v","slide":40,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/gbip4zmx","slide":40,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/hcrqx4ni","slide":40,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/3pnxbi","slide":40,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/dyjpuv","slide":41,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/cr61kjqp","slide":41,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/bqx0ry94","slide":41,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/apojit8j","slide":41,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/povipory","slide":41,"text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/onm1gjqd","slide":41,"text":"Closure properties of context-free languages vs Normal forms for context-free grammars","textPreview":"Closure properties of context-free languages vs Normal forms for context-free grammars","textChars":86,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/nmd0ne9s","slide":41,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/2l4je98n","slide":41,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/1kvil4r2","slide":41,"text":"Closure properties of context-free languages","textPreview":"Closure properties of context-free languages","textChars":44,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/0jm1czqh","slide":41,"text":"Normal forms for context-free grammars","textPreview":"Normal forms for context-free grammars","textChars":38,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/el87ydk7","slide":41,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/zmh87yls","slide":41,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/0nqp032d","slide":41,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/18zq983y","slide":41,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/qho7utkb","slide":41,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/rih83ylg","slide":41,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/cjqpw321","slide":41,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/dkzq583m","slide":41,"text":"productions","textPreview":"productions","textChars":11,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/2do7qtkz","slide":41,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/3ex8zelk","slide":41,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/7it47u1c","slide":41,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/6xknyp0r","slide":41,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/tkvm9kji","slide":41,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/8jm50fix","slide":41,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/vmdobu18","slide":41,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/ul4n2p03","slide":41,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/dyjpuv","slide":41,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/jo297n","slide":42,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/zmxkfu50","slide":42,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/07q18z6l","slide":42,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/18z2h4n6","slide":42,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/m98ja9or","slide":42,"text":"42","textPreview":"42","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/nahkju5c","slide":42,"text":"Normal forms for context-free grammars: worked example","textPreview":"Normal forms for context-free grammars: worked example","textChars":54,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/8bq1cz6h","slide":42,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/9cz2l4n2","slide":42,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/2d4jy5o7","slide":42,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/3ed07a5s","slide":42,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/ri1wn69w","slide":42,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/6hsvu1sb","slide":42,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/tkjepgrm","slide":42,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/sjadwbah","slide":42,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/juhcjm9k","slide":42,"text":"Identify terminals","textPreview":"Identify terminals","textChars":18,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/it8vqhsz","slide":42,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/5wzulwrq","slide":42,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/4vqdsra5","slide":42,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/vqhcfm9o","slide":42,"text":"terminals","textPreview":"terminals","textChars":9,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/upovmhs3","slide":42,"text":"Apply productions","textPreview":"Apply productions","textChars":17,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/ylovyhcv","slide":42,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/zmxw7mtg","slide":42,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/kn6d0ru1","slide":42,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/lofe9cbm","slide":42,"text":"productions","textPreview":"productions","textChars":11,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/mpof2hc7","slide":42,"text":"Check start symbol","textPreview":"Check start symbol","textChars":18,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/7qhwbmtc","slide":42,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/8rqx4rux","slide":42,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/9szedwbi","slide":42,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/ut8f61c3","slide":42,"text":"start symbol","textPreview":"start symbol","textChars":12,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/vuhwf6to","slide":42,"text":"Conclude derivation","textPreview":"Conclude derivation","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/5ojy50vq","slide":42,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/4nahwve5","slide":42,"text":"Use this structure whenever normal forms for context-free grammars appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever normal forms for context-free grammars appears as a 10-mark explanation or trace problem.","textChars":117,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/jo297n","slide":42,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/n8wnb9","slide":43,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/4zid8r6l","slide":43,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/3y9wz6p0","slide":43,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/2x0v618f","slide":43,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/hwrexw7u","slide":43,"text":"43","textPreview":"43","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/gvid4rq9","slide":43,"text":"Pumping lemma for context-free languages: common confusion","textPreview":"Pumping lemma for context-free languages: common confusion","textChars":58,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/vupwvmpo","slide":43,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/utgv2h83","slide":43,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/1sbe9g7y","slide":43,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/0r2xgb6d","slide":43,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/6d4ra1kb","slide":43,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/7ed8j61w","slide":43,"text":"Treating Pumping lemma for context-free languages as only a definition","textPreview":"Treating Pumping lemma for context-free languages as only a definition","textChars":70,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/sfm9cb2h","slide":43,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/tgvqlwjm","slide":43,"text":"Explain assume regular/CFL -> split by rule -> contradict language","textPreview":"Explain assume regular/CFL -> split by rule -> contradict language","textChars":66,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/y9kr6hkz","slide":43,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/jat8fmlk","slide":43,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/kb298r25","slide":43,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/5cbqhwjq","slide":43,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/25orilkj","slide":43,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/36xsrq14","slide":43,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/zqpo3i1g","slide":43,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/epgnad0v","slide":43,"text":"Use terms such as assume regular/CFL, choose long string, split by rule","textPreview":"Use terms such as assume regular/CFL, choose long string, split by rule","textChars":71,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/n8wnb9","slide":43,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/zj85d0","slide":44,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/7e9gritw","slide":44,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/sfix0nah","slide":44,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/tgrytsb2","slide":44,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/uh0f2xsn","slide":44,"text":"44","textPreview":"44","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/fitgv2t8","slide":44,"text":"Closure properties of context-free languages: transition view","textPreview":"Closure properties of context-free languages: transition view","textChars":61,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/g32x47at","slide":44,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/h4byxcre","slide":44,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/algfqtsj","slide":44,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/vmpwjyto","slide":44,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/7up4vy5o","slide":44,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/6tgn2t4j","slide":44,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/zj85d0","slide":44,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/7k0lik","slide":45,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/svmx4zih","slide":45,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/radgbu1w","slide":45,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/69kf2p0r","slide":45,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/58by9kj6","slide":45,"text":"45","textPreview":"45","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/472x0zil","slide":45,"text":"Normal forms for context-free grammars vs Pumping lemma for context-free languages","textPreview":"Normal forms for context-free grammars vs Pumping lemma for context-free languages","textChars":82,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/j6tg7u10","slide":45,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/i5kfyp0f","slide":45,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/h4by5kju","slide":45,"text":"Normal forms for context-free grammars","textPreview":"Normal forms for context-free grammars","textChars":38,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/w32xwfi9","slide":45,"text":"Pumping lemma for context-free languages","textPreview":"Pumping lemma for context-free languages","textChars":40,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/q1wjexc3","slide":45,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/rm5072to","slide":45,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/cne1g7u9","slide":45,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/doni9sbu","slide":45,"text":"assume regular/CFL","textPreview":"assume regular/CFL","textChars":18,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/2xczadc7","slide":45,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/3yl03its","slide":45,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/4zehcnux","slide":45,"text":"productions","textPreview":"productions","textChars":11,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/p0ni5sbi","slide":45,"text":"split by rule","textPreview":"split by rule","textChars":13,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/utcz6dcv","slide":45,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ful0zidg","slide":45,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/jyhg7et8","slide":45,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/yx8fy9sn","slide":45,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/50jy94re","slide":45,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/kzqx0jat","slide":45,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/721gbe9k","slide":45,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/61sf29sz","slide":45,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/7k0lik","slide":45,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/uddw35","slide":46,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/61o7ap8f","slide":46,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/tofqlk7q","slide":46,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/8n6pcfql","slide":46,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/jyx8fapo","slide":46,"text":"46","textPreview":"46","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/yxo76583","slide":46,"text":"Pumping lemma for context-free languages: worked example","textPreview":"Pumping lemma for context-free languages: worked example","textChars":56,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/l0fqhk7u","slide":46,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/kz6p8fq9","slide":46,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/3uh8rup8","slide":46,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/it8ri98n","slide":46,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/c7yt8nul","slide":46,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/d87u1sbq","slide":46,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/q5gb6dcf","slide":46,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/r6pczit0","slide":46,"text":"assume regular/CFL","textPreview":"assume regular/CFL","textChars":18,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/43et43u9","slide":46,"text":"Identify choose long string","textPreview":"Identify choose long string","textChars":27,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/547ux8bu","slide":46,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/ihwb2tc3","slide":46,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/325cvydo","slide":46,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/gfet03ud","slide":46,"text":"choose long string","textPreview":"choose long string","textChars":18,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/hgnat8vy","slide":46,"text":"Apply split by rule","textPreview":"Apply split by rule","textChars":19,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/xkvih0ja","slide":46,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/wzm18vip","slide":46,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/byd0fq14","slide":46,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/ax4z6l0z","slide":46,"text":"split by rule","textPreview":"split by rule","textChars":13,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/9wvidgje","slide":46,"text":"Check pump","textPreview":"Check pump","textChars":10,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/ovmh4bit","slide":46,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/nut0bq18","slide":46,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/mtkz2l0n","slide":46,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/tsfipkji","slide":46,"text":"pump","textPreview":"pump","textChars":4,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/8r61gfix","slide":46,"text":"Conclude contradict language","textPreview":"Conclude contradict language","textChars":28,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/qx0fahgf","slide":46,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/ry9gjmh0","slide":46,"text":"Use this structure whenever pumping lemma for context-free languages appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever pumping lemma for context-free languages appears as a 10-mark explanation or trace problem.","textChars":119,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/uddw35","slide":46,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/oc9daq","slide":47,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/t0ni5gby","slide":47,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/6dwju1cn","slide":47,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/7e5036ts","slide":47,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/kbe1sbuh","slide":47,"text":"47","textPreview":"47","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/5cni1gb2","slide":47,"text":"Closure properties of context-free languages: common confusion","textPreview":"Closure properties of context-free languages: common confusion","textChars":62,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/i9cjq1cb","slide":47,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/ja50z6dw","slide":47,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/w7u1oru5","slide":47,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/x83ixwvq","slide":47,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/lc7eh8ny","slide":47,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/kbyx83md","slide":47,"text":"Treating Closure properties of context-free languages as only a definition","textPreview":"Treating Closure properties of context-free languages as only a definition","textChars":74,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/zapwfy5s","slide":47,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/y9gf6t47","slide":47,"text":"Explain formal model -> rule application -> proof idea","textPreview":"Explain formal model -> rule application -> proof idea","textChars":54,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/x87ed8nm","slide":47,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/c7yx43m1","slide":47,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/b6pwby5g","slide":47,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/a5gf2t4b","slide":47,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/pkne9onq","slide":47,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ojex0jm5","slide":47,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/0z25cnix","slide":47,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/10b65szi","slide":47,"text":"Use terms such as formal model, input string, rule application","textPreview":"Use terms such as formal model, input string, rule application","textChars":62,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/oc9daq","slide":47,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/26xff7","slide":48,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/5sra50fq","slide":48,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ip0bu5gz","slide":48,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/jq9s3axk","slide":48,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/wnitsvy9","slide":48,"text":"48","textPreview":"48","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/hora10fu","slide":48,"text":"Normal forms for context-free grammars: transition view","textPreview":"Normal forms for context-free grammars: transition view","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/ul0rqlg3","slide":48,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/vm9szqxo","slide":48,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/8jy9ovyx","slide":48,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/9k7axgfi","slide":48,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/98judgra","slide":48,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/87ad4bap","slide":48,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/26xff7","slide":48,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/ffdc3c","slide":49,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/r65ojexc","slide":49,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/c7ypcjyx","slide":49,"text":"Module 4: Normal Forms and CFL Properties","textPreview":"Module 4: Normal Forms and CFL Properties","textChars":41,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/d876lofi","slide":49,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/y9g7etg3","slide":49,"text":"49","textPreview":"49","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/zap8nyxo","slide":49,"text":"Previous VTU Questions","textPreview":"Previous VTU Questions","textChars":22,"textLines":1,"bbox":[78,104,820,48]}
+{"kind":"textbox","id":"sh/0bypg3y9","slide":49,"text":"No genuine previous-year VTU questions were found locally for this module during this pass, so this deck does not fabricate PYQs.","textPreview":"No genuine previous-year VTU questions were found locally for this module during this pass, so this deck does not fabricate PYQs.","textChars":129,"textLines":1,"bbox":[96,212,990,90]}
+{"kind":"shape","id":"sh/lc7qp8fu","slide":49,"bbox":[112,372,16,16]}
+{"kind":"textbox","id":"sh/udc72pgz","slide":49,"text":"Use the practice questions as model revision prompts.","textPreview":"Use the practice questions as model revision prompts.","textChars":53,"textLines":1,"bbox":[142,365,950,42]}
+{"kind":"shape","id":"sh/felobuh4","slide":49,"bbox":[112,444,16,16]}
+{"kind":"textbox","id":"sh/fyxgvupc","slide":49,"text":"Add authentic PYQs later only from a verified VTU source.","textPreview":"Add authentic PYQs later only from a verified VTU source.","textChars":57,"textLines":1,"bbox":[142,437,950,42]}
+{"kind":"shape","id":"sh/ex4z29or","slide":49,"bbox":[112,516,16,16]}
+{"kind":"textbox","id":"sh/10fyx47i","slide":49,"text":"Do not label instructor-created questions as previous-year questions.","textPreview":"Do not label instructor-created questions as previous-year questions.","textChars":69,"textLines":1,"bbox":[142,509,950,42]}
+{"kind":"notes","id":"nt/ffdc3c","slide":49,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}

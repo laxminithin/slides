@@ -1,0 +1,115 @@
+{
+  "subject": "BCS502",
+  "name": "Computer Networks",
+  "scope": "BCS502 only; 10CS55 Computer Networks-I not touched (verified untouched and rendering)",
+  "date": "2026-08-25",
+  "provenance": {
+    "local_syllabus_pdf": "public/syllabus/5thsem syllabus.pdf",
+    "prescribed_textbook": "Behrouz A. Forouzan, Data Communications and Networking, 5th ed.",
+    "prescribed_textbook_cited_in": "every finalized 5th_Semester_PPTX/Computer_Networks_BCS502/Module_*.pptx",
+    "local_textbook_pdf_found": false,
+    "content_authored_to": "prescribed-textbook (Forouzan 5e) scope matching VTU BCS502 syllabus",
+    "finalized_pptx_state": "generic scaffolding only (Hook | Core concept | Mechanism | Worked example); no concept-specific teaching blocks to port",
+    "honest_note": "No local textbook was read; content authored to prescribed-textbook scope. Recorded, not claimed otherwise."
+  },
+  "architecture": {
+    "preserved": true,
+    "pipeline": "curriculum.js -> buildSlides.jsx -> Cn502Kit/Cn502Scenes/Cn502Showcase",
+    "index_holders_kept": "sentinel + ':message movement' twin units retained so showcase-hero id mapping stays aligned",
+    "showcase_mapping_verified": {
+      "m1-u10": "OSI model -> encapsulation",
+      "m2-u2": "Error detection -> CRC",
+      "m2-u6": "Cyclic codes -> CRC",
+      "m3-u14": "Distance vector routing -> DVR",
+      "m4-u14": "TCP connections -> handshake",
+      "m5-u12": "Domain Name System -> DNS chain"
+    }
+  },
+  "modules_audited": [
+    { "n": 1, "title": "Network Foundations and Switching", "hours": 8, "real_units_rewritten": 9 },
+    { "n": 2, "title": "Data Link Layer and Media Access", "hours": 8, "real_units_rewritten": 12 },
+    { "n": 3, "title": "Network Layer and Routing", "hours": 8, "real_units_rewritten": 13 },
+    { "n": 4, "title": "Transport Layer", "hours": 8, "real_units_rewritten": 10 },
+    { "n": 5, "title": "Application Layer Protocols", "hours": 8, "real_units_rewritten": 8 }
+  ],
+  "topics_rewritten_total": 52,
+  "generic_blocks_before": 52,
+  "generic_blocks_after": 0,
+  "code_traces_added": ["CRC modulo-2 division", "Checksum one's-complement", "Distance-Vector Bellman-Ford", "TCP congestion AIMD", "Client-server sockets"],
+  "algorithms_protocols_deepened": [
+    "OSI vs TCP/IP mapping", "encapsulation/decapsulation", "packet switching (datagram vs VC)",
+    "block coding", "CRC", "framing/bit-stuffing", "flow control", "ARQ error control", "HDLC frames",
+    "ALOHA/CSMA/CD/CA random access", "controlled access", "checksum", "PPP LCP/NCP",
+    "IPv4 addressing", "IPv4 datagram fields", "IPv6 header", "routing least-cost",
+    "Distance Vector (Bellman-Ford)", "Link State (Dijkstra/flooding)", "Path vector", "RIP", "OSPF", "BGP", "MOSPF/multicast",
+    "transport ports/mux", "UDP", "TCP byte-stream", "TCP segment fields", "TCP 3-way handshake",
+    "TCP flow control (rwnd)", "TCP error control (RTO/fast-retransmit)", "TCP congestion (AIMD)",
+    "client-server sockets", "HTTP req/resp", "FTP two-channel", "SMTP/POP3/IMAP", "DNS hierarchy", "TELNET/NVT", "SSH"
+  ],
+  "dry_runs_added_or_improved": 52,
+  "protocol_traces_added_or_improved": 52,
+  "animation_narrations_improved": [
+    "encapsulation", "CRC", "MAC contention", "distance vector", "link state",
+    "TCP handshake", "congestion/sliding window", "DNS chain", "HTTP exchange", "IPv4 datagram"
+  ],
+  "content_grades": { "A": 52, "B": 0, "C": 0, "D": 0 },
+  "cross_topic_duplicate_explanations": 0,
+  "render_qa": {
+    "harness": "scripts/sem5-forensic-qa.mjs cn502 (C on any overflow/clip/footer/svgClip/tiny<11px; B = diagram-fill rating, not a failure)",
+    "1920x1080": {
+      "total": 258, "C": 0,
+      "per_module": {
+        "module-1": { "slides": 46, "A+": 16, "A": 30, "B": 0, "C": 0 },
+        "module-2": { "slides": 58, "A+": 22, "A": 36, "B": 0, "C": 0 },
+        "module-3": { "slides": 62, "A+": 4, "A": 58, "B": 0, "C": 0 },
+        "module-4": { "slides": 50, "A+": 8, "A": 42, "B": 0, "C": 0 },
+        "module-5": { "slides": 42, "A+": 17, "A": 25, "B": 0, "C": 0 }
+      }
+    },
+    "1280x720": {
+      "total": 258, "C": 0,
+      "per_module": {
+        "module-1": { "slides": 46, "A+": 4, "A": 42, "B": 0, "C": 0 },
+        "module-2": { "slides": 58, "A+": 5, "A": 53, "B": 0, "C": 0 },
+        "module-3": { "slides": 62, "A+": 3, "A": 57, "B": 2, "C": 0 },
+        "module-4": { "slides": 50, "A+": 3, "A": 46, "B": 1, "C": 0 },
+        "module-5": { "slides": 42, "A+": 4, "A": 37, "B": 1, "C": 0 }
+      },
+      "fix_applied": "@media (max-height:820px) copy-density pass in cn502.css cleared 8 initial footer-collision C-slides; 1920x1080 unaffected"
+    }
+  },
+  "animation_regression": 0,
+  "route_regression": {
+    "failures": 0,
+    "routes": {
+      "BCS502 computer-networks-bcs502": "OK (all 5 modules)",
+      "10CS55 computer-networks (unit-1)": "OK, untouched",
+      "BCS501 software-engineering-project-management": "OK",
+      "BCS503 theory-of-computation": "OK",
+      "BCS504 computer-graphics-visualization": "OK",
+      "BCS515B artificial-intelligence": "OK",
+      "BCS515C unix-system-programming": "OK",
+      "BCS515D distributed-systems": "OK"
+    }
+  },
+  "build_status": "PASS",
+  "files_changed": [
+    "src/computerNetworksBcs502/curriculum.js",
+    "src/computerNetworksBcs502/Cn502Kit.jsx",
+    "src/computerNetworksBcs502/buildSlides.jsx",
+    "src/computerNetworksBcs502/cn502.css"
+  ],
+  "final_targets": {
+    "generic_blocks": 0,
+    "c_grade_content": 0,
+    "d_grade_content": 0,
+    "missing_syllabus_topics": 0,
+    "missing_pptx_teaching_blocks": 0,
+    "cross_topic_generic_duplication": 0,
+    "failures_1920": 0,
+    "failures_1280": 0,
+    "animation_regression": 0,
+    "route_regression": 0,
+    "build": "PASS"
+  }
+}

@@ -1,0 +1,941 @@
+{"kind":"deck","id":"pr/x4171h","name":"Deck"}
+{"kind":"layout","layoutId":"8c561240-1be3-409c-980d-93f39e643a26","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"cec56bb3-dd37-47b2-bd32-b718521a1d8c","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/u8dtdn","slide":1,"title":"Module 3","textShapes":10}
+{"kind":"textbox","id":"sh/76p0nyhs","slide":1,"text":"Module 3","textPreview":"Module 3","textChars":8,"textLines":1,"bbox":[82,88,340,60]}
+{"kind":"textbox","id":"sh/8ryhw3id","slide":1,"text":"Informed Search and Propositional Logic","textPreview":"Informed Search and Propositional Logic","textChars":39,"textLines":1,"bbox":[82,166,760,100]}
+{"kind":"textbox","id":"sh/9s7ip8zy","slide":1,"text":"• Informed search strategies\n• Heuristic functions\n• Knowledge-based agents\n• Wumpus world\n• Logic\n• Propositional logic\n• Reasoning patterns in propositional logic","textPreview":"• Informed search strategies | • Heuristic functions | • Knowledge-based agents | • Wumpus world | • Logic | • Propositional logic | • Re...","textChars":164,"textLines":7,"bbox":[94,342,520,250]}
+{"kind":"shape","id":"sh/utgzydgj","slide":1,"bbox":[790,223,62,62]}
+{"kind":"shape","id":"sh/vup0riho","slide":1,"bbox":[862,223,62,62]}
+{"kind":"shape","id":"sh/wvih0ny9","slide":1,"bbox":[934,223,62,62]}
+{"kind":"shape","id":"sh/hwritszu","slide":1,"bbox":[1006,223,62,62]}
+{"kind":"shape","id":"sh/ix0z2xgf","slide":1,"bbox":[790,295,62,62]}
+{"kind":"shape","id":"sh/jy90vih0","slide":1,"bbox":[862,295,62,62]}
+{"kind":"shape","id":"sh/3i94ra5s","slide":1,"bbox":[934,295,62,62]}
+{"kind":"shape","id":"sh/2h0nip4n","slide":1,"bbox":[1006,295,62,62]}
+{"kind":"shape","id":"sh/p4rmtkny","slide":1,"bbox":[790,367,62,62]}
+{"kind":"shape","id":"sh/43i5kfmd","slide":1,"bbox":[862,367,62,62]}
+{"kind":"shape","id":"sh/fe94na5w","slide":1,"bbox":[934,367,62,62]}
+{"kind":"shape","id":"sh/udgne54b","slide":1,"bbox":[1006,367,62,62]}
+{"kind":"shape","id":"sh/hgrmpkn2","slide":1,"bbox":[790,439,62,62]}
+{"kind":"shape","id":"sh/gfi5gfmh","slide":1,"bbox":[862,439,62,62]}
+{"kind":"shape","id":"sh/zatoju50","slide":1,"bbox":[934,439,62,62]}
+{"kind":"shape","id":"sh/e9knq94f","slide":1,"bbox":[1006,439,62,62]}
+{"kind":"textbox","id":"sh/a5o7iton","slide":1,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[803,452,36,36]}
+{"kind":"textbox","id":"sh/b6x8ryp8","slide":1,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[875,452,36,36]}
+{"kind":"textbox","id":"sh/w76pk36t","slide":1,"text":"P","textPreview":"P","textChars":1,"textLines":1,"bbox":[947,380,36,36]}
+{"kind":"textbox","id":"sh/x8fqt87e","slide":1,"text":"W","textPreview":"W","textChars":1,"textLines":1,"bbox":[947,308,36,36]}
+{"kind":"textbox","id":"sh/yto7mdoz","slide":1,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1019,236,36,36]}
+{"kind":"textbox","id":"sh/jux8vipk","slide":1,"text":"Percepts mark safe and risky squares","textPreview":"Percepts mark safe and risky squares","textChars":36,"textLines":1,"bbox":[760,546,440,30]}
+{"kind":"textbox","id":"sh/kv6pon65","slide":1,"text":"VTU BCS515B • Module 3 • 01/50","textPreview":"VTU BCS515B • Module 3 • 01/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/u8dtdn","slide":1,"text":"[Animation]\nUse this as the module reset. Reveal syllabus bullets one by one and connect them to the right-side visual.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/tgdgkj","slide":2,"title":"VTU syllabus cross-check","textShapes":14}
+{"kind":"textbox","id":"sh/dkri9gza","slide":2,"text":"VTU syllabus cross-check","textPreview":"VTU syllabus cross-check","textChars":24,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/qhgjyl0j","slide":2,"text":"Roadmap for Module 3","textPreview":"Roadmap for Module 3","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ri9076h4","slide":2,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/4vy1wbid","slide":2,"text":"1. Informed search","textPreview":"1. Informed search","textChars":18,"textLines":1,"bbox":[76,210,190,70]}
+{"kind":"textbox","id":"sh/pw7i5gzy","slide":2,"text":"2. Greedy best-first search","textPreview":"2. Greedy best-first search","textChars":27,"textLines":1,"bbox":[308,210,190,70]}
+{"kind":"textbox","id":"sh/2tgju10n","slide":2,"text":"3. A* search","textPreview":"3. A* search","textChars":12,"textLines":1,"bbox":[540,210,190,70]}
+{"kind":"textbox","id":"sh/3up0361s","slide":2,"text":"4. Heuristic functions","textPreview":"4. Heuristic functions","textChars":22,"textLines":1,"bbox":[772,210,190,70]}
+{"kind":"textbox","id":"sh/gry1srih","slide":2,"text":"5. 8-puzzle heuristics","textPreview":"5. 8-puzzle heuristics","textChars":22,"textLines":1,"bbox":[1004,210,190,70]}
+{"kind":"textbox","id":"sh/hs7i1wj2","slide":2,"text":"6. Knowledge-based agents","textPreview":"6. Knowledge-based agents","textChars":25,"textLines":1,"bbox":[76,342,190,70]}
+{"kind":"textbox","id":"sh/tkfalsr2","slide":2,"text":"7. Wumpus world","textPreview":"7. Wumpus world","textChars":15,"textLines":1,"bbox":[308,342,190,70]}
+{"kind":"textbox","id":"sh/8j6tsnqh","slide":2,"text":"8. Logic basics","textPreview":"8. Logic basics","textChars":15,"textLines":1,"bbox":[540,342,190,70]}
+{"kind":"textbox","id":"sh/7idsji9w","slide":2,"text":"9. Propositional logic","textPreview":"9. Propositional logic","textChars":22,"textLines":1,"bbox":[772,342,190,70]}
+{"kind":"textbox","id":"sh/6h4bqd8b","slide":2,"text":"10. Propositional inference","textPreview":"10. Propositional inference","textChars":27,"textLines":1,"bbox":[1004,342,190,70]}
+{"kind":"textbox","id":"sh/lgvah8r6","slide":2,"text":"Every VTU topic is expanded as definition → intuition → workflow → example → exam view","textPreview":"Every VTU topic is expanded as definition → intuition → workflow → example → exam view","textChars":86,"textLines":1,"bbox":[188,552,900,54]}
+{"kind":"textbox","id":"sh/kvmto3ql","slide":2,"text":"VTU BCS515B • Module 3 • 02/50","textPreview":"VTU BCS515B • Module 3 • 02/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/tgdgkj","slide":2,"text":"[Animation]\nAnimate the roadmap by row. Pause after each syllabus cluster and state how it will be examined.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/ogbrea","slide":3,"title":"MISSING = 0","textShapes":35}
+{"kind":"textbox","id":"sh/ih43y9sr","slide":3,"text":"MISSING = 0","textPreview":"MISSING = 0","textChars":11,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/5kv2t4r2","slide":3,"text":"Module 3 VTU coverage audit","textPreview":"Module 3 VTU coverage audit","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/4jml0zah","slide":3,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/vutknut0","slide":3,"text":"VTU topic","textPreview":"VTU topic","textChars":9,"textLines":1,"bbox":[82,154,310,28]}
+{"kind":"textbox","id":"sh/utkjupsf","slide":3,"text":"Local source coverage","textPreview":"Local source coverage","textChars":21,"textLines":1,"bbox":[430,154,230,28]}
+{"kind":"textbox","id":"sh/hwv2p4b6","slide":3,"text":"Status","textPreview":"Status","textChars":6,"textLines":1,"bbox":[700,154,100,28]}
+{"kind":"textbox","id":"sh/gv2lwzal","slide":3,"text":"Action in this deck","textPreview":"Action in this deck","textChars":19,"textLines":1,"bbox":[842,154,320,28]}
+{"kind":"textbox","id":"sh/fqxkzy9k","slide":3,"text":"Informed search strategies","textPreview":"Informed search strategies","textChars":26,"textLines":1,"bbox":[82,192,310,46]}
+{"kind":"textbox","id":"sh/epo36tsz","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,192,230,46]}
+{"kind":"textbox","id":"sh/8fapgnql","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,192,100,46]}
+{"kind":"textbox","id":"sh/tgj69srq","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,192,320,46]}
+{"kind":"textbox","id":"sh/mt8ned8f","slide":3,"text":"Heuristic functions","textPreview":"Heuristic functions","textChars":19,"textLines":1,"bbox":[82,254,310,46]}
+{"kind":"textbox","id":"sh/7e1o7i90","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,254,230,46]}
+{"kind":"textbox","id":"sh/krq5cnq9","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,254,100,46]}
+{"kind":"textbox","id":"sh/lsz65sru","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,254,320,46]}
+{"kind":"textbox","id":"sh/yp8nad83","slide":3,"text":"Knowledge-based agents","textPreview":"Knowledge-based agents","textChars":22,"textLines":1,"bbox":[82,316,310,46]}
+{"kind":"textbox","id":"sh/zqho3i9o","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,316,230,46]}
+{"kind":"textbox","id":"sh/cnq583qd","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,316,100,46]}
+{"kind":"textbox","id":"sh/xoz618ry","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,316,320,46]}
+{"kind":"textbox","id":"sh/d87up0fa","slide":3,"text":"Wumpus world","textPreview":"Wumpus world","textChars":12,"textLines":1,"bbox":[82,378,310,46]}
+{"kind":"textbox","id":"sh/s7ydgvep","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,378,230,46]}
+{"kind":"textbox","id":"sh/r6pcnqx4","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,378,100,46]}
+{"kind":"textbox","id":"sh/q5gve5wz","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,378,320,46]}
+{"kind":"textbox","id":"sh/54nul0fe","slide":3,"text":"Logic","textPreview":"Logic","textChars":5,"textLines":1,"bbox":[82,440,310,46]}
+{"kind":"textbox","id":"sh/43edcvet","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,440,230,46]}
+{"kind":"textbox","id":"sh/325cjqx8","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,440,100,46]}
+{"kind":"textbox","id":"sh/i1wvalwn","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,440,320,46]}
+{"kind":"textbox","id":"sh/p0rexkfi","slide":3,"text":"Propositional logic","textPreview":"Propositional logic","textChars":19,"textLines":1,"bbox":[82,502,310,46]}
+{"kind":"textbox","id":"sh/ozidofex","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,502,230,46]}
+{"kind":"textbox","id":"sh/6lsrihcf","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,502,100,46]}
+{"kind":"textbox","id":"sh/76lsrmd0","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,502,320,46]}
+{"kind":"textbox","id":"sh/87u9krul","slide":3,"text":"Reasoning patterns in propositional logic","textPreview":"Reasoning patterns in propositional logic","textChars":41,"textLines":1,"bbox":[82,564,310,46]}
+{"kind":"textbox","id":"sh/t83atwv6","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,564,230,46]}
+{"kind":"textbox","id":"sh/yhsrehcj","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,564,100,46]}
+{"kind":"textbox","id":"sh/zi1snmd4","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,564,320,46]}
+{"kind":"textbox","id":"sh/kja9g7u9","slide":3,"text":"VTU BCS515B • Module 3 • 03/50","textPreview":"VTU BCS515B • Module 3 • 03/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ogbrea","slide":3,"text":"[Animation]\nUse this audit slide only if students or reviewers need syllabus mapping. Otherwise keep it as backup.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/o2ymgx","slide":4,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":11}
+{"kind":"textbox","id":"sh/el0z2xgz","slide":4,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/18rixsza","slide":4,"text":"Informed search: definition","textPreview":"Informed search: definition","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/07ih47yp","slide":4,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/rip0rih8","slide":4,"text":"Informed search uses estimates to guide expansion.","textPreview":"Informed search uses estimates to guide expansion.","textChars":50,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/qhgzydgn","slide":4,"text":"• domain knowledge\n• evaluation function\n• frontier ranking\n• best-first","textPreview":"• domain knowledge | • evaluation function | • frontier ranking | • best-first","textChars":72,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/dkritsze","slide":4,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/sjyh0nyt","slide":4,"text":"Knowledge can reduce search dramatically.","textPreview":"Knowledge can reduce search dramatically.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/bet03mhc","slide":4,"text":"domain knowledge","textPreview":"domain knowledge","textChars":16,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/adkzahgr","slide":4,"text":"evaluation function","textPreview":"evaluation function","textChars":19,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/cvut4reh","slide":4,"text":"frontier ranking","textPreview":"frontier ranking","textChars":16,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/dwnudcv2","slide":4,"text":"best-first","textPreview":"best-first","textChars":10,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/qtcb2hwb","slide":4,"text":"VTU BCS515B • Module 3 • 04/50","textPreview":"VTU BCS515B • Module 3 • 04/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/o2ymgx","slide":4,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/cmy4q4","slide":5,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/yt476toz","slide":5,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/lwf61o7q","slide":5,"text":"Informed search: intuition","textPreview":"Informed search: intuition","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/kv6p8j65","slide":5,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/b6dovepo","slide":5,"text":"Think of informed search as a way to make an agent's next choice clearer.","textPreview":"Think of informed search as a way to make an agent's next choice clearer.","textChars":73,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/a54n29o3","slide":5,"text":"• Why it matters: Knowledge can reduce search dramatically.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Knowledge can reduce search dramatically. | • What changes: uncertainty becomes structure | • Teaching cue: connect the...","textChars":159,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/xsv6xo7u","slide":5,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/w7mp4j69","slide":5,"text":"Knowledge can reduce search dramatically.","textPreview":"Knowledge can reduce search dramatically.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/f2ho7i5s","slide":5,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/u1o7edo7","slide":5,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/8ru9wny1","slide":5,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/9s3qpsfm","slide":5,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/mpcruxgb","slide":5,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/nql8nixg","slide":5,"text":"VTU BCS515B • Module 3 • 05/50","textPreview":"VTU BCS515B • Module 3 • 05/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/cmy4q4","slide":5,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/b6hzw4","slide":6,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/dk32x4f2","slide":6,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/qhsjmpgb","slide":6,"text":"Informed search: workflow","textPreview":"Informed search: workflow","textChars":25,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ri1kvuxw","slide":6,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/07u1sjyd","slide":6,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/18321ofy","slide":6,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/elcjq9gn","slide":6,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/fmlkzex8","slide":6,"text":"Knowledge can reduce search dramatically.","textPreview":"Knowledge can reduce search dramatically.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/gbq1gfy9","slide":6,"text":"domain knowledge","textPreview":"domain knowledge","textChars":16,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/hczipkzu","slide":6,"text":"evaluation function","textPreview":"evaluation function","textChars":19,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/hkry5o7y","slide":6,"text":"frontier ranking","textPreview":"frontier ranking","textChars":16,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/gjixcjqd","slide":6,"text":"best-first","textPreview":"best-first","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/fi9g3eps","slide":6,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/uh0fa98n","slide":6,"text":"VTU BCS515B • Module 3 • 06/50","textPreview":"VTU BCS515B • Module 3 • 06/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/b6hzw4","slide":6,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/ulvh9c","slide":7,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":15}
+{"kind":"textbox","id":"sh/nut8fm9g","slide":7,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ov2p8rq1","slide":7,"text":"Informed search: example","textPreview":"Informed search: example","textChars":24,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/9wbqhwrm","slide":7,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/e5072h8z","slide":7,"text":"A small classroom example makes informed search concrete.","textPreview":"A small classroom example makes informed search concrete.","textChars":57,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/z698bm9k","slide":7,"text":"• Use the terms: domain knowledge, evaluation function\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: domain knowledge, evaluation function | • Trace one decision visibly | • Ask which step would change if the environment ...","textChars":140,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/0rip4rq5","slide":7,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/1srqdwra","slide":7,"text":"Knowledge can reduce search dramatically.","textPreview":"Knowledge can reduce search dramatically.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/i147el83","slide":7,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/j2d8n6po","slide":7,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/3ytwnul0","slide":7,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/2xkvup4f","slide":7,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/p0vep436","slide":7,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/oz2xwzml","slide":7,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/b2dwrulc","slide":7,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/q14fyp4r","slide":7,"text":"domain knowledge","textPreview":"domain knowledge","textChars":16,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/dovet432","slide":7,"text":"VTU BCS515B • Module 3 • 07/50","textPreview":"VTU BCS515B • Module 3 • 07/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ulvh9c","slide":7,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/26ta88","slide":8,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/fa1gnyl8","slide":8,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/gbaxg3mt","slide":8,"text":"Informed search: algorithm / exam view","textPreview":"Informed search: algorithm / exam view","textChars":38,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/1c3yp83y","slide":8,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/2dcfid4j","slide":8,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/3ylgryl4","slide":8,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Knowledge can reduce search dramatically.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Kno...","textChars":169,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ozuxk3mp","slide":8,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/p03yt83a","slide":8,"text":"Knowledge can reduce search dramatically.","textPreview":"Knowledge can reduce search dramatically.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/q1cfmd4v","slide":8,"text":"domain knowledge","textPreview":"domain knowledge","textChars":16,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/b2lgvilg","slide":8,"text":"evaluation function","textPreview":"evaluation function","textChars":19,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/r6t83254","slide":8,"text":"frontier ranking","textPreview":"frontier ranking","textChars":16,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/65k7axoz","slide":8,"text":"best-first","textPreview":"best-first","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/tsvq5cna","slide":8,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/s7mpc76p","slide":8,"text":"VTU BCS515B • Module 3 • 08/50","textPreview":"VTU BCS515B • Module 3 • 08/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/26ta88","slide":8,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/0ehk5n","slide":9,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":11}
+{"kind":"textbox","id":"sh/98ny1kfq","slide":9,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/m5cf65gz","slide":9,"text":"Greedy best-first search: definition","textPreview":"Greedy best-first search: definition","textChars":36,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/n65gzaxk","slide":9,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/03ux4fy9","slide":9,"text":"Greedy search follows the lowest estimated remaining cost.","textPreview":"Greedy search follows the lowest estimated remaining cost.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/143yxkfe","slide":9,"text":"• h(n)\n• nearest-looking node\n• fast\n• not optimal","textPreview":"• h(n) | • nearest-looking node | • fast | • not optimal","textChars":50,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ehcf25g3","slide":9,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/filgvaxo","slide":9,"text":"A tempting heuristic can mislead.","textPreview":"A tempting heuristic can mislead.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/kzyhgzyd","slide":9,"text":"h(n)","textPreview":"h(n)","textChars":4,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/l07y94fy","slide":9,"text":"nearest-looking node","textPreview":"nearest-looking node","textChars":20,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/xc7qdk3a","slide":9,"text":"fast","textPreview":"fast","textChars":4,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/wby94fmp","slide":9,"text":"not optimal","textPreview":"not optimal","textChars":11,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/bap8ba54","slide":9,"text":"VTU BCS515B • Module 3 • 09/50","textPreview":"VTU BCS515B • Module 3 • 09/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/0ehk5n","slide":9,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/bwrzrx","slide":10,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/583ip4nu","slide":10,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/i5czup4j","slide":10,"text":"Greedy best-first search: intuition","textPreview":"Greedy best-first search: intuition","textChars":35,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/j6l0nu54","slide":10,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/w3ahsfmd","slide":10,"text":"Think of greedy best-first search as a way to make an agent's next choice clearer.","textPreview":"Think of greedy best-first search as a way to make an agent's next choice clearer.","textChars":82,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/h4jilkny","slide":10,"text":"• Why it matters: A tempting heuristic can mislead.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: A tempting heuristic can mislead. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea to...","textChars":151,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/u1szqp47","slide":10,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/v210ja5s","slide":10,"text":"A tempting heuristic can mislead.","textPreview":"A tempting heuristic can mislead.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/gze14jmh","slide":10,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/10nixon2","slide":10,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/l0fihorq","slide":10,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/kz618jq5","slide":10,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/zyx0fe9k","slide":10,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/yxoj698f","slide":10,"text":"VTU BCS515B • Module 3 • 10/50","textPreview":"VTU BCS515B • Module 3 • 10/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/bwrzrx","slide":10,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/vlyxk3","slide":11,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/94val8zq","slide":11,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/mh4ratgz","slide":11,"text":"Greedy best-first search: workflow","textPreview":"Greedy best-first search: workflow","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/nid8jyhk","slide":11,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/0fm98jyt","slide":11,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/1gvqhoze","slide":11,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/edkr6tg3","slide":11,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/zed8feh8","slide":11,"text":"A tempting heuristic can mislead.","textPreview":"A tempting heuristic can mislead.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/kb69knyd","slide":11,"text":"h(n)","textPreview":"h(n)","textChars":4,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/lcfatsfy","slide":11,"text":"nearest-looking node","textPreview":"nearest-looking node","textChars":20,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/pgzalgb6","slide":11,"text":"fast","textPreview":"fast","textChars":4,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/of6tcbal","slide":11,"text":"not optimal","textPreview":"not optimal","textChars":11,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/3exsj6t0","slide":11,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/2doba1sf","slide":11,"text":"VTU BCS515B • Module 3 • 11/50","textPreview":"VTU BCS515B • Module 3 • 11/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/vlyxk3","slide":11,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/mrgals","slide":12,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":15}
+{"kind":"textbox","id":"sh/c3y9kne9","slide":12,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/b2p8rido","slide":12,"text":"Greedy best-first search: example","textPreview":"Greedy best-first search: example","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/a1gridw3","slide":12,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/p07qpsvi","slide":12,"text":"A small classroom example makes greedy best-first search concrete.","textPreview":"A small classroom example makes greedy best-first search concrete.","textChars":66,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ozy9gnex","slide":12,"text":"• Use the terms: h(n), nearest-looking node\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: h(n), nearest-looking node | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":129,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/nyp8nidc","slide":12,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/2xwredwr","slide":12,"text":"A tempting heuristic can mislead.","textPreview":"A tempting heuristic can mislead.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/9wra1cvm","slide":12,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/8vi9s7e1","slide":12,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/ep8rm10f","slide":12,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/zqh8v6h0","slide":12,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/0rq9obil","slide":12,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/1sjqxgz6","slide":12,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/ql87ih0j","slide":12,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/rmh8rmh4","slide":12,"text":"h(n)","textPreview":"h(n)","textChars":4,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/snqpkri9","slide":12,"text":"VTU BCS515B • Module 3 • 12/50","textPreview":"VTU BCS515B • Module 3 • 12/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/mrgals","slide":12,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/8wiw1a","slide":13,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/3ql0zq1s","slide":13,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/4ruh8vid","slide":13,"text":"Greedy best-first search: algorithm / exam view","textPreview":"Greedy best-first search: algorithm / exam view","textChars":47,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/5s3i10jy","slide":13,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ulsz2lkb","slide":13,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/vm1gvq1w","slide":13,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: A tempting heuristic can mislead.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: A t...","textChars":161,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/gnah4v21","slide":13,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/hojyx0jm","slide":13,"text":"A tempting heuristic can mislead.","textPreview":"A tempting heuristic can mislead.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/6x8zy1kz","slide":13,"text":"h(n)","textPreview":"h(n)","textChars":4,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/7y1gr61k","slide":13,"text":"nearest-looking node","textPreview":"nearest-looking node","textChars":20,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/76tcb6x0","slide":13,"text":"fast","textPreview":"fast","textChars":4,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/6lkv21wf","slide":13,"text":"not optimal","textPreview":"not optimal","textChars":11,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/t8budwf6","slide":13,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/s72d4rel","slide":13,"text":"VTU BCS515B • Module 3 • 13/50","textPreview":"VTU BCS515B • Module 3 • 13/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/8wiw1a","slide":13,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/1xwwfb","slide":14,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":11}
+{"kind":"textbox","id":"sh/fu9w7qto","slide":14,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/gvidgvu9","slide":14,"text":"A* search: definition","textPreview":"A* search: definition","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/1wbe90bu","slide":14,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/6p0valc7","slide":14,"text":"A* balances cost paid and cost expected.","textPreview":"A* balances cost paid and cost expected.","textChars":40,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/rq9w36ts","slide":14,"text":"• g(n)\n• h(n)\n• f(n)=g(n)+h(n)\n• optimal with admissible h","textPreview":"• g(n) | • h(n) | • f(n)=g(n)+h(n) | • optimal with admissible h","textChars":58,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/sridcbud","slide":14,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/tsre5gby","slide":14,"text":"A* is the key informed-search algorithm.","textPreview":"A* is the key informed-search algorithm.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ilgv61cb","slide":14,"text":"g(n)","textPreview":"g(n)","textChars":4,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/jmpcz6tg","slide":14,"text":"h(n)","textPreview":"h(n)","textChars":4,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/bmtg72xc","slide":14,"text":"f(n)=g(n)+h(n)","textPreview":"f(n)=g(n)+h(n)","textChars":14,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/alkzexgr","slide":14,"text":"optimal with admissible h","textPreview":"optimal with admissible h","textChars":25,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/xoby9cf2","slide":14,"text":"VTU BCS515B • Module 3 • 14/50","textPreview":"VTU BCS515B • Module 3 • 14/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/1xwwfb","slide":14,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/rqhim4","slide":15,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/jq1or61o","slide":15,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/kra50bi9","slide":15,"text":"A* search: intuition","textPreview":"A* search: intuition","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/lsj6tgje","slide":15,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/al8nu10r","slide":15,"text":"Think of a* search as a way to make an agent's next choice clearer.","textPreview":"Think of a* search as a way to make an agent's next choice clearer.","textChars":67,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/bmhon61c","slide":15,"text":"• Why it matters: A* is the key informed-search algorithm.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: A* is the key informed-search algorithm. | • What changes: uncertainty becomes structure | • Teaching cue: connect the ...","textChars":158,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/wna5wrix","slide":15,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/xoj6pwji","slide":15,"text":"A* is the key informed-search algorithm.","textPreview":"A* is the key informed-search algorithm.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/mh8nqh0v","slide":15,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/nih4jm1g","slide":15,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/zq9cne9g","slide":15,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/yp0bu9sv","slide":15,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/lsbuporm","slide":15,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/0ritwja1","slide":15,"text":"VTU BCS515B • Module 3 • 15/50","textPreview":"VTU BCS515B • Module 3 • 15/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/rqhim4","slide":15,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/vu1du5","slide":16,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/4z2t8vqp","slide":16,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/3ytcfqp4","slide":16,"text":"A* search: workflow","textPreview":"A* search: workflow","textChars":19,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ixkb6l8j","slide":16,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/d4vul076","slide":16,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/s3mtcvq1","slide":16,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/r2dcjqpg","slide":16,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/q14bal8v","slide":16,"text":"A* is the key informed-search algorithm.","textPreview":"A* is the key informed-search algorithm.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/1sfupk7i","slide":16,"text":"g(n)","textPreview":"g(n)","textChars":4,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/0rmtgfqx","slide":16,"text":"h(n)","textPreview":"h(n)","textChars":4,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/e1k369oj","slide":16,"text":"f(n)=g(n)+h(n)","textPreview":"f(n)=g(n)+h(n)","textChars":14,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/f2tkzep4","slide":16,"text":"optimal with admissible h","textPreview":"optimal with admissible h","textChars":25,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/g32l8j69","slide":16,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/1ob21o7u","slide":16,"text":"VTU BCS515B • Module 3 • 16/50","textPreview":"VTU BCS515B • Module 3 • 16/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/vu1du5","slide":16,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/pxk97q","slide":17,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":15}
+{"kind":"textbox","id":"sh/mh83u14n","slide":17,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/9kzm5g3e","slide":17,"text":"A* search: example","textPreview":"A* search: example","textChars":18,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/8jqlwbmt","slide":17,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zex4zmlc","slide":17,"text":"A small classroom example makes a* search concrete.","textPreview":"A small classroom example makes a* search concrete.","textChars":51,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ydo3qh4r","slide":17,"text":"• Use the terms: g(n), h(n)\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: g(n), h(n) | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":113,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/lgzm1w32","slide":17,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/kfqlsrmh","slide":17,"text":"A* is the key informed-search algorithm.","textPreview":"A* is the key informed-search algorithm.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ja14bqlg","slide":17,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/i9sn2l4v","slide":17,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/cju9kz6x","slide":17,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/dk3at4ni","slide":17,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/qxsri9or","slide":17,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/ryl8ru5c","slide":17,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/4va9gz61","slide":17,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/pwjqp4nm","slide":17,"text":"g(n)","textPreview":"g(n)","textChars":4,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/2tsrepov","slide":17,"text":"VTU BCS515B • Module 3 • 17/50","textPreview":"VTU BCS515B • Module 3 • 17/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/pxk97q","slide":17,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/pncf04","slide":18,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/j21cv25k","slide":18,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/k3ato7m5","slide":18,"text":"A* search: algorithm / exam view","textPreview":"A* search: algorithm / exam view","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/543uxcnq","slide":18,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/adsbix43","slide":18,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ve1cr25o","slide":18,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: A* is the key informed-search algorithm.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: A* ...","textChars":168,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/wfatk7m9","slide":18,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/x0jutcnu","slide":18,"text":"A* is the key informed-search algorithm.","textPreview":"A* is the key informed-search algorithm.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/e9cvuh47","slide":18,"text":"g(n)","textPreview":"g(n)","textChars":4,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/falc3m5s","slide":18,"text":"h(n)","textPreview":"h(n)","textChars":4,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/3u5szq9k","slide":18,"text":"f(n)=g(n)+h(n)","textPreview":"f(n)=g(n)+h(n)","textChars":14,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/2twb6lsz","slide":18,"text":"optimal with admissible h","textPreview":"optimal with admissible h","textChars":25,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/pw7a10ra","slide":18,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/ovyt8va5","slide":18,"text":"VTU BCS515B • Module 3 • 18/50","textPreview":"VTU BCS515B • Module 3 • 18/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/pncf04","slide":18,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/ilblvb","slide":19,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":11}
+{"kind":"textbox","id":"sh/3i9gfyxw","slide":19,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/4jih83eh","slide":19,"text":"Heuristic functions: definition","textPreview":"Heuristic functions: definition","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/5kryh8f2","slide":19,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ql0zadwn","slide":19,"text":"A heuristic compresses domain knowledge into a number.","textPreview":"A heuristic compresses domain knowledge into a number.","textChars":54,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/rm9gjyx8","slide":19,"text":"• admissible\n• consistent\n• dominance\n• relaxed problem","textPreview":"• admissible | • consistent | • dominance | • relaxed problem","textChars":55,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/snihc3et","slide":19,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/doryl8fe","slide":19,"text":"Better safe estimates expand fewer nodes.","textPreview":"Better safe estimates expand fewer nodes.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/6pwfe9wj","slide":19,"text":"admissible","textPreview":"admissible","textChars":10,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/7qpg7exo","slide":19,"text":"consistent","textPreview":"consistent","textChars":10,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/zutozedc","slide":19,"text":"dominance","textPreview":"dominance","textChars":9,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/ytknqtc7","slide":19,"text":"relaxed problem","textPreview":"relaxed problem","textChars":15,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/lwb61ovi","slide":19,"text":"VTU BCS515B • Module 3 • 19/50","textPreview":"VTU BCS515B • Module 3 • 19/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ilblvb","slide":19,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/bwvxsh","slide":20,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/8f6xgr2d","slide":20,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/7exgnm1s","slide":20,"text":"Heuristic functions: intuition","textPreview":"Heuristic functions: intuition","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/mdofehk7","slide":20,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/h4zytwju","slide":20,"text":"Think of heuristic functions as a way to make an agent's next choice clearer.","textPreview":"Think of heuristic functions as a way to make an agent's next choice clearer.","textChars":77,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/w3qxkr29","slide":20,"text":"• Why it matters: Better safe estimates expand fewer nodes.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Better safe estimates expand fewer nodes. | • What changes: uncertainty becomes structure | • Teaching cue: connect the...","textChars":159,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/v2hgr61o","slide":20,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/uh8fi1k3","slide":20,"text":"Better safe estimates expand fewer nodes.","textPreview":"Better safe estimates expand fewer nodes.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/58jyxgjq","slide":20,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/47qxobil","slide":20,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/6pofu94v","slide":20,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/7qxgnelg","slide":20,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/8rqxwjm1","slide":20,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/tszypo3m","slide":20,"text":"VTU BCS515B • Module 3 • 20/50","textPreview":"VTU BCS515B • Module 3 • 20/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/bwvxsh","slide":20,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/21ki7k","slide":21,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/rydgfi54","slide":21,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/sjmxon6p","slide":21,"text":"Heuristic functions: workflow","textPreview":"Heuristic functions: workflow","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/tkvyhsna","slide":21,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/itkfidon","slide":21,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/jutwbi58","slide":21,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/4v2xk36d","slide":21,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/5wbed8ny","slide":21,"text":"Better safe estimates expand fewer nodes.","textPreview":"Better safe estimates expand fewer nodes.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/2pofux4r","slide":21,"text":"admissible","textPreview":"admissible","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/3qxgn25c","slide":21,"text":"consistent","textPreview":"consistent","textChars":10,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/f6lg765s","slide":21,"text":"dominance","textPreview":"dominance","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/e5sfy147","slide":21,"text":"relaxed problem","textPreview":"relaxed problem","textChars":15,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/183y9wny","slide":21,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/07ux0bmd","slide":21,"text":"VTU BCS515B • Module 3 • 21/50","textPreview":"VTU BCS515B • Module 3 • 21/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/21ki7k","slide":21,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/jypi1i","slide":22,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":15}
+{"kind":"textbox","id":"sh/exc7yxg7","slide":22,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/103qtczi","slide":22,"text":"Heuristic functions: example","textPreview":"Heuristic functions: example","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/0zu907yx","slide":22,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/nm58vmho","slide":22,"text":"A small classroom example makes heuristic functions concrete.","textPreview":"A small classroom example makes heuristic functions concrete.","textChars":61,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/21cr2hg3","slide":22,"text":"• Use the terms: admissible, consistent\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: admissible, consistent | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":125,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ponqxczu","slide":22,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/one94ry9","slide":22,"text":"Better safe estimates expand fewer nodes.","textPreview":"Better safe estimates expand fewer nodes.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/j618jihk","slide":22,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/i5s7qdgz","slide":22,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/83i5svap","slide":22,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/t4rml0ra","slide":22,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/610nqlsz","slide":22,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/7294jq94","slide":22,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/g7i5wvq1","slide":22,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/h8bmp0rm","slide":22,"text":"admissible","textPreview":"admissible","textChars":10,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/u50nul8v","slide":22,"text":"VTU BCS515B • Module 3 • 22/50","textPreview":"VTU BCS515B • Module 3 • 22/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/jypi1i","slide":22,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/i8sd65","slide":23,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/by1k7q1k","slide":23,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/cza10v25","slide":23,"text":"Heuristic functions: algorithm / exam view","textPreview":"Heuristic functions: algorithm / exam view","textChars":42,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/xkj290jq","slide":23,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ylsj2lkb","slide":23,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/zm1kbq1w","slide":23,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Better safe estimates expand fewer nodes.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Bet...","textChars":169,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/knu14v21","slide":23,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/lo32x0jm","slide":23,"text":"Better safe estimates expand fewer nodes.","textPreview":"Better safe estimates expand fewer nodes.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/mpcj65k7","slide":23,"text":"admissible","textPreview":"admissible","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/7qlkza1s","slide":23,"text":"consistent","textPreview":"consistent","textChars":10,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/zadw7ad8","slide":23,"text":"dominance","textPreview":"dominance","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/y94fe5wn","slide":23,"text":"relaxed problem","textPreview":"relaxed problem","textChars":15,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/lcfe9kve","slide":23,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/0b6xgfet","slide":23,"text":"VTU BCS515B • Module 3 • 23/50","textPreview":"VTU BCS515B • Module 3 • 23/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/i8sd65","slide":23,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/7wra04","slide":24,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":11}
+{"kind":"textbox","id":"sh/fitsj2pw","slide":24,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/0j2tc7qh","slide":24,"text":"8-puzzle heuristics: definition","textPreview":"8-puzzle heuristics: definition","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/1kvalc72","slide":24,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qtkb6x8f","slide":24,"text":"Heuristic quality is visible in 8-puzzle.","textPreview":"Heuristic quality is visible in 8-puzzle.","textChars":41,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/rutsf2p0","slide":24,"text":"• misplaced tiles\n• Manhattan distance\n• dominance\n• tradeoff","textPreview":"• misplaced tiles | • Manhattan distance | • dominance | • tradeoff","textChars":61,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/sv2t8nql","slide":24,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/dgbahs7q","slide":24,"text":"Manhattan distance is usually more informative.","textPreview":"Manhattan distance is usually more informative.","textChars":47,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ap4bih8j","slide":24,"text":"misplaced tiles","textPreview":"misplaced tiles","textChars":15,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/bqdcrmp4","slide":24,"text":"Manhattan distance","textPreview":"Manhattan distance","textChars":18,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/vq9cvapw","slide":24,"text":"dominance","textPreview":"dominance","textChars":9,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/up0bmpob","slide":24,"text":"tradeoff","textPreview":"tradeoff","textChars":8,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/hsruxk7m","slide":24,"text":"VTU BCS515B • Module 3 • 24/50","textPreview":"VTU BCS515B • Module 3 • 24/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/7wra04","slide":24,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/chla4y","slide":25,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/natovahg","slide":25,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ob2p4fi1","slide":25,"text":"8-puzzle heuristics: intuition","textPreview":"8-puzzle heuristics: intuition","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/pwv6xkz6","slide":25,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/e5knyl0j","slide":25,"text":"Think of 8-puzzle heuristics as a way to make an agent's next choice clearer.","textPreview":"Think of 8-puzzle heuristics as a way to make an agent's next choice clearer.","textChars":77,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/f6torq14","slide":25,"text":"• Why it matters: Manhattan distance is usually more informative.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Manhattan distance is usually more informative. | • What changes: uncertainty becomes structure | • Teaching cue: conne...","textChars":165,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/07250vip","slide":25,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/18b6t0za","slide":25,"text":"Manhattan distance is usually more informative.","textPreview":"Manhattan distance is usually more informative.","textChars":47,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/y147ap03","slide":25,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/z2do3uho","slide":25,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/faxsjypk","slide":25,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/e94ratoz","slide":25,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/1cfal87a","slide":25,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/gb69c36p","slide":25,"text":"VTU BCS515B • Module 3 • 25/50","textPreview":"VTU BCS515B • Module 3 • 25/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/chla4y","slide":25,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/0ov7j6","slide":26,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/0jm9kr65","slide":26,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/zyt8b6pk","slide":26,"text":"8-puzzle heuristics: workflow","textPreview":"8-puzzle heuristics: workflow","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/exkri1oz","slide":26,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/dwbq9w7e","slide":26,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cv2pgr6t","slide":26,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/rut87mp8","slide":26,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/qtk7ehon","slide":26,"text":"Manhattan distance is usually more informative.","textPreview":"Manhattan distance is usually more informative.","textChars":47,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/xsfqlg7i","slide":26,"text":"misplaced tiles","textPreview":"misplaced tiles","textChars":15,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/wr69sb6x","slide":26,"text":"Manhattan distance","textPreview":"Manhattan distance","textChars":18,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/mxgjmt4n","slide":26,"text":"dominance","textPreview":"dominance","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/7yp0fy58","slide":26,"text":"tradeoff","textPreview":"tradeoff","textChars":8,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/8jy1o3mt","slide":26,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/9k7ihone","slide":26,"text":"VTU BCS515B • Module 3 • 26/50","textPreview":"VTU BCS515B • Module 3 • 26/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/0ov7j6","slide":26,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/3yo8ah","slide":27,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":15}
+{"kind":"textbox","id":"sh/4vuh0fe9","slide":27,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/3ulgrax4","slide":27,"text":"8-puzzle heuristics: example","textPreview":"8-puzzle heuristics: example","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/2tczy5wj","slide":27,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/dknixkf6","slide":27,"text":"A small classroom example makes 8-puzzle heuristics concrete.","textPreview":"A small classroom example makes 8-puzzle heuristics concrete.","textChars":61,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cjeh4fel","slide":27,"text":"• Use the terms: misplaced tiles, Manhattan distance\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: misplaced tiles, Manhattan distance | • Trace one decision visibly | • Ask which step would change if the environment ch...","textChars":138,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ri50vax0","slide":27,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/qhwz25wf","slide":27,"text":"Manhattan distance is usually more informative.","textPreview":"Manhattan distance is usually more informative.","textChars":47,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/1oni1kf2","slide":27,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/0neh8zeh","slide":27,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/2pwnip4n","slide":27,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/3q54bu58","slide":27,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/4re5kzmd","slide":27,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/psn6d4ny","slide":27,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/qtwnm94j","slide":27,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/re5ofu54","slide":27,"text":"misplaced tiles","textPreview":"misplaced tiles","textChars":15,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/cfe5ozmp","slide":27,"text":"VTU BCS515B • Module 3 • 27/50","textPreview":"VTU BCS515B • Module 3 • 27/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/3yo8ah","slide":27,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/mjmfpp","slide":28,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/ytgruxsz","slide":28,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/lw7q5crq","slide":28,"text":"8-puzzle heuristics: algorithm / exam view","textPreview":"8-puzzle heuristics: algorithm / exam view","textChars":42,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/kvy9w7a5","slide":28,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7yp87m9g","slide":28,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/mxgryh8b","slide":28,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Manhattan distance is usually more informative.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Man...","textChars":175,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/90rq9crm","slide":28,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/8zi90rq1","slide":28,"text":"Manhattan distance is usually more informative.","textPreview":"Manhattan distance is usually more informative.","textChars":47,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/n258vi9c","slide":28,"text":"misplaced tiles","textPreview":"misplaced tiles","textChars":15,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/21w7mdsr","slide":28,"text":"Manhattan distance","textPreview":"Manhattan distance","textChars":18,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/87y9wvet","slide":28,"text":"dominance","textPreview":"dominance","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/987qp0ve","slide":28,"text":"tradeoff","textPreview":"tradeoff","textChars":8,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/mlgrulwn","slide":28,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/nmp8nqd8","slide":28,"text":"VTU BCS515B • Module 3 • 28/50","textPreview":"VTU BCS515B • Module 3 • 28/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/mjmfpp","slide":28,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/7ospgk","slide":29,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":11}
+{"kind":"textbox","id":"sh/z69on6tg","slide":29,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/k7i5gbu1","slide":29,"text":"Knowledge-based agents: definition","textPreview":"Knowledge-based agents: definition","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/lsr6pgbm","slide":29,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/6t0ni1c7","slide":29,"text":"Knowledge-based agents store facts and derive consequences.","textPreview":"Knowledge-based agents store facts and derive consequences.","textChars":59,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/7utor6ts","slide":29,"text":"• TELL\n• ASK\n• KB\n• inference","textPreview":"• TELL | • ASK | • KB | • inference","textChars":29,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/8v25kbud","slide":29,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/twb6tgbi","slide":29,"text":"Representation and inference are separated.","textPreview":"Representation and inference are separated.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/uxk7mlc3","slide":29,"text":"TELL","textPreview":"TELL","textChars":4,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/vytovqto","slide":29,"text":"ASK","textPreview":"ASK","textChars":3,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/fqpwzmhg","slide":29,"text":"KB","textPreview":"KB","textChars":2,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/epgfqhgv","slide":29,"text":"inference","textPreview":"inference","textChars":9,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/1s7e1wz6","slide":29,"text":"VTU BCS515B • Module 3 • 29/50","textPreview":"VTU BCS515B • Module 3 • 29/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/7ospgk","slide":29,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/ohuvbc","slide":30,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/3axonm9g","slide":30,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/4b6pgrq1","slide":30,"text":"Knowledge-based agents: intuition","textPreview":"Knowledge-based agents: intuition","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/pcf6pwr6","slide":30,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/qdo7i18r","slide":30,"text":"Think of knowledge-based agents as a way to make an agent's next choice clearer.","textPreview":"Think of knowledge-based agents as a way to make an agent's next choice clearer.","textChars":80,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/rexor69c","slide":30,"text":"• Why it matters: Representation and inference are separated.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Representation and inference are separated. | • What changes: uncertainty becomes structure | • Teaching cue: connect t...","textChars":161,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/cf6pkbqx","slide":30,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/dgzqtgri","slide":30,"text":"Representation and inference are separated.","textPreview":"Representation and inference are separated.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/e187m183","slide":30,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/z2h8v6po","slide":30,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/ny90ju9o","slide":30,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/2x0zqps3","slide":30,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/p0ril4ru","slide":30,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/ozihsza9","slide":30,"text":"VTU BCS515B • Module 3 • 30/50","textPreview":"VTU BCS515B • Module 3 • 30/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ohuvbc","slide":30,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/s8926b","slide":31,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/6dcvadcv","slide":31,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/tgnulsvm","slide":31,"text":"Knowledge-based agents: workflow","textPreview":"Knowledge-based agents: workflow","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/8fedcnu1","slide":31,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/jalcfidk","slide":31,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/y9cv6dcz","slide":31,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/lc3uh8va","slide":31,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/kbud8nu5","slide":31,"text":"Representation and inference are separated.","textPreview":"Representation and inference are separated.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/36pwr2do","slide":31,"text":"TELL","textPreview":"TELL","textChars":4,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/i5gvixc3","slide":31,"text":"ASK","textPreview":"ASK","textChars":3,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/836xcfil","slide":31,"text":"KB","textPreview":"KB","textChars":2,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/94fylkz6","slide":31,"text":"inference","textPreview":"inference","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/m1ofa50f","slide":31,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/n2xgjah0","slide":31,"text":"VTU BCS515B • Module 3 • 31/50","textPreview":"VTU BCS515B • Module 3 • 31/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/s8926b","slide":31,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/pee7rb","slide":32,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":15}
+{"kind":"textbox","id":"sh/ve14je5o","slide":32,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/wfalsjm9","slide":32,"text":"Knowledge-based agents: example","textPreview":"Knowledge-based agents: example","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/hgjmlone","slide":32,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/m983m94r","slide":32,"text":"A small classroom example makes knowledge-based agents concrete.","textPreview":"A small classroom example makes knowledge-based agents concrete.","textChars":64,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/7ah4fe5c","slide":32,"text":"• Use the terms: TELL, ASK\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: TELL, ASK | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":112,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/8bqlojmx","slide":32,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/9czmh4ni","slide":32,"text":"Representation and inference are separated.","textPreview":"Representation and inference are separated.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ylo3ip4v","slide":32,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/zmh4bu5g","slide":32,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/7ypwvmhs","slide":32,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/6xgvmh07","slide":32,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/t0rexczy","slide":32,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/8zydorid","slide":32,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/v29wzmho","slide":32,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/u10vqh03","slide":32,"text":"TELL","textPreview":"TELL","textChars":4,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/hore1wzu","slide":32,"text":"VTU BCS515B • Module 3 • 32/50","textPreview":"VTU BCS515B • Module 3 • 32/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/pee7rb","slide":32,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/x50xt8","slide":33,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/f6poj6p0","slide":33,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/07y5sbql","slide":33,"text":"Knowledge-based agents: algorithm / exam view","textPreview":"Knowledge-based agents: algorithm / exam view","textChars":45,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/18r6lg76","slide":33,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/q1gnm183","slide":33,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/r2pof6po","slide":33,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Representation and inference are separated.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Rep...","textChars":171,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/s3y5obq9","slide":33,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/d476hg7u","slide":33,"text":"Representation and inference are separated.","textPreview":"Representation and inference are separated.","textChars":43,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/idwnih87","slide":33,"text":"TELL","textPreview":"TELL","textChars":4,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/3e54bm9s","slide":33,"text":"ASK","textPreview":"ASK","textChars":3,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/3q58vm9c","slide":33,"text":"KB","textPreview":"KB","textChars":2,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/2pw72hsr","slide":33,"text":"inference","textPreview":"inference","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/psnqxwr2","slide":33,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/4rep4rah","slide":33,"text":"VTU BCS515B • Module 3 • 33/50","textPreview":"VTU BCS515B • Module 3 • 33/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/x50xt8","slide":33,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/kvflb7","slide":34,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":11}
+{"kind":"textbox","id":"sh/ehkbu9k3","slide":34,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/1kbupo3u","slide":34,"text":"Wumpus world: definition","textPreview":"Wumpus world: definition","textChars":24,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/0j2twj29","slide":34,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/n6tcryl0","slide":34,"text":"Wumpus world makes hidden hazards and logical inference visible.","textPreview":"Wumpus world makes hidden hazards and logical inference visible.","textChars":64,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/25kbytkf","slide":34,"text":"• stench\n• breeze\n• glitter\n• safe square","textPreview":"• stench | • breeze | • glitter | • safe square","textChars":41,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/p8vut83q","slide":34,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/o72t0325","slide":34,"text":"Local percepts support global reasoning.","textPreview":"Local percepts support global reasoning.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/3a9sfulg","slide":34,"text":"stench","textPreview":"stench","textChars":6,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/ip0bmpkv","slide":34,"text":"breeze","textPreview":"breeze","textChars":6,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/0zuhg32x","slide":34,"text":"glitter","textPreview":"glitter","textChars":7,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/103y983i","slide":34,"text":"safe square","textPreview":"safe square","textChars":11,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/edczetk7","slide":34,"text":"VTU BCS515B • Module 3 • 34/50","textPreview":"VTU BCS515B • Module 3 • 34/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/kvflb7","slide":34,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/ompm7n","slide":35,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/gba1gbu1","slide":35,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/va1k76tg","slide":35,"text":"Wumpus world: intuition","textPreview":"Wumpus world: intuition","textChars":23,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/u9sje1cv","slide":35,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/t8j25gba","slide":35,"text":"Think of wumpus world as a way to make an agent's next choice clearer.","textPreview":"Think of wumpus world as a way to make an agent's next choice clearer.","textChars":70,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/87a1cbup","slide":35,"text":"• Why it matters: Local percepts support global reasoning.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Local percepts support global reasoning. | • What changes: uncertainty becomes structure | • Teaching cue: connect the ...","textChars":158,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/761036t4","slide":35,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/658ja1cj","slide":35,"text":"Local percepts support global reasoning.","textPreview":"Local percepts support global reasoning.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/l4zi1wbe","slide":35,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/k3q18rut","slide":35,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/ytcbq5sr","slide":35,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/zulcjatc","slide":35,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/kvutsfax","slide":35,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/lw3ulkbi","slide":35,"text":"VTU BCS515B • Module 3 • 35/50","textPreview":"VTU BCS515B • Module 3 • 35/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ompm7n","slide":35,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/egzktf","slide":36,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/x47eh83u","slide":36,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ahgfmt43","slide":36,"text":"Wumpus world: workflow","textPreview":"Wumpus world: workflow","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/v2pwfylo","slide":36,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/k7ixs3ml","slide":36,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/58rel83q","slide":36,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/i5gfqd4f","slide":36,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/j6pwjil0","slide":36,"text":"Local percepts support global reasoning.","textPreview":"Local percepts support global reasoning.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/0bexgjm1","slide":36,"text":"stench","textPreview":"stench","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/lcne9onm","slide":36,"text":"breeze","textPreview":"breeze","textChars":6,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/90bi5gfe","slide":36,"text":"glitter","textPreview":"glitter","textChars":7,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/8z2hwvy9","slide":36,"text":"safe square","textPreview":"safe square","textChars":11,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/nyt03qxo","slide":36,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/mxkzulg3","slide":36,"text":"VTU BCS515B • Module 3 • 36/50","textPreview":"VTU BCS515B • Module 3 • 36/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/egzktf","slide":36,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/3ccxrr","slide":37,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":13}
+{"kind":"textbox","id":"sh/94jal8zy","slide":37,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/m18rat07","slide":37,"text":"Wumpus world: example","textPreview":"Wumpus world: example","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/n218jyhs","slide":37,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/wra9g3i9","slide":37,"text":"A small classroom example makes wumpus world concrete.","textPreview":"A small classroom example makes wumpus world concrete.","textChars":54,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/xsjap8zu","slide":37,"text":"• Use the terms: stench, breeze\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: stench, breeze | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":117,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/apsred03","slide":37,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/vq1sniho","slide":37,"text":"Local percepts support global reasoning.","textPreview":"Local percepts support global reasoning.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"shape","id":"sh/cvq94ji5","slide":37,"bbox":[790,223,62,62]}
+{"kind":"shape","id":"sh/dwzqdozq","slide":37,"bbox":[862,223,62,62]}
+{"kind":"shape","id":"sh/tc7ytozm","slide":37,"bbox":[934,223,62,62]}
+{"kind":"shape","id":"sh/sbyhkjy1","slide":37,"bbox":[1006,223,62,62]}
+{"kind":"shape","id":"sh/rapgrehg","slide":37,"bbox":[790,295,62,62]}
+{"kind":"shape","id":"sh/69gfi9gv","slide":37,"bbox":[862,295,62,62]}
+{"kind":"shape","id":"sh/1g7yxofy","slide":37,"bbox":[934,295,62,62]}
+{"kind":"shape","id":"sh/gfyhojyd","slide":37,"bbox":[1006,295,62,62]}
+{"kind":"shape","id":"sh/fepgvyhs","slide":37,"bbox":[790,367,62,62]}
+{"kind":"shape","id":"sh/edgzmtg7","slide":37,"bbox":[862,367,62,62]}
+{"kind":"shape","id":"sh/p4ry18fu","slide":37,"bbox":[934,367,62,62]}
+{"kind":"shape","id":"sh/ojihs3y9","slide":37,"bbox":[1006,367,62,62]}
+{"kind":"shape","id":"sh/8nq1o76l","slide":37,"bbox":[790,439,62,62]}
+{"kind":"shape","id":"sh/9ozixcn6","slide":37,"bbox":[862,439,62,62]}
+{"kind":"shape","id":"sh/ml8jmhof","slide":37,"bbox":[934,439,62,62]}
+{"kind":"shape","id":"sh/nmh0v250","slide":37,"bbox":[1006,439,62,62]}
+{"kind":"textbox","id":"sh/wbq1sr6h","slide":37,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[803,452,36,36]}
+{"kind":"textbox","id":"sh/xcji1wn2","slide":37,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[875,452,36,36]}
+{"kind":"textbox","id":"sh/ap8jqhob","slide":37,"text":"P","textPreview":"P","textChars":1,"textLines":1,"bbox":[947,380,36,36]}
+{"kind":"textbox","id":"sh/vqh0zm5w","slide":37,"text":"W","textPreview":"W","textChars":1,"textLines":1,"bbox":[947,308,36,36]}
+{"kind":"textbox","id":"sh/cv6hgn6d","slide":37,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1019,236,36,36]}
+{"kind":"textbox","id":"sh/dgfipsny","slide":37,"text":"Percepts mark safe and risky squares","textPreview":"Percepts mark safe and risky squares","textChars":36,"textLines":1,"bbox":[760,546,440,30]}
+{"kind":"textbox","id":"sh/fm5cbuts","slide":37,"text":"VTU BCS515B • Module 3 • 37/50","textPreview":"VTU BCS515B • Module 3 • 37/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/3ccxrr","slide":37,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/6bhi32","slide":38,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/g7yt8769","slide":38,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/v6pcz25o","slide":38,"text":"Wumpus world: algorithm / exam view","textPreview":"Wumpus world: algorithm / exam view","textChars":35,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/u5gb6xo3","slide":38,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/5cru5cnq","slide":38,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/4bitcr65","slide":38,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Local percepts support global reasoning.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Loc...","textChars":168,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/3a9c3m5k","slide":38,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/i90bahoz","slide":38,"text":"Local percepts support global reasoning.","textPreview":"Local percepts support global reasoning.","textChars":40,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/d0bu9wnm","slide":38,"text":"stench","textPreview":"stench","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/sfitgr6h","slide":38,"text":"breeze","textPreview":"breeze","textChars":6,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/y1s3yt8n","slide":38,"text":"glitter","textPreview":"glitter","textChars":7,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/z21k7y98","slide":38,"text":"safe square","textPreview":"safe square","textChars":11,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/k3al03qt","slide":38,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/l4j298re","slide":38,"text":"VTU BCS515B • Module 3 • 38/50","textPreview":"VTU BCS515B • Module 3 • 38/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/6bhi32","slide":38,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/b5cfwy","slide":39,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":11}
+{"kind":"textbox","id":"sh/ytov2dw7","slide":39,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/lwzexsvy","slide":39,"text":"Logic basics: definition","textPreview":"Logic basics: definition","textChars":24,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/kv6x4ned","slide":39,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/bqxwridg","slide":39,"text":"Logic links sentences to truth across models.","textPreview":"Logic links sentences to truth across models.","textChars":45,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/apovydwb","slide":39,"text":"• syntax\n• semantics\n• model\n• entailment","textPreview":"• syntax | • semantics | • model | • entailment","textChars":41,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/xsfet8vm","slide":39,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/cr6d0ne1","slide":39,"text":"Sound inference preserves truth.","textPreview":"Sound inference preserves truth.","textChars":32,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/vmhw32d0","slide":39,"text":"syntax","textPreview":"syntax","textChars":6,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/ul8faxcf","slide":39,"text":"semantics","textPreview":"semantics","textChars":9,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/srihcru1","slide":39,"text":"model","textPreview":"model","textChars":5,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/dsrilwvm","slide":39,"text":"entailment","textPreview":"entailment","textChars":10,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/qp0za1cb","slide":39,"text":"VTU BCS515B • Module 3 • 39/50","textPreview":"VTU BCS515B • Module 3 • 39/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/b5cfwy","slide":39,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/h8zx2m","slide":40,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/7md436po","slide":40,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/8nm5wbq9","slide":40,"text":"Logic basics: intuition","textPreview":"Logic basics: intuition","textChars":23,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/9ovm5w7u","slide":40,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/up4ny18f","slide":40,"text":"Think of logic basics as a way to make an agent's next choice clearer.","textPreview":"Think of logic basics as a way to make an agent's next choice clearer.","textChars":70,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/vqxo76p0","slide":40,"text":"• Why it matters: Sound inference preserves truth.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Sound inference preserves truth. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea to ...","textChars":150,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/wr650bql","slide":40,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/hsf69g7q","slide":40,"text":"Sound inference preserves truth.","textPreview":"Sound inference preserves truth.","textChars":32,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/idon2l8b","slide":40,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/jexobqpw","slide":40,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/rm5kratw","slide":40,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/qlw3y5cb","slide":40,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/don2tkbm","slide":40,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/snel0fuh","slide":40,"text":"VTU BCS515B • Module 3 • 40/50","textPreview":"VTU BCS515B • Module 3 • 40/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/h8zx2m","slide":40,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/bbn0mj","slide":41,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/hkre1szu","slide":41,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ahgvqd0j","slide":41,"text":"Logic basics: workflow","textPreview":"Logic basics: workflow","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/vipczi1o","slide":41,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/47idw7il","slide":41,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/58re5cz6","slide":41,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/i50vux0f","slide":41,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/j69w32h0","slide":41,"text":"Sound inference preserves truth.","textPreview":"Sound inference preserves truth.","textChars":32,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/sb2d07ih","slide":41,"text":"syntax","textPreview":"syntax","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/tcbe9cz2","slide":41,"text":"semantics","textPreview":"semantics","textChars":9,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/xwz654zu","slide":41,"text":"model","textPreview":"model","textChars":5,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/cv65wzi9","slide":41,"text":"entailment","textPreview":"entailment","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/buxo3uho","slide":41,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/atonu90j","slide":41,"text":"VTU BCS515B • Module 3 • 41/50","textPreview":"VTU BCS515B • Module 3 • 41/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/bbn0mj","slide":41,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/56xybs","slide":42,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":15}
+{"kind":"textbox","id":"sh/bqdojmhw","slide":42,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/cbmpcryh","slide":42,"text":"Logic basics: example","textPreview":"Logic basics: example","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/dcv6lwz2","slide":42,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/yd47ehg7","slide":42,"text":"A small classroom example makes logic basics concrete.","textPreview":"A small classroom example makes logic basics concrete.","textChars":54,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/zexonmhs","slide":42,"text":"• Use the terms: syntax, semantics\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: syntax, semantics | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":120,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/0f6pgryd","slide":42,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/lgf6pwzy","slide":42,"text":"Sound inference preserves truth.","textPreview":"Sound inference preserves truth.","textChars":32,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/mho7i1gj","slide":42,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/nixor6h4","slide":42,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/j2h8raxk","slide":42,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/i18ry5wz","slide":42,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/54zatkfq","slide":42,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/k3q90fe5","slide":42,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/vyx8naxo","slide":42,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/axoru5w3","slide":42,"text":"syntax","textPreview":"syntax","textChars":6,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/x0zqp0fu","slide":42,"text":"VTU BCS515B • Module 3 • 42/50","textPreview":"VTU BCS515B • Module 3 • 42/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/56xybs","slide":42,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/hgs9h0","slide":43,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/94325wf6","slide":43,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/mhs3uhgf","slide":43,"text":"Logic basics: algorithm / exam view","textPreview":"Logic basics: algorithm / exam view","textChars":35,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/7ilk3mx0","slide":43,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/kfals7yp","slide":43,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/lgj21cfa","slide":43,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Sound inference preserves truth.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Sou...","textChars":160,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ydsjqhgj","slide":43,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ze1kzmx4","slide":43,"text":"Sound inference preserves truth.","textPreview":"Sound inference preserves truth.","textChars":32,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/4bel4bet","slide":43,"text":"syntax","textPreview":"syntax","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/5cn2xgfe","slide":43,"text":"semantics","textPreview":"semantics","textChars":9,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/l4nad0zm","slide":43,"text":"model","textPreview":"model","textChars":5,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/k3etkvy1","slide":43,"text":"entailment","textPreview":"entailment","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/j25sbqhg","slide":43,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/y1cbilgv","slide":43,"text":"VTU BCS515B • Module 3 • 43/50","textPreview":"VTU BCS515B • Module 3 • 43/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/hgs9h0","slide":43,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/nz537n","slide":44,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":11}
+{"kind":"textbox","id":"sh/58zmhwva","slide":44,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ilonmhcj","slide":44,"text":"Propositional logic: definition","textPreview":"Propositional logic: definition","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/3mx4fmd4","slide":44,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/sbq5sbul","slide":44,"text":"Propositional logic represents facts as true or false symbols.","textPreview":"Propositional logic represents facts as true or false symbols.","textChars":62,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/dczmlgv6","slide":44,"text":"• symbols\n• connectives\n• truth tables\n• sentences","textPreview":"• symbols | • connectives | • truth tables | • sentences","textChars":50,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/q98nq1cv","slide":44,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/rah4j6d0","slide":44,"text":"It is simple but less expressive than FOL.","textPreview":"It is simple but less expressive than FOL.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/0fq5wbux","slide":44,"text":"symbols","textPreview":"symbols","textChars":7,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/1gjmpgvi","slide":44,"text":"connectives","textPreview":"connectives","textChars":11,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/h4bu5gr6","slide":44,"text":"truth tables","textPreview":"truth tables","textChars":12,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/w32tcbal","slide":44,"text":"sentences","textPreview":"sentences","textChars":9,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/v2ts3690","slide":44,"text":"VTU BCS515B • Module 3 • 44/50","textPreview":"VTU BCS515B • Module 3 • 44/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/nz537n","slide":44,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/s621pu","slide":45,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/j2dgf2hw","slide":45,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/k3mh87yh","slide":45,"text":"Propositional logic: intuition","textPreview":"Propositional logic: intuition","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/54fyhcz2","slide":45,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ad4z2xgf","slide":45,"text":"Think of propositional logic as a way to make an agent's next choice clearer.","textPreview":"Think of propositional logic as a way to make an agent's next choice clearer.","textChars":77,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/vydgb2h0","slide":45,"text":"• Why it matters: It is simple but less expressive than FOL.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: It is simple but less expressive than FOL. | • What changes: uncertainty becomes structure | • Teaching cue: connect th...","textChars":160,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/wzmh47yl","slide":45,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/x0vydsz6","slide":45,"text":"It is simple but less expressive than FOL.","textPreview":"It is simple but less expressive than FOL.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/utozehgj","slide":45,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/fux0nmh4","slide":45,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/3ypsvapw","slide":45,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/2xwr25ob","slide":45,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/p07axk72","slide":45,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/ozy94f6h","slide":45,"text":"VTU BCS515B • Module 3 • 45/50","textPreview":"VTU BCS515B • Module 3 • 45/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/s621pu","slide":45,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/c8315f","slide":46,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/m1wju18j","slide":46,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/94ni5g7u","slide":46,"text":"Propositional logic: workflow","textPreview":"Propositional logic: workflow","textChars":29,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/o3e1wbqp","slide":46,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/zel0zmps","slide":46,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/edczq187","slide":46,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/10ni1w7y","slide":46,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/0zuhsrqd","slide":46,"text":"It is simple but less expressive than FOL.","textPreview":"It is simple but less expressive than FOL.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ral0vm9w","slide":46,"text":"symbols","textPreview":"symbols","textChars":7,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/q9czmh8b","slide":46,"text":"connectives","textPreview":"connectives","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/oj61sjip","slide":46,"text":"truth tables","textPreview":"truth tables","textChars":12,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/pkf21oza","slide":46,"text":"sentences","textPreview":"sentences","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/2h4jq90z","slide":46,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/nidkzehk","slide":46,"text":"VTU BCS515B • Module 3 • 46/50","textPreview":"VTU BCS515B • Module 3 • 46/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/c8315f","slide":46,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/hrtbg0","slide":47,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":15}
+{"kind":"textbox","id":"sh/z2xwvelo","slide":47,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/k36d4jm9","slide":47,"text":"Propositional logic: example","textPreview":"Propositional logic: example","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/l4fexo3u","slide":47,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ad4vy947","slide":47,"text":"A small classroom example makes propositional logic concrete.","textPreview":"A small classroom example makes propositional logic concrete.","textChars":61,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/bydwrels","slide":47,"text":"• Use the terms: symbols, connectives\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: symbols, connectives | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":123,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/czmd0zmd","slide":47,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/x0fet43y","slide":47,"text":"It is simple but less expressive than FOL.","textPreview":"It is simple but less expressive than FOL.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/u98fatkb","slide":47,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/vuhw3ylw","slide":47,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/vyl4byl4","slide":47,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/adsnitkj","slide":47,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/x03md83u","slide":47,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/wzu5k329","slide":47,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/j2l4fi10","slide":47,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/i1cnmdkf","slide":47,"text":"symbols","textPreview":"symbols","textChars":7,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/5436h8j6","slide":47,"text":"VTU BCS515B • Module 3 • 47/50","textPreview":"VTU BCS515B • Module 3 • 47/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/hrtbg0","slide":47,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/ejdo24","slide":48,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/6hcnq94v","slide":48,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/t4n61o3m","slide":48,"text":"Propositional logic: algorithm / exam view","textPreview":"Propositional logic: algorithm / exam view","textChars":42,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/s3e5sjm1","slide":48,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/jel4velk","slide":48,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/idcnm94z","slide":48,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: It is simple but less expressive than FOL.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: It ...","textChars":170,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/5g3mxo3a","slide":48,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/kfu5ojm5","slide":48,"text":"It is simple but less expressive than FOL.","textPreview":"It is simple but less expressive than FOL.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/3apo7ylo","slide":48,"text":"symbols","textPreview":"symbols","textChars":7,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/29wnytk3","slide":48,"text":"connectives","textPreview":"connectives","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/o3u18ryl","slide":48,"text":"truth tables","textPreview":"truth tables","textChars":12,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/943i1wz6","slide":48,"text":"sentences","textPreview":"sentences","textChars":9,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/m1sj6hgf","slide":48,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/n210zmh0","slide":48,"text":"VTU BCS515B • Module 3 • 48/50","textPreview":"VTU BCS515B • Module 3 • 48/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ejdo24","slide":48,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/bck12t","slide":49,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":11}
+{"kind":"textbox","id":"sh/lw3up8ju","slide":49,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ytsbutk3","slide":49,"text":"Propositional inference: definition","textPreview":"Propositional inference: definition","textChars":35,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/zulcny1o","slide":49,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/c7ats32x","slide":49,"text":"Inference derives what must follow from a KB.","textPreview":"Inference derives what must follow from a KB.","textChars":45,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/d8jul8ji","slide":49,"text":"• truth-table checking\n• equivalence\n• resolution\n• proof","textPreview":"• truth-table checking | • equivalence | • resolution | • proof","textChars":57,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/q5sbqtk7","slide":49,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/b61cjy1s","slide":49,"text":"Resolution proves by contradiction.","textPreview":"Resolution proves by contradiction.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/o3atoj21","slide":49,"text":"truth-table checking","textPreview":"truth-table checking","textChars":20,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/p4juhojm","slide":49,"text":"equivalence","textPreview":"equivalence","textChars":11,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/d8b21gjq","slide":49,"text":"resolution","textPreview":"resolution","textChars":10,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/c72l8b25","slide":49,"text":"proof","textPreview":"proof","textChars":5,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/r6tkf61k","slide":49,"text":"VTU BCS515B • Module 3 • 49/50","textPreview":"VTU BCS515B • Module 3 • 49/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/bck12t","slide":49,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/olbv2x","slide":50,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/tgridkfa","slide":50,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/6tgz25gj","slide":50,"text":"Propositional inference: intuition","textPreview":"Propositional inference: intuition","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/7u90bax4","slide":50,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/gjih8zyl","slide":50,"text":"Think of propositional inference as a way to make an agent's next choice clearer.","textPreview":"Think of propositional inference as a way to make an agent's next choice clearer.","textChars":81,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/hkrihkf6","slide":50,"text":"• Why it matters: Resolution proves by contradiction.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Resolution proves by contradiction. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea ...","textChars":153,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/uh0z6pgf","slide":50,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/vi90fux0","slide":50,"text":"Resolution proves by contradiction.","textPreview":"Resolution proves by contradiction.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/4n2hczyx","slide":50,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/pobil4f2","slide":50,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/l0v6pcvq","slide":50,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/kzmpw7u5","slide":50,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/zyton2dk","slide":50,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/yxk7uxcz","slide":50,"text":"VTU BCS515B • Module 3 • 50/50","textPreview":"VTU BCS515B • Module 3 • 50/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/olbv2x","slide":50,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/jhveka","slide":51,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/n69cjyl4","slide":51,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/o7itc3m9","slide":51,"text":"Propositional inference: workflow","textPreview":"Propositional inference: workflow","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/98rul83u","slide":51,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/e1gb6t47","slide":51,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/z2pcfyls","slide":51,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/03yt8jmd","slide":51,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/147uho3y","slide":51,"text":"Resolution proves by contradiction.","textPreview":"Resolution proves by contradiction.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/qdwb294b","slide":51,"text":"truth-table checking","textPreview":"truth-table checking","textChars":20,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/rypsbelw","slide":51,"text":"equivalence","textPreview":"equivalence","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/byt8zipc","slide":51,"text":"resolution","textPreview":"resolution","textChars":10,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/axkr6d87","slide":51,"text":"proof","textPreview":"proof","textChars":5,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/x0ba1s7i","slide":51,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/cz298nqx","slide":51,"text":"VTU BCS515B • Module 3 • 51/50","textPreview":"VTU BCS515B • Module 3 • 51/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/jhveka","slide":51,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/mw0iua","slide":52,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":15}
+{"kind":"textbox","id":"sh/x8r250ze","slide":52,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/a503ulgn","slide":52,"text":"Propositional inference: example","textPreview":"Propositional inference: example","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/v69k3qh8","slide":52,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/83ilsbyx","slide":52,"text":"A small classroom example makes propositional inference concrete.","textPreview":"A small classroom example makes propositional inference concrete.","textChars":65,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/94r21gzi","slide":52,"text":"• Use the terms: truth-table checking, equivalence\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: truth-table checking, equivalence | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":136,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/m103q10r","slide":52,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/n29kz6hc","slide":52,"text":"Resolution proves by contradiction.","textPreview":"Resolution proves by contradiction.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/0fy1obil","slide":52,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/lg72xgz6","slide":52,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/pwrutsfy","slide":52,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/4vitkned","slide":52,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/3u9crixs","slide":52,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/2t0bidw7","slide":52,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/hsrup8fm","slide":52,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/grytg3e1","slide":52,"text":"truth-table checking","textPreview":"truth-table checking","textChars":20,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/fqpsnyxg","slide":52,"text":"VTU BCS515B • Module 3 • 52/50","textPreview":"VTU BCS515B • Module 3 • 52/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/mw0iua","slide":52,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/hpu3hk","slide":53,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/tw32lsra","slide":53,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/6ts3qx8z","slide":53,"text":"Propositional inference: algorithm / exam view","textPreview":"Propositional inference: algorithm / exam view","textChars":46,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/7ulkji9k","slide":53,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/gzulw7q1","slide":53,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/h032pcrm","slide":53,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Resolution proves by contradiction.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Res...","textChars":163,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/uxc3ux8v","slide":53,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/fylkn29g","slide":53,"text":"Resolution proves by contradiction.","textPreview":"Resolution proves by contradiction.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/w3a1k3qx","slide":53,"text":"truth-table checking","textPreview":"truth-table checking","textChars":20,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/x4j2d8ri","slide":53,"text":"equivalence","textPreview":"equivalence","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/xgfu5gby","slide":53,"text":"resolution","textPreview":"resolution","textChars":10,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/cf6dcbud","slide":53,"text":"proof","textPreview":"proof","textChars":5,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/bexc36ts","slide":53,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/adova1c7","slide":53,"text":"VTU BCS515B • Module 3 • 53/50","textPreview":"VTU BCS515B • Module 3 • 53/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/hpu3hk","slide":53,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/t6pcfa","slide":54,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/4nu58zyl","slide":54,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/jml4zeh0","slide":54,"text":"Module 3 summary map","textPreview":"Module 3 summary map","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ilcn69gf","slide":54,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/hk3mx4za","slide":54,"text":"Informed Search and Propositional Logic","textPreview":"Informed Search and Propositional Logic","textChars":39,"textLines":1,"bbox":[500,300,280,74]}
+{"kind":"textbox","id":"sh/wju54zyp","slide":54,"text":"Informed search","textPreview":"Informed search","textChars":15,"textLines":1,"bbox":[120,190,180,58]}
+{"kind":"textbox","id":"sh/vil4vuh4","slide":54,"text":"Greedy best-first search","textPreview":"Greedy best-first search","textChars":24,"textLines":1,"bbox":[400,190,180,58]}
+{"kind":"textbox","id":"sh/uhcn2pgj","slide":54,"text":"A* search","textPreview":"A* search","textChars":9,"textLines":1,"bbox":[680,190,180,58]}
+{"kind":"textbox","id":"sh/1g769ofe","slide":54,"text":"Heuristic functions","textPreview":"Heuristic functions","textChars":19,"textLines":1,"bbox":[960,190,180,58]}
+{"kind":"textbox","id":"sh/gfe5gjyt","slide":54,"text":"8-puzzle heuristics","textPreview":"8-puzzle heuristics","textChars":19,"textLines":1,"bbox":[120,430,180,58]}
+{"kind":"textbox","id":"sh/2d0fulkf","slide":54,"text":"Knowledge-based agents","textPreview":"Knowledge-based agents","textChars":22,"textLines":1,"bbox":[400,430,180,58]}
+{"kind":"textbox","id":"sh/3e9g3q10","slide":54,"text":"Wumpus world","textPreview":"Wumpus world","textChars":12,"textLines":1,"bbox":[680,430,180,58]}
+{"kind":"textbox","id":"sh/4fixwv2l","slide":54,"text":"Logic basics","textPreview":"Logic basics","textChars":12,"textLines":1,"bbox":[960,430,180,58]}
+{"kind":"textbox","id":"sh/pgry50j6","slide":54,"text":"Explain the module by connecting each outer idea back to the center.","textPreview":"Explain the module by connecting each outer idea back to the center.","textChars":68,"textLines":1,"bbox":[254,608,780,34]}
+{"kind":"textbox","id":"sh/u90fq1kj","slide":54,"text":"VTU BCS515B • Module 3 • 54/50","textPreview":"VTU BCS515B • Module 3 • 54/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/t6pcfa","slide":54,"text":"[Animation]\nReveal branches around the center. Ask students to supply one example for each branch.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/15wm5u","slide":55,"title":"Questions","textShapes":21}
+{"kind":"textbox","id":"sh/idgvup0j","slide":55,"text":"Questions","textPreview":"Questions","textChars":9,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/50rep4ju","slide":55,"text":"Module 3 exam practice","textPreview":"Module 3 exam practice","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/4fydwzi9","slide":55,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/vapwju1s","slide":55,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,166,46,46]}
+{"kind":"textbox","id":"sh/a9gvqp07","slide":55,"text":"Explain informed search with a neat diagram.","textPreview":"Explain informed search with a neat diagram.","textChars":44,"textLines":1,"bbox":[164,158,850,54]}
+{"kind":"textbox","id":"sh/xc7elkjy","slide":55,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,168,110,36]}
+{"kind":"textbox","id":"sh/wbydszid","slide":55,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,242,46,46]}
+{"kind":"textbox","id":"sh/n65wfa1w","slide":55,"text":"Apply greedy best-first search to a small example and state the takeaway.","textPreview":"Apply greedy best-first search to a small example and state the takeaway.","textChars":73,"textLines":1,"bbox":[164,234,850,54]}
+{"kind":"textbox","id":"sh/m5wvm5kb","slide":55,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,244,110,36]}
+{"kind":"textbox","id":"sh/kbups7mh","slide":55,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,318,46,46]}
+{"kind":"textbox","id":"sh/lc3q1cn2","slide":55,"text":"Explain a* search with a neat diagram.","textPreview":"Explain a* search with a neat diagram.","textChars":38,"textLines":1,"bbox":[164,310,850,54]}
+{"kind":"textbox","id":"sh/y9c7qh4b","slide":55,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,320,110,36]}
+{"kind":"textbox","id":"sh/jal8zm5w","slide":55,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,394,46,46]}
+{"kind":"textbox","id":"sh/wnupo7m5","slide":55,"text":"Apply heuristic functions to a small example and state the takeaway.","textPreview":"Apply heuristic functions to a small example and state the takeaway.","textChars":68,"textLines":1,"bbox":[164,386,850,54]}
+{"kind":"textbox","id":"sh/x83qxcnq","slide":55,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,396,110,36]}
+{"kind":"textbox","id":"sh/als7mx4f","slide":55,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,470,46,46]}
+{"kind":"textbox","id":"sh/bmlov250","slide":55,"text":"Explain 8-puzzle heuristics with a neat diagram.","textPreview":"Explain 8-puzzle heuristics with a neat diagram.","textChars":48,"textLines":1,"bbox":[164,462,850,54]}
+{"kind":"textbox","id":"sh/gjep0rmp","slide":55,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,472,110,36]}
+{"kind":"textbox","id":"sh/h4nq9wna","slide":55,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,546,46,46]}
+{"kind":"textbox","id":"sh/pojyxcr2","slide":55,"text":"Apply knowledge-based agents to a small example and state the takeaway.","textPreview":"Apply knowledge-based agents to a small example and state the takeaway.","textChars":71,"textLines":1,"bbox":[164,538,850,54]}
+{"kind":"textbox","id":"sh/4nah47ah","slide":55,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,548,110,36]}
+{"kind":"textbox","id":"sh/3mhgv2tw","slide":55,"text":"VTU BCS515B • Module 3 • 55/50","textPreview":"VTU BCS515B • Module 3 • 55/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/15wm5u","slide":55,"text":"[Animation]\nReveal questions one at a time. For each, ask students to first identify keywords from the syllabus.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/2jf4hg","slide":56,"title":"Module 3 / Informed Search and Propositional Logic","textShapes":12}
+{"kind":"textbox","id":"sh/fit4r25g","slide":56,"text":"Module 3 / Informed Search and Propositional Logic","textPreview":"Module 3 / Informed Search and Propositional Logic","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/gj2lk76l","slide":56,"text":"Informed search: algorithm / exam view","textPreview":"Informed search: algorithm / exam view","textChars":38,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/hkbmtcn6","slide":56,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/2lknmhor","slide":56,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/3mt4vm5c","slide":56,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Knowledge can reduce search dramatically.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Kno...","textChars":169,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/4n25or6x","slide":56,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/povmxwni","slide":56,"text":"Knowledge can reduce search dramatically.","textPreview":"Knowledge can reduce search dramatically.","textChars":41,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/qp4nq1o3","slide":56,"text":"domain knowledge","textPreview":"domain knowledge","textChars":16,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/rad4z658","slide":56,"text":"evaluation function","textPreview":"evaluation function","textChars":19,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/76dgrix8","slide":56,"text":"frontier ranking","textPreview":"frontier ranking","textChars":16,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/m5kfydg3","slide":56,"text":"best-first","textPreview":"best-first","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/98vytsfe","slide":56,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/87mx0net","slide":56,"text":"VTU BCS515B • Module 3 • 56/50","textPreview":"VTU BCS515B • Module 3 • 56/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/2jf4hg","slide":56,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}
+{"kind":"slide","id":"sl/7glu1n","slide":57,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/8fqdcjut","slide":57,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/7ehwjet8","slide":57,"text":"Module 3 summary map","textPreview":"Module 3 summary map","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/6d8va9cn","slide":57,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/lczehob2","slide":57,"text":"Informed Search and Propositional Logic","textPreview":"Informed Search and Propositional Logic","textChars":39,"textLines":1,"bbox":[500,300,280,74]}
+{"kind":"textbox","id":"sh/kbqd8juh","slide":57,"text":"Informed search","textPreview":"Informed search","textChars":15,"textLines":1,"bbox":[120,190,180,58]}
+{"kind":"textbox","id":"sh/jahwfetw","slide":57,"text":"Greedy best-first search","textPreview":"Greedy best-first search","textChars":24,"textLines":1,"bbox":[400,190,180,58]}
+{"kind":"textbox","id":"sh/y98vm9cb","slide":57,"text":"A* search","textPreview":"A* search","textChars":9,"textLines":1,"bbox":[680,190,180,58]}
+{"kind":"textbox","id":"sh/x8zed4b6","slide":57,"text":"Heuristic functions","textPreview":"Heuristic functions","textChars":19,"textLines":1,"bbox":[960,190,180,58]}
+{"kind":"textbox","id":"sh/w76dkzul","slide":57,"text":"8-puzzle heuristics","textPreview":"8-puzzle heuristics","textChars":19,"textLines":1,"bbox":[120,430,180,58]}
+{"kind":"textbox","id":"sh/ilobydsn","slide":57,"text":"Knowledge-based agents","textPreview":"Knowledge-based agents","textChars":22,"textLines":1,"bbox":[400,430,180,58]}
+{"kind":"textbox","id":"sh/jmxsrit8","slide":57,"text":"Wumpus world","textPreview":"Wumpus world","textChars":12,"textLines":1,"bbox":[680,430,180,58]}
+{"kind":"textbox","id":"sh/4n6t0nat","slide":57,"text":"Logic basics","textPreview":"Logic basics","textChars":12,"textLines":1,"bbox":[960,430,180,58]}
+{"kind":"textbox","id":"sh/5ofatsbe","slide":57,"text":"Explain the module by connecting each outer idea back to the center.","textPreview":"Explain the module by connecting each outer idea back to the center.","textChars":68,"textLines":1,"bbox":[254,608,780,34]}
+{"kind":"textbox","id":"sh/uh4budsr","slide":57,"text":"VTU BCS515B • Module 3 • 57/50","textPreview":"VTU BCS515B • Module 3 • 57/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/7glu1n","slide":57,"text":"[Animation]\nReveal branches around the center. Ask students to supply one example for each branch.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-3-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-3-textbook.pdf"}

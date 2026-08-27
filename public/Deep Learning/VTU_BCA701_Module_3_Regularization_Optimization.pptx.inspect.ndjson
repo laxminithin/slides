@@ -1,0 +1,382 @@
+{"kind":"deck","id":"pr/8z0ix8","name":"Deck"}
+{"kind":"layout","layoutId":"e4327ec5-8106-47be-a1dc-c1e4b8773574","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"688bfa8d-a6d4-4d28-b86c-fc133dcb89f3","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/zpx67i","slide":1,"title":"BCA701 Deep Learning","textShapes":4}
+{"kind":"textbox","id":"sh/25kvmlg3","slide":1,"text":"BCA701 Deep Learning","textPreview":"BCA701 Deep Learning","textChars":20,"textLines":1,"bbox":[42,40,540,36]}
+{"kind":"textbox","id":"sh/p8vex0zu","slide":1,"text":"Module 3: Regularization and Optimization","textPreview":"Module 3: Regularization and Optimization","textChars":41,"textLines":1,"bbox":[42,150,850,160]}
+{"kind":"textbox","id":"sh/o7mdovy9","slide":1,"text":"How deep models are kept from overfitting, and why their training landscapes are difficult: L2 penalties, augmentation, semi-supervised learning, ill-conditioning, local minima, plateaus, saddle points, and flat regions.","textPreview":"How deep models are kept from overfitting, and why their training landscapes are difficult: L2 penalties, augmentation, semi-supervised l...","textChars":220,"textLines":1,"bbox":[42,374,670,122]}
+{"kind":"shape","id":"sh/f2twr6hs","slide":1,"bbox":[820,78,330,510]}
+{"kind":"shape","id":"sh/e1kvilg7","slide":1,"bbox":[875,420,220,0]}
+{"kind":"shape","id":"sh/14betgzi","slide":1,"bbox":[895,190,0,260]}
+{"kind":"shape","id":"sh/g32dkbyd","slide":1,"bbox":[900,280,65,60]}
+{"kind":"shape","id":"sh/zydw3ahw","slide":1,"bbox":[965,280,55,116]}
+{"kind":"shape","id":"sh/yx4vu5gb","slide":1,"bbox":[1020,236,70,160]}
+{"kind":"shape","id":"sh/ozqp0fql","slide":1,"bbox":[1010,260,30,30]}
+{"kind":"shape","id":"sh/p0zqtkr6","slide":1,"bbox":[1035,375,30,30]}
+{"kind":"textbox","id":"sh/2xo7y58f","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"notes","id":"nt/zpx67i","slide":1,"text":"Title slide for Module 3, aligned to the local VTU syllabus and Goodfellow et al. textbook topics.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/hnj11e","slide":2,"title":"BCA701 Deep Learning | Module 3","textShapes":3}
+{"kind":"textbox","id":"sh/hgvut0re","slide":2,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/udkvi5sn","slide":2,"text":"Module 3 has two big jobs: generalize and train","textPreview":"Module 3 has two big jobs: generalize and train","textChars":47,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/vetcra98","slide":2,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/8b2dgvax","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/c7258r2h","slide":2,"name":"","rows":8,"cols":3,"preview":"Part | Syllabus checkpoint | What students should know","bbox":[54,195,1172,400]}
+{"kind":"notes","id":"nt/hnj11e","slide":2,"text":"This slide maps every phrase in Module 3 of the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/v8iyc4","slide":3,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/j25o7apk","slide":3,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/k3y5gfq5","slide":3,"text":"Regularization controls the gap between training fit and test performance","textPreview":"Regularization controls the gap between training fit and test performance","textChars":73,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/l4769k7q","slide":3,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/axwna583","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/by543apo","slide":3,"text":"Training error","textPreview":"Training error","textChars":14,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/wze5cvq9","slide":3,"text":"A high-capacity deep model can fit the training set very closely, sometimes memorizing noise or accidental patterns.","textPreview":"A high-capacity deep model can fit the training set very closely, sometimes memorizing noise or accidental patterns.","textChars":116,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/x0n6507e","slide":3,"text":"Generalization error","textPreview":"Generalization error","textChars":20,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/mtcn6l8r","slide":3,"text":"Regularization changes the learning problem so the model is encouraged to perform well on unseen data, not only on the examples it has already seen.","textPreview":"Regularization changes the learning problem so the model is encouraged to perform well on unseen data, not only on the examples it has al...","textChars":148,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/v8iyc4","slide":3,"text":"Regularization overview follows Goodfellow et al.'s framing of reducing generalization error.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/ljx2ue","slide":4,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/4n61cf6x","slide":4,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/jmxkjapc","slide":4,"text":"Parameter norm penalties regularize by making large weights costly","textPreview":"Parameter norm penalties regularize by making large weights costly","textChars":66,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/ilojapo7","slide":4,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/hkf2hk7m","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/wjm18f61","slide":4,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/vidkfapg","slide":4,"text":"J̃(θ) = J(θ) + α Ω(θ)","textPreview":"J̃(θ) = J(θ) + α Ω(θ)","textChars":21,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/uh4j65ov","slide":4,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/9gv2d07a","slide":4,"text":"J(θ) is the original training objective.","textPreview":"J(θ) is the original training objective.","textChars":40,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/8fm14v6p","slide":4,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/apwfm9wf","slide":4,"text":"Ω(θ) is a penalty that measures parameter size.","textPreview":"Ω(θ) is a penalty that measures parameter size.","textChars":47,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/bq5wved0","slide":4,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/crexozel","slide":4,"text":"α controls how strongly the penalty influences learning.","textPreview":"α controls how strongly the penalty influences learning.","textChars":56,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/ljx2ue","slide":4,"text":"Covers Parameter Norm Penalties from the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/r2dbyd","slide":5,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/vypkni94","slide":5,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/wzi1wnap","slide":5,"text":"L2 regularization uses the squared weight norm","textPreview":"L2 regularization uses the squared weight norm","textChars":46,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/h0r2psra","slide":5,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/mtgjqdsn","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/nupkjyt8","slide":5,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/8vy1s3ad","slide":5,"text":"Ω(w) = 1/2 ||w||²","textPreview":"Ω(w) = 1/2 ||w||²","textChars":17,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/9w72l8by","slide":5,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/ypwjmtsb","slide":5,"text":"The penalty grows rapidly as weights become large.","textPreview":"The penalty grows rapidly as weights become large.","textChars":50,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/zq50fytw","slide":5,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/zi58rmhs","slide":5,"text":"Bias terms are often left unpenalized or treated separately.","textPreview":"Bias terms are often left unpenalized or treated separately.","textChars":60,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/ehw7yh07","slide":5,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/14nqtczy","slide":5,"text":"The model is encouraged to use smaller, smoother weight values.","textPreview":"The model is encouraged to use smaller, smoother weight values.","textChars":63,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/r2dbyd","slide":5,"text":"Covers L2 Parameter Regularization.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/vhvvex","slide":6,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/bm1kvapc","slide":6,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/c7al4f6x","slide":6,"text":"L2 regularization appears in updates as weight decay","textPreview":"L2 regularization appears in updates as weight decay","textChars":52,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/d8j2xk7i","slide":6,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/y9s36po3","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/za1kzupo","slide":6,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/0bal8z69","slide":6,"text":"w ← (1 - ηα)w - η ∇w J","textPreview":"w ← (1 - ηα)w - η ∇w J","textChars":22,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/lc32147e","slide":6,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/mdc3a9oz","slide":6,"text":"η is the learning rate.","textPreview":"η is the learning rate.","textChars":23,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/nelk3upk","slide":6,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/7y1szudk","slide":6,"text":"α is the L2 regularization strength.","textPreview":"α is the L2 regularization strength.","textChars":36,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/6xsr69cz","slide":6,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/t0ja14va","slide":6,"text":"The factor (1 - ηα) shrinks weights before the ordinary gradient step.","textPreview":"The factor (1 - ηα) shrinks weights before the ordinary gradient step.","textChars":70,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/vhvvex","slide":6,"text":"Explains the practical training effect of L2 regularization as weight decay.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/k8zf3h","slide":7,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/atcjilof","slide":7,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/xgn2dg76","slide":7,"text":"L2 regularization biases learning toward simpler mappings","textPreview":"L2 regularization biases learning toward simpler mappings","textChars":57,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/wfelkb6l","slide":7,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/nqlk76p4","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/2pcje1oj","slide":7,"text":"Without L2","textPreview":"Without L2","textChars":10,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/9s329g7a","slide":7,"text":"A network may use large weights to create sharp, highly sensitive input-output behavior.","textPreview":"A network may use large weights to create sharp, highly sensitive input-output behavior.","textChars":88,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/oru1gb6p","slide":7,"text":"With L2","textPreview":"With L2","textChars":7,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/fm1k3mps","slide":7,"text":"Large weights are costly, so the model is nudged toward smoother functions that often generalize better.","textPreview":"Large weights are costly, so the model is nudged toward smoother functions that often generalize better.","textChars":104,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/k8zf3h","slide":7,"text":"Interpretation of L2 regularization from prescribed deep learning content.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/s2xrik","slide":8,"title":"BCA701 Deep Learning | Module 3","textShapes":3}
+{"kind":"textbox","id":"sh/vq94ratw","slide":8,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/gbi50fah","slide":8,"text":"Choosing α is a bias-variance trade-off","textPreview":"Choosing α is a bias-variance trade-off","textChars":39,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/hcrmtkb2","slide":8,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/idkn2ps7","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/u1wnah0f","slide":8,"name":"","rows":4,"cols":3,"preview":"α setting | Likely behavior | Risk","bbox":[90,220,1100,300]}
+{"kind":"notes","id":"nt/s2xrik","slide":8,"text":"Regularization strength must be selected using validation performance.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/sidfw8","slide":9,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/tcz2h07m","slide":9,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/6983mlov","slide":9,"text":"Dataset augmentation increases useful training variation","textPreview":"Dataset augmentation increases useful training variation","textChars":56,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/7ahkfqpg","slide":9,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/k7qlkb6p","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/l8z2dg7a","slide":9,"bbox":[94,229,9,9]}
+{"kind":"textbox","id":"sh/ylo3i1oz","slide":9,"text":"Create additional examples by applying label-preserving transformations.","textPreview":"Create additional examples by applying label-preserving transformations.","textChars":72,"textLines":1,"bbox":[118,220,1040,60]}
+{"kind":"shape","id":"sh/z6xkb6pk","slide":9,"bbox":[94,293,9,9]}
+{"kind":"textbox","id":"sh/43alwf69","slide":9,"text":"For images, common transformations include shifts, flips, crops, rotations, color changes, or small noise.","textPreview":"For images, common transformations include shifts, flips, crops, rotations, color changes, or small noise.","textChars":106,"textLines":1,"bbox":[118,284,1040,60]}
+{"kind":"shape","id":"sh/54jmpknu","slide":9,"bbox":[94,357,9,9]}
+{"kind":"textbox","id":"sh/1k7m9cbi","slide":9,"text":"The model sees more variation without requiring manual labeling of every new example.","textPreview":"The model sees more variation without requiring manual labeling of every new example.","textChars":85,"textLines":1,"bbox":[118,348,1040,60]}
+{"kind":"shape","id":"sh/0jy5g7ax","slide":9,"bbox":[94,421,9,9]}
+{"kind":"textbox","id":"sh/fip47mtc","slide":9,"text":"Augmentation encodes prior knowledge about what should not change the class label.","textPreview":"Augmentation encodes prior knowledge about what should not change the class label.","textChars":82,"textLines":1,"bbox":[118,412,1040,60]}
+{"kind":"notes","id":"nt/sidfw8","slide":9,"text":"Covers Dataset Augmentation from the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/i5e6oy","slide":10,"title":"BCA701 Deep Learning | Module 3","textShapes":10}
+{"kind":"textbox","id":"sh/1gz2xc72","slide":10,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/ed83mx8r","slide":10,"text":"Augmentation teaches invariance by example","textPreview":"Augmentation teaches invariance by example","textChars":42,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/fehkv29c","slide":10,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/sbqlk7ql","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/tcz2tsr6","slide":10,"bbox":[110,245,160,120]}
+{"kind":"textbox","id":"sh/6983ix8f","slide":10,"text":"Original\nimage","textPreview":"Original | image","textChars":14,"textLines":2,"bbox":[130,286,120,48]}
+{"kind":"shape","id":"sh/7ahkr290","slide":10,"bbox":[270,305,160,0]}
+{"kind":"shape","id":"sh/k76lgnqp","slide":10,"bbox":[430,215,150,90]}
+{"kind":"shape","id":"sh/58f2psru","slide":10,"bbox":[430,335,150,90]}
+{"kind":"shape","id":"sh/h83uhkfu","slide":10,"bbox":[630,215,150,90]}
+{"kind":"shape","id":"sh/gnatofe9","slide":10,"bbox":[630,335,150,90]}
+{"kind":"textbox","id":"sh/fm1cfax4","slide":10,"text":"crop","textPreview":"crop","textChars":4,"textLines":1,"bbox":[465,246,80,28]}
+{"kind":"textbox","id":"sh/ulsbm5wj","slide":10,"text":"flip","textPreview":"flip","textChars":4,"textLines":1,"bbox":[465,366,80,28]}
+{"kind":"textbox","id":"sh/tkjud0fy","slide":10,"text":"rotate","textPreview":"rotate","textChars":6,"textLines":1,"bbox":[660,246,90,28]}
+{"kind":"textbox","id":"sh/sjatkfed","slide":10,"text":"noise","textPreview":"noise","textChars":5,"textLines":1,"bbox":[664,366,80,28]}
+{"kind":"shape","id":"sh/7i1cbaxs","slide":10,"bbox":[780,305,160,0]}
+{"kind":"shape","id":"sh/6hsbi5w7","slide":10,"bbox":[940,245,190,120]}
+{"kind":"textbox","id":"sh/lgju90fm","slide":10,"text":"Same label\nstronger model","textPreview":"Same label | stronger model","textChars":25,"textLines":2,"bbox":[965,282,140,52]}
+{"kind":"textbox","id":"sh/kfqtgveh","slide":10,"text":"The label stays stable while the input appearance varies.","textPreview":"The label stays stable while the input appearance varies.","textChars":57,"textLines":1,"bbox":[245,505,790,36]}
+{"kind":"notes","id":"nt/i5e6oy","slide":10,"text":"Simple augmentation flow diagram for label-preserving transformations.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/ijxkp4","slide":11,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/0rqdczmx","slide":11,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/zqhw3elc","slide":11,"text":"Augmentation must preserve the meaning of the label","textPreview":"Augmentation must preserve the meaning of the label","textChars":51,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/ypova94r","slide":11,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/dofe143m","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/cn6d8zm1","slide":11,"text":"Good augmentation","textPreview":"Good augmentation","textChars":17,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/bmxwzulg","slide":11,"text":"The transformed sample still belongs to the same class and reflects realistic variation expected at test time.","textPreview":"The transformed sample still belongs to the same class and reflects realistic variation expected at test time.","textChars":110,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/qlov6p4v","slide":11,"text":"Bad augmentation","textPreview":"Bad augmentation","textChars":16,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/pkfexk3a","slide":11,"text":"The transformation changes the label, creates impossible examples, or teaches invariances the task does not actually have.","textPreview":"The transformation changes the label, creates impossible examples, or teaches invariances the task does not actually have.","textChars":122,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/ijxkp4","slide":11,"text":"Important condition for correct use of dataset augmentation.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/2u1jvp","slide":12,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/idcfu1oj","slide":12,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/5gnypg7a","slide":12,"text":"Semi-supervised learning uses unlabeled data as a training signal","textPreview":"Semi-supervised learning uses unlabeled data as a training signal","textChars":65,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/4fexwb6p","slide":12,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/r25grq5g","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/qhwfylov","slide":12,"text":"Available data","textPreview":"Available data","textChars":14,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/d4nytgn6","slide":12,"text":"A small labeled dataset is paired with a larger collection of unlabeled examples from the same problem domain.","textPreview":"A small labeled dataset is paired with a larger collection of unlabeled examples from the same problem domain.","textChars":110,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/s3eh0b6l","slide":12,"text":"Learning idea","textPreview":"Learning idea","textChars":13,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/7m1gfmpw","slide":12,"text":"The model uses unlabeled data to learn structure, representations, or consistency that can improve supervised prediction.","textPreview":"The model uses unlabeled data to learn structure, representations, or consistency that can improve supervised prediction.","textChars":121,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/2u1jvp","slide":12,"text":"Covers Semi-Supervised Learning from the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/id0h56","slide":13,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/c3mhwfyt","slide":13,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/b2d03uxo","slide":13,"text":"Unlabeled examples can shape the representation","textPreview":"Unlabeled examples can shape the representation","textChars":47,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/q14zupg3","slide":13,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/pgvi1kfi","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/ofmhsfyx","slide":13,"bbox":[88,250,220,110]}
+{"kind":"textbox","id":"sh/3et0zaxc","slide":13,"text":"Few labeled\nexamples","textPreview":"Few labeled | examples","textChars":20,"textLines":2,"bbox":[115,285,166,48]}
+{"kind":"shape","id":"sh/2dkzq5gr","slide":13,"bbox":[88,405,220,110]}
+{"kind":"textbox","id":"sh/1cbix0f6","slide":13,"text":"Many unlabeled\nexamples","textPreview":"Many unlabeled | examples","textChars":23,"textLines":2,"bbox":[112,440,172,48]}
+{"kind":"shape","id":"sh/gb2hovy1","slide":13,"bbox":[308,305,220,75]}
+{"kind":"shape","id":"sh/etc7mdoz","slide":13,"bbox":[308,380,220,80]}
+{"kind":"shape","id":"sh/zulofip4","slide":13,"bbox":[530,335,220,120]}
+{"kind":"textbox","id":"sh/0vepon6p","slide":13,"text":"Shared\nrepresentation","textPreview":"Shared | representation","textChars":21,"textLines":2,"bbox":[555,374,170,52]}
+{"kind":"shape","id":"sh/1wn6hs7a","slide":13,"bbox":[750,395,225,0]}
+{"kind":"shape","id":"sh/qpc7id8n","slide":13,"bbox":[975,335,210,120]}
+{"kind":"textbox","id":"sh/rqlobyp8","slide":13,"text":"Classifier\nprediction","textPreview":"Classifier | prediction","textChars":21,"textLines":2,"bbox":[1000,374,160,52]}
+{"kind":"notes","id":"nt/id0h56","slide":13,"text":"Semi-supervised learning uses unlabeled data to support representation learning.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/jgd3ho","slide":14,"title":"BCA701 Deep Learning | Module 3","textShapes":3}
+{"kind":"textbox","id":"sh/jatwji1g","slide":14,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/kb2xsn21","slide":14,"text":"Regularization techniques answer different overfitting problems","textPreview":"Regularization techniques answer different overfitting problems","textChars":63,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/5cbelsjm","slide":14,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/al0fmdkz","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/61cvehgj","slide":14,"name":"","rows":4,"cols":3,"preview":"Technique | What it changes | Best intuition","bbox":[82,220,1116,320]}
+{"kind":"notes","id":"nt/jgd3ho","slide":14,"text":"Comparison slide for all regularization topics in Module 3.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/a0v500","slide":15,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/a14f2dgn","slide":15,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/x4fyxsfe","slide":15,"text":"Optimization for deep models is hard because the loss surface is complex","textPreview":"Optimization for deep models is hard because the loss surface is complex","textChars":72,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/c3mx4nyt","slide":15,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/z6xgz2xk","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/y5of6xwz","slide":15,"bbox":[94,229,9,9]}
+{"kind":"textbox","id":"sh/lsfy1sfa","slide":15,"text":"Deep networks are trained by moving through a high-dimensional parameter space.","textPreview":"Deep networks are trained by moving through a high-dimensional parameter space.","textChars":79,"textLines":1,"bbox":[118,220,1040,60]}
+{"kind":"shape","id":"sh/kr6x87ep","slide":15,"bbox":[94,293,9,9]}
+{"kind":"textbox","id":"sh/7uxg32xg","slide":15,"text":"The objective can curve sharply in some directions and barely change in others.","textPreview":"The objective can curve sharply in some directions and barely change in others.","textChars":79,"textLines":1,"bbox":[118,284,1040,60]}
+{"kind":"shape","id":"sh/mtofaxwv","slide":15,"bbox":[94,357,9,9]}
+{"kind":"textbox","id":"sh/wra503et","slide":15,"text":"Gradients can point in directions that are locally correct but globally inefficient.","textPreview":"Gradients can point in directions that are locally correct but globally inefficient.","textChars":84,"textLines":1,"bbox":[118,348,1040,60]}
+{"kind":"shape","id":"sh/hsjm98ve","slide":15,"bbox":[94,421,9,9]}
+{"kind":"textbox","id":"sh/up8nydwn","slide":15,"text":"The syllabus highlights ill-conditioning, local minima, plateaus, saddle points, and flat regions.","textPreview":"The syllabus highlights ill-conditioning, local minima, plateaus, saddle points, and flat regions.","textChars":98,"textLines":1,"bbox":[118,412,1040,60]}
+{"kind":"notes","id":"nt/a0v500","slide":15,"text":"Introduces Optimization for Training Deep Models and its listed challenges.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/q21z5n","slide":16,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/r694vi10","slide":16,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/s7i5onil","slide":16,"text":"Gradient descent follows local slope, not global understanding","textPreview":"Gradient descent follows local slope, not global understanding","textChars":62,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/d8rmxsj6","slide":16,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/e9knqx0r","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/fatoz21w","slide":16,"bbox":[98,224,1084,116]}
+{"kind":"textbox","id":"sh/0b25s7ih","slide":16,"text":"θ ← θ - η ∇θ J(θ)","textPreview":"θ ← θ - η ∇θ J(θ)","textChars":17,"textLines":1,"bbox":[132,254,1015,52]}
+{"kind":"shape","id":"sh/1wb61cj2","slide":16,"bbox":[118,399,9,9]}
+{"kind":"textbox","id":"sh/udgnet07","slide":16,"text":"θ represents all trainable parameters.","textPreview":"θ represents all trainable parameters.","textChars":38,"textLines":1,"bbox":[142,390,1000,44]}
+{"kind":"shape","id":"sh/vep4ny1s","slide":16,"bbox":[118,447,9,9]}
+{"kind":"textbox","id":"sh/j6dcra5k","slide":16,"text":"∇θ J is the gradient of the objective.","textPreview":"∇θ J is the gradient of the objective.","textChars":38,"textLines":1,"bbox":[142,438,1000,44]}
+{"kind":"shape","id":"sh/y54by54z","slide":16,"bbox":[118,495,9,9]}
+{"kind":"textbox","id":"sh/l8futknq","slide":16,"text":"η is the learning rate controlling step size.","textPreview":"η is the learning rate controlling step size.","textChars":45,"textLines":1,"bbox":[142,486,1000,44]}
+{"kind":"notes","id":"nt/q21z5n","slide":16,"text":"Basic gradient descent update used to discuss optimization challenges.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/zbmki8","slide":17,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/x8f2psve","slide":17,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/a5o3udcn","slide":17,"text":"Ill-conditioning makes some directions much harder than others","textPreview":"Ill-conditioning makes some directions much harder than others","textChars":62,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/b6xknid8","slide":17,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/o3m1s3ux","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/p4v2l8vi","slide":17,"text":"The problem","textPreview":"The problem","textChars":11,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/2h4jqdcr","slide":17,"text":"The loss surface can have very different curvature along different parameter directions.","textPreview":"The loss surface can have very different curvature along different parameter directions.","textChars":88,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/nidkjidc","slide":17,"text":"Training effect","textPreview":"Training effect","textChars":15,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/8zql47u1","slide":17,"text":"A step size that is safe in a steep direction may be painfully slow in a flat direction, producing zig-zag or slow progress.","textPreview":"A step size that is safe in a steep direction may be painfully slow in a flat direction, producing zig-zag or slow progress.","textChars":124,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/zbmki8","slide":17,"text":"Covers Ill Conditioning from the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/rmsjcr","slide":18,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/pwrexwvy","slide":18,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/290v21c7","slide":18,"text":"Ill-conditioning is about curvature, not only about high loss","textPreview":"Ill-conditioning is about curvature, not only about high loss","textChars":61,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/3u9wvmds","slide":18,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/cz2dsbup","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/d0be1gvu","slide":18,"bbox":[160,500,420,0]}
+{"kind":"shape","id":"sh/qxkvq1cj","slide":18,"bbox":[190,230,0,290]}
+{"kind":"shape","id":"sh/rytwz6d4","slide":18,"bbox":[280,280,260,62]}
+{"kind":"shape","id":"sh/s3ydw7u5","slide":18,"bbox":[315,300,190,46]}
+{"kind":"shape","id":"sh/t47upcvq","slide":18,"bbox":[350,317,120,30]}
+{"kind":"textbox","id":"sh/hw3ix0je","slide":18,"text":"narrow valley","textPreview":"narrow valley","textChars":13,"textLines":1,"bbox":[315,235,190,30]}
+{"kind":"shape","id":"sh/gvuh4vit","slide":18,"bbox":[690,279,9,9]}
+{"kind":"textbox","id":"sh/ful0vq1o","slide":18,"text":"Steep across the valley.","textPreview":"Steep across the valley.","textChars":24,"textLines":1,"bbox":[714,270,450,60]}
+{"kind":"shape","id":"sh/utcz2l03","slide":18,"bbox":[690,343,9,9]}
+{"kind":"textbox","id":"sh/p0ni1kzq","slide":18,"text":"Flat along the valley.","textPreview":"Flat along the valley.","textChars":22,"textLines":1,"bbox":[714,334,450,60]}
+{"kind":"shape","id":"sh/4zeh8fi5","slide":18,"bbox":[690,407,9,9]}
+{"kind":"textbox","id":"sh/3yl0za1k","slide":18,"text":"Naive gradient steps can bounce across the steep direction while making slow progress forward.","textPreview":"Naive gradient steps can bounce across the steep direction while making slow progress forward.","textChars":94,"textLines":1,"bbox":[714,398,450,60]}
+{"kind":"notes","id":"nt/rmsjcr","slide":18,"text":"Visual intuition for ill-conditioned curvature.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/gpfbz0","slide":19,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/l03yxo3i","slide":19,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/ydsf29k7","slide":19,"text":"Local minima are points lower than their neighborhood","textPreview":"Local minima are points lower than their neighborhood","textChars":53,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/zy1gvelc","slide":19,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/cbax0z21","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/xcjyt43m","slide":19,"text":"Definition","textPreview":"Definition","textChars":10,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/a9sfypkv","slide":19,"text":"A local minimum has no nearby direction that immediately decreases the objective, but it may not be the best possible solution overall.","textPreview":"A local minimum has no nearby direction that immediately decreases the objective, but it may not be the best possible solution overall.","textChars":135,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/ba1grulg","slide":19,"text":"Deep-learning nuance","textPreview":"Deep-learning nuance","textChars":20,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/o7qxwz2p","slide":19,"text":"In high-dimensional deep networks, poor local minima are one concern, but saddle points and flat regions can also be major obstacles.","textPreview":"In high-dimensional deep networks, poor local minima are one concern, but saddle points and flat regions can also be major obstacles.","textChars":133,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/gpfbz0","slide":19,"text":"Covers Local Minima and places them among other optimization issues.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/6n6e2m","slide":20,"title":"BCA701 Deep Learning | Module 3","textShapes":3}
+{"kind":"textbox","id":"sh/e98bm1cz","slide":20,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/1czuhgva","slide":20,"text":"Local minima are not the only stationary points","textPreview":"Local minima are not the only stationary points","textChars":47,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/0bqtobup","slide":20,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/r6xsb6d8","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/vypgr61g","slide":20,"name":"","rows":5,"cols":3,"preview":"Point type | Gradient | Curvature intuition","bbox":[76,215,1128,340]}
+{"kind":"notes","id":"nt/6n6e2m","slide":20,"text":"Distinguishes local minima from saddle points, plateaus, and flat regions.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/zylawy","slide":21,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/wruh8r2p","slide":21,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/vq10fm1k","slide":21,"text":"Plateaus slow learning because gradients become tiny","textPreview":"Plateaus slow learning because gradients become tiny","textChars":52,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/upsz6hkz","slide":21,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/5g3ilgjm","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/4fuhcb21","slide":21,"bbox":[94,229,9,9]}
+{"kind":"textbox","id":"sh/jel0j61g","slide":21,"text":"A plateau is a broad region where the objective changes very slowly.","textPreview":"A plateau is a broad region where the objective changes very slowly.","textChars":68,"textLines":1,"bbox":[118,220,1040,60]}
+{"kind":"shape","id":"sh/itcza1kv","slide":21,"bbox":[94,293,9,9]}
+{"kind":"textbox","id":"sh/lkji9cj2","slide":21,"text":"Small gradients produce very small updates.","textPreview":"Small gradients produce very small updates.","textChars":43,"textLines":1,"bbox":[118,284,1040,60]}
+{"kind":"shape","id":"sh/kjqh072x","slide":21,"bbox":[94,357,9,9]}
+{"kind":"textbox","id":"sh/utk32toj","slide":21,"text":"Training may appear stuck even when it has not reached a good solution.","textPreview":"Training may appear stuck even when it has not reached a good solution.","textChars":71,"textLines":1,"bbox":[118,348,1040,60]}
+{"kind":"shape","id":"sh/vutkvy54","slide":21,"bbox":[94,421,9,9]}
+{"kind":"textbox","id":"sh/gf2l436p","slide":21,"text":"Momentum, adaptive methods, or better initialization can sometimes help move across plateaus.","textPreview":"Momentum, adaptive methods, or better initialization can sometimes help move across plateaus.","textChars":93,"textLines":1,"bbox":[118,412,1040,60]}
+{"kind":"notes","id":"nt/zylawy","slide":21,"text":"Covers Plateaus from the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/h811f0","slide":22,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/6pkvixs3","slide":22,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/tcbetcre","slide":22,"text":"Saddle points can look like minima to first-order methods","textPreview":"Saddle points can look like minima to first-order methods","textChars":57,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/8r2xk7at","slide":22,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/vetwv29k","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/udkfmxsz","slide":22,"text":"What a saddle is","textPreview":"What a saddle is","textChars":16,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/hgbexcrq","slide":22,"text":"A saddle point slopes upward in some directions and downward in others, while the gradient near the point can be very small.","textPreview":"A saddle point slopes upward in some directions and downward in others, while the gradient near the point can be very small.","textChars":124,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/gf2xo7a5","slide":22,"text":"Why it matters","textPreview":"Why it matters","textChars":14,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/3idwzm9g","slide":22,"text":"Gradient-based training can slow down near saddle points because the immediate slope gives weak guidance.","textPreview":"Gradient-based training can slow down near saddle points because the immediate slope gives weak guidance.","textChars":105,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/h811f0","slide":22,"text":"Covers Saddle Points from the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/fjvvtv","slide":23,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/kr25wvip","slide":23,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/jqto3qh4","slide":23,"text":"Flat regions make progress hard to measure","textPreview":"Flat regions make progress hard to measure","textChars":42,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/ypknul0z","slide":23,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/xobm1gze","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/wn25sbit","slide":23,"bbox":[94,229,9,9]}
+{"kind":"textbox","id":"sh/bmt4zqh8","slide":23,"text":"Flat regions are areas of parameter space with very low curvature and weak gradients.","textPreview":"Flat regions are areas of parameter space with very low curvature and weak gradients.","textChars":85,"textLines":1,"bbox":[118,220,1040,60]}
+{"kind":"shape","id":"sh/alknql0n","slide":23,"bbox":[94,293,9,9]}
+{"kind":"textbox","id":"sh/hkf6dkzi","slide":23,"text":"Updates can be small even when the model is far from the best parameters.","textPreview":"Updates can be small even when the model is far from the best parameters.","textChars":73,"textLines":1,"bbox":[118,284,1040,60]}
+{"kind":"shape","id":"sh/gj654fix","slide":23,"bbox":[94,357,9,9]}
+{"kind":"textbox","id":"sh/apcnepk3","slide":23,"text":"Flatness can also be connected to many different parameter settings producing similar training loss.","textPreview":"Flatness can also be connected to many different parameter settings producing similar training loss.","textChars":100,"textLines":1,"bbox":[118,348,1040,60]}
+{"kind":"shape","id":"sh/bql4nu1o","slide":23,"bbox":[94,421,9,9]}
+{"kind":"textbox","id":"sh/wru5gf2t","slide":23,"text":"Learning curves may show long stretches of little visible improvement.","textPreview":"Learning curves may show long stretches of little visible improvement.","textChars":70,"textLines":1,"bbox":[118,412,1040,60]}
+{"kind":"notes","id":"nt/fjvvtv","slide":23,"text":"Covers Other Flat Regions from the syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/cf2v16","slide":24,"title":"BCA701 Deep Learning | Module 3","textShapes":3}
+{"kind":"textbox","id":"sh/wbq9gnmd","slide":24,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/vahsnils","slide":24,"text":"Optimization challenges affect training in different ways","textPreview":"Optimization challenges affect training in different ways","textChars":57,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/u9ored47","slide":24,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/98fql83m","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/t4v250ji","slide":24,"name":"","rows":6,"cols":3,"preview":"Challenge | What happens | Training symptom","bbox":[60,205,1160,370]}
+{"kind":"notes","id":"nt/cf2v16","slide":24,"text":"Summary of every optimization challenge listed in Module 3.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/qjzs7s","slide":25,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/wf6psf29","slide":25,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/bex8jalo","slide":25,"text":"Regularization and optimization solve different problems","textPreview":"Regularization and optimization solve different problems","textChars":56,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/ado7qp4j","slide":25,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/9cfqhk3y","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"textbox","id":"sh/obmpofmd","slide":25,"text":"Regularization asks","textPreview":"Regularization asks","textChars":19,"textLines":1,"bbox":[72,210,500,40]}
+{"kind":"textbox","id":"sh/nad8fals","slide":25,"text":"Will the trained model generalize to unseen examples?","textPreview":"Will the trained model generalize to unseen examples?","textChars":53,"textLines":1,"bbox":[72,266,500,250]}
+{"kind":"textbox","id":"sh/2947m547","slide":25,"text":"Optimization asks","textPreview":"Optimization asks","textChars":17,"textLines":1,"bbox":[680,210,500,40]}
+{"kind":"textbox","id":"sh/t8zqt432","slide":25,"text":"Can the training procedure find useful parameters efficiently?","textPreview":"Can the training procedure find useful parameters efficiently?","textChars":62,"textLines":1,"bbox":[680,266,500,250]}
+{"kind":"notes","id":"nt/qjzs7s","slide":25,"text":"Connects the two halves of Module 3 without confusing their roles.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/b6x1f8","slide":26,"title":"BCA701 Deep Learning | Module 3","textShapes":10}
+{"kind":"textbox","id":"sh/pkvyponm","slide":26,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/2x4futov","slide":26,"text":"A practical training workflow uses both ideas together","textPreview":"A practical training workflow uses both ideas together","textChars":54,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/nydwny5g","slide":26,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/cn6x036x","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/xofyt8ni","slide":26,"bbox":[66,310,135,96]}
+{"kind":"textbox","id":"sh/alofytor","slide":26,"text":"Data","textPreview":"Data","textChars":4,"textLines":1,"bbox":[76,337,115,44]}
+{"kind":"shape","id":"sh/bmxgry5c","slide":26,"bbox":[201,358,55,0]}
+{"kind":"shape","id":"sh/sr2xoj6t","slide":26,"bbox":[256,310,135,96]}
+{"kind":"textbox","id":"sh/dsbeh4ne","slide":26,"text":"Augment /\nsemi-supervise","textPreview":"Augment / | semi-supervise","textChars":24,"textLines":2,"bbox":[266,337,115,44]}
+{"kind":"shape","id":"sh/d4j6lsj2","slide":26,"bbox":[391,358,55,0]}
+{"kind":"shape","id":"sh/c3a5cnih","slide":26,"bbox":[446,310,135,96]}
+{"kind":"textbox","id":"sh/b2h4j21w","slide":26,"text":"Model","textPreview":"Model","textChars":5,"textLines":1,"bbox":[456,337,115,44]}
+{"kind":"shape","id":"sh/q18nax0b","slide":26,"bbox":[581,358,55,0]}
+{"kind":"shape","id":"sh/l8j6pczy","slide":26,"bbox":[636,310,135,96]}
+{"kind":"textbox","id":"sh/07a5g7id","slide":26,"text":"Regularized\nobjective","textPreview":"Regularized | objective","textChars":21,"textLines":2,"bbox":[646,337,115,44]}
+{"kind":"shape","id":"sh/z61on2hs","slide":26,"bbox":[771,358,55,0]}
+{"kind":"shape","id":"sh/y5snex07","slide":26,"bbox":[826,310,135,96]}
+{"kind":"textbox","id":"sh/9w36tczu","slide":26,"text":"Optimizer","textPreview":"Optimizer","textChars":9,"textLines":1,"bbox":[836,337,115,44]}
+{"kind":"shape","id":"sh/8bu5k7ip","slide":26,"bbox":[961,358,55,0]}
+{"kind":"shape","id":"sh/8f2pgvql","slide":26,"bbox":[1016,310,135,96]}
+{"kind":"textbox","id":"sh/tgbqp076","slide":26,"text":"Validation","textPreview":"Validation","textChars":10,"textLines":1,"bbox":[1026,337,115,44]}
+{"kind":"textbox","id":"sh/6d07el8v","slide":26,"text":"The training loop balances generalization pressure with optimization progress.","textPreview":"The training loop balances generalization pressure with optimization progress.","textChars":78,"textLines":1,"bbox":[150,510,980,42]}
+{"kind":"notes","id":"nt/b6x1f8","slide":26,"text":"Workflow synthesis for Module 3.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/h8l5yr","slide":27,"title":"BCA701 Deep Learning | Module 3","textShapes":11}
+{"kind":"textbox","id":"sh/epc3mx4r","slide":27,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/1s32xc3i","slide":27,"text":"A good exam answer should separate examples from mechanisms","textPreview":"A good exam answer should separate examples from mechanisms","textChars":59,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/0rulo7mx","slide":27,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/rm1kril0","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/q1sjix4v","slide":27,"bbox":[72,210,500,150]}
+{"kind":"textbox","id":"sh/do32ts36","slide":27,"text":"L2 penalty","textPreview":"L2 penalty","textChars":10,"textLines":1,"bbox":[94,232,456,34]}
+{"kind":"textbox","id":"sh/snalknml","slide":27,"text":"State objective plus squared weight norm and explain weight decay.","textPreview":"State objective plus squared weight norm and explain weight decay.","textChars":66,"textLines":1,"bbox":[94,278,456,62]}
+{"kind":"shape","id":"sh/bi5k3mlk","slide":27,"bbox":[680,210,500,150]}
+{"kind":"textbox","id":"sh/axw3uh4z","slide":27,"text":"Augmentation","textPreview":"Augmentation","textChars":12,"textLines":1,"bbox":[702,232,456,34]}
+{"kind":"textbox","id":"sh/cr694vqh","slide":27,"text":"Name label-preserving transformations and why they help generalization.","textPreview":"Name label-preserving transformations and why they help generalization.","textChars":71,"textLines":1,"bbox":[702,278,456,62]}
+{"kind":"shape","id":"sh/xsfqx07m","slide":27,"bbox":[72,420,500,150]}
+{"kind":"textbox","id":"sh/apo72l8b","slide":27,"text":"Semi-supervised","textPreview":"Semi-supervised","textChars":15,"textLines":1,"bbox":[94,442,456,34]}
+{"kind":"textbox","id":"sh/bqx8vqpw","slide":27,"text":"Explain how unlabeled data supports representation or consistency.","textPreview":"Explain how unlabeled data supports representation or consistency.","textChars":66,"textLines":1,"bbox":[94,488,456,62]}
+{"kind":"shape","id":"sh/onmp0bq5","slide":27,"bbox":[680,420,500,150]}
+{"kind":"textbox","id":"sh/povqtg7q","slide":27,"text":"Optimization","textPreview":"Optimization","textChars":12,"textLines":1,"bbox":[702,442,456,34]}
+{"kind":"textbox","id":"sh/2l47yl8z","slide":27,"text":"Define each challenge and state its training symptom.","textPreview":"Define each challenge and state its training symptom.","textChars":53,"textLines":1,"bbox":[702,488,456,62]}
+{"kind":"notes","id":"nt/h8l5yr","slide":27,"text":"Exam-oriented synthesis for Module 3.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/6gsh8h","slide":28,"title":"BCA701 Deep Learning | Module 3","textShapes":3}
+{"kind":"textbox","id":"sh/atgba54n","slide":28,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/xwrul0ny","slide":28,"text":"Module 3 vocabulary students must own","textPreview":"Module 3 vocabulary students must own","textChars":37,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/wvitcvmt","slide":28,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/n6psfq5w","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/3eh4ve1c","slide":28,"name":"","rows":9,"cols":2,"preview":"Term | Meaning","bbox":[72,195,1136,405]}
+{"kind":"notes","id":"nt/6gsh8h","slide":28,"text":"Vocabulary review for all Module 3 topics.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/0b6s9u","slide":29,"title":"BCA701 Deep Learning | Module 3","textShapes":7}
+{"kind":"textbox","id":"sh/buhwvu54","slide":29,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/wvaxozmp","slide":29,"text":"Mini activity: diagnose the training problem","textPreview":"Mini activity: diagnose the training problem","textChars":44,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/xwjex4na","slide":29,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/yxsfq94v","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/jy1wzu50","slide":29,"bbox":[94,229,9,9]}
+{"kind":"textbox","id":"sh/kzaxszml","slide":29,"text":"Show a training curve where training accuracy rises but validation accuracy falls: identify overfitting and suggest regularization.","textPreview":"Show a training curve where training accuracy rises but validation accuracy falls: identify overfitting and suggest regularization.","textChars":131,"textLines":1,"bbox":[118,220,1040,60]}
+{"kind":"shape","id":"sh/l0je14n6","slide":29,"bbox":[94,293,9,9]}
+{"kind":"textbox","id":"sh/61sfu94r","slide":29,"text":"Show a loss curve with long flat stretches: identify plateau or flat-region behavior.","textPreview":"Show a loss curve with long flat stretches: identify plateau or flat-region behavior.","textChars":85,"textLines":1,"bbox":[118,284,1040,60]}
+{"kind":"shape","id":"sh/721w3e5c","slide":29,"bbox":[94,357,9,9]}
+{"kind":"textbox","id":"sh/nalsrux8","slide":29,"text":"Show unstable zig-zag loss changes: discuss learning rate and ill-conditioning.","textPreview":"Show unstable zig-zag loss changes: discuss learning rate and ill-conditioning.","textChars":79,"textLines":1,"bbox":[118,348,1040,60]}
+{"kind":"shape","id":"sh/29cripwn","slide":29,"bbox":[94,421,9,9]}
+{"kind":"textbox","id":"sh/pc3at4fy","slide":29,"text":"Ask students to name which Module 3 idea applies to each case.","textPreview":"Ask students to name which Module 3 idea applies to each case.","textChars":62,"textLines":1,"bbox":[118,412,1040,60]}
+{"kind":"notes","id":"nt/0b6s9u","slide":29,"text":"Classroom activity aligned with regularization and optimization diagnosis.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/6x4iiy","slide":30,"title":"BCA701 Deep Learning | Module 3","textShapes":3}
+{"kind":"textbox","id":"sh/nmdo3i50","slide":30,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/onmpwnm5","slide":30,"text":"Coverage checklist: every Module 3 phrase is included","textPreview":"Coverage checklist: every Module 3 phrase is included","textChars":53,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/9of6583q","slide":30,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/apo7yd4b","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"table","id":"tb/6dsvy1c3","slide":30,"name":"","rows":12,"cols":2,"preview":"Syllabus phrase | Covered in slides","bbox":[72,195,1136,405]}
+{"kind":"notes","id":"nt/6x4iiy","slide":30,"text":"This checklist verifies full Module 3 syllabus coverage.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}
+{"kind":"slide","id":"sl/3d599y","slide":31,"title":"BCA701 Deep Learning | Module 3","textShapes":6}
+{"kind":"textbox","id":"sh/3ilovitk","slide":31,"text":"BCA701 Deep Learning | Module 3","textPreview":"BCA701 Deep Learning | Module 3","textChars":31,"textLines":1,"bbox":[42,28,520,28]}
+{"kind":"textbox","id":"sh/4je54na5","slide":31,"text":"Prescribed textbook reference for Module 3","textPreview":"Prescribed textbook reference for Module 3","textChars":42,"textLines":1,"bbox":[42,68,1180,72]}
+{"kind":"shape","id":"sh/pkn6xsbq","slide":31,"bbox":[42,151,1196,0]}
+{"kind":"textbox","id":"sh/qlwn6xsv","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1184,660,54,24]}
+{"kind":"shape","id":"sh/rm5oz2tg","slide":31,"bbox":[94,239,9,9]}
+{"kind":"textbox","id":"sh/cne587a1","slide":31,"text":"Primary reference: Goodfellow, Bengio, and Courville, Deep Learning, MIT Press, 2016.","textPreview":"Primary reference: Goodfellow, Bengio, and Courville, Deep Learning, MIT Press, 2016.","textChars":85,"textLines":1,"bbox":[118,230,1050,68]}
+{"kind":"shape","id":"sh/don61cbm","slide":31,"bbox":[94,311,9,9]}
+{"kind":"textbox","id":"sh/epwnaxs7","slide":31,"text":"Use the textbook for regularization, L2 penalties, dataset augmentation, semi-supervised learning, and optimization challenges.","textPreview":"Use the textbook for regularization, L2 penalties, dataset augmentation, semi-supervised learning, and optimization challenges.","textChars":127,"textLines":1,"bbox":[118,302,1050,68]}
+{"kind":"shape","id":"sh/zq5o32ts","slide":31,"bbox":[94,383,9,9]}
+{"kind":"textbox","id":"sh/ji5sr6hg","slide":31,"text":"Use the VTU syllabus as the boundary for what belongs in Module 3.","textPreview":"Use the VTU syllabus as the boundary for what belongs in Module 3.","textChars":66,"textLines":1,"bbox":[118,374,1050,68]}
+{"kind":"notes","id":"nt/3d599y","slide":31,"text":"Final reference slide with the prescribed textbook and syllabus.\n\n[Sources]\nLocal syllabus PDF: public/Deep Learning/Nithin K — https:vtu.ac.in:pdf:2022_3to8:7cseaisyll.pdf\nIan Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016. Official online book: https://www.deeplearningbook.org/ ; MIT Press listing: https://mitpress.mit.edu/9780262035613/deep-learning/"}

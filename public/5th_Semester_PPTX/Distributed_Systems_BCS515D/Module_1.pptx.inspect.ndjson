@@ -1,0 +1,1068 @@
+{"kind":"deck","id":"pr/132jrt","name":"Deck"}
+{"kind":"layout","layoutId":"b11b326d-8431-433a-af2b-5e2bd8a2ce10","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"b179d8b4-79a8-472a-b0c9-0f7fe73e02b7","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/dizx91","slide":1,"title":"BCS515D | Distributed Systems","textShapes":10}
+{"kind":"textbox","id":"sh/f650fmtc","slide":1,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/g7e18rux","slide":1,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/h8nihcbi","slide":1,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/29wjahcn","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/3a50jmt8","slide":1,"text":"Characterization and Remote Invocation","textPreview":"Characterization and Remote Invocation","textChars":38,"textLines":1,"bbox":[76,98,780,116]}
+{"kind":"textbox","id":"sh/4ve1crut","slide":1,"text":"Distributed Systems | Module 1","textPreview":"Distributed Systems | Module 1","textChars":30,"textLines":1,"bbox":[80,224,780,72]}
+{"kind":"shape","id":"sh/pw7ilwbe","slide":1,"bbox":[82,318,180,7]}
+{"kind":"textbox","id":"sh/idczyxcj","slide":1,"text":"Hook","textPreview":"Hook","textChars":4,"textLines":1,"bbox":[163,430,170,92]}
+{"kind":"textbox","id":"sh/jel072t4","slide":1,"text":"Core concept","textPreview":"Core concept","textChars":12,"textLines":1,"bbox":[359,430,170,92]}
+{"kind":"textbox","id":"sh/3qlwnql0","slide":1,"text":"Mechanism","textPreview":"Mechanism","textChars":9,"textLines":1,"bbox":[555,430,170,92]}
+{"kind":"textbox","id":"sh/2pcfel4f","slide":1,"text":"Worked example","textPreview":"Worked example","textChars":14,"textLines":1,"bbox":[751,430,170,92]}
+{"kind":"textbox","id":"sh/ps3ep036","slide":1,"text":"Exam-ready recap","textPreview":"Exam-ready recap","textChars":16,"textLines":1,"bbox":[947,430,170,92]}
+{"kind":"shape","id":"sh/oruxgvml","slide":1,"bbox":[333,476,26,0]}
+{"kind":"shape","id":"sh/fm1wj6l4","slide":1,"bbox":[529,476,26,0]}
+{"kind":"shape","id":"sh/elsval4j","slide":1,"bbox":[725,476,26,0]}
+{"kind":"shape","id":"sh/1o3elg3a","slide":1,"bbox":[921,476,26,0]}
+{"kind":"notes","id":"nt/dizx91","slide":1,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/6fqy1y","slide":2,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/eds36pgf","slide":2,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/1gjmhkzq","slide":2,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/gfal8fyl","slide":2,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/3i14juhw","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/2hs3apgb","slide":2,"text":"Teaching route","textPreview":"Teaching route","textChars":14,"textLines":1,"bbox":[78,112,700,48]}
+{"kind":"shape","id":"sh/pk3ml4z2","slide":2,"bbox":[96,217,16,16]}
+{"kind":"textbox","id":"sh/ojalczyh","slide":2,"text":"Start with why the module matters.","textPreview":"Start with why the module matters.","textChars":34,"textLines":1,"bbox":[126,210,990,42]}
+{"kind":"shape","id":"sh/b6l4nuh8","slide":2,"bbox":[96,293,16,16]}
+{"kind":"textbox","id":"sh/qlc3e9gn","slide":2,"text":"Build one concept at a time with a diagram or worked trace.","textPreview":"Build one concept at a time with a diagram or worked trace.","textChars":59,"textLines":1,"bbox":[126,286,990,42]}
+{"kind":"shape","id":"sh/wj2hsze5","slide":2,"bbox":[96,369,16,16]}
+{"kind":"textbox","id":"sh/hkbil4fq","slide":2,"text":"Use examples before definitions become abstract.","textPreview":"Use examples before definitions become abstract.","textChars":48,"textLines":1,"bbox":[126,362,990,42]}
+{"kind":"shape","id":"sh/uh0zqpwz","slide":2,"bbox":[96,445,16,16]}
+{"kind":"textbox","id":"sh/vi90juxk","slide":2,"text":"End with definitions, algorithms/formulas, mistakes and practice questions.","textPreview":"End with definitions, algorithms/formulas, mistakes and practice questions.","textChars":75,"textLines":1,"bbox":[126,438,990,42]}
+{"kind":"notes","id":"nt/6fqy1y","slide":2,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/woiaob","slide":3,"title":"BCS515D | Distributed Systems","textShapes":10}
+{"kind":"textbox","id":"sh/d4f6hgbm","slide":3,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/q14n6lcv","slide":3,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/r2x4fqtg","slide":3,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/4zm54bup","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/50vmdgba","slide":3,"text":"Module map","textPreview":"Module map","textChars":10,"textLines":1,"bbox":[78,112,700,48]}
+{"kind":"shape","id":"sh/id4n21cz","slide":3,"bbox":[96,193,16,16]}
+{"kind":"textbox","id":"sh/3ed4b6tk","slide":3,"text":"Introduction to distributed systems","textPreview":"Introduction to distributed systems","textChars":35,"textLines":1,"bbox":[126,186,1000,42]}
+{"kind":"shape","id":"sh/gbm50rut","slide":3,"bbox":[96,251,16,16]}
+{"kind":"textbox","id":"sh/hcvm9wbe","slide":3,"text":"Resource sharing","textPreview":"Resource sharing","textChars":16,"textLines":1,"bbox":[126,244,1000,42]}
+{"kind":"shape","id":"sh/tonihoja","slide":3,"bbox":[96,309,16,16]}
+{"kind":"textbox","id":"sh/8ne18j2p","slide":3,"text":"Challenges","textPreview":"Challenges","textChars":10,"textLines":1,"bbox":[126,302,1000,42]}
+{"kind":"shape","id":"sh/7m50fel4","slide":3,"bbox":[96,367,16,16]}
+{"kind":"textbox","id":"sh/6lwj69kj","slide":3,"text":"Request-reply protocols","textPreview":"Request-reply protocols","textChars":23,"textLines":1,"bbox":[126,360,1000,42]}
+{"kind":"shape","id":"sh/lknid43y","slide":3,"bbox":[96,425,16,16]}
+{"kind":"textbox","id":"sh/kje14z2d","slide":3,"text":"Remote procedure call","textPreview":"Remote procedure call","textChars":21,"textLines":1,"bbox":[126,418,1000,42]}
+{"kind":"shape","id":"sh/ji50buls","slide":3,"bbox":[96,483,16,16]}
+{"kind":"textbox","id":"sh/yhcj2pkn","slide":3,"text":"Remote method invocation","textPreview":"Remote method invocation","textChars":24,"textLines":1,"bbox":[126,476,1000,42]}
+{"kind":"notes","id":"nt/woiaob","slide":3,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/piqhci","slide":4,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/43i1gnup","slide":4,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/329knid4","slide":4,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/21gjedcz","slide":4,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/d8r2tcvm","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/c7i1k7u1","slide":4,"text":"Introduction to distributed systems","textPreview":"Introduction to distributed systems","textChars":35,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/r69kr2dg","slide":4,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/q50jixcv","slide":4,"text":"Introduction to distributed systems is best taught as a nodes problem, not as a memorized definition.","textPreview":"Introduction to distributed systems is best taught as a nodes problem, not as a memorized definition.","textChars":101,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/1wb2xcvi","slide":4,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/0b21o7ux","slide":4,"text":"The key mechanism connects network with shared resource so that students can predict the result.","textPreview":"The key mechanism connects network with shared resource so that students can predict the result.","textChars":96,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/qtw7a1gf","slide":4,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/rupoj6h0","slide":4,"text":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textPreview":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textChars":96,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/cvypcbyl","slide":4,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/dw76lgzq","slide":4,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/ehg7elgb","slide":4,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/zipon6hw","slide":4,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/0jypgbyh","slide":4,"text":"failure concern","textPreview":"failure concern","textChars":15,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/1k7qpgz2","slide":4,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/ulcn2hg7","slide":4,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/fmlobmhs","slide":4,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/juhcnyt8","slide":4,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/yt8vutsn","slide":4,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/lgzupobe","slide":4,"text":"This topic explains how introduction to distributed systems changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how introduction to distributed systems changes design decisions, program behaviour, protocol results or proof struct...","textChars":141,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/piqhci","slide":4,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/kvt03w","slide":5,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/32dwvehw","slide":5,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/o3mxojyh","slide":5,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/p4vexoz2","slide":5,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/exkvi9gf","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/fytwruh0","slide":5,"text":"Introduction to distributed systems: message movement","textPreview":"Introduction to distributed systems: message movement","textChars":53,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/gz2xkzyl","slide":5,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/10bet4z6","slide":5,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/690vepgj","slide":5,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/ratwnuho","slide":5,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/netwj29g","slide":5,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/2dkfqx8v","slide":5,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/kvt03w","slide":5,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/u19ybl","slide":6,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/4zq9w7yx","slide":6,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/jyh8n2hc","slide":6,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ix87uhgr","slide":6,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/t4jqtwze","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/s3a90ryt","slide":6,"text":"Introduction to distributed systems: worked example","textPreview":"Introduction to distributed systems: worked example","textChars":51,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/r218rmh8","slide":6,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/61sryhgn","slide":6,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/1s3qxwfa","slide":6,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/gra94ryp","slide":6,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/q9ozitgb","slide":6,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/raxgryhg","slide":6,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/cb6hk3y1","slide":6,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/dcfyt8zm","slide":6,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/edozmtg7","slide":6,"text":"Identify network","textPreview":"Identify network","textChars":16,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/zexgvyhs","slide":6,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/0z6ho3yd","slide":6,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/10zyx8zy","slide":6,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/uh4fa9g3","slide":6,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/vidgjeh8","slide":6,"text":"Apply shared resource","textPreview":"Apply shared resource","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/zap4v6t4","slide":6,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/y9gn21sj","slide":6,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/lcrmxgbu","slide":6,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/kby54bap","slide":6,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/b6p4r6ts","slide":6,"text":"Check protocol","textPreview":"Check protocol","textChars":14,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/a5gny1s7","slide":6,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/x87mtgby","slide":6,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/c7y50bad","slide":6,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/v2943qtc","slide":6,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/u10nalsr","slide":6,"text":"Conclude failure concern","textPreview":"Conclude failure concern","textChars":24,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/snu14nq9","slide":6,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/d832xsru","slide":6,"text":"Use this structure whenever introduction to distributed systems appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever introduction to distributed systems appears as a 10-mark explanation or trace problem.","textChars":114,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/u19ybl","slide":6,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/ayqsnc","slide":7,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/1gf65oz2","slide":7,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/eto7utgb","slide":7,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/fexo3ehw","slide":7,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ojqp03yd","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/pkz698zy","slide":7,"text":"Resource sharing","textPreview":"Resource sharing","textChars":16,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/2ho7ytgn","slide":7,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/3ixo7yh8","slide":7,"text":"Resource sharing is best taught as a nodes problem, not as a memorized definition.","textPreview":"Resource sharing is best taught as a nodes problem, not as a memorized definition.","textChars":82,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/cnqp43yp","slide":7,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/doz6d8fa","slide":7,"text":"The key mechanism connects network with shared resource so that students can predict the result.","textPreview":"The key mechanism connects network with shared resource so that students can predict the result.","textChars":96,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/pwv29cza","slide":7,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/ovm107yp","slide":7,"text":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textPreview":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textChars":96,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/nadk72h4","slide":7,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/294jyxgj","slide":7,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/x0f2dcz6","slide":7,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/czm147y1","slide":7,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/bydkb2hg","slide":7,"text":"failure concern","textPreview":"failure concern","textChars":15,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/ax4j2xgv","slide":7,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/t4bi18z2","slide":7,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/s321snyh","slide":7,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/4z6t47up","slide":7,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/50zaxcba","slide":7,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/ixob2hcj","slide":7,"text":"This topic explains how resource sharing changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how resource sharing changes design decisions, program behaviour, protocol results or proof structure.","textChars":122,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/ayqsnc","slide":7,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/jhytsp","slide":8,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/q9ozatsf","slide":8,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/dcfilob6","slide":8,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/sb6hc3al","slide":8,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/36d0feto","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/i54z69sj","slide":8,"text":"Resource sharing: message movement","textPreview":"Resource sharing: message movement","textChars":34,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/58fihobu","slide":8,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/476h8ja9","slide":8,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/n2h0rit8","slide":8,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/218jidsn","slide":8,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/crqh47it","slide":8,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/dszidcje","slide":8,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/jhytsp","slide":8,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/vfjfxh","slide":9,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/ml43al0n","slide":9,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/9ovml0je","slide":9,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/8nmlcvit","slide":9,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/zit4fq1c","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/yhk36l0r","slide":9,"text":"Resource sharing: worked example","textPreview":"Resource sharing: worked example","textChars":32,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/lkbmh0j2","slide":9,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/0j2l8vix","slide":9,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/jex4ra1g","slide":9,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/ido3i50v","slide":9,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/4na90vah","slide":9,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/5ojat0r2","slide":9,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/il8rylsb","slide":9,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/jm1srq9w","slide":9,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/wjq9wba5","slide":9,"text":"Identify network","textPreview":"Identify network","textChars":16,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/hkzapgrq","slide":9,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/ux8rulsf","slide":9,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/vyhsnq9k","slide":9,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/8vq9sba9","slide":9,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/9wzalgru","slide":9,"text":"Apply shared resource","textPreview":"Apply shared resource","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/9crqpcji","slide":9,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/oripw72x","slide":9,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/nq98n21c","slide":9,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/mpg7uxkr","slide":9,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/1o7qls3m","slide":9,"text":"Check protocol","textPreview":"Check protocol","textChars":14,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/0nypsn21","slide":9,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/zmp8jilg","slide":9,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/elg7qdkv","slide":9,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/lkbqxwjq","slide":9,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/kj294r25","slide":9,"text":"Conclude failure concern","textPreview":"Conclude failure concern","textChars":24,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/2pcny90n","slide":9,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/3ql4reh8","slide":9,"text":"Use this structure whenever resource sharing appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever resource sharing appears as a 10-mark explanation or trace problem.","textChars":95,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/vfjfxh","slide":9,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/47nv03","slide":10,"title":"BCS515D | Distributed Systems","textShapes":16}
+{"kind":"textbox","id":"sh/m1cbup4v","slide":10,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/9o3ap4nm","slide":10,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/8nutwzm1","slide":10,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/vqlsre5c","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/apcby947","slide":10,"text":"Resource sharing: common confusion","textPreview":"Resource sharing: common confusion","textChars":34,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/xsnat4ni","slide":10,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/wrut0jmx","slide":10,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/bu1sfa58","slide":10,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/qtsrm54n","slide":10,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/gfmd0rmh","slide":10,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/hgve9wn2","slide":10,"text":"Treating Resource sharing as only a definition","textPreview":"Treating Resource sharing as only a definition","textChars":46,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/udkvyh4r","slide":10,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/vedw7m5c","slide":10,"text":"Explain nodes -> shared resource -> failure concern","textPreview":"Explain nodes -> shared resource -> failure concern","textChars":51,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/43mx4rmt","slide":10,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/54vedw3e","slide":10,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/i14f2h4n","slide":10,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/32dwbm58","slide":10,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/k72ds7mp","slide":10,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/l8be1snu","slide":10,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/143u5ofy","slide":10,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/03utwjed","slide":10,"text":"Use terms such as nodes, network, shared resource","textPreview":"Use terms such as nodes, network, shared resource","textChars":49,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/47nv03","slide":10,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/6boqo1","slide":11,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/298rehgr","slide":11,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/pwza9cfi","slide":11,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ovq9g7yx","slide":11,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/byhsbmx8","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ax8rihgn","slide":11,"text":"Challenges","textPreview":"Challenges","textChars":10,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/x0jadwfe","slide":11,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/czqtkryt","slide":11,"text":"Challenges is best taught as a nodes problem, not as a memorized definition.","textPreview":"Challenges is best taught as a nodes problem, not as a memorized definition.","textChars":76,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/z21sfmxk","slide":11,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/y1sbm1gz","slide":11,"text":"The key mechanism connects network with shared resource so that students can predict the result.","textPreview":"The key mechanism connects network with shared resource so that students can predict the result.","textChars":96,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/8jul0ja9","slide":11,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/tk3mtobe","slide":11,"text":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textPreview":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textChars":96,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/6hc3y9s3","slide":11,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/7il4reto","slide":11,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/gnul43a5","slide":11,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/honmxobq","slide":11,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/ulc32tsz","slide":11,"text":"failure concern","textPreview":"failure concern","textChars":15,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/vml4vytk","slide":11,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/4be583a1","slide":11,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/5cnm18bm","slide":11,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/d8jml83q","slide":11,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/c7als32l","slide":11,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/r614jyl0","slide":11,"text":"This topic explains how challenges changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how challenges changes design decisions, program behaviour, protocol results or proof structure.","textChars":116,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/6boqo1","slide":11,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/n7i1av","slide":12,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/0veh4ru5","slide":12,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/zu50vmdk","slide":12,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/etwz2hcz","slide":12,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/dsnitcve","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/creh0rut","slide":12,"text":"Challenges: message movement","textPreview":"Challenges: message movement","textChars":28,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/rq50rmd8","slide":12,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/qpczyhcn","slide":12,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/xo7i5gvi","slide":12,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/wny1cbux","slide":12,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/m9sfytw3","slide":12,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/nu1grydo","slide":12,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/n7i1av","slide":12,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/82hl64","slide":13,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/mho7mh87","slide":13,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/9kfqxwri","slide":13,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/8j6porqx","slide":13,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/vmx8z6po","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/alo7q183","slide":13,"text":"Challenges: worked example","textPreview":"Challenges: worked example","textChars":26,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/xofq1w7u","slide":13,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/wn6psbq9","slide":13,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/jqh836p0","slide":13,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/ip87u18f","slide":13,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/g7u1kvu5","slide":13,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/h8nid0bq","slide":13,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/u5cji5cz","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/f6l0batk","slide":13,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/4ve1ofuh","slide":13,"text":"Identify network","textPreview":"Identify network","textChars":16,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/pwn2hkbm","slide":13,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/2twjm5cb","slide":13,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/3u50fatw","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/czy1sfud","slide":13,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/d072lkby","slide":13,"text":"Apply shared resource","textPreview":"Apply shared resource","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/lg3i5k32","slide":13,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/0fu1wfmh","slide":13,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/zel03alw","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/ydsjup4b","slide":13,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/9k32943y","slide":13,"text":"Check protocol","textPreview":"Check protocol","textChars":14,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/8ju10zmt","slide":13,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/nil07ul8","slide":13,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/mhcjyp4n","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/pojix03u","slide":13,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/ona1ovm9","slide":13,"text":"Conclude failure concern","textPreview":"Conclude failure concern","textChars":24,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/uho7ihgv","slide":13,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/vixob2xg","slide":13,"text":"Use this structure whenever challenges appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever challenges appears as a 10-mark explanation or trace problem.","textChars":89,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/82hl64","slide":13,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/nty9cf","slide":14,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/twv2x0je","slide":14,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/6t4j2lk3","slide":14,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/7udkvq18","slide":14,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/gz618f25","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/h0f210jq","slide":14,"text":"Request-reply protocols","textPreview":"Request-reply protocols","textChars":23,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/ux4j65kz","slide":14,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/fyxkza1k","slide":14,"text":"Request-reply protocols is best taught as a client stub problem, not as a memorized definition.","textPreview":"Request-reply protocols is best taught as a client stub problem, not as a memorized definition.","textChars":95,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/4n61cf21","slide":14,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/pof25kjm","slide":14,"text":"The key mechanism connects marshal request with server dispatch so that students can predict the result.","textPreview":"The key mechanism connects marshal request with server dispatch so that students can predict the result.","textChars":104,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/18j2xo3m","slide":14,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/07al4j21","slide":14,"text":"For exams, draw the model first, label each step, and then explain reply and exception handling.","textPreview":"For exams, draw the model first, label each step, and then explain reply and exception handling.","textChars":96,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/f61kvelg","slide":14,"text":"client stub","textPreview":"client stub","textChars":11,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/e5s329kb","slide":14,"text":"marshal request","textPreview":"marshal request","textChars":15,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/pw321o3y","slide":14,"text":"server dispatch","textPreview":"server dispatch","textChars":15,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/oval8j2d","slide":14,"text":"reply","textPreview":"reply","textChars":5,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/nu1kzels","slide":14,"text":"exception handling","textPreview":"exception handling","textChars":18,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/2ts369k7","slide":14,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/50z2p43e","slide":14,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/4zq1wz2t","slide":14,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/wjulczap","slide":14,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/xk32l4ba","slide":14,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/ahs3apcz","slide":14,"text":"This topic explains how request-reply protocols changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how request-reply protocols changes design decisions, program behaviour, protocol results or proof structure.","textChars":129,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/nty9cf","slide":14,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/4qj25u","slide":15,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/x8b6pgfq","slide":15,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/a507e1wf","slide":15,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/b69on6xk","slide":15,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/o3i5sry9","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/p4r6lwfu","slide":15,"text":"Request-reply protocols: message movement","textPreview":"Request-reply protocols: message movement","textChars":41,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/210nq1g3","slide":15,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/329oj6xo","slide":15,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/gfy5oryx","slide":15,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/1gr6hwfi","slide":15,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/lg7u54zu","slide":15,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/0fydczi9","slide":15,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/4qj25u","slide":15,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/c0tt2i","slide":16,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/wrutoz2p","slide":16,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/vqlsvul4","slide":16,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/apcrmpkz","slide":16,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/5gna1o3m","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/kfutsj21","slide":16,"text":"Request-reply protocols: worked example","textPreview":"Request-reply protocols: worked example","textChars":39,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/jelszelg","slide":16,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/idcbq9kv","slide":16,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/lkjapk32","slide":16,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/0ja9gfmh","slide":16,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/2tknm14b","slide":16,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/3utov6lw","slide":16,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/ov25obmh","slide":16,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/pwb6xw32","slide":16,"text":"client stub","textPreview":"client stub","textChars":11,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/qxknq14n","slide":16,"text":"Identify marshal request","textPreview":"Identify marshal request","textChars":24,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/bytoz6l8","slide":16,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/cz25sbmd","slide":16,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/xkv61g3y","slide":16,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/yl4nul4j","slide":16,"text":"marshal request","textPreview":"marshal request","textChars":15,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/zmdo3ql4","slide":16,"text":"Apply server dispatch","textPreview":"Apply server dispatch","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/vqd4bq1c","slide":16,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/up4nil0r","slide":16,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/hsfmd0j2","slide":16,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/wr65kvix","slide":16,"text":"server dispatch","textPreview":"server dispatch","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/7md47610","slide":16,"text":"Check reply","textPreview":"Check reply","textChars":11,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/ml43e1kf","slide":16,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/9ovm9gj6","slide":16,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/8nm5gb2l","slide":16,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/zyt43614","slide":16,"text":"reply","textPreview":"reply","textChars":5,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/yxk3a1kj","slide":16,"text":"Conclude exception handling","textPreview":"Conclude exception handling","textChars":27,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/o3i1k7ih","slide":16,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/p4r2dcz2","slide":16,"text":"Use this structure whenever request-reply protocols appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever request-reply protocols appears as a 10-mark explanation or trace problem.","textChars":102,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/c0tt2i","slide":16,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/h9eoid","slide":17,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/0fap0b2l","slide":17,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/feho7610","slide":17,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ed87y1kf","slide":17,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/dcz65wju","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/sbqpwb2p","slide":17,"text":"Remote procedure call","textPreview":"Remote procedure call","textChars":21,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/raho3614","slide":17,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/q987u1kj","slide":17,"text":"Remote procedure call is best taught as a nodes problem, not as a memorized definition.","textPreview":"Remote procedure call is best taught as a nodes problem, not as a memorized definition.","textChars":87,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/58z61wjy","slide":17,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/4nqpsr2d","slide":17,"text":"The key mechanism connects network with shared resource so that students can predict the result.","textPreview":"The key mechanism connects network with shared resource so that students can predict the result.","textChars":96,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/up4nytob","slide":17,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/fqdo7y5w","slide":17,"text":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textPreview":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textChars":96,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/gr650j6h","slide":17,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/hsf69on2","slide":17,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/6l4nu9of","slide":17,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/7md43e50","slide":17,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/snm5wj6l","slide":17,"text":"failure concern","textPreview":"failure concern","textChars":15,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/tovm5onq","slide":17,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/yxknq9o3","slide":17,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/jyt4ze5o","slide":17,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/nqpsb6hk","slide":17,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/2pgbi10z","slide":17,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/ps7udgza","slide":17,"text":"This topic explains how remote procedure call changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how remote procedure call changes design decisions, program behaviour, protocol results or proof structure.","textChars":127,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/h9eoid","slide":17,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/d5puz6","slide":18,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/61kbit0n","slide":18,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/t4vadoje","slide":18,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/s32tk3it","slide":18,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/jyts7e1c","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ixkre90r","slide":18,"text":"Remote procedure call: message movement","textPreview":"Remote procedure call: message movement","textChars":39,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/50ba9oj2","slide":18,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/4z29gjix","slide":18,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/va9s3e10","slide":18,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/u90ra90f","slide":18,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/orupwj25","slide":18,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/ps3q5ojq","slide":18,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/d5puz6","slide":18,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/6xka7i","slide":19,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/4j6x0fy1","slide":19,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/3ixwraxg","slide":19,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/2hovy5gb","slide":19,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/hgfep0fq","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/gf6dwvy5","slide":19,"text":"Remote procedure call: worked example","textPreview":"Remote procedure call: worked example","textChars":37,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/fexwnqxk","slide":19,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/udovulgz","slide":19,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/1cje14fu","slide":19,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/0bqx8zy9","slide":19,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/ilkb21ov","slide":19,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/jmdsv6pg","slide":19,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/knmt4b61","slide":19,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/5ovuxg7m","slide":19,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/axkby1oz","slide":19,"text":"Identify network","textPreview":"Identify network","textChars":16,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/vitsrmpk","slide":19,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/wj2t0r65","slide":19,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/xkbatw7q","slide":19,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/ut4balo3","slide":19,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/fexc3qpo","slide":19,"text":"Apply shared resource","textPreview":"Apply shared resource","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/rm5gfy14","slide":19,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/qlwz6t0j","slide":19,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/donihoju","slide":19,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/cneh8jip","slide":19,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/zqp0jy10","slide":19,"text":"Check protocol","textPreview":"Check protocol","textChars":14,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/epwzat0f","slide":19,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/1s7il8j6","slide":19,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/0ryhc3il","slide":19,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/nep0ni1c","slide":19,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/mdgzed0r","slide":19,"text":"Conclude failure concern","textPreview":"Conclude failure concern","textChars":24,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/kjih4nyp","slide":19,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/lkryd8fa","slide":19,"text":"Use this structure whenever remote procedure call appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever remote procedure call appears as a 10-mark explanation or trace problem.","textChars":100,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/6xka7i","slide":19,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/6g6w84","slide":20,"title":"BCS515D | Distributed Systems","textShapes":16}
+{"kind":"textbox","id":"sh/65cbepcr","slide":20,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/t8nup4vi","slide":20,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/87utgzux","slide":20,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/va5cred8","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/u9wbi9c3","slide":20,"text":"Remote procedure call: common confusion","textPreview":"Remote procedure call: common confusion","textChars":39,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/hwnut4ve","slide":20,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/gvetkzut","slide":20,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/3y5cvedk","slide":20,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/2xwbm9cz","slide":20,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/szyt07il","slide":20,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/t07utcj6","slide":20,"text":"Treating Remote procedure call as only a definition","textPreview":"Treating Remote procedure call as only a definition","textChars":51,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/6xgbyh0f","slide":20,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/7ypcrm10","slide":20,"text":"Explain nodes -> shared resource -> failure concern","textPreview":"Explain nodes -> shared resource -> failure concern","textChars":51,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/gnid4rih","slide":20,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/horuxwz2","slide":20,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/ul0v2h0r","slide":20,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/fm9cvm1c","slide":20,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/4rid8rit","slide":20,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/psru1wze","slide":20,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/d87ulwri","slide":20,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/c7etsrax","slide":20,"text":"Use terms such as nodes, network, shared resource","textPreview":"Use terms such as nodes, network, shared resource","textChars":49,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/6g6w84","slide":20,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/lays1b","slide":21,"title":"BCS515D | Distributed Systems","textShapes":14}
+{"kind":"textbox","id":"sh/qlcby90v","slide":21,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/donut4zm","slide":21,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/cnet0zi1","slide":21,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/3ylcnu14","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/2xcbup0j","slide":21,"text":"Remote method invocation","textPreview":"Remote method invocation","textChars":24,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/p03up4ja","slide":21,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/ozutwzip","slide":21,"text":"Remote method invocation is best taught as a nodes problem, not as a memorized definition.","textPreview":"Remote method invocation is best taught as a nodes problem, not as a memorized definition.","textChars":90,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/nupczeho","slide":21,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/mtwv6t03","slide":21,"text":"The key mechanism connects network with shared resource so that students can predict the result.","textPreview":"The key mechanism connects network with shared resource so that students can predict the result.","textChars":96,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/4nexc3qt","slide":21,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/pony587e","slide":21,"text":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textPreview":"For exams, draw the model first, label each step, and then explain protocol and failure concern.","textChars":96,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/2lwfat8n","slide":21,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/3m5g3yp8","slide":21,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/gjex8jqh","slide":21,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/hkny1o72","slide":21,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/uhcf6t8r","slide":21,"text":"failure concern","textPreview":"failure concern","textChars":15,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/filgzepw","slide":21,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/svux4jql","slide":21,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/tg3yxo76","slide":21,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/90bmlgfi","slide":21,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/8z25cbex","slide":21,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/nyt4j6xs","slide":21,"text":"This topic explains how remote method invocation changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how remote method invocation changes design decisions, program behaviour, protocol results or proof structure.","textChars":130,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/lays1b","slide":21,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/88rja4","slide":22,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/dwrax872","slide":22,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/qtgbmt8b","slide":22,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/rupsvypw","slide":22,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/4rytkjq5","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/5s7ato7q","slide":22,"text":"Remote method invocation: message movement","textPreview":"Remote method invocation: message movement","textChars":42,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/ipgrit8f","slide":22,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/3qpsrep0","slide":22,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/g3e9gjq9","slide":22,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/honapo7u","slide":22,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/x8za9onu","slide":22,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/w7q9gj69","slide":22,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/88rja4","slide":22,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/8a03ns","slide":23,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/lkve9w3q","slide":23,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/yxkve14z","slide":23,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/jidw7m5k","slide":23,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/wv2dcrm9","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/xwbe5wne","slide":23,"text":"Remote method invocation: worked example","textPreview":"Remote method invocation: worked example","textChars":40,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/atkvah43","slide":23,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/butw3m5o","slide":23,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/or2d87mx","slide":23,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/9sbe1cni","slide":23,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/lozqxgn2","slide":23,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/knqpob6x","slide":23,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/jmh8v65c","slide":23,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/yl87mlor","slide":23,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/xkzqtgn6","slide":23,"text":"Identify network","textPreview":"Identify network","textChars":16,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/cz6pkb6l","slide":23,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/byx8r650","slide":23,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/axo7i1of","slide":23,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/pwf6pwnu","slide":23,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/ov6pgr6p","slide":23,"text":"Apply shared resource","textPreview":"Apply shared resource","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/gfapwrel","slide":23,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/10jq5wvq","slide":23,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/eds7u1wf","slide":23,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/fe1836d0","slide":23,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/sbqpsre9","slide":23,"text":"Check protocol","textPreview":"Check protocol","textChars":14,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/tczq1wvu","slide":23,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/6987qhw3","slide":23,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/rah8zmdo","slide":23,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/c7u94bed","slide":23,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/x83qdgvy","slide":23,"text":"Conclude failure concern","textPreview":"Conclude failure concern","textChars":24,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/725s3uxg","slide":23,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/m1wbupgv","slide":23,"text":"Use this structure whenever remote method invocation appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever remote method invocation appears as a 10-mark explanation or trace problem.","textChars":103,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/8a03ns","slide":23,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/qlgczz","slide":24,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/bixs32lk","slide":24,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/cj6tw7m5","slide":24,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/xkfa5s3q","slide":24,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ylobyx4b","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/zmhc72lg","slide":24,"text":"Introduction to distributed systems vs Resource sharing","textPreview":"Introduction to distributed systems vs Resource sharing","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/knqt07m1","slide":24,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/lozu9c3m","slide":24,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/ep4bmd4r","slide":24,"text":"Introduction to distributed systems","textPreview":"Introduction to distributed systems","textChars":35,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/fqdsvi5c","slide":24,"text":"Resource sharing","textPreview":"Resource sharing","textChars":16,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/fy1k7ep4","slide":24,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/uxs3et8j","slide":24,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/h0j29o7a","slide":24,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/gzalgjqp","slide":24,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/7uhk3e9s","slide":24,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/6t83a987","slide":24,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/twj25ory","slide":24,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/8vqlcjqd","slide":24,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/jqhkzu9w","slide":24,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/y58j6p8b","slide":24,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/m1o3ips3","slide":24,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/n2x4buto","slide":24,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/o36lkza9","slide":24,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/94fmd4bu","slide":24,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/ap83m9sf","slide":24,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/bqh4fet0","slide":24,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/qlgczz","slide":24,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/qgglie","slide":25,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/x4nal072","slide":25,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/a1wrq58b","slide":25,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/b25sjapw","slide":25,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/krytwfqd","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ls7apk7y","slide":25,"text":"Request-reply protocols vs Remote procedure call","textPreview":"Request-reply protocols vs Remote procedure call","textChars":48,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/ypwbu587","slide":25,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/zq5snaps","slide":25,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/gvu9kvq9","slide":25,"text":"Request-reply protocols","textPreview":"Request-reply protocols","textChars":23,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/1w3adg7u","slide":25,"text":"Remote procedure call","textPreview":"Remote procedure call","textChars":21,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/t0jqpozq","slide":25,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/szqpg3y5","slide":25,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/ryh8nyhk","slide":25,"text":"client stub","textPreview":"client stub","textChars":11,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/6x87etgz","slide":25,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/1ojqd8zm","slide":25,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/gna9k3y1","slide":25,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/fm18byhw","slide":25,"text":"server dispatch","textPreview":"server dispatch","textChars":15,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/els7itgb","slide":25,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/ps3qh8zy","slide":25,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ora9onyd","slide":25,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/ovitkr6p","slide":25,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/9wbatwnu","slide":25,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/mt0rihoj","slide":25,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/nu9srm54","slide":25,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/wz2tor6l","slide":25,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/x0baxwn6","slide":25,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/qgglie","slide":25,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/5q985a","slide":26,"title":"BCS515D | Distributed Systems","textShapes":15}
+{"kind":"textbox","id":"sh/hs3at8vq","slide":26,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/u5srydwz","slide":26,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/f6lsrixk","slide":26,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/s3a9w3et","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/t4jqp8fe","slide":26,"text":"Module Summary","textPreview":"Module Summary","textChars":14,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"textbox","id":"sh/61srutw3","slide":26,"text":"Definitions","textPreview":"Definitions","textChars":11,"textLines":1,"bbox":[163,208,170,92]}
+{"kind":"textbox","id":"sh/7218nyx8","slide":26,"text":"Models","textPreview":"Models","textChars":6,"textLines":1,"bbox":[359,208,170,92]}
+{"kind":"textbox","id":"sh/kza9s3ex","slide":26,"text":"Mechanisms","textPreview":"Mechanisms","textChars":10,"textLines":1,"bbox":[555,208,170,92]}
+{"kind":"textbox","id":"sh/50jqlofi","slide":26,"text":"Examples","textPreview":"Examples","textChars":8,"textLines":1,"bbox":[751,208,170,92]}
+{"kind":"textbox","id":"sh/50ritkry","slide":26,"text":"Exam answer","textPreview":"Exam answer","textChars":11,"textLines":1,"bbox":[947,208,170,92]}
+{"kind":"shape","id":"sh/4zih0fad","slide":26,"bbox":[333,254,26,0]}
+{"kind":"shape","id":"sh/3y90ra9s","slide":26,"bbox":[529,254,26,0]}
+{"kind":"shape","id":"sh/ixgzy5s7","slide":26,"bbox":[725,254,26,0]}
+{"kind":"shape","id":"sh/hw7ip0rm","slide":26,"bbox":[921,254,26,0]}
+{"kind":"shape","id":"sh/gbyhwva1","slide":26,"bbox":[110,393,16,16]}
+{"kind":"textbox","id":"sh/vap0nq9g","slide":26,"text":"Remember: Introduction to distributed systems","textPreview":"Remember: Introduction to distributed systems","textChars":45,"textLines":1,"bbox":[140,386,950,42]}
+{"kind":"shape","id":"sh/u9gzulsb","slide":26,"bbox":[110,438,16,16]}
+{"kind":"textbox","id":"sh/t87il0rq","slide":26,"text":"Remember: Resource sharing","textPreview":"Remember: Resource sharing","textChars":26,"textLines":1,"bbox":[140,431,950,42]}
+{"kind":"shape","id":"sh/87yhsva5","slide":26,"bbox":[110,483,16,16]}
+{"kind":"textbox","id":"sh/kn29ofmx","slide":26,"text":"Remember: Challenges","textPreview":"Remember: Challenges","textChars":20,"textLines":1,"bbox":[140,476,950,42]}
+{"kind":"shape","id":"sh/lobqxkni","slide":26,"bbox":[110,528,16,16]}
+{"kind":"textbox","id":"sh/y1krmp47","slide":26,"text":"Remember: Request-reply protocols","textPreview":"Remember: Request-reply protocols","textChars":33,"textLines":1,"bbox":[140,521,950,42]}
+{"kind":"shape","id":"sh/j2t8vu5s","slide":26,"bbox":[110,573,16,16]}
+{"kind":"textbox","id":"sh/wz29kfm1","slide":26,"text":"Remember: Remote procedure call","textPreview":"Remember: Remote procedure call","textChars":31,"textLines":1,"bbox":[140,566,950,42]}
+{"kind":"shape","id":"sh/x0bqtknm","slide":26,"bbox":[110,618,16,16]}
+{"kind":"textbox","id":"sh/axkri54v","slide":26,"text":"Remember: Remote method invocation","textPreview":"Remember: Remote method invocation","textChars":34,"textLines":1,"bbox":[140,611,950,42]}
+{"kind":"notes","id":"nt/5q985a","slide":26,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/kt5nma","slide":27,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/obi1o3ud","slide":27,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/3a9kvyds","slide":27,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/29gjmtw7","slide":27,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/1872tovm","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/g7y1kje1","slide":27,"text":"Important Definitions","textPreview":"Important Definitions","textChars":21,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/f6pkredw","slide":27,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/e5gji9wb","slide":27,"text":"Term","textPreview":"Term","textChars":4,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/t472p4vq","slide":27,"text":"Classroom definition","textPreview":"Classroom definition","textChars":20,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/s3y1gje5","slide":27,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/698be5gv","slide":27,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/7a1snaxg","slide":27,"text":"Introduction to distributed systems","textPreview":"Introduction to distributed systems","textChars":35,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/8batgfyl","slide":27,"text":"A named concept with conditions, components and result.","textPreview":"A named concept with conditions, components and result.","textChars":55,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/tcjapkf6","slide":27,"text":"Define + draw + example","textPreview":"Define + draw + example","textChars":23,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/y58balgj","slide":27,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/j6hsjqx4","slide":27,"text":"Resource sharing","textPreview":"Resource sharing","textChars":16,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/k7qtcvyp","slide":27,"text":"A repeatable process that transforms input into an observable output.","textPreview":"A repeatable process that transforms input into an observable output.","textChars":69,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/l8zal0fa","slide":27,"text":"Steps + result","textPreview":"Steps + result","textChars":14,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/ahor6lgn","slide":27,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/bixsfqh8","slide":27,"text":"Challenges","textPreview":"Challenges","textChars":10,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/fmd8nmx0","slide":27,"text":"A simplified representation used to reason about a real system.","textPreview":"A simplified representation used to reason about a real system.","textChars":63,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/el47ehwf","slide":27,"text":"Assumptions + limits","textPreview":"Assumptions + limits","textChars":20,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/1ovqpwvq","slide":27,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/0nmpgrel","slide":27,"text":"Request-reply protocols","textPreview":"Request-reply protocols","textChars":23,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/nad8rmdw","slide":27,"text":"The property used to judge correctness, usefulness or performance.","textPreview":"The property used to judge correctness, usefulness or performance.","textChars":66,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/2p47i1wb","slide":27,"text":"Compare + justify","textPreview":"Compare + justify","textChars":17,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/kt5nma","slide":27,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/8myb8a","slide":28,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/vyp8fedk","slide":28,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/gzyp8je5","slide":28,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/h07qhovq","slide":28,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/69w729w3","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/7a58bedo","slide":28,"text":"Important Algorithms / Diagrams / Formulas","textPreview":"Important Algorithms / Diagrams / Formulas","textChars":42,"textLines":1,"bbox":[78,104,940,48]}
+{"kind":"shape","id":"sh/8bep4je9","slide":28,"bbox":[98,217,16,16]}
+{"kind":"textbox","id":"sh/tc7qdove","slide":28,"text":"Draw the central architecture/process before writing long explanation.","textPreview":"Draw the central architecture/process before writing long explanation.","textChars":70,"textLines":1,"bbox":[128,210,1020,42]}
+{"kind":"shape","id":"sh/y5w7y9wr","slide":28,"bbox":[98,295,16,16]}
+{"kind":"textbox","id":"sh/j65o7udc","slide":28,"text":"For every algorithm: problem, input, initial state, iterations, final result, interpretation.","textPreview":"For every algorithm: problem, input, initial state, iterations, final result, interpretation.","textChars":93,"textLines":1,"bbox":[128,288,1020,42]}
+{"kind":"shape","id":"sh/nqtgj2lk","slide":28,"bbox":[98,373,16,16]}
+{"kind":"textbox","id":"sh/250zax4z","slide":28,"text":"For code/commands: command or snippet, explanation, execution, output.","textPreview":"For code/commands: command or snippet, explanation, execution, output.","textChars":70,"textLines":1,"bbox":[128,366,1020,42]}
+{"kind":"shape","id":"sh/psbylc3a","slide":28,"bbox":[98,451,16,16]}
+{"kind":"textbox","id":"sh/or2hc7m5","slide":28,"text":"For comparison questions: state basis of comparison first, then fill the table.","textPreview":"For comparison questions: state basis of comparison first, then fill the table.","textChars":79,"textLines":1,"bbox":[128,444,1020,42]}
+{"kind":"notes","id":"nt/8myb8a","slide":28,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/9p3gkr","slide":29,"title":"BCS515D | Distributed Systems","textShapes":9}
+{"kind":"textbox","id":"sh/ofulgf2p","slide":29,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/nelknal4","slide":29,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/2ts3e5kz","slide":29,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/xk32tk3m","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/cjulkf21","slide":29,"text":"Common Mistakes","textPreview":"Common Mistakes","textChars":15,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/bilkrulg","slide":29,"bbox":[98,213,16,16]}
+{"kind":"textbox","id":"sh/ahc3ipkv","slide":29,"text":"Writing only a definition when the question asks to explain working.","textPreview":"Writing only a definition when the question asks to explain working.","textChars":68,"textLines":1,"bbox":[128,206,1010,42]}
+{"kind":"shape","id":"sh/doj2h032","slide":29,"bbox":[98,291,16,16]}
+{"kind":"textbox","id":"sh/sna18v2h","slide":29,"text":"Skipping diagrams or leaving labels too vague.","textPreview":"Skipping diagrams or leaving labels too vague.","textChars":46,"textLines":1,"bbox":[128,284,1010,42]}
+{"kind":"shape","id":"sh/mpsb2t4n","slide":29,"bbox":[98,369,16,16]}
+{"kind":"textbox","id":"sh/nq1cbyl8","slide":29,"text":"Mixing similar terms without a comparison basis.","textPreview":"Mixing similar terms without a comparison basis.","textChars":48,"textLines":1,"bbox":[128,362,1010,42]}
+{"kind":"shape","id":"sh/8rat43mt","slide":29,"bbox":[98,447,16,16]}
+{"kind":"textbox","id":"sh/9sjud83e","slide":29,"text":"Giving an example that does not match the formal condition.","textPreview":"Giving an example that does not match the formal condition.","textChars":59,"textLines":1,"bbox":[128,440,1010,42]}
+{"kind":"shape","id":"sh/atsv6t4z","slide":29,"bbox":[98,525,16,16]}
+{"kind":"textbox","id":"sh/vulcfyl4","slide":29,"text":"Forgetting assumptions, limitations or failure cases.","textPreview":"Forgetting assumptions, limitations or failure cases.","textChars":53,"textLines":1,"bbox":[128,518,1010,42]}
+{"kind":"notes","id":"nt/9p3gkr","slide":29,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/h8mjx9","slide":30,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/q1sri1kj","slide":30,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/d43adwja","slide":30,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/s3a9kb2p","slide":30,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/3e1s7m18","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/idsrehkn","slide":30,"text":"Exam Preparation","textPreview":"Exam Preparation","textChars":16,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/50ja9wje","slide":30,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/4za9gr2t","slide":30,"text":"Question type","textPreview":"Question type","textChars":13,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/nalsjq1c","slide":30,"text":"Answer structure","textPreview":"Answer structure","textChars":16,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/29cbqlkr","slide":30,"text":"What earns marks","textPreview":"What earns marks","textChars":16,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/gna503mh","slide":30,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/hoj69832","slide":30,"text":"Define/explain","textPreview":"Define/explain","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/ul8nyt4b","slide":30,"text":"Definition + labeled diagram + example","textPreview":"Definition + labeled diagram + example","textChars":38,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/fm1o7ylw","slide":30,"text":"Exact terms and scope","textPreview":"Exact terms and scope","textChars":21,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/sjq5wjm5","slide":30,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/tkz65o3q","slide":30,"text":"Compare","textPreview":"Compare","textChars":7,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/6h8nut4f","slide":30,"text":"Basis + table + conclusion","textPreview":"Basis + table + conclusion","textChars":26,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/7iho3el0","slide":30,"text":"Clear differentiators","textPreview":"Clear differentiators","textChars":21,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/kvq5sjm9","slide":30,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/5gz61o3u","slide":30,"text":"Algorithm/trace","textPreview":"Algorithm/trace","textChars":15,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/lcrm50fi","slide":30,"text":"Input + iterations + final result","textPreview":"Input + iterations + final result","textChars":33,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/kbilwfex","slide":30,"text":"Correct step sequence","textPreview":"Correct step sequence","textChars":21,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/zap43axc","slide":30,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/y9g3u5w7","slide":30,"text":"Application","textPreview":"Application","textChars":11,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/xo7m10fm","slide":30,"text":"Scenario + model + justification","textPreview":"Scenario + model + justification","textChars":32,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/cnylsve1","slide":30,"text":"Why the choice fits","textPreview":"Why the choice fits","textChars":19,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/h8mjx9","slide":30,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/4v3j5a","slide":31,"title":"BCS515D | Distributed Systems","textShapes":9}
+{"kind":"textbox","id":"sh/dczehszm","slide":31,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/q98vmxgv","slide":31,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/bahwfihg","slide":31,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/0fqds7yx","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/lgjelczi","slide":31,"text":"Practice Questions","textPreview":"Practice Questions","textChars":18,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/yd8vqxgr","slide":31,"bbox":[98,213,16,16]}
+{"kind":"textbox","id":"sh/zehwj2hc","slide":31,"text":"Explain Introduction to distributed systems with a neat diagram.","textPreview":"Explain Introduction to distributed systems with a neat diagram.","textChars":64,"textLines":1,"bbox":[128,206,1010,42]}
+{"kind":"shape","id":"sh/gj6dg3yt","slide":31,"bbox":[98,291,16,16]}
+{"kind":"textbox","id":"sh/1kfu98ze","slide":31,"text":"Compare two approaches from Characterization and Remote Invocation and justify when each is suitable.","textPreview":"Compare two approaches from Characterization and Remote Invocation and justify when each is suitable.","textChars":101,"textLines":1,"bbox":[128,284,1010,42]}
+{"kind":"shape","id":"sh/doja1cny","slide":31,"bbox":[98,369,16,16]}
+{"kind":"textbox","id":"sh/sna987md","slide":31,"text":"Solve a small worked example involving Challenges.","textPreview":"Solve a small worked example involving Challenges.","textChars":50,"textLines":1,"bbox":[128,362,1010,42]}
+{"kind":"shape","id":"sh/r2hszm5s","slide":31,"bbox":[98,447,16,16]}
+{"kind":"textbox","id":"sh/q18r6h47","slide":31,"text":"List common mistakes and how to avoid them in Characterization and Remote Invocation.","textPreview":"List common mistakes and how to avoid them in Characterization and Remote Invocation.","textChars":85,"textLines":1,"bbox":[128,440,1010,42]}
+{"kind":"shape","id":"sh/1sja5wnu","slide":31,"bbox":[98,525,16,16]}
+{"kind":"textbox","id":"sh/0ra9crmp","slide":31,"text":"Redraw the full module map from memory in five minutes.","textPreview":"Redraw the full module map from memory in five minutes.","textChars":55,"textLines":1,"bbox":[128,518,1010,42]}
+{"kind":"notes","id":"nt/4v3j5a","slide":31,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/zp6m31","slide":32,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/juxsbyt8","slide":32,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/4f6t43at","slide":32,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/5gfad8be","slide":32,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/up4rytsr","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/vqds7ytc","slide":32,"text":"Introduction to distributed systems vs Resource sharing","textPreview":"Introduction to distributed systems vs Resource sharing","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/wrm90jax","slide":32,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/hsfa9obi","slide":32,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/el8badsv","slide":32,"text":"Introduction to distributed systems","textPreview":"Introduction to distributed systems","textChars":35,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/fmhsjitg","slide":32,"text":"Resource sharing","textPreview":"Resource sharing","textChars":16,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/fixsve9c","slide":32,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/uhob29sr","slide":32,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/hkzax4r2","slide":32,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/gj6t4jah","slide":32,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/3mhsze98","slide":32,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/2l8b69sn","slide":32,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/p8zu1ore","slide":32,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/4nqt8jat","slide":32,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/rahc3y9k","slide":32,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/q98batsz","slide":32,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/m5cv2xc7","slide":32,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/n6lwv2ts","slide":32,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/87ud47ux","slide":32,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/983exsbi","slide":32,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/yhsvydcv","slide":32,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/z21writg","slide":32,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/zp6m31","slide":32,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/ytdx95","slide":33,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/bu98jyxw","slide":33,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/cvipc3yh","slide":33,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/dwrql8f2","slide":33,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/yx07edgn","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/zyt8nix8","slide":33,"text":"Resource sharing: worked example","textPreview":"Resource sharing: worked example","textChars":32,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/0z2pgnyt","slide":33,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/l0bqp8fe","slide":33,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/e1g7i9gj","slide":33,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/f2pobex4","slide":33,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/rmp4j2xg","slide":33,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/61gnqhgv","slide":33,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/to7mlcfm","slide":33,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/sny5s7y1","slide":33,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/jy54f2xk","slide":33,"text":"Identify network","textPreview":"Identify network","textChars":16,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/ixwnmxgz","slide":33,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/50nmhcfq","slide":33,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/4ze5o7y5","slide":33,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/vu54bix8","slide":33,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/utwnixg3","slide":33,"text":"Apply shared resource","textPreview":"Apply shared resource","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/ypcnud0v","slide":33,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/zqloni1g","slide":33,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/kru5wnil","slide":33,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/ls36psj6","slide":33,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/mtcnyx0r","slide":33,"text":"Check protocol","textPreview":"Check protocol","textChars":14,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/7u5or2hc","slide":33,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/8ve507ix","slide":33,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/9wn6tczi","slide":33,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/uxwn2x03","slide":33,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/vy5ov2ho","slide":33,"text":"Conclude failure concern","textPreview":"Conclude failure concern","textChars":24,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/5s7qlwjq","slide":33,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/4ry9sb25","slide":33,"text":"Use this structure whenever resource sharing appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever resource sharing appears as a 10-mark explanation or trace problem.","textChars":95,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/ytdx95","slide":33,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/qeklus","slide":34,"title":"BCS515D | Distributed Systems","textShapes":16}
+{"kind":"textbox","id":"sh/dojqhkzm","slide":34,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ql8r650b","slide":34,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/bm18fahg","slide":34,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ojq94fi5","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/pkzqd0zq","slide":34,"text":"Challenges: common confusion","textPreview":"Challenges: common confusion","textChars":28,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/2h87250z","slide":34,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/3ih8ba1k","slide":34,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/8fu9gzi9","slide":34,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/9g3ap4zu","slide":34,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/lwzq9wb6","slide":34,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/kvq9gral","slide":34,"text":"Treating Challenges as only a definition","textPreview":"Treating Challenges as only a definition","textChars":40,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/zux87mt0","slide":34,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/yto7ehsf","slide":34,"text":"Explain nodes -> shared resource -> failure concern","textPreview":"Explain nodes -> shared resource -> failure concern","textChars":51,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/x8fq5cbu","slide":34,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/c76pc7a9","slide":34,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/b6x832t4","slide":34,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/q5o7axsj","slide":34,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/h4jqhgre","slide":34,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/w3a9obat","slide":34,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/g7itkfip","slide":34,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/h8radkza","slide":34,"text":"Use terms such as nodes, network, shared resource","textPreview":"Use terms such as nodes, network, shared resource","textChars":49,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/qeklus","slide":34,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/wqm773","slide":35,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/cbet036d","slide":35,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ba5c7i5s","slide":35,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/a9wbydo7","slide":35,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/l07uxsnu","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/kzyt4n6p","slide":35,"text":"Request-reply protocols: message movement","textPreview":"Request-reply protocols: message movement","textChars":41,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/zy5cvi54","slide":35,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/yxwb2doj","slide":35,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/143a1onq","slide":35,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/03utsj65","slide":35,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/y94ryd8z","slide":35,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/zads7ipk","slide":35,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/wqm773","slide":35,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/ky3t2t","slide":36,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/5snmx0zy","slide":36,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ipwnmlgn","slide":36,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/3q54vqh8","slide":36,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/gnu5kbyh","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/honmtgz2","slide":36,"text":"Remote procedure call vs Remote method invocation","textPreview":"Remote procedure call vs Remote method invocation","textChars":49,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/ulcni1gb","slide":36,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/vml4r6hw","slide":36,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/8ju5gbil","slide":36,"text":"Remote procedure call","textPreview":"Remote procedure call","textChars":21,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/9k3mpwzq","slide":36,"text":"Remote method invocation","textPreview":"Remote method invocation","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/tgfytwfm","slide":36,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/sv6xkre1","slide":36,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/7uxgrmxg","slide":36,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/6t4fihwv","slide":36,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/5svypcfq","slide":36,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/krmxg7e5","slide":36,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/jqdwn2xk","slide":36,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/ip4fehwz","slide":36,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/xovelcfe","slide":36,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/wnmxc7et","slide":36,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/o76x87mp","slide":36,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/98zy1cna","slide":36,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/m5of6x4j","slide":36,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/n6xgz254","slide":36,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/036x4n6t","slide":36,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/14fyxsne","slide":36,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/ky3t2t","slide":36,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/rq4p77","slide":37,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/jq9g3qhg","slide":37,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/krixcvy1","slide":37,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/5sry50zm","slide":37,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/6t0fe5gr","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/7u9g7qxc","slide":37,"text":"Remote method invocation: worked example","textPreview":"Remote method invocation: worked example","textChars":40,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/svihgvyx","slide":37,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/tgry90fi","slide":37,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/uhkzi5g3","slide":37,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/fitgbaxo","slide":37,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/3yl0zqlg","slide":37,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/ixczq54v","slide":37,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/503i103m","slide":37,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/4zuhsvm1","slide":37,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/vul0vqlk","slide":37,"text":"Identify network","textPreview":"Identify network","textChars":16,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/u9szml4z","slide":37,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/hw3ix03a","slide":37,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/gvuhovm5","slide":37,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/fq507ulo","slide":37,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/epwjypk3","slide":37,"text":"Apply shared resource","textPreview":"Apply shared resource","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/al03qtob","slide":37,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/bm9kze5w","slide":37,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/cnilsjmh","slide":37,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/xor21on2","slide":37,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/yp03ut4n","slide":37,"text":"Check protocol","textPreview":"Check protocol","textChars":14,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/zq9k3y5s","slide":37,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/krilw3md","slide":37,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/lsbm58ny","slide":37,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/etg3i9o3","slide":37,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/fupkru5o","slide":37,"text":"Conclude failure concern","textPreview":"Conclude failure concern","textChars":24,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/hov6xc76","slide":37,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/gnm5476l","slide":37,"text":"Use this structure whenever remote method invocation appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever remote method invocation appears as a 10-mark explanation or trace problem.","textChars":103,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/rq4p77","slide":37,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/ykayqk","slide":38,"title":"BCS515D | Distributed Systems","textShapes":16}
+{"kind":"textbox","id":"sh/47ahofmh","slide":38,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/j610va5c","slide":38,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/i58zm54r","slide":38,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/h4zit0n6","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/w3qhkfml","slide":38,"text":"Introduction to distributed systems: common confusion","textPreview":"Introduction to distributed systems: common confusion","textChars":53,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/v2hgra50","slide":38,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/u18zi54f","slide":38,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/90zyp0nu","slide":38,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/8fqhgvmp","slide":38,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/q1gne14z","slide":38,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/r29o76lk","slide":38,"text":"Treating Introduction to distributed systems as only a definition","textPreview":"Treating Introduction to distributed systems as only a definition","textChars":65,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/c3i5grm5","slide":38,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/d4r69w3q","slide":38,"text":"Explain nodes -> shared resource -> failure concern","textPreview":"Explain nodes -> shared resource -> failure concern","textChars":51,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/2dgnah43","slide":38,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/3ypo3mlo","slide":38,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/4zy5crmt","slide":38,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/p0765w3e","slide":38,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/u9wn6h4r","slide":38,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/fap4zmlc","slide":38,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/jelk7i14","slide":38,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/ydc3edkj","slide":38,"text":"Use terms such as nodes, network, shared resource","textPreview":"Use terms such as nodes, network, shared resource","textChars":49,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/ykayqk","slide":38,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/hpemva","slide":39,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/baporah4","slide":39,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/cby50fyp","slide":39,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/dc76tkzu","slide":39,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/2lwnu5g7","slide":39,"text":"39","textPreview":"39","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/365onahs","slide":39,"text":"Resource sharing: message movement","textPreview":"Resource sharing: message movement","textChars":34,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/o7e5wfyd","slide":39,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/p8n6pkzy","slide":39,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/ehcnq5gb","slide":39,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/fi54jqhw","slide":39,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/f6twz2xo","slide":39,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/e50f6xg3","slide":39,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/hpemva","slide":39,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/egvz4i","slide":40,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/jipkbelc","slide":40,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/4jyl4jmh","slide":40,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/5k72do32","slide":40,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/6lg36t4n","slide":40,"text":"40","textPreview":"40","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/rmp4fel8","slide":40,"text":"Challenges vs Request-reply protocols","textPreview":"Challenges vs Request-reply protocols","textChars":37,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/snyl8jmt","slide":40,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/to7mho3e","slide":40,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/ep03at4z","slide":40,"text":"Challenges","textPreview":"Challenges","textChars":10,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/fq94jyl4","slide":40,"text":"Request-reply protocols","textPreview":"Request-reply protocols","textChars":23,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/budkzyt0","slide":40,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/qtkj6tsf","slide":40,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/dwv218b6","slide":40,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/cvml83al","slide":40,"text":"client stub","textPreview":"client stub","textChars":11,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/3qtkveto","slide":40,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/2pkj2tsj","slide":40,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/psb2xobu","slide":40,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/or214ja9","slide":40,"text":"server dispatch","textPreview":"server dispatch","textChars":15,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/7mxk7it8","slide":40,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ml43edsn","slide":40,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/ih8n6hcv","slide":40,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/jihozmdg","slide":40,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/4jq58ru1","slide":40,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/5kz61wv6","slide":40,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/6lsna1cr","slide":40,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/rm1o3mdc","slide":40,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/egvz4i","slide":40,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/gw0sil","slide":41,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/cvuhoj69","slide":41,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/rul0fepo","slide":41,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/qtczm9o3","slide":41,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/1knilo7q","slide":41,"text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/0je1sj65","slide":41,"text":"Request-reply protocols: worked example","textPreview":"Request-reply protocols: worked example","textChars":39,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/zi50jepk","slide":41,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/ehczq9oz","slide":41,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/9onip87m","slide":41,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/one1w36h","slide":41,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/i9wfe9sz","slide":41,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/ja5gne9k","slide":41,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/4bexgja5","slide":41,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/5c7yporq","slide":41,"text":"client stub","textPreview":"client stub","textChars":11,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/6dgfitsb","slide":41,"text":"Identify marshal request","textPreview":"Identify marshal request","textChars":24,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/repgry9w","slide":41,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/sfyxkjah","slide":41,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/dg7ytorm","slide":41,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/mhcf6ps7","slide":41,"text":"marshal request","textPreview":"marshal request","textChars":15,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/7ilwfu9c","slide":41,"text":"Apply server dispatch","textPreview":"Apply server dispatch","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/bm1cnqp4","slide":41,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/al8vel8z","slide":41,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/xojup07a","slide":41,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/cnadgvqp","slide":41,"text":"server dispatch","textPreview":"server dispatch","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/nihcjqp8","slide":41,"text":"Check reply","textPreview":"Check reply","textChars":11,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/2h8val8n","slide":41,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/pkzulg7e","slide":41,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/ojqdcbqt","slide":41,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/7elwvapc","slide":41,"text":"reply","textPreview":"reply","textChars":5,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/mdcvm58r","slide":41,"text":"Conclude exception handling","textPreview":"Conclude exception handling","textChars":27,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/4zm9g769","slide":41,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/50va9cnu","slide":41,"text":"Use this structure whenever request-reply protocols appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever request-reply protocols appears as a 10-mark explanation or trace problem.","textChars":102,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/gw0sil","slide":41,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/h8fmg6","slide":42,"title":"BCS515D | Distributed Systems","textShapes":16}
+{"kind":"textbox","id":"sh/u9gru94z","slide":42,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/hc7aponq","slide":42,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/gby9wjm5","slide":42,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/3ypsry5g","slide":42,"text":"42","textPreview":"42","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/2xgbyt4b","slide":42,"text":"Remote procedure call: common confusion","textPreview":"Remote procedure call: common confusion","textChars":39,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/p0ratonm","slide":42,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/ozyt0jm1","slide":42,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/b29svy5s","slide":42,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/q10b2t47","slide":42,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/gv610rmp","slide":42,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/hwz2twna","slide":42,"text":"Treating Remote procedure call as only a definition","textPreview":"Treating Remote procedure call as only a definition","textChars":51,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/utojyh4j","slide":42,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/fuxkrm54","slide":42,"text":"Explain nodes -> shared resource -> failure concern","textPreview":"Explain nodes -> shared resource -> failure concern","textChars":51,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/4zq14rml","slide":42,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/p0z2xwn6","slide":42,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/2x8j214v","slide":42,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/3yhkv65g","slide":42,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/c3q18bmx","slide":42,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/doj21gni","slide":42,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/lkf2lgvm","slide":42,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/0j61sbe1","slide":42,"text":"Use terms such as nodes, network, shared resource","textPreview":"Use terms such as nodes, network, shared resource","textChars":49,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/h8fmg6","slide":42,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/wlxfcd","slide":43,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/47alob29","slide":43,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/j6h4v6lo","slide":43,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/i583m1k3","slide":43,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/h4zmtw3i","slide":43,"text":"43","textPreview":"43","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/w3qlkr2x","slide":43,"text":"Remote method invocation: message movement","textPreview":"Remote method invocation: message movement","textChars":42,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/v2h4rmlc","slide":43,"text":"Client / Node A","textPreview":"Client / Node A","textChars":15,"textLines":1,"bbox":[120,290,220,96]}
+{"kind":"textbox","id":"sh/u183ihkr","slide":43,"text":"Network / Middleware","textPreview":"Network / Middleware","textChars":20,"textLines":1,"bbox":[530,290,220,96]}
+{"kind":"textbox","id":"sh/103m503m","slide":43,"text":"Server / Node B","textPreview":"Server / Node B","textChars":15,"textLines":1,"bbox":[940,290,220,96]}
+{"kind":"shape","id":"sh/0zu5wv21","slide":43,"bbox":[340,338,190,0]}
+{"kind":"shape","id":"sh/q1orepkn","slide":43,"bbox":[750,338,190,0]}
+{"kind":"textbox","id":"sh/r2x87u18","slide":43,"text":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textPreview":"The teaching question: what information is added, changed, checked, delayed or lost at each step?","textChars":97,"textLines":1,"bbox":[170,466,940,58]}
+{"kind":"notes","id":"nt/wlxfcd","slide":43,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/x2ea6v","slide":44,"title":"BCS515D | Distributed Systems","textShapes":19}
+{"kind":"textbox","id":"sh/y943ad4r","slide":44,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/lcf2lsni","slide":44,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/kb6lcnmx","slide":44,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/b6dkfi5g","slide":44,"text":"44","textPreview":"44","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/al436d4v","slide":44,"text":"Introduction to distributed systems vs Resource sharing","textPreview":"Introduction to distributed systems vs Resource sharing","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/x8v2h8n6","slide":44,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/c7ml83ml","slide":44,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/v2h4r25k","slide":44,"text":"Introduction to distributed systems","textPreview":"Introduction to distributed systems","textChars":35,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/uho3ix4z","slide":44,"text":"Resource sharing","textPreview":"Resource sharing","textChars":16,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/oruxsrut","slide":44,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/pc3e1wve","slide":44,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/2pcfqhcn","slide":44,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/nqlwzmd8","slide":44,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/0naxoruh","slide":44,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/1ojexwv2","slide":44,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/elsfmhcr","slide":44,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/fm1wvmdc","slide":44,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/sjaxk7ul","slide":44,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/dkjetcv6","slide":44,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/94rm14ji","slide":44,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/83il8z2d","slide":44,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/7294zu1s","slide":44,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/m10369k7","slide":44,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/l0rmx4jm","slide":44,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/kzyl4z21","slide":44,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/x2ea6v","slide":44,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/zchjbm","slide":45,"title":"BCS515D | Distributed Systems","textShapes":25}
+{"kind":"textbox","id":"sh/ud83mt8r","slide":45,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/hgzmx87i","slide":45,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/wfqlo3qx","slide":45,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/jih4zip8","slide":45,"text":"45","textPreview":"45","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ih83qd83","slide":45,"text":"Resource sharing: worked example","textPreview":"Resource sharing: worked example","textChars":32,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/5kzm187e","slide":45,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/4jqls3qt","slide":45,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/zmx4nep4","slide":45,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/yl43e98j","slide":45,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/oj2t8zml","slide":45,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/pkbu1436","slide":45,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/2x0b694f","slide":45,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/nitczel0","slide":45,"text":"nodes","textPreview":"nodes","textChars":5,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/cn2tcjmh","slide":45,"text":"Identify network","textPreview":"Identify network","textChars":16,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/xobu5o32","slide":45,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/alkba94r","slide":45,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/bmtc3elc","slide":45,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/srit0fmd","slide":45,"text":"network","textPreview":"network","textChars":7,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/dsrutk3y","slide":45,"text":"Apply shared resource","textPreview":"Apply shared resource","textChars":21,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/tojaxgfm","slide":45,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/sna9obe1","slide":45,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/7m1sv6xw","slide":45,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/6l8rm1wb","slide":45,"text":"shared resource","textPreview":"shared resource","textChars":15,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/hcja10fy","slide":45,"text":"Check protocol","textPreview":"Check protocol","textChars":14,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/gba9sved","slide":45,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/fq1szqxs","slide":45,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/upsrqlw7","slide":45,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/pg3a50fu","slide":45,"text":"protocol","textPreview":"protocol","textChars":8,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/4fu9wve9","slide":45,"text":"Conclude failure concern","textPreview":"Conclude failure concern","textChars":24,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/ml47qxcr","slide":45,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/nmdoz2dc","slide":45,"text":"Use this structure whenever resource sharing appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever resource sharing appears as a 10-mark explanation or trace problem.","textChars":95,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/zchjbm","slide":45,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}
+{"kind":"slide","id":"sl/gm9f2p","slide":46,"title":"BCS515D | Distributed Systems","textShapes":8}
+{"kind":"textbox","id":"sh/l0va54nu","slide":46,"text":"BCS515D | Distributed Systems","textPreview":"BCS515D | Distributed Systems","textChars":29,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/yxkbap43","slide":46,"text":"Module 1: Characterization and Remote Invocation","textPreview":"Module 1: Characterization and Remote Invocation","textChars":48,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/zyts3u5o","slide":46,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/8nmtgzm5","slide":46,"text":"46","textPreview":"46","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/9ova94nq","slide":46,"text":"Previous VTU Questions","textPreview":"Previous VTU Questions","textChars":22,"textLines":1,"bbox":[78,104,820,48]}
+{"kind":"textbox","id":"sh/ml4be94f","slide":46,"text":"No genuine previous-year VTU questions were found locally for this module during this pass, so this deck does not fabricate PYQs.","textPreview":"No genuine previous-year VTU questions were found locally for this module during this pass, so this deck does not fabricate PYQs.","textChars":129,"textLines":1,"bbox":[96,212,990,90]}
+{"kind":"shape","id":"sh/7mds7u50","slide":46,"bbox":[112,372,16,16]}
+{"kind":"textbox","id":"sh/or294fm1","slide":46,"text":"Use the practice questions as model revision prompts.","textPreview":"Use the practice questions as model revision prompts.","textChars":53,"textLines":1,"bbox":[142,365,950,42]}
+{"kind":"shape","id":"sh/psbaxknm","slide":46,"bbox":[112,444,16,16]}
+{"kind":"textbox","id":"sh/x036t4na","slide":46,"text":"Add authentic PYQs later only from a verified VTU source.","textPreview":"Add authentic PYQs later only from a verified VTU source.","textChars":57,"textLines":1,"bbox":[142,437,950,42]}
+{"kind":"shape","id":"sh/wzup0z6p","slide":46,"bbox":[112,516,16,16]}
+{"kind":"textbox","id":"sh/vy1oru54","slide":46,"text":"Do not label instructor-created questions as previous-year questions.","textPreview":"Do not label instructor-created questions as previous-year questions.","textChars":69,"textLines":1,"bbox":[142,509,950,42]}
+{"kind":"notes","id":"nt/gm9f2p","slide":46,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Distributed Systems textbook chapters listed by the syllabus: 1.1, 1.4, 1.5, 5.1-5.5, 12.1-12.2, 13.1-13.3, 14.1-14.5, 15.1-15.5, 17.1-17.6, 18.1.\n"}

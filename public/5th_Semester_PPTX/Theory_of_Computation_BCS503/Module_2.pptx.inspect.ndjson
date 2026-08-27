@@ -1,0 +1,1140 @@
+{"kind":"deck","id":"pr/xkifq7","name":"Deck"}
+{"kind":"layout","layoutId":"43b71599-09b5-43a5-b3f8-73df1bdafdf1","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"f614c5c8-3973-4095-aa99-c1bf60756e3c","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/8sl7fn","slide":1,"title":"BCS503 | Theory of Computation","textShapes":10}
+{"kind":"textbox","id":"sh/29oruhgf","slide":1,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/pczapwz6","slide":1,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/obq9wryl","slide":1,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/f6xsj2h4","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/elorqhgj","slide":1,"text":"Regular Expressions and Regular Languages","textPreview":"Regular Expressions and Regular Languages","textChars":41,"textLines":1,"bbox":[76,98,780,116]}
+{"kind":"textbox","id":"sh/18falczu","slide":1,"text":"Theory of Computation | Module 2","textPreview":"Theory of Computation | Module 2","textChars":32,"textLines":1,"bbox":[80,224,780,72]}
+{"kind":"shape","id":"sh/0769s7y9","slide":1,"bbox":[82,318,180,7]}
+{"kind":"textbox","id":"sh/z21sv6h8","slide":1,"text":"Hook","textPreview":"Hook","textChars":4,"textLines":1,"bbox":[163,430,170,92]}
+{"kind":"textbox","id":"sh/yh8b21gn","slide":1,"text":"Core concept","textPreview":"Core concept","textChars":12,"textLines":1,"bbox":[359,430,170,92]}
+{"kind":"textbox","id":"sh/ovelwzqh","slide":1,"text":"Mechanism","textPreview":"Mechanism","textChars":9,"textLines":1,"bbox":[555,430,170,92]}
+{"kind":"textbox","id":"sh/pwn2p472","slide":1,"text":"Worked example","textPreview":"Worked example","textChars":14,"textLines":1,"bbox":[751,430,170,92]}
+{"kind":"textbox","id":"sh/2tc3u98r","slide":1,"text":"Exam-ready recap","textPreview":"Exam-ready recap","textChars":16,"textLines":1,"bbox":[947,430,170,92]}
+{"kind":"shape","id":"sh/3ulknepc","slide":1,"bbox":[333,476,26,0]}
+{"kind":"shape","id":"sh/g7ulszql","slide":1,"bbox":[529,476,26,0]}
+{"kind":"shape","id":"sh/1832l476","slide":1,"bbox":[725,476,26,0]}
+{"kind":"shape","id":"sh/e5c3qp8f","slide":1,"bbox":[921,476,26,0]}
+{"kind":"notes","id":"nt/8sl7fn","slide":1,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/xlb6zh","slide":2,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/0zqh47yp","slide":2,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/zyx0v2hk","slide":2,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/yxoz2xgz","slide":2,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/94zi1czm","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/83qh87y1","slide":2,"text":"Teaching route","textPreview":"Teaching route","textChars":14,"textLines":1,"bbox":[78,112,700,48]}
+{"kind":"shape","id":"sh/n2h0z2hg","slide":2,"bbox":[96,217,16,16]}
+{"kind":"textbox","id":"sh/m18z6xgv","slide":2,"text":"Start with why the module matters.","textPreview":"Start with why the module matters.","textChars":34,"textLines":1,"bbox":[126,210,990,42]}
+{"kind":"shape","id":"sh/p8fyp8z2","slide":2,"bbox":[96,293,16,16]}
+{"kind":"textbox","id":"sh/o76hwnyx","slide":2,"text":"Build one concept at a time with a diagram or worked trace.","textPreview":"Build one concept at a time with a diagram or worked trace.","textChars":59,"textLines":1,"bbox":[126,286,990,42]}
+{"kind":"shape","id":"sh/yh0bid4n","slide":2,"bbox":[96,369,16,16]}
+{"kind":"textbox","id":"sh/ji9cril8","slide":2,"text":"Use examples before definitions become abstract.","textPreview":"Use examples before definitions become abstract.","textChars":48,"textLines":1,"bbox":[126,362,990,42]}
+{"kind":"shape","id":"sh/kjidknmt","slide":2,"bbox":[96,445,16,16]}
+{"kind":"textbox","id":"sh/lkruts3e","slide":2,"text":"End with definitions, algorithms/formulas, mistakes and practice questions.","textPreview":"End with definitions, algorithms/formulas, mistakes and practice questions.","textChars":75,"textLines":1,"bbox":[126,438,990,42]}
+{"kind":"notes","id":"nt/xlb6zh","slide":2,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/31c23t","slide":3,"title":"BCS503 | Theory of Computation","textShapes":11}
+{"kind":"textbox","id":"sh/onm1obu1","slide":3,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/3mdkvqtg","slide":3,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/2l4jmlcb","slide":3,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/dsf210by","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/cr6lsvud","slide":3,"text":"Module map","textPreview":"Module map","textChars":10,"textLines":1,"bbox":[78,112,700,48]}
+{"kind":"shape","id":"sh/bqxkzqts","slide":3,"bbox":[96,193,16,16]}
+{"kind":"textbox","id":"sh/qpojqlc7","slide":3,"text":"Regular expressions","textPreview":"Regular expressions","textChars":19,"textLines":1,"bbox":[126,186,1000,42]}
+{"kind":"shape","id":"sh/twb2pwve","slide":3,"bbox":[96,251,16,16]}
+{"kind":"textbox","id":"sh/sv21grut","slide":3,"text":"Finite automata and regular expressions","textPreview":"Finite automata and regular expressions","textChars":39,"textLines":1,"bbox":[126,244,1000,42]}
+{"kind":"shape","id":"sh/q987ytk7","slide":3,"bbox":[96,309,16,16]}
+{"kind":"textbox","id":"sh/ba18ryls","slide":3,"text":"Proving languages not regular","textPreview":"Proving languages not regular","textChars":29,"textLines":1,"bbox":[126,302,1000,42]}
+{"kind":"shape","id":"sh/cbap0j2d","slide":3,"bbox":[96,367,16,16]}
+{"kind":"textbox","id":"sh/dcjqto3i","slide":3,"text":"Closure properties of regular languages","textPreview":"Closure properties of regular languages","textChars":39,"textLines":1,"bbox":[126,360,1000,42]}
+{"kind":"shape","id":"sh/yds72tk3","slide":3,"bbox":[96,425,16,16]}
+{"kind":"textbox","id":"sh/ze18vylo","slide":3,"text":"Equivalence of automata","textPreview":"Equivalence of automata","textChars":23,"textLines":1,"bbox":[126,418,1000,42]}
+{"kind":"shape","id":"sh/0zap4329","slide":3,"bbox":[96,483,16,16]}
+{"kind":"textbox","id":"sh/l0jqx83u","slide":3,"text":"Minimization of automata","textPreview":"Minimization of automata","textChars":24,"textLines":1,"bbox":[126,476,1000,42]}
+{"kind":"shape","id":"sh/m1c76dkf","slide":3,"bbox":[96,541,16,16]}
+{"kind":"textbox","id":"sh/72l8zil0","slide":3,"text":"Applications of regular expressions","textPreview":"Applications of regular expressions","textChars":35,"textLines":1,"bbox":[126,534,1000,42]}
+{"kind":"notes","id":"nt/31c23t","slide":3,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/wwkjsk","slide":4,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/t8rmpw32","slide":4,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/6l03u1kb","slide":4,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/7m94n6lw","slide":4,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/gb250b2d","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/hcbmtg3y","slide":4,"text":"Regular expressions","textPreview":"Regular expressions","textChars":19,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/u90ny1kn","slide":4,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/vat4r6ls","slide":4,"text":"Regular expressions is best taught as a formal model problem, not as a memorized definition.","textPreview":"Regular expressions is best taught as a formal model problem, not as a memorized definition.","textChars":92,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/4f254b2p","slide":4,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/5gbmxg3a","slide":4,"text":"The key mechanism connects input string with rule application so that students can predict the result.","textPreview":"The key mechanism connects input string with rule application so that students can predict the result.","textChars":102,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/lkbidwr6","slide":4,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/0j214rql","slide":4,"text":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textPreview":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textChars":103,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/zyt0bm90","slide":4,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/yxkj2h8f","slide":4,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/9ov2hwr2","slide":4,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/8nm18bqx","slide":4,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/nmdkf69c","slide":4,"text":"proof idea","textPreview":"proof idea","textChars":10,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/ml4j618r","slide":4,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/psri5cry","slide":4,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/ori1w7qd","slide":4,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/gn698bml","slide":4,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/1ofahg36","slide":4,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/elor614f","slide":4,"text":"This topic explains how regular expressions changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how regular expressions changes design decisions, program behaviour, protocol results or proof structure.","textChars":125,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/wwkjsk","slide":4,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/sr7epd","slide":5,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/d4n2tc3i","slide":5,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/q1w3ix4r","slide":5,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/b25kr2lc","slide":5,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ofelgnml","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/p0n2ps36","slide":5,"text":"Regular expressions: transition view","textPreview":"Regular expressions: transition view","textChars":36,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/2dc3ex4f","slide":5,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/3e5kn2l0","slide":5,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/gbulcnmp","slide":5,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/1c32ls3a","slide":5,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/hgnqpknq","slide":5,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/gfu9wfm5","slide":5,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/sr7epd","slide":5,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/nxhaw3","slide":6,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/fat4ju9k","slide":6,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/0b25cza5","slide":6,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/1cvmlkrq","slide":6,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/q5kn65s3","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/r6t4fa9o","slide":6,"text":"Regular expressions: worked example","textPreview":"Regular expressions: worked example","textChars":35,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/s7258fa9","slide":6,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/d8bmhkre","slide":6,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/i10n25sr","slide":6,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/3294ba9c","slide":6,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/jelsrutk","slide":6,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/ydcry9cz","slide":6,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/lg3at4bq","slide":6,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/kfu90zu5","slide":6,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/7ilsvetw","slide":6,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/6hcr29cb","slide":6,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/tknaxobm","slide":6,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/8je94juh","slide":6,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/nm18zatc","slide":6,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/mlsrqpc7","slide":6,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/qhgvyxwf","slide":6,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/r2pc7id0","slide":6,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/c3id0nel","slide":6,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/d4ru9sv6","slide":6,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/2dgbudwj","slide":6,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/3epc3id4","slide":6,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/4fydwnep","slide":6,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/pg7u5svu","slide":6,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/u9wbqtw7","slide":6,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/va5czyds","slide":6,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/x4vy5gfa","slide":6,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/w3mxwby5","slide":6,"text":"Use this structure whenever regular expressions appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever regular expressions appears as a 10-mark explanation or trace problem.","textChars":98,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/nxhaw3","slide":6,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/lvs5bu","slide":7,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/jy5knyhs","slide":7,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/4ze1w3yd","slide":7,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/50n2p8zy","slide":7,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/utcjqtgb","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/vu5kjyhw","slide":7,"text":"Finite automata and regular expressions","textPreview":"Finite automata and regular expressions","textChars":39,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/wve1s3yh","slide":7,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/hwn2l8zm","slide":7,"text":"Finite automata and regular expressions is best taught as a states problem, not as a memorized definition.","textPreview":"Finite automata and regular expressions is best taught as a states problem, not as a memorized definition.","textChars":106,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/m5cjm9gz","slide":7,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/7qlkfehk","slide":7,"text":"The key mechanism connects alphabet with transition function so that students can predict the result.","textPreview":"The key mechanism connects alphabet with transition function so that students can predict the result.","textChars":101,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/bi94r214","slide":7,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/qh03yxkj","slide":7,"text":"For exams, draw the model first, label each step, and then explain start state and accepting states.","textPreview":"For exams, draw the model first, label each step, and then explain start state and accepting states.","textChars":100,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/d4rmtcja","slide":7,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/cjil072p","slide":7,"text":"alphabet","textPreview":"alphabet","textChars":8,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/z6t4vm10","slide":7,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/y5kn2hkv","slide":7,"text":"start state","textPreview":"start state","textChars":11,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/l8bmxcj6","slide":7,"text":"accepting states","textPreview":"accepting states","textChars":16,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/0725472l","slide":7,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/fap4jilw","slide":7,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/e9g3qdkb","slide":7,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/i5o7yl4z","slide":7,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/j6xorqlk","slide":7,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/476p0vm5","slide":7,"text":"This topic explains how finite automata and regular expressions changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how finite automata and regular expressions changes design decisions, program behaviour, protocol results or proof st...","textChars":145,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/lvs5bu","slide":7,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/3n6dm8","slide":8,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/szexk76l","slide":8,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ry5wb250","slide":8,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/6xcfixof","slide":8,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/5w3e9sna","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/4vuxgn6p","slide":8,"text":"Finite automata and regular expressions: transition view","textPreview":"Finite automata and regular expressions: transition view","textChars":56,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/julw7i54","slide":8,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/itcfedoj","slide":8,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/hs3e58ny","slide":8,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/wruxcn6d","slide":8,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/axszmhoj","slide":8,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/by1gfmp4","slide":8,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/3n6dm8","slide":8,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/60uu3h","slide":9,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/nidcri58","slide":9,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ojmt0nmt","slide":9,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/9kvutsny","slide":9,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/al4b2x4j","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/bmdcvi54","slide":9,"text":"Finite automata and regular expressions: worked example","textPreview":"Finite automata and regular expressions: worked example","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/wn6t4nmp","slide":9,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/xofuxsna","slide":9,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/ypob6x4v","slide":9,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/jaxcz2lg","slide":9,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/net076p0","slide":9,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/mdkze1of","slide":9,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/9gbi9g76","slide":9,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/8f2hgb6l","slide":9,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/zq9g36p4","slide":9,"text":"Identify alphabet","textPreview":"Identify alphabet","textChars":17,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/yp0za1oj","slide":9,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/lcbi5g7a","slide":9,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/0r2hcb6p","slide":9,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/jmd0fqp8","slide":9,"text":"alphabet","textPreview":"alphabet","textChars":8,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/il4zmlon","slide":9,"text":"Apply transition function","textPreview":"Apply transition function","textChars":25,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/ed8butc7","slide":9,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/fehc3yds","slide":9,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/0fatw3ud","slide":9,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/1gju58vy","slide":9,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/2hsbytcj","slide":9,"text":"Check start state","textPreview":"Check start state","textChars":17,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/ni1c7ydo","slide":9,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/ojat03u9","slide":9,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/pkju98vu","slide":9,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/ilobm9cz","slide":9,"text":"start state","textPreview":"start state","textChars":11,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/3mxsvedk","slide":9,"text":"Conclude accepting states","textPreview":"Conclude accepting states","textChars":25,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/lgne1cf2","slide":9,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/kfexs7eh","slide":9,"text":"Use this structure whenever finite automata and regular expressions appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever finite automata and regular expressions appears as a 10-mark explanation or trace problem.","textChars":118,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/60uu3h","slide":9,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/lbnyx9","slide":10,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/ed8zulsz","slide":10,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/1gzip0bq","slide":10,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/0fqhwva5","slide":10,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/raxgj6t8","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/q9ozqls3","slide":10,"text":"Finite automata and regular expressions: common confusion","textPreview":"Finite automata and regular expressions: common confusion","textChars":57,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/dczylgbe","slide":10,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/cbqhsbat","slide":10,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/3mxgf6tc","slide":10,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/2lozm1cr","slide":10,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/kzmxsvql","slide":10,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/l0ve1076","slide":10,"text":"Treating Finite automata and regular expressions as only a definition","textPreview":"Treating Finite automata and regular expressions as only a definition","textChars":69,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/yxkvq58f","slide":10,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/zydwzap0","slide":10,"text":"Explain states -> transition function -> accepting states","textPreview":"Explain states -> transition function -> accepting states","textChars":57,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/cv2dovq9","slide":10,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/xwbex07u","slide":10,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/a9kvml8j","slide":10,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/butwvqpo","slide":10,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/wr6x0zqt","slide":10,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/hsfe9k7e","slide":10,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/5cr6x0v6","slide":10,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/4bi54vel","slide":10,"text":"Use terms such as states, alphabet, transition function","textPreview":"Use terms such as states, alphabet, transition function","textChars":55,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/lbnyx9","slide":10,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/tsa1cq","slide":11,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/fypkfm5o","slide":11,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/gzylor6t","slide":11,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/1072hwne","slide":11,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/21g3qhoz","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/32pkjm5k","slide":11,"text":"Proving languages not regular","textPreview":"Proving languages not regular","textChars":29,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/o3ylsr65","slide":11,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/p4rmlwnq","slide":11,"text":"Proving languages not regular is best taught as a formal model problem, not as a memorized definition.","textPreview":"Proving languages not regular is best taught as a formal model problem, not as a memorized definition.","textChars":102,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/i5w3exov","slide":11,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/j65k72pg","slide":11,"text":"The key mechanism connects input string with rule application so that students can predict the result.","textPreview":"The key mechanism connects input string with rule application so that students can predict the result.","textChars":102,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/ridcbytg","slide":11,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/qh4vitsv","slide":11,"text":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textPreview":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textChars":103,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/dkvudorm","slide":11,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/sjmdkja1","slide":11,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/judc7etk","slide":11,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/itkve9sz","slide":11,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/5wvu9oba","slide":11,"text":"proof idea","textPreview":"proof idea","textChars":10,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/4vmdgjap","slide":11,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/vqtc3et8","slide":11,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/upkba9sn","slide":11,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/yl0vm9cf","slide":11,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/zm9wfud0","slide":11,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/kn2dozul","slide":11,"text":"This topic explains how proving languages not regular changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how proving languages not regular changes design decisions, program behaviour, protocol results or proof structure.","textChars":135,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/tsa1cq","slide":11,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/8cdnng","slide":12,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/axs3a5sj","slide":12,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/x03ml0ru","slide":12,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/wzulcfa9","slide":12,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/j2l4na90","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/y1c3e5sf","slide":12,"text":"Proving languages not regular: transition view","textPreview":"Proving languages not regular: transition view","textChars":46,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/l43mpkr6","slide":12,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/k3ulgfal","slide":12,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/z6hkbq9w","slide":12,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/e5832lsb","slide":12,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/svap8r69","slide":12,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/twj6hw7u","slide":12,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/8cdnng","slide":12,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/qi1hp3","slide":13,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/wbi14nid","slide":13,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/va90vi1s","slide":13,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/a90j2x07","slide":13,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/98ritsjm","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/87i10ni1","slide":13,"text":"Proving languages not regular: worked example","textPreview":"Proving languages not regular: worked example","textChars":45,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/n690ri1g","slide":13,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/ml0jyd0v","slide":13,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/t4v25czq","slide":13,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/s321w7i5","slide":13,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/it8ze98z","slide":13,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/juhg7epk","slide":13,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/4vahgjq5","slide":13,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/5wjy9o7a","slide":13,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/u58fa98n","slide":13,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/v6hg3ep8","slide":13,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/w7qhcjqt","slide":13,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/h8zy547e","slide":13,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/e1szmt87","slide":13,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/f2lgfyps","slide":13,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/b6dw7q54","slide":13,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/q54veloj","slide":13,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/x8ve90na","slide":13,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/c7mdgv6p","slide":13,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/zadwba50","slide":13,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/y94vi5of","slide":13,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/lcfed0n6","slide":13,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/kb6dkf6l","slide":13,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/7exwfa5c","slide":13,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/mdovm5or","slide":13,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/43qdwf2p","slide":13,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/54zu5k3a","slide":13,"text":"Use this structure whenever proving languages not regular appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever proving languages not regular appears as a 10-mark explanation or trace problem.","textChars":108,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/qi1hp3","slide":13,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/ox4ozw","slide":14,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/5s7upg3m","slide":14,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ipgve1kb","slide":14,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/jqpcn6lw","slide":14,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/sfydkv2d","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/tgrut03y","slide":14,"text":"Closure properties of regular languages","textPreview":"Closure properties of regular languages","textChars":39,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/6dgvilk7","slide":14,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/repcrqls","slide":14,"text":"Closure properties of regular languages is best taught as a formal model problem, not as a memorized definition.","textPreview":"Closure properties of regular languages is best taught as a formal model problem, not as a memorized definition.","textChars":112,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/0jidov29","slide":14,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/1krex03u","slide":14,"text":"The key mechanism connects input string with rule application so that students can predict the result.","textPreview":"The key mechanism connects input string with rule application so that students can predict the result.","textChars":102,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/xsj2lk3q","slide":14,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/wralcfm5","slide":14,"text":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textPreview":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textChars":103,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/vq1kjalk","slide":14,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/ap83a54z","slide":14,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/5gj2pk3m","slide":14,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/kfalgzm1","slide":14,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/ju1knulg","slide":14,"text":"proof idea","textPreview":"proof idea","textChars":10,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/its3ep4b","slide":14,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/lkz2d03i","slide":14,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/0zq14vmx","slide":14,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/c3al0vut","slide":14,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/d432t0be","slide":14,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/q1s3ylcn","slide":14,"text":"This topic explains how closure properties of regular languages changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how closure properties of regular languages changes design decisions, program behaviour, protocol results or proof st...","textChars":145,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/ox4ozw","slide":14,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/hpn44j","slide":15,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/q5szetgr","slide":15,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/d8ji98z2","slide":15,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/c7ahg3yx","slide":15,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/za10bih8","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/y9szidgn","slide":15,"text":"Closure properties of regular languages: transition view","textPreview":"Closure properties of regular languages: transition view","textChars":56,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/lc3id8ze","slide":15,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/0bahknyt","slide":15,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/fehgzeh4","slide":15,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/ed8z69gj","slide":15,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/4f2xsb2x","slide":15,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/5gve1gj2","slide":15,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/hpn44j","slide":15,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/sdglwd","slide":16,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/vy58je1w","slide":16,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/wzepsjih","slide":16,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/h0nqlojm","slide":16,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/i1wrut07","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/3258ny1s","slide":16,"text":"Closure properties of regular languages: worked example","textPreview":"Closure properties of regular languages: worked example","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/43e9wjid","slide":16,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/54nqpojy","slide":16,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/qpgryt0j","slide":16,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/rqp8ry14","slide":16,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/r6tgre1g","slide":16,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/65kzy9kv","slide":16,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/t8vytojm","slide":16,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/s72h0j21","slide":16,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/j2tgnu1k","slide":16,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/i1kzupkz","slide":16,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/54byp4jq","slide":16,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/432hwz25","slide":16,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/3yd0zy1o","slide":16,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/2x4z6tk3","slide":16,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/yt8jyx4b","slide":16,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/zuhk72lw","slide":16,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/0vq107mh","slide":16,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/lwz29s32","slide":16,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/mx8j2x4n","slide":16,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/7yhkb2l8","slide":16,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/8jal47md","slide":16,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/9kj2dc3y","slide":16,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/21ojqd43","slide":16,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/32xkzilo","slide":16,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/5g3m5gn6","slide":16,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/4fu5wb6l","slide":16,"text":"Use this structure whenever closure properties of regular languages appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever closure properties of regular languages appears as a 10-mark explanation or trace problem.","textChars":118,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/sdglwd","slide":16,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/unmunn","slide":17,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/5cre9k7m","slide":17,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/i90vy5ob","slide":17,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/3a9w7apw","slide":17,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/sf2x4z6d","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/dgbed47y","slide":17,"text":"Equivalence of automata","textPreview":"Equivalence of automata","textChars":23,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/qd0f2po7","slide":17,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/re9wbups","slide":17,"text":"Equivalence of automata is best taught as a states problem, not as a memorized definition.","textPreview":"Equivalence of automata is best taught as a states problem, not as a memorized definition.","textChars":90,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/0j2x8z69","slide":17,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/14beh4nu","slide":17,"text":"The key mechanism connects alphabet with transition function so that students can predict the result.","textPreview":"The key mechanism connects alphabet with transition function so that students can predict the result.","textChars":101,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/1ova5gfq","slide":17,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/gnmtwbe5","slide":17,"text":"For exams, draw the model first, label each step, and then explain start state and accepting states.","textPreview":"For exams, draw the model first, label each step, and then explain start state and accepting states.","textChars":100,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/fmds36xk","slide":17,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/el4bu1gz","slide":17,"text":"alphabet","textPreview":"alphabet","textChars":8,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/pcfu9gfm","slide":17,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/ob6t0be1","slide":17,"text":"start state","textPreview":"start state","textChars":11,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/3qds76xg","slide":17,"text":"accepting states","textPreview":"accepting states","textChars":16,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/2p4by1wv","slide":17,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/5gbaxwfi","slide":17,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/kf2toryx","slide":17,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/wz6t4r6t","slide":17,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/x0fadwne","slide":17,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/axob2hon","slide":17,"text":"This topic explains how equivalence of automata changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how equivalence of automata changes design decisions, program behaviour, protocol results or proof structure.","textChars":129,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/unmunn","slide":17,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/5k2zor","slide":18,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/1sfq1k7e","slide":18,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/epo7q5o3","slide":18,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/fqx8zapo","slide":18,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ovqpwf65","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/pgzq5k7q","slide":18,"text":"Equivalence of automata: transition view","textPreview":"Equivalence of automata: transition view","textChars":40,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/2to7upoz","slide":18,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/3uh83upk","slide":18,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/4zmpkv61","slide":18,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/5kvqt076","slide":18,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/hobmdw3i","slide":18,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/gn2l4r2x","slide":18,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/5k2zor","slide":18,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/by9dic","slide":19,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/mlsnihcb","slide":19,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/9oj6dwbm","slide":19,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/8na5kruh","slide":19,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/va1of6ts","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/a9snm1s7","slide":19,"text":"Equivalence of automata: worked example","textPreview":"Equivalence of automata: worked example","textChars":39,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/xc36hwby","slide":19,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/wba5orad","slide":19,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/jeloj6t4","slide":19,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/idc7q1sj","slide":19,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/0jmxory5","slide":19,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/lkvyxwzq","slide":19,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/yh4fmhgz","slide":19,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/zidgvmhk","slide":19,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/876xsry1","slide":19,"text":"Identify alphabet","textPreview":"Identify alphabet","textChars":17,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/98fy1wzm","slide":19,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/m5ofqhgv","slide":19,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/n6xgzmhg","slide":19,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/wb6xwbyd","slide":19,"text":"alphabet","textPreview":"alphabet","textChars":8,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/xczy5gzi","slide":19,"text":"Apply transition function","textPreview":"Apply transition function","textChars":25,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/5svypwr2","slide":19,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/4rmxgrqh","slide":19,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/jqtgn69w","slide":19,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/ipkfe18b","slide":19,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/twvytg7y","slide":19,"text":"Check start state","textPreview":"Check start state","textChars":17,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/svmxkbqd","slide":19,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/rudgr69s","slide":19,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/6t4fi187","slide":19,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/90behcru","slide":19,"text":"start state","textPreview":"start state","textChars":11,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/8zix87q9","slide":19,"text":"Conclude accepting states","textPreview":"Conclude accepting states","textChars":25,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/etw32tkv","slide":19,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/zu54vylg","slide":19,"text":"Use this structure whenever equivalence of automata appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever equivalence of automata appears as a 10-mark explanation or trace problem.","textChars":102,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/by9dic","slide":19,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/q9k0q9","slide":20,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/z258zm5w","slide":20,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/03e9srmh","slide":20,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/14nq1wn2","slide":20,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/m5wruh4n","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/n6583m5s","slide":20,"text":"Equivalence of automata: common confusion","textPreview":"Equivalence of automata: common confusion","textChars":41,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/o7y9wrmd","slide":20,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/987a5wny","slide":20,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/29c7ixo3","slide":20,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/3al8r25o","slide":20,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/j6943ux0","slide":20,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/y503apwf","slide":20,"text":"Treating Equivalence of automata as only a definition","textPreview":"Treating Equivalence of automata as only a definition","textChars":53,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/l8rm54f6","slide":20,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/k7ilczel","slide":20,"text":"Explain states -> transition function -> accepting states","textPreview":"Explain states -> transition function -> accepting states","textChars":57,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/b294zaxo","slide":20,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/ahg365wj","slide":20,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/x4rm1kfu","slide":20,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/c3il8fe9","slide":20,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/nepkvaxs","slide":20,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/2dg325g7","slide":20,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/q9wne50z","slide":20,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/ra54nahk","slide":20,"text":"Use terms such as states, alphabet, transition function","textPreview":"Use terms such as states, alphabet, transition function","textChars":55,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/q9k0q9","slide":20,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/ym6hui","slide":21,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/gzalonut","slide":21,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/vy1kvid8","slide":21,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/uds3mdcn","slide":21,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/54321sva","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/43ulsnup","slide":21,"text":"Minimization of automata","textPreview":"Minimization of automata","textChars":24,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/32lkzid4","slide":21,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/i1c3qdcj","slide":21,"text":"Minimization of automata is best taught as a states problem, not as a memorized definition.","textPreview":"Minimization of automata is best taught as a states problem, not as a memorized definition.","textChars":91,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/d8nm5sv6","slide":21,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/s7ulw7u1","slide":21,"text":"The key mechanism connects alphabet with transition function so that students can predict the result.","textPreview":"The key mechanism connects alphabet with transition function so that students can predict the result.","textChars":101,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/al0r21wj","slide":21,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/vmtsb6d4","slide":21,"text":"For exams, draw the model first, label each step, and then explain start state and accepting states.","textPreview":"For exams, draw the model first, label each step, and then explain start state and accepting states.","textChars":100,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/wn294bep","slide":21,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/xobadwva","slide":21,"text":"alphabet","textPreview":"alphabet","textChars":8,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/ipkr61wv","slide":21,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/jqtsf6d0","slide":21,"text":"start state","textPreview":"start state","textChars":11,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/kr298bel","slide":21,"text":"accepting states","textPreview":"accepting states","textChars":16,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/5sbahgv6","slide":21,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/etgruhwb","slide":21,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/zup83mxw","slide":21,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/3y5obido","slide":21,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/2xw72dc3","slide":21,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/p0n6d8bu","slide":21,"text":"This topic explains how minimization of automata changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how minimization of automata changes design decisions, program behaviour, protocol results or proof structure.","textChars":130,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/ym6hui","slide":21,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/wx79jy","slide":22,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/4bqpcnat","slide":22,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/3ah8ji9o","slide":22,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/2987axs3","slide":22,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/d0jqpcrq","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/cza9g7a5","slide":22,"text":"Minimization of automata: transition view","textPreview":"Minimization of automata: transition view","textChars":41,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/ryh8n29k","slide":22,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/qx87exsz","slide":22,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/14jqtcrm","slide":22,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/03a9k7a1","slide":22,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/md0zi9s3","slide":22,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/netgre9o","slide":22,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/wx79jy","slide":22,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/f8q9qf","slide":23,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/ryhkr6l0","slide":23,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/szq10r2l","slide":23,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/t0z2tw3q","slide":23,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/itojuh43","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/juxknmlo","slide":23,"text":"Minimization of automata: worked example","textPreview":"Minimization of automata: worked example","textChars":40,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/4vq1wrm9","slide":23,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/5wz2pw3u","slide":23,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/u5ojqh47","slide":23,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/v6x0j2ls","slide":23,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/329kf2ho","slide":23,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/i10j6xgj","slide":23,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/54r2hczu","slide":23,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/43il87y9","slide":23,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/r6tkj2h0","slide":23,"text":"Identify alphabet","textPreview":"Identify alphabet","textChars":17,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/q503ahgf","slide":23,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/d8b2lcz6","slide":23,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/s72lc7yl","slide":23,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/7apk7ihw","slide":23,"text":"alphabet","textPreview":"alphabet","textChars":8,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/69gjydgb","slide":23,"text":"Apply transition function","textPreview":"Apply transition function","textChars":25,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/a1ov2p4v","slide":23,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/v2xwva5g","slide":23,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/w3qx4fm1","slide":23,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/x4zexknm","slide":23,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/mdovy54z","slide":23,"text":"Check start state","textPreview":"Check start state","textChars":17,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/nexwra5k","slide":23,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/8f6d0fmp","slide":23,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/90fetkna","slide":23,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/y94vu54n","slide":23,"text":"start state","textPreview":"start state","textChars":11,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/zadwnq58","slide":23,"text":"Conclude accepting states","textPreview":"Conclude accepting states","textChars":25,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/h43y987q","slide":23,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/g3uh0365","slide":23,"text":"Use this structure whenever minimization of automata appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever minimization of automata appears as a 10-mark explanation or trace problem.","textChars":103,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/f8q9qf","slide":23,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/2k3zw4","slide":24,"title":"BCS503 | Theory of Computation","textShapes":14}
+{"kind":"textbox","id":"sh/dcb290zi","slide":24,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/6903el0r","slide":24,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ra9k7qhc","slide":24,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/47ilcbil","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/58r25gz6","slide":24,"text":"Applications of regular expressions","textPreview":"Applications of regular expressions","textChars":35,"textLines":1,"bbox":[78,104,900,56]}
+{"kind":"shape","id":"sh/i503al0v","slide":24,"bbox":[96,215,16,16]}
+{"kind":"textbox","id":"sh/j69k3qhg","slide":24,"text":"Applications of regular expressions is best taught as a formal model problem, not as a memorized definition.","textPreview":"Applications of regular expressions is best taught as a formal model problem, not as a memorized definition.","textChars":108,"textLines":1,"bbox":[126,208,580,42]}
+{"kind":"shape","id":"sh/o32lofi5","slide":24,"bbox":[96,307,16,16]}
+{"kind":"textbox","id":"sh/p4vmhkzq","slide":24,"text":"The key mechanism connects input string with rule application so that students can predict the result.","textPreview":"The key mechanism connects input string with rule application so that students can predict the result.","textChars":102,"textLines":1,"bbox":[126,300,580,42]}
+{"kind":"shape","id":"sh/tgzy58vy","slide":24,"bbox":[96,399,16,16]}
+{"kind":"textbox","id":"sh/8fqhw3ud","slide":24,"text":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textPreview":"For exams, draw the model first, label each step, and then explain acceptance condition and proof idea.","textChars":103,"textLines":1,"bbox":[126,392,580,42]}
+{"kind":"textbox","id":"sh/7exg3yds","slide":24,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[163,516,170,92]}
+{"kind":"textbox","id":"sh/6dozutc7","slide":24,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[359,516,170,92]}
+{"kind":"textbox","id":"sh/lcfy1ovm","slide":24,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[555,516,170,92]}
+{"kind":"textbox","id":"sh/kb6hsju1","slide":24,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[751,516,170,92]}
+{"kind":"textbox","id":"sh/jaxgzedw","slide":24,"text":"proof idea","textPreview":"proof idea","textChars":10,"textLines":1,"bbox":[947,516,170,92]}
+{"kind":"shape","id":"sh/y9ozq9cb","slide":24,"bbox":[333,562,26,0]}
+{"kind":"shape","id":"sh/58jidsv6","slide":24,"bbox":[529,562,26,0]}
+{"kind":"shape","id":"sh/47ah4nul","slide":24,"bbox":[725,562,26,0]}
+{"kind":"shape","id":"sh/onitwb6t","slide":24,"bbox":[921,562,26,0]}
+{"kind":"textbox","id":"sh/9obapg7e","slide":24,"text":"Why this matters","textPreview":"Why this matters","textChars":16,"textLines":1,"bbox":[805,210,300,34]}
+{"kind":"textbox","id":"sh/m10rulon","slide":24,"text":"This topic explains how applications of regular expressions changes design decisions, program behaviour, protocol results or proof structure.","textPreview":"This topic explains how applications of regular expressions changes design decisions, program behaviour, protocol results or proof struct...","textChars":141,"textLines":1,"bbox":[805,258,330,160]}
+{"kind":"notes","id":"nt/2k3zw4","slide":24,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/4yz6km","slide":25,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/f6x07ido","slide":25,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/g761gnet","slide":25,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/h8fi9sve","slide":25,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/29ojixwz","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/3ax0bidk","slide":25,"text":"Applications of regular expressions: transition view","textPreview":"Applications of regular expressions: transition view","textChars":52,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/4b61kne5","slide":25,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/pczidsvq","slide":25,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/qd8jmxwb","slide":25,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/reh0f2dg","slide":25,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/byxcryd4","slide":25,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/qxovytcz","slide":25,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/4yz6km","slide":25,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/rxscll","slide":26,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/61sjyxc7","slide":26,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/toj29cbi","slide":26,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/83a107ux","slide":26,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/vqlkbmto","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/upsj2hs3","slide":26,"text":"Applications of regular expressions: worked example","textPreview":"Applications of regular expressions: worked example","textChars":51,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/hs32dwbu","slide":26,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/gru14ra9","slide":26,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/buh0zit4","slide":26,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/at8jqdcz","slide":26,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/4je1g3yx","slide":26,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/pkn298zi","slide":26,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/2hwjetgr","slide":26,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/3i5k7yhc","slide":26,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/c7y1k3yt","slide":26,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/d872d8ze","slide":26,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/qlwjidg3","slide":26,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/r65kbyho","slide":26,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/sbu18jip","slide":26,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/tc3i1oza","slide":26,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/9wbqpgnm","slide":26,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/ov2pgb6h","slide":26,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/nut8n65w","slide":26,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/mtk7e1ob","slide":26,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/x0vqtgny","slide":26,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/wzm9kv6d","slide":26,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/byd8rq5s","slide":26,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/axkrilo7","slide":26,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/lovqx0nu","slide":26,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/k3m9ov69","slide":26,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/29gnix4r","slide":26,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/3apor2lc","slide":26,"text":"Use this structure whenever applications of regular expressions appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever applications of regular expressions appears as a 10-mark explanation or trace problem.","textChars":114,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/rxscll","slide":26,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/t2a9wy","slide":27,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/ytcbml4v","slide":27,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/lw3ah0nm","slide":27,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/0vutovm1","slide":27,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/bq1sbq5k","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/qpsbiloz","slide":27,"text":"Regular expressions vs Finite automata and regular expressions","textPreview":"Regular expressions vs Finite automata and regular expressions","textChars":62,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/ds3ad0nq","slide":27,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/cratkv65","slide":27,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/321s7658","slide":27,"text":"Regular expressions","textPreview":"Regular expressions","textChars":19,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/21sre1o3","slide":27,"text":"Finite automata and regular expressions","textPreview":"Finite automata and regular expressions","textChars":39,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/gbetgv6p","slide":27,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/1cnup0na","slide":27,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/u9wbe5oz","slide":27,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/fa5cnq5k","slide":27,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/snutcv6t","slide":27,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/tonul0ne","slide":27,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/6lcbalon","slide":27,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/7mlcjq58","slide":27,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/cjydof6x","slide":27,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/dk7uxkni","slide":27,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/l03u1kfm","slide":27,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/kzut8fy1","slide":27,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/zylczaxw","slide":27,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/yxcb65gb","slide":27,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/xw3ux0fq","slide":27,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/cvut4fy5","slide":27,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/t2a9wy","slide":27,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/4x4uqs","slide":28,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/bi98n258","slide":28,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/cjipw7mt","slide":28,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/d4rqpcne","slide":28,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/2d07qdob","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/3e98ji5w","slide":28,"text":"Closure properties of regular languages vs Equivalence of automata","textPreview":"Closure properties of regular languages vs Equivalence of automata","textChars":66,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/ofipsn6h","slide":28,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/pgrqlsn2","slide":28,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/m9kr2h4v","slide":28,"text":"Closure properties of regular languages","textPreview":"Closure properties of regular languages","textChars":39,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/7at8vm5g","slide":28,"text":"Equivalence of automata","textPreview":"Equivalence of automata","textChars":23,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/7i1sr610","slide":28,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/6hsby1kf","slide":28,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/tkjatgj6","slide":28,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/sjat0b2l","slide":28,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/fm1sv61w","slide":28,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/ulsb2lkr","slide":28,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/h83axgj2","slide":28,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/gnut4b2h","slide":28,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/3alszq18","slide":28,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/29cb6lkn","slide":28,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/yhgnet87","slide":28,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/zip4neps","slide":28,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/kji5gjqx","slide":28,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/lkrmpo7i","slide":28,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/qdgna98v","slide":28,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/bep4jepg","slide":28,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/4x4uqs","slide":28,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/1dv20x","slide":29,"title":"BCS503 | Theory of Computation","textShapes":15}
+{"kind":"textbox","id":"sh/tg3eh87q","slide":29,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/6tsfmd8f","slide":29,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/7ulwfip0","slide":29,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/kraxk3q9","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/5sjed87u","slide":29,"text":"Module Summary","textPreview":"Module Summary","textChars":14,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"textbox","id":"sh/ipsvit83","slide":29,"text":"Definitions","textPreview":"Definitions","textChars":11,"textLines":1,"bbox":[163,208,170,92]}
+{"kind":"textbox","id":"sh/jq1wbypo","slide":29,"text":"Models","textPreview":"Models","textChars":6,"textLines":1,"bbox":[359,208,170,92]}
+{"kind":"textbox","id":"sh/onexwn6d","slide":29,"text":"Mechanisms","textPreview":"Mechanisms","textChars":10,"textLines":1,"bbox":[555,208,170,92]}
+{"kind":"textbox","id":"sh/poneps7y","slide":29,"text":"Examples","textPreview":"Examples","textChars":8,"textLines":1,"bbox":[751,208,170,92]}
+{"kind":"textbox","id":"sh/lofqtkf2","slide":29,"text":"Exam answer","textPreview":"Exam answer","textChars":11,"textLines":1,"bbox":[947,208,170,92]}
+{"kind":"shape","id":"sh/0n6p0zeh","slide":29,"bbox":[333,254,26,0]}
+{"kind":"shape","id":"sh/zmd8ruxw","slide":29,"bbox":[529,254,26,0]}
+{"kind":"shape","id":"sh/yl47ypwb","slide":29,"bbox":[725,254,26,0]}
+{"kind":"shape","id":"sh/dkvqpkf6","slide":29,"bbox":[921,254,26,0]}
+{"kind":"shape","id":"sh/cjmpwfel","slide":29,"bbox":[110,393,16,16]}
+{"kind":"textbox","id":"sh/bid8nax0","slide":29,"text":"Remember: Regular expressions","textPreview":"Remember: Regular expressions","textChars":29,"textLines":1,"bbox":[140,386,950,42]}
+{"kind":"shape","id":"sh/qh47u5wf","slide":29,"bbox":[110,438,16,16]}
+{"kind":"textbox","id":"sh/xgzq14va","slide":29,"text":"Remember: Finite automata and regular expressions","textPreview":"Remember: Finite automata and regular expressions","textChars":49,"textLines":1,"bbox":[140,431,950,42]}
+{"kind":"shape","id":"sh/wfq98jep","slide":29,"bbox":[110,483,16,16]}
+{"kind":"textbox","id":"sh/gvy1k7qx","slide":29,"text":"Remember: Proving languages not regular","textPreview":"Remember: Proving languages not regular","textChars":39,"textLines":1,"bbox":[140,476,950,42]}
+{"kind":"shape","id":"sh/1writc7i","slide":29,"bbox":[110,528,16,16]}
+{"kind":"textbox","id":"sh/e9gjih87","slide":29,"text":"Remember: Closure properties of regular languages","textPreview":"Remember: Closure properties of regular languages","textChars":49,"textLines":1,"bbox":[140,521,950,42]}
+{"kind":"shape","id":"sh/fap0r2ps","slide":29,"bbox":[110,573,16,16]}
+{"kind":"textbox","id":"sh/s7y1g7q1","slide":29,"text":"Remember: Equivalence of automata","textPreview":"Remember: Equivalence of automata","textChars":33,"textLines":1,"bbox":[140,566,950,42]}
+{"kind":"shape","id":"sh/t87ipc7m","slide":29,"bbox":[110,618,16,16]}
+{"kind":"textbox","id":"sh/65gjex8v","slide":29,"text":"Remember: Minimization of automata","textPreview":"Remember: Minimization of automata","textChars":34,"textLines":1,"bbox":[140,611,950,42]}
+{"kind":"notes","id":"nt/1dv20x","slide":29,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/qcazyu","slide":30,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/5k36h8jq","slide":30,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/ihcnmtkz","slide":30,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/3ilofy1k","slide":30,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/gfu5k32t","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/hg36doje","slide":30,"text":"Important Definitions","textPreview":"Important Definitions","textChars":21,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/utsnitk3","slide":30,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/vu1oby1o","slide":30,"text":"Term","textPreview":"Term","textChars":4,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/0bepwn2d","slide":30,"text":"Classroom definition","textPreview":"Classroom definition","textChars":20,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/1cn6psjy","slide":30,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/dcry1oju","slide":30,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/crixsj29","slide":30,"text":"Regular expressions","textPreview":"Regular expressions","textChars":19,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/bqpgze1o","slide":30,"text":"A named concept with conditions, components and result.","textPreview":"A named concept with conditions, components and result.","textChars":55,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/qpgfq9k3","slide":30,"text":"Define + draw + example","textPreview":"Define + draw + example","textChars":23,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/po7yx4ji","slide":30,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/onyxoj2d","slide":30,"text":"Finite automata and regular expressions","textPreview":"Finite automata and regular expressions","textChars":39,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/3mpwve1s","slide":30,"text":"A repeatable process that transforms input into an observable output.","textPreview":"A repeatable process that transforms input into an observable output.","textChars":69,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/2lgfm9k7","slide":30,"text":"Steps + result","textPreview":"Steps + result","textChars":14,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/9kby98j2","slide":30,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/8j2x032h","slide":30,"text":"Proving languages not regular","textPreview":"Proving languages not regular","textChars":29,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/szu9sbup","slide":30,"text":"A simplified representation used to reason about a real system.","textPreview":"A simplified representation used to reason about a real system.","textChars":63,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/t03qlgva","slide":30,"text":"Assumptions + limits","textPreview":"Assumptions + limits","textChars":20,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/6xsrq1cz","slide":30,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/7y18j6d4","slide":30,"text":"Closure properties of regular languages","textPreview":"Closure properties of regular languages","textChars":39,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/kva9oret","slide":30,"text":"The property used to judge correctness, usefulness or performance.","textPreview":"The property used to judge correctness, usefulness or performance.","textChars":66,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/5wjqhwve","slide":30,"text":"Compare + justify","textPreview":"Compare + justify","textChars":17,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/qcazyu","slide":30,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/1mzjts","slide":31,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/3uhw3eto","slide":31,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/4vqdcju9","slide":31,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/5wze5obu","slide":31,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/qx8vetcf","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ry1w7ytk","slide":31,"text":"Important Algorithms / Diagrams / Formulas","textPreview":"Important Algorithms / Diagrams / Formulas","textChars":42,"textLines":1,"bbox":[78,104,940,48]}
+{"kind":"shape","id":"sh/szadg3u5","slide":31,"bbox":[98,217,16,16]}
+{"kind":"textbox","id":"sh/d0je9obq","slide":31,"text":"Draw the central architecture/process before writing long explanation.","textPreview":"Draw the central architecture/process before writing long explanation.","textChars":70,"textLines":1,"bbox":[128,210,1020,42]}
+{"kind":"shape","id":"sh/m1ov2pcv","slide":31,"bbox":[98,295,16,16]}
+{"kind":"textbox","id":"sh/72xcvudg","slide":31,"text":"For every algorithm: problem, input, initial state, iterations, final result, interpretation.","textPreview":"For every algorithm: problem, input, initial state, iterations, final result, interpretation.","textChars":93,"textLines":1,"bbox":[128,288,1020,42]}
+{"kind":"shape","id":"sh/fadgje1s","slide":31,"bbox":[98,373,16,16]}
+{"kind":"textbox","id":"sh/e94fq9k7","slide":31,"text":"For code/commands: command or snippet, explanation, execution, output.","textPreview":"For code/commands: command or snippet, explanation, execution, output.","textChars":70,"textLines":1,"bbox":[128,366,1020,42]}
+{"kind":"shape","id":"sh/1cvylojy","slide":31,"bbox":[98,451,16,16]}
+{"kind":"textbox","id":"sh/0bmxsj2d","slide":31,"text":"For comparison questions: state basis of comparison first, then fill the table.","textPreview":"For comparison questions: state basis of comparison first, then fill the table.","textChars":79,"textLines":1,"bbox":[128,444,1020,42]}
+{"kind":"notes","id":"nt/1mzjts","slide":31,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/agjyb8","slide":32,"title":"BCS503 | Theory of Computation","textShapes":9}
+{"kind":"textbox","id":"sh/fa10nyxw","slide":32,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/0vahw3eh","slide":32,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/1wjip8f2","slide":32,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/q58zqtwf","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/r6h0jyx0","slide":32,"text":"Common Mistakes","textPreview":"Common Mistakes","textChars":15,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/s7qhs3e5","slide":32,"bbox":[98,213,16,16]}
+{"kind":"textbox","id":"sh/d8jil8fq","slide":32,"text":"Writing only a definition when the question asks to explain working.","textPreview":"Writing only a definition when the question asks to explain working.","textChars":68,"textLines":1,"bbox":[128,206,1010,42]}
+{"kind":"shape","id":"sh/a1cj2xwj","slide":32,"bbox":[98,291,16,16]}
+{"kind":"textbox","id":"sh/b2l0vix4","slide":32,"text":"Skipping diagrams or leaving labels too vague.","textPreview":"Skipping diagrams or leaving labels too vague.","textChars":46,"textLines":1,"bbox":[128,284,1010,42]}
+{"kind":"shape","id":"sh/ji18ny1k","slide":32,"bbox":[98,369,16,16]}
+{"kind":"textbox","id":"sh/ihsret0z","slide":32,"text":"Mixing similar terms without a comparison basis.","textPreview":"Mixing similar terms without a comparison basis.","textChars":48,"textLines":1,"bbox":[128,362,1010,42]}
+{"kind":"shape","id":"sh/5k3qpozq","slide":32,"bbox":[98,447,16,16]}
+{"kind":"textbox","id":"sh/4ja9gji5","slide":32,"text":"Giving an example that does not match the formal condition.","textPreview":"Giving an example that does not match the formal condition.","textChars":59,"textLines":1,"bbox":[128,440,1010,42]}
+{"kind":"shape","id":"sh/rml8ryhw","slide":32,"bbox":[98,525,16,16]}
+{"kind":"textbox","id":"sh/6lcrit0b","slide":32,"text":"Forgetting assumptions, limitations or failure cases.","textPreview":"Forgetting assumptions, limitations or failure cases.","textChars":53,"textLines":1,"bbox":[128,518,1010,42]}
+{"kind":"notes","id":"nt/agjyb8","slide":32,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/ovwadq","slide":33,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/o765sbyh","slide":33,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/n6x4z6hc","slide":33,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/25onq1gr","slide":33,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/14fmxwz6","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/0365oryl","slide":33,"text":"Exam Preparation","textPreview":"Exam Preparation","textChars":16,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/f2x4v6h0","slide":33,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/e1onm1gf","slide":33,"text":"Question type","textPreview":"Question type","textChars":13,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/d0vmtwzu","slide":33,"text":"Answer structure","textPreview":"Answer structure","textChars":16,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/szm5kryp","slide":33,"text":"What earns marks","textPreview":"What earns marks","textChars":16,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/uxkrehkr","slide":33,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/vyt87m1c","slide":33,"text":"Define/explain","textPreview":"Define/explain","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/wj29grix","slide":33,"text":"Definition + labeled diagram + example","textPreview":"Definition + labeled diagram + example","textChars":38,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/hkbq9wji","slide":33,"text":"Exact terms and scope","textPreview":"Exact terms and scope","textChars":21,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/mt0rahkv","slide":33,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/7u983210","slide":33,"text":"Compare","textPreview":"Compare","textChars":7,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/8v29c72l","slide":33,"text":"Basis + table + conclusion","textPreview":"Basis + table + conclusion","textChars":26,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/9wbq5cj6","slide":33,"text":"Clear differentiators","textPreview":"Clear differentiators","textChars":21,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/yp0r6xkj","slide":33,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/zq98z214","slide":33,"text":"Algorithm/trace","textPreview":"Algorithm/trace","textChars":15,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/3u5o7yhw","slide":33,"text":"Input + iterations + final result","textPreview":"Input + iterations + final result","textChars":33,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/2twnet0b","slide":33,"text":"Correct step sequence","textPreview":"Correct step sequence","textChars":21,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/pw7698z2","slide":33,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/ove5g3ih","slide":33,"text":"Application","textPreview":"Application","textChars":11,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/bypobihs","slide":33,"text":"Scenario + model + justification","textPreview":"Scenario + model + justification","textChars":32,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/qxgnid0n","slide":33,"text":"Why the choice fits","textPreview":"Why the choice fits","textChars":19,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/ovwadq","slide":33,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/flml0e","slide":34,"title":"BCS503 | Theory of Computation","textShapes":9}
+{"kind":"textbox","id":"sh/e9072hwr","slide":34,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/1cbqdwfi","slide":34,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/0bip4rex","slide":34,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/r69o72x0","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/q507yxwf","slide":34,"text":"Practice Questions","textPreview":"Practice Questions","textChars":18,"textLines":1,"bbox":[78,104,720,48]}
+{"kind":"shape","id":"sh/d8rq9cf6","slide":34,"bbox":[98,213,16,16]}
+{"kind":"textbox","id":"sh/s7ip07el","slide":34,"text":"Explain Regular expressions with a neat diagram.","textPreview":"Explain Regular expressions with a neat diagram.","textChars":48,"textLines":1,"bbox":[128,206,1010,42]}
+{"kind":"shape","id":"sh/b2t8j6dk","slide":34,"bbox":[98,291,16,16]}
+{"kind":"textbox","id":"sh/a1k7a1wz","slide":34,"text":"Compare two approaches from Regular Expressions and Regular Languages and justify when each is suitable.","textPreview":"Compare two approaches from Regular Expressions and Regular Languages and justify when each is suitable.","textChars":104,"textLines":1,"bbox":[128,284,1010,42]}
+{"kind":"shape","id":"sh/kje9gzqp","slide":34,"bbox":[98,369,16,16]}
+{"kind":"textbox","id":"sh/5knq947a","slide":34,"text":"Solve a small worked example involving Proving languages not regular.","textPreview":"Solve a small worked example involving Proving languages not regular.","textChars":69,"textLines":1,"bbox":[128,362,1010,42]}
+{"kind":"shape","id":"sh/ihw7ep8j","slide":34,"bbox":[98,447,16,16]}
+{"kind":"textbox","id":"sh/ji587up4","slide":34,"text":"List common mistakes and how to avoid them in Regular Expressions and Regular Languages.","textPreview":"List common mistakes and how to avoid them in Regular Expressions and Regular Languages.","textChars":88,"textLines":1,"bbox":[128,440,1010,42]}
+{"kind":"shape","id":"sh/wfepcfqd","slide":34,"bbox":[98,525,16,16]}
+{"kind":"textbox","id":"sh/xgnq5k7y","slide":34,"text":"Redraw the full module map from memory in five minutes.","textPreview":"Redraw the full module map from memory in five minutes.","textChars":55,"textLines":1,"bbox":[128,518,1010,42]}
+{"kind":"notes","id":"nt/flml0e","slide":34,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/z3owxa","slide":35,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/032d0fyt","slide":35,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/z2tw7axo","slide":35,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/e1kvy5g3","slide":35,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/d0be50fi","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/czidwvyx","slide":35,"text":"Regular expressions vs Finite automata and regular expressions","textPreview":"Regular expressions vs Finite automata and regular expressions","textChars":62,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/ry9w3qxc","slide":35,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/qx0vu5gr","slide":35,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/xwveh4fm","slide":35,"text":"Regular expressions","textPreview":"Regular expressions","textChars":19,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/wvmx8zy1","slide":35,"text":"Finite automata and regular expressions","textPreview":"Finite automata and regular expressions","textChars":39,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/y5kradcf","slide":35,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/z6t8jitk","slide":35,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/0729cnu5","slide":35,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/l8bqlsbq","slide":35,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/qh076tc3","slide":35,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/bit8fyto","slide":35,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/cj2983u9","slide":35,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/d4bqh8bu","slide":35,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/ad4rixc7","slide":35,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/ved8r2ts","slide":35,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/7i5oju94","slide":35,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/6hwnapsz","slide":35,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/tk76l4ra","slide":35,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/sjy5czap","slide":35,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/fmponu9g","slide":35,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/ulgne9sv","slide":35,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/z3owxa","slide":35,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/48joc0","slide":36,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/ap0fm1wr","slide":36,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/xcbyhgf2","slide":36,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/wb2xobex","slide":36,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/nm9wb6x0","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ml0fi1wf","slide":36,"text":"Finite automata and regular expressions: worked example","textPreview":"Finite automata and regular expressions: worked example","textChars":55,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/9oredwf6","slide":36,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/onixkbel","slide":36,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/7itgnqxk","slide":36,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/6hkfulwz","slide":36,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/cbedk3yx","slide":36,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/dcnud8zi","slide":36,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/q9wbitgr","slide":36,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/ba5cbyhc","slide":36,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/o7etgjyl","slide":36,"text":"Identify alphabet","textPreview":"Identify alphabet","textChars":17,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/p8nu9oz6","slide":36,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/2lcbe90f","slide":36,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/36lc7eh0","slide":36,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/gjutcjip","slide":36,"text":"alphabet","textPreview":"alphabet","textChars":8,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/1k3u5oza","slide":36,"text":"Apply transition function","textPreview":"Apply transition function","textChars":25,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/h0va90ry","slide":36,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/gfm9gvad","slide":36,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/veds7a9s","slide":36,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/ud4re5s7","slide":36,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/tcva50r2","slide":36,"text":"Check start state","textPreview":"Check start state","textChars":17,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/8b29cvah","slide":36,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/7ats3q9w","slide":36,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/69kralsb","slide":36,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/d8fahkr6","slide":36,"text":"start state","textPreview":"start state","textChars":11,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/s76tofal","slide":36,"text":"Conclude accepting states","textPreview":"Conclude accepting states","textChars":25,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/q1gfmx4r","slide":36,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/b2pgv2lc","slide":36,"text":"Use this structure whenever finite automata and regular expressions appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever finite automata and regular expressions appears as a 10-mark explanation or trace problem.","textChars":118,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/48joc0","slide":36,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/eprpbw","slide":37,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/it0julcz","slide":37,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/5wr2pgvq","slide":37,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/4vi1wbu5","slide":37,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/ry9krqdg","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/qx0jylcb","slide":37,"text":"Proving languages not regular: common confusion","textPreview":"Proving languages not regular: common confusion","textChars":47,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/dkb2t0vm","slide":37,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/sji10vu1","slide":37,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/fmtkvqds","slide":37,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/elkj25c7","slide":37,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/knmpsfqx","slide":37,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/5ovq1k7i","slide":37,"text":"Treating Proving languages not regular as only a definition","textPreview":"Treating Proving languages not regular as only a definition","textChars":59,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/ilk7q58r","slide":37,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/jmt8zapc","slide":37,"text":"Explain formal model -> rule application -> proof idea","textPreview":"Explain formal model -> rule application -> proof idea","textChars":54,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/sbm9wf6t","slide":37,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/tcvq5k7e","slide":37,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/6p4rup8n","slide":37,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/rad83ap8","slide":37,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/gf690z65","slide":37,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/1gfq947a","slide":37,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/pwbqt4zu","slide":37,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/ov2pkzy9","slide":37,"text":"Use terms such as formal model, input string, rule application","textPreview":"Use terms such as formal model, input string, rule application","textChars":62,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/eprpbw","slide":37,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/70588q","slide":38,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/dw7mhcvm","slide":38,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/qtw3mxwb","slide":38,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/bup4f2dw","slide":38,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/0zylsred","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/l07mlwvy","slide":38,"text":"Closure properties of regular languages: transition view","textPreview":"Closure properties of regular languages: transition view","textChars":56,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/yxg3qhw7","slide":38,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/zyp4jmds","slide":38,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/g3elgne9","slide":38,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/14n29svu","slide":38,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/pcbudgvu","slide":38,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/4b2t4be9","slide":38,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/70588q","slide":38,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/vuyd1u","slide":39,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/ojatov2p","slide":39,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/3yhsvql4","slide":39,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/2x8bmlkj","slide":39,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/1wzatg3y","slide":39,"text":"39","textPreview":"39","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/gvqtkb2d","slide":39,"text":"Equivalence of automata vs Minimization of automata","textPreview":"Equivalence of automata vs Minimization of automata","textChars":51,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/fuhsr6ls","slide":39,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/et8bi1k7","slide":39,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/tszapg3m","slide":39,"text":"Equivalence of automata","textPreview":"Equivalence of automata","textChars":23,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/srq9gb2h","slide":39,"text":"Minimization of automata","textPreview":"Minimization of automata","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/yl8zah07","slide":39,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/jmh03m1s","slide":39,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/knqhcrid","slide":39,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/lozi5wjy","slide":39,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/ahoz6h0b","slide":39,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/bih0z21w","slide":39,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/wjqh87i1","slide":39,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/xkzi1cjm","slide":39,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/mtoz2x0z","slide":39,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/nuxgv21k","slide":39,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/rmtonud0","slide":39,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/qlkne9cf","slide":39,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/dob6p4v6","slide":39,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/sn25gzul","slide":39,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/fatoredc","slide":39,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/epkni9cr","slide":39,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/vuyd1u","slide":39,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/lpvedo","slide":40,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/2tcz69kb","slide":40,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/pgni1oj2","slide":40,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ofeh8jih","slide":40,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/bi503y1s","slide":40,"text":"40","textPreview":"40","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ahwzat0n","slide":40,"text":"Minimization of automata: worked example","textPreview":"Minimization of automata: worked example","textChars":40,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/xkni58jy","slide":40,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/cjehc3id","slide":40,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/zmp07y14","slide":40,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/ylgjed0j","slide":40,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/cjitkj6h","slide":40,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/dkbuton2","slide":40,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/qx0bi9ob","slide":40,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/by9cre5w","slide":40,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/0n2dojmt","slide":40,"text":"Identify alphabet","textPreview":"Identify alphabet","textChars":17,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/lobuxony","slide":40,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/ylkbmton","slide":40,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/zmtcvy58","slide":40,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/8rmds3mp","slide":40,"text":"alphabet","textPreview":"alphabet","textChars":8,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/9svu18na","slide":40,"text":"Apply transition function","textPreview":"Apply transition function","textChars":25,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/h8rul8fe","slide":40,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/w7itc3et","slide":40,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/v69cjyx8","slide":40,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/u5gbatwn","slide":40,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/5crup8fa","slide":40,"text":"Check start state","textPreview":"Check start state","textChars":17,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/4bitg3e5","slide":40,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/ja9cnyxk","slide":40,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/i90bedwz","slide":40,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/lg7udof6","slide":40,"text":"start state","textPreview":"start state","textChars":11,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/kfyt4jyl","slide":40,"text":"Conclude accepting states","textPreview":"Conclude accepting states","textChars":25,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/q9czyl87","slide":40,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/bal0rq9s","slide":40,"text":"Use this structure whenever minimization of automata appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever minimization of automata appears as a 10-mark explanation or trace problem.","textChars":103,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/lpvedo","slide":40,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/ung6hy","slide":41,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/p4z2l4ni","slide":41,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/218ja947","slide":41,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/32hkje5s","slide":41,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/gzq18zm1","slide":41,"text":"41","textPreview":"41","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/h0z2h4nm","slide":41,"text":"Applications of regular expressions: common confusion","textPreview":"Applications of regular expressions: common confusion","textChars":53,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/uxoj6p4v","slide":41,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/fyxkfu5g","slide":41,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/0valk3m5","slide":41,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/lwj2tonq","slide":41,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/pg3adsri","slide":41,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/ofutknqx","slide":41,"text":"Treating Applications of regular expressions as only a definition","textPreview":"Treating Applications of regular expressions as only a definition","textChars":65,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/3elsbi9c","slide":41,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/2dcbid8r","slide":41,"text":"Explain formal model -> rule application -> proof idea","textPreview":"Explain formal model -> rule application -> proof idea","textChars":54,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/1c3a98r6","slide":41,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/gbatg3q1","slide":41,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/fa1s7i9g","slide":41,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/epsbed8v","slide":41,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/l8nulc7q","slide":41,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/07ets7q5","slide":41,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/krmdobyh","slide":41,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/lsvehgfm","slide":41,"text":"Use terms such as formal model, input string, rule application","textPreview":"Use terms such as formal model, input string, rule application","textChars":62,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/ung6hy","slide":41,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/letkq2","slide":42,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/p8vy1gzi","slide":42,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/25kfql07","slide":42,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/36tgzqhs","slide":42,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/gj2xobi1","slide":42,"text":"42","textPreview":"42","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/h4byxgzm","slide":42,"text":"Regular expressions: transition view","textPreview":"Regular expressions: transition view","textChars":36,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/uhkfm10v","slide":42,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/fitgv6hg","slide":42,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/0f6h0vi5","slide":42,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/10fyt0zq","slide":42,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/x4zyhgn2","slide":42,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/c36h8vmh","slide":42,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/letkq2","slide":42,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/p1qtmq","slide":43,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/et0v69o7","slide":43,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/1gbeh47i","slide":43,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/0f2d8z6d","slide":43,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/nitwjepo","slide":43,"text":"43","textPreview":"43","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/mhkva9o3","slide":43,"text":"Finite automata and regular expressions vs Proving languages not regular","textPreview":"Finite automata and regular expressions vs Proving languages not regular","textChars":72,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/9kbelo7u","slide":43,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/oj2xcj69","slide":43,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/3m9w7apk","slide":43,"text":"Finite automata and regular expressions","textPreview":"Finite automata and regular expressions","textChars":39,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/2lgvyp8z","slide":43,"text":"Proving languages not regular","textPreview":"Proving languages not regular","textChars":29,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/k7i94r6h","slide":43,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/58raxw72","slide":43,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/i50r2hob","slide":43,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/j69svmpw","slide":43,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/sv298r6d","slide":43,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/twba1wny","slide":43,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/690r61o7","slide":43,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/ru9sz65s","slide":43,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/8zy9w769","slide":43,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/907a5c7u","slide":43,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/pwzqt8zi","slide":43,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/ovqp03yx","slide":43,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/nuh8ryhc","slide":43,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/2t87ytgr","slide":43,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/x0jqx8ze","slide":43,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/czqp43y9","slide":43,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/p1qtmq","slide":43,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/b39gzk","slide":44,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/udc7mhsb","slide":44,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/hg36hwr2","slide":44,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/gfuporah","slide":44,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/7alob290","slide":44,"text":"44","textPreview":"44","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/m9snixsf","slide":44,"text":"Proving languages not regular: worked example","textPreview":"Proving languages not regular: worked example","textChars":45,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/tc36dcrq","slide":44,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/8bu5k7a5","slide":44,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/r65on694","slide":44,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/q5w7u18j","slide":44,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/wjql03mt","slide":44,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/xkzmt8ne","slide":44,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/ah83yt4n","slide":44,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/bih4ry58","slide":44,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/ovqlwj6h","slide":44,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/9gzmpon2","slide":44,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/mto3u9or","slide":44,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/nuxkne5w","slide":44,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/0r6lsj6l","slide":44,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/1sf2lon6","slide":44,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/hcna9gbi","slide":44,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/gbe90bux","slide":44,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/va5s76ts","slide":44,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/u9wry1c7","slide":44,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/t8na5wbm","slide":44,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/87e9wru1","slide":44,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/765s3mtg","slide":44,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/65cru1cv","slide":44,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/d47ah0bq","slide":44,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/s3yt8vu5","slide":44,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/a9s72xsn","slide":44,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/ba18b298","slide":44,"text":"Use this structure whenever proving languages not regular appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever proving languages not regular appears as a 10-mark explanation or trace problem.","textChars":108,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/b39gzk","slide":44,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/d5b3jf","slide":45,"title":"BCS503 | Theory of Computation","textShapes":16}
+{"kind":"textbox","id":"sh/mdcbu9wn","slide":45,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/9g3upofe","slide":45,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/ofutwjet","slide":45,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/bilcrex4","slide":45,"text":"45","textPreview":"45","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/ahcbytwz","slide":45,"text":"Closure properties of regular languages: common confusion","textPreview":"Closure properties of regular languages: common confusion","textChars":57,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/xknutofa","slide":45,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/wjut0jep","slide":45,"text":"Mistake","textPreview":"Mistake","textChars":7,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/j65cvyxg","slide":45,"text":"Why it is wrong","textPreview":"Why it is wrong","textChars":15,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/ylwb2twv","slide":45,"text":"Correct classroom answer","textPreview":"Correct classroom answer","textChars":24,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/ovuponex","slide":45,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/9w36hsfi","slide":45,"text":"Treating Closure properties of regular languages as only a definition","textPreview":"Treating Closure properties of regular languages as only a definition","textChars":69,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/mtc7mdgr","slide":45,"text":"The syllabus expects working and application","textPreview":"The syllabus expects working and application","textChars":44,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/nulofixc","slide":45,"text":"Explain formal model -> rule application -> proof idea","textPreview":"Explain formal model -> rule application -> proof idea","textChars":54,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/wzepsne9","slide":45,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/xknqlsfe","slide":45,"text":"Skipping the diagram/trace","textPreview":"Skipping the diagram/trace","textChars":26,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/axc7qxw3","slide":45,"text":"It hides the mechanism students must remember","textPreview":"It hides the mechanism students must remember","textChars":45,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/vy5oj2xo","slide":45,"text":"Draw the model first, then explain labels","textPreview":"Draw the model first, then explain labels","textChars":41,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/knepw7e5","slide":45,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/5onqpcfq","slide":45,"text":"Using vague words like fast/good/better","textPreview":"Using vague words like fast/good/better","textChars":39,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/t8jyd83i","slide":45,"text":"Marks need technical criteria","textPreview":"Marks need technical criteria","textChars":29,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/s7axk32x","slide":45,"text":"Use terms such as formal model, input string, rule application","textPreview":"Use terms such as formal model, input string, rule application","textChars":62,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"notes","id":"nt/d5b3jf","slide":45,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/pszr8l","slide":46,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/t47mlw36","slide":46,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/6hgnqh4v","slide":46,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/7ip4zmlg","slide":46,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/g7i5wb2x","slide":46,"text":"46","textPreview":"46","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/h8rmpw3i","slide":46,"text":"Equivalence of automata: transition view","textPreview":"Equivalence of automata: transition view","textChars":40,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"textbox","id":"sh/u5gnu1kr","slide":46,"text":"q0","textPreview":"q0","textChars":2,"textLines":1,"bbox":[170,284,110,84]}
+{"kind":"textbox","id":"sh/f6p4n6lc","slide":46,"text":"q1","textPreview":"q1","textChars":2,"textLines":1,"bbox":[455,284,110,84]}
+{"kind":"textbox","id":"sh/wbelk7mt","slide":46,"text":"q2 / accept","textPreview":"q2 / accept","textChars":11,"textLines":1,"bbox":[740,284,150,84]}
+{"kind":"shape","id":"sh/xcnmtc3e","slide":46,"bbox":[280,326,175,0]}
+{"kind":"shape","id":"sh/dkru18nm","slide":46,"bbox":[565,326,175,0]}
+{"kind":"textbox","id":"sh/sjit8361","slide":46,"text":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textPreview":"Input symbols drive state changes. Acceptance depends on the final state and the formal model's rules.","textChars":102,"textLines":1,"bbox":[150,450,860,64]}
+{"kind":"notes","id":"nt/pszr8l","slide":46,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/evhoa2","slide":47,"title":"BCS503 | Theory of Computation","textShapes":19}
+{"kind":"textbox","id":"sh/1snetcvm","slide":47,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/e5cvyhcv","slide":47,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/f65wrmdg","slide":47,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/s3udw7u5","slide":47,"text":"47","textPreview":"47","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/t43epcvq","slide":47,"text":"Minimization of automata vs Applications of regular expressions","textPreview":"Minimization of automata vs Applications of regular expressions","textChars":63,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/61cvuxcz","slide":47,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/r2lwn2dk","slide":47,"text":"Basis","textPreview":"Basis","textChars":5,"textLines":1,"bbox":[104,203,345.33,30]}
+{"kind":"textbox","id":"sh/4zudsnut","slide":47,"text":"Minimization of automata","textPreview":"Minimization of automata","textChars":24,"textLines":1,"bbox":[473.33,203,345.33,30]}
+{"kind":"textbox","id":"sh/503elsve","slide":47,"text":"Applications of regular expressions","textPreview":"Applications of regular expressions","textChars":35,"textLines":1,"bbox":[842.67,203,345.33,30]}
+{"kind":"shape","id":"sh/9kjex0nu","slide":47,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/8jadovm9","slide":47,"text":"Problem solved","textPreview":"Problem solved","textChars":14,"textLines":1,"bbox":[104,275,345.33,30]}
+{"kind":"textbox","id":"sh/7i1wvq5o","slide":47,"text":"states","textPreview":"states","textChars":6,"textLines":1,"bbox":[473.33,275,345.33,30]}
+{"kind":"textbox","id":"sh/mhsvm543","slide":47,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[842.67,275,345.33,30]}
+{"kind":"shape","id":"sh/lgjet0ny","slide":47,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/kfadkvmd","slide":47,"text":"Main mechanism","textPreview":"Main mechanism","textChars":14,"textLines":1,"bbox":[104,347,345.33,30]}
+{"kind":"textbox","id":"sh/ze1wrq5s","slide":47,"text":"transition function","textPreview":"transition function","textChars":19,"textLines":1,"bbox":[473.33,347,345.33,30]}
+{"kind":"textbox","id":"sh/yd8vil47","slide":47,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[842.67,347,345.33,30]}
+{"kind":"shape","id":"sh/xczepgnm","slide":47,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/cbqdgbm1","slide":47,"text":"Where it fits","textPreview":"Where it fits","textChars":13,"textLines":1,"bbox":[104,419,345.33,30]}
+{"kind":"textbox","id":"sh/ovudwvux","slide":47,"text":"Use when its assumptions match the scenario","textPreview":"Use when its assumptions match the scenario","textChars":43,"textLines":1,"bbox":[473.33,419,345.33,30]}
+{"kind":"textbox","id":"sh/pw3e5gvi","slide":47,"text":"Use when its trade-off is acceptable","textPreview":"Use when its trade-off is acceptable","textChars":36,"textLines":1,"bbox":[842.67,419,345.33,30]}
+{"kind":"shape","id":"sh/2tcvulwr","slide":47,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/3ulw3qdc","slide":47,"text":"Exam cue","textPreview":"Exam cue","textChars":8,"textLines":1,"bbox":[104,491,345.33,30]}
+{"kind":"textbox","id":"sh/grudsbe1","slide":47,"text":"Define, diagram, example","textPreview":"Define, diagram, example","textChars":24,"textLines":1,"bbox":[473.33,491,345.33,30]}
+{"kind":"textbox","id":"sh/1s3e1gvm","slide":47,"text":"Compare with basis and conclusion","textPreview":"Compare with basis and conclusion","textChars":33,"textLines":1,"bbox":[842.67,491,345.33,30]}
+{"kind":"notes","id":"nt/evhoa2","slide":47,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/5dyxe9","slide":48,"title":"BCS503 | Theory of Computation","textShapes":25}
+{"kind":"textbox","id":"sh/g3ytcv2p","slide":48,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/f2ps3ql4","slide":48,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/e1wbalkj","slide":48,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/t0na1g3y","slide":48,"text":"48","textPreview":"48","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/szet8b2d","slide":48,"text":"Applications of regular expressions: worked example","textPreview":"Applications of regular expressions: worked example","textChars":51,"textLines":1,"bbox":[78,104,980,48]}
+{"kind":"shape","id":"sh/ry5sz6l8","slide":48,"bbox":[86,190,1108,58]}
+{"kind":"textbox","id":"sh/6xwr61kn","slide":48,"text":"Step","textPreview":"Step","textChars":4,"textLines":1,"bbox":[104,203,253,30]}
+{"kind":"textbox","id":"sh/dwrud03i","slide":48,"text":"Current state","textPreview":"Current state","textChars":13,"textLines":1,"bbox":[381,203,253,30]}
+{"kind":"textbox","id":"sh/cvitkf2x","slide":48,"text":"Operation","textPreview":"Operation","textChars":9,"textLines":1,"bbox":[658,203,253,30]}
+{"kind":"textbox","id":"sh/qxcvm54v","slide":48,"text":"New state / interpretation","textPreview":"New state / interpretation","textChars":26,"textLines":1,"bbox":[935,203,253,30]}
+{"kind":"shape","id":"sh/rylcvalg","slide":48,"bbox":[86,262,1108,58]}
+{"kind":"textbox","id":"sh/szudovm1","slide":48,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[104,275,253,30]}
+{"kind":"textbox","id":"sh/d03ux03m","slide":48,"text":"formal model","textPreview":"formal model","textChars":12,"textLines":1,"bbox":[381,275,253,30]}
+{"kind":"textbox","id":"sh/i9svil4z","slide":48,"text":"Identify input string","textPreview":"Identify input string","textChars":21,"textLines":1,"bbox":[658,275,253,30]}
+{"kind":"textbox","id":"sh/3alcrql4","slide":48,"text":"Problem is framed correctly","textPreview":"Problem is framed correctly","textChars":27,"textLines":1,"bbox":[935,275,253,30]}
+{"kind":"shape","id":"sh/4budkvmp","slide":48,"bbox":[86,334,1108,58]}
+{"kind":"textbox","id":"sh/5w3ut03a","slide":48,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[104,347,253,30]}
+{"kind":"textbox","id":"sh/25wvupk3","slide":48,"text":"input string","textPreview":"input string","textChars":12,"textLines":1,"bbox":[381,347,253,30]}
+{"kind":"textbox","id":"sh/n65w3ulo","slide":48,"text":"Apply rule application","textPreview":"Apply rule application","textChars":22,"textLines":1,"bbox":[658,347,253,30]}
+{"kind":"textbox","id":"sh/zaxsvm10","slide":48,"text":"Mechanism starts producing a result","textPreview":"Mechanism starts producing a result","textChars":35,"textLines":1,"bbox":[935,347,253,30]}
+{"kind":"shape","id":"sh/y9ormhkf","slide":48,"bbox":[86,406,1108,58]}
+{"kind":"textbox","id":"sh/lczaxcj6","slide":48,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[104,419,253,30]}
+{"kind":"textbox","id":"sh/kbq9or2l","slide":48,"text":"rule application","textPreview":"rule application","textChars":16,"textLines":1,"bbox":[381,419,253,30]}
+{"kind":"textbox","id":"sh/7ehszm1w","slide":48,"text":"Check acceptance condition","textPreview":"Check acceptance condition","textChars":26,"textLines":1,"bbox":[658,419,253,30]}
+{"kind":"textbox","id":"sh/md8rqhkr","slide":48,"text":"Intermediate result is validated","textPreview":"Intermediate result is validated","textChars":32,"textLines":1,"bbox":[935,419,253,30]}
+{"kind":"shape","id":"sh/tgza1wj2","slide":48,"bbox":[86,478,1108,58]}
+{"kind":"textbox","id":"sh/8fqtsr2h","slide":48,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[104,491,253,30]}
+{"kind":"textbox","id":"sh/v21s3618","slide":48,"text":"acceptance condition","textPreview":"acceptance condition","textChars":20,"textLines":1,"bbox":[381,491,253,30]}
+{"kind":"textbox","id":"sh/uh8bu1kn","slide":48,"text":"Conclude proof idea","textPreview":"Conclude proof idea","textChars":19,"textLines":1,"bbox":[658,491,253,30]}
+{"kind":"textbox","id":"sh/s7a9kby1","slide":48,"text":"Final answer is exam-ready","textPreview":"Final answer is exam-ready","textChars":26,"textLines":1,"bbox":[935,491,253,30]}
+{"kind":"textbox","id":"sh/d8jadgz6","slide":48,"text":"Use this structure whenever applications of regular expressions appears as a 10-mark explanation or trace problem.","textPreview":"Use this structure whenever applications of regular expressions appears as a 10-mark explanation or trace problem.","textChars":114,"textLines":1,"bbox":[96,586,980,44]}
+{"kind":"notes","id":"nt/5dyxe9","slide":48,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}
+{"kind":"slide","id":"sl/gghve9","slide":49,"title":"BCS503 | Theory of Computation","textShapes":8}
+{"kind":"textbox","id":"sh/8b6lcbut","slide":49,"text":"BCS503 | Theory of Computation","textPreview":"BCS503 | Theory of Computation","textChars":30,"textLines":1,"bbox":[64,24,650,24]}
+{"kind":"textbox","id":"sh/7axkj6d8","slide":49,"text":"Module 2: Regular Expressions and Regular Languages","textPreview":"Module 2: Regular Expressions and Regular Languages","textChars":51,"textLines":1,"bbox":[780,24,420,24]}
+{"kind":"shape","id":"sh/69o3alcn","slide":49,"bbox":[64,54,1152,2]}
+{"kind":"textbox","id":"sh/h0z2p0va","slide":49,"text":"49","textPreview":"49","textChars":2,"textLines":1,"bbox":[1168,672,48,22]}
+{"kind":"textbox","id":"sh/gzqlgvup","slide":49,"text":"Previous VTU Questions","textPreview":"Previous VTU Questions","textChars":22,"textLines":1,"bbox":[78,104,820,48]}
+{"kind":"textbox","id":"sh/vyhknqd4","slide":49,"text":"No genuine previous-year VTU questions were found locally for this module during this pass, so this deck does not fabricate PYQs.","textPreview":"No genuine previous-year VTU questions were found locally for this module during this pass, so this deck does not fabricate PYQs.","textChars":129,"textLines":1,"bbox":[96,212,990,90]}
+{"kind":"shape","id":"sh/ux83elcj","slide":49,"bbox":[112,372,16,16]}
+{"kind":"textbox","id":"sh/54j2t0v6","slide":49,"text":"Use the practice questions as model revision prompts.","textPreview":"Use the practice questions as model revision prompts.","textChars":53,"textLines":1,"bbox":[142,365,950,42]}
+{"kind":"shape","id":"sh/43qlkvul","slide":49,"bbox":[112,444,16,16]}
+{"kind":"textbox","id":"sh/y1cz6143","slide":49,"text":"Add authentic PYQs later only from a verified VTU source.","textPreview":"Add authentic PYQs later only from a verified VTU source.","textChars":57,"textLines":1,"bbox":[142,437,950,42]}
+{"kind":"shape","id":"sh/zm50z6lo","slide":49,"bbox":[112,516,16,16]}
+{"kind":"textbox","id":"sh/kneh8bmt","slide":49,"text":"Do not label instructor-created questions as previous-year questions.","textPreview":"Do not label instructor-created questions as previous-year questions.","textChars":69,"textLines":1,"bbox":[142,509,950,42]}
+{"kind":"notes","id":"nt/gghve9","slide":49,"text":"Teaching note: Keep the explanation classroom-facing. Build from intuition to mechanism to exam answer.\n\n[Sources]\n- Official local syllabus: /Users/nithinkswamy/Documents/VVIET PPT BIG DATA/public/syllabus/5thsem syllabus.pdf\n- Prescribed textbook reference: TB: Hopcroft, Motwani, Ullman, Introduction to Automata Theory, Languages and Computation, 2nd ed.; local module textbook PDFs in public/TOC PDF.\n"}

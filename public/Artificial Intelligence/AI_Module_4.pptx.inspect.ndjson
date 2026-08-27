@@ -1,0 +1,832 @@
+{"kind":"deck","id":"pr/0yp797","name":"Deck"}
+{"kind":"layout","layoutId":"bddfac0b-4702-452c-bbea-5d63642fba65","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"41f5fbaf-c57b-41c5-83b1-79b4054a5c30","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/qpwg3u","slide":1,"title":"Module 4","textShapes":9}
+{"kind":"textbox","id":"sh/nupsn2h8","slide":1,"text":"Module 4","textPreview":"Module 4","textChars":8,"textLines":1,"bbox":[82,88,340,60]}
+{"kind":"textbox","id":"sh/ovytw7yt","slide":1,"text":"First-Order Logic and Forward Inference","textPreview":"First-Order Logic and Forward Inference","textChars":39,"textLines":1,"bbox":[82,166,760,100]}
+{"kind":"textbox","id":"sh/pw7apcfe","slide":1,"text":"• Representation revisited\n• Syntax and semantics of first-order logic\n• Using first-order logic\n• Knowledge engineering in FOL\n• Propositional versus first-order inference\n• Unification\n• Forward chaining","textPreview":"• Representation revisited | • Syntax and semantics of first-order logic | • Using first-order logic | • Knowledge engineering in FOL | •...","textChars":205,"textLines":7,"bbox":[94,342,520,250]}
+{"kind":"textbox","id":"sh/e5wbqxgr","slide":1,"text":"Representation revisited","textPreview":"Representation revisited","textChars":24,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/f65sj2hc","slide":1,"text":"Syntax and semantics of first-order logic","textPreview":"Syntax and semantics of first-order logic","textChars":41,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/0retsnyx","slide":1,"text":"Using first-order logic","textPreview":"Using first-order logic","textChars":23,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/1snalszi","slide":1,"text":"Knowledge engineering in FOL","textPreview":"Knowledge engineering in FOL","textChars":28,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/q1crmdgv","slide":1,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/r25sfih0","slide":1,"text":"VTU BCS515B • Module 4 • 01/50","textPreview":"VTU BCS515B • Module 4 • 01/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/qpwg3u","slide":1,"text":"[Animation]\nUse this as the module reset. Reveal syllabus bullets one by one and connect them to the right-side visual.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/pzvznr","slide":2,"title":"VTU syllabus cross-check","textShapes":13}
+{"kind":"textbox","id":"sh/oru50by1","slide":2,"text":"VTU syllabus cross-check","textPreview":"VTU syllabus cross-check","textChars":24,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/nqlor6hg","slide":2,"text":"Roadmap for Module 4","textPreview":"Roadmap for Module 4","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/2pcny1gb","slide":2,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/xgn6xgzy","slide":2,"text":"1. Representation revisited","textPreview":"1. Representation revisited","textChars":27,"textLines":1,"bbox":[76,210,190,70]}
+{"kind":"textbox","id":"sh/cfu54vyd","slide":2,"text":"2. FOL syntax","textPreview":"2. FOL syntax","textChars":13,"textLines":1,"bbox":[308,210,190,70]}
+{"kind":"textbox","id":"sh/belovqhs","slide":2,"text":"3. Quantifiers","textPreview":"3. Quantifiers","textChars":14,"textLines":1,"bbox":[540,210,190,70]}
+{"kind":"textbox","id":"sh/adcn2lg7","slide":2,"text":"4. FOL semantics","textPreview":"4. FOL semantics","textChars":16,"textLines":1,"bbox":[772,210,190,70]}
+{"kind":"textbox","id":"sh/lkn610zu","slide":2,"text":"5. Using FOL","textPreview":"5. Using FOL","textChars":12,"textLines":1,"bbox":[1004,210,190,70]}
+{"kind":"textbox","id":"sh/kjep8vy9","slide":2,"text":"6. Knowledge engineering","textPreview":"6. Knowledge engineering","textChars":24,"textLines":1,"bbox":[76,342,190,70]}
+{"kind":"textbox","id":"sh/ad07mh4v","slide":2,"text":"7. Propositional vs FOL inference","textPreview":"7. Propositional vs FOL inference","textChars":33,"textLines":1,"bbox":[308,342,190,70]}
+{"kind":"textbox","id":"sh/be9ov25g","slide":2,"text":"8. Unification","textPreview":"8. Unification","textChars":14,"textLines":1,"bbox":[540,342,190,70]}
+{"kind":"textbox","id":"sh/cfipo7m1","slide":2,"text":"9. Forward chaining","textPreview":"9. Forward chaining","textChars":19,"textLines":1,"bbox":[772,342,190,70]}
+{"kind":"textbox","id":"sh/xgr6xcnm","slide":2,"text":"Every VTU topic is expanded as definition → intuition → workflow → example → exam view","textPreview":"Every VTU topic is expanded as definition → intuition → workflow → example → exam view","textChars":86,"textLines":1,"bbox":[188,552,900,54]}
+{"kind":"textbox","id":"sh/yh07qh47","slide":2,"text":"VTU BCS515B • Module 4 • 02/50","textPreview":"VTU BCS515B • Module 4 • 02/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/pzvznr","slide":2,"text":"[Animation]\nAnimate the roadmap by row. Pause after each syllabus cluster and state how it will be examined.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/3xpp5p","slide":3,"title":"MISSING = 0","textShapes":35}
+{"kind":"textbox","id":"sh/gzyhwra5","slide":3,"text":"MISSING = 0","textPreview":"MISSING = 0","textChars":11,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/fy5g3m9k","slide":3,"text":"Module 4 VTU coverage audit","textPreview":"Module 4 VTU coverage audit","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/edwfuhsz","slide":3,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/p47y9grm","slide":3,"text":"VTU topic","textPreview":"VTU topic","textChars":9,"textLines":1,"bbox":[82,154,310,28]}
+{"kind":"textbox","id":"sh/o3yh0ba1","slide":3,"text":"Local source coverage","textPreview":"Local source coverage","textChars":21,"textLines":1,"bbox":[430,154,230,28]}
+{"kind":"textbox","id":"sh/32pg769g","slide":3,"text":"Status","textPreview":"Status","textChars":6,"textLines":1,"bbox":[700,154,100,28]}
+{"kind":"textbox","id":"sh/21gzy1sb","slide":3,"text":"Action in this deck","textPreview":"Action in this deck","textChars":19,"textLines":1,"bbox":[842,154,320,28]}
+{"kind":"textbox","id":"sh/58nyxcri","slide":3,"text":"Representation revisited","textPreview":"Representation revisited","textChars":24,"textLines":1,"bbox":[82,192,310,46]}
+{"kind":"textbox","id":"sh/47exo7ax","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,192,230,46]}
+{"kind":"textbox","id":"sh/6l476p83","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,192,100,46]}
+{"kind":"textbox","id":"sh/rmdofupo","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,192,320,46]}
+{"kind":"textbox","id":"sh/sn6p8zq9","slide":3,"text":"Syntax and semantics of first-order logic","textPreview":"Syntax and semantics of first-order logic","textChars":41,"textLines":1,"bbox":[82,254,310,46]}
+{"kind":"textbox","id":"sh/tof6hk7e","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,254,230,46]}
+{"kind":"textbox","id":"sh/epo7ap8z","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,254,100,46]}
+{"kind":"textbox","id":"sh/fqxojupk","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,254,320,46]}
+{"kind":"textbox","id":"sh/gr6pczq5","slide":3,"text":"Using first-order logic","textPreview":"Using first-order logic","textChars":23,"textLines":1,"bbox":[82,316,310,46]}
+{"kind":"textbox","id":"sh/1cfql47q","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,316,230,46]}
+{"kind":"textbox","id":"sh/2do7e98b","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,316,100,46]}
+{"kind":"textbox","id":"sh/3eh8nepw","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,316,320,46]}
+{"kind":"textbox","id":"sh/zihobe5o","slide":3,"text":"Knowledge engineering in FOL","textPreview":"Knowledge engineering in FOL","textChars":28,"textLines":1,"bbox":[82,378,310,46]}
+{"kind":"textbox","id":"sh/yh8n2943","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,378,230,46]}
+{"kind":"textbox","id":"sh/lkz6donu","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,378,100,46]}
+{"kind":"textbox","id":"sh/kjq54jm9","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,378,320,46]}
+{"kind":"textbox","id":"sh/beho7u5s","slide":3,"text":"Propositional versus first-order inference","textPreview":"Propositional versus first-order inference","textChars":42,"textLines":1,"bbox":[82,440,310,46]}
+{"kind":"textbox","id":"sh/qtonyp47","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,440,230,46]}
+{"kind":"textbox","id":"sh/xgz694ny","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,440,100,46]}
+{"kind":"textbox","id":"sh/cfq50zmd","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,440,320,46]}
+{"kind":"textbox","id":"sh/3qxo3u5g","slide":3,"text":"Unification","textPreview":"Unification","textChars":11,"textLines":1,"bbox":[82,502,310,46]}
+{"kind":"textbox","id":"sh/2ponup4b","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,502,230,46]}
+{"kind":"textbox","id":"sh/svml4v2t","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,502,100,46]}
+{"kind":"textbox","id":"sh/twv2x03e","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,502,320,46]}
+{"kind":"textbox","id":"sh/6tk32lk3","slide":3,"text":"Forward chaining","textPreview":"Forward chaining","textChars":16,"textLines":1,"bbox":[82,564,310,46]}
+{"kind":"textbox","id":"sh/rutkvql8","slide":3,"text":"Module PDF + textbook extract","textPreview":"Module PDF + textbook extract","textChars":29,"textLines":1,"bbox":[430,564,230,46]}
+{"kind":"textbox","id":"sh/gzml8v25","slide":3,"text":"COVERED","textPreview":"COVERED","textChars":7,"textLines":1,"bbox":[700,564,100,46]}
+{"kind":"textbox","id":"sh/1kvm103q","slide":3,"text":"Expanded into teaching slides and examples","textPreview":"Expanded into teaching slides and examples","textChars":42,"textLines":1,"bbox":[842,564,320,46]}
+{"kind":"textbox","id":"sh/ex4365kz","slide":3,"text":"VTU BCS515B • Module 4 • 03/50","textPreview":"VTU BCS515B • Module 4 • 03/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/3xpp5p","slide":3,"text":"[Animation]\nUse this audit slide only if students or reviewers need syllabus mapping. Otherwise keep it as backup.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/a2zq79","slide":4,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":11}
+{"kind":"textbox","id":"sh/0fap4zmt","slide":4,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/ze18vu58","slide":4,"text":"Representation revisited: definition","textPreview":"Representation revisited: definition","textChars":36,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/yds72p43","slide":4,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/9kjq1onq","slide":4,"text":"FOL represents structured worlds more compactly than propositional logic.","textPreview":"FOL represents structured worlds more compactly than propositional logic.","textChars":73,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/8jap8jm5","slide":4,"text":"• objects\n• properties\n• relations\n• general rules","textPreview":"• objects | • properties | • relations | • general rules","textChars":50,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ni18ze5k","slide":4,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/mhs7694z","slide":4,"text":"Variables make general knowledge possible.","textPreview":"Variables make general knowledge possible.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/h83q5onm","slide":4,"text":"objects","textPreview":"objects","textChars":7,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/w7upcjm1","slide":4,"text":"properties","textPreview":"properties","textChars":10,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/itoz29w3","slide":4,"text":"relations","textPreview":"relations","textChars":9,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/jehgved8","slide":4,"text":"general rules","textPreview":"general rules","textChars":13,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/4fqh4jet","slide":4,"text":"VTU BCS515B • Module 4 • 04/50","textPreview":"VTU BCS515B • Module 4 • 04/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/a2zq79","slide":4,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/s35fw3","slide":5,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/nytozedk","slide":5,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/oz25sju5","slide":5,"text":"Representation revisited: intuition","textPreview":"Representation revisited: intuition","textChars":35,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/p0v61obq","slide":5,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/a14nu9cb","slide":5,"text":"Think of representation revisited as a way to make an agent's next choice clearer.","textPreview":"Think of representation revisited as a way to make an agent's next choice clearer.","textChars":82,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/b2do3etg","slide":5,"text":"• Why it matters: Variables make general knowledge possible.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Variables make general knowledge possible. | • What changes: uncertainty becomes structure | • Teaching cue: connect th...","textChars":160,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/c3m5wju1","slide":5,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/x4v65obm","slide":5,"text":"Variables make general knowledge possible.","textPreview":"Variables make general knowledge possible.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/q50nipcr","slide":5,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/r694rudc","slide":5,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/fmxcv2lo","slide":5,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/u1obmxk3","slide":5,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/hozuxc3u","slide":5,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/gnqto729","slide":5,"text":"VTU BCS515B • Module 4 • 05/50","textPreview":"VTU BCS515B • Module 4 • 05/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/s35fw3","slide":5,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/pviqor","slide":6,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/1832h4n6","slide":6,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/e5cj6p4v","slide":6,"text":"Representation revisited: workflow","textPreview":"Representation revisited: workflow","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/f6lkfu50","slide":6,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/obe1cjmx","slide":6,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/pcn2l4ni","slide":6,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/29cja94r","slide":6,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/nalkje5c","slide":6,"text":"Variables make general knowledge possible.","textPreview":"Variables make general knowledge possible.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/4fa10f6d","slide":6,"text":"objects","textPreview":"objects","textChars":7,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/5gji9kny","slide":6,"text":"properties","textPreview":"properties","textChars":10,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/pgjq94ju","slide":6,"text":"relations","textPreview":"relations","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/4fapgz2p","slide":6,"text":"general rules","textPreview":"general rules","textChars":13,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/3e187u14","slide":6,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/2ds7epkj","slide":6,"text":"VTU BCS515B • Module 4 • 06/50","textPreview":"VTU BCS515B • Module 4 • 06/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/pviqor","slide":6,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/ud8c3s","slide":7,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":15}
+{"kind":"textbox","id":"sh/sfqdknix","slide":7,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/rehwri1c","slide":7,"text":"Representation revisited: example","textPreview":"Representation revisited: example","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/6d8vid0r","slide":7,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/1kjexsje","slide":7,"text":"A small classroom example makes representation revisited concrete.","textPreview":"A small classroom example makes representation revisited concrete.","textChars":66,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/gjadoni9","slide":7,"text":"• Use the terms: objects, properties\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: objects, properties | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":122,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/fi1wvi1o","slide":7,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/eh8vmd03","slide":7,"text":"Variables make general knowledge possible.","textPreview":"Variables make general knowledge possible.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hofeloja","slide":7,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/wn6dc32p","slide":7,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/a5cbah0z","slide":7,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/v6lsjm14","slide":7,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/w7utcrip","slide":7,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/h83ulcja","slide":7,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/itcbeh0v","slide":7,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/julcnm1g","slide":7,"text":"objects","textPreview":"objects","textChars":7,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/4vetgri1","slide":7,"text":"VTU BCS515B • Module 4 • 07/50","textPreview":"VTU BCS515B • Module 4 • 07/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ud8c3s","slide":7,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/tbv7py","slide":8,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/ozyxozi5","slide":8,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/nypgfuhk","slide":8,"text":"Representation revisited: algorithm / exam view","textPreview":"Representation revisited: algorithm / exam view","textChars":47,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/2xgfmp0f","slide":8,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/xoryloz2","slide":8,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cnixsjih","slide":8,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Variables make general knowledge possible.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Var...","textChars":170,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/bm9gjehw","slide":8,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/al0fq90b","slide":8,"text":"Variables make general knowledge possible.","textPreview":"Variables make general knowledge possible.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/lsbypozy","slide":8,"text":"objects","textPreview":"objects","textChars":7,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/krihwjyd","slide":8,"text":"properties","textPreview":"properties","textChars":10,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/a5wzapsz","slide":8,"text":"relations","textPreview":"relations","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/v6503utk","slide":8,"text":"general rules","textPreview":"general rules","textChars":13,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/w7yhcza5","slide":8,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/x87i54bq","slide":8,"text":"VTU BCS515B • Module 4 • 08/50","textPreview":"VTU BCS515B • Module 4 • 08/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/tbv7py","slide":8,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/hs5tbt","slide":9,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":11}
+{"kind":"textbox","id":"sh/4rm9kjux","slide":9,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/3qdsredc","slide":9,"text":"FOL syntax: definition","textPreview":"FOL syntax: definition","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/2p4ri9cr","slide":9,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/dgfaxove","slide":9,"text":"Terms denote objects; predicates make claims.","textPreview":"Terms denote objects; predicates make claims.","textChars":45,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cf69ojut","slide":9,"text":"• constants\n• variables\n• functions\n• predicates","textPreview":"• constants | • variables | • functions | • predicates","textChars":48,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/rexsved8","slide":9,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/qdorm9cn","slide":9,"text":"Syntax is the grammar of knowledge.","textPreview":"Syntax is the grammar of knowledge.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/tkvqlkva","slide":9,"text":"constants","textPreview":"constants","textChars":9,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/sj29czup","slide":9,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/i5kzq14j","slide":9,"text":"functions","textPreview":"functions","textChars":9,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/36tgz6l4","slide":9,"text":"predicates","textPreview":"predicates","textChars":10,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/472hsbmp","slide":9,"text":"VTU BCS515B • Module 4 • 09/50","textPreview":"VTU BCS515B • Module 4 • 09/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/hs5tbt","slide":9,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/bwzmah","slide":10,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/ve5wnq18","slide":10,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/wfedgvit","slide":10,"text":"FOL syntax: intuition","textPreview":"FOL syntax: intuition","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/hgnepgje","slide":10,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/mpcva1kr","slide":10,"text":"Think of fol syntax as a way to make an agent's next choice clearer.","textPreview":"Think of fol syntax as a way to make an agent's next choice clearer.","textChars":68,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/7qlwj61c","slide":10,"text":"• Why it matters: Syntax is the grammar of knowledge.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Syntax is the grammar of knowledge. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea ...","textChars":153,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/8budcb2x","slide":10,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/9c3elgji","slide":10,"text":"Syntax is the grammar of knowledge.","textPreview":"Syntax is the grammar of knowledge.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ylcv61kv","slide":10,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/zmlwf610","slide":10,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/bupsjulo","slide":10,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/atgrqp43","slide":10,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/xw7al43u","slide":10,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/wvy9szm9","slide":10,"text":"VTU BCS515B • Module 4 • 10/50","textPreview":"VTU BCS515B • Module 4 • 10/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/bwzmah","slide":10,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/m2gfxq","slide":11,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/t43m5szq","slide":11,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/61c3ux0f","slide":11,"text":"FOL syntax: workflow","textPreview":"FOL syntax: workflow","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/r2l432hk","slide":11,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/grel07ih","slide":11,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/1snmtcz2","slide":11,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/epw3yx0b","slide":11,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/fq5472hw","slide":11,"text":"Syntax is the grammar of knowledge.","textPreview":"Syntax is the grammar of knowledge.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/wvalonix","slide":11,"text":"constants","textPreview":"constants","textChars":9,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/hwjmx8zi","slide":11,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/1c3itsri","slide":11,"text":"functions","textPreview":"functions","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/0buhknax","slide":11,"text":"predicates","textPreview":"predicates","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/fal0ri9s","slide":11,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/e9czids7","slide":11,"text":"VTU BCS515B • Module 4 • 11/50","textPreview":"VTU BCS515B • Module 4 • 11/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/m2gfxq","slide":11,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/ssyips","slide":12,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":15}
+{"kind":"textbox","id":"sh/hobqhgvq","slide":12,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/u107m1wz","slide":12,"text":"FOL syntax: example","textPreview":"FOL syntax: example","textChars":19,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/v2t8f6dk","slide":12,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/4r2psbe1","slide":12,"text":"A small classroom example makes fol syntax concrete.","textPreview":"A small classroom example makes fol syntax concrete.","textChars":52,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/5sbqlgvm","slide":12,"text":"• Use the terms: constants, variables\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: constants, variables | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":123,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ipk7q1wv","slide":12,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/jqt8j6dg","slide":12,"text":"Syntax is the grammar of knowledge.","textPreview":"Syntax is the grammar of knowledge.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/kvipgrex","slide":12,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/lwr69wvi","slide":12,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/tcve1gna","slide":12,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/sbmdsbm5","slide":12,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/radwz65k","slide":12,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/69kvq14z","slide":12,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/10vepg3m","slide":12,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/gzmdwvm1","slide":12,"text":"constants","textPreview":"constants","textChars":9,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/fedwnqlg","slide":12,"text":"VTU BCS515B • Module 4 • 12/50","textPreview":"VTU BCS515B • Module 4 • 12/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ssyips","slide":12,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/5vrd53","slide":13,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/tczedgfy","slide":13,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/698vi1w7","slide":13,"text":"FOL syntax: algorithm / exam view","textPreview":"FOL syntax: algorithm / exam view","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/7ahwb6xs","slide":13,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/k7qdgbe1","slide":13,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/58ze9wfm","slide":13,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Syntax is the grammar of knowledge.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Syn...","textChars":163,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/i5ove1wb","slide":13,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/j6xw76xg","slide":13,"text":"Syntax is the grammar of knowledge.","textPreview":"Syntax is the grammar of knowledge.","textChars":35,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/o3axcvel","slide":13,"text":"constants","textPreview":"constants","textChars":9,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/p4jel0fq","slide":13,"text":"variables","textPreview":"variables","textChars":9,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/pony14ni","slide":13,"text":"functions","textPreview":"functions","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/4nux8jmx","slide":13,"text":"predicates","textPreview":"predicates","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/3mlgze5c","slide":13,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/2lcf694r","slide":13,"text":"VTU BCS515B • Module 4 • 13/50","textPreview":"VTU BCS515B • Module 4 • 13/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/5vrd53","slide":13,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/h1oe6f","slide":14,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":11}
+{"kind":"textbox","id":"sh/36t47ed0","slide":14,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/o7m50jel","slide":14,"text":"Quantifiers: definition","textPreview":"Quantifiers: definition","textChars":23,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/p8vm94v6","slide":14,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ehk3upwj","slide":14,"text":"Quantifiers express statements about many or some objects.","textPreview":"Quantifiers express statements about many or some objects.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/fit43ud4","slide":14,"text":"• universal\n• existential\n• scope\n• order","textPreview":"• universal | • existential | • scope | • order","textChars":41,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/g32lwzep","slide":14,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/14bm54va","slide":14,"text":"Quantifier order changes meaning.","textPreview":"Quantifier order changes meaning.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/6d03qpwn","slide":14,"text":"universal","textPreview":"universal","textChars":9,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/re94zuds","slide":14,"text":"existential","textPreview":"existential","textChars":11,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/fyh03udw","slide":14,"text":"scope","textPreview":"scope","textChars":5,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/ux8zupcb","slide":14,"text":"order","textPreview":"order","textChars":5,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/1kzi5kv2","slide":14,"text":"VTU BCS515B • Module 4 • 14/50","textPreview":"VTU BCS515B • Module 4 • 14/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/h1oe6f","slide":14,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/f84c5d","slide":15,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/kfi10nix","slide":15,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/je90ri1c","slide":15,"text":"Quantifiers: intuition","textPreview":"Quantifiers: intuition","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/idgjyd0r","slide":15,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/t4rixsje","slide":15,"text":"Think of quantifiers as a way to make an agent's next choice clearer.","textPreview":"Think of quantifiers as a way to make an agent's next choice clearer.","textChars":69,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/s3i14ni9","slide":15,"text":"• Why it matters: Quantifier order changes meaning.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Quantifier order changes meaning. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea to...","textChars":151,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/7290vi1o","slide":15,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/6h0j2x03","slide":15,"text":"Quantifier order changes meaning.","textPreview":"Quantifier order changes meaning.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/987il8ja","slide":15,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/87yhs32p","slide":15,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/a5wvmt0z","slide":15,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/v65cvyhk","slide":15,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/w7edo3i5","slide":15,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/x8nux8za","slide":15,"text":"VTU BCS515B • Module 4 • 15/50","textPreview":"VTU BCS515B • Module 4 • 15/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/f84c5d","slide":15,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/xafplb","slide":16,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/ryx43ehs","slide":16,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/sz65cjyd","slide":16,"text":"Quantifiers: workflow","textPreview":"Quantifiers: workflow","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/d0fm5ozy","slide":16,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/i9on69gb","slide":16,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/3ax4zuhw","slide":16,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/4b658zyh","slide":16,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/5cfm14zm","slide":16,"text":"Quantifier order changes meaning.","textPreview":"Quantifier order changes meaning.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/258nitgf","slide":16,"text":"universal","textPreview":"universal","textChars":9,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/n6hobyh0","slide":16,"text":"existential","textPreview":"existential","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/nml8fi9g","slide":16,"text":"scope","textPreview":"scope","textChars":5,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/2lcrmd8v","slide":16,"text":"order","textPreview":"order","textChars":5,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/ponahsrm","slide":16,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/one9onq1","slide":16,"text":"VTU BCS515B • Module 4 • 16/50","textPreview":"VTU BCS515B • Module 4 • 16/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/xafplb","slide":16,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/qsai1v","slide":17,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":15}
+{"kind":"textbox","id":"sh/dcvatkbe","slide":17,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/q9krips3","slide":17,"text":"Quantifiers: example","textPreview":"Quantifiers: example","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ratsruto","slide":17,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/4729gfax","slide":17,"text":"A small classroom example makes quantifiers concrete.","textPreview":"A small classroom example makes quantifiers concrete.","textChars":53,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/p8bapkbi","slide":17,"text":"• Use the terms: universal, existential\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: universal, existential | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":125,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/25kre5sr","slide":17,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/36t8natc","slide":17,"text":"Quantifier order changes meaning.","textPreview":"Quantifier order changes meaning.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/g3i9cva1","slide":17,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/h4bql0b6","slide":17,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/d8rmdofq","slide":17,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/s7il43y5","slide":17,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/r694byxk","slide":17,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/q5032tgz","slide":17,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/54rm9ofe","slide":17,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/43il0jyt","slide":17,"text":"universal","textPreview":"universal","textChars":9,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/32p47exo","slide":17,"text":"VTU BCS515B • Module 4 • 17/50","textPreview":"VTU BCS515B • Module 4 • 17/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/qsai1v","slide":17,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/c5uaoa","slide":18,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/sfupof2p","slide":18,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/reloval4","slide":18,"text":"Quantifiers: algorithm / exam view","textPreview":"Quantifiers: algorithm / exam view","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/qdc7m54j","slide":18,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/14n61k36","slide":18,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/0jepsf2l","slide":18,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Quantifier order changes meaning.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Qua...","textChars":161,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/fi5ozal0","slide":18,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ehw7q5kf","slide":18,"text":"Quantifier order changes meaning.","textPreview":"Quantifier order changes meaning.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/h8j6p032","slide":18,"text":"universal","textPreview":"universal","textChars":9,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/gna5gvmh","slide":18,"text":"existential","textPreview":"existential","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/m5s3i9gf","slide":18,"text":"scope","textPreview":"scope","textChars":5,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/n61kreh0","slide":18,"text":"order","textPreview":"order","textChars":5,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/87alkjyl","slide":18,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/9sj2toz6","slide":18,"text":"VTU BCS515B • Module 4 • 18/50","textPreview":"VTU BCS515B • Module 4 • 18/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/c5uaoa","slide":18,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/hgyk9d","slide":19,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":11}
+{"kind":"textbox","id":"sh/i1sna107","slide":19,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/5oj6lgjy","slide":19,"text":"FOL semantics: definition","textPreview":"FOL semantics: definition","textChars":25,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/4na5cbid","slide":19,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/rq1on614","slide":19,"text":"A model assigns meanings to FOL symbols.","textPreview":"A model assigns meanings to FOL symbols.","textChars":40,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/qpsne10j","slide":19,"text":"• domain\n• interpretation\n• model\n• truth","textPreview":"• domain | • interpretation | • model | • truth","textChars":41,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ds36pgju","slide":19,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/sra5gbip","slide":19,"text":"Semantics decides whether a sentence is true.","textPreview":"Semantics decides whether a sentence is true.","textChars":45,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/7uh4bm1k","slide":19,"text":"domain","textPreview":"domain","textChars":6,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/mton2hkf","slide":19,"text":"interpretation","textPreview":"interpretation","textChars":14,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/kfalozal","slide":19,"text":"model","textPreview":"model","textChars":5,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/lgj2h4r6","slide":19,"text":"truth","textPreview":"truth","textChars":5,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/ytsjmpsv","slide":19,"text":"VTU BCS515B • Module 4 • 19/50","textPreview":"VTU BCS515B • Module 4 • 19/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/hgyk9d","slide":19,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/dgxdao","slide":20,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/tofm5cbe","slide":20,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/61o3uxs3","slide":20,"text":"FOL semantics: intuition","textPreview":"FOL semantics: intuition","textChars":24,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/7mx432t8","slide":20,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/kz6lsnax","slide":20,"text":"Think of fol semantics as a way to make an agent's next choice clearer.","textPreview":"Think of fol semantics as a way to make an agent's next choice clearer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/50fm1sbi","slide":20,"text":"• Why it matters: Semantics decides whether a sentence is true.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Semantics decides whether a sentence is true. | • What changes: uncertainty becomes structure | • Teaching cue: connect...","textChars":163,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ix43qxsr","slide":20,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/jyd4zitc","slide":20,"text":"Semantics decides whether a sentence is true.","textPreview":"Semantics decides whether a sentence is true.","textChars":45,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/4vq54ra1","slide":20,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/pwzmdwbm","slide":20,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/9c3yt4fy","slide":20,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/8buhkzed","slide":20,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/nalgrexs","slide":20,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/m9czi9wn","slide":20,"text":"VTU BCS515B • Module 4 • 20/50","textPreview":"VTU BCS515B • Module 4 • 20/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/dgxdao","slide":20,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/407uoo","slide":21,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/07ydsr6x","slide":21,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/z65czmpc","slide":21,"text":"FOL semantics: workflow","textPreview":"FOL semantics: workflow","textChars":23,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/y5wvqhor","slide":21,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/d4nuxw7m","slide":21,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/c3edor61","slide":21,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/b25cvmpg","slide":21,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/q1wvmhov","slide":21,"text":"Semantics decides whether a sentence is true.","textPreview":"Semantics decides whether a sentence is true.","textChars":45,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/pgnutc7a","slide":21,"text":"domain","textPreview":"domain","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/ofudk76p","slide":21,"text":"interpretation","textPreview":"interpretation","textChars":14,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/ydsb29oz","slide":21,"text":"model","textPreview":"model","textChars":5,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/zelsbe5k","slide":21,"text":"truth","textPreview":"truth","textChars":5,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/kfut4z65","slide":21,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/lg3ud4nq","slide":21,"text":"VTU BCS515B • Module 4 • 21/50","textPreview":"VTU BCS515B • Module 4 • 21/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/407uoo","slide":21,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/uf6kin","slide":22,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":15}
+{"kind":"textbox","id":"sh/7idcfax0","slide":22,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/8jmd8fel","slide":22,"text":"FOL semantics: example","textPreview":"FOL semantics: example","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/9kvuhkf6","slide":22,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ytkb25wj","slide":22,"text":"A small classroom example makes fol semantics concrete.","textPreview":"A small classroom example makes fol semantics concrete.","textChars":55,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/zutcbax4","slide":22,"text":"• Use the terms: domain, interpretation\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: domain, interpretation | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":125,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/kv2t4fep","slide":22,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/lwvud0fa","slide":22,"text":"Semantics decides whether a sentence is true.","textPreview":"Semantics decides whether a sentence is true.","textChars":45,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ipovepwn","slide":22,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/3qxcnux8","slide":22,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/7ud4re14","slide":22,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/6t43y90j","slide":22,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/twfmtoju","slide":22,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/8v650jip","slide":22,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/vyx4ve10","slide":22,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/uxon2t0f","slide":22,"text":"domain","textPreview":"domain","textChars":6,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/h0fmxoj6","slide":22,"text":"VTU BCS515B • Module 4 • 22/50","textPreview":"VTU BCS515B • Module 4 • 22/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/uf6kin","slide":22,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/j4kaxo","slide":23,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/val4vqd4","slide":23,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/wbu54vup","slide":23,"text":"FOL semantics: algorithm / exam view","textPreview":"FOL semantics: algorithm / exam view","textChars":36,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/xc3mx0vu","slide":23,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/mls3ylc7","slide":23,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/nm14r6ds","slide":23,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Semantics decides whether a sentence is true.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Sem...","textChars":173,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/8nu50bud","slide":23,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/9o3mtgvy","slide":23,"text":"Semantics decides whether a sentence is true.","textPreview":"Semantics decides whether a sentence is true.","textChars":45,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/6hwna5cr","slide":23,"text":"domain","textPreview":"domain","textChars":6,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/7i543adc","slide":23,"text":"interpretation","textPreview":"interpretation","textChars":14,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/f2dcba98","slide":23,"text":"model","textPreview":"model","textChars":5,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/u1kvi5sn","slide":23,"text":"truth","textPreview":"truth","textChars":5,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/h4vudkry","slide":23,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/g3mdkfat","slide":23,"text":"VTU BCS515B • Module 4 • 23/50","textPreview":"VTU BCS515B • Module 4 • 23/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/j4kaxo","slide":23,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/sezy9n","slide":24,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":11}
+{"kind":"textbox","id":"sh/4n6p0vuh","slide":24,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/j2do7qtc","slide":24,"text":"Using FOL: definition","textPreview":"Using FOL: definition","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/i147ylcr","slide":24,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/x0v650b6","slide":24,"text":"TELL adds facts and rules; ASK retrieves consequences.","textPreview":"TELL adds facts and rules; ASK retrieves consequences.","textChars":54,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/wzmpwvul","slide":24,"text":"• assertions\n• queries\n• bindings\n• answers","textPreview":"• assertions | • queries | • bindings | • answers","textChars":43,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/vydo3qt0","slide":24,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ax4nulcf","slide":24,"text":"Queries may return substitutions.","textPreview":"Queries may return substitutions.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/1wz6hkba","slide":24,"text":"assertions","textPreview":"assertions","textChars":10,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/gvqp8fup","slide":24,"text":"queries","textPreview":"queries","textChars":7,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/2147mdsz","slide":24,"text":"bindings","textPreview":"bindings","textChars":8,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/3mxovit4","slide":24,"text":"answers","textPreview":"answers","textChars":7,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/4n6ponap","slide":24,"text":"VTU BCS515B • Module 4 • 24/50","textPreview":"VTU BCS515B • Module 4 • 24/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/sezy9n","slide":24,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/qyo8at","slide":25,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/idwv254z","slide":25,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/507uxk3a","slide":25,"text":"Using FOL: intuition","textPreview":"Using FOL: intuition","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/4fyd4fm5","slide":25,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/va5cral8","slide":25,"text":"Think of using fol as a way to make an agent's next choice clearer.","textPreview":"Think of using fol as a way to make an agent's next choice clearer.","textChars":67,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/u9wby54n","slide":25,"text":"• Why it matters: Queries may return substitutions.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Queries may return substitutions. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea to...","textChars":151,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/hcnut03e","slide":25,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/wbed0vmt","slide":25,"text":"Queries may return substitutions.","textPreview":"Queries may return substitutions.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/76lcnqlc","slide":25,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/m5cbul4r","slide":25,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/gfy9gzql","slide":25,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/1g7qp4r6","slide":25,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/etg7e98v","slide":25,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/fup8nu9g","slide":25,"text":"VTU BCS515B • Module 4 • 25/50","textPreview":"VTU BCS515B • Module 4 • 25/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/qyo8at","slide":25,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/7esvas","slide":26,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/xobe94za","slide":26,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/a10ve9gj","slide":26,"text":"Using FOL: workflow","textPreview":"Using FOL: workflow","textChars":19,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/b29c7eh4","slide":26,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/kr2dkjy1","slide":26,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/lsbedoz6","slide":26,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/ypkvi9gv","slide":26,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/jqtwbehg","slide":26,"text":"Queries may return substitutions.","textPreview":"Queries may return substitutions.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/0vid8fyh","slide":26,"text":"assertions","textPreview":"assertions","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/1wru1kz2","slide":26,"text":"queries","textPreview":"queries","textChars":7,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/90bm547y","slide":26,"text":"bindings","textPreview":"bindings","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/oz2lczqd","slide":26,"text":"answers","textPreview":"answers","textChars":7,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/nyt43ups","slide":26,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/mx03ap87","slide":26,"text":"VTU BCS515B • Module 4 • 26/50","textPreview":"VTU BCS515B • Module 4 • 26/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/7esvas","slide":26,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/lxmsgc","slide":27,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":15}
+{"kind":"textbox","id":"sh/8ju58vu9","slide":27,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/nilofqdo","slide":27,"text":"Using FOL: example","textPreview":"Using FOL: example","textChars":18,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/mhcn6lc3","slide":27,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/lgj6d0vi","slide":27,"text":"A small classroom example makes using fol concrete.","textPreview":"A small classroom example makes using fol concrete.","textChars":51,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/0va54vux","slide":27,"text":"• Use the terms: assertions, queries\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: assertions, queries | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":122,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/zu14bqdc","slide":27,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ytsn2lcr","slide":27,"text":"Queries may return substitutions.","textPreview":"Queries may return substitutions.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/dsjm9gvm","slide":27,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/cra50bu1","slide":27,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/29kje14j","slide":27,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/nadk7m54","slide":27,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/obm1grmp","slide":27,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/pcv29wnu","slide":27,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/e5kjah47","slide":27,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/f6tkjm5s","slide":27,"text":"assertions","textPreview":"assertions","textChars":10,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/0721crmd","slide":27,"text":"VTU BCS515B • Module 4 • 27/50","textPreview":"VTU BCS515B • Module 4 • 27/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/lxmsgc","slide":27,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/dxb163","slide":28,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/c3il8fqt","slide":28,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/b29kzap8","slide":28,"text":"Using FOL: algorithm / exam view","textPreview":"Using FOL: algorithm / exam view","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/q103658n","slide":28,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/p0r2d072","slide":28,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ozyl4vqh","slide":28,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Queries may return substitutions.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Que...","textChars":161,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/3ypkbq9w","slide":28,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/2dg32l8b","slide":28,"text":"Queries may return substitutions.","textPreview":"Queries may return substitutions.","textChars":33,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/1c7290rq","slide":28,"text":"assertions","textPreview":"assertions","textChars":10,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/gbyl0vql","slide":28,"text":"queries","textPreview":"queries","textChars":7,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/2dcz21g7","slide":28,"text":"bindings","textPreview":"bindings","textChars":8,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/3elgb6xs","slide":28,"text":"answers","textPreview":"answers","textChars":7,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/4feh4byd","slide":28,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/pgnydgfy","slide":28,"text":"VTU BCS515B • Module 4 • 28/50","textPreview":"VTU BCS515B • Module 4 • 28/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/dxb163","slide":28,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/xz03su","slide":29,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":11}
+{"kind":"textbox","id":"sh/judsvi14","slide":29,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/kvm9on2p","slide":29,"text":"Knowledge engineering: definition","textPreview":"Knowledge engineering: definition","textChars":33,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/5wvaxsja","slide":29,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/6h4rqdkv","slide":29,"text":"Knowledge engineering converts domain knowledge into formal sentences.","textPreview":"Knowledge engineering converts domain knowledge into formal sentences.","textChars":70,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/7idszi1g","slide":29,"text":"• identify task\n• choose vocabulary\n• encode axioms\n• test KB","textPreview":"• identify task | • choose vocabulary | • encode axioms | • test KB","textChars":61,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/sjm9sn21","slide":29,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/tkfa1sj6","slide":29,"text":"Debugging queries improves the KB.","textPreview":"Debugging queries improves the KB.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/mlkretkr","slide":29,"text":"identify task","textPreview":"identify task","textChars":13,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/nmt8ny1w","slide":29,"text":"choose vocabulary","textPreview":"choose vocabulary","textChars":17,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/nih0zyd4","slide":29,"text":"encode axioms","textPreview":"encode axioms","textChars":13,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/2h8zqtcj","slide":29,"text":"test KB","textPreview":"test KB","textChars":7,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/pkji18vu","slide":29,"text":"VTU BCS515B • Module 4 • 29/50","textPreview":"VTU BCS515B • Module 4 • 29/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/xz03su","slide":29,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/4xrb66","slide":30,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/2tc7utkv","slide":30,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/pw3q583m","slide":30,"text":"Knowledge engineering: intuition","textPreview":"Knowledge engineering: intuition","textChars":32,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/4vupw321","slide":30,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/f61ozylk","slide":30,"text":"Think of knowledge engineering as a way to make an agent's next choice clearer.","textPreview":"Think of knowledge engineering as a way to make an agent's next choice clearer.","textChars":79,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/u5s7qt4z","slide":30,"text":"• Why it matters: Debugging queries improves the KB.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Debugging queries improves the KB. | • What changes: uncertainty becomes structure | • Teaching cue: connect the idea t...","textChars":152,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/hs361o3q","slide":30,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/g7ups325","slide":30,"text":"Debugging queries improves the KB.","textPreview":"Debugging queries improves the KB.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/721ovel8","slide":30,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/61s7m943","slide":30,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/gzadwz2t","slide":30,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/h0jep43e","slide":30,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/uxsvupkn","slide":30,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/fy1wnul8","slide":30,"text":"VTU BCS515B • Module 4 • 30/50","textPreview":"VTU BCS515B • Module 4 • 30/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/4xrb66","slide":30,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/uzps8f","slide":31,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/m98jql8j","slide":31,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/tcz2lg7a","slide":31,"text":"Knowledge engineering: workflow","textPreview":"Knowledge engineering: workflow","textChars":31,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/8bqlsbqp","slide":31,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/vehknqp0","slide":31,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/ud83ul8v","slide":31,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/h0j2p076","slide":31,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/gzqlwvql","slide":31,"text":"Debugging queries improves the KB.","textPreview":"Debugging queries improves the KB.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/bixkbmpw","slide":31,"text":"identify task","textPreview":"identify task","textChars":13,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/ahoji18b","slide":31,"text":"choose vocabulary","textPreview":"choose vocabulary","textChars":17,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/876twfu5","slide":31,"text":"encode axioms","textPreview":"encode axioms","textChars":13,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/98fapkvq","slide":31,"text":"test KB","textPreview":"test KB","textChars":7,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/m5obu5wf","slide":31,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/76xsnad0","slide":31,"text":"VTU BCS515B • Module 4 • 31/50","textPreview":"VTU BCS515B • Module 4 • 31/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/uzps8f","slide":31,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/d9t6dj","slide":32,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":15}
+{"kind":"textbox","id":"sh/3yh4vud8","slide":32,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/4zq54zut","slide":32,"text":"Knowledge engineering: example","textPreview":"Knowledge engineering: example","textChars":30,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/p0jmx4ve","slide":32,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ut83ypcr","slide":32,"text":"A small classroom example makes knowledge engineering concrete.","textPreview":"A small classroom example makes knowledge engineering concrete.","textChars":63,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/fuh4radc","slide":32,"text":"• Use the terms: identify task, choose vocabulary\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: identify task, choose vocabulary | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":135,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/gvq50fux","slide":32,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/hwzmtkvi","slide":32,"text":"Debugging queries improves the KB.","textPreview":"Debugging queries improves the KB.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/epsna9cv","slide":32,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/zq143etg","slide":32,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/b6tcnu1o","slide":32,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/a5kvup03","slide":32,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/x8vup4je","slide":32,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/c7mdwzit","slide":32,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/zadcru1k","slide":32,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/y94vyp0z","slide":32,"text":"identify task","textPreview":"identify task","textChars":13,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/lwvut4jq","slide":32,"text":"VTU BCS515B • Module 4 • 32/50","textPreview":"VTU BCS515B • Module 4 • 32/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/d9t6dj","slide":32,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/rxdz8l","slide":33,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/61snytsz","slide":33,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/t4j6t8ra","slide":33,"text":"Knowledge engineering: algorithm / exam view","textPreview":"Knowledge engineering: algorithm / exam view","textChars":44,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/83a503ap","slide":33,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/jyh4ne98","slide":33,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/yx8nu9sn","slide":33,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Debugging queries improves the KB.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Deb...","textChars":162,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/l0zmpore","slide":33,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/kzq5wjat","slide":33,"text":"Debugging queries improves the KB.","textPreview":"Debugging queries improves the KB.","textChars":34,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/bah4jetc","slide":33,"text":"identify task","textPreview":"identify task","textChars":13,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/a9onq9sr","slide":33,"text":"choose vocabulary","textPreview":"choose vocabulary","textChars":17,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/w3uhgbyx","slide":33,"text":"encode axioms","textPreview":"encode axioms","textChars":13,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/x43i9gfi","slide":33,"text":"test KB","textPreview":"test KB","textChars":7,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/a1sze1g7","slide":33,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/v2l076xs","slide":33,"text":"VTU BCS515B • Module 4 • 33/50","textPreview":"VTU BCS515B • Module 4 • 33/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/rxdz8l","slide":33,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/pxhhqc","slide":34,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":11}
+{"kind":"textbox","id":"sh/m5cbmpwr","slide":34,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/983ux4fi","slide":34,"text":"Propositional vs FOL inference: definition","textPreview":"Propositional vs FOL inference: definition","textChars":42,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/87utozex","slide":34,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/valczexo","slide":34,"text":"Lifted inference reasons with variables instead of every object instance.","textPreview":"Lifted inference reasons with variables instead of every object instance.","textChars":73,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/u9cbq9w3","slide":34,"text":"• grounding\n• lifted inference\n• substitution\n• efficiency","textPreview":"• grounding | • lifted inference | • substitution | • efficiency","textChars":58,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/hc3u14fu","slide":34,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/wbutsje9","slide":34,"text":"Avoiding grounding controls explosion.","textPreview":"Avoiding grounding controls explosion.","textChars":38,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/je5c3exk","slide":34,"text":"grounding","textPreview":"grounding","textChars":9,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/idwbu9wz","slide":34,"text":"lifted inference","textPreview":"lifted inference","textChars":16,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/wripoj21","slide":34,"text":"substitution","textPreview":"substitution","textChars":12,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/xsbqxo3m","slide":34,"text":"efficiency","textPreview":"efficiency","textChars":10,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/ap07m94b","slide":34,"text":"VTU BCS515B • Module 4 • 34/50","textPreview":"VTU BCS515B • Module 4 • 34/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/pxhhqc","slide":34,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/ci0gl6","slide":35,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/ryd8fqpo","slide":35,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/szm98v69","slide":35,"text":"Propositional vs FOL inference: intuition","textPreview":"Propositional vs FOL inference: intuition","textChars":41,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/d0fahg7u","slide":35,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/e1oralof","slide":35,"text":"Think of propositional vs fol inference as a way to make an agent's next choice clearer.","textPreview":"Think of propositional vs fol inference as a way to make an agent's next choice clearer.","textChars":88,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/f2xsjqp0","slide":35,"text":"• Why it matters: Avoiding grounding controls explosion.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: Avoiding grounding controls explosion. | • What changes: uncertainty becomes structure | • Teaching cue: connect the id...","textChars":156,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/0369cv6l","slide":35,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/14fal0n6","slide":35,"text":"Avoiding grounding controls explosion.","textPreview":"Avoiding grounding controls explosion.","textChars":38,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/25ore5ob","slide":35,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/n6xsna5w","slide":35,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/z65ovqps","slide":35,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/y5cn2l87","slide":35,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/l8n6x07y","slide":35,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/07e54vqd","slide":35,"text":"VTU BCS515B • Module 4 • 35/50","textPreview":"VTU BCS515B • Module 4 • 35/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ci0gl6","slide":35,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/hccgk6","slide":36,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/gvq58byp","slide":36,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/vux4f6hk","slide":36,"text":"Propositional vs FOL inference: workflow","textPreview":"Propositional vs FOL inference: workflow","textChars":40,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/uton61gz","slide":36,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/tsfmdwze","slide":36,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/8r6l4ryt","slide":36,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/7qx4bmh8","slide":36,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/6po32hgn","slide":36,"text":"Avoiding grounding controls explosion.","textPreview":"Avoiding grounding controls explosion.","textChars":38,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/dojmp0fi","slide":36,"text":"grounding","textPreview":"grounding","textChars":9,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/sna5gvyx","slide":36,"text":"lifted inference","textPreview":"lifted inference","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/utojil8n","slide":36,"text":"substitution","textPreview":"substitution","textChars":12,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/fuxkrq98","slide":36,"text":"efficiency","textPreview":"efficiency","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/gf61kvqt","slide":36,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/hgf2tg7e","slide":36,"text":"VTU BCS515B • Module 4 • 36/50","textPreview":"VTU BCS515B • Module 4 • 36/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/hccgk6","slide":36,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/9tg31j","slide":37,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":15}
+{"kind":"textbox","id":"sh/2l4nap8j","slide":37,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/pov6l4ra","slide":37,"text":"Propositional vs FOL inference: example","textPreview":"Propositional vs FOL inference: example","textChars":39,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/onm5czqp","slide":37,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/baxone90","slide":37,"text":"A small classroom example makes propositional vs fol inference concrete.","textPreview":"A small classroom example makes propositional vs fol inference concrete.","textChars":72,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/q9one98f","slide":37,"text":"• Use the terms: grounding, lifted inference\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: grounding, lifted inference | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":130,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/dcf6por6","slide":37,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/cb6pgjql","slide":37,"text":"Avoiding grounding controls explosion.","textPreview":"Avoiding grounding controls explosion.","textChars":38,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/zexore9c","slide":37,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/ydo7i98r","slide":37,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/knu147mp","slide":37,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/lo3idc3a","slide":37,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/ylsj2x4j","slide":37,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/zm10b2l4","slide":37,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/8bu18rml","slide":37,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/9c32hc36","slide":37,"text":"grounding","textPreview":"grounding","textChars":9,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/mpcj6h4v","slide":37,"text":"VTU BCS515B • Module 4 • 37/50","textPreview":"VTU BCS515B • Module 4 • 37/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/9tg31j","slide":37,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/f9ipef","slide":38,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/32tgn6xo","slide":38,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/432xwby9","slide":38,"text":"Propositional vs FOL inference: algorithm / exam view","textPreview":"Propositional vs FOL inference: algorithm / exam view","textChars":53,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/p4bypgfu","slide":38,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/uxkfq1g7","slide":38,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/fytgj6xs","slide":38,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Avoiding grounding controls explosion.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Avo...","textChars":166,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/gz2xsryd","slide":38,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/h0bylwfi","slide":38,"text":"Avoiding grounding controls explosion.","textPreview":"Avoiding grounding controls explosion.","textChars":38,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/et4z2lwb","slide":38,"text":"grounding","textPreview":"grounding","textChars":9,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/zudgvqxw","slide":38,"text":"lifted inference","textPreview":"lifted inference","textChars":16,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/7a5s7i5w","slide":38,"text":"substitution","textPreview":"substitution","textChars":12,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/m9crydob","slide":38,"text":"efficiency","textPreview":"efficiency","textChars":10,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/9cna98n2","slide":38,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/8bet0n6h","slide":38,"text":"VTU BCS515B • Module 4 • 38/50","textPreview":"VTU BCS515B • Module 4 • 38/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/f9ipef","slide":38,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/32msjq","slide":39,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":11}
+{"kind":"textbox","id":"sh/6hw3uxkj","slide":39,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/tkn25cju","slide":39,"text":"Unification: definition","textPreview":"Unification: definition","textChars":23,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/sjelw729","slide":39,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/julkzi1s","slide":39,"text":"Unification finds substitutions that make expressions identical.","textPreview":"Unification finds substitutions that make expressions identical.","textChars":64,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/itc3qxk7","slide":39,"text":"• matching\n• substitution\n• consistency\n• failure","textPreview":"• matching | • substitution | • consistency | • failure","textChars":49,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/5g321sjy","slide":39,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/4fulsn2d","slide":39,"text":"It is the engine behind first-order rule matching.","textPreview":"It is the engine behind first-order rule matching.","textChars":50,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/vqlkvi1w","slide":39,"text":"matching","textPreview":"matching","textChars":8,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/upcjmdkb","slide":39,"text":"substitution","textPreview":"substitution","textChars":12,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/0rql4b25","slide":39,"text":"consistency","textPreview":"consistency","textChars":11,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/1szmxgja","slide":39,"text":"failure","textPreview":"failure","textChars":7,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/ep8321kz","slide":39,"text":"VTU BCS515B • Module 4 • 39/50","textPreview":"VTU BCS515B • Module 4 • 39/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/32msjq","slide":39,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/lr93fc","slide":40,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/10ni9w7q","slide":40,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/exwjyhof","slide":40,"text":"Unification: intuition","textPreview":"Unification: intuition","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/fy507mp0","slide":40,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/sbu1w769","slide":40,"text":"Think of unification as a way to make an agent's next choice clearer.","textPreview":"Think of unification as a way to make an agent's next choice clearer.","textChars":69,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/dc3i5c7u","slide":40,"text":"• Why it matters: It is the engine behind first-order rule matching.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: It is the engine behind first-order rule matching. | • What changes: uncertainty becomes structure | • Teaching cue: co...","textChars":168,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/q9cjuho3","slide":40,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ral03mpo","slide":40,"text":"It is the engine behind first-order rule matching.","textPreview":"It is the engine behind first-order rule matching.","textChars":50,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/47uhs76d","slide":40,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/583i1c7i","slide":40,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/pgfahgny","slide":40,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/4f698bmd","slide":40,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/3edsf658","slide":40,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/2d4r614n","slide":40,"text":"VTU BCS515B • Module 4 • 40/50","textPreview":"VTU BCS515B • Module 4 • 40/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/lr93fc","slide":40,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/d7auq4","slide":41,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/kjytw3ul","slide":41,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/zipsnyt0","slide":41,"text":"Unification: workflow","textPreview":"Unification: workflow","textChars":21,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/yhwbutcf","slide":41,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/xgnalobu","slide":41,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/cfetsju9","slide":41,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/be5sjet4","slide":41,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/adwbqtcj","slide":41,"text":"It is the engine behind first-order rule matching.","textPreview":"It is the engine behind first-order rule matching.","textChars":50,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hcruxsbe","slide":41,"text":"matching","textPreview":"matching","textChars":8,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/wbit4nat","slide":41,"text":"substitution","textPreview":"substitution","textChars":12,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/y58j2h0j","slide":41,"text":"consistency","textPreview":"consistency","textChars":11,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/z6hkvm14","slide":41,"text":"failure","textPreview":"failure","textChars":7,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/k7q147ip","slide":41,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/l8z2xcja","slide":41,"text":"VTU BCS515B • Module 4 • 41/50","textPreview":"VTU BCS515B • Module 4 • 41/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/d7auq4","slide":41,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/dyf21o","slide":42,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":15}
+{"kind":"textbox","id":"sh/butw7ax8","slide":42,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/wv2d0fet","slide":42,"text":"Unification: example","textPreview":"Unification: example","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/xwbe9kfy","slide":42,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/2p0vu5gb","slide":42,"text":"A small classroom example makes unification concrete.","textPreview":"A small classroom example makes unification concrete.","textChars":53,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/nq9c3axw","slide":42,"text":"• Use the terms: matching, substitution\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: matching, substitution | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":125,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/oridwfyh","slide":42,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/9sre5kf2","slide":42,"text":"It is the engine behind first-order rule matching.","textPreview":"It is the engine behind first-order rule matching.","textChars":50,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/6l4v69wv","slide":42,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/7mdwfuxg","slide":42,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/nexc3210","slide":42,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/mdobaxkf","slide":42,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/9gfu5cj6","slide":42,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/8f6tc72l","slide":42,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/vihc721c","slide":42,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/uhobexkr","slide":42,"text":"matching","textPreview":"matching","textChars":8,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/h4zu9cj2","slide":42,"text":"VTU BCS515B • Module 4 • 42/50","textPreview":"VTU BCS515B • Module 4 • 42/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/dyf21o","slide":42,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/ft0zto","slide":43,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/p8ji5obq","slide":43,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/2l8ja9sz","slide":43,"text":"Unification: algorithm / exam view","textPreview":"Unification: algorithm / exam view","textChars":34,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/3mh03etk","slide":43,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/cba1g3ah","slide":43,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/dcji9obm","slide":43,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: It is the engine behind first-order rule matching.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: It ...","textChars":178,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/q9sjetsb","slide":43,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ra107ytw","slide":43,"text":"It is the engine behind first-order rule matching.","textPreview":"It is the engine behind first-order rule matching.","textChars":50,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/8f6h4zax","slide":43,"text":"matching","textPreview":"matching","textChars":8,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/tgzix4bi","slide":43,"text":"substitution","textPreview":"substitution","textChars":12,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/1kb6dsze","slide":43,"text":"consistency","textPreview":"consistency","textChars":11,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/0ji54ni9","slide":43,"text":"failure","textPreview":"failure","textChars":7,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/fi9obi1o","slide":43,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/eh0n2d03","slide":43,"text":"VTU BCS515B • Module 4 • 43/50","textPreview":"VTU BCS515B • Module 4 • 43/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ft0zto","slide":43,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/akcqng","slide":44,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":11}
+{"kind":"textbox","id":"sh/nihknqd0","slide":44,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/o3qlgve5","slide":44,"text":"Forward chaining: definition","textPreview":"Forward chaining: definition","textChars":28,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/p4z2pgvq","slide":44,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/a5s3ilwb","slide":44,"text":"Forward chaining starts from known facts and fires rules.","textPreview":"Forward chaining starts from known facts and fires rules.","textChars":57,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/b61krqdw","slide":44,"text":"• data-driven\n• rule firing\n• new facts\n• fixpoint","textPreview":"• data-driven | • rule firing | • new facts | • fixpoint","textChars":50,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/c7alkveh","slide":44,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/x8j2t0v2","slide":44,"text":"It is efficient for deriving all reachable consequences.","textPreview":"It is efficient for deriving all reachable consequences.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/q9oj61w7","slide":44,"text":"data-driven","textPreview":"data-driven","textChars":11,"textLines":1,"bbox":[710,328,94,70]}
+{"kind":"textbox","id":"sh/raxkf6ds","slide":44,"text":"rule firing","textPreview":"rule firing","textChars":11,"textLines":1,"bbox":[825,328,94,70]}
+{"kind":"textbox","id":"sh/jalozmhg","slide":44,"text":"new facts","textPreview":"new facts","textChars":9,"textLines":1,"bbox":[940,328,94,70]}
+{"kind":"textbox","id":"sh/i9cnqh0v","slide":44,"text":"fixpoint","textPreview":"fixpoint","textChars":8,"textLines":1,"bbox":[1055,328,94,70]}
+{"kind":"textbox","id":"sh/5w361czm","slide":44,"text":"VTU BCS515B • Module 4 • 44/50","textPreview":"VTU BCS515B • Module 4 • 44/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/akcqng","slide":44,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/9j9kfu","slide":45,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/kn2ds7et","slide":45,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/jmtwj2d8","slide":45,"text":"Forward chaining: intuition","textPreview":"Forward chaining: intuition","textChars":27,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/ilkvqhw3","slide":45,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/xkbehcvi","slide":45,"text":"Think of forward chaining as a way to make an agent's next choice clearer.","textPreview":"Think of forward chaining as a way to make an agent's next choice clearer.","textChars":74,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/wj2do7ex","slide":45,"text":"• Why it matters: It is efficient for deriving all reachable consequences.\n• What changes: uncertainty becomes structure\n• Teaching cue: connect the idea to an agent decision","textPreview":"• Why it matters: It is efficient for deriving all reachable consequences. | • What changes: uncertainty becomes structure | • Teaching c...","textChars":174,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/vitwf2dc","slide":45,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/ahkvmxwr","slide":45,"text":"It is efficient for deriving all reachable consequences.","textPreview":"It is efficient for deriving all reachable consequences.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/hgfetwvm","slide":45,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[815,193,132,68]}
+{"kind":"textbox","id":"sh/gfmx0re1","slide":45,"text":"Think","textPreview":"Think","textChars":5,"textLines":1,"bbox":[990,318,132,68]}
+{"kind":"textbox","id":"sh/e1gza9wb","slide":45,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[815,443,132,68]}
+{"kind":"textbox","id":"sh/f2p03uxw","slide":45,"text":"World","textPreview":"World","textChars":5,"textLines":1,"bbox":[640,318,132,68]}
+{"kind":"textbox","id":"sh/03yhcze1","slide":45,"text":"Percept → internal state → action","textPreview":"Percept → internal state → action","textChars":33,"textLines":1,"bbox":[660,548,450,30]}
+{"kind":"textbox","id":"sh/147i54fm","slide":45,"text":"VTU BCS515B • Module 4 • 45/50","textPreview":"VTU BCS515B • Module 4 • 45/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/9j9kfu","slide":45,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/mhmk64","slide":46,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/vylcj2l0","slide":46,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/wzuts72l","slide":46,"text":"Forward chaining: workflow","textPreview":"Forward chaining: workflow","textChars":26,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/x03ulc36","slide":46,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/mtsbmxkj","slide":46,"text":"The idea becomes teachable when it is shown as a sequence.","textPreview":"The idea becomes teachable when it is shown as a sequence.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/nulcf2l4","slide":46,"text":"• Identify the input\n• Apply the rule or strategy\n• Update the state or knowledge\n• Stop when the goal or proof is reached","textPreview":"• Identify the input | • Apply the rule or strategy | • Update the state or knowledge | • Stop when the goal or proof is reached","textChars":122,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/8vuton29","slide":46,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/9w3uhs3u","slide":46,"text":"It is efficient for deriving all reachable consequences.","textPreview":"It is efficient for deriving all reachable consequences.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/y5sbidk7","slide":46,"text":"data-driven","textPreview":"data-driven","textChars":11,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/zq1cbils","slide":46,"text":"rule firing","textPreview":"rule firing","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/byh4j25w","slide":46,"text":"new facts","textPreview":"new facts","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/ax8naxob","slide":46,"text":"fixpoint","textPreview":"fixpoint","textChars":8,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/x0zmlcn2","slide":46,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/czq5c76h","slide":46,"text":"VTU BCS515B • Module 4 • 46/50","textPreview":"VTU BCS515B • Module 4 • 46/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/mhmk64","slide":46,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/90xw5s","slide":47,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":15}
+{"kind":"textbox","id":"sh/yt8z29kv","slide":47,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/lwjydo36","slide":47,"text":"Forward chaining: example","textPreview":"Forward chaining: example","textChars":25,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/kvah4j2l","slide":47,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/7y1gfylc","slide":47,"text":"A small classroom example makes forward chaining concrete.","textPreview":"A small classroom example makes forward chaining concrete.","textChars":58,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/mxsz6tkr","slide":47,"text":"• Use the terms: data-driven, rule firing\n• Trace one decision visibly\n• Ask which step would change if the environment changed","textPreview":"• Use the terms: data-driven, rule firing | • Trace one decision visibly | • Ask which step would change if the environment changed","textChars":127,"textLines":3,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/t0jyh83i","slide":47,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/8zah832x","slide":47,"text":"It is efficient for deriving all reachable consequences.","textPreview":"It is efficient for deriving all reachable consequences.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/n2xg3ul8","slide":47,"text":"S","textPreview":"S","textChars":1,"textLines":1,"bbox":[940,188,56,50]}
+{"kind":"textbox","id":"sh/21ofup4n","slide":47,"text":"A","textPreview":"A","textChars":1,"textLines":1,"bbox":[830,293,56,50]}
+{"kind":"textbox","id":"sh/s3mxgryl","slide":47,"text":"B","textPreview":"B","textChars":1,"textLines":1,"bbox":[1050,293,56,50]}
+{"kind":"textbox","id":"sh/t4vypwz6","slide":47,"text":"C","textPreview":"C","textChars":1,"textLines":1,"bbox":[775,403,56,50]}
+{"kind":"textbox","id":"sh/6h4fe10f","slide":47,"text":"D","textPreview":"D","textChars":1,"textLines":1,"bbox":[885,403,56,50]}
+{"kind":"textbox","id":"sh/7idgnmh0","slide":47,"text":"E","textPreview":"E","textChars":1,"textLines":1,"bbox":[995,403,56,50]}
+{"kind":"textbox","id":"sh/g76xkbyx","slide":47,"text":"G","textPreview":"G","textChars":1,"textLines":1,"bbox":[1105,403,56,50]}
+{"kind":"textbox","id":"sh/h8fytgz2","slide":47,"text":"data-driven","textPreview":"data-driven","textChars":11,"textLines":1,"bbox":[730,503,440,38]}
+{"kind":"textbox","id":"sh/u54fi1gr","slide":47,"text":"VTU BCS515B • Module 4 • 47/50","textPreview":"VTU BCS515B • Module 4 • 47/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/90xw5s","slide":47,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/n2wl3o","slide":48,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/xofi9kja","slide":48,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/a1ozepkj","slide":48,"text":"Forward chaining: algorithm / exam view","textPreview":"Forward chaining: algorithm / exam view","textChars":39,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/bmx07u14","slide":48,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/krqhkz2l","slide":48,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/lszid4j6","slide":48,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: It is efficient for deriving all reachable consequences.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: It ...","textChars":184,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/yp8zipkf","slide":48,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/jqh0bu10","slide":48,"text":"It is efficient for deriving all reachable consequences.","textPreview":"It is efficient for deriving all reachable consequences.","textChars":56,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/0vmh8v2h","slide":48,"text":"data-driven","textPreview":"data-driven","textChars":11,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/1wvy10j2","slide":48,"text":"rule firing","textPreview":"rule firing","textChars":11,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/14ji9kja","slide":48,"text":"new facts","textPreview":"new facts","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/03qhgfip","slide":48,"text":"fixpoint","textPreview":"fixpoint","textChars":8,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/f2h07u1k","slide":48,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/e18zep0z","slide":48,"text":"VTU BCS515B • Module 4 • 48/50","textPreview":"VTU BCS515B • Module 4 • 48/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/n2wl3o","slide":48,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/ah0q62","slide":49,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/4fih0b69","slide":49,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/je9g76po","slide":49,"text":"Module 4 summary map","textPreview":"Module 4 summary map","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/id0zy1o3","slide":49,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/tkbid07q","slide":49,"text":"First-Order Logic and Forward Inference","textPreview":"First-Order Logic and Forward Inference","textChars":39,"textLines":1,"bbox":[500,300,280,74]}
+{"kind":"textbox","id":"sh/sj2h4v6l","slide":49,"text":"Representation revisited","textPreview":"Representation revisited","textChars":24,"textLines":1,"bbox":[120,190,180,58]}
+{"kind":"textbox","id":"sh/ritgbqp0","slide":49,"text":"FOL syntax","textPreview":"FOL syntax","textChars":10,"textLines":1,"bbox":[400,190,180,58]}
+{"kind":"textbox","id":"sh/6hkz2lof","slide":49,"text":"Quantifiers","textPreview":"Quantifiers","textChars":11,"textLines":1,"bbox":[680,190,180,58]}
+{"kind":"textbox","id":"sh/18vih072","slide":49,"text":"FOL semantics","textPreview":"FOL semantics","textChars":13,"textLines":1,"bbox":[960,190,180,58]}
+{"kind":"textbox","id":"sh/g72h8v6h","slide":49,"text":"Using FOL","textPreview":"Using FOL","textChars":9,"textLines":1,"bbox":[120,430,180,58]}
+{"kind":"textbox","id":"sh/2tkn29cj","slide":49,"text":"Knowledge engineering","textPreview":"Knowledge engineering","textChars":21,"textLines":1,"bbox":[400,430,180,58]}
+{"kind":"textbox","id":"sh/3ut4veto","slide":49,"text":"Propositional vs FOL inference","textPreview":"Propositional vs FOL inference","textChars":30,"textLines":1,"bbox":[680,430,180,58]}
+{"kind":"textbox","id":"sh/ov254zu9","slide":49,"text":"Unification","textPreview":"Unification","textChars":11,"textLines":1,"bbox":[960,430,180,58]}
+{"kind":"textbox","id":"sh/pwbmx4bu","slide":49,"text":"Explain the module by connecting each outer idea back to the center.","textPreview":"Explain the module by connecting each outer idea back to the center.","textChars":68,"textLines":1,"bbox":[254,608,780,34]}
+{"kind":"textbox","id":"sh/qx4n69sf","slide":49,"text":"VTU BCS515B • Module 4 • 49/50","textPreview":"VTU BCS515B • Module 4 • 49/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/ah0q62","slide":49,"text":"[Animation]\nReveal branches around the center. Ask students to supply one example for each branch.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/c3hzjm","slide":50,"title":"Questions","textShapes":21}
+{"kind":"textbox","id":"sh/5cjyto3a","slide":50,"text":"Questions","textPreview":"Questions","textChars":9,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/i9sfitkz","slide":50,"text":"Module 4 exam practice","textPreview":"Module 4 exam practice","textChars":22,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/3a1wrelk","slide":50,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/g7axgj2t","slide":50,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,166,46,46]}
+{"kind":"textbox","id":"sh/h8jepo3e","slide":50,"text":"Explain representation revisited with a neat diagram.","textPreview":"Explain representation revisited with a neat diagram.","textChars":53,"textLines":1,"bbox":[164,158,850,54]}
+{"kind":"textbox","id":"sh/u58fe9kn","slide":50,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,168,110,36]}
+{"kind":"textbox","id":"sh/v61wnel8","slide":50,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[92,242,46,46]}
+{"kind":"textbox","id":"sh/8jqxcz2x","slide":50,"text":"Apply fol syntax to a small example and state the takeaway.","textPreview":"Apply fol syntax to a small example and state the takeaway.","textChars":59,"textLines":1,"bbox":[164,234,850,54]}
+{"kind":"textbox","id":"sh/tkzel43i","slide":50,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,244,110,36]}
+{"kind":"textbox","id":"sh/lgjy18rq","slide":50,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[92,318,46,46]}
+{"kind":"textbox","id":"sh/kvax83a5","slide":50,"text":"Explain quantifiers with a neat diagram.","textPreview":"Explain quantifiers with a neat diagram.","textChars":40,"textLines":1,"bbox":[164,310,850,54]}
+{"kind":"textbox","id":"sh/zuhgzy9k","slide":50,"text":"10 marks","textPreview":"10 marks","textChars":8,"textLines":1,"bbox":[1042,320,110,36]}
+{"kind":"textbox","id":"sh/yt8f6tsz","slide":50,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[92,394,46,46]}
+{"kind":"textbox","id":"sh/xszexore","slide":50,"text":"Apply fol semantics to a small example and state the takeaway.","textPreview":"Apply fol semantics to a small example and state the takeaway.","textChars":62,"textLines":1,"bbox":[164,386,850,54]}
+{"kind":"textbox","id":"sh/crqx43at","slide":50,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,396,110,36]}
+{"kind":"textbox","id":"sh/bqhwvy98","slide":50,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[92,470,46,46]}
+{"kind":"textbox","id":"sh/ap8f2ts3","slide":50,"text":"Explain using fol with a neat diagram.","textPreview":"Explain using fol with a neat diagram.","textChars":38,"textLines":1,"bbox":[164,462,850,54]}
+{"kind":"textbox","id":"sh/pozetori","slide":50,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,472,110,36]}
+{"kind":"textbox","id":"sh/on6x0jax","slide":50,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[92,546,46,46]}
+{"kind":"textbox","id":"sh/0jupwnmp","slide":50,"text":"Apply knowledge engineering to a small example and state the takeaway.","textPreview":"Apply knowledge engineering to a small example and state the takeaway.","textChars":70,"textLines":1,"bbox":[164,538,850,54]}
+{"kind":"textbox","id":"sh/1k365s3a","slide":50,"text":"short note","textPreview":"short note","textChars":10,"textLines":1,"bbox":[1042,548,110,36]}
+{"kind":"textbox","id":"sh/ehc7ud4z","slide":50,"text":"VTU BCS515B • Module 4 • 50/50","textPreview":"VTU BCS515B • Module 4 • 50/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/c3hzjm","slide":50,"text":"[Animation]\nReveal questions one at a time. For each, ask students to first identify keywords from the syllabus.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/qds02c","slide":51,"title":"Module 4 / First-Order Logic and Forward Inference","textShapes":12}
+{"kind":"textbox","id":"sh/dcju94fa","slide":51,"text":"Module 4 / First-Order Logic and Forward Inference","textPreview":"Module 4 / First-Order Logic and Forward Inference","textChars":50,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/qpsvypwz","slide":51,"text":"Representation revisited: algorithm / exam view","textPreview":"Representation revisited: algorithm / exam view","textChars":47,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/rq1c7uxk","slide":51,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/0fud4je1","slide":51,"text":"Purpose, input, process, and takeaway should be separated in an answer.","textPreview":"Purpose, input, process, and takeaway should be separated in an answer.","textChars":71,"textLines":1,"bbox":[82,154,540,76]}
+{"kind":"textbox","id":"sh/1g3udofm","slide":51,"text":"• Purpose: state what the method solves\n• Input: name states, facts, rules, or goals\n• Process: write ordered steps\n• Takeaway: Variables make general knowledge possible.","textPreview":"• Purpose: state what the method solves | • Input: name states, facts, rules, or goals | • Process: write ordered steps | • Takeaway: Var...","textChars":170,"textLines":4,"bbox":[92,258,500,210]}
+{"kind":"textbox","id":"sh/edsv29wv","slide":51,"text":"Takeaway","textPreview":"Takeaway","textChars":8,"textLines":1,"bbox":[92,528,138,42]}
+{"kind":"textbox","id":"sh/fe1cbexg","slide":51,"text":"Variables make general knowledge possible.","textPreview":"Variables make general knowledge possible.","textChars":42,"textLines":1,"bbox":[252,526,390,54]}
+{"kind":"textbox","id":"sh/ojud8jex","slide":51,"text":"objects","textPreview":"objects","textChars":7,"textLines":1,"bbox":[700,333,98,64]}
+{"kind":"textbox","id":"sh/pk3ehovi","slide":51,"text":"properties","textPreview":"properties","textChars":10,"textLines":1,"bbox":[822,371,98,64]}
+{"kind":"textbox","id":"sh/dgrqp8va","slide":51,"text":"relations","textPreview":"relations","textChars":9,"textLines":1,"bbox":[944,333,98,64]}
+{"kind":"textbox","id":"sh/cfipw3ep","slide":51,"text":"general rules","textPreview":"general rules","textChars":13,"textLines":1,"bbox":[1066,371,98,64]}
+{"kind":"textbox","id":"sh/bep8nyd4","slide":51,"text":"Step-by-step reasoning path","textPreview":"Step-by-step reasoning path","textChars":27,"textLines":1,"bbox":[740,490,420,40]}
+{"kind":"textbox","id":"sh/qdg7utwj","slide":51,"text":"VTU BCS515B • Module 4 • 51/50","textPreview":"VTU BCS515B • Module 4 • 51/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/qds02c","slide":51,"text":"[Animation]\nReveal the slide in this order: definition or claim, left-side points, visual sequence, takeaway. Use only explanatory animation.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}
+{"kind":"slide","id":"sl/vey0n7","slide":52,"title":"Review","textShapes":13}
+{"kind":"textbox","id":"sh/zed8r6t4","slide":52,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[72,30,850,26]}
+{"kind":"textbox","id":"sh/kf6pkbap","slide":52,"text":"Module 4 summary map","textPreview":"Module 4 summary map","textChars":20,"textLines":1,"bbox":[72,62,1080,54]}
+{"kind":"shape","id":"sh/lgfqtgba","slide":52,"bbox":[72,124,1136,2]}
+{"kind":"textbox","id":"sh/ap47e1cn","slide":52,"text":"First-Order Logic and Forward Inference","textPreview":"First-Order Logic and Forward Inference","textChars":39,"textLines":1,"bbox":[500,300,280,74]}
+{"kind":"textbox","id":"sh/bqd8nmt8","slide":52,"text":"Representation revisited","textPreview":"Representation revisited","textChars":24,"textLines":1,"bbox":[120,190,180,58]}
+{"kind":"textbox","id":"sh/crmpgrad","slide":52,"text":"FOL syntax","textPreview":"FOL syntax","textChars":10,"textLines":1,"bbox":[400,190,180,58]}
+{"kind":"textbox","id":"sh/xsvqpwby","slide":52,"text":"Quantifiers","textPreview":"Quantifiers","textChars":11,"textLines":1,"bbox":[680,190,180,58]}
+{"kind":"textbox","id":"sh/2lk7ahcb","slide":52,"text":"FOL semantics","textPreview":"FOL semantics","textChars":13,"textLines":1,"bbox":[960,190,180,58]}
+{"kind":"textbox","id":"sh/nmtojmtw","slide":52,"text":"Using FOL","textPreview":"Using FOL","textChars":9,"textLines":1,"bbox":[120,430,180,58]}
+{"kind":"textbox","id":"sh/nmhsrqh4","slide":52,"text":"Knowledge engineering","textPreview":"Knowledge engineering","textChars":21,"textLines":1,"bbox":[400,430,180,58]}
+{"kind":"textbox","id":"sh/2l8bylgj","slide":52,"text":"Propositional vs FOL inference","textPreview":"Propositional vs FOL inference","textChars":30,"textLines":1,"bbox":[680,430,180,58]}
+{"kind":"textbox","id":"sh/p8jatgzu","slide":52,"text":"Unification","textPreview":"Unification","textChars":11,"textLines":1,"bbox":[960,430,180,58]}
+{"kind":"textbox","id":"sh/o7at0vy9","slide":52,"text":"Explain the module by connecting each outer idea back to the center.","textPreview":"Explain the module by connecting each outer idea back to the center.","textChars":68,"textLines":1,"bbox":[254,608,780,34]}
+{"kind":"textbox","id":"sh/ba1svqh0","slide":52,"text":"VTU BCS515B • Module 4 • 52/50","textPreview":"VTU BCS515B • Module 4 • 52/50","textChars":30,"textLines":1,"bbox":[72,681,540,20]}
+{"kind":"notes","id":"nt/vey0n7","slide":52,"text":"[Animation]\nReveal branches around the center. Ask students to supply one example for each branch.\n\n[Sources]\n- VTU official syllabus PDF, BCS515B Artificial Intelligence section: https://vtu.ac.in/pdf/2022_3to8/3csesyll.pdf\n- Local module material: BCS515B-module-4-pdf.pdf\n- Local prescribed textbook extract: BCS515B-module-4-textbook.pdf"}

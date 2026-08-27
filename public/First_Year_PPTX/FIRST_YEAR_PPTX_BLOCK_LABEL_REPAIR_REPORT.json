@@ -1,0 +1,65 @@
+{
+  "title": "First Year PPTX block-label repair",
+  "generatedAt": "2026-08-27T06:08:21.000Z",
+  "freezeDuringRepair": "STALE / REOPENED FOR DEFECT REPAIR",
+  "subjectsScanned": 51,
+  "subjectsAffected": 50,
+  "chemistryPreservedUnaffected": 1,
+  "modulesSegmentsAffected": 290,
+  "slidesAffected": 1558,
+  "internalBlockLabelsBefore": 1558,
+  "internalBlockLabelsAfter": 0,
+  "depthFallbackTitlesBefore": 233,
+  "depthFallbackTitlesAfter": 0,
+  "sourceBlocksRebuilt": 1558,
+  "genericBlocksAfter": 0,
+  "structuralDuplicatesAfter": 0,
+  "families": {
+    "math": { "subjects": 8, "slidesAffected": 191 },
+    "science": { "subjects": 11, "slidesAffected": 359 },
+    "programming": { "subjects": 5, "slidesAffected": 128 },
+    "engineering": { "subjects": 17, "slidesAffected": 584 },
+    "remaining": { "subjects": 9, "slidesAffected": 296 }
+  },
+  "rootCause": {
+    "sceneBuilders": [
+      "src/firstYearEngineering/index.jsx title Final PPTX teaching block ${block.range}",
+      "src/firstYearRemaining/index.jsx title Final PPTX teaching block ${block.range}",
+      "src/firstYearProgramming/index.jsx subtitle Final PPTX teaching block ${block.range}",
+      "src/firstYearMath/index.jsx title Source Teaching Block N",
+      "src/firstYearScience/index.jsx title Source Teaching Block N"
+    ],
+    "sourceTeachingBlock": "rendered PPTX slides {range} and internal action verbs",
+    "generatorFallback": "titleFrom() rejected headings >96 chars and used Source teaching block N"
+  },
+  "architecture": [
+    "scripts/build-first-year-depth-content.mjs",
+    "src/firstYearSourceLabels.js",
+    "src/firstYearSourceSlides.jsx",
+    "src/firstYearFoundation SourceTeachingBlock",
+    "src/firstYearSourceQuality.js"
+  ],
+  "qa": {
+    "render1920Failures": 0,
+    "render1280Failures": 0,
+    "renderedInstances": 9410,
+    "contentSpecificityFailures": 0,
+    "storytellingFailures": 0,
+    "placeholderLeakFailures": 0,
+    "semanticPlaceholderFailures": 0,
+    "sourceTemplateLeaks": 0,
+    "missingTitleFailures": 0,
+    "regressionFailures": 0,
+    "identityFailures": 0
+  },
+  "qaArtifacts": {
+    "defectInventory": "qa/first-year-block-label-defect-inventory.json",
+    "placeholderLeak": "qa/first-year-placeholder-leak-qa.json",
+    "placeholderLeakRender": "qa/first-year-placeholder-leak-render-qa.json",
+    "staticAudit": "qa/first-year-phase8-static-audit.json"
+  },
+  "build": "PASS",
+  "buildWarning": "Vite large-chunk warning unchanged and non-fatal",
+  "firstYearFrozen": true,
+  "recertifiedAt": "2026-08-27T06:08:21.000Z"
+}
