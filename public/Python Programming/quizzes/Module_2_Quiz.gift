@@ -1,0 +1,162 @@
+// BEC305 Python Programming — Module 2: Data Structures: Lists, Dictionaries and Strings
+// 20 multiple choice questions, 1 mark each.
+
+::M2Q1::[html]For spam \= ['cat', 'bat', 'rat', 'elephant'], what is spam[3]?{
+ ='elephant'   #Correct - indexes start at 0, so the fourth element sits at index 3.
+ ~'rat'   #Wrong - that is spam[2]; counting from 1 is the usual cause of this slip.
+ ~IndexError   #Wrong - index 3 is valid for a four-element list; index 4 would raise.
+ ~'cat'   #Wrong - that is spam[0], the first element.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.80-82 | CO2 | L2
+}
+
+::M2Q2::[html]What is the highest legal index of a list whose len() is 4?{
+ =3   #Correct - len is a count, so the last position is len - 1.
+ ~4   #Wrong - using len directly as an index raises IndexError on every non-empty list.
+ ~5   #Wrong - this is two past the end.
+ ~It depends on the contents   #Wrong - the index range depends only on the length, never on what is stored.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.80-82 | CO2 | L2
+}
+
+::M2Q3::[html]For spam \= ['cat', 'bat', 'rat', 'elephant'], what is spam[1\:3]?{
+ =['bat', 'rat']   #Correct - the slice runs from index 1 up to but not including 3.
+ ~['bat', 'rat', 'elephant']   #Wrong - this includes index 3, but the upper bound of a slice is excluded.
+ ~['cat', 'bat', 'rat']   #Wrong - this starts at 0; the slice starts at the first bound given.
+ ~'bat'   #Wrong - a slice always returns a list, never a bare element.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.82-83 | CO2 | L3
+}
+
+::M2Q4::[html]Which expression reliably gives the last element of a non-empty list spam?{
+ =spam[-1]   #Correct - negative indexes count back from the end, with -1 as the last.
+ ~spam[len(spam)]   #Wrong - this is one past the end and raises IndexError.
+ ~spam[0]   #Wrong - that is the first element.
+ ~spam[len(spam) + 1]   #Wrong - this is two past the end.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.82-83 | CO2 | L2
+}
+
+::M2Q5::[html]What is the effect of del spam[1] on a four-element list?{
+ =The element is removed and later elements shift down by one   #Correct - del removes in place and the length drops by one.
+ ~The element becomes None and the length is unchanged   #Wrong - del removes the slot entirely rather than blanking it.
+ ~The list is emptied   #Wrong - only the named element goes.
+ ~A new list is returned and spam is unchanged   #Wrong - del is a statement that mutates; it returns nothing.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.83-84 | CO2 | L3
+}
+
+::M2Q6::[html]Why is deleting items while looping forward over the same list a bug?{
+ =Each deletion shifts later elements down, so the loop skips the one that moves into the vacated slot   #Correct - the index advances while the contents move the other way, so items are silently missed.
+ ~Python raises a RuntimeError immediately   #Wrong - lists permit it without complaint, which is what makes it dangerous.
+ ~Deletion inside a loop is a SyntaxError   #Wrong - the syntax is perfectly valid.
+ ~The loop restarts from the beginning   #Wrong - the loop continues from where it was, which is precisely the problem.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.83-84 | CO2 | L4
+}
+
+::M2Q7::[html]What does spam.sort() return?{
+ =None   #Correct - it sorts in place and returns None, so assigning the result destroys the list.
+ ~The sorted list   #Wrong - that is what sorted(spam) returns; sort() mutates instead.
+ ~A copy of the list   #Wrong - no copy is made; the original ordering is lost.
+ ~The number of items sorted   #Wrong - no count is returned by any list mutator.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.89-92 | CO2 | L2
+}
+
+::M2Q8::[html]What does ['Alice', 'bob', 'Carol'] become after a plain sort()?{
+ =['Alice', 'Carol', 'bob']   #Correct - sorting is by character code, and every capital precedes every lowercase letter.
+ ~['Alice', 'bob', 'Carol']   #Wrong - that is what sort(key\=str.lower) gives, not the default.
+ ~['bob', 'Alice', 'Carol']   #Wrong - this is neither ASCII nor case-insensitive order.
+ ~['Carol', 'bob', 'Alice']   #Wrong - that is reverse order, which needs reverse\=True.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.89-92 | CO2 | L3
+}
+
+::M2Q9::[html]Which of these is immutable?{
+ =tuple   #Correct - a tuple cannot be changed after creation, which is what makes it hashable.
+ ~list   #Wrong - lists are the archetypal mutable sequence.
+ ~dictionary   #Wrong - dictionaries can gain, lose and change entries.
+ ~set   #Wrong - a set is mutable; frozenset is its immutable counterpart.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.93-97 | CO2 | L1
+}
+
+::M2Q10::[html]What is the type of (42)?{
+ =int   #Correct - the parentheses are only grouping; the comma is what makes a tuple.
+ ~tuple   #Wrong - a one-element tuple needs a trailing comma, as in (42,).
+ ~list   #Wrong - a list needs square brackets.
+ ~SyntaxError   #Wrong - the expression parses perfectly well.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.93-97 | CO2 | L3
+}
+
+::M2Q11::[html]Why can a tuple be a dictionary key when a list cannot?{
+ =A tuple is immutable and therefore hashable   #Correct - a hash must not change over the life of the key, which a mutable value cannot guarantee.
+ ~A tuple is shorter   #Wrong - length has nothing to do with it.
+ ~A list is too slow to hash   #Wrong - speed is not the issue; lists have no hash at all.
+ ~Lists cannot be compared for equality   #Wrong - lists compare for equality perfectly well.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.93-97 | CO2 | L4
+}
+
+::M2Q12::[html]a \= [[1, 2], [3, 4]] and b \= copy.copy(a). After b[0][0] \= 99, what is a[0][0]?{
+ =99   #Correct - a shallow copy duplicates the outer list only; the inner lists are still shared.
+ ~1   #Wrong - that would require copy.deepcopy(), which copies the nested structure too.
+ ~None   #Wrong - the value is an integer throughout.
+ ~IndexError   #Wrong - both indexes are valid.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.4, pp.97-102 | CO2 | L4
+}
+
+::M2Q13::[html]What does d[key] do when key is not present in dictionary d?{
+ =Raises KeyError   #Correct - square-bracket lookup refuses to guess; use get() for a default.
+ ~Returns None   #Wrong - None is what get() returns by default, not square brackets.
+ ~Returns an empty string   #Wrong - no empty value is substituted.
+ ~Inserts the key with value None   #Wrong - reading never inserts; that is setdefault().
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.5, pp.105-109 | CO2 | L2
+}
+
+::M2Q14::[html]What is the difference between d.get(k, 0) and d.setdefault(k, 0)?{
+ =get() leaves the dictionary unchanged; setdefault() inserts the key if it is missing   #Correct - one is for reading with a fallback, the other for initialising.
+ ~They are identical   #Wrong - the difference in whether the dictionary is modified is exactly the point.
+ ~get() inserts and setdefault() does not   #Wrong - this reverses the two behaviours.
+ ~setdefault() raises KeyError when the key is missing   #Wrong - avoiding KeyError is the reason both methods exist.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.5, pp.109-111 | CO2 | L3
+}
+
+::M2Q15::[html]Why is dictionary lookup preferred over a list scan for large collections?{
+ =Lookup by key is O(1) on average; scanning a list is O(n)   #Correct - hashing reaches the value in one step regardless of size.
+ ~Dictionaries use less memory   #Wrong - a dictionary generally uses more memory, not less; speed is the trade.
+ ~Lists cannot hold more than 1000 items   #Wrong - there is no such limit.
+ ~Dictionaries keep the data sorted   #Wrong - a dictionary expresses no ordering relationship at all.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.5, pp.105-109 | CO2 | L4
+}
+
+::M2Q16::[html]guests \= \{\}. What happens on guests['Alice']['apples'] \= 5?{
+ =KeyError\: 'Alice', because the inner dictionary does not exist   #Correct - the intermediate level must be created first, typically with setdefault.
+ ~It creates both levels automatically   #Wrong - Python creates no intermediate containers; that is defaultdict behaviour.
+ ~It creates a list at the outer level   #Wrong - nothing is created at all.
+ ~TypeError   #Wrong - the failure is a missing key, not a wrong type.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.5, pp.113-119 | CO2 | L4
+}
+
+::M2Q17::[html]What does s[0] \= 'J' do when s is a string?{
+ =Raises TypeError\: 'str' object does not support item assignment   #Correct - strings are immutable, so a change must build a new string.
+ ~Changes the first character to 'J'   #Wrong - in-place character assignment is exactly what strings forbid.
+ ~Returns a new string   #Wrong - the statement raises rather than returning anything.
+ ~Raises IndexError   #Wrong - index 0 is valid for any non-empty string; the problem is assignment.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.6, pp.123-127 | CO2 | L3
+}
+
+::M2Q18::[html]What is the value of ''.isdecimal()?{
+ =False   #Correct - every isX method returns False for the empty string, so validate length separately.
+ ~True   #Wrong - an empty string contains no decimal characters, so the test fails.
+ ~None   #Wrong - these methods always return a Boolean.
+ ~ValueError   #Wrong - no exception is raised; the answer is simply False.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.6, pp.127-131 | CO2 | L3
+}
+
+::M2Q19::[html]Which is the correct way to join a list of strings with a comma and space?{
+ =', '.join(items)   #Correct - join is a string method, called on the separator with the list as the argument.
+ ~items.join(', ')   #Wrong - a list has no join method; this raises AttributeError.
+ ~join(items, ', ')   #Wrong - there is no such built-in function.
+ ~items + ', '   #Wrong - a list and a string cannot be combined with +.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.6, pp.131-133 | CO2 | L2
+}
+
+::M2Q20::[html]What does 'SpamSpamBaconSpam'.strip('ampS') return?{
+ ='Bacon'   #Correct - the argument is a set of characters, and any of them are removed from both ends.
+ ~'SpamSpamBaconSpam'   #Wrong - the stripping certainly takes effect here.
+ ~'BaconSpam'   #Wrong - stripping works from both ends, not only the front.
+ ~''   #Wrong - B, c, o and n are not in the set, so the middle survives.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.6, pp.133-142 | CO2 | L4
+}

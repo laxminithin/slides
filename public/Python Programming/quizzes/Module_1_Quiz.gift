@@ -1,0 +1,162 @@
+// BEC305 Python Programming — Module 1: Python Basics, Flow Control and Functions
+// 20 multiple choice questions, 1 mark each.
+
+::M1Q1::[html]What does the expression 2 + 3 * 4 evaluate to in Python?{
+ =14   #Correct - multiplication binds tighter than addition, so 3 * 4 is evaluated first.
+ ~20   #Wrong - 20 would require the addition to happen first, which needs explicit parentheses.
+ ~24   #Wrong - this multiplies the whole expression by something and has no basis in the precedence rules.
+ ~11   #Wrong - this adds all three operands and ignores the multiplication entirely.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.1, pp.13-16 | CO1 | L2
+}
+
+::M1Q2::[html]What is the type and value of 10 / 2 in Python 3?{
+ =float 5.0   #Correct - true division always returns a float, even when the result is exact.
+ ~int 5   #Wrong - that is what // returns; a single slash is true division.
+ ~float 5   #Wrong - the type is right but a float is displayed as 5.0, not 5.
+ ~int 5.0   #Wrong - an int cannot hold a decimal point; these two do not go together.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.1, pp.16-17 | CO1 | L2
+}
+
+::M1Q3::[html]What does 'Hi' * 3 produce?{
+ ='HiHiHi'   #Correct - a string times an integer replicates the string.
+ ~TypeError   #Wrong - TypeError arises for string times string, not string times int.
+ ~['Hi', 'Hi', 'Hi']   #Wrong - replication produces one longer string, not a list of copies.
+ ~'Hi3'   #Wrong - this would be concatenation of the digit, which * does not do.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.1, pp.17-18 | CO1 | L2
+}
+
+::M1Q4::[html]Why does 'Total\: ' + 42 fail?{
+ =+ requires both operands to be the same kind of thing; an int must be converted with str()   #Correct - Python refuses to guess, so wrap the number in str() or use an f-string.
+ ~Python cannot add anything to a string   #Wrong - string plus string concatenates perfectly well.
+ ~The string is missing a trailing space   #Wrong - whitespace has nothing to do with the type error.
+ ~42 must be written as a float first   #Wrong - a float would fail for exactly the same reason an int does.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.1, pp.17-18 | CO1 | L3
+}
+
+::M1Q5::[html]After spam \= 42; cheese \= spam; spam \= 100, what is cheese?{
+ =42   #Correct - rebinding spam moves only that label; cheese still points at 42.
+ ~100   #Wrong - this assumes cheese tracks spam, but assignment copies the reference at that moment only.
+ ~None   #Wrong - cheese was definitely assigned a value.
+ ~It raises a NameError   #Wrong - both names were assigned before use.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.1, pp.18-21 | CO1 | L3
+}
+
+::M1Q6::[html]What type does input() always return?{
+ =str   #Correct - input() returns a string every time, so convert explicitly when a number is needed.
+ ~int when the user types digits   #Wrong - Python does no inspection of the typed text; it hands back the raw string.
+ ~float   #Wrong - float is never returned by input() either.
+ ~It depends on what the user types   #Wrong - the return type is fixed regardless of the content typed.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.1, pp.23-28 | CO1 | L1
+}
+
+::M1Q7::[html]What is the value of x after x \= print('hi')?{
+ =None   #Correct - print() is called for its side effect and returns None.
+ ~'hi'   #Wrong - the text goes to the screen; it is not handed back to the caller.
+ ~0   #Wrong - zero is not what a function without a return statement gives back.
+ ~An empty string   #Wrong - the return value is None, which is not the same as an empty string.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.1, pp.23-28 | CO1 | L2
+}
+
+::M1Q8::[html]Which expression is True?{
+ =42 \=\= 42.0   #Correct - numeric equality ignores the int versus float distinction.
+ ~42 \=\= '42'   #Wrong - an int is never equal to a str; this evaluates to False.
+ ~42 < '42'   #Wrong - this raises a TypeError rather than returning a Boolean.
+ ~'Dog' \=\= 'dog'   #Wrong - string comparison is case sensitive, so this is False.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.2, pp.32-35 | CO1 | L3
+}
+
+::M1Q9::[html]With items \= [], what does len(items) > 0 and items[0] \=\= 5 evaluate to?{
+ =False, and items[0] is never evaluated   #Correct - and short-circuits, so the failing index expression is never reached.
+ ~IndexError   #Wrong - that is what happens if the two operands are written the other way round.
+ ~True   #Wrong - the first operand is False, so the whole and is False.
+ ~None   #Wrong - a Boolean operator on these operands yields a Boolean.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.2, pp.35-37 | CO1 | L4
+}
+
+::M1Q10::[html]Why is if x \=\= 1 or 2 wrong when you mean "x is 1 or 2"?{
+ =Python reads it as (x \=\= 1) or (2), and 2 is truthy, so it is always True   #Correct - the comparison binds tighter than or, and any non-zero number is truthy.
+ ~It raises a SyntaxError   #Wrong - it is perfectly valid syntax, which is exactly why the bug is hard to spot.
+ ~or cannot be used with numbers   #Wrong - or works on any values, not just Booleans.
+ ~It only tests x against 1 and ignores 2 entirely   #Wrong - the 2 is not ignored; it is evaluated as a truthy operand of or.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.2, pp.35-37 | CO1 | L4
+}
+
+::M1Q11::[html]In Python, what defines the extent of a block?{
+ =Indentation   #Correct - indentation is syntax in Python, not formatting.
+ ~Curly braces   #Wrong - Python has no braces for blocks; that is the C family.
+ ~The begin and end keywords   #Wrong - those keywords belong to Pascal-family languages.
+ ~A blank line   #Wrong - blank lines are ignored and do not terminate a block.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.2, pp.37-38 | CO1 | L1
+}
+
+::M1Q12::[html]In an if/elif/elif/else chain, how many blocks can run for one input?{
+ =Exactly one   #Correct - the chain stops at the first True condition, which is why clause order matters.
+ ~All whose conditions are True   #Wrong - that is what happens with separate if statements, not with an elif chain.
+ ~At most two   #Wrong - there is no two-block rule; it is strictly one.
+ ~None, unless an else is present   #Wrong - the if or an elif can run perfectly well without any else.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.2, pp.38-45 | CO1 | L2
+}
+
+::M1Q13::[html]What does list(range(5, 0, -1)) produce?{
+ =[5, 4, 3, 2, 1]   #Correct - the stop value 0 is excluded, so the countdown ends at 1.
+ ~[5, 4, 3, 2, 1, 0]   #Wrong - to include 0 the stop would have to be -1.
+ ~[4, 3, 2, 1, 0]   #Wrong - the start value 5 is included, unlike the stop value.
+ ~[]   #Wrong - an empty list results only when the step moves away from the stop.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.2, pp.53-57 | CO1 | L3
+}
+
+::M1Q14::[html]Which is the correct index set for a list called items?{
+ =range(len(items))   #Correct - range excludes its stop, so this yields exactly 0 to len-1.
+ ~range(1, len(items))   #Wrong - this silently skips index 0 and the first item is never visited.
+ ~range(len(items) + 1)   #Wrong - this runs one past the end and raises IndexError on the last pass.
+ ~range(0, len(items) - 1)   #Wrong - this stops one item early and misses the last element.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.2, pp.53-57 | CO1 | L3
+}
+
+::M1Q15::[html]What is the risk of from modulename import *?{
+ =It copies every name into your namespace and can silently shadow your own variables   #Correct - a name collision overwrites silently, and the call site no longer says where a name came from.
+ ~It is slower than a plain import   #Wrong - import cost is essentially the same; the problem is namespace pollution.
+ ~It fails if the module has more than ten functions   #Wrong - there is no such limit.
+ ~It prevents you from using the module name afterwards   #Wrong - the star form simply does not bind the module name, which is a separate matter.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.2, pp.57-60 | CO1 | L4
+}
+
+::M1Q16::[html]What does a function return if it has no return statement?{
+ =None   #Correct - falling off the end of a function returns None, a genuine value of type NoneType.
+ ~0   #Wrong - zero is a number and is never supplied implicitly.
+ ~An empty string   #Wrong - an empty string is not what Python substitutes.
+ ~It raises an error   #Wrong - it is legal and common for a function to return nothing useful.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.3, pp.61-65 | CO1 | L2
+}
+
+::M1Q17::[html]What is the difference between a parameter and an argument?{
+ =A parameter is the name in the def; an argument is the value at the call   #Correct - the parameter is the slot and the argument is what is put into it.
+ ~They are the same thing   #Wrong - they name two different sides of the same call and are worth distinguishing.
+ ~A parameter is a keyword argument; an argument is positional   #Wrong - both parameters and arguments can be positional or by keyword.
+ ~A parameter is returned; an argument is passed in   #Wrong - neither term refers to the return value.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.3, pp.61-65 | CO1 | L2
+}
+
+::M1Q18::[html]spam \= 42 at the top level; a function body contains spam \= 99 with no global statement. What is spam after the call?{
+ =42   #Correct - the assignment created a new local; the global was never touched.
+ ~99   #Wrong - that would require a global declaration inside the function.
+ ~None   #Wrong - the global still holds its original value.
+ ~UnboundLocalError   #Wrong - that error occurs when a local is read before being assigned, which is not the case here.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.3, pp.65-72 | CO1 | L4
+}
+
+::M1Q19::[html]Why should you avoid a bare except\: clause?{
+ =It catches every exception, including your own typos and the user pressing Ctrl-C   #Correct - it converts loud bugs into silent ones and swallows KeyboardInterrupt as well.
+ ~It is a SyntaxError in Python 3   #Wrong - it is valid syntax, which is precisely why it is a trap.
+ ~It is slower than naming the exception type   #Wrong - the speed difference is irrelevant; the problem is what it hides.
+ ~It can only appear once per program   #Wrong - there is no such restriction.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.3, pp.72-78 | CO1 | L4
+}
+
+::M1Q20::[html]Which exception does int('abc') raise?{
+ =ValueError   #Correct - the type is right, a str, but the value cannot be interpreted as an integer.
+ ~TypeError   #Wrong - TypeError would arise if int() were given something it cannot accept at all, such as a list.
+ ~NameError   #Wrong - NameError means a name was never assigned.
+ ~SyntaxError   #Wrong - the line parses correctly; the failure happens at run time.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.3, pp.72-78 | CO1 | L3
+}

@@ -1,0 +1,162 @@
+// BEC303 Network Analysis — Module 1: Basic Concepts — Mesh and Node Analysis
+// 20 multiple choice questions, 1 mark each.
+
+::M1Q1::[html]Kirchhoff's Current Law is a direct consequence of which physical principle?{
+ =Conservation of charge at a point that stores none   #Correct — a lumped node has no capacitance to store charge, so current in must equal current out at every instant.
+ ~Conservation of energy around a loop   #Wrong - energy conservation around a loop gives KVL, not KCL.
+ ~Ohm's law applied at a junction   #Wrong - KCL holds even for nonlinear and non-ohmic branches, so it cannot rest on Ohm's law.
+ ~Linearity of the circuit elements   #Wrong - KCL holds for nonlinear circuits too, so linearity is not required.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.3, pp.40-42 | CO1 | L1
+}
+
+::M1Q2::[html]For a planar network with B branches and N nodes, how many independent KVL equations exist?{
+ =B − N + 1   #Correct — B − N + 1 is the mesh count, and each mesh contributes exactly one independent loop equation.
+ ~N − 1   #Wrong - N - 1 is the number of independent KCL equations, not KVL.
+ ~B − N   #Wrong - this undercounts by one; a single-loop circuit with B \= N would then need zero equations.
+ ~B + N − 1   #Wrong - this overcounts badly and would produce a dependent, unsolvable set.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.3, pp.42-46 | CO1 | L2
+}
+
+::M1Q3::[html]A supernode is required when a voltage source is connected{
+ =between two non-reference nodes   #Correct — with neither end at the reference, neither node voltage is known and the source branch has no current expression.
+ ~between a node and the reference node   #Wrong - a source with one end grounded fixes that node voltage directly and needs no supernode.
+ ~in series with a resistor anywhere   #Wrong - a series resistor gives the branch a perfectly ordinary current expression.
+ ~in parallel with a current source   #Wrong - that topology affects source transformation, not the supernode condition.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.4, pp.89-92 | CO1 | L2
+}
+
+::M1Q4::[html]In mesh analysis the physical current in a branch shared by two meshes is{
+ =the difference of the two mesh currents   #Correct — the two circulating currents traverse the shared branch in opposite senses, so they subtract.
+ ~the sum of the two mesh currents   #Wrong - they would only add if both meshes were assigned opposing rotation directions, which the standard convention forbids.
+ ~the larger of the two mesh currents   #Wrong - this confuses magnitude with algebraic combination and gives no defensible sign.
+ ~either mesh current, since they are equal there   #Wrong - mesh currents are generally different; only their difference is physically measurable in that branch.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.4, pp.92-98 | CO1 | L2
+}
+
+::M1Q5::[html]When a current source lies on a branch shared by two meshes, the correct response is to{
+ =form a supermesh and write KVL around the merged outer path   #Correct — the voltage across an ideal current source is unknown, so the traversal path must go around it.
+ ~write KVL through the source using its terminal voltage   #Wrong - that terminal voltage is an unknown you cannot express, so the equation becomes unsolvable.
+ ~replace the source by a short circuit   #Wrong - shorting a current source changes the circuit; sources are only deactivated during superposition.
+ ~convert the source into a voltage source regardless of topology   #Wrong - source transformation needs a parallel resistance, which a shared ideal source does not have.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.4, pp.98-101 | CO1 | L3
+}
+
+::M1Q6::[html]Which statement about source transformation is correct?{
+ =It preserves terminal behaviour but not internal power dissipation   #Correct — the load cannot distinguish the two forms, but the resistance sits in a different position and dissipates differently.
+ ~It preserves both terminal behaviour and internal dissipation   #Wrong - internal dissipation is exactly what is not preserved, which is why efficiency must be computed on the original.
+ ~It may be applied to an ideal voltage source with no series resistance   #Wrong - the transformation requires division by R, so an ideal source cannot be transformed.
+ ~It changes the load current by the ratio V_s/I_s   #Wrong - the load current is identical before and after; that is the definition of terminal equivalence.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.133-141 | CO1 | L2
+}
+
+::M1Q7::[html]A delta of 30 Ω, 60 Ω and 30 Ω is converted to a wye. The branch at the terminal between the two 30 Ω arms is{
+ =7.5 Ω   #Correct — (30 × 30)/120 \= 7.5 Ω, using the two arms that touch that terminal.
+ ~15 Ω   #Wrong - 15 ohm is what the other two wye branches come to, each using one 30 ohm and the 60 ohm arm.
+ ~30 Ω   #Wrong - this simply repeats a delta value and ignores the conversion formula entirely.
+ ~60 Ω   #Wrong - this uses the arm opposite the terminal, which is the classic sign of applying the formula backwards.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.154-157 | CO1 | L3
+}
+
+::M1Q8::[html]Delta-wye conversion is specifically needed when{
+ =no two elements are in simple series or parallel   #Correct — the bridge topology stalls series-parallel reduction, and conversion is the move that unblocks it.
+ ~the circuit contains a dependent source   #Wrong - dependent sources are handled by auxiliary equations; the conversion applies only to passive three-terminal networks.
+ ~the circuit is driven by a sinusoidal source   #Wrong - frequency is irrelevant to the topological deadlock the conversion solves.
+ ~there are more meshes than nodes   #Wrong - the mesh-to-node ratio guides which analysis method to pick, not whether a bridge exists.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.154-157 | CO1 | L2
+}
+
+::M1Q9::[html]Expressed as a cosine, 5·sin(377t + 30°) equals{
+ =5·cos(377t − 60°)   #Correct — sin(x) \= cos(x − 90°), so 30° − 90° \= −60°.
+ ~5·cos(377t + 120°)   #Wrong - this adds 90 deg instead of subtracting it, the most common sign slip in the conversion.
+ ~5·cos(377t + 30°)   #Wrong - this drops the conversion altogether and treats sine and cosine as interchangeable.
+ ~5·cos(377t − 30°)   #Wrong - this subtracts 60 deg from nothing; the shift is a fixed 90 deg, not the phase value itself.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.10, pp.371-374 | CO1 | L2
+}
+
+::M1Q10::[html]The phasor of a sinusoid deliberately discards which piece of information?{
+ =The frequency   #Correct — a linear circuit cannot change frequency, so carrying it through every equation is redundant.
+ ~The amplitude   #Wrong - amplitude is the magnitude of the phasor and is fully retained.
+ ~The phase   #Wrong - phase is the angle of the phasor and is precisely what the representation is for.
+ ~The polarity reference   #Wrong - the polarity reference must still be marked on the schematic for the phasor to be interpreted.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.10, pp.383-389 | CO1 | L2
+}
+
+::M1Q11::[html]The impedance of a 50 mH inductor at ω \= 2000 rad/s is{
+ =j100 Ω   #Correct — Z_L \= jωL \= j × 2000 × 0.05 \= j100 Ω.
+ ~j0.1 Ω   #Wrong - this divides by omega instead of multiplying, the capacitive formula applied to an inductor.
+ ~−j100 Ω   #Wrong - the sign is wrong; negative reactance is capacitive, and an inductor is always +j.
+ ~100 Ω   #Wrong - the magnitude is right but dropping the j loses the 90 deg phase lead entirely.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.10, pp.389-394 | CO1 | L2
+}
+
+::M1Q12::[html]A 100 Ω resistor in series with j100 Ω has a total impedance magnitude of{
+ =141.4 Ω   #Correct — |100 + j100| \= √(100² + 100²) \= 141.4 Ω at an angle of 45°.
+ ~200 Ω   #Wrong - this adds magnitudes arithmetically, a 41 percent overestimate that corrupts every later power figure.
+ ~100 Ω   #Wrong - this ignores the reactive part completely.
+ ~0 Ω   #Wrong - cancellation to zero requires equal and opposite reactances, not a resistance and a reactance.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.10, pp.389-394 | CO1 | L3
+}
+
+::M1Q13::[html]Adding the phasors 30∠30° and 40∠−60° gives{
+ =50∠−23.13°   #Correct — in rectangular form the sum is 45.98 − j19.64, whose magnitude is 50 and angle −23.13°.
+ ~70∠−15°   #Wrong - this adds magnitudes and averages angles, which is never valid for phasor addition.
+ ~50∠23.13°   #Wrong - the magnitude is right but the sign of the angle is inverted; the imaginary part is negative here.
+ ~70∠−30°   #Wrong - both the magnitude and angle come from treating phasors as ordinary scalars.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.10, pp.383-389 | CO1 | L3
+}
+
+::M1Q14::[html]When applying superposition or finding a Thévenin resistance, dependent sources must be{
+ =left active   #Correct — a dependent source expresses the circuit's internal structure, not an external excitation.
+ ~set to zero   #Wrong - zeroing it changes the network into a different circuit and gives a wrong resistance.
+ ~replaced by their average value   #Wrong - a dependent source has no meaningful average value independent of the circuit state.
+ ~converted to independent sources   #Wrong - its value tracks another circuit variable, so it cannot be frozen into an independent value.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.4, pp.80-101 | CO1 | L2
+}
+
+::M1Q15::[html]An ideal independent voltage source is deactivated by replacing it with{
+ =a short circuit   #Correct — zero volts across a branch is exactly a short circuit.
+ ~an open circuit   #Wrong - an open circuit deactivates a current source, not a voltage source.
+ ~a resistor equal to its internal resistance   #Wrong - an ideal source has no internal resistance to substitute.
+ ~a current source of the same magnitude   #Wrong - substituting another live source does not deactivate anything.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.123-133 | CO1 | L1
+}
+
+::M1Q16::[html]In nodal analysis the current through a resistor R between nodes v1 and v2 is written as{
+ =(v1 − v2)/R   #Correct — the branch current depends on the difference in potential across the element, never on one end alone.
+ ~v1/R   #Wrong - this silently grounds the far end of a resistor that is not grounded.
+ ~(v1 + v2)/R   #Wrong - potentials subtract across an element; adding them has no physical meaning.
+ ~v2/R   #Wrong - same error as option B, with the wrong end grounded instead.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.4, pp.80-89 | CO1 | L2
+}
+
+::M1Q17::[html]Mesh analysis requires the circuit to be planar because{
+ =only a planar drawing has a well-defined complete set of independent meshes   #Correct — a mesh is a loop enclosing no other loop, which is a property of a crossing-free drawing.
+ ~complex numbers cannot be used in non-planar circuits   #Wrong - complex arithmetic is indifferent to topology.
+ ~KVL fails in non-planar circuits   #Wrong - KVL holds for any closed path in any lumped circuit, planar or not.
+ ~non-planar circuits have no nodes   #Wrong - every circuit has nodes; planarity is about how loops nest, not about node existence.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.4, pp.92-98 | CO1 | L2
+}
+
+::M1Q18::[html]A complex forcing function is used because{
+ =it solves a real and a quadrature problem at once, and the real part is kept   #Correct — superposition guarantees that the real part of the response belongs to the real part of the drive.
+ ~it approximates the sinusoid to within a few percent   #Wrong - the method is exact, not approximate; no accuracy is traded away.
+ ~it removes the transient response from the equation   #Wrong - the transient is discarded by restricting attention to steady state, not by the complex form itself.
+ ~it converts a nonlinear circuit into a linear one   #Wrong - the method requires linearity to begin with and cannot create it.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.10, pp.374-383 | CO1 | L3
+}
+
+::M1Q19::[html]The reference node in nodal analysis is chosen{
+ =freely, usually at the node with the most connections   #Correct — the choice removes an arbitrary additive constant and is made for convenience alone.
+ ~only at a node physically connected to earth   #Wrong - the analysis reference has nothing to do with a physical earth connection.
+ ~at the node with the highest potential   #Wrong - the reference is assigned zero volts by definition, so it cannot be chosen by potential.
+ ~at the node carrying the largest current   #Wrong - branch currents are outputs of the analysis and are unknown when the reference is chosen.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.4, pp.80-89 | CO1 | L2
+}
+
+::M1Q20::[html]A series RL circuit with R \= 3 Ω and jωL \= j4 Ω driven by 10∠0° V carries a current of{
+ =2∠−53.13° A   #Correct — I \= 10∠0°/(3 + j4) \= 10∠0°/5∠53.13° \= 2∠−53.13° A.
+ ~2∠+53.13° A   #Wrong - the sign is inverted; current lags voltage in an inductive circuit, so the angle must be negative.
+ ~1.43∠0° A   #Wrong - this divides by 3 + 4 \= 7 as if the impedance were real.
+ ~10∠−53.13° A   #Wrong - the angle is right but the magnitude was never divided by the impedance magnitude of 5.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.10, pp.374-394 | CO1 | L4
+}

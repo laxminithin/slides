@@ -1,0 +1,479 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BEC503 Module 5 Quiz</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 10.5pt; color: #12203A; line-height: 1.45; }
+h1 { font-size: 19pt; margin: 0 0 4pt; color: #12203A; }
+h2 { font-size: 13.5pt; margin: 16pt 0 5pt; padding-bottom: 3pt; border-bottom: 1.5pt solid #0F6FC6; color: #0F6FC6; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 11pt 0 3pt; color: #12203A; page-break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 8pt 0 2pt; color: #5A6478; page-break-after: avoid; }
+p { margin: 4pt 0; }
+ul, ol { margin: 4pt 0 4pt 16pt; padding: 0; }
+li { margin: 2pt 0; page-break-inside: avoid; }
+hr { border: 0; border-top: 0.75pt solid #D7DEE8; margin: 10pt 0; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; background: #F1F5FA; padding: 0 2pt; border-radius: 2pt; }
+pre { font-family: Consolas, monospace; font-size: 9pt; background: #F1F5FA; border-left: 2.5pt solid #0F6FC6; padding: 6pt 8pt; margin: 5pt 0; white-space: pre-wrap; page-break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0; font-size: 9.5pt; }
+th { background: #0F6FC6; color: #fff; text-align: left; padding: 4pt 5pt; font-weight: 600; }
+td { border: 0.5pt solid #D7DEE8; padding: 4pt 5pt; vertical-align: top; }
+tr { page-break-inside: avoid; }
+tbody tr:nth-child(even) td { background: #F7FAFD; }
+strong { color: #12203A; }
+.tag { font-family: Consolas, monospace; font-size: 9pt; color: #C2410C; }
+</style></head><body>
+<h1>BEC503 Digital Communication — Module 5 Quiz</h1>
+<p><strong>Convolutional Codes</strong></p>
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>
+<tr><td>Subject code</td><td>BEC503</td></tr>
+<tr><td>Module</td><td>5 — Convolutional Codes</td></tr>
+<tr><td>Duration</td><td>45 minutes</td></tr>
+<tr><td>Maximum marks</td><td>50 (Part A 20 + Part B 30)</td></tr>
+<tr><td>Attempts allowed</td><td>1</td></tr>
+<tr><td>Passing marks</td><td>20</td></tr>
+<tr><td>Textbook</td><td>Simon Haykin, Digital Communication Systems, 1st ed., 2014</td></tr>
+</tbody></table>
+<h2>Instructions</h2>
+<ul>
+<li>Part A carries 20 one-mark multiple choice questions. Exactly one option is correct.</li>
+<li>Part B carries 13 short questions totalling 30 marks.</li>
+<li>For any trellis question, show the accumulated path metric at every state and time step.</li>
+<li>State generator polynomials in both octal and binary where either is asked for.</li>
+<li>Non-programmable calculators are permitted. No textbooks or notes.</li>
+</ul>
+<h2>Course outcome and Bloom coverage</h2>
+<table><thead><tr><th>Band</th><th>Questions</th><th>Share</th><th>Target</th></tr></thead><tbody>
+<tr><td>L1–L2 Remember / Understand</td><td>5</td><td>15%</td><td>~30%</td></tr>
+<tr><td>L3–L4 Apply / Analyse</td><td>21</td><td>64%</td><td>~45%</td></tr>
+<tr><td>L5–L6 Evaluate / Create</td><td>7</td><td>21%</td><td>~25%</td></tr>
+</tbody></table>
+<p>Course outcome spread: CO4: 13, CO5: 20. Total questions: 33.</p>
+<hr/>
+<h2>Part A — Multiple choice (20 × 1 mark = 20 marks)</h2>
+<p><strong>A1.</strong> The constraint length K of a convolutional encoder with M memory stages is  <code>[CO4 | L1 | 1 mark | easy | Ch.10, pp.605-608]</code></p>
+<ul>
+<li>(A) M + 1</li>
+<li>(B) M</li>
+<li>(C) 2^M</li>
+<li>(D) M - 1</li>
+</ul>
+<p><strong>A2.</strong> A convolutional encoder with M = 3 has how many trellis states?  <code>[CO4 | L2 | 1 mark | easy | Ch.10, pp.605-608]</code></p>
+<ul>
+<li>(A) 8</li>
+<li>(B) 3</li>
+<li>(C) 4</li>
+<li>(D) 16</li>
+</ul>
+<p><strong>A3.</strong> The generator pair (7,5) in octal corresponds in binary to  <code>[CO4 | L2 | 1 mark | medium | Ch.10, pp.605-608]</code></p>
+<ul>
+<li>(A) 111 and 101</li>
+<li>(B) 110 and 100</li>
+<li>(C) 111 and 011</li>
+<li>(D) 101 and 111</li>
+</ul>
+<p><strong>A4.</strong> The generator sequences of a convolutional encoder are  <code>[CO5 | L3 | 1 mark | medium | Ch.10, pp.605-608]</code></p>
+<ul>
+<li>(A) the impulse responses of its output branches</li>
+<li>(B) the parity check polynomials</li>
+<li>(C) the state transition probabilities</li>
+<li>(D) the tail bits</li>
+</ul>
+<p><strong>A5.</strong> Why are tail bits appended to a message before convolutional encoding?  <code>[CO5 | L3 | 1 mark | medium | Ch.10, pp.605-608]</code></p>
+<ul>
+<li>(A) To return the encoder to the all-zero state so the decoder has a known endpoint</li>
+<li>(B) To increase the code rate</li>
+<li>(C) To mark the end of the frame for the demodulator</li>
+<li>(D) To randomise the output</li>
+</ul>
+<p><strong>A6.</strong> A code tree after L time steps has how many paths?  <code>[CO4 | L3 | 1 mark | medium | Ch.10, pp.608-613]</code></p>
+<ul>
+<li>(A) 2^L</li>
+<li>(B) 2^M</li>
+<li>(C) L * 2^M</li>
+<li>(D) L^2</li>
+</ul>
+<p><strong>A7.</strong> The trellis differs from the code tree in that  <code>[CO5 | L3 | 1 mark | easy | Ch.10, pp.608-613]</code></p>
+<ul>
+<li>(A) nodes with the same state at the same time are merged</li>
+<li>(B) it shows only the correct path</li>
+<li>(C) it omits the output labels</li>
+<li>(D) it grows twice as fast</li>
+</ul>
+<p><strong>A8.</strong> The width of a trellis at each time step is  <code>[CO5 | L2 | 1 mark | easy | Ch.10, pp.608-613]</code></p>
+<ul>
+<li>(A) 2^M, constant in sequence length</li>
+<li>(B) 2^L</li>
+<li>(C) growing linearly with time</li>
+<li>(D) equal to the code rate</li>
+</ul>
+<p><strong>A9.</strong> When computing the transfer function from the state diagram, the self-loop on the all-zero state is  <code>[CO5 | L4 | 1 mark | hard | Ch.10, pp.608-613]</code></p>
+<ul>
+<li>(A) removed, because it represents staying in the zero state</li>
+<li>(B) kept, to count idle time</li>
+<li>(C) labelled D^0</li>
+<li>(D) replaced by a branch to the all-ones state</li>
+</ul>
+<p><strong>A10.</strong> The free distance of a convolutional code is  <code>[CO4 | L3 | 1 mark | medium | Ch.10, pp.610-613]</code></p>
+<ul>
+<li>(A) the minimum weight of a path diverging from and remerging with the all-zero path</li>
+<li>(B) the minimum weight of any codeword</li>
+<li>(C) the constraint length</li>
+<li>(D) the number of states</li>
+</ul>
+<p><strong>A11.</strong> For a rate 1/2 code with d_free = 5, the asymptotic hard-decision coding gain is about  <code>[CO4 | L4 | 1 mark | hard | Ch.10, pp.610-613]</code></p>
+<ul>
+<li>(A) 4 dB</li>
+<li>(B) 7 dB</li>
+<li>(C) 2.5 dB</li>
+<li>(D) 10 dB</li>
+</ul>
+<p><strong>A12.</strong> A recursive systematic convolutional code, compared with its non-recursive equivalent, has  <code>[CO4 | L4 | 1 mark | hard | Ch.10, pp.610-613]</code></p>
+<ul>
+<li>(A) the same free distance but an infinite impulse response</li>
+<li>(B) a larger free distance</li>
+<li>(C) fewer states</li>
+<li>(D) a higher rate</li>
+</ul>
+<p><strong>A13.</strong> Optimum decoding of a convolutional code means  <code>[CO4 | L3 | 1 mark | medium | Ch.10, pp.613-614]</code></p>
+<ul>
+<li>(A) maximum likelihood sequence estimation over all trellis paths</li>
+<li>(B) decoding each bit independently</li>
+<li>(C) syndrome lookup</li>
+<li>(D) majority voting across branches</li>
+</ul>
+<p><strong>A14.</strong> The Viterbi algorithm is  <code>[CO4 | L4 | 1 mark | medium | Ch.10, pp.613-618]</code></p>
+<ul>
+<li>(A) exactly maximum likelihood, not an approximation</li>
+<li>(B) a suboptimal heuristic that is fast</li>
+<li>(C) optimal only for hard decisions</li>
+<li>(D) optimal only for rate 1/2 codes</li>
+</ul>
+<p><strong>A15.</strong> The core operation of the Viterbi algorithm at each state is  <code>[CO5 | L2 | 1 mark | easy | Ch.10, pp.614-618]</code></p>
+<ul>
+<li>(A) add, compare, select</li>
+<li>(B) multiply and accumulate</li>
+<li>(C) sort and prune</li>
+<li>(D) divide and conquer</li>
+</ul>
+<p><strong>A16.</strong> The total work of the Viterbi algorithm for an L-bit message is  <code>[CO5 | L3 | 1 mark | medium | Ch.10, pp.614-618]</code></p>
+<ul>
+<li>(A) O(L * 2^M)</li>
+<li>(B) O(2^L)</li>
+<li>(C) O(L^2)</li>
+<li>(D) O(L)</li>
+</ul>
+<p><strong>A17.</strong> A survivor path discarded by the Viterbi algorithm is discarded because  <code>[CO5 | L4 | 1 mark | hard | Ch.10, pp.614-618]</code></p>
+<ul>
+<li>(A) any continuation of it is beaten by the same continuation of the winner</li>
+<li>(B) it has too many ones</li>
+<li>(C) it left the all-zero state</li>
+<li>(D) it is longer than the truncation depth</li>
+</ul>
+<p><strong>A18.</strong> A practical traceback truncation depth is about  <code>[CO5 | L4 | 1 mark | hard | Ch.10, pp.618-623]</code></p>
+<ul>
+<li>(A) 5 times the constraint length</li>
+<li>(B) equal to the constraint length</li>
+<li>(C) the full message length</li>
+<li>(D) one time step</li>
+</ul>
+<p><strong>A19.</strong> Soft decision decoding typically gains about how much over hard decision?  <code>[CO5 | L3 | 1 mark | medium | Ch.10, pp.618-623]</code></p>
+<ul>
+<li>(A) 2 dB</li>
+<li>(B) 6 dB</li>
+<li>(C) 0.5 dB</li>
+<li>(D) 10 dB</li>
+</ul>
+<p><strong>A20.</strong> Puncturing a convolutional code  <code>[CO5 | L4 | 1 mark | hard | Ch.10, pp.618-623]</code></p>
+<ul>
+<li>(A) raises the rate by deleting coded bits to a fixed pattern</li>
+<li>(B) lowers the rate by adding parity</li>
+<li>(C) changes the constraint length</li>
+<li>(D) requires a different decoder architecture</li>
+</ul>
+<hr/>
+<h2>Part B — Descriptive (13 questions, 30 marks)</h2>
+<p><strong>B1.</strong> Draw and explain the rate 1/2, K = 3 convolutional encoder with generators (7,5), and encode the message 1011 with tail bits.  <code>[CO5 | L4 | 3 marks | Ch.10, pp.605-608]</code></p>
+<p><strong>B2.</strong> Explain why the trellis replaced the code tree, and quantify the saving.  <code>[CO5 | L4 | 3 marks | Ch.10, pp.608-613]</code></p>
+<p><strong>B3.</strong> Define free distance, explain how it is obtained from the transfer function, and compute the coding gain for the (7,5) code.  <code>[CO4 | L5 | 3 marks | Ch.10, pp.608-613]</code></p>
+<p><strong>B4.</strong> Describe the Viterbi algorithm and explain why discarding paths loses no optimality.  <code>[CO5 | L5 | 3 marks | Ch.10, pp.614-618]</code></p>
+<p><strong>B5.</strong> The (7,5) code transmits 11 10 00 01 01 11 but 11 10 01 01 01 11 is received. Decode it and state the metric of the winning path.  <code>[CO5 | L4 | 2 marks | Ch.10, pp.618-623]</code></p>
+<p><strong>B6.</strong> Explain what truncation depth is and what happens if it is set too small.  <code>[CO5 | L5 | 2 marks | Ch.10, pp.618-623]</code></p>
+<p><strong>B7.</strong> Compare hard and soft decision decoding, stating the gain and the cost.  <code>[CO5 | L4 | 2 marks | Ch.10, pp.618-623]</code></p>
+<p><strong>B8.</strong> What is a recursive systematic convolutional code, and why is it used in turbo codes?  <code>[CO4 | L5 | 2 marks | Ch.10, pp.610-613]</code></p>
+<p><strong>B9.</strong> Explain puncturing and compute the puncture pattern needed to reach rate 3/4 from a rate 1/2 code.  <code>[CO5 | L5 | 2 marks | Ch.10, pp.618-623]</code></p>
+<p><strong>B10.</strong> Explain why tail bits reduce the effective rate and compute the loss for a 20-bit message with K = 7.  <code>[CO5 | L4 | 2 marks | Ch.10, pp.605-608]</code></p>
+<p><strong>B11.</strong> Compare block codes and convolutional codes, and explain why the classic satellite system uses both.  <code>[CO4 | L5 | 2 marks | Ch.10, pp.605-623]</code></p>
+<p><strong>B12.</strong> Show that the impulse response of the branch with generator 111 is 1,1,1 and explain the term convolutional.  <code>[CO5 | L4 | 2 marks | Ch.10, pp.605-608]</code></p>
+<p><strong>B13.</strong> A designer proposes K = 12 to get more coding gain. Explain why this is a poor choice.  <code>[CO4 | L5 | 2 marks | Ch.10, pp.605-623]</code></p>
+<hr/>
+<h2>Answer key — Part A</h2>
+<table><thead><tr><th>Q</th><th>Answer</th><th>CO</th><th>Bloom</th><th>Reference</th></tr></thead><tbody>
+<tr><td>A1</td><td>A</td><td>CO4</td><td>L1</td><td>Ch.10, pp.605-608</td></tr>
+<tr><td>A2</td><td>A</td><td>CO4</td><td>L2</td><td>Ch.10, pp.605-608</td></tr>
+<tr><td>A3</td><td>A</td><td>CO4</td><td>L2</td><td>Ch.10, pp.605-608</td></tr>
+<tr><td>A4</td><td>A</td><td>CO5</td><td>L3</td><td>Ch.10, pp.605-608</td></tr>
+<tr><td>A5</td><td>A</td><td>CO5</td><td>L3</td><td>Ch.10, pp.605-608</td></tr>
+<tr><td>A6</td><td>A</td><td>CO4</td><td>L3</td><td>Ch.10, pp.608-613</td></tr>
+<tr><td>A7</td><td>A</td><td>CO5</td><td>L3</td><td>Ch.10, pp.608-613</td></tr>
+<tr><td>A8</td><td>A</td><td>CO5</td><td>L2</td><td>Ch.10, pp.608-613</td></tr>
+<tr><td>A9</td><td>A</td><td>CO5</td><td>L4</td><td>Ch.10, pp.608-613</td></tr>
+<tr><td>A10</td><td>A</td><td>CO4</td><td>L3</td><td>Ch.10, pp.610-613</td></tr>
+<tr><td>A11</td><td>A</td><td>CO4</td><td>L4</td><td>Ch.10, pp.610-613</td></tr>
+<tr><td>A12</td><td>A</td><td>CO4</td><td>L4</td><td>Ch.10, pp.610-613</td></tr>
+<tr><td>A13</td><td>A</td><td>CO4</td><td>L3</td><td>Ch.10, pp.613-614</td></tr>
+<tr><td>A14</td><td>A</td><td>CO4</td><td>L4</td><td>Ch.10, pp.613-618</td></tr>
+<tr><td>A15</td><td>A</td><td>CO5</td><td>L2</td><td>Ch.10, pp.614-618</td></tr>
+<tr><td>A16</td><td>A</td><td>CO5</td><td>L3</td><td>Ch.10, pp.614-618</td></tr>
+<tr><td>A17</td><td>A</td><td>CO5</td><td>L4</td><td>Ch.10, pp.614-618</td></tr>
+<tr><td>A18</td><td>A</td><td>CO5</td><td>L4</td><td>Ch.10, pp.618-623</td></tr>
+<tr><td>A19</td><td>A</td><td>CO5</td><td>L3</td><td>Ch.10, pp.618-623</td></tr>
+<tr><td>A20</td><td>A</td><td>CO5</td><td>L4</td><td>Ch.10, pp.618-623</td></tr>
+</tbody></table>
+<h2>Part A — why each option is right or wrong</h2>
+<p><strong>A1.</strong> Correct answer: (A) M + 1</p>
+<ul>
+<li>(A) Correct - it counts the input bits influencing any one output bit.</li>
+<li>(B) Wrong - M is the memory order; the current input must be counted as well.</li>
+<li>(C) Wrong - that is the number of trellis states.</li>
+<li>(D) Wrong - this is smaller than the memory, which cannot be right.</li>
+</ul>
+<p><strong>A2.</strong> Correct answer: (A) 8</p>
+<ul>
+<li>(A) Correct - 2^M = 2^3 = 8.</li>
+<li>(B) Wrong - that is the memory order, not the state count.</li>
+<li>(C) Wrong - that would be M = 2.</li>
+<li>(D) Wrong - that would be M = 4.</li>
+</ul>
+<p><strong>A3.</strong> Correct answer: (A) 111 and 101</p>
+<ul>
+<li>(A) Correct - 7 is 111 and 5 is 101 in three-bit binary.</li>
+<li>(B) Wrong - 110 is 6 and 100 is 4.</li>
+<li>(C) Wrong - 011 is 3, not 5.</li>
+<li>(D) Wrong - the order is reversed; the first generator is 7.</li>
+</ul>
+<p><strong>A4.</strong> Correct answer: (A) the impulse responses of its output branches</p>
+<ul>
+<li>(A) Correct - which is why the encoding operation is a convolution.</li>
+<li>(B) Wrong - parity check polynomials belong to cyclic block codes.</li>
+<li>(C) Wrong - the encoder is deterministic, with no probabilities involved.</li>
+<li>(D) Wrong - tail bits flush the register and are not generators.</li>
+</ul>
+<p><strong>A5.</strong> Correct answer: (A) To return the encoder to the all-zero state so the decoder has a known endpoint</p>
+<ul>
+<li>(A) Correct - and they cost rate, which matters for short messages.</li>
+<li>(B) Wrong - they lower the effective rate rather than raising it.</li>
+<li>(C) Wrong - frame marking is a separate function performed elsewhere.</li>
+<li>(D) Wrong - randomisation is the job of a scrambler.</li>
+</ul>
+<p><strong>A6.</strong> Correct answer: (A) 2^L</p>
+<ul>
+<li>(A) Correct - which is precisely why the tree is useless for real decoding.</li>
+<li>(B) Wrong - that is the number of distinct states, not paths.</li>
+<li>(C) Wrong - that is the Viterbi work count, which is the point of merging.</li>
+<li>(D) Wrong - the growth is exponential, not polynomial.</li>
+</ul>
+<p><strong>A7.</strong> Correct answer: (A) nodes with the same state at the same time are merged</p>
+<ul>
+<li>(A) Correct - merging keeps the width constant at 2^M.</li>
+<li>(B) Wrong - the trellis shows every possible path, just compactly.</li>
+<li>(C) Wrong - branch output labels are retained and essential.</li>
+<li>(D) Wrong - the trellis does not grow at all in width.</li>
+</ul>
+<p><strong>A8.</strong> Correct answer: (A) 2^M, constant in sequence length</p>
+<ul>
+<li>(A) Correct - and that constancy is what makes Viterbi decoding linear in L.</li>
+<li>(B) Wrong - that is the tree path count.</li>
+<li>(C) Wrong - the width is fixed after the first M steps.</li>
+<li>(D) Wrong - the rate is a ratio, not a node count.</li>
+</ul>
+<p><strong>A9.</strong> Correct answer: (A) removed, because it represents staying in the zero state</p>
+<ul>
+<li>(A) Correct - and the zero state is split into a source and a sink.</li>
+<li>(B) Wrong - keeping it makes the series diverge without adding information.</li>
+<li>(C) Wrong - labelling it does not solve the divergence problem.</li>
+<li>(D) Wrong - no such substitution is part of the method.</li>
+</ul>
+<p><strong>A10.</strong> Correct answer: (A) the minimum weight of a path diverging from and remerging with the all-zero path</p>
+<ul>
+<li>(A) Correct - it is defined relative to the all-zero path, which linearity permits.</li>
+<li>(B) Wrong - there are no fixed-length codewords in a convolutional code.</li>
+<li>(C) Wrong - K influences d_free but is a different quantity.</li>
+<li>(D) Wrong - the state count is 2^M and unrelated to weight.</li>
+</ul>
+<p><strong>A11.</strong> Correct answer: (A) 4 dB</p>
+<ul>
+<li>(A) Correct - 10 log10(0.5 x 5) = 10 log10(2.5) = 3.98 dB.</li>
+<li>(B) Wrong - that is roughly the soft-decision figure, about 3 dB higher.</li>
+<li>(C) Wrong - this is the linear product R x d_free, not its value in dB.</li>
+<li>(D) Wrong - that would need a far larger free distance.</li>
+</ul>
+<p><strong>A12.</strong> Correct answer: (A) the same free distance but an infinite impulse response</p>
+<ul>
+<li>(A) Correct - and the infinite response is exactly what turbo codes exploit.</li>
+<li>(B) Wrong - the free distance is identical, which is why RSC alone is no better.</li>
+<li>(C) Wrong - the state count is unchanged.</li>
+<li>(D) Wrong - the rate is unchanged.</li>
+</ul>
+<p><strong>A13.</strong> Correct answer: (A) maximum likelihood sequence estimation over all trellis paths</p>
+<ul>
+<li>(A) Correct - and the Viterbi algorithm achieves it exactly, not approximately.</li>
+<li>(B) Wrong - the memory couples the bits, so independent decisions are suboptimal.</li>
+<li>(C) Wrong - syndromes belong to block codes.</li>
+<li>(D) Wrong - majority voting is a repetition-code idea.</li>
+</ul>
+<p><strong>A14.</strong> Correct answer: (A) exactly maximum likelihood, not an approximation</p>
+<ul>
+<li>(A) Correct - discarded paths provably cannot win, so nothing optimal is lost.</li>
+<li>(B) Wrong - it returns precisely the maximum likelihood sequence.</li>
+<li>(C) Wrong - it is optimal for soft decisions too; only the metric changes.</li>
+<li>(D) Wrong - it applies to any rate and any constraint length.</li>
+</ul>
+<p><strong>A15.</strong> Correct answer: (A) add, compare, select</p>
+<ul>
+<li>(A) Correct - add the branch metric, compare the candidates, select the survivor.</li>
+<li>(B) Wrong - metrics are added, not multiplied, because logarithms are used.</li>
+<li>(C) Wrong - there is no sorting; each state has only two candidates.</li>
+<li>(D) Wrong - the recursion is sequential in time, not a divide-and-conquer split.</li>
+</ul>
+<p><strong>A16.</strong> Correct answer: (A) O(L * 2^M)</p>
+<ul>
+<li>(A) Correct - constant work per time step, repeated L times.</li>
+<li>(B) Wrong - that is the exhaustive search the algorithm avoids.</li>
+<li>(C) Wrong - the work is linear in L, not quadratic.</li>
+<li>(D) Wrong - this omits the per-step state factor 2^M.</li>
+</ul>
+<p><strong>A17.</strong> Correct answer: (A) any continuation of it is beaten by the same continuation of the winner</p>
+<ul>
+<li>(A) Correct - which is why discarding costs no optimality at all.</li>
+<li>(B) Wrong - path weight alone is not the criterion; the metric relative to the received sequence is.</li>
+<li>(C) Wrong - leaving the zero state is entirely normal.</li>
+<li>(D) Wrong - truncation depth governs traceback, not the discard decision.</li>
+</ul>
+<p><strong>A18.</strong> Correct answer: (A) 5 times the constraint length</p>
+<ul>
+<li>(A) Correct - by then the survivor paths have almost certainly merged.</li>
+<li>(B) Wrong - at that depth the paths have often not merged and errors are introduced.</li>
+<li>(C) Wrong - that is impossible for a continuous stream and wastes memory.</li>
+<li>(D) Wrong - one step gives no merging whatsoever.</li>
+</ul>
+<p><strong>A19.</strong> Correct answer: (A) 2 dB</p>
+<ul>
+<li>(A) Correct - and three bits of quantisation captures nearly all of it.</li>
+<li>(B) Wrong - that is closer to the total coding gain of a good code, not the soft-hard gap.</li>
+<li>(C) Wrong - the gap is substantially larger than half a decibel.</li>
+<li>(D) Wrong - no quantisation choice yields that much.</li>
+</ul>
+<p><strong>A20.</strong> Correct answer: (A) raises the rate by deleting coded bits to a fixed pattern</p>
+<ul>
+<li>(A) Correct - and the decoder inserts a neutral metric where bits were deleted.</li>
+<li>(B) Wrong - deleting bits raises the rate rather than lowering it.</li>
+<li>(C) Wrong - the encoder and its memory are untouched.</li>
+<li>(D) Wrong - the same Viterbi decoder is used with neutral metrics at punctured positions.</li>
+</ul>
+<hr/>
+<h2>Part B — model answers and marking scheme</h2>
+<h3>B1 (3 marks) — CO5, L4, Ch.10, pp.605-608</h3>
+<p><strong>Question.</strong> Draw and explain the rate 1/2, K = 3 convolutional encoder with generators (7,5), and encode the message 1011 with tail bits.</p>
+<p><strong>Model answer.</strong> The encoder has two memory stages. The first adder taps the input and both stages, corresponding to 111 or octal 7; the second taps the input and the second stage, corresponding to 101 or octal 5. Starting from state 00 and feeding 1,0,1,1 then two zero tail bits: input 1 from 00 gives outputs 11 and moves to 10; input 0 from 10 gives 10 and moves to 01; input 1 from 01 gives 00 and moves to 10; input 1 from 10 gives 01 and moves to 11; tail 0 from 11 gives 01 and moves to 01; tail 0 from 01 gives 11 and returns to 00. The transmitted sequence is 11 10 00 01 01 11, twelve bits for four information bits.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct encoder structure with both tap patterns</td><td>1</td></tr>
+<tr><td>Correct state sequence</td><td>1</td></tr>
+<tr><td>Correct output sequence including tail</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B2 (3 marks) — CO5, L4, Ch.10, pp.608-613</h3>
+<p><strong>Question.</strong> Explain why the trellis replaced the code tree, and quantify the saving.</p>
+<p><strong>Model answer.</strong> The code tree doubles in width at every time step, giving 2^L paths after L steps, which is intractable beyond about ten steps. But beyond depth M the tree is redundant: nodes at the same depth holding the same register contents have identical futures, because the encoder output depends only on the input and the state. Merging those nodes gives the trellis, which has exactly 2^M nodes at every step regardless of L. For a K = 3 code and a 100-bit message, the tree has 2^100 or about 1.3 x 10^30 paths, while the trellis has 4 states at each of 102 steps, roughly 400 node updates. The information content is identical; only the redundancy is removed.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct explanation of why same-state nodes have identical futures</td><td>2</td></tr>
+<tr><td>Correct quantified comparison with concrete numbers</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B3 (3 marks) — CO4, L5, Ch.10, pp.608-613</h3>
+<p><strong>Question.</strong> Define free distance, explain how it is obtained from the transfer function, and compute the coding gain for the (7,5) code.</p>
+<p><strong>Model answer.</strong> Free distance is the minimum Hamming weight of any path that diverges from the all-zero path and later remerges with it; by linearity this is equivalent to the minimum distance between any two distinct paths. To obtain it, label each edge of the state diagram with D raised to the weight of its output, split the all-zero state into a source and a sink, remove its self-loop, and solve the flow graph. For the (7,5) code this gives T(D) = D^5/(1 - 2D) = D^5 + 2D^6 + 4D^7 + ..., so the lowest exponent is 5 and d_free = 5. The asymptotic hard-decision coding gain is 10 log10(R d_free) = 10 log10(0.5 x 5) = 3.98 dB, rising to roughly 7 dB with soft decisions.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct definition of free distance</td><td>1</td></tr>
+<tr><td>Correct transfer function method and result</td><td>1</td></tr>
+<tr><td>Correct coding gain calculation for both hard and soft</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B4 (3 marks) — CO5, L5, Ch.10, pp.614-618</h3>
+<p><strong>Question.</strong> Describe the Viterbi algorithm and explain why discarding paths loses no optimality.</p>
+<p><strong>Model answer.</strong> The algorithm walks the trellis one time step at a time, holding for each of the 2^M states the best path reaching it and that path accumulated metric. At each step and state it adds each incoming branch metric to its predecessor path metric, compares the resulting candidates, and selects the smaller as the new metric, recording which branch survived. Discarding the loser is safe because any future continuation from that state is available equally to both candidates: if the loser were extended to an optimal sequence, replacing its prefix with the winner would give a strictly better sequence ending at the same state, a contradiction. The algorithm therefore returns exactly the maximum likelihood sequence in O(L 2^M) work rather than O(2^L).</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct description of add-compare-select and survivor storage</td><td>2</td></tr>
+<tr><td>Correct exchange argument for why discarding is safe</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B5 (2 marks) — CO5, L4, Ch.10, pp.618-623</h3>
+<p><strong>Question.</strong> The (7,5) code transmits 11 10 00 01 01 11 but 11 10 01 01 01 11 is received. Decode it and state the metric of the winning path.</p>
+<p><strong>Model answer.</strong> Compare the received sequence against the correct path branch by branch. The first two pairs, 11 and 10, match exactly, contributing 0 to the metric. The third received pair is 01 while the correct branch label is 00, a Hamming distance of 1. The remaining three pairs, 01, 01 and 11, all match, contributing 0. The correct path therefore accumulates a metric of 1. Every competing path through the trellis picks up a metric of 3 or more, because any divergence from the correct path must have weight at least d_free = 5 relative to it and can gain at most the one erroneous bit. Tracing back from the terminal all-zero state recovers the message 1011.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct branch-by-branch metric computation giving 1</td><td>1</td></tr>
+<tr><td>Correct decoded message with the competitor comparison</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B6 (2 marks) — CO5, L5, Ch.10, pp.618-623</h3>
+<p><strong>Question.</strong> Explain what truncation depth is and what happens if it is set too small.</p>
+<p><strong>Model answer.</strong> Storing survivor decisions for an entire continuous stream is impossible, so a practical decoder traces back a fixed number of steps T, outputs the information bit at the oldest position, and slides the window forward one step. This works because survivor paths from different states converge as they are traced back, so beyond a certain depth all survivors agree on the old bits. A truncation depth of about five times the constraint length makes non-merged tracebacks negligibly rare. If T is set too small, typically equal to K, the paths have often not merged, so the bit output depends on which survivor the traceback started from, and the decoder introduces errors that it would otherwise have corrected.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct explanation of windowed traceback and path merging</td><td>1</td></tr>
+<tr><td>Correct consequence of too small a depth with the 5K rule stated</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B7 (2 marks) — CO5, L4, Ch.10, pp.618-623</h3>
+<p><strong>Question.</strong> Compare hard and soft decision decoding, stating the gain and the cost.</p>
+<p><strong>Model answer.</strong> Hard decision decoding slices the demodulator output to one bit and computes branch metrics as Hamming distances, so a marginal decision and a confident one carry equal weight. Soft decision decoding keeps a multi-bit demodulator output and computes Euclidean distances or correlations, so the decoder knows how reliable each received bit was and can let confident bits outvote doubtful ones. The gain on an AWGN channel is about 2 dB. The cost is small: a three-bit bus from the demodulator instead of one bit, and wider adders in the metric computation, since three bits of quantisation captures nearly all the available gain and eight bits adds under 0.1 dB more. The trellis, the survivors and the add-compare-select recursion are completely unchanged.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct description of both metric types and the 2 dB figure</td><td>1</td></tr>
+<tr><td>Correct statement of the quantisation cost and that the algorithm is unchanged</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B8 (2 marks) — CO4, L5, Ch.10, pp.610-613</h3>
+<p><strong>Question.</strong> What is a recursive systematic convolutional code, and why is it used in turbo codes?</p>
+<p><strong>Model answer.</strong> An RSC encoder passes the information bit through unchanged as one output and feeds one generator output back into the register input, making the code systematic and giving it an infinite impulse response. Any non-recursive code has an RSC equivalent with identical free distance and identical trellis, so as a standalone code it performs the same. Its value appears in concatenation: because a single input 1 produces a parity sequence of infinite weight, a low-weight input sequence cannot easily produce a low-weight codeword. Two RSC encoders separated by an interleaver therefore rarely produce a low-weight output for the same input, which is what gives turbo codes their steep waterfall near capacity.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct structure and the identical free distance point</td><td>1</td></tr>
+<tr><td>Correct explanation of why the infinite impulse response matters in concatenation</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B9 (2 marks) — CO5, L5, Ch.10, pp.618-623</h3>
+<p><strong>Question.</strong> Explain puncturing and compute the puncture pattern needed to reach rate 3/4 from a rate 1/2 code.</p>
+<p><strong>Model answer.</strong> Puncturing deletes selected coded bits according to a fixed periodic pattern before transmission, raising the rate without changing the encoder or decoder structure; the decoder simply inserts a neutral zero metric contribution at each deleted position. To reach rate 3/4 from a rate 1/2 base, take 3 information bits, which the base encoder turns into 6 coded bits, and transmit only 4 of them, deleting 2 per period of 6. The resulting rate is 3/4. The pattern must be chosen from published tables, because the choice of which bits to delete determines the free distance of the punctured code; an arbitrary pattern can cost several decibels for the same rate.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct mechanism including the neutral decoder metric</td><td>1</td></tr>
+<tr><td>Correct arithmetic for the 3/4 pattern and the note on pattern choice</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B10 (2 marks) — CO5, L4, Ch.10, pp.605-608</h3>
+<p><strong>Question.</strong> Explain why tail bits reduce the effective rate and compute the loss for a 20-bit message with K = 7.</p>
+<p><strong>Model answer.</strong> The encoder must be returned to a known state so the decoder has a fixed endpoint for its traceback, which requires feeding M zero bits after the message. Those bits carry no information but are encoded and transmitted like any other, so the transmitted length grows from nL to n(L + M). For K = 7, M = 6, and a 20-bit message at rate 1/2, the transmitted length is 2 x 26 = 52 bits rather than 40. The effective rate is 20/52 = 0.385 rather than 0.5, a loss of 23%. For a 1000-bit message the same 6 tail bits cost only 0.6%, which is why short-frame systems use tail-biting termination instead.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct explanation of why tail bits are needed and their cost mechanism</td><td>1</td></tr>
+<tr><td>Correct numerical effective rate and the comparison with a long message</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B11 (2 marks) — CO4, L5, Ch.10, pp.605-623</h3>
+<p><strong>Question.</strong> Compare block codes and convolutional codes, and explain why the classic satellite system uses both.</p>
+<p><strong>Model answer.</strong> Block codes need frame alignment and bound the effect of a burst within one block, and Reed-Solomon codes in particular correct symbol errors directly, which suits bursty channels. Convolutional codes need no alignment, suit continuous streams, and exploit soft demodulator outputs naturally for about 2 dB, but when the Viterbi decoder does fail it produces a multi-bit error event spanning several trellis steps rather than a single bad bit. That failure mode is precisely what a Reed-Solomon outer code handles well, since a burst of adjacent bit errors usually falls within a small number of RS symbols. The classic concatenated system therefore places a convolutional inner code next to the channel, an interleaver to spread residual bursts, and an RS outer code to clean up what remains, for a total gain of around 7 to 8 dB.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct comparison across alignment, bursts and soft decisions</td><td>1</td></tr>
+<tr><td>Correct explanation of why the two failure modes complement each other</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B12 (2 marks) — CO5, L4, Ch.10, pp.605-608</h3>
+<p><strong>Question.</strong> Show that the impulse response of the branch with generator 111 is 1,1,1 and explain the term convolutional.</p>
+<p><strong>Model answer.</strong> Feed the sequence 1,0,0,0,... into the encoder starting from the all-zero state. At time 0 the input is 1 and both stages are 0, so the adder tapping input and both stages outputs 1. At time 1 the input is 0, the first stage holds 1 and the second 0, so the output is 1. At time 2 the input is 0, the first stage 0 and the second 1, so the output is again 1. At time 3 the register is clear and the output is 0 thereafter. The impulse response is therefore 1,1,1, exactly the generator. Because the output of a linear time-invariant system is the convolution of the input with the impulse response, the encoder output is the convolution of the message with the generator sequences, which is where the name comes from.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct step-by-step impulse response derivation</td><td>1</td></tr>
+<tr><td>Correct explanation linking the impulse response to the convolution and the name</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B13 (2 marks) — CO4, L5, Ch.10, pp.605-623</h3>
+<p><strong>Question.</strong> A designer proposes K = 12 to get more coding gain. Explain why this is a poor choice.</p>
+<p><strong>Model answer.</strong> Free distance and therefore coding gain grow only slowly with constraint length, roughly logarithmically in practice, while the Viterbi decoder state count grows as 2^(K-1). Going from K = 7 to K = 12 multiplies the states from 64 to 2048, a thirty-two-fold increase in add-compare-select operations, survivor memory and power, in exchange for perhaps 1 to 1.5 dB of additional gain. Truncation depth also grows as 5K, increasing latency. If more gain is genuinely needed, concatenation with an outer Reed-Solomon code, or a modern turbo or LDPC code, delivers far more per unit of complexity. K = 7 sits near the knee of the cost-benefit curve, which is why it became the industry standard.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct statement of the asymmetric growth of gain against complexity</td><td>1</td></tr>
+<tr><td>Correct alternative recommendation with justification</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+</body></html>

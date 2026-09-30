@@ -1,0 +1,1232 @@
+/* Electric Circuit Analysis (VTU 1BEE303) — engineering graph paper over slate ink.
+   --aim-data = voltages, currents and the traces they draw,
+   --aim-active = the element or loop currently under the pencil,
+   --aim-path = the transform domain, --aim-danger = the mistake. */
+
+.electric-circuit-analysis-deck,
+.aim-deck {
+  --aim-ink: #152430;
+  --aim-muted: #55677a;
+  --aim-cream: #fffdf8;
+  --aim-paper: #f5f3ec;
+  --aim-navy: #152430;
+  --aim-data: #1d4ed8;
+  --aim-active: #c2410c;
+  --aim-pointer: #7c3aed;
+  --aim-ok: #15803d;
+  --aim-danger: #b91c1c;
+  --aim-path: #0f766e;
+  --aim-sky: #e6eefb;
+  --aim-line: rgba(21, 36, 48, 0.12);
+  --aim-shadow: 0 16px 40px rgba(21, 36, 48, 0.1);
+  --aim-module: #1d4ed8;
+  --accent: #1d4ed8;
+  --accent-soft: #334155;
+  --card-accent: #1d4ed8;
+  color: var(--aim-ink);
+}
+
+/* One hue per module: formulate · shortcut · respond · transform · encapsulate */
+.electric-circuit-analysis-deck[data-aim-module="1"] { --aim-module: #1d4ed8; --accent: #1d4ed8; }
+.electric-circuit-analysis-deck[data-aim-module="2"] { --aim-module: #c2410c; --accent: #c2410c; }
+.electric-circuit-analysis-deck[data-aim-module="3"] { --aim-module: #0f766e; --accent: #0f766e; }
+.electric-circuit-analysis-deck[data-aim-module="4"] { --aim-module: #7c3aed; --accent: #7c3aed; }
+.electric-circuit-analysis-deck[data-aim-module="5"] { --aim-module: #15803d; --accent: #15803d; }
+
+.module-cover.electric-circuit-analysis { --card-accent: #1d4ed8; }
+
+.electric-circuit-analysis-deck .slide-frame {
+  background:
+    radial-gradient(920px 460px at 6% -18%, rgba(29, 78, 216, 0.1), transparent 58%),
+    radial-gradient(720px 380px at 96% 0%, rgba(194, 65, 12, 0.06), transparent 54%),
+    radial-gradient(540px 280px at 70% 110%, rgba(15, 118, 110, 0.08), transparent 50%),
+    linear-gradient(165deg, #fffdf9 0%, #fcfaf3 52%, #f6f4ed 100%);
+}
+
+/* Squared engineering paper — this subject is worked out with a pencil and a
+   ruler, and every diagram in it is drawn on a grid. */
+.electric-circuit-analysis-deck .slide-frame::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(29, 78, 216, 0.09) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, rgba(29, 78, 216, 0.09) 0 1px, transparent 1px 24px);
+  background-size: 24px 24px, 24px 24px;
+  mix-blend-mode: multiply;
+}
+
+.electric-circuit-analysis-deck[data-aim-module="2"] .slide-frame::after { opacity: 0.2; }
+.electric-circuit-analysis-deck[data-aim-module="3"] .slide-frame::after { opacity: 0.2; }
+.electric-circuit-analysis-deck[data-aim-module="4"] .slide-frame::after { opacity: 0.18; }
+.electric-circuit-analysis-deck[data-aim-module="5"] .slide-frame::after { opacity: 0.18; }
+
+.electric-circuit-analysis-deck .slide-header-copy .slide-kicker {
+  color: var(--aim-module);
+}
+
+.electric-circuit-analysis-deck .slide-header-copy .slide-title {
+  font-size: clamp(34px, 2.7vw, 48px);
+  line-height: 1.14;
+  padding-bottom: 4px;
+  overflow: visible;
+  color: var(--aim-navy);
+}
+
+/* ── Stage shell ── */
+.aim-stage {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px 16px;
+  box-sizing: border-box;
+}
+
+.aim-story {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.aim-story span {
+  font-size: clamp(10px, 0.85vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--aim-muted);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+.aim-story span.lit { opacity: 0.8; color: var(--aim-navy); }
+.aim-story span.now {
+  opacity: 1;
+  color: var(--aim-module);
+  transform: translateX(2px);
+}
+
+.aim-copy {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.aim-visual,
+.aim-visual-b {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+.aim-footer-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  min-width: 0;
+}
+.aim-takeaway,
+.aim-exam {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.35;
+}
+.aim-takeaway strong { color: var(--aim-ok); }
+.aim-exam strong {
+  color: var(--aim-active);
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+}
+
+/* ── Compositions ── */
+.aim-split-right {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(240px, 0.78fr) minmax(380px, 1.22fr);
+  grid-template-rows: 1fr auto;
+}
+/* Explicit placement so copy/visual don't collapse into the story column when
+   a slide renders without a <story> rail (e.g. the example beats). */
+.aim-split-right .aim-story { grid-row: 1 / 3; grid-column: 1; }
+.aim-split-right .aim-copy { grid-column: 2; }
+.aim-split-right .aim-visual { grid-column: 3; }
+.aim-split-right .aim-footer-band { grid-column: 2 / 4; }
+
+/* Algorithm beat: visual is the hero (left), algorithm/dry-run rail (right).
+   Explicit row/col placement + align-items:stretch gives BOTH cells the full
+   row height — without it the aspect-locked SVG collapsed the visual to its
+   intrinsic height and the copy cell shrank, clipping the dry-run panel. */
+.aim-split-left {
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.85fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+}
+.aim-split-left .aim-story { display: none; }
+.aim-split-left .aim-visual { grid-column: 1; grid-row: 1; min-height: 0; align-self: stretch; }
+.aim-split-left .aim-copy { grid-column: 2; grid-row: 1; min-height: 0; align-self: stretch; }
+.aim-split-left .aim-footer-band { grid-column: 1 / 3; grid-row: 2; }
+
+.aim-full-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.aim-full-stage .aim-story { display: none; }
+.aim-full-stage .aim-copy { max-width: 78%; }
+.aim-full-stage .aim-visual { min-height: 0; }
+
+/* Full-width, vertically-centred layout for text-grid framing slides
+   (syllabus audit, practice) — they used a half-width "board"
+   column and left the lower half empty. */
+.aim-fill {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.aim-fill .aim-story { display: none; }
+.aim-fill .aim-copy {
+  grid-row: 1;
+  align-content: safe start;
+  gap: 14px;
+  padding-block: 2px 6px;
+  overflow: hidden;
+}
+.aim-fill .aim-footer-band { grid-row: 2; }
+.aim-fill .aim-lead { font-size: clamp(22px, 1.7vw, 28px); }
+/* let the framing grids breathe across the full stage */
+.aim-fill .aim-syllabus-audit { grid-template-columns: repeat(auto-fit, minmax(184px, 1fr)); gap: 9px; }
+.aim-fill .aim-syllabus-audit article {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 11px;
+  min-height: 40px;
+}
+.aim-fill .aim-syllabus-audit strong { font-size: clamp(13px, 0.92vw, 16px); line-height: 1.18; }
+.aim-fill .aim-syllabus-audit em { font-size: 12px; }
+/* Hardened cap: the syllabus checklist must fit above the footer even in
+   the fullest module (22-24 long topic names). High-specificity + !important
+   so it wins over the platform legibility/base font unconditionally. */
+.aim-stage.aim-fill .aim-syllabus-audit strong { font-size: 15px !important; line-height: 1.16 !important; }
+.aim-stage.aim-fill .aim-syllabus-audit em { font-size: 11px !important; }
+.aim-stage.aim-fill .aim-syllabus-audit article { min-height: 38px !important; padding: 6px 10px !important; gap: 2px !important; }
+.aim-fill .aim-practice-list { gap: 18px; font-size: clamp(17px, 1.3vw, 21px); }
+
+.aim-hero-open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.aim-hero-open .aim-story,
+.aim-hero-open .aim-copy { display: none; }
+.aim-hero-open .aim-visual { min-height: 0; }
+.aim-hero-open .aim-footer-band { justify-content: center; }
+
+.aim-showcase {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 6px;
+}
+.aim-showcase .aim-story,
+.aim-showcase .aim-copy { display: none; }
+.aim-showcase .aim-visual { grid-row: 1; min-height: 0; }
+.aim-showcase .aim-footer-band {
+  justify-content: center;
+  border-top: 1px solid var(--aim-line);
+  padding-top: 6px;
+}
+.aim-showcase .aim-takeaway { font-size: clamp(14px, 1.05vw, 17px); }
+
+.aim-board {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.aim-board .aim-story { display: none; }
+.aim-board .aim-footer-band { grid-column: 1 / 3; }
+
+.aim-inspect {
+  grid-template-columns: minmax(220px, 0.42fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.aim-inspect .aim-story { display: none; }
+.aim-inspect .aim-visual { grid-column: 2; grid-row: 1; }
+.aim-inspect .aim-footer-band { grid-column: 1 / 3; }
+
+.aim-pipeline {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.aim-pipeline .aim-story { grid-row: 1 / 4; }
+.aim-pipeline .aim-copy,
+.aim-pipeline .aim-visual,
+.aim-pipeline .aim-footer-band { grid-column: 2; }
+
+.aim-memory-first {
+  grid-template-columns: minmax(200px, 0.32fr) minmax(420px, 1.2fr);
+  grid-template-rows: 1fr auto;
+}
+.aim-memory-first .aim-story { display: none; }
+.aim-memory-first .aim-visual { grid-column: 2; grid-row: 1; }
+.aim-memory-first .aim-footer-band { grid-column: 1 / 3; }
+
+.aim-algo-board {
+  grid-template-columns: minmax(260px, 0.48fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.aim-algo-board .aim-story { display: none; }
+.aim-algo-board .aim-footer-band { grid-column: 1 / 3; }
+
+.aim-code-split {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-rows: 1fr auto;
+}
+.aim-code-split .aim-story { display: none; }
+.aim-code-split .aim-footer-band { grid-column: 1 / 3; }
+
+.electric-circuit-analysis-deck .slide-frame[data-composition="full-stage"] .aim-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="hero-open"] .aim-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="memory-first"] .aim-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="showcase"] .aim-visual {
+  min-height: 0;
+}
+.aim-full-stage .aim-visual { min-height: 62%; }
+.aim-hero-open .aim-visual,
+.aim-memory-first .aim-visual { flex: 1 1 auto; }
+
+/* ── Typography blocks ── */
+.aim-lead {
+  margin: 0;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.38;
+  font-weight: 650;
+  color: var(--aim-navy);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.aim-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.34;
+}
+.aim-points li { padding-left: 2px; }
+.aim-points li::marker { color: var(--aim-module); font-weight: 800; }
+
+.aim-definition {
+  background: #fff;
+  border: 1px solid var(--aim-line);
+  border-left: 5px solid var(--aim-data);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--aim-shadow);
+}
+.aim-definition span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--aim-data);
+}
+.aim-definition strong {
+  display: block;
+  font-size: clamp(20px, 1.6vw, 28px);
+  margin: 4px 0;
+}
+.aim-definition p {
+  margin: 0;
+  font-size: clamp(15px, 1.1vw, 18px);
+}
+
+.aim-callout {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--aim-line);
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+}
+.aim-callout span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+}
+.aim-callout p {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.aim-callout-warn { border-left: 4px solid var(--aim-active); }
+.aim-callout-fault { border-left: 4px solid var(--aim-danger); }
+.aim-callout-ok { border-left: 4px solid var(--aim-ok); }
+.aim-callout-idea { border-left: 4px solid var(--aim-data); }
+.aim-callout-know { border-left: 4px solid var(--aim-pointer); }
+
+/* Scene shell */
+.aim-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.72), rgba(255, 250, 240, 0.28) 62%, transparent 78%);
+  overflow: hidden;
+  position: relative;
+}
+.aim-scene svg,
+.aim-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Code panel — light, readable (≥19px) */
+.aim-code-panel {
+  background: #ffffff;
+  border: 1.5px solid var(--aim-line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--aim-shadow);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.aim-code-line {
+  font-size: clamp(19px, 1.45vw, 22px);
+  line-height: 1.55;
+  color: var(--aim-navy);
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: pre;
+}
+.aim-code-line.is-current {
+  background: rgba(217, 119, 6, 0.14);
+  color: var(--aim-active);
+  box-shadow: inset 3px 0 0 var(--aim-active);
+}
+
+/* Linked list / stack / queue / tree helpers */
+.aim-ll-node { transform-box: fill-box; }
+.aim-stack-cell,
+.aim-queue-cell,
+.aim-tree-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ── Concept-native motion (aimm-*) ──
+   State-change animations — not fade-in as primary teaching motion. */
+
+@keyframes aimm-allocate {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  55% { transform: scale(0.96); }
+  70% { transform: scale(1.03); }
+}
+@keyframes aimm-shift {
+  0%, 12% { transform: translateX(0); }
+  45%, 55% { transform: translateX(28px); }
+  88%, 100% { transform: translateX(0); }
+}
+@keyframes aimm-insert {
+  0%, 15% { transform: translateY(-28px) scale(0.85); opacity: 0.35; }
+  40% { transform: translateY(0) scale(1.06); opacity: 1; }
+  55%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes aimm-delete {
+  0%, 20% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(0.92) translateY(6px); opacity: 0.45; }
+  70%, 100% { transform: scale(0.85); opacity: 0.2; }
+}
+@keyframes aimm-push {
+  0%, 10% { transform: translateY(-40px); opacity: 0.4; }
+  35% { transform: translateY(4px); opacity: 1; }
+  50%, 100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes aimm-pop {
+  0%, 15% { transform: translateY(0); opacity: 1; }
+  45% { transform: translateY(-36px); opacity: 0.35; }
+  70%, 100% { transform: translateY(-8px); opacity: 0.55; }
+}
+@keyframes aimm-enqueue {
+  0%, 12% { transform: translateX(40px); opacity: 0.35; }
+  40% { transform: translateX(-4px); opacity: 1; }
+  55%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes aimm-dequeue {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  45% { transform: translateX(-48px); opacity: 0.3; }
+  70%, 100% { transform: translateX(-12px); opacity: 0.5; }
+}
+@keyframes aimm-wrap {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(18deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(4deg); }
+}
+@keyframes aimm-pointer {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -24; }
+}
+@keyframes aimm-rewire {
+  0%, 20% { stroke-dashoffset: 40; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+@keyframes aimm-traverse {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -36; }
+}
+@keyframes aimm-search {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(20px); }
+  75% { transform: translateX(10px); }
+}
+@keyframes aimm-swap {
+  0%, 100% { transform: translate(0, 0); }
+  35% { transform: translate(14px, -10px); }
+  70% { transform: translate(-14px, 10px); }
+}
+@keyframes aimm-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.62; }
+}
+@keyframes aimm-wave {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.07); }
+  70% { transform: scale(1.02); }
+}
+@keyframes aimm-descend {
+  0%, 10% { transform: translate(0, -24px); opacity: 0.5; }
+  45% { transform: translate(36px, 40px); opacity: 1; }
+  70% { transform: translate(72px, 90px); opacity: 1; }
+  100% { transform: translate(72px, 90px); opacity: 0.85; }
+}
+@keyframes aimm-return {
+  0%, 15% { transform: translate(40px, 60px); opacity: 0.6; }
+  55% { transform: translate(10px, 10px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+.aimm-allocate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-allocate 2.4s ease-in-out infinite;
+}
+.aimm-shift {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-shift 2.8s ease-in-out infinite;
+}
+.aimm-insert {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-insert 2.6s ease-out infinite;
+}
+.aimm-delete {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-delete 2.8s ease-in-out infinite;
+}
+.aimm-push {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-push 2.4s ease-out infinite;
+}
+.aimm-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-pop 2.4s ease-in infinite;
+}
+.aimm-enqueue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-enqueue 2.5s ease-out infinite;
+}
+.aimm-dequeue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-dequeue 2.5s ease-in infinite;
+}
+.aimm-wrap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-wrap 3s ease-in-out infinite;
+}
+.aimm-pointer {
+  stroke-dasharray: 10 8;
+  animation: aimm-pointer 1.4s linear infinite;
+}
+.aimm-rewire {
+  stroke-dasharray: 12 10;
+  animation: aimm-rewire 2.2s ease-in-out infinite;
+}
+.aimm-traverse {
+  stroke-dasharray: 10 8;
+  animation: aimm-traverse 1.6s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.aimm-search {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-search 2.6s ease-in-out infinite;
+}
+.aimm-swap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-swap 2.4s ease-in-out infinite;
+}
+.aimm-pulse {
+  animation: aimm-pulse 1.9s ease-in-out infinite;
+}
+.aimm-wave {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-wave 2.2s ease-in-out infinite;
+}
+.aimm-descend {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-descend 3.2s ease-in-out infinite;
+}
+.aimm-return {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aimm-return 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aimm-allocate, .aimm-shift, .aimm-insert, .aimm-delete,
+  .aimm-push, .aimm-pop, .aimm-enqueue, .aimm-dequeue,
+  .aimm-wrap, .aimm-pointer, .aimm-rewire, .aimm-traverse,
+  .aimm-search, .aimm-swap, .aimm-pulse, .aimm-wave,
+  .aimm-descend, .aimm-return {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Kit components ── */
+.aim-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 750;
+  color: var(--aim-navy);
+}
+.aim-flow i { color: var(--aim-module); font-style: normal; font-weight: 900; }
+
+.aim-algo-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+  font-size: clamp(15px, 1.15vw, 19px);
+  line-height: 1.4;
+}
+.aim-algo-steps li::marker { color: var(--aim-module); font-weight: 800; }
+
+.aim-complexity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--aim-line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.aim-complexity > div {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+.aim-complexity span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--aim-muted);
+}
+/* 1BEE303 cost cells hold a sentence ("one constraint per dependent source"),
+   not a big-O token, so they read at body size rather than display size. */
+.aim-complexity strong {
+  font-size: clamp(13px, 1.02vw, 16px);
+  line-height: 1.28;
+  font-weight: 750;
+  color: var(--aim-data);
+}
+.aim-complexity > p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--aim-muted);
+}
+
+.aim-code-panel span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--aim-module);
+  margin-bottom: 8px;
+  font-family: system-ui, sans-serif;
+}
+.aim-code-panel pre {
+  margin: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.aim-code-panel code {
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.45;
+  color: var(--aim-navy);
+  font-weight: 650;
+}
+
+.aim-dryrun {
+  display: grid;
+  gap: 8px;
+}
+.aim-dryrun section {
+  background: #fff;
+  border: 1px solid var(--aim-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.aim-dryrun span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--aim-module);
+}
+.aim-dryrun p { margin: 4px 0 0; font-size: 15px; }
+.aim-dryrun ol {
+  margin: 4px 0 0;
+  padding-left: 1.15em;
+  font-size: 14px;
+  display: grid;
+  gap: 3px;
+}
+
+.aim-term-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.aim-term-chips span {
+  background: var(--aim-sky);
+  color: var(--aim-data);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.aim-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.aim-roadmap article {
+  background: #fff;
+  border: 1px solid var(--aim-line);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+.aim-roadmap b { color: var(--aim-module); font-size: 12px; }
+.aim-roadmap strong { font-size: 14px; line-height: 1.25; }
+
+.aim-checkpoint-sheet {
+  display: grid;
+  gap: 7px;
+}
+.aim-checkpoint-sheet article {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.72fr) auto 1.85fr;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--aim-line);
+  border-radius: 12px;
+  padding: 7px 12px;
+}
+.aim-checkpoint-sheet code {
+  font-size: clamp(16px, 1.2vw, 21px);
+  font-weight: 800;
+  color: var(--aim-data);
+}
+.aim-checkpoint-sheet span { font-size: 12.5px; line-height: 1.25; color: var(--aim-muted); }
+
+.aim-syllabus-audit {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+.aim-syllabus-audit article {
+  background: #fff;
+  border: 1px solid var(--aim-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.aim-syllabus-audit strong { font-size: 14px; }
+.aim-syllabus-audit em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--aim-ok);
+}
+
+.aim-practice-list {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(15px, 1.15vw, 18px);
+}
+.aim-practice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.aim-practice-list em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--aim-active);
+  white-space: nowrap;
+}
+
+.aim-review-map {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 12px;
+}
+.aim-review-map h3 {
+  margin: 0;
+  font-size: clamp(22px, 2vw, 32px);
+  color: var(--aim-navy);
+}
+.aim-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.aim-review-topics span {
+  background: #fff;
+  border: 1.5px solid var(--aim-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ── Instructional motion (classroom-paced) ── */
+@keyframes aimm-flow-node {
+  0%, 100% { opacity: 0.55; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-4px); }
+}
+@keyframes aimm-flow-arrow {
+  0% { stroke-dashoffset: 24; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.4; }
+}
+@keyframes aimm-feedback {
+  0% { stroke-dashoffset: 40; opacity: 0.45; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -40; opacity: 0.45; }
+}
+@keyframes aimm-waterfall {
+  0% { opacity: 0; transform: translate(-12px, -18px); }
+  30%, 100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes aimm-cost-curve {
+  0% { stroke-dasharray: 0 800; }
+  100% { stroke-dasharray: 800 0; }
+}
+@keyframes aimm-cost-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+@keyframes aimm-grow {
+  0% { opacity: 0; transform: scaleX(0.55); transform-origin: center; }
+  45%, 100% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes aimm-spiral {
+  0% { opacity: 0.15; }
+  40% { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+@keyframes aimm-concurrent {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+@keyframes aimm-up-line {
+  0% { stroke-dasharray: 0 1200; }
+  100% { stroke-dasharray: 1200 0; }
+}
+@keyframes aimm-orbit {
+  0%, 100% { opacity: 0.65; }
+  50% { opacity: 1; }
+}
+@keyframes aimm-token {
+  0% { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateY(-170px) rotate(-360deg); }
+}
+@keyframes aimm-backlog {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(210px); }
+  70% { transform: translateX(420px); }
+  100% { transform: translateX(630px); }
+}
+@keyframes aimm-xp-step {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+@keyframes aimm-bar {
+  0% { transform: scaleX(0.2); transform-origin: left center; opacity: 0.4; }
+  50%, 100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes aimm-gate {
+  0%, 100% { opacity: 0.7; }
+  40% { opacity: 1; }
+}
+@keyframes aimm-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  40%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes aimm-pulse-soft {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.aimm-flow-node { animation: aimm-flow-node 3.2s ease-in-out infinite; }
+.aimm-flow-arrow { stroke-dasharray: 10 8; animation: aimm-flow-arrow 2.8s linear infinite; }
+.aimm-feedback { stroke-dasharray: 10 8; animation: aimm-feedback 3.6s linear infinite; }
+.aimm-waterfall { animation: aimm-waterfall 3.5s ease-out infinite; }
+.aimm-cost-curve { animation: aimm-cost-curve 4s ease-out infinite; }
+.aimm-cost-dot { animation: aimm-cost-dot 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.aimm-grow { animation: aimm-grow 3.8s ease-out infinite; }
+.aimm-spiral { animation: aimm-spiral 3.2s ease-in-out infinite; }
+.aimm-concurrent { animation: aimm-concurrent 2.8s ease-in-out infinite; }
+.aimm-up-line { animation: aimm-up-line 4.5s ease-out infinite; }
+.aimm-orbit { animation: aimm-orbit 2.6s ease-in-out infinite; }
+.aimm-token { animation: aimm-token 12s linear infinite; transform-box: fill-box; transform-origin: 450px 260px; }
+.aimm-backlog-card { animation: aimm-backlog 10s ease-in-out infinite; }
+.aimm-xp-step { animation: aimm-xp-step 3s ease-in-out infinite; }
+.aimm-bar { animation: aimm-bar 3.4s ease-out infinite; }
+.aimm-gate { animation: aimm-gate 2.8s ease-in-out infinite; }
+.aimm-fade-in { animation: aimm-fade-in 2.4s ease-out both; }
+.aimm-pulse { animation: aimm-pulse-soft 2.4s ease-in-out infinite; }
+.aimm-step { animation: aimm-pulse-soft 2.8s ease-in-out infinite; }
+.aimm-actor { animation: aimm-pulse-soft 3s ease-in-out infinite; }
+.aimm-usecase-step { animation: aimm-flow-node 2.8s ease-in-out infinite; }
+.aimm-system-box { animation: aimm-pulse-soft 2.6s ease-in-out infinite; }
+.aimm-risk-cell { animation: aimm-pulse-soft 3.2s ease-in-out infinite; }
+.aimm-risk-dot { animation: aimm-cost-dot 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.aimm-delay-0 { animation-delay: 0s; }
+.aimm-delay-1 { animation-delay: 0.35s; }
+.aimm-delay-2 { animation-delay: 0.7s; }
+.aimm-delay-3 { animation-delay: 1.05s; }
+.aimm-delay-4 { animation-delay: 1.4s; }
+
+/* ── Electric Circuit Analysis instructional motion ──
+   Every animation below shows a circuit mechanism: current marching, a phasor
+   turning, a transient decaying, a pole moving. Decoration is not the job. */
+@keyframes aimm-current {
+  0% { stroke-dashoffset: 36; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes aimm-current-rev {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 36; }
+}
+@keyframes aimm-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes aimm-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes aimm-draw {
+  0% { stroke-dashoffset: 900; }
+  55%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes aimm-sweep-x {
+  0% { transform: translateX(0); opacity: 0.25; }
+  12% { opacity: 1; }
+  100% { transform: translateX(var(--aimm-sweep, 620px)); opacity: 0.9; }
+}
+@keyframes aimm-switch {
+  0%, 35% { transform: rotate(-32deg); }
+  55%, 100% { transform: rotate(0deg); }
+}
+@keyframes aimm-decay-dot {
+  0% { transform: translate(0, 0); opacity: 0.4; }
+  10% { opacity: 1; }
+  100% { transform: translate(var(--aimm-dx, 560px), var(--aimm-dy, 210px)); opacity: 0.9; }
+}
+@keyframes aimm-ring {
+  0%, 100% { transform: translateY(0); }
+  18% { transform: translateY(-46px); }
+  36% { transform: translateY(32px); }
+  54% { transform: translateY(-19px); }
+  72% { transform: translateY(11px); }
+  86% { transform: translateY(-5px); }
+}
+@keyframes aimm-merge-l {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(118px); opacity: 0.35; }
+}
+@keyframes aimm-merge-r {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(-118px); opacity: 0.35; }
+}
+@keyframes aimm-collapse {
+  0%, 25% { transform: scale(1); opacity: 1; }
+  70%, 100% { transform: scale(0.42); opacity: 0.18; }
+}
+@keyframes aimm-emerge {
+  0%, 35% { transform: scale(0.55); opacity: 0; }
+  80%, 100% { transform: scale(1); opacity: 1; }
+}
+@keyframes aimm-slide-in {
+  0% { transform: translateX(-34px); opacity: 0; }
+  45%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes aimm-pole-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(var(--aimm-px, -70px), 0); }
+}
+@keyframes aimm-needle {
+  0%, 100% { transform: rotate(-58deg); }
+  50% { transform: rotate(52deg); }
+}
+@keyframes aimm-wave-shift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-180px); }
+}
+@keyframes aimm-cell-in {
+  0% { opacity: 0; transform: translateY(9px) scale(0.94); }
+  45%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes aimm-charge {
+  /* Floor stays high enough that pulsing LABELS remain readable. */
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+@keyframes aimm-flux {
+  0%, 100% { transform: scale(0.94); opacity: 0.72; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+@keyframes aimm-probe {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(var(--aimm-probe, 96px)); }
+}
+@keyframes aimm-flip {
+  0%, 20% { transform: scaleX(1); }
+  45%, 100% { transform: scaleX(-1); }
+}
+
+.aimm-current { stroke-dasharray: 9 9; animation: aimm-current 1.1s linear infinite; }
+.aimm-current-slow { stroke-dasharray: 9 9; animation: aimm-current 2.2s linear infinite; }
+.aimm-current-rev { stroke-dasharray: 9 9; animation: aimm-current-rev 1.4s linear infinite; }
+.aimm-spin { animation: aimm-spin 4.4s linear infinite; transform-box: fill-box; }
+.aimm-spin-slow { animation: aimm-spin-slow 6s linear infinite; transform-box: fill-box; }
+.aimm-draw { stroke-dasharray: 900; animation: aimm-draw 4s ease-out infinite; }
+.aimm-sweep-x { animation: aimm-sweep-x 3.6s linear infinite; }
+.aimm-switch { animation: aimm-switch 3.4s ease-in-out infinite; transform-box: fill-box; }
+.aimm-decay-dot { animation: aimm-decay-dot 3.8s ease-in infinite; transform-box: fill-box; }
+.aimm-ring { animation: aimm-ring 3.6s ease-in-out infinite; transform-box: fill-box; }
+.aimm-merge-l { animation: aimm-merge-l 3.8s ease-in-out infinite; transform-box: fill-box; }
+.aimm-merge-r { animation: aimm-merge-r 3.8s ease-in-out infinite; transform-box: fill-box; }
+.aimm-collapse { animation: aimm-collapse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+/* Reveals play ONCE and hold. Looping them would leave labelled steps and
+   formulas fading in and out under the reader — legibility beats motion. */
+.aimm-emerge { animation: aimm-emerge 1.2s ease-out both; transform-box: fill-box; transform-origin: center; }
+.aimm-slide-in { animation: aimm-slide-in 0.9s ease-out both; transform-box: fill-box; }
+.aimm-pole-drift { animation: aimm-pole-drift 4.4s ease-in-out infinite; transform-box: fill-box; }
+.aimm-needle { animation: aimm-needle 3.4s ease-in-out infinite; transform-box: fill-box; }
+.aimm-wave-shift { animation: aimm-wave-shift 2.4s linear infinite; }
+.aimm-cell-in { animation: aimm-cell-in 0.9s ease-out both; transform-box: fill-box; }
+.aimm-charge { animation: aimm-charge 2.2s ease-in-out infinite; }
+.aimm-flux { animation: aimm-flux 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.aimm-probe { animation: aimm-probe 3.2s ease-in-out infinite; transform-box: fill-box; }
+.aimm-flip { animation: aimm-flip 4.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.aimm-delay-5 { animation-delay: 1.75s; }
+.aimm-delay-6 { animation-delay: 2.1s; }
+.aimm-delay-7 { animation-delay: 2.45s; }
+
+
+.aim-scene, .aim-showcase-scene { width: 100%; height: 100%; min-height: 0; }
+.aim-svg { width: 100%; height: 100%; display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .electric-circuit-analysis-deck [class*="aimm-"] {
+    animation: none !important;
+  }
+}
+
+/* Dense algorithm slides (real algo steps + dry-run trace) must fit the
+   algo-board left column at 1280×720. Tighten only in that composition. */
+.aim-algo-board .aim-algo-steps { gap: 4px; font-size: clamp(14px, 1.02vw, 17px); line-height: 1.3; }
+.aim-algo-board .aim-dryrun { gap: 5px; }
+.aim-algo-board .aim-dryrun section { padding: 6px 11px; }
+.aim-algo-board .aim-dryrun ol { gap: 2px; font-size: 13.5px; }
+.aim-algo-board .aim-dryrun p { font-size: 14px; }
+.aim-algo-board .aim-lead { font-size: clamp(16px, 1.25vw, 20px); }
+
+/* ── 1BEE303-specific kit pieces (no Computer Graphics counterpart) ── */
+
+/* Textbook provenance carried from Phase 1. Units whose prescribed book was
+   not supplied render a chapter with no page range — that is intentional. */
+.aim-book-cite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--aim-muted);
+}
+.aim-book-cite b {
+  background: var(--aim-sky);
+  color: var(--aim-data);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.aim-book-cite span { font-style: normal; }
+.aim-book-cite em {
+  font-style: normal;
+  background: rgba(21, 128, 61, 0.1);
+  color: var(--aim-ok);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.aim-book-cite i {
+  font-style: normal;
+  border: 1px solid var(--aim-line);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.aim-quiz-card {
+  background: #fff;
+  border: 1px solid var(--aim-line);
+  border-left: 4px solid var(--aim-data);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: var(--aim-shadow);
+}
+.aim-quiz-card + .aim-quiz-card { margin-top: 8px; }
+.aim-quiz-card strong {
+  display: block;
+  font-size: 15.5px;
+  line-height: 1.3;
+  color: var(--aim-navy);
+}
+.aim-quiz-card ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 10px;
+  margin: 8px 0 0;
+  padding: 0 0 0 18px;
+  font-size: 13.5px;
+  font-weight: 650;
+}
+.aim-quiz-card li.is-correct {
+  color: var(--aim-ok);
+  font-weight: 800;
+}
+.aim-quiz-card li.is-correct::marker { color: var(--aim-ok); }
+.aim-quiz-card p {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--aim-muted);
+}
+
+/* Showcase beats hand the whole stage to one mechanism. */
+.aim-showcase-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Eight checkpoint rows must fit one 1280x720 stage above the footer band.
+   Sized against the longest 1BEE303 topic ("Sources of electrical energy:
+   independent and dependent") wrapping to two lines. !important so it beats
+   the platform legibility layer, which loads after this sheet. */
+.aim-stage.aim-fill .aim-checkpoint-sheet { gap: 6px !important; }
+.aim-stage.aim-fill .aim-checkpoint-sheet article {
+  grid-template-columns: minmax(180px, 1fr) auto 1.6fr !important;
+  gap: 10px !important;
+  padding: 6px 11px !important;
+}
+.aim-stage.aim-fill .aim-checkpoint-sheet strong {
+  font-size: 14.5px !important;
+  line-height: 1.2 !important;
+}
+.aim-stage.aim-fill .aim-checkpoint-sheet code { font-size: 13px !important; }
+.aim-stage.aim-fill .aim-checkpoint-sheet span { font-size: 12px !important; line-height: 1.24 !important; }
+
+/* Worked-step panel: body shrinks and the citation sits in a footer so a long
+   step loses type size rather than its last lines to `overflow: hidden`. */
+.aim-code-panel {
+  display: flex;
+  flex-direction: column;
+}
+.aim-code-panel pre {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.aim-code-panel.is-dense code {
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.34;
+}
+.aim-code-panel small {
+  display: block;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--aim-line);
+  font-family: system-ui, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--aim-muted);
+}

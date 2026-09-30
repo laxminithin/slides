@@ -1,0 +1,1232 @@
+/* Electric Circuit Analysis (VTU 1BEE303) — engineering graph paper over slate ink.
+   --eca-data = voltages, currents and the traces they draw,
+   --eca-active = the element or loop currently under the pencil,
+   --eca-path = the transform domain, --eca-danger = the mistake. */
+
+.electric-circuit-analysis-deck,
+.eca-deck {
+  --eca-ink: #152430;
+  --eca-muted: #55677a;
+  --eca-cream: #fffdf8;
+  --eca-paper: #f5f3ec;
+  --eca-navy: #152430;
+  --eca-data: #1d4ed8;
+  --eca-active: #c2410c;
+  --eca-pointer: #7c3aed;
+  --eca-ok: #15803d;
+  --eca-danger: #b91c1c;
+  --eca-path: #0f766e;
+  --eca-sky: #e6eefb;
+  --eca-line: rgba(21, 36, 48, 0.12);
+  --eca-shadow: 0 16px 40px rgba(21, 36, 48, 0.1);
+  --eca-module: #1d4ed8;
+  --accent: #1d4ed8;
+  --accent-soft: #334155;
+  --card-accent: #1d4ed8;
+  color: var(--eca-ink);
+}
+
+/* One hue per module: formulate · shortcut · respond · transform · encapsulate */
+.electric-circuit-analysis-deck[data-eca-module="1"] { --eca-module: #1d4ed8; --accent: #1d4ed8; }
+.electric-circuit-analysis-deck[data-eca-module="2"] { --eca-module: #c2410c; --accent: #c2410c; }
+.electric-circuit-analysis-deck[data-eca-module="3"] { --eca-module: #0f766e; --accent: #0f766e; }
+.electric-circuit-analysis-deck[data-eca-module="4"] { --eca-module: #7c3aed; --accent: #7c3aed; }
+.electric-circuit-analysis-deck[data-eca-module="5"] { --eca-module: #15803d; --accent: #15803d; }
+
+.module-cover.electric-circuit-analysis { --card-accent: #1d4ed8; }
+
+.electric-circuit-analysis-deck .slide-frame {
+  background:
+    radial-gradient(920px 460px at 6% -18%, rgba(29, 78, 216, 0.1), transparent 58%),
+    radial-gradient(720px 380px at 96% 0%, rgba(194, 65, 12, 0.06), transparent 54%),
+    radial-gradient(540px 280px at 70% 110%, rgba(15, 118, 110, 0.08), transparent 50%),
+    linear-gradient(165deg, #fffdf9 0%, #fcfaf3 52%, #f6f4ed 100%);
+}
+
+/* Squared engineering paper — this subject is worked out with a pencil and a
+   ruler, and every diagram in it is drawn on a grid. */
+.electric-circuit-analysis-deck .slide-frame::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(29, 78, 216, 0.09) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, rgba(29, 78, 216, 0.09) 0 1px, transparent 1px 24px);
+  background-size: 24px 24px, 24px 24px;
+  mix-blend-mode: multiply;
+}
+
+.electric-circuit-analysis-deck[data-eca-module="2"] .slide-frame::after { opacity: 0.2; }
+.electric-circuit-analysis-deck[data-eca-module="3"] .slide-frame::after { opacity: 0.2; }
+.electric-circuit-analysis-deck[data-eca-module="4"] .slide-frame::after { opacity: 0.18; }
+.electric-circuit-analysis-deck[data-eca-module="5"] .slide-frame::after { opacity: 0.18; }
+
+.electric-circuit-analysis-deck .slide-header-copy .slide-kicker {
+  color: var(--eca-module);
+}
+
+.electric-circuit-analysis-deck .slide-header-copy .slide-title {
+  font-size: clamp(34px, 2.7vw, 48px);
+  line-height: 1.14;
+  padding-bottom: 4px;
+  overflow: visible;
+  color: var(--eca-navy);
+}
+
+/* ── Stage shell ── */
+.eca-stage {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px 16px;
+  box-sizing: border-box;
+}
+
+.eca-story {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.eca-story span {
+  font-size: clamp(10px, 0.85vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--eca-muted);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+.eca-story span.lit { opacity: 0.8; color: var(--eca-navy); }
+.eca-story span.now {
+  opacity: 1;
+  color: var(--eca-module);
+  transform: translateX(2px);
+}
+
+.eca-copy {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.eca-visual,
+.eca-visual-b {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+.eca-footer-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  min-width: 0;
+}
+.eca-takeaway,
+.eca-exam {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.35;
+}
+.eca-takeaway strong { color: var(--eca-ok); }
+.eca-exam strong {
+  color: var(--eca-active);
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+}
+
+/* ── Compositions ── */
+.eca-split-right {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(240px, 0.78fr) minmax(380px, 1.22fr);
+  grid-template-rows: 1fr auto;
+}
+/* Explicit placement so copy/visual don't collapse into the story column when
+   a slide renders without a <story> rail (e.g. the example beats). */
+.eca-split-right .eca-story { grid-row: 1 / 3; grid-column: 1; }
+.eca-split-right .eca-copy { grid-column: 2; }
+.eca-split-right .eca-visual { grid-column: 3; }
+.eca-split-right .eca-footer-band { grid-column: 2 / 4; }
+
+/* Algorithm beat: visual is the hero (left), algorithm/dry-run rail (right).
+   Explicit row/col placement + align-items:stretch gives BOTH cells the full
+   row height — without it the aspect-locked SVG collapsed the visual to its
+   intrinsic height and the copy cell shrank, clipping the dry-run panel. */
+.eca-split-left {
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.85fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+}
+.eca-split-left .eca-story { display: none; }
+.eca-split-left .eca-visual { grid-column: 1; grid-row: 1; min-height: 0; align-self: stretch; }
+.eca-split-left .eca-copy { grid-column: 2; grid-row: 1; min-height: 0; align-self: stretch; }
+.eca-split-left .eca-footer-band { grid-column: 1 / 3; grid-row: 2; }
+
+.eca-full-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.eca-full-stage .eca-story { display: none; }
+.eca-full-stage .eca-copy { max-width: 78%; }
+.eca-full-stage .eca-visual { min-height: 0; }
+
+/* Full-width, vertically-centred layout for text-grid framing slides
+   (syllabus audit, practice) — they used a half-width "board"
+   column and left the lower half empty. */
+.eca-fill {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.eca-fill .eca-story { display: none; }
+.eca-fill .eca-copy {
+  grid-row: 1;
+  align-content: safe start;
+  gap: 14px;
+  padding-block: 2px 6px;
+  overflow: hidden;
+}
+.eca-fill .eca-footer-band { grid-row: 2; }
+.eca-fill .eca-lead { font-size: clamp(22px, 1.7vw, 28px); }
+/* let the framing grids breathe across the full stage */
+.eca-fill .eca-syllabus-audit { grid-template-columns: repeat(auto-fit, minmax(184px, 1fr)); gap: 9px; }
+.eca-fill .eca-syllabus-audit article {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 11px;
+  min-height: 40px;
+}
+.eca-fill .eca-syllabus-audit strong { font-size: clamp(13px, 0.92vw, 16px); line-height: 1.18; }
+.eca-fill .eca-syllabus-audit em { font-size: 12px; }
+/* Hardened cap: the syllabus checklist must fit above the footer even in
+   the fullest module (22-24 long topic names). High-specificity + !important
+   so it wins over the platform legibility/base font unconditionally. */
+.eca-stage.eca-fill .eca-syllabus-audit strong { font-size: 15px !important; line-height: 1.16 !important; }
+.eca-stage.eca-fill .eca-syllabus-audit em { font-size: 11px !important; }
+.eca-stage.eca-fill .eca-syllabus-audit article { min-height: 38px !important; padding: 6px 10px !important; gap: 2px !important; }
+.eca-fill .eca-practice-list { gap: 18px; font-size: clamp(17px, 1.3vw, 21px); }
+
+.eca-hero-open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.eca-hero-open .eca-story,
+.eca-hero-open .eca-copy { display: none; }
+.eca-hero-open .eca-visual { min-height: 0; }
+.eca-hero-open .eca-footer-band { justify-content: center; }
+
+.eca-showcase {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 6px;
+}
+.eca-showcase .eca-story,
+.eca-showcase .eca-copy { display: none; }
+.eca-showcase .eca-visual { grid-row: 1; min-height: 0; }
+.eca-showcase .eca-footer-band {
+  justify-content: center;
+  border-top: 1px solid var(--eca-line);
+  padding-top: 6px;
+}
+.eca-showcase .eca-takeaway { font-size: clamp(14px, 1.05vw, 17px); }
+
+.eca-board {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.eca-board .eca-story { display: none; }
+.eca-board .eca-footer-band { grid-column: 1 / 3; }
+
+.eca-inspect {
+  grid-template-columns: minmax(220px, 0.42fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.eca-inspect .eca-story { display: none; }
+.eca-inspect .eca-visual { grid-column: 2; grid-row: 1; }
+.eca-inspect .eca-footer-band { grid-column: 1 / 3; }
+
+.eca-pipeline {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.eca-pipeline .eca-story { grid-row: 1 / 4; }
+.eca-pipeline .eca-copy,
+.eca-pipeline .eca-visual,
+.eca-pipeline .eca-footer-band { grid-column: 2; }
+
+.eca-memory-first {
+  grid-template-columns: minmax(200px, 0.32fr) minmax(420px, 1.2fr);
+  grid-template-rows: 1fr auto;
+}
+.eca-memory-first .eca-story { display: none; }
+.eca-memory-first .eca-visual { grid-column: 2; grid-row: 1; }
+.eca-memory-first .eca-footer-band { grid-column: 1 / 3; }
+
+.eca-algo-board {
+  grid-template-columns: minmax(260px, 0.48fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.eca-algo-board .eca-story { display: none; }
+.eca-algo-board .eca-footer-band { grid-column: 1 / 3; }
+
+.eca-code-split {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-rows: 1fr auto;
+}
+.eca-code-split .eca-story { display: none; }
+.eca-code-split .eca-footer-band { grid-column: 1 / 3; }
+
+.electric-circuit-analysis-deck .slide-frame[data-composition="full-stage"] .eca-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="hero-open"] .eca-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="memory-first"] .eca-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="showcase"] .eca-visual {
+  min-height: 0;
+}
+.eca-full-stage .eca-visual { min-height: 62%; }
+.eca-hero-open .eca-visual,
+.eca-memory-first .eca-visual { flex: 1 1 auto; }
+
+/* ── Typography blocks ── */
+.eca-lead {
+  margin: 0;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.38;
+  font-weight: 650;
+  color: var(--eca-navy);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.eca-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.34;
+}
+.eca-points li { padding-left: 2px; }
+.eca-points li::marker { color: var(--eca-module); font-weight: 800; }
+
+.eca-definition {
+  background: #fff;
+  border: 1px solid var(--eca-line);
+  border-left: 5px solid var(--eca-data);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--eca-shadow);
+}
+.eca-definition span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--eca-data);
+}
+.eca-definition strong {
+  display: block;
+  font-size: clamp(20px, 1.6vw, 28px);
+  margin: 4px 0;
+}
+.eca-definition p {
+  margin: 0;
+  font-size: clamp(15px, 1.1vw, 18px);
+}
+
+.eca-callout {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--eca-line);
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+}
+.eca-callout span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+}
+.eca-callout p {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.eca-callout-warn { border-left: 4px solid var(--eca-active); }
+.eca-callout-fault { border-left: 4px solid var(--eca-danger); }
+.eca-callout-ok { border-left: 4px solid var(--eca-ok); }
+.eca-callout-idea { border-left: 4px solid var(--eca-data); }
+.eca-callout-know { border-left: 4px solid var(--eca-pointer); }
+
+/* Scene shell */
+.eca-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.72), rgba(255, 250, 240, 0.28) 62%, transparent 78%);
+  overflow: hidden;
+  position: relative;
+}
+.eca-scene svg,
+.eca-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Code panel — light, readable (≥19px) */
+.eca-code-panel {
+  background: #ffffff;
+  border: 1.5px solid var(--eca-line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--eca-shadow);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.eca-code-line {
+  font-size: clamp(19px, 1.45vw, 22px);
+  line-height: 1.55;
+  color: var(--eca-navy);
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: pre;
+}
+.eca-code-line.is-current {
+  background: rgba(217, 119, 6, 0.14);
+  color: var(--eca-active);
+  box-shadow: inset 3px 0 0 var(--eca-active);
+}
+
+/* Linked list / stack / queue / tree helpers */
+.eca-ll-node { transform-box: fill-box; }
+.eca-stack-cell,
+.eca-queue-cell,
+.eca-tree-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ── Concept-native motion (ecam-*) ──
+   State-change animations — not fade-in as primary teaching motion. */
+
+@keyframes ecam-allocate {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  55% { transform: scale(0.96); }
+  70% { transform: scale(1.03); }
+}
+@keyframes ecam-shift {
+  0%, 12% { transform: translateX(0); }
+  45%, 55% { transform: translateX(28px); }
+  88%, 100% { transform: translateX(0); }
+}
+@keyframes ecam-insert {
+  0%, 15% { transform: translateY(-28px) scale(0.85); opacity: 0.35; }
+  40% { transform: translateY(0) scale(1.06); opacity: 1; }
+  55%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes ecam-delete {
+  0%, 20% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(0.92) translateY(6px); opacity: 0.45; }
+  70%, 100% { transform: scale(0.85); opacity: 0.2; }
+}
+@keyframes ecam-push {
+  0%, 10% { transform: translateY(-40px); opacity: 0.4; }
+  35% { transform: translateY(4px); opacity: 1; }
+  50%, 100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes ecam-pop {
+  0%, 15% { transform: translateY(0); opacity: 1; }
+  45% { transform: translateY(-36px); opacity: 0.35; }
+  70%, 100% { transform: translateY(-8px); opacity: 0.55; }
+}
+@keyframes ecam-enqueue {
+  0%, 12% { transform: translateX(40px); opacity: 0.35; }
+  40% { transform: translateX(-4px); opacity: 1; }
+  55%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes ecam-dequeue {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  45% { transform: translateX(-48px); opacity: 0.3; }
+  70%, 100% { transform: translateX(-12px); opacity: 0.5; }
+}
+@keyframes ecam-wrap {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(18deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(4deg); }
+}
+@keyframes ecam-pointer {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -24; }
+}
+@keyframes ecam-rewire {
+  0%, 20% { stroke-dashoffset: 40; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+@keyframes ecam-traverse {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -36; }
+}
+@keyframes ecam-search {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(20px); }
+  75% { transform: translateX(10px); }
+}
+@keyframes ecam-swap {
+  0%, 100% { transform: translate(0, 0); }
+  35% { transform: translate(14px, -10px); }
+  70% { transform: translate(-14px, 10px); }
+}
+@keyframes ecam-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.62; }
+}
+@keyframes ecam-wave {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.07); }
+  70% { transform: scale(1.02); }
+}
+@keyframes ecam-descend {
+  0%, 10% { transform: translate(0, -24px); opacity: 0.5; }
+  45% { transform: translate(36px, 40px); opacity: 1; }
+  70% { transform: translate(72px, 90px); opacity: 1; }
+  100% { transform: translate(72px, 90px); opacity: 0.85; }
+}
+@keyframes ecam-return {
+  0%, 15% { transform: translate(40px, 60px); opacity: 0.6; }
+  55% { transform: translate(10px, 10px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+.ecam-allocate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-allocate 2.4s ease-in-out infinite;
+}
+.ecam-shift {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-shift 2.8s ease-in-out infinite;
+}
+.ecam-insert {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-insert 2.6s ease-out infinite;
+}
+.ecam-delete {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-delete 2.8s ease-in-out infinite;
+}
+.ecam-push {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-push 2.4s ease-out infinite;
+}
+.ecam-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-pop 2.4s ease-in infinite;
+}
+.ecam-enqueue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-enqueue 2.5s ease-out infinite;
+}
+.ecam-dequeue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-dequeue 2.5s ease-in infinite;
+}
+.ecam-wrap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-wrap 3s ease-in-out infinite;
+}
+.ecam-pointer {
+  stroke-dasharray: 10 8;
+  animation: ecam-pointer 1.4s linear infinite;
+}
+.ecam-rewire {
+  stroke-dasharray: 12 10;
+  animation: ecam-rewire 2.2s ease-in-out infinite;
+}
+.ecam-traverse {
+  stroke-dasharray: 10 8;
+  animation: ecam-traverse 1.6s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.ecam-search {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-search 2.6s ease-in-out infinite;
+}
+.ecam-swap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-swap 2.4s ease-in-out infinite;
+}
+.ecam-pulse {
+  animation: ecam-pulse 1.9s ease-in-out infinite;
+}
+.ecam-wave {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-wave 2.2s ease-in-out infinite;
+}
+.ecam-descend {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-descend 3.2s ease-in-out infinite;
+}
+.ecam-return {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ecam-return 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecam-allocate, .ecam-shift, .ecam-insert, .ecam-delete,
+  .ecam-push, .ecam-pop, .ecam-enqueue, .ecam-dequeue,
+  .ecam-wrap, .ecam-pointer, .ecam-rewire, .ecam-traverse,
+  .ecam-search, .ecam-swap, .ecam-pulse, .ecam-wave,
+  .ecam-descend, .ecam-return {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Kit components ── */
+.eca-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 750;
+  color: var(--eca-navy);
+}
+.eca-flow i { color: var(--eca-module); font-style: normal; font-weight: 900; }
+
+.eca-algo-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+  font-size: clamp(15px, 1.15vw, 19px);
+  line-height: 1.4;
+}
+.eca-algo-steps li::marker { color: var(--eca-module); font-weight: 800; }
+
+.eca-complexity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--eca-line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.eca-complexity > div {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+.eca-complexity span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--eca-muted);
+}
+/* 1BEE303 cost cells hold a sentence ("one constraint per dependent source"),
+   not a big-O token, so they read at body size rather than display size. */
+.eca-complexity strong {
+  font-size: clamp(13px, 1.02vw, 16px);
+  line-height: 1.28;
+  font-weight: 750;
+  color: var(--eca-data);
+}
+.eca-complexity > p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--eca-muted);
+}
+
+.eca-code-panel span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--eca-module);
+  margin-bottom: 8px;
+  font-family: system-ui, sans-serif;
+}
+.eca-code-panel pre {
+  margin: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.eca-code-panel code {
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.45;
+  color: var(--eca-navy);
+  font-weight: 650;
+}
+
+.eca-dryrun {
+  display: grid;
+  gap: 8px;
+}
+.eca-dryrun section {
+  background: #fff;
+  border: 1px solid var(--eca-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.eca-dryrun span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--eca-module);
+}
+.eca-dryrun p { margin: 4px 0 0; font-size: 15px; }
+.eca-dryrun ol {
+  margin: 4px 0 0;
+  padding-left: 1.15em;
+  font-size: 14px;
+  display: grid;
+  gap: 3px;
+}
+
+.eca-term-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.eca-term-chips span {
+  background: var(--eca-sky);
+  color: var(--eca-data);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.eca-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.eca-roadmap article {
+  background: #fff;
+  border: 1px solid var(--eca-line);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+.eca-roadmap b { color: var(--eca-module); font-size: 12px; }
+.eca-roadmap strong { font-size: 14px; line-height: 1.25; }
+
+.eca-checkpoint-sheet {
+  display: grid;
+  gap: 7px;
+}
+.eca-checkpoint-sheet article {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.72fr) auto 1.85fr;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--eca-line);
+  border-radius: 12px;
+  padding: 7px 12px;
+}
+.eca-checkpoint-sheet code {
+  font-size: clamp(16px, 1.2vw, 21px);
+  font-weight: 800;
+  color: var(--eca-data);
+}
+.eca-checkpoint-sheet span { font-size: 12.5px; line-height: 1.25; color: var(--eca-muted); }
+
+.eca-syllabus-audit {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+.eca-syllabus-audit article {
+  background: #fff;
+  border: 1px solid var(--eca-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.eca-syllabus-audit strong { font-size: 14px; }
+.eca-syllabus-audit em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--eca-ok);
+}
+
+.eca-practice-list {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(15px, 1.15vw, 18px);
+}
+.eca-practice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.eca-practice-list em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--eca-active);
+  white-space: nowrap;
+}
+
+.eca-review-map {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 12px;
+}
+.eca-review-map h3 {
+  margin: 0;
+  font-size: clamp(22px, 2vw, 32px);
+  color: var(--eca-navy);
+}
+.eca-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.eca-review-topics span {
+  background: #fff;
+  border: 1.5px solid var(--eca-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ── Instructional motion (classroom-paced) ── */
+@keyframes ecam-flow-node {
+  0%, 100% { opacity: 0.55; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-4px); }
+}
+@keyframes ecam-flow-arrow {
+  0% { stroke-dashoffset: 24; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.4; }
+}
+@keyframes ecam-feedback {
+  0% { stroke-dashoffset: 40; opacity: 0.45; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -40; opacity: 0.45; }
+}
+@keyframes ecam-waterfall {
+  0% { opacity: 0; transform: translate(-12px, -18px); }
+  30%, 100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes ecam-cost-curve {
+  0% { stroke-dasharray: 0 800; }
+  100% { stroke-dasharray: 800 0; }
+}
+@keyframes ecam-cost-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+@keyframes ecam-grow {
+  0% { opacity: 0; transform: scaleX(0.55); transform-origin: center; }
+  45%, 100% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes ecam-spiral {
+  0% { opacity: 0.15; }
+  40% { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+@keyframes ecam-concurrent {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+@keyframes ecam-up-line {
+  0% { stroke-dasharray: 0 1200; }
+  100% { stroke-dasharray: 1200 0; }
+}
+@keyframes ecam-orbit {
+  0%, 100% { opacity: 0.65; }
+  50% { opacity: 1; }
+}
+@keyframes ecam-token {
+  0% { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateY(-170px) rotate(-360deg); }
+}
+@keyframes ecam-backlog {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(210px); }
+  70% { transform: translateX(420px); }
+  100% { transform: translateX(630px); }
+}
+@keyframes ecam-xp-step {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+@keyframes ecam-bar {
+  0% { transform: scaleX(0.2); transform-origin: left center; opacity: 0.4; }
+  50%, 100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes ecam-gate {
+  0%, 100% { opacity: 0.7; }
+  40% { opacity: 1; }
+}
+@keyframes ecam-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  40%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes ecam-pulse-soft {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.ecam-flow-node { animation: ecam-flow-node 3.2s ease-in-out infinite; }
+.ecam-flow-arrow { stroke-dasharray: 10 8; animation: ecam-flow-arrow 2.8s linear infinite; }
+.ecam-feedback { stroke-dasharray: 10 8; animation: ecam-feedback 3.6s linear infinite; }
+.ecam-waterfall { animation: ecam-waterfall 3.5s ease-out infinite; }
+.ecam-cost-curve { animation: ecam-cost-curve 4s ease-out infinite; }
+.ecam-cost-dot { animation: ecam-cost-dot 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.ecam-grow { animation: ecam-grow 3.8s ease-out infinite; }
+.ecam-spiral { animation: ecam-spiral 3.2s ease-in-out infinite; }
+.ecam-concurrent { animation: ecam-concurrent 2.8s ease-in-out infinite; }
+.ecam-up-line { animation: ecam-up-line 4.5s ease-out infinite; }
+.ecam-orbit { animation: ecam-orbit 2.6s ease-in-out infinite; }
+.ecam-token { animation: ecam-token 12s linear infinite; transform-box: fill-box; transform-origin: 450px 260px; }
+.ecam-backlog-card { animation: ecam-backlog 10s ease-in-out infinite; }
+.ecam-xp-step { animation: ecam-xp-step 3s ease-in-out infinite; }
+.ecam-bar { animation: ecam-bar 3.4s ease-out infinite; }
+.ecam-gate { animation: ecam-gate 2.8s ease-in-out infinite; }
+.ecam-fade-in { animation: ecam-fade-in 2.4s ease-out both; }
+.ecam-pulse { animation: ecam-pulse-soft 2.4s ease-in-out infinite; }
+.ecam-step { animation: ecam-pulse-soft 2.8s ease-in-out infinite; }
+.ecam-actor { animation: ecam-pulse-soft 3s ease-in-out infinite; }
+.ecam-usecase-step { animation: ecam-flow-node 2.8s ease-in-out infinite; }
+.ecam-system-box { animation: ecam-pulse-soft 2.6s ease-in-out infinite; }
+.ecam-risk-cell { animation: ecam-pulse-soft 3.2s ease-in-out infinite; }
+.ecam-risk-dot { animation: ecam-cost-dot 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.ecam-delay-0 { animation-delay: 0s; }
+.ecam-delay-1 { animation-delay: 0.35s; }
+.ecam-delay-2 { animation-delay: 0.7s; }
+.ecam-delay-3 { animation-delay: 1.05s; }
+.ecam-delay-4 { animation-delay: 1.4s; }
+
+/* ── Electric Circuit Analysis instructional motion ──
+   Every animation below shows a circuit mechanism: current marching, a phasor
+   turning, a transient decaying, a pole moving. Decoration is not the job. */
+@keyframes ecam-current {
+  0% { stroke-dashoffset: 36; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes ecam-current-rev {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 36; }
+}
+@keyframes ecam-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes ecam-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes ecam-draw {
+  0% { stroke-dashoffset: 900; }
+  55%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes ecam-sweep-x {
+  0% { transform: translateX(0); opacity: 0.25; }
+  12% { opacity: 1; }
+  100% { transform: translateX(var(--ecam-sweep, 620px)); opacity: 0.9; }
+}
+@keyframes ecam-switch {
+  0%, 35% { transform: rotate(-32deg); }
+  55%, 100% { transform: rotate(0deg); }
+}
+@keyframes ecam-decay-dot {
+  0% { transform: translate(0, 0); opacity: 0.4; }
+  10% { opacity: 1; }
+  100% { transform: translate(var(--ecam-dx, 560px), var(--ecam-dy, 210px)); opacity: 0.9; }
+}
+@keyframes ecam-ring {
+  0%, 100% { transform: translateY(0); }
+  18% { transform: translateY(-46px); }
+  36% { transform: translateY(32px); }
+  54% { transform: translateY(-19px); }
+  72% { transform: translateY(11px); }
+  86% { transform: translateY(-5px); }
+}
+@keyframes ecam-merge-l {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(118px); opacity: 0.35; }
+}
+@keyframes ecam-merge-r {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(-118px); opacity: 0.35; }
+}
+@keyframes ecam-collapse {
+  0%, 25% { transform: scale(1); opacity: 1; }
+  70%, 100% { transform: scale(0.42); opacity: 0.18; }
+}
+@keyframes ecam-emerge {
+  0%, 35% { transform: scale(0.55); opacity: 0; }
+  80%, 100% { transform: scale(1); opacity: 1; }
+}
+@keyframes ecam-slide-in {
+  0% { transform: translateX(-34px); opacity: 0; }
+  45%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes ecam-pole-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(var(--ecam-px, -70px), 0); }
+}
+@keyframes ecam-needle {
+  0%, 100% { transform: rotate(-58deg); }
+  50% { transform: rotate(52deg); }
+}
+@keyframes ecam-wave-shift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-180px); }
+}
+@keyframes ecam-cell-in {
+  0% { opacity: 0; transform: translateY(9px) scale(0.94); }
+  45%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes ecam-charge {
+  /* Floor stays high enough that pulsing LABELS remain readable. */
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+@keyframes ecam-flux {
+  0%, 100% { transform: scale(0.94); opacity: 0.72; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+@keyframes ecam-probe {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(var(--ecam-probe, 96px)); }
+}
+@keyframes ecam-flip {
+  0%, 20% { transform: scaleX(1); }
+  45%, 100% { transform: scaleX(-1); }
+}
+
+.ecam-current { stroke-dasharray: 9 9; animation: ecam-current 1.1s linear infinite; }
+.ecam-current-slow { stroke-dasharray: 9 9; animation: ecam-current 2.2s linear infinite; }
+.ecam-current-rev { stroke-dasharray: 9 9; animation: ecam-current-rev 1.4s linear infinite; }
+.ecam-spin { animation: ecam-spin 4.4s linear infinite; transform-box: fill-box; }
+.ecam-spin-slow { animation: ecam-spin-slow 6s linear infinite; transform-box: fill-box; }
+.ecam-draw { stroke-dasharray: 900; animation: ecam-draw 4s ease-out infinite; }
+.ecam-sweep-x { animation: ecam-sweep-x 3.6s linear infinite; }
+.ecam-switch { animation: ecam-switch 3.4s ease-in-out infinite; transform-box: fill-box; }
+.ecam-decay-dot { animation: ecam-decay-dot 3.8s ease-in infinite; transform-box: fill-box; }
+.ecam-ring { animation: ecam-ring 3.6s ease-in-out infinite; transform-box: fill-box; }
+.ecam-merge-l { animation: ecam-merge-l 3.8s ease-in-out infinite; transform-box: fill-box; }
+.ecam-merge-r { animation: ecam-merge-r 3.8s ease-in-out infinite; transform-box: fill-box; }
+.ecam-collapse { animation: ecam-collapse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+/* Reveals play ONCE and hold. Looping them would leave labelled steps and
+   formulas fading in and out under the reader — legibility beats motion. */
+.ecam-emerge { animation: ecam-emerge 1.2s ease-out both; transform-box: fill-box; transform-origin: center; }
+.ecam-slide-in { animation: ecam-slide-in 0.9s ease-out both; transform-box: fill-box; }
+.ecam-pole-drift { animation: ecam-pole-drift 4.4s ease-in-out infinite; transform-box: fill-box; }
+.ecam-needle { animation: ecam-needle 3.4s ease-in-out infinite; transform-box: fill-box; }
+.ecam-wave-shift { animation: ecam-wave-shift 2.4s linear infinite; }
+.ecam-cell-in { animation: ecam-cell-in 0.9s ease-out both; transform-box: fill-box; }
+.ecam-charge { animation: ecam-charge 2.2s ease-in-out infinite; }
+.ecam-flux { animation: ecam-flux 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.ecam-probe { animation: ecam-probe 3.2s ease-in-out infinite; transform-box: fill-box; }
+.ecam-flip { animation: ecam-flip 4.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.ecam-delay-5 { animation-delay: 1.75s; }
+.ecam-delay-6 { animation-delay: 2.1s; }
+.ecam-delay-7 { animation-delay: 2.45s; }
+
+
+.eca-scene, .eca-showcase-scene { width: 100%; height: 100%; min-height: 0; }
+.eca-svg { width: 100%; height: 100%; display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .electric-circuit-analysis-deck [class*="ecam-"] {
+    animation: none !important;
+  }
+}
+
+/* Dense algorithm slides (real algo steps + dry-run trace) must fit the
+   algo-board left column at 1280×720. Tighten only in that composition. */
+.eca-algo-board .eca-algo-steps { gap: 4px; font-size: clamp(14px, 1.02vw, 17px); line-height: 1.3; }
+.eca-algo-board .eca-dryrun { gap: 5px; }
+.eca-algo-board .eca-dryrun section { padding: 6px 11px; }
+.eca-algo-board .eca-dryrun ol { gap: 2px; font-size: 13.5px; }
+.eca-algo-board .eca-dryrun p { font-size: 14px; }
+.eca-algo-board .eca-lead { font-size: clamp(16px, 1.25vw, 20px); }
+
+/* ── 1BEE303-specific kit pieces (no Computer Graphics counterpart) ── */
+
+/* Textbook provenance carried from Phase 1. Units whose prescribed book was
+   not supplied render a chapter with no page range — that is intentional. */
+.eca-book-cite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--eca-muted);
+}
+.eca-book-cite b {
+  background: var(--eca-sky);
+  color: var(--eca-data);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.eca-book-cite span { font-style: normal; }
+.eca-book-cite em {
+  font-style: normal;
+  background: rgba(21, 128, 61, 0.1);
+  color: var(--eca-ok);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.eca-book-cite i {
+  font-style: normal;
+  border: 1px solid var(--eca-line);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.eca-quiz-card {
+  background: #fff;
+  border: 1px solid var(--eca-line);
+  border-left: 4px solid var(--eca-data);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: var(--eca-shadow);
+}
+.eca-quiz-card + .eca-quiz-card { margin-top: 8px; }
+.eca-quiz-card strong {
+  display: block;
+  font-size: 15.5px;
+  line-height: 1.3;
+  color: var(--eca-navy);
+}
+.eca-quiz-card ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 10px;
+  margin: 8px 0 0;
+  padding: 0 0 0 18px;
+  font-size: 13.5px;
+  font-weight: 650;
+}
+.eca-quiz-card li.is-correct {
+  color: var(--eca-ok);
+  font-weight: 800;
+}
+.eca-quiz-card li.is-correct::marker { color: var(--eca-ok); }
+.eca-quiz-card p {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--eca-muted);
+}
+
+/* Showcase beats hand the whole stage to one mechanism. */
+.eca-showcase-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Eight checkpoint rows must fit one 1280x720 stage above the footer band.
+   Sized against the longest 1BEE303 topic ("Sources of electrical energy:
+   independent and dependent") wrapping to two lines. !important so it beats
+   the platform legibility layer, which loads after this sheet. */
+.eca-stage.eca-fill .eca-checkpoint-sheet { gap: 6px !important; }
+.eca-stage.eca-fill .eca-checkpoint-sheet article {
+  grid-template-columns: minmax(180px, 1fr) auto 1.6fr !important;
+  gap: 10px !important;
+  padding: 6px 11px !important;
+}
+.eca-stage.eca-fill .eca-checkpoint-sheet strong {
+  font-size: 14.5px !important;
+  line-height: 1.2 !important;
+}
+.eca-stage.eca-fill .eca-checkpoint-sheet code { font-size: 13px !important; }
+.eca-stage.eca-fill .eca-checkpoint-sheet span { font-size: 12px !important; line-height: 1.24 !important; }
+
+/* Worked-step panel: body shrinks and the citation sits in a footer so a long
+   step loses type size rather than its last lines to `overflow: hidden`. */
+.eca-code-panel {
+  display: flex;
+  flex-direction: column;
+}
+.eca-code-panel pre {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.eca-code-panel.is-dense code {
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.34;
+}
+.eca-code-panel small {
+  display: block;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--eca-line);
+  font-family: system-ui, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--eca-muted);
+}

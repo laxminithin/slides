@@ -1,0 +1,81 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BEC503 Module 4 Assignment</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 10.5pt; color: #12203A; line-height: 1.45; }
+h1 { font-size: 19pt; margin: 0 0 4pt; color: #12203A; }
+h2 { font-size: 13.5pt; margin: 16pt 0 5pt; padding-bottom: 3pt; border-bottom: 1.5pt solid #0F6FC6; color: #0F6FC6; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 11pt 0 3pt; color: #12203A; page-break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 8pt 0 2pt; color: #5A6478; page-break-after: avoid; }
+p { margin: 4pt 0; }
+ul, ol { margin: 4pt 0 4pt 16pt; padding: 0; }
+li { margin: 2pt 0; page-break-inside: avoid; }
+hr { border: 0; border-top: 0.75pt solid #D7DEE8; margin: 10pt 0; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; background: #F1F5FA; padding: 0 2pt; border-radius: 2pt; }
+pre { font-family: Consolas, monospace; font-size: 9pt; background: #F1F5FA; border-left: 2.5pt solid #0F6FC6; padding: 6pt 8pt; margin: 5pt 0; white-space: pre-wrap; page-break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0; font-size: 9.5pt; }
+th { background: #0F6FC6; color: #fff; text-align: left; padding: 4pt 5pt; font-weight: 600; }
+td { border: 0.5pt solid #D7DEE8; padding: 4pt 5pt; vertical-align: top; }
+tr { page-break-inside: avoid; }
+tbody tr:nth-child(even) td { background: #F7FAFD; }
+strong { color: #12203A; }
+.tag { font-family: Consolas, monospace; font-size: 9pt; color: #C2410C; }
+</style></head><body>
+<h1>BEC503 Digital Communication — Assignment 4 — Linear block and cyclic code construction</h1>
+<p><strong>Module 4: Error Control Coding: Linear Block and Cyclic Codes</strong></p>
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>
+<tr><td>Maximum marks</td><td>20</td></tr>
+<tr><td>Weightage</td><td>10% of CIE</td></tr>
+<tr><td>Issue date</td><td>&lt;&lt;TBD&gt;&gt;</td></tr>
+<tr><td>Due date</td><td>&lt;&lt;TBD&gt;&gt;</td></tr>
+<tr><td>Items</td><td>8 problems + 3 theory questions</td></tr>
+<tr><td>CO / Bloom coverage</td><td>CO5: 7, CO4: 4 · L1–L2 0, L3–L4 5, L5–L6 6</td></tr>
+</tbody></table>
+<h2>Objective</h2>
+<p>Build codes rather than describe them: construct generator and parity check matrices, decode with syndromes, and design a shift-register encoder that a technician could wire up.</p>
+<h2>Learning outcomes</h2>
+<ul>
+<li>Student will be able to construct G and H for a given linear block code and verify their relation.</li>
+<li>Student will be able to compute minimum distance and state the exact detection and correction guarantees.</li>
+<li>Student will be able to build a standard array and decode by syndrome lookup.</li>
+<li>Student will be able to design and trace a shift-register encoder for a cyclic code.</li>
+</ul>
+<hr/>
+<h2>Part A — Problems (17 marks)</h2>
+<p><strong>P1.</strong> A (6,3) linear block code has P = [[1,1,0],[0,1,1],[1,0,1]]. Write G and H in systematic form, list all eight codewords, and compute the minimum distance by weight enumeration. State the detection and correction capabilities.  <code>[CO5 | L4 | 3 marks]</code></p>
+<p><strong>P2.</strong> For the code of P1, construct the complete standard array. Identify every coset leader, tabulate the syndrome for each, and state how many of the fifteen possible double-error patterns the code corrects.  <code>[CO5 | L4 | 3 marks]</code></p>
+<p><strong>P3.</strong> Construct the parity check matrix of a (15,11) Hamming code with columns ordered as binary counting. Encode any message of your choice, introduce a single error, and demonstrate that the syndrome read as a binary number gives the error position.  <code>[CO5 | L4 | 3 marks]</code></p>
+<p><strong>P4.</strong> Factor x^15 - 1 over GF(2). List every cyclic code of length 15 that can be built from its factors, giving g(x), k, the rate and, where you can determine it, d_min. Identify which is the Hamming code.  <code>[CO5 | L5 | 3 marks]</code></p>
+<p><strong>P5.</strong> Design the shift-register encoder for the (7,4) cyclic code with g(x) = x^3 + x + 1. Draw the circuit, then trace the register contents clock by clock for the message 1101 and confirm the parity bits match a hand division.  <code>[CO5 | L5 | 2 marks]</code></p>
+<p><strong>P6.</strong> For that same code, tabulate the syndrome for every single-error pattern. Then receive the word 0111001, compute its syndrome, correct it, and extract the message.  <code>[CO5 | L4 | 1 marks]</code></p>
+<p><strong>P7.</strong> Show that the (7,4) cyclic code detects every burst of length 3 or less. Then find a burst of length 4 that it fails to detect and explain why that particular pattern escapes.  <code>[CO4 | L5 | 1 marks]</code></p>
+<p><strong>P8.</strong> A system needs to correct two errors per 15-bit block. Explain why no Hamming code can do this and identify what family of codes would be required.  <code>[CO4 | L5 | 1 marks]</code></p>
+<h2>Part B — Theory (3 marks)</h2>
+<p><strong>T1.</strong> Argue whether systematic form is ever a disadvantage, considering both error performance and any application where an exposed message matters.  <code>[CO5 | L4 | 1 marks]</code></p>
+<p><strong>T2.</strong> Cyclic codes trade generality for structure. Identify precisely what is given up by requiring g(x) to divide x^n - 1, and what is gained in return.  <code>[CO4 | L5 | 1 marks]</code></p>
+<p><strong>T3.</strong> A zero syndrome does not prove the absence of errors. Characterise exactly which error patterns escape detection, and estimate how often that happens on a channel with bit error rate 1e-3.  <code>[CO4 | L5 | 1 marks]</code></p>
+<hr/>
+<h2>Submission guidelines</h2>
+<ul>
+<li>Format: PDF, single file</li>
+<li>File name: <code>&lt;USN&gt;_BEC503_Assignment4.pdf</code></li>
+<li>Channel: LMS upload</li>
+<li>Late policy: 10% per day, nothing after 5 days</li>
+<li>Every numerical answer must carry units and a stated reference direction.</li>
+</ul>
+<h2>Assessment rubric</h2>
+<table><thead><tr><th>Criterion</th><th>Weight</th><th>Excellent</th><th>Good</th><th>Satisfactory</th><th>Needs improvement</th></tr></thead><tbody>
+<tr><td>Correctness of matrix and polynomial construction</td><td>8</td><td>All matrices and polynomials correct and verified against their defining relations.</td><td>Correct with minor unverified steps.</td><td>Constructions attempted with several errors.</td><td>Constructions largely wrong or absent.</td></tr>
+<tr><td>GF(2) arithmetic accuracy</td><td>5</td><td>All modulo-2 arithmetic correct throughout, including long division.</td><td>One or two slips not affecting conclusions.</td><td>Frequent arithmetic errors.</td><td>Arithmetic unreliable; ordinary integer arithmetic used in places.</td></tr>
+<tr><td>Circuit design and traces</td><td>4</td><td>Encoder drawn correctly with taps in the right places and the trace verified against hand division.</td><td>Circuit correct, trace incomplete.</td><td>Circuit drawn with tap errors.</td><td>No circuit or an unworkable one.</td></tr>
+<tr><td>Reasoning about guarantees</td><td>3</td><td>States exactly what each code guarantees and where the guarantee ends.</td><td>States guarantees correctly without discussing limits.</td><td>Guarantees quoted imprecisely.</td><td>Guarantees misstated.</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>20</strong></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
+<h2>Course outcome attainment</h2>
+<table><thead><tr><th>Course outcome</th><th>Marks carried</th></tr></thead><tbody>
+<tr><td>CO4</td><td>9</td></tr>
+<tr><td>CO5</td><td>11</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>20</strong></td></tr>
+</tbody></table>
+<h2>Academic integrity</h2>
+<p>Individual submission. Identical submissions score zero for both parties.</p>
+</body></html>

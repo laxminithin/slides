@@ -355,6 +355,274 @@ export const courseMeta = {
       { word: 'Quality', quote: 'Quality is planned and effort is estimated with honest ranges.' },
     ],
   },
+
+  'network-analysis': {
+    tagline: 'Watch Circuits Solve Themselves',
+    essence:
+      'Two conservation laws, one systematic method — nodal and mesh analysis, the network theorems, transients, the s-domain and two-port characterisation. VTU BEC303 built from Hayt 8e.',
+    world: 'analog',
+    track: 'Electronics Track · BEC303 · 3rd Semester',
+    difficulty: 'Core',
+    tint: ['#1d4ed8', '#c2410c'],
+    keywords: ['Nodal & Mesh', 'Theorems', 'Transients', 'Laplace', 'Two-Port'],
+    chapters: [
+      { word: 'Solve', quote: 'Two conservation laws generate every equation a network needs.' },
+      { word: 'Simplify', quote: 'A theorem earns its place only when it shortens the work.' },
+      { word: 'Switch', quote: 'Capacitor voltage and inductor current refuse to jump.' },
+      { word: 'Transform', quote: 'Differential equations become algebra in the s-domain.' },
+      { word: 'Characterise', quote: 'Four numbers describe a box you are not allowed to open.' },
+    ],
+  },
+  'python-programming': {
+    tagline: 'Type It, Run It, Read What It Did',
+    essence:
+      'From one expression in the shell to a database-backed pipeline — flow control and functions, the four built-in data structures, regular expressions and files, classes of your own, then HTTP, JSON and SQL. VTU BEC305 built from Sweigart, Downey and Severance.',
+    world: 'code',
+    track: 'Electronics Track · BEC305 · 3rd Semester',
+    difficulty: 'Core',
+    tint: ['#2563eb', '#0f766e'],
+    keywords: ['Flow Control', 'Lists & Dicts', 'Regex & Files', 'Classes', 'Web & SQL'],
+    chapters: [
+      { word: 'Express', quote: 'Almost every beginner bug is a type, an indent or a scope — not logic.' },
+      { word: 'Structure', quote: 'A name is a label on an object, never a box that holds one.' },
+      { word: 'Match', quote: 'Describe the shape once and let the engine do the walking.' },
+      { word: 'Model', quote: 'Define the type, and the code starts saying what it means.' },
+      { word: 'Persist', quote: 'The process ends; the table is still there tomorrow.' },
+    ],
+  },
+  'digital-communication': {
+    tagline: 'Send Bits Through Noise, and Win',
+    essence:
+      'A waveform becomes a point, noise becomes a cloud around it, and every decision after that is geometry. Modulation, the Shannon bound, and the block, cyclic and convolutional codes that close the gap. VTU BEC503 built from Haykin.',
+    world: 'signal',
+    track: 'Electronics Track · BEC503 · 5th Semester',
+    difficulty: 'Advanced',
+    tint: ['#0369a1', '#be123c'],
+    keywords: ['Signal Space', 'PSK & QAM', 'Entropy & Capacity', 'Block Codes', 'Viterbi'],
+    chapters: [
+      { word: 'Represent', quote: 'The carrier holds no information — strip it and the waveform becomes a point.' },
+      { word: 'Modulate', quote: 'Every error probability in the subject is the area of one Gaussian tail.' },
+      { word: 'Bound', quote: 'Shannon tells you a good code exists. He refuses to tell you which one.' },
+      { word: 'Protect', quote: 'Linearity is what turns decoding from a search into a table lookup.' },
+      { word: 'Decode', quote: 'A discarded path can never come back — that is the whole Viterbi argument.' },
+    ],
+  },
+
+  'electric-circuit-analysis': {
+    tagline: 'Write Fewer Equations, Solve Every Circuit',
+    essence:
+      'A circuit is a graph, and the whole subject is about writing the smallest set of equations that pins it down. Mesh and node analysis, the theorems that shortcut them, resonance and transients, and Laplace, which does both at once. VTU 1BEE303 built from Nahvi & Edminister and Hayt.',
+    world: 'analog',
+    track: 'Electrical Track · 1BEE303 · 3rd Semester',
+    difficulty: 'Intermediate',
+    tint: ['#1d4ed8', '#c2410c'],
+    keywords: ['Mesh & Node', 'Thevenin & Norton', 'Resonance', 'Laplace', 'Two-Port'],
+    chapters: [
+      { word: 'Formulate', quote: 'Count the equations before you write one; the smaller count is the method you want.' },
+      { word: 'Shortcut', quote: 'A theorem is not a trick. It is a promise that the rest of the network does not matter.' },
+      { word: 'Respond', quote: 'At resonance the supply sees a resistor, and the coil sees twenty times its rating.' },
+      { word: 'Transform', quote: 'Laplace does not solve the differential equation. It refuses to let one appear.' },
+      { word: 'Encapsulate', quote: 'Four numbers you can multiply beat a schematic you have to redraw.' },
+    ],
+  },
+
+  'analog-electronics-circuits': {
+    tagline: 'Bias It First, Then the Gain Means Something',
+    essence:
+      'A junction, then a device, then a stage that actually amplifies. Rectifiers and clippers, four ways to bias a transistor against a β you do not control, Bode plots and the Miller effect, feedback and oscillators, and the FETs that took over. VTU 1BEE302 built from Boylestad and Nashelsky.',
+    world: 'analog',
+    track: 'Electrical Track · 1BEE302 · 3rd Semester',
+    difficulty: 'Intermediate',
+    tint: ['#7e22ce', '#ea580c'],
+    keywords: ['p-n Junction', 'Q-point & Bias', 'Bode & Miller', 'Feedback', 'JFET & MOSFET'],
+    chapters: [
+      { word: 'Rectify', quote: 'Half the cycle does nothing at all, and that is the whole reason for the bridge.' },
+      { word: 'Bias', quote: 'β varies three to one across one batch. A good bias circuit never asks what it is.' },
+      { word: 'Amplify', quote: 'Every decibel of gain is paid for in bandwidth, at a rate the device fixed in the factory.' },
+      { word: 'Feed back', quote: 'It divides the gain and the uncertainty by the same number — you only wanted one of those.' },
+      { word: 'Switch', quote: 'The gate draws nothing, so the resistance it controls costs no current to control.' },
+    ],
+  },
+
+  'complex-analysis-transforms-optimization': {
+    tagline: 'The Mathematics the Rest of the Degree Runs On',
+    essence:
+      'Analytic functions, where knowing a curve determines a whole region. Fourier and the Z-transform, which turn calculus into algebra. Probability and testing, which turn data into a decision. And linear programming, which walks the corners of a polygon to the best one. VTU 1BMATEE301 built from Kreyszig.',
+    world: 'parallel',
+    track: 'Electrical Track · 1BMATEE301 · 3rd Semester',
+    difficulty: 'Advanced',
+    tint: ['#4338ca', '#db2777'],
+    keywords: ['Cauchy-Riemann', 'Fourier Series', 'Z-Transform', 'Hypothesis Tests', 'Simplex'],
+    chapters: [
+      { word: 'Analyse', quote: 'Know an analytic function on any arc and you know it everywhere. No real function is that rigid.' },
+      { word: 'Decompose', quote: 'Orthogonality does all the work: multiply by one harmonic and every other term dies.' },
+      { word: 'Transform', quote: 'A differential equation is hard. Go round it — down, across, and back up.' },
+      { word: 'Infer', quote: 'Failing to reject is not accepting. The test never had the power to prove the null.' },
+      { word: 'Optimise', quote: 'The optimum is always at a corner, so there are only ever finitely many places to look.' },
+    ],
+  },
+
+  'high-voltage-engineering': {
+    tagline: 'Insulation Holds, Until It Does Not',
+    essence:
+      'Breakdown is a threshold, not a slope — Townsend avalanches, the Paschen minimum, and why gas, liquid and solid dielectrics each fail differently. How the lab reaches megavolts with the Cockcroft-Walton multiplier and the Marx generator, and measures them with a sphere gap and a Schering bridge. Where lightning and switching surges come from, and how shielding, earthing and arresters stop them. VTU BEE515A built from Naidu and Kamaraju.',
+    world: 'analog',
+    track: 'Electrical Track · BEE515A · 5th Semester',
+    difficulty: 'Advanced',
+    tint: ['#1d4ed8', '#c2410c'],
+    keywords: ['Townsend Avalanche', 'Cockcroft-Walton', 'Sphere Gap', 'Lightning & Shielding', 'Schering Bridge'],
+    chapters: [
+      { word: 'Break', quote: 'Insulation does not degrade gracefully. It holds, and then at a definable threshold it fails in nanoseconds.' },
+      { word: 'Generate', quote: 'Charge a capacitor to the peak, then put the source in series with it — that is the entire multiplier idea.' },
+      { word: 'Measure', quote: 'It measures by breaking down, reads peak for any waveform, and is the reference the others are calibrated against.' },
+      { word: 'Protect', quote: 'The tower flashes over to the line, not the line to the tower — footing resistance sets the threshold.' },
+      { word: 'Test', quote: 'Measure without damaging, then trend the result — the change matters more than the absolute value.' },
+    ],
+  },
+
+  'electric-motor-drive-systems-ev': {
+    tagline: 'What the Vehicle Demands, and Which Machine Delivers It',
+    essence:
+      'The tractive effort a vehicle needs is fixed by physics — rolling resistance, drag and grade — while what it can use is capped by tyre adhesion. Meeting that demand runs through four machine families: direct current, simplest to control but brush limited; induction, robust but paying continuously for its own magnetising current; brushless DC, most efficient but unable to switch off its magnets; and switched reluctance, cheapest and most robust but inherently rippled. VTU BEE613D built from Ehsani, Gao, Gay and Emadi.',
+    world: 'analog',
+    track: 'Electrical Track · BEE613D · 6th Semester',
+    difficulty: 'Advanced',
+    tint: ['#1d4ed8', '#15803d'],
+    keywords: ['Tractive Effort', 'Field Weakening', 'Four-Quadrant Chopper', 'Field Orientation', 'Switched Reluctance'],
+    chapters: [
+      { word: 'Resist', quote: 'Tractive effort minus three resistances equals mass times acceleration — and adhesion caps what you can use.' },
+      { word: 'Propel', quote: 'Constant torque to base speed, constant power above it — the motor already looks like the ideal traction characteristic.' },
+      { word: 'Commutate', quote: 'The commutator is a mechanical inverter. Everything a modern inverter does electronically, it did with brushes.' },
+      { word: 'Orient', quote: 'Resolve the current along and across the rotor flux, and an induction machine controls exactly like a DC machine.' },
+      { word: 'Switch', quote: 'No windings, no magnets, no conductors — the switched reluctance rotor is nothing but shaped steel.' },
+    ],
+  },
+  'materials-science-metallurgy': {
+    tagline: "Structure Decides Everything Else",
+    essence:
+      "Materials Science and Metallurgy is the argument that every property a part has — its stiffness, its strength, whether it bends or shatters, how long it survives a cyclic load — is a consequence of how its atoms are stacked and what is wrong with that stacking. You start at the unit cell and the defects in it, learn to look at real microstructure and to move atoms through it by diffusion, then read the whole mechanical character of a metal off a single tensile curve. The last half is control: phase diagrams and cooling rates that let you choose a microstructure deliberately, and the three non-metallic families that solve what metals cannot. VTU 1BME302 built from Callister and Rethwisch.",
+    world: 'analog',
+    track: "Mechanical Track · 1BME302 · 3rd Semester",
+    difficulty: 'Intermediate',
+    tint: ["#1d4ed8","#c2410c"],
+    keywords: ["Unit Cell","Dislocation","Fick's Second Law","Lever Rule","TTT Diagram"],
+    chapters: [
+      { word: 'Stack', quote: "A perfect crystal would be far stronger than any real metal — it is the defects that let it deform instead of shatter." },
+      { word: 'Move', quote: "Atoms move by trading places with vacancies, so diffusion needs both a hole next door and the energy to jump into it." },
+      { word: 'Deform', quote: "Slope, first departure, peak and area: one tensile curve names four different properties, and confusing them is how parts fail." },
+      { word: 'Transform', quote: "Composition tells you which phases are possible; cooling rate decides which ones you actually get." },
+      { word: 'Combine', quote: "When no metal will do, the answer is to stop asking one material to be everything and combine two." },
+    ],
+  },
+
+  'fluid-mechanics': {
+    tagline: "How Fluids Behave When Held Still, Driven, And Compressed",
+    essence:
+      "Fluid Mechanics is the rigorous study of continuous matter responding to shear and pressure. It builds the mathematical framework to calculate hydrostatic forces, track velocity fields, and predict the energy lost to friction or shock waves. VTU 1BME404 built from Fox, Pritchard and McDonald, Cimbala and Cengel, and White.",
+    world: 'analog',
+    track: "Mechanical Track · 1BME404 · 4th Semester",
+    difficulty: 'Intermediate',
+    tint: ["#0ea5e9","#0284c7"],
+    keywords: ["Viscosity","Bernoulli Equation","Reynolds Number","Boundary Layer","Mach Number"],
+    chapters: [
+      { word: 'Hold', quote: "A fluid at rest cannot resist shear stress, meaning every force it exerts must act perpendicular to the surfaces containing it." },
+      { word: 'Describe', quote: "By tracking velocity and rotation across a flow field, we can describe fluid motion purely through geometry and continuity." },
+      { word: 'Drive', quote: "Energy in a flowing fluid constantly trades between pressure, velocity, and elevation, inevitably losing a fraction to friction." },
+      { word: 'Immerse', quote: "Any body immersed in a flow drags a thin, decelerated boundary layer of fluid that ultimately dictates its drag and wake." },
+      { word: 'Compress', quote: "Once a fluid approaches the speed of sound, its density fundamentally changes, allowing shock waves to abruptly compress the flow." },
+    ],
+  },
+
+  'digital-system-design-using-verilog': {
+    tagline: "From Abstract Logic To Synthesizable Hardware",
+    essence:
+      "This subject covers the rigorous design and minimization of digital logic circuits, moving from mathematical Boolean representations to functional components. You will construct combinational and sequential systems, then translate these architectures into code using Verilog HDL. VTU 1BEC302 built from M. Morris Mano and Izad Khormaee.",
+    world: 'digital',
+    track: "Electronics and Communication · 1BEC302 · 3rd Semester",
+    difficulty: 'Foundational',
+    tint: ["#2563eb","#1e40af"],
+    keywords: ["Karnaugh Maps","Quine-McCluskey","Multiplexers","Flip-Flops","Verilog HDL"],
+    chapters: [
+      { word: 'Minimization', quote: "We do not build circuits by brute force; we mathematically strip away redundancy until only the essential logic remains." },
+      { word: 'MSI', quote: "Instead of wiring individual gates, we orchestrate complete functional blocks like adders and multiplexers to route data." },
+      { word: 'Verilog', quote: "Hardware is no longer drawn on paper; it is written as code that defines exactly how electrical signals flow through wires." },
+      { word: 'FlipFlops', quote: "By introducing feedback loops, our logic gates break free from being strictly combinational and gain the ability to remember the past." },
+      { word: 'Behavioral', quote: "Rather than manually placing every gate, we describe how the hardware should behave and let the tools infer the physical structure." },
+    ],
+  },
+
+  'additional-mathematics-1': {
+    tagline: "Calculus and Linear Algebra for Engineers",
+    essence:
+      "A refresher mathematics course covering polar curves, partial differentiation, multiple integrals, vector calculus, and linear algebra. It establishes the analytical toolkit required for advanced engineering analysis. VTU 1BMATDIP310 built from B.S. Grewal and Gilbert Strang.",
+    world: 'math',
+    track: "EC Track · 1BMATDIP310 · 3rd Semester",
+    difficulty: 'Foundational',
+    tint: ["#2563eb","#1e3a8a"],
+    keywords: ["Polar Curves","Partial Derivatives","Multiple Integrals","Vector Calculus","Linear Algebra"],
+    chapters: [
+      { word: 'Polar', quote: "Polar coordinates replace a rigid grid with distance and direction, allowing us to read a curve's geometry straight from its equation." },
+      { word: 'Partial', quote: "Partial derivatives measure how a function changes when we freeze all variables but one, essential for verifying physical PDEs." },
+      { word: 'Integral', quote: "Integral reduction formulas trade a complex integration problem for a simpler one of lower order." },
+      { word: 'Vector', quote: "Vector calculus unifies the gradient of a scalar field with the divergence and curl of a vector flow." },
+      { word: 'Matrices', quote: "Matrices turn systems of equations into a clean row echelon staircase, exposing exactly how many solutions exist." },
+    ],
+  },
+
+  'kinematics-of-machines': {
+    tagline: "Constraining Rigid Links to Deliver Precise Motion",
+    essence:
+      "Kinematics of Machines analyzes how rigid bars pinned together can be constrained to move in precise, chosen ways. It covers the geometry of linkage mobility, graphical and analytical velocity tracking, and the dynamic forces generated during operation. The course ultimately applies these principles to sizing flywheels and analyzing compound gear trains. VTU 1BME409 built from John J. Uicker Jr., Gordon R. Pennock and Joseph E. Shigley.",
+    world: 'systems',
+    track: "Mechanical Track · 1BME409 · 4th Semester",
+    difficulty: 'Intermediate',
+    tint: ["#F59E0B","#D97706"],
+    keywords: ["Degrees of Freedom","Instantaneous Centres","Loop-Closure Equations","D'Alembert's Principle","Epicyclic Gear Trains"],
+    chapters: [
+      { word: 'Count', quote: "Before tracking motion, we count degrees of freedom to determine if our assembly of rigid links can actually move." },
+      { word: 'Measure', quote: "We measure instantaneous centers and velocity differences to precisely map how fast each point in the linkage travels." },
+      { word: 'Push', quote: "A machine does not merely move; it must push against applied forces, requiring us to solve its static equilibrium analytically." },
+      { word: 'Accelerate', quote: "When machine parts accelerate, we must calculate the resulting inertial forces to properly size balancing flywheels." },
+      { word: 'Mesh', quote: "To transmit exact rotational speeds, we rely on the continuous mesh of involute gear teeth and epicyclic trains." },
+    ],
+  },
+
+  'automation-in-manufacturing': {
+    tagline: "The Economics and Mechanics of Factory Automation",
+    essence:
+      "This subject breaks down exactly how a factory replaces manual human effort with machinery. It details the mathematics of production rates, the logic of line balancing, and the hardware of material handling and robotic assembly. From computerized planning to additive manufacturing, it covers the complete architecture of modern production. VTU BME515B built from Mikell P. Groover, Ian Gibson, David W. Rosen and Brent Stucker.",
+    world: 'systems',
+    track: "Mechanical Track · BME515B · 5th Semester",
+    difficulty: 'Intermediate',
+    tint: ["#475569","#0f172a"],
+    keywords: ["Production Systems","Line Balancing","Material Requirements","Machine Vision","Additive Manufacturing"],
+    chapters: [
+      { word: 'Frame', quote: "You cannot automate a process until you have mathematically defined its physical limits and production capacity." },
+      { word: 'Balance', quote: "A production line's throughput is strictly governed by how evenly its workload is distributed across workstations." },
+      { word: 'Plan', quote: "Robots and guided vehicles execute the motion, but material requirements planning dictates the logic." },
+      { word: 'Inspect', quote: "Automating production while leaving inspection manual does not increase throughput; it merely relocates the bottleneck." },
+      { word: 'Project', quote: "Additive manufacturing shifts the constraint from how complex a part can be machined to how it is digitally sliced." },
+    ],
+  },
+
+  'analog-electronics-and-linear-integrated-circuits': {
+    tagline: "Mastering Signal Amplification and Circuit Design",
+    essence:
+      "This course explores the physics and practical application of semiconductor devices to amplify and process electrical signals. You will learn to design, analyze, and tune fundamental electronic circuits, moving from single-transistor amplifiers to complex op-amp architectures and feedback systems. VTU 1BEC304 built from Dr. D.C. Tayal, Praveen Tayal.",
+    world: 'analog',
+    track: "Electronics Track · 1BEC304 · 3rd Semester",
+    difficulty: 'Foundational',
+    tint: ["#f59e0b","#d97706"],
+    keywords: ["BJT","MOSFET","Negative Feedback","Oscillator","Op-Amp"],
+    chapters: [
+      { word: 'BJT', quote: "The bipolar junction transistor is a current-controlled valve that breathes life into weak signals." },
+      { word: 'MOSFET', quote: "The MOSFET uses an invisible electric field to govern the flow of current with near-zero input power." },
+      { word: 'Feedback', quote: "By feeding a fraction of the output back to the input, we trade raw gain for absolute circuit stability." },
+      { word: 'Power', quote: "When signals must drive physical loads, we move beyond voltage gain into the heavy lifting of power delivery." },
+      { word: 'Opamp', quote: "The operational amplifier transforms complex mathematical operations into simple, robust circuit designs." },
+    ],
+  },
+
 }
 
 export function getCourseMeta(subjectId) {

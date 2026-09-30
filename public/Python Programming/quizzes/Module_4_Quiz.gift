@@ -1,0 +1,162 @@
+// BEC305 Python Programming — Module 4: Classes and Objects
+// 20 multiple choice questions, 1 mark each.
+
+::M4Q1::[html]What does a class statement create?{
+ =A new type   #Correct - the class defines the type; calling it creates instances.
+ ~A new instance   #Wrong - an instance is created by calling the class, not by defining it.
+ ~A new module   #Wrong - a module is a file; a class lives inside one.
+ ~A new function   #Wrong - def creates a function; class creates a type.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 15 | CO4 | L1
+}
+
+::M4Q2::[html]What happens when you assign to a misspelled attribute, as in blank.Y \= 5 when y was intended?{
+ =A new attribute Y is created silently and y keeps its old value   #Correct - assignment creates attributes, so a typo makes a second one and nothing reports it.
+ ~AttributeError is raised   #Wrong - AttributeError is raised on reading a missing attribute, never on writing one.
+ ~y is updated anyway, since names are case-insensitive   #Wrong - Python names are case sensitive throughout.
+ ~TypeError is raised   #Wrong - no type rule is violated.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 15 | CO4 | L3
+}
+
+::M4Q3::[html]When does reading an attribute raise AttributeError?{
+ =When the attribute was never assigned on that instance or its class   #Correct - the read fails because the name is absent, which is usually a misspelled write earlier.
+ ~Whenever the attribute is None   #Wrong - an attribute holding None is present and reads fine.
+ ~Whenever the class has no __init__   #Wrong - a class without __init__ is legal; attributes can be assigned later.
+ ~Only for built-in types   #Wrong - it applies to any object.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 15 | CO4 | L2
+}
+
+::M4Q4::[html]What does box.corner.x express when box is a Rectangle holding a Point?{
+ =The x attribute of the Point held by the Rectangle   #Correct - each dot is one hop, resolved left to right.
+ ~A method call on box   #Wrong - a call would need parentheses.
+ ~A dictionary lookup   #Wrong - dot notation reaches attributes, not dictionary keys.
+ ~An attribute named corner.x on box   #Wrong - the dot separates two attribute lookups; it is not part of a single name.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 15 | CO4 | L2
+}
+
+::M4Q5::[html]If a function modifies an attribute of an object passed to it, what does the caller see?{
+ =The change, because the function received a reference rather than a copy   #Correct - Python never copies on a call, so mutation is visible to the caller.
+ ~Nothing, because arguments are copied   #Wrong - arguments are never copied; this is the misconception the unit exists to correct.
+ ~A TypeError   #Wrong - no type error arises from mutating an attribute.
+ ~The change only if the function returns the object   #Wrong - the return value is irrelevant; the object itself was changed.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 15 | CO4 | L4
+}
+
+::M4Q6::[html]After b \= copy.copy(box) where box holds a Point corner, what is b.corner is box.corner?{
+ =True   #Correct - a shallow copy duplicates the outer object only; the embedded Point is shared.
+ ~False   #Wrong - that would require copy.deepcopy.
+ ~None   #Wrong - is always returns a Boolean.
+ ~It raises an exception   #Wrong - the comparison is perfectly legal.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 15 | CO4 | L4
+}
+
+::M4Q7::[html]What is the defining property of a pure function?{
+ =It modifies nothing outside itself and returns a new value   #Correct - its entire effect is its return value, which is what makes it testable in one line.
+ ~It returns None   #Wrong - returning None is the convention for a modifier, the opposite case.
+ ~It takes no arguments   #Wrong - a pure function usually takes arguments; it simply does not modify them.
+ ~It is defined inside a class   #Wrong - purity has nothing to do with where the function is defined.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 16 | CO4 | L2
+}
+
+::M4Q8::[html]What does a modifier conventionally return?{
+ =None   #Correct - the None signals that the whole effect was the in-place change.
+ ~The modified object   #Wrong - returning the object makes it impossible to tell a modifier from a pure function at the call site.
+ ~A copy of the object   #Wrong - a modifier makes no copy; that is the point of it.
+ ~A Boolean indicating success   #Wrong - success is signalled by not raising.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 16 | CO4 | L2
+}
+
+::M4Q9::[html]Why is converting a Time to seconds since midnight before arithmetic a good idea?{
+ =The invariant is restored by the conversion back, so no carrying logic is needed   #Correct - divmod handles every carry, so the special cases disappear rather than being patched.
+ ~It is faster than attribute arithmetic   #Wrong - speed is not the motivation; correctness is.
+ ~It uses less memory   #Wrong - memory is unchanged.
+ ~It is required by the language   #Wrong - nothing in the language requires it; it is a design choice.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 16 | CO4 | L4
+}
+
+::M4Q10::[html]What distinguishes prototype-and-patch from designed development?{
+ =Patching accumulates special cases; design finds a representation in which they do not arise   #Correct - the canonical representation dissolves the special cases rather than handling them.
+ ~Patching is always wrong   #Wrong - prototyping is the right approach while the problem is still unfamiliar.
+ ~Design produces a first working version faster   #Wrong - prototyping reaches a first working version faster; design is cheaper to extend.
+ ~They produce identical code   #Wrong - the patched version carries branches the designed one does not need.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 16 | CO4 | L5
+}
+
+::M4Q11::[html]In a method definition, what is self?{
+ =The instance the method was called on, passed automatically   #Correct - the instance before the dot becomes the first argument.
+ ~A reserved keyword   #Wrong - self is a convention, not a keyword; any name would work, though none should be used.
+ ~The class itself   #Wrong - the class is what cls refers to in a classmethod.
+ ~A copy of the instance   #Wrong - no copy is made; self is the instance itself.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 17 | CO4 | L2
+}
+
+::M4Q12::[html]Calling t.print_time() on a method defined as def print_time()\: raises what?{
+ =TypeError, because the method takes 0 positional arguments but 1 was given   #Correct - the instance is always passed, so the definition must have a parameter to receive it.
+ ~AttributeError   #Wrong - the method exists, so the lookup succeeds; the call is what fails.
+ ~SyntaxError   #Wrong - the definition parses fine.
+ ~Nothing; it works   #Wrong - the automatic self argument has nowhere to go.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 17 | CO4 | L3
+}
+
+::M4Q13::[html]When is __init__ called?{
+ =Automatically, when the class is called to create an instance   #Correct - which is what guarantees no code path yields a half-built instance.
+ ~Only when you call it explicitly   #Wrong - Python invokes it for you on instantiation.
+ ~Once per class definition   #Wrong - it runs once per instance, not once per class.
+ ~When the object is garbage collected   #Wrong - that is __del__.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 17 | CO4 | L2
+}
+
+::M4Q14::[html]Why is a mutable default such as def __init__(self, items\=[]) a bug?{
+ =The default is evaluated once at definition time and shared by every instance   #Correct - one list is created at definition and every instance that omits the argument shares it.
+ ~Python raises SyntaxError   #Wrong - it is valid syntax, which is why the bug is common.
+ ~It makes the class unhashable   #Wrong - hashability is unaffected.
+ ~Defaults cannot be lists   #Wrong - a list default is permitted; it simply behaves surprisingly.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 17 | CO4 | L4
+}
+
+::M4Q15::[html]What does print(t) show when the class defines no __str__?{
+ =The class name and a memory address   #Correct - the default representation tells a reader nothing about the value.
+ ~An empty string   #Wrong - a default representation is always produced.
+ ~The attribute values   #Wrong - attribute values appear only if you write a method that shows them.
+ ~None   #Wrong - print never shows None for an object.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 17 | CO4 | L2
+}
+
+::M4Q16::[html]What must __str__ do with its result?{
+ =Return it as a string   #Correct - the caller does the printing; __str__ only supplies the text.
+ ~Print it   #Wrong - printing inside it makes the output appear twice and print(t) also show None.
+ ~Store it on the instance   #Wrong - no storage is involved.
+ ~Yield it   #Wrong - it is an ordinary method, not a generator.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 17 | CO4 | L3
+}
+
+::M4Q17::[html]Which special method does Python call for the expression t1 + t2?{
+ =t1.__add__(t2)   #Correct - the left operand is the receiver.
+ ~t2.__add__(t1)   #Wrong - that reflected form, __radd__, is tried only if the first returns NotImplemented.
+ ~__sum__   #Wrong - there is no __sum__ special method.
+ ~t1.add(t2)   #Wrong - the operator maps to the dunder name, not to a plain method.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 17 | CO4 | L3
+}
+
+::M4Q18::[html]What is the consequence of defining __eq__ without __hash__?{
+ =Instances become unhashable and cannot be used as dictionary keys   #Correct - Python sets __hash__ to None when __eq__ is defined, unless you supply one.
+ ~Equality stops working   #Wrong - equality works; it is hashing that breaks.
+ ~The class cannot be instantiated   #Wrong - instantiation is unaffected.
+ ~Nothing changes   #Wrong - the silent loss of hashability is a real and common surprise.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 17 | CO4 | L5
+}
+
+::M4Q19::[html]What does a long chain of isinstance branches usually indicate?{
+ =That a polymorphic interface would serve better   #Correct - each new type otherwise means another branch, where polymorphism needs none.
+ ~That the code is well designed   #Wrong - unbounded branch growth is the classic smell this unit names.
+ ~That the class needs more attributes   #Wrong - attribute count is unrelated.
+ ~That __init__ is missing   #Wrong - dispatch style has nothing to do with initialisation.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 17-18 | CO4 | L5
+}
+
+::M4Q20::[html]When is a full class the right choice over a namedtuple or dataclass?{
+ =When behaviour attaches to the data or an invariant must be enforced on construction   #Correct - ceremony is justified by behaviour or by an invariant, not by grouping alone.
+ ~Whenever two or more values travel together   #Wrong - a tuple or namedtuple carries the same information for far less code.
+ ~Whenever the values are numbers   #Wrong - the type of the values is irrelevant to the choice.
+ ~Always, since classes are the Pythonic form   #Wrong - a class containing only __init__ reproduces by hand what a dataclass gives free.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB2 Ch. 15-18 | CO4 | L5
+}

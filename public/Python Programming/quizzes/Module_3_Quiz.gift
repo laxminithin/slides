@@ -1,0 +1,162 @@
+// BEC305 Python Programming — Module 3: Pattern Matching with Regular Expressions and File Handling
+// 20 multiple choice questions, 1 mark each.
+
+::M3Q1::[html]Why should regular expressions be written as raw strings?{
+ =So backslashes reach the regex engine instead of being consumed as Python escape characters   #Correct - without the r prefix, Python processes the escapes first and the engine never sees the backslashes you wrote.
+ ~Because raw strings are faster   #Wrong - there is no speed difference; the r prefix only changes how the literal is parsed.
+ ~Because re.compile rejects ordinary strings   #Wrong - re.compile accepts either, which is why the bug is silent.
+ ~Because raw strings use less memory   #Wrong - memory is identical.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.150-152 | CO3 | L2
+}
+
+::M3Q2::[html]What does search() return when the pattern is not found?{
+ =None   #Correct - so the result must be tested before group() is called on it.
+ ~An empty Match object   #Wrong - no Match object is created at all when there is no match.
+ ~An empty string   #Wrong - search returns an object or None, never a string.
+ ~It raises an exception   #Wrong - failure is signalled by the return value, not by an exception.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.150-152 | CO3 | L2
+}
+
+::M3Q3::[html]In a Match object, what does group(0) return?{
+ =The entire match   #Correct - group(0) and group() both mean the whole matched text.
+ ~The first capturing group   #Wrong - capturing groups are numbered from 1, unusually for Python.
+ ~None   #Wrong - group(0) always exists when there is a match.
+ ~A tuple of all groups   #Wrong - that is what groups() returns.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.152-153 | CO3 | L2
+}
+
+::M3Q4::[html]What does re.compile(r'(Bat|Batman)').search('Batman').group() return?{
+ ='Bat'   #Correct - alternation tries left to right and stops at the first success, truncating the match.
+ ~'Batman'   #Wrong - that requires the longer alternative to be listed first.
+ ~None   #Wrong - a match certainly occurs; it is simply shorter than intended.
+ ~A tuple   #Wrong - group() returns a string, not a tuple.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.153-154 | CO3 | L4
+}
+
+::M3Q5::[html]For r'Bat(wo)?man' matching 'Batman', what is mo.group(1)?{
+ =None   #Correct - an optional group that did not participate captures None, not an empty string.
+ ~''   #Wrong - assuming an empty string here is exactly what causes AttributeError downstream.
+ ~'wo'   #Wrong - that is the value when the optional part is present.
+ ~IndexError   #Wrong - group 1 exists in the pattern, so the index is valid.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.154-155 | CO3 | L4
+}
+
+::M3Q6::[html]What is the difference between * and + as quantifiers?{
+ =* allows zero occurrences, + requires at least one   #Correct - the difference shows only on input containing none of the repeated element.
+ ~* is greedy and + is lazy   #Wrong - both are greedy by default; adding ? makes either lazy.
+ ~+ allows zero occurrences, * requires at least one   #Wrong - this reverses the two.
+ ~They are identical   #Wrong - they differ precisely on the zero case.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.155-156 | CO3 | L2
+}
+
+::M3Q7::[html]What does r'<.*>' match in '<to serve><man> for dinner'?{
+ ='<to serve><man>'   #Correct - the dot-star is greedy, so it spans to the last > it can.
+ ~'<to serve>'   #Wrong - that is what the nongreedy form <.*?> returns.
+ ~'<man>'   #Wrong - matching starts at the first < in the text.
+ ~Nothing   #Wrong - a match definitely occurs; it is just longer than expected.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.156-157 | CO3 | L4
+}
+
+::M3Q8::[html]How do you make a quantifier nongreedy?{
+ =Follow it with a question mark   #Correct - *? and +? match as little as possible.
+ ~Precede it with a caret   #Wrong - a caret anchors to the start or negates a class.
+ ~Wrap it in square brackets   #Wrong - square brackets define a character class.
+ ~Pass re.NONGREEDY   #Wrong - there is no such flag.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.156-157 | CO3 | L2
+}
+
+::M3Q9::[html]What does findall() return when the pattern contains two capturing groups?{
+ =A list of tuples, one tuple per match   #Correct - adding groups changes the return shape, which breaks every downstream line written for strings.
+ ~A list of strings   #Wrong - that is the shape only when the pattern has no capturing groups.
+ ~A Match object   #Wrong - findall returns plain data, never Match objects.
+ ~A dictionary   #Wrong - findall never returns a dictionary.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.157-158 | CO3 | L4
+}
+
+::M3Q10::[html]How do you group part of a pattern without capturing it?{
+ =(?\:...)   #Correct - a non-capturing group bundles for a quantifier but keeps findall returning a flat list.
+ ~(...)   #Wrong - plain parentheses both group and capture.
+ ~[...]   #Wrong - square brackets define a character class.
+ ~\{...\}   #Wrong - curly brackets specify a repetition count.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.157-158 | CO3 | L3
+}
+
+::M3Q11::[html]What does \\w match?{
+ =Any letter, digit or underscore   #Correct - the underscore is included, which surprises people expecting letters only.
+ ~Any whitespace character   #Wrong - that is backslash-s.
+ ~Any word of at least one letter   #Wrong - it matches a single character, not a whole word.
+ ~Any non-digit   #Wrong - that is backslash-D.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.158-159 | CO3 | L1
+}
+
+::M3Q12::[html]Inside square brackets, what does a leading caret mean?{
+ =It negates the character class   #Correct - the caret has a different meaning inside a class than outside one.
+ ~It anchors to the start of the string   #Wrong - that is its meaning outside square brackets.
+ ~It is a literal caret   #Wrong - it is literal only when it is not the first character in the class.
+ ~It makes the class case-insensitive   #Wrong - case-insensitivity comes from the re.IGNORECASE flag.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.158-162 | CO3 | L3
+}
+
+::M3Q13::[html]Which pattern validates that a whole string is digits and nothing else?{
+ =r'^\\d+$'   #Correct - both anchors together require the entire string to match.
+ ~r'\\d+'   #Wrong - unanchored, this matches a run of digits anywhere inside the string.
+ ~r'^\\d+'   #Wrong - anchoring only the start still permits trailing rubbish.
+ ~r'\\d*'   #Wrong - the star also matches the empty string, so this accepts anything.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.159-162 | CO3 | L4
+}
+
+::M3Q14::[html]What does the dot match by default?{
+ =Any single character except a newline   #Correct - re.DOTALL is needed to include the newline.
+ ~Any single character including a newline   #Wrong - that is the behaviour only with the DOTALL flag set.
+ ~A literal full stop only   #Wrong - a literal full stop requires escaping, or a character class.
+ ~Any sequence of characters   #Wrong - the dot matches exactly one character; a quantifier makes it a sequence.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.159-162 | CO3 | L2
+}
+
+::M3Q15::[html]Which flag lets you lay a long pattern out over several lines with comments?{
+ =re.VERBOSE   #Correct - VERBOSE makes whitespace and \# comments inside the pattern insignificant.
+ ~re.DOTALL   #Wrong - DOTALL changes what the dot matches.
+ ~re.IGNORECASE   #Wrong - IGNORECASE makes matching case-blind.
+ ~re.MULTILINE   #Wrong - MULTILINE changes what the anchors mean, not how the pattern may be laid out.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.7, pp.162-165 | CO3 | L3
+}
+
+::M3Q16::[html]Why should paths be built with os.path.join() rather than string concatenation?{
+ =join inserts the correct separator for whichever operating system is running   #Correct - a hardcoded separator works on one platform and silently breaks on the other.
+ ~join is faster than concatenation   #Wrong - speed is irrelevant; both are trivial string operations.
+ ~join verifies that the file exists   #Wrong - join is pure string work and checks nothing on disk.
+ ~Concatenation is a SyntaxError for paths   #Wrong - concatenation is valid syntax, which is what makes the bug survive to deployment.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.8, pp.173-177 | CO3 | L3
+}
+
+::M3Q17::[html]What happens to an existing file when it is opened in 'w' mode?{
+ =It is truncated to nothing immediately   #Correct - 'w' empties the file on opening, which is unrecoverable.
+ ~The new data is appended to the end   #Wrong - that is 'a' mode.
+ ~An exception is raised   #Wrong - no exception is raised; the loss is silent.
+ ~The file is opened read-only   #Wrong - 'w' is a write mode, and 'r' is the read-only one.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.8, pp.180-184 | CO3 | L2
+}
+
+::M3Q18::[html]Why is the with statement preferred when opening a file?{
+ =It closes the file even if an exception is raised inside the block   #Correct - a manual close is skipped when an exception unwinds past it, leaving data unflushed.
+ ~It opens the file faster   #Wrong - opening speed is identical.
+ ~It allows more than one mode at a time   #Wrong - the mode is still a single argument.
+ ~It is required by Python 3   #Wrong - manual open and close is still legal, just less safe.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.8, pp.180-184 | CO3 | L3
+}
+
+::M3Q19::[html]What is the main advantage of shelve over writing a text file by hand?{
+ =Values come back as the same Python types, with no parsing needed   #Correct - a stored list returns as a list rather than as a string that must be parsed.
+ ~The file can be edited in any text editor   #Wrong - a shelf file is binary and cannot usefully be hand-edited.
+ ~It is human-readable   #Wrong - the opposite; opacity is the price shelve charges.
+ ~It works without importing a module   #Wrong - shelve must be imported like any other module.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.8, pp.184-185 | CO3 | L4
+}
+
+::M3Q20::[html]Why must a pformat file contain an assignment such as cats \= [...] rather than the bare structure?{
+ =Importing the module must bind a name you can then read   #Correct - importing executes the file, and without a binding there is nothing to reference afterwards.
+ ~pformat cannot produce a bare structure   #Wrong - pformat returns exactly the structure text; the assignment is added by you.
+ ~Python refuses to import a file without an assignment   #Wrong - such a file imports perfectly well; it simply exposes nothing.
+ ~The assignment makes the file smaller   #Wrong - the assignment makes the file marginally longer.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., Ch.8, pp.185-192 | CO3 | L5
+}

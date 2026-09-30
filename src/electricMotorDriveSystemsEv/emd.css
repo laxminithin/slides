@@ -1,0 +1,1232 @@
+/* Electric Circuit Analysis (VTU 1BEE303) — engineering graph paper over slate ink.
+   --emd-data = voltages, currents and the traces they draw,
+   --emd-active = the element or loop currently under the pencil,
+   --emd-path = the transform domain, --emd-danger = the mistake. */
+
+.electric-circuit-analysis-deck,
+.emd-deck {
+  --emd-ink: #152430;
+  --emd-muted: #55677a;
+  --emd-cream: #fffdf8;
+  --emd-paper: #f5f3ec;
+  --emd-navy: #152430;
+  --emd-data: #1d4ed8;
+  --emd-active: #c2410c;
+  --emd-pointer: #7c3aed;
+  --emd-ok: #15803d;
+  --emd-danger: #b91c1c;
+  --emd-path: #0f766e;
+  --emd-sky: #e6eefb;
+  --emd-line: rgba(21, 36, 48, 0.12);
+  --emd-shadow: 0 16px 40px rgba(21, 36, 48, 0.1);
+  --emd-module: #1d4ed8;
+  --accent: #1d4ed8;
+  --accent-soft: #334155;
+  --card-accent: #1d4ed8;
+  color: var(--emd-ink);
+}
+
+/* One hue per module: formulate · shortcut · respond · transform · encapsulate */
+.electric-circuit-analysis-deck[data-emd-module="1"] { --emd-module: #1d4ed8; --accent: #1d4ed8; }
+.electric-circuit-analysis-deck[data-emd-module="2"] { --emd-module: #c2410c; --accent: #c2410c; }
+.electric-circuit-analysis-deck[data-emd-module="3"] { --emd-module: #0f766e; --accent: #0f766e; }
+.electric-circuit-analysis-deck[data-emd-module="4"] { --emd-module: #7c3aed; --accent: #7c3aed; }
+.electric-circuit-analysis-deck[data-emd-module="5"] { --emd-module: #15803d; --accent: #15803d; }
+
+.module-cover.electric-circuit-analysis { --card-accent: #1d4ed8; }
+
+.electric-circuit-analysis-deck .slide-frame {
+  background:
+    radial-gradient(920px 460px at 6% -18%, rgba(29, 78, 216, 0.1), transparent 58%),
+    radial-gradient(720px 380px at 96% 0%, rgba(194, 65, 12, 0.06), transparent 54%),
+    radial-gradient(540px 280px at 70% 110%, rgba(15, 118, 110, 0.08), transparent 50%),
+    linear-gradient(165deg, #fffdf9 0%, #fcfaf3 52%, #f6f4ed 100%);
+}
+
+/* Squared engineering paper — this subject is worked out with a pencil and a
+   ruler, and every diagram in it is drawn on a grid. */
+.electric-circuit-analysis-deck .slide-frame::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(29, 78, 216, 0.09) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, rgba(29, 78, 216, 0.09) 0 1px, transparent 1px 24px);
+  background-size: 24px 24px, 24px 24px;
+  mix-blend-mode: multiply;
+}
+
+.electric-circuit-analysis-deck[data-emd-module="2"] .slide-frame::after { opacity: 0.2; }
+.electric-circuit-analysis-deck[data-emd-module="3"] .slide-frame::after { opacity: 0.2; }
+.electric-circuit-analysis-deck[data-emd-module="4"] .slide-frame::after { opacity: 0.18; }
+.electric-circuit-analysis-deck[data-emd-module="5"] .slide-frame::after { opacity: 0.18; }
+
+.electric-circuit-analysis-deck .slide-header-copy .slide-kicker {
+  color: var(--emd-module);
+}
+
+.electric-circuit-analysis-deck .slide-header-copy .slide-title {
+  font-size: clamp(34px, 2.7vw, 48px);
+  line-height: 1.14;
+  padding-bottom: 4px;
+  overflow: visible;
+  color: var(--emd-navy);
+}
+
+/* ── Stage shell ── */
+.emd-stage {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px 16px;
+  box-sizing: border-box;
+}
+
+.emd-story {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.emd-story span {
+  font-size: clamp(10px, 0.85vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--emd-muted);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+.emd-story span.lit { opacity: 0.8; color: var(--emd-navy); }
+.emd-story span.now {
+  opacity: 1;
+  color: var(--emd-module);
+  transform: translateX(2px);
+}
+
+.emd-copy {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.emd-visual,
+.emd-visual-b {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+.emd-footer-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  min-width: 0;
+}
+.emd-takeaway,
+.emd-exam {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.35;
+}
+.emd-takeaway strong { color: var(--emd-ok); }
+.emd-exam strong {
+  color: var(--emd-active);
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+}
+
+/* ── Compositions ── */
+.emd-split-right {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(240px, 0.78fr) minmax(380px, 1.22fr);
+  grid-template-rows: 1fr auto;
+}
+/* Explicit placement so copy/visual don't collapse into the story column when
+   a slide renders without a <story> rail (e.g. the example beats). */
+.emd-split-right .emd-story { grid-row: 1 / 3; grid-column: 1; }
+.emd-split-right .emd-copy { grid-column: 2; }
+.emd-split-right .emd-visual { grid-column: 3; }
+.emd-split-right .emd-footer-band { grid-column: 2 / 4; }
+
+/* Algorithm beat: visual is the hero (left), algorithm/dry-run rail (right).
+   Explicit row/col placement + align-items:stretch gives BOTH cells the full
+   row height — without it the aspect-locked SVG collapsed the visual to its
+   intrinsic height and the copy cell shrank, clipping the dry-run panel. */
+.emd-split-left {
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.85fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+}
+.emd-split-left .emd-story { display: none; }
+.emd-split-left .emd-visual { grid-column: 1; grid-row: 1; min-height: 0; align-self: stretch; }
+.emd-split-left .emd-copy { grid-column: 2; grid-row: 1; min-height: 0; align-self: stretch; }
+.emd-split-left .emd-footer-band { grid-column: 1 / 3; grid-row: 2; }
+
+.emd-full-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.emd-full-stage .emd-story { display: none; }
+.emd-full-stage .emd-copy { max-width: 78%; }
+.emd-full-stage .emd-visual { min-height: 0; }
+
+/* Full-width, vertically-centred layout for text-grid framing slides
+   (syllabus audit, practice) — they used a half-width "board"
+   column and left the lower half empty. */
+.emd-fill {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.emd-fill .emd-story { display: none; }
+.emd-fill .emd-copy {
+  grid-row: 1;
+  align-content: safe start;
+  gap: 14px;
+  padding-block: 2px 6px;
+  overflow: hidden;
+}
+.emd-fill .emd-footer-band { grid-row: 2; }
+.emd-fill .emd-lead { font-size: clamp(22px, 1.7vw, 28px); }
+/* let the framing grids breathe across the full stage */
+.emd-fill .emd-syllabus-audit { grid-template-columns: repeat(auto-fit, minmax(184px, 1fr)); gap: 9px; }
+.emd-fill .emd-syllabus-audit article {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 11px;
+  min-height: 40px;
+}
+.emd-fill .emd-syllabus-audit strong { font-size: clamp(13px, 0.92vw, 16px); line-height: 1.18; }
+.emd-fill .emd-syllabus-audit em { font-size: 12px; }
+/* Hardened cap: the syllabus checklist must fit above the footer even in
+   the fullest module (22-24 long topic names). High-specificity + !important
+   so it wins over the platform legibility/base font unconditionally. */
+.emd-stage.emd-fill .emd-syllabus-audit strong { font-size: 15px !important; line-height: 1.16 !important; }
+.emd-stage.emd-fill .emd-syllabus-audit em { font-size: 11px !important; }
+.emd-stage.emd-fill .emd-syllabus-audit article { min-height: 38px !important; padding: 6px 10px !important; gap: 2px !important; }
+.emd-fill .emd-practice-list { gap: 18px; font-size: clamp(17px, 1.3vw, 21px); }
+
+.emd-hero-open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.emd-hero-open .emd-story,
+.emd-hero-open .emd-copy { display: none; }
+.emd-hero-open .emd-visual { min-height: 0; }
+.emd-hero-open .emd-footer-band { justify-content: center; }
+
+.emd-showcase {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 6px;
+}
+.emd-showcase .emd-story,
+.emd-showcase .emd-copy { display: none; }
+.emd-showcase .emd-visual { grid-row: 1; min-height: 0; }
+.emd-showcase .emd-footer-band {
+  justify-content: center;
+  border-top: 1px solid var(--emd-line);
+  padding-top: 6px;
+}
+.emd-showcase .emd-takeaway { font-size: clamp(14px, 1.05vw, 17px); }
+
+.emd-board {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.emd-board .emd-story { display: none; }
+.emd-board .emd-footer-band { grid-column: 1 / 3; }
+
+.emd-inspect {
+  grid-template-columns: minmax(220px, 0.42fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.emd-inspect .emd-story { display: none; }
+.emd-inspect .emd-visual { grid-column: 2; grid-row: 1; }
+.emd-inspect .emd-footer-band { grid-column: 1 / 3; }
+
+.emd-pipeline {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.emd-pipeline .emd-story { grid-row: 1 / 4; }
+.emd-pipeline .emd-copy,
+.emd-pipeline .emd-visual,
+.emd-pipeline .emd-footer-band { grid-column: 2; }
+
+.emd-memory-first {
+  grid-template-columns: minmax(200px, 0.32fr) minmax(420px, 1.2fr);
+  grid-template-rows: 1fr auto;
+}
+.emd-memory-first .emd-story { display: none; }
+.emd-memory-first .emd-visual { grid-column: 2; grid-row: 1; }
+.emd-memory-first .emd-footer-band { grid-column: 1 / 3; }
+
+.emd-algo-board {
+  grid-template-columns: minmax(260px, 0.48fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.emd-algo-board .emd-story { display: none; }
+.emd-algo-board .emd-footer-band { grid-column: 1 / 3; }
+
+.emd-code-split {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-rows: 1fr auto;
+}
+.emd-code-split .emd-story { display: none; }
+.emd-code-split .emd-footer-band { grid-column: 1 / 3; }
+
+.electric-circuit-analysis-deck .slide-frame[data-composition="full-stage"] .emd-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="hero-open"] .emd-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="memory-first"] .emd-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="showcase"] .emd-visual {
+  min-height: 0;
+}
+.emd-full-stage .emd-visual { min-height: 62%; }
+.emd-hero-open .emd-visual,
+.emd-memory-first .emd-visual { flex: 1 1 auto; }
+
+/* ── Typography blocks ── */
+.emd-lead {
+  margin: 0;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.38;
+  font-weight: 650;
+  color: var(--emd-navy);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.emd-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.34;
+}
+.emd-points li { padding-left: 2px; }
+.emd-points li::marker { color: var(--emd-module); font-weight: 800; }
+
+.emd-definition {
+  background: #fff;
+  border: 1px solid var(--emd-line);
+  border-left: 5px solid var(--emd-data);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--emd-shadow);
+}
+.emd-definition span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--emd-data);
+}
+.emd-definition strong {
+  display: block;
+  font-size: clamp(20px, 1.6vw, 28px);
+  margin: 4px 0;
+}
+.emd-definition p {
+  margin: 0;
+  font-size: clamp(15px, 1.1vw, 18px);
+}
+
+.emd-callout {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--emd-line);
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+}
+.emd-callout span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+}
+.emd-callout p {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.emd-callout-warn { border-left: 4px solid var(--emd-active); }
+.emd-callout-fault { border-left: 4px solid var(--emd-danger); }
+.emd-callout-ok { border-left: 4px solid var(--emd-ok); }
+.emd-callout-idea { border-left: 4px solid var(--emd-data); }
+.emd-callout-know { border-left: 4px solid var(--emd-pointer); }
+
+/* Scene shell */
+.emd-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.72), rgba(255, 250, 240, 0.28) 62%, transparent 78%);
+  overflow: hidden;
+  position: relative;
+}
+.emd-scene svg,
+.emd-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Code panel — light, readable (≥19px) */
+.emd-code-panel {
+  background: #ffffff;
+  border: 1.5px solid var(--emd-line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--emd-shadow);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.emd-code-line {
+  font-size: clamp(19px, 1.45vw, 22px);
+  line-height: 1.55;
+  color: var(--emd-navy);
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: pre;
+}
+.emd-code-line.is-current {
+  background: rgba(217, 119, 6, 0.14);
+  color: var(--emd-active);
+  box-shadow: inset 3px 0 0 var(--emd-active);
+}
+
+/* Linked list / stack / queue / tree helpers */
+.emd-ll-node { transform-box: fill-box; }
+.emd-stack-cell,
+.emd-queue-cell,
+.emd-tree-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ── Concept-native motion (emdm-*) ──
+   State-change animations — not fade-in as primary teaching motion. */
+
+@keyframes emdm-allocate {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  55% { transform: scale(0.96); }
+  70% { transform: scale(1.03); }
+}
+@keyframes emdm-shift {
+  0%, 12% { transform: translateX(0); }
+  45%, 55% { transform: translateX(28px); }
+  88%, 100% { transform: translateX(0); }
+}
+@keyframes emdm-insert {
+  0%, 15% { transform: translateY(-28px) scale(0.85); opacity: 0.35; }
+  40% { transform: translateY(0) scale(1.06); opacity: 1; }
+  55%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes emdm-delete {
+  0%, 20% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(0.92) translateY(6px); opacity: 0.45; }
+  70%, 100% { transform: scale(0.85); opacity: 0.2; }
+}
+@keyframes emdm-push {
+  0%, 10% { transform: translateY(-40px); opacity: 0.4; }
+  35% { transform: translateY(4px); opacity: 1; }
+  50%, 100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes emdm-pop {
+  0%, 15% { transform: translateY(0); opacity: 1; }
+  45% { transform: translateY(-36px); opacity: 0.35; }
+  70%, 100% { transform: translateY(-8px); opacity: 0.55; }
+}
+@keyframes emdm-enqueue {
+  0%, 12% { transform: translateX(40px); opacity: 0.35; }
+  40% { transform: translateX(-4px); opacity: 1; }
+  55%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes emdm-dequeue {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  45% { transform: translateX(-48px); opacity: 0.3; }
+  70%, 100% { transform: translateX(-12px); opacity: 0.5; }
+}
+@keyframes emdm-wrap {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(18deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(4deg); }
+}
+@keyframes emdm-pointer {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -24; }
+}
+@keyframes emdm-rewire {
+  0%, 20% { stroke-dashoffset: 40; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+@keyframes emdm-traverse {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -36; }
+}
+@keyframes emdm-search {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(20px); }
+  75% { transform: translateX(10px); }
+}
+@keyframes emdm-swap {
+  0%, 100% { transform: translate(0, 0); }
+  35% { transform: translate(14px, -10px); }
+  70% { transform: translate(-14px, 10px); }
+}
+@keyframes emdm-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.62; }
+}
+@keyframes emdm-wave {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.07); }
+  70% { transform: scale(1.02); }
+}
+@keyframes emdm-descend {
+  0%, 10% { transform: translate(0, -24px); opacity: 0.5; }
+  45% { transform: translate(36px, 40px); opacity: 1; }
+  70% { transform: translate(72px, 90px); opacity: 1; }
+  100% { transform: translate(72px, 90px); opacity: 0.85; }
+}
+@keyframes emdm-return {
+  0%, 15% { transform: translate(40px, 60px); opacity: 0.6; }
+  55% { transform: translate(10px, 10px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+.emdm-allocate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-allocate 2.4s ease-in-out infinite;
+}
+.emdm-shift {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-shift 2.8s ease-in-out infinite;
+}
+.emdm-insert {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-insert 2.6s ease-out infinite;
+}
+.emdm-delete {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-delete 2.8s ease-in-out infinite;
+}
+.emdm-push {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-push 2.4s ease-out infinite;
+}
+.emdm-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-pop 2.4s ease-in infinite;
+}
+.emdm-enqueue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-enqueue 2.5s ease-out infinite;
+}
+.emdm-dequeue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-dequeue 2.5s ease-in infinite;
+}
+.emdm-wrap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-wrap 3s ease-in-out infinite;
+}
+.emdm-pointer {
+  stroke-dasharray: 10 8;
+  animation: emdm-pointer 1.4s linear infinite;
+}
+.emdm-rewire {
+  stroke-dasharray: 12 10;
+  animation: emdm-rewire 2.2s ease-in-out infinite;
+}
+.emdm-traverse {
+  stroke-dasharray: 10 8;
+  animation: emdm-traverse 1.6s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.emdm-search {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-search 2.6s ease-in-out infinite;
+}
+.emdm-swap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-swap 2.4s ease-in-out infinite;
+}
+.emdm-pulse {
+  animation: emdm-pulse 1.9s ease-in-out infinite;
+}
+.emdm-wave {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-wave 2.2s ease-in-out infinite;
+}
+.emdm-descend {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-descend 3.2s ease-in-out infinite;
+}
+.emdm-return {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: emdm-return 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emdm-allocate, .emdm-shift, .emdm-insert, .emdm-delete,
+  .emdm-push, .emdm-pop, .emdm-enqueue, .emdm-dequeue,
+  .emdm-wrap, .emdm-pointer, .emdm-rewire, .emdm-traverse,
+  .emdm-search, .emdm-swap, .emdm-pulse, .emdm-wave,
+  .emdm-descend, .emdm-return {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Kit components ── */
+.emd-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 750;
+  color: var(--emd-navy);
+}
+.emd-flow i { color: var(--emd-module); font-style: normal; font-weight: 900; }
+
+.emd-algo-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+  font-size: clamp(15px, 1.15vw, 19px);
+  line-height: 1.4;
+}
+.emd-algo-steps li::marker { color: var(--emd-module); font-weight: 800; }
+
+.emd-complexity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--emd-line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.emd-complexity > div {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+.emd-complexity span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--emd-muted);
+}
+/* 1BEE303 cost cells hold a sentence ("one constraint per dependent source"),
+   not a big-O token, so they read at body size rather than display size. */
+.emd-complexity strong {
+  font-size: clamp(13px, 1.02vw, 16px);
+  line-height: 1.28;
+  font-weight: 750;
+  color: var(--emd-data);
+}
+.emd-complexity > p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--emd-muted);
+}
+
+.emd-code-panel span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--emd-module);
+  margin-bottom: 8px;
+  font-family: system-ui, sans-serif;
+}
+.emd-code-panel pre {
+  margin: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.emd-code-panel code {
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.45;
+  color: var(--emd-navy);
+  font-weight: 650;
+}
+
+.emd-dryrun {
+  display: grid;
+  gap: 8px;
+}
+.emd-dryrun section {
+  background: #fff;
+  border: 1px solid var(--emd-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.emd-dryrun span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--emd-module);
+}
+.emd-dryrun p { margin: 4px 0 0; font-size: 15px; }
+.emd-dryrun ol {
+  margin: 4px 0 0;
+  padding-left: 1.15em;
+  font-size: 14px;
+  display: grid;
+  gap: 3px;
+}
+
+.emd-term-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.emd-term-chips span {
+  background: var(--emd-sky);
+  color: var(--emd-data);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.emd-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.emd-roadmap article {
+  background: #fff;
+  border: 1px solid var(--emd-line);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+.emd-roadmap b { color: var(--emd-module); font-size: 12px; }
+.emd-roadmap strong { font-size: 14px; line-height: 1.25; }
+
+.emd-checkpoint-sheet {
+  display: grid;
+  gap: 7px;
+}
+.emd-checkpoint-sheet article {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.72fr) auto 1.85fr;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--emd-line);
+  border-radius: 12px;
+  padding: 7px 12px;
+}
+.emd-checkpoint-sheet code {
+  font-size: clamp(16px, 1.2vw, 21px);
+  font-weight: 800;
+  color: var(--emd-data);
+}
+.emd-checkpoint-sheet span { font-size: 12.5px; line-height: 1.25; color: var(--emd-muted); }
+
+.emd-syllabus-audit {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+.emd-syllabus-audit article {
+  background: #fff;
+  border: 1px solid var(--emd-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.emd-syllabus-audit strong { font-size: 14px; }
+.emd-syllabus-audit em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--emd-ok);
+}
+
+.emd-practice-list {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(15px, 1.15vw, 18px);
+}
+.emd-practice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.emd-practice-list em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--emd-active);
+  white-space: nowrap;
+}
+
+.emd-review-map {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 12px;
+}
+.emd-review-map h3 {
+  margin: 0;
+  font-size: clamp(22px, 2vw, 32px);
+  color: var(--emd-navy);
+}
+.emd-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.emd-review-topics span {
+  background: #fff;
+  border: 1.5px solid var(--emd-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ── Instructional motion (classroom-paced) ── */
+@keyframes emdm-flow-node {
+  0%, 100% { opacity: 0.55; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-4px); }
+}
+@keyframes emdm-flow-arrow {
+  0% { stroke-dashoffset: 24; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.4; }
+}
+@keyframes emdm-feedback {
+  0% { stroke-dashoffset: 40; opacity: 0.45; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -40; opacity: 0.45; }
+}
+@keyframes emdm-waterfall {
+  0% { opacity: 0; transform: translate(-12px, -18px); }
+  30%, 100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes emdm-cost-curve {
+  0% { stroke-dasharray: 0 800; }
+  100% { stroke-dasharray: 800 0; }
+}
+@keyframes emdm-cost-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+@keyframes emdm-grow {
+  0% { opacity: 0; transform: scaleX(0.55); transform-origin: center; }
+  45%, 100% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes emdm-spiral {
+  0% { opacity: 0.15; }
+  40% { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+@keyframes emdm-concurrent {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+@keyframes emdm-up-line {
+  0% { stroke-dasharray: 0 1200; }
+  100% { stroke-dasharray: 1200 0; }
+}
+@keyframes emdm-orbit {
+  0%, 100% { opacity: 0.65; }
+  50% { opacity: 1; }
+}
+@keyframes emdm-token {
+  0% { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateY(-170px) rotate(-360deg); }
+}
+@keyframes emdm-backlog {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(210px); }
+  70% { transform: translateX(420px); }
+  100% { transform: translateX(630px); }
+}
+@keyframes emdm-xp-step {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+@keyframes emdm-bar {
+  0% { transform: scaleX(0.2); transform-origin: left center; opacity: 0.4; }
+  50%, 100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes emdm-gate {
+  0%, 100% { opacity: 0.7; }
+  40% { opacity: 1; }
+}
+@keyframes emdm-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  40%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes emdm-pulse-soft {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.emdm-flow-node { animation: emdm-flow-node 3.2s ease-in-out infinite; }
+.emdm-flow-arrow { stroke-dasharray: 10 8; animation: emdm-flow-arrow 2.8s linear infinite; }
+.emdm-feedback { stroke-dasharray: 10 8; animation: emdm-feedback 3.6s linear infinite; }
+.emdm-waterfall { animation: emdm-waterfall 3.5s ease-out infinite; }
+.emdm-cost-curve { animation: emdm-cost-curve 4s ease-out infinite; }
+.emdm-cost-dot { animation: emdm-cost-dot 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.emdm-grow { animation: emdm-grow 3.8s ease-out infinite; }
+.emdm-spiral { animation: emdm-spiral 3.2s ease-in-out infinite; }
+.emdm-concurrent { animation: emdm-concurrent 2.8s ease-in-out infinite; }
+.emdm-up-line { animation: emdm-up-line 4.5s ease-out infinite; }
+.emdm-orbit { animation: emdm-orbit 2.6s ease-in-out infinite; }
+.emdm-token { animation: emdm-token 12s linear infinite; transform-box: fill-box; transform-origin: 450px 260px; }
+.emdm-backlog-card { animation: emdm-backlog 10s ease-in-out infinite; }
+.emdm-xp-step { animation: emdm-xp-step 3s ease-in-out infinite; }
+.emdm-bar { animation: emdm-bar 3.4s ease-out infinite; }
+.emdm-gate { animation: emdm-gate 2.8s ease-in-out infinite; }
+.emdm-fade-in { animation: emdm-fade-in 2.4s ease-out both; }
+.emdm-pulse { animation: emdm-pulse-soft 2.4s ease-in-out infinite; }
+.emdm-step { animation: emdm-pulse-soft 2.8s ease-in-out infinite; }
+.emdm-actor { animation: emdm-pulse-soft 3s ease-in-out infinite; }
+.emdm-usecase-step { animation: emdm-flow-node 2.8s ease-in-out infinite; }
+.emdm-system-box { animation: emdm-pulse-soft 2.6s ease-in-out infinite; }
+.emdm-risk-cell { animation: emdm-pulse-soft 3.2s ease-in-out infinite; }
+.emdm-risk-dot { animation: emdm-cost-dot 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.emdm-delay-0 { animation-delay: 0s; }
+.emdm-delay-1 { animation-delay: 0.35s; }
+.emdm-delay-2 { animation-delay: 0.7s; }
+.emdm-delay-3 { animation-delay: 1.05s; }
+.emdm-delay-4 { animation-delay: 1.4s; }
+
+/* ── Electric Circuit Analysis instructional motion ──
+   Every animation below shows a circuit mechanism: current marching, a phasor
+   turning, a transient decaying, a pole moving. Decoration is not the job. */
+@keyframes emdm-current {
+  0% { stroke-dashoffset: 36; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes emdm-current-rev {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 36; }
+}
+@keyframes emdm-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes emdm-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes emdm-draw {
+  0% { stroke-dashoffset: 900; }
+  55%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes emdm-sweep-x {
+  0% { transform: translateX(0); opacity: 0.25; }
+  12% { opacity: 1; }
+  100% { transform: translateX(var(--emdm-sweep, 620px)); opacity: 0.9; }
+}
+@keyframes emdm-switch {
+  0%, 35% { transform: rotate(-32deg); }
+  55%, 100% { transform: rotate(0deg); }
+}
+@keyframes emdm-decay-dot {
+  0% { transform: translate(0, 0); opacity: 0.4; }
+  10% { opacity: 1; }
+  100% { transform: translate(var(--emdm-dx, 560px), var(--emdm-dy, 210px)); opacity: 0.9; }
+}
+@keyframes emdm-ring {
+  0%, 100% { transform: translateY(0); }
+  18% { transform: translateY(-46px); }
+  36% { transform: translateY(32px); }
+  54% { transform: translateY(-19px); }
+  72% { transform: translateY(11px); }
+  86% { transform: translateY(-5px); }
+}
+@keyframes emdm-merge-l {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(118px); opacity: 0.35; }
+}
+@keyframes emdm-merge-r {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(-118px); opacity: 0.35; }
+}
+@keyframes emdm-collapse {
+  0%, 25% { transform: scale(1); opacity: 1; }
+  70%, 100% { transform: scale(0.42); opacity: 0.18; }
+}
+@keyframes emdm-emerge {
+  0%, 35% { transform: scale(0.55); opacity: 0; }
+  80%, 100% { transform: scale(1); opacity: 1; }
+}
+@keyframes emdm-slide-in {
+  0% { transform: translateX(-34px); opacity: 0; }
+  45%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes emdm-pole-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(var(--emdm-px, -70px), 0); }
+}
+@keyframes emdm-needle {
+  0%, 100% { transform: rotate(-58deg); }
+  50% { transform: rotate(52deg); }
+}
+@keyframes emdm-wave-shift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-180px); }
+}
+@keyframes emdm-cell-in {
+  0% { opacity: 0; transform: translateY(9px) scale(0.94); }
+  45%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes emdm-charge {
+  /* Floor stays high enough that pulsing LABELS remain readable. */
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+@keyframes emdm-flux {
+  0%, 100% { transform: scale(0.94); opacity: 0.72; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+@keyframes emdm-probe {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(var(--emdm-probe, 96px)); }
+}
+@keyframes emdm-flip {
+  0%, 20% { transform: scaleX(1); }
+  45%, 100% { transform: scaleX(-1); }
+}
+
+.emdm-current { stroke-dasharray: 9 9; animation: emdm-current 1.1s linear infinite; }
+.emdm-current-slow { stroke-dasharray: 9 9; animation: emdm-current 2.2s linear infinite; }
+.emdm-current-rev { stroke-dasharray: 9 9; animation: emdm-current-rev 1.4s linear infinite; }
+.emdm-spin { animation: emdm-spin 4.4s linear infinite; transform-box: fill-box; }
+.emdm-spin-slow { animation: emdm-spin-slow 6s linear infinite; transform-box: fill-box; }
+.emdm-draw { stroke-dasharray: 900; animation: emdm-draw 4s ease-out infinite; }
+.emdm-sweep-x { animation: emdm-sweep-x 3.6s linear infinite; }
+.emdm-switch { animation: emdm-switch 3.4s ease-in-out infinite; transform-box: fill-box; }
+.emdm-decay-dot { animation: emdm-decay-dot 3.8s ease-in infinite; transform-box: fill-box; }
+.emdm-ring { animation: emdm-ring 3.6s ease-in-out infinite; transform-box: fill-box; }
+.emdm-merge-l { animation: emdm-merge-l 3.8s ease-in-out infinite; transform-box: fill-box; }
+.emdm-merge-r { animation: emdm-merge-r 3.8s ease-in-out infinite; transform-box: fill-box; }
+.emdm-collapse { animation: emdm-collapse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+/* Reveals play ONCE and hold. Looping them would leave labelled steps and
+   formulas fading in and out under the reader — legibility beats motion. */
+.emdm-emerge { animation: emdm-emerge 1.2s ease-out both; transform-box: fill-box; transform-origin: center; }
+.emdm-slide-in { animation: emdm-slide-in 0.9s ease-out both; transform-box: fill-box; }
+.emdm-pole-drift { animation: emdm-pole-drift 4.4s ease-in-out infinite; transform-box: fill-box; }
+.emdm-needle { animation: emdm-needle 3.4s ease-in-out infinite; transform-box: fill-box; }
+.emdm-wave-shift { animation: emdm-wave-shift 2.4s linear infinite; }
+.emdm-cell-in { animation: emdm-cell-in 0.9s ease-out both; transform-box: fill-box; }
+.emdm-charge { animation: emdm-charge 2.2s ease-in-out infinite; }
+.emdm-flux { animation: emdm-flux 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.emdm-probe { animation: emdm-probe 3.2s ease-in-out infinite; transform-box: fill-box; }
+.emdm-flip { animation: emdm-flip 4.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.emdm-delay-5 { animation-delay: 1.75s; }
+.emdm-delay-6 { animation-delay: 2.1s; }
+.emdm-delay-7 { animation-delay: 2.45s; }
+
+
+.emd-scene, .emd-showcase-scene { width: 100%; height: 100%; min-height: 0; }
+.emd-svg { width: 100%; height: 100%; display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .electric-circuit-analysis-deck [class*="emdm-"] {
+    animation: none !important;
+  }
+}
+
+/* Dense algorithm slides (real algo steps + dry-run trace) must fit the
+   algo-board left column at 1280×720. Tighten only in that composition. */
+.emd-algo-board .emd-algo-steps { gap: 4px; font-size: clamp(14px, 1.02vw, 17px); line-height: 1.3; }
+.emd-algo-board .emd-dryrun { gap: 5px; }
+.emd-algo-board .emd-dryrun section { padding: 6px 11px; }
+.emd-algo-board .emd-dryrun ol { gap: 2px; font-size: 13.5px; }
+.emd-algo-board .emd-dryrun p { font-size: 14px; }
+.emd-algo-board .emd-lead { font-size: clamp(16px, 1.25vw, 20px); }
+
+/* ── 1BEE303-specific kit pieces (no Computer Graphics counterpart) ── */
+
+/* Textbook provenance carried from Phase 1. Units whose prescribed book was
+   not supplied render a chapter with no page range — that is intentional. */
+.emd-book-cite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--emd-muted);
+}
+.emd-book-cite b {
+  background: var(--emd-sky);
+  color: var(--emd-data);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.emd-book-cite span { font-style: normal; }
+.emd-book-cite em {
+  font-style: normal;
+  background: rgba(21, 128, 61, 0.1);
+  color: var(--emd-ok);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.emd-book-cite i {
+  font-style: normal;
+  border: 1px solid var(--emd-line);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.emd-quiz-card {
+  background: #fff;
+  border: 1px solid var(--emd-line);
+  border-left: 4px solid var(--emd-data);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: var(--emd-shadow);
+}
+.emd-quiz-card + .emd-quiz-card { margin-top: 8px; }
+.emd-quiz-card strong {
+  display: block;
+  font-size: 15.5px;
+  line-height: 1.3;
+  color: var(--emd-navy);
+}
+.emd-quiz-card ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 10px;
+  margin: 8px 0 0;
+  padding: 0 0 0 18px;
+  font-size: 13.5px;
+  font-weight: 650;
+}
+.emd-quiz-card li.is-correct {
+  color: var(--emd-ok);
+  font-weight: 800;
+}
+.emd-quiz-card li.is-correct::marker { color: var(--emd-ok); }
+.emd-quiz-card p {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--emd-muted);
+}
+
+/* Showcase beats hand the whole stage to one mechanism. */
+.emd-showcase-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Eight checkpoint rows must fit one 1280x720 stage above the footer band.
+   Sized against the longest 1BEE303 topic ("Sources of electrical energy:
+   independent and dependent") wrapping to two lines. !important so it beats
+   the platform legibility layer, which loads after this sheet. */
+.emd-stage.emd-fill .emd-checkpoint-sheet { gap: 6px !important; }
+.emd-stage.emd-fill .emd-checkpoint-sheet article {
+  grid-template-columns: minmax(180px, 1fr) auto 1.6fr !important;
+  gap: 10px !important;
+  padding: 6px 11px !important;
+}
+.emd-stage.emd-fill .emd-checkpoint-sheet strong {
+  font-size: 14.5px !important;
+  line-height: 1.2 !important;
+}
+.emd-stage.emd-fill .emd-checkpoint-sheet code { font-size: 13px !important; }
+.emd-stage.emd-fill .emd-checkpoint-sheet span { font-size: 12px !important; line-height: 1.24 !important; }
+
+/* Worked-step panel: body shrinks and the citation sits in a footer so a long
+   step loses type size rather than its last lines to `overflow: hidden`. */
+.emd-code-panel {
+  display: flex;
+  flex-direction: column;
+}
+.emd-code-panel pre {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.emd-code-panel.is-dense code {
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.34;
+}
+.emd-code-panel small {
+  display: block;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--emd-line);
+  font-family: system-ui, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--emd-muted);
+}

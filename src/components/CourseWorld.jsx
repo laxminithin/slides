@@ -9,6 +9,8 @@
  *   automata  → states, transitions, an accepting ring
  *   parallel  → a grid of cores lighting in waves
  *   java      → source code, bytecode and the JVM runtime path
+ *   code      → a shell prompt, lines being typed and the value printed back
+ *   signal    → a carrier wave crossing a noisy channel into a constellation
  *   global    → a globe with orbiting trade routes
  *   research  → question narrowing into protected innovation
  *
@@ -36,6 +38,8 @@ export default function CourseWorld({ world = 'data', variant = 'card', classNam
         {world === 'ai' && <WorldAI />}
         {world === 'analog' && <WorldAnalog />}
         {world === 'structures' && <WorldStructures />}
+        {world === 'code' && <WorldCode />}
+        {world === 'signal' && <WorldSignal />}
       </svg>
     </div>
   )
@@ -424,6 +428,86 @@ function WorldStructures() {
       </g>
       <path className="cw-flow" d="M77 120 H113" strokeWidth="1.8" />
       <path className="cw-flow" d="M127 120 H163" strokeWidth="1.8" />
+    </g>
+  )
+}
+
+/** A shell that is being used: the prompt, three lines typed at it, and the
+ *  value the interpreter prints back. The REPL is the whole subject's idiom. */
+function WorldCode() {
+  return (
+    <g fill="none" stroke="currentColor">
+      <rect x="22" y="24" width="196" height="112" rx="8" strokeWidth="1.6" fill="currentColor" fillOpacity="0.06" />
+      <path d="M22 44 H218" strokeWidth="1.2" opacity="0.45" />
+      <g fill="currentColor" stroke="none" opacity="0.7">
+        <circle cx="36" cy="34" r="3.2" />
+        <circle cx="48" cy="34" r="3.2" />
+        <circle cx="60" cy="34" r="3.2" />
+      </g>
+      {[60, 82, 104].map((y, i) => (
+        <g key={y}>
+          <path className="cw-node" style={{ '--d': `${i * 0.3}s` }} d={`M36 ${y - 4} l7 4 l-7 4`} strokeWidth="1.8" opacity="0.9" />
+          <path
+            className="cw-flow"
+            style={{ '--d': `${i * 0.3}s` }}
+            d={`M52 ${y} H${112 + i * 34}`}
+            strokeWidth="3.4"
+            strokeLinecap="round"
+            opacity="0.55"
+          />
+        </g>
+      ))}
+      <path className="cw-stream" style={{ '--d': '0.9s' }} d="M52 122 H150" strokeWidth="3.4" strokeLinecap="round" opacity="0.85" />
+      <rect className="cw-node" style={{ '--d': '1.2s' }} x="158" y="116" width="7" height="12" rx="1.5" fill="currentColor" stroke="none" />
+    </g>
+  )
+}
+
+/** A modulated carrier crosses a noisy channel and lands as four constellation
+ *  points — the one picture that covers all five BEC503 modules. */
+function WorldSignal() {
+  return (
+    <g fill="none" stroke="currentColor">
+      <path d="M8 80 H232" strokeWidth="1" opacity="0.28" />
+      <path
+        className="cw-stream"
+        style={{ '--d': '0s' }}
+        d="M10 80 q7 -26 14 0 t14 0 t14 0 t14 0 t14 0 t14 0 t14 0"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        opacity="0.8"
+      />
+      <path
+        className="cw-flow"
+        style={{ '--d': '0.4s' }}
+        d="M10 80 q7 -30 14 0 t14 0 t14 0 t14 0 t14 0 t14 0 t14 0"
+        strokeWidth="1.2"
+        opacity="0.3"
+        transform="translate(0,34)"
+      />
+      <g opacity="0.5">
+        <path d="M122 46 V116" strokeWidth="1" strokeDasharray="3 5" />
+      </g>
+      {[
+        [162, 56],
+        [200, 56],
+        [162, 104],
+        [200, 104],
+      ].map(([cx, cy], i) => (
+        <circle
+          key={`${cx}-${cy}`}
+          className="cw-node"
+          style={{ '--d': `${0.3 + i * 0.25}s` }}
+          cx={cx}
+          cy={cy}
+          r="4.6"
+          fill="currentColor"
+          stroke="none"
+          opacity="0.9"
+        />
+      ))}
+      <path d="M181 40 V120 M148 80 H216" strokeWidth="1" opacity="0.35" />
+      <path className="cw-flow" style={{ '--d': '0.8s' }} d="M128 80 H146" strokeWidth="2.6" strokeLinecap="round" opacity="0.6" />
     </g>
   )
 }

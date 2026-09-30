@@ -1,0 +1,162 @@
+// BEC305 Python Programming — Module 5: Networked Programs, Web Services and Databases
+// 20 multiple choice questions, 1 mark each.
+
+::M5Q1::[html]Which HTTP status code means the body is the resource you asked for?{
+ =200   #Correct - anything else means the body is something other than the requested resource.
+ ~404   #Wrong - 404 means not found, and the body is an error page.
+ ~500   #Wrong - 500 is a server error.
+ ~301   #Wrong - 301 is a permanent redirect, so the resource is elsewhere.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 12 | CO5 | L1
+}
+
+::M5Q2::[html]What does it mean that HTTP is stateless?{
+ =Each request carries everything the server needs; nothing is remembered between requests   #Correct - cookies and tokens exist to reintroduce the state the protocol omits.
+ ~The connection stays open indefinitely   #Wrong - statelessness concerns memory between requests, not connection lifetime.
+ ~The server stores a session for each client automatically   #Wrong - that is exactly what the protocol does not do by itself.
+ ~Requests must be sent in a fixed order   #Wrong - requests are independent, so no ordering is imposed.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 12 | CO5 | L2
+}
+
+::M5Q3::[html]Why must a socket receive loop continue until recv returns an empty byte string?{
+ =TCP delivers a stream in arbitrary chunks, so one recv may not return the whole reply   #Correct - the empty return is the signal that the server has closed its end.
+ ~recv always returns exactly one byte   #Wrong - recv returns up to the buffer size, which is usually many bytes.
+ ~The first recv returns only headers by definition   #Wrong - the split between headers and body does not align with chunk boundaries.
+ ~Python requires at least two recv calls   #Wrong - the number of calls depends entirely on the response size and the network.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 12 | CO5 | L4
+}
+
+::M5Q4::[html]What separates the headers from the body in an HTTP response?{
+ =The first blank line   #Correct - HTTP defines exactly one empty line between them.
+ ~A semicolon   #Wrong - semicolons appear inside some header values but separate nothing structurally.
+ ~The Content-Length header value   #Wrong - Content-Length tells you how long the body is, not where it starts.
+ ~A null byte   #Wrong - HTTP headers are text and contain no null bytes.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 12 | CO5 | L3
+}
+
+::M5Q5::[html]Why must an image body never be decoded as text?{
+ =Decoding corrupts the binary data and often raises UnicodeDecodeError   #Correct - binary bytes are not characters, so they must stay bytes all the way to the file.
+ ~Images are always larger than the decode buffer   #Wrong - size is irrelevant; the problem is the interpretation.
+ ~Python cannot decode more than 64 kB at once   #Wrong - there is no such limit.
+ ~Decoding is slower than writing directly   #Wrong - speed is not the issue; correctness is.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 12 | CO5 | L4
+}
+
+::M5Q6::[html]What does urllib.request.urlopen() return?{
+ =A file-like object yielding bytes   #Correct - it is read or iterated like a file, but each line must be decoded.
+ ~A string containing the page   #Wrong - the content is bytes and must be decoded explicitly.
+ ~A dictionary of headers   #Wrong - headers are available from the object but are not what it returns.
+ ~A socket   #Wrong - the socket is what urlopen hides from you.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 12 | CO5 | L2
+}
+
+::M5Q7::[html]What makes an XML document well-formed?{
+ =Every tag closed, no overlapping nesting, exactly one root element   #Correct - a parser rejects anything else rather than guessing.
+ ~Every element carrying at least one attribute   #Wrong - attributes are optional.
+ ~All tags in lower case   #Wrong - XML is case sensitive but imposes no case convention.
+ ~A schema file being present   #Wrong - a schema governs validity, which is a stricter and separate notion.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 13 | CO5 | L2
+}
+
+::M5Q8::[html]What does ElementTree find() return when the tag is absent?{
+ =None   #Correct - which is why chaining .text onto it raises AttributeError on documents that differ from your sample.
+ ~An empty Element   #Wrong - no Element is created for a tag that is not there.
+ ~An empty string   #Wrong - find returns an Element or None, never a string.
+ ~It raises KeyError   #Wrong - find signals absence by its return value, not by raising.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 13 | CO5 | L3
+}
+
+::M5Q9::[html]What does findall() return when no nodes match?{
+ =An empty list   #Correct - so a loop over it simply runs zero times, which makes findall the safer default for collections.
+ ~None   #Wrong - None is what find returns; findall always returns a list.
+ ~A list containing one None   #Wrong - an empty list has no elements at all.
+ ~It raises an exception   #Wrong - an empty result is a normal outcome, not an error.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 13 | CO5 | L3
+}
+
+::M5Q10::[html]A JSON object parses into which Python type?{
+ =dict   #Correct - and a JSON array parses into a list, which is why no tree API is needed.
+ ~list   #Wrong - that is what a JSON array becomes.
+ ~tuple   #Wrong - json never produces tuples.
+ ~str   #Wrong - the text is what you started with; loads produces structure.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 13 up to 13.5 | CO5 | L2
+}
+
+::M5Q11::[html]What is a practical advantage of JSON over XML for this kind of work?{
+ =It parses directly into ordinary dictionaries and lists, so no tree API is needed   #Correct - the parsed result is reached with plain subscripting.
+ ~It supports attributes and comments   #Wrong - JSON has neither attributes nor comments; that is a point in XML favour.
+ ~It enforces a schema automatically   #Wrong - JSON enforces nothing by itself.
+ ~It is a binary format   #Wrong - JSON is text, like XML.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 13 up to 13.5 | CO5 | L4
+}
+
+::M5Q12::[html]Why is an indexed database table faster to search than a flat file?{
+ =An index reaches a row in roughly logarithmic time; a file must be scanned end to end   #Correct - the gap widens with every record added.
+ ~Database files are smaller   #Wrong - a database file is usually larger, because the index costs space.
+ ~Files cannot be searched at all   #Wrong - files can be searched; the cost is what differs.
+ ~Databases keep everything in memory   #Wrong - a database reads from disk like anything else.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 15 | CO5 | L4
+}
+
+::M5Q13::[html]What distinguishes SQLite from a client-server database?{
+ =The whole database is one file and the engine runs inside your process   #Correct - which is why there is nothing to install or configure.
+ ~It cannot store more than 1000 rows   #Wrong - there is no such limit.
+ ~It requires a separate server to be started   #Wrong - that is the client-server model SQLite avoids.
+ ~It does not support SQL   #Wrong - SQLite supports most of standard SQL.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 15 | CO5 | L2
+}
+
+::M5Q14::[html]What happens if you omit conn.commit() after inserting rows?{
+ =The changes are discarded when the connection closes   #Correct - statements run inside a transaction that must be committed to persist.
+ ~The rows are saved anyway   #Wrong - the whole point of a transaction is that uncommitted work is provisional.
+ ~An exception is raised at close   #Wrong - closing without committing is silent, which is what makes it a trap.
+ ~The database file is deleted   #Wrong - the file remains; it simply does not contain the new rows.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 15 | CO5 | L3
+}
+
+::M5Q15::[html]Why should values be passed with ? placeholders rather than string formatting?{
+ =The database treats them as data rather than SQL, preventing injection and handling quoting   #Correct - a value containing a quote otherwise breaks out of the string and becomes executable SQL.
+ ~Placeholders are faster to type   #Wrong - convenience is not the point; safety is.
+ ~String formatting is a SyntaxError in SQL   #Wrong - string-built SQL is valid Python and valid SQL, which is why the vulnerability exists.
+ ~Placeholders compress the query   #Wrong - query size is irrelevant.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 15 | CO5 | L4
+}
+
+::M5Q16::[html]What does an UPDATE statement without a WHERE clause do?{
+ =Updates every row in the table   #Correct - and there is no undo, which is why the WHERE is never optional in practice.
+ ~Updates nothing   #Wrong - the absence of a restriction means no rows are excluded.
+ ~Raises an error   #Wrong - it is entirely valid SQL.
+ ~Updates only the first row   #Wrong - SQL has no implicit row limit.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 15 | CO5 | L3
+}
+
+::M5Q17::[html]What is a primary key?{
+ =An integer the database assigns, meaningless outside the table and never reused   #Correct - its meaninglessness is what makes it a stable target for references.
+ ~The column a user searches by   #Wrong - that is the logical key.
+ ~Another table's identifier stored in this table   #Wrong - that is the foreign key.
+ ~The first column of the table   #Wrong - column position has nothing to do with it.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 15 | CO5 | L2
+}
+
+::M5Q18::[html]Why should a foreign key hold the primary key rather than the logical key?{
+ =Renaming the logical value then requires changing one row rather than every referring row   #Correct - and any referring row missed during a rename silently becomes a separate entity.
+ ~Integers sort faster   #Wrong - sort speed is a minor consideration next to update integrity.
+ ~Logical keys cannot be indexed   #Wrong - logical keys are routinely indexed and should carry UNIQUE.
+ ~Foreign keys must be integers by rule   #Wrong - the database permits other types; the reason is maintenance, not rule.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 15 | CO5 | L5
+}
+
+::M5Q19::[html]What does a JOIN without an ON clause produce?{
+ =Every combination of rows from both tables   #Correct - for two 1000-row tables that is a million rows; the row count is the quickest diagnostic.
+ ~An empty result   #Wrong - it returns far more rows, not fewer.
+ ~An error   #Wrong - a cross join is valid SQL and runs happily.
+ ~Only matching rows, by guessing the columns   #Wrong - SQL never guesses the join condition.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 15 | CO5 | L5
+}
+
+::M5Q20::[html]What makes a spider resumable after an interruption?{
+ =A retrieved flag stored in the table and committed after each record   #Correct - the flag survives the process ending, so the next run selects where the last one stopped.
+ ~A larger recv buffer   #Wrong - buffer size affects one read, not resumability.
+ ~Running the fetch loop faster   #Wrong - speed does not help once the process has ended.
+ ~Keeping the visited set in a Python variable   #Wrong - an in-memory set dies with the process, which is exactly the problem.
+ ####General feedback: Al Sweigart, Automate the Boring Stuff with Python 1st ed., TB3 Ch. 15 | CO5 | L5
+}

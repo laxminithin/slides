@@ -19,6 +19,13 @@ import {
 } from './presentationTypography'
 
 const subjectVisuals = {
+  'analog-electronics-and-linear-integrated-circuits': 'analog',
+  'automation-in-manufacturing': 'systems',
+  'kinematics-of-machines': 'systems',
+  'additional-mathematics-1': 'math',
+  'digital-system-design-using-verilog': 'digital',
+  'fluid-mechanics': 'analog',
+  'materials-science-metallurgy': 'analog',
   'big-data-analytics': 'data',
   'information-network-security': 'security',
   'database-management-systems': 'database',
@@ -39,6 +46,19 @@ const subjectVisuals = {
   'computer-graphics-visualization': 'parallel',
   'unix-system-programming': 'os',
   'distributed-systems': 'network',
+  'network-analysis': 'analog',
+  'python-programming': 'code',
+  'digital-communication': 'signal',
+  // A circuits course gets the node-graph visual, same as network-analysis —
+  // it is literally what the subject is.
+  'electric-circuit-analysis': 'analog',
+  'analog-electronics-circuits': 'analog',
+  // High voltage apparatus is still built from the same circuit primitives.
+  'high-voltage-engineering': 'analog',
+  'electric-motor-drive-systems-ev': 'analog',
+  // The other engineering-maths subjects already use `parallel`, which draws a
+  // lattice of nodes — the closest thing the platform has to a maths visual.
+  'complex-analysis-transforms-optimization': 'parallel',
   'differential-calculus-linear-algebra-1bmatc101': 'parallel',
   'differential-calculus-numerical-methods-1bmatc201': 'parallel',
   'differential-calculus-linear-algebra-1bmate101': 'parallel',
@@ -167,6 +187,33 @@ function resourceLinks(subjectId, moduleId) {
     ]
   }
 
+  if (subjectId === 'network-analysis') {
+    return [
+      { to: `/network-analysis/${moduleId}/notes`, label: 'Notes' },
+      { to: `/network-analysis/${moduleId}/quiz`, label: 'Quiz' },
+      { to: `/network-analysis/${moduleId}/assignment`, label: 'Assignment' },
+      { to: `/network-analysis/${moduleId}/previous-year-questions`, label: 'Previous Year Questions' },
+    ]
+  }
+
+  if (subjectId === 'python-programming') {
+    return [
+      { to: `/python-programming/${moduleId}/notes`, label: 'Notes' },
+      { to: `/python-programming/${moduleId}/quiz`, label: 'Quiz' },
+      { to: `/python-programming/${moduleId}/assignment`, label: 'Assignment' },
+      { to: `/python-programming/${moduleId}/previous-year-questions`, label: 'Previous Year Questions' },
+    ]
+  }
+
+  if (subjectId === 'digital-communication') {
+    return [
+      { to: `/digital-communication/${moduleId}/notes`, label: 'Notes' },
+      { to: `/digital-communication/${moduleId}/quiz`, label: 'Quiz' },
+      { to: `/digital-communication/${moduleId}/assignment`, label: 'Assignment' },
+      { to: `/digital-communication/${moduleId}/previous-year-questions`, label: 'Previous Year Questions' },
+    ]
+  }
+
   return []
 }
 
@@ -292,6 +339,19 @@ function SubjectVisual({ type }) {
           <span className="ds-cell c1" /><span className="ds-cell c2" /><span className="ds-cell c3" />
           <i className="ds-arrow a1" /><i className="ds-arrow a2" />
           <span className="ds-ptr" />
+        </>
+      )}
+      {type === 'code' && (
+        <>
+          <span className="code-prompt">&gt;&gt;&gt;</span>
+          <i className="code-line cl1" /><i className="code-line cl2" /><i className="code-line cl3" />
+          <span className="code-caret" />
+        </>
+      )}
+      {type === 'signal' && (
+        <>
+          <i className="sig-wave sw1" /><i className="sig-wave sw2" />
+          <span className="sig-pt sp1" /><span className="sig-pt sp2" /><span className="sig-pt sp3" /><span className="sig-pt sp4" />
         </>
       )}
       {type === 'sepm' && (
@@ -468,6 +528,21 @@ function LivingDeckShell({
       data-cg-module={subject.id === 'computer-graphics-visualization' ? String(Number(module.number || 1)) : undefined}
       data-unix-module={subject.id === 'unix-system-programming' ? String(Number(module.number || 1)) : undefined}
       data-dist-module={subject.id === 'distributed-systems' ? String(Number(module.number || 1)) : undefined}
+      data-na-module={subject.id === 'network-analysis' ? String(Number(module.number || 1)) : undefined}
+      data-py-module={subject.id === 'python-programming' ? String(Number(module.number || 1)) : undefined}
+      data-dc-module={subject.id === 'digital-communication' ? String(Number(module.number || 1)) : undefined}
+      data-eca-module={subject.id === 'electric-circuit-analysis' ? String(Number(module.number || 1)) : undefined}
+      data-aec-module={subject.id === 'analog-electronics-circuits' ? String(Number(module.number || 1)) : undefined}
+      data-cat-module={subject.id === 'complex-analysis-transforms-optimization' ? String(Number(module.number || 1)) : undefined}
+      data-hve-module={subject.id === 'high-voltage-engineering' ? String(Number(module.number || 1)) : undefined}
+      data-emd-module={subject.id === 'electric-motor-drive-systems-ev' ? String(Number(module.number || 1)) : undefined}
+      data-msm-module={subject.id === 'materials-science-metallurgy' ? String(Number(module.number || 1)) : undefined}
+      data-fm-module={subject.id === 'fluid-mechanics' ? String(Number(module.number || 1)) : undefined}
+      data-dsd-module={subject.id === 'digital-system-design-using-verilog' ? String(Number(module.number || 1)) : undefined}
+      data-kom-module={subject.id === 'kinematics-of-machines' ? String(Number(module.number || 1)) : undefined}
+      data-aim-module={subject.id === 'automation-in-manufacturing' ? String(Number(module.number || 1)) : undefined}
+      data-aea-module={subject.id === 'analog-electronics-and-linear-integrated-circuits' ? String(Number(module.number || 1)) : undefined}
+      data-am1-module={subject.id === 'additional-mathematics-1' ? String(Number(module.number || 1)) : undefined}
       data-lab-program={module.kind === 'lab-program' ? module.id : undefined}
       data-living-mode={livingEnabled ? living.livingMode : undefined}
       data-focus-mode={livingEnabled && living.focusActive ? 'true' : 'false'}
