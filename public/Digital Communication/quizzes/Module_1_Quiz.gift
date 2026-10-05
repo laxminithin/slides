@@ -1,0 +1,162 @@
+// BEC503 Digital Communication — Module 1: Bandpass Signals to Equivalent Lowpass and Signalling over AWGN Channels
+// 20 multiple choice questions, 1 mark each.
+
+::M1Q1::[html]The Hilbert transform multiplies the spectrum of a signal by which factor?{
+ =-j sgn(f)   #Correct - this gives -90 degrees for positive frequencies and +90 degrees for negative ones.
+ ~+j sgn(f)   #Wrong - this reverses the sign of the phase shift and would build the wrong pre-envelope.
+ ~sgn(f)   #Wrong - a real multiplier changes magnitude sign, not phase, and cannot produce a 90-degree shift.
+ ~j only for f > 0   #Wrong - the transform must act on negative frequencies too, otherwise the result is not real-input consistent.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.2, pp.42-45 | CO1 | L1
+}
+
+::M1Q2::[html]What is the magnitude response |H(f)| of an ideal Hilbert transformer?{
+ =1 for all f   #Correct - it is an all-pass phase shifter; no frequency is attenuated.
+ ~0 for f < 0   #Wrong - that describes the pre-envelope operation, which is the Hilbert transform combined with the original.
+ ~f for all f   #Wrong - that is a differentiator, which does change magnitude with frequency.
+ ~1/(pi f)   #Wrong - 1/(pi t) is the time-domain kernel, not the frequency response.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.2, pp.42-45 | CO1 | L2
+}
+
+::M1Q3::[html]The Hilbert transform of cos(2 pi f0 t) is{
+ =sin(2 pi f0 t)   #Correct - a -90 degree shift turns cosine into sine.
+ ~-sin(2 pi f0 t)   #Wrong - that is the result of shifting by +90 degrees instead.
+ ~cos(2 pi f0 t)   #Wrong - the transform is not the identity; something must change.
+ ~-cos(2 pi f0 t)   #Wrong - that is the result of applying the transform twice.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.2, pp.42-45 | CO1 | L2
+}
+
+::M1Q4::[html]Applying the Hilbert transform twice to g(t) returns{
+ =-g(t)   #Correct - (-j sgn f) squared is -1 for every non-zero frequency.
+ ~g(t)   #Wrong - that would require the transform to be its own inverse, which it is not.
+ ~j g(t)   #Wrong - the double transform of a real signal is real, so no j can survive.
+ ~zero   #Wrong - no energy is lost; only the sign changes.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.2, pp.42-45 | CO1 | L3
+}
+
+::M1Q5::[html]The spectrum of the pre-envelope g_plus(t) for f > 0 equals{
+ =2 G(f)   #Correct - the positive half is doubled while the negative half cancels.
+ ~G(f)   #Wrong - that would leave the total energy unchanged, but the construction concentrates it on one side.
+ ~G(f)/2   #Wrong - halving is the reverse of what the addition of j times the Hilbert transform does.
+ ~0   #Wrong - the positive half is the half that survives; it is the negative half that vanishes.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.2, pp.45-47 | CO1 | L2
+}
+
+::M1Q6::[html]Why must the pre-envelope of a real signal be complex?{
+ =A one-sided spectrum cannot satisfy the conjugate symmetry that real signals require   #Correct - real signals have G(-f) \= G*(f), which forces content at negative frequencies.
+ ~Because the Hilbert transform is complex   #Wrong - the Hilbert transform of a real signal is itself real; the j is added explicitly.
+ ~Because the carrier frequency is complex   #Wrong - fc is an ordinary real frequency.
+ ~It need not be; it is real whenever g(t) is real   #Wrong - the pre-envelope is complex by construction whenever the negative half is removed.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.2, pp.45-47 | CO1 | L4
+}
+
+::M1Q7::[html]The complex envelope is obtained from the pre-envelope by multiplying by{
+ =exp(-j 2 pi fc t)   #Correct - this translates the spectrum down to baseband.
+ ~exp(+j 2 pi fc t)   #Wrong - the positive exponent shifts the spectrum up to 2fc instead of down to zero.
+ ~cos(2 pi fc t)   #Wrong - a real cosine creates two images rather than a clean translation.
+ ~2 cos(2 pi fc t)   #Wrong - same problem\: a real multiplier produces sum and difference terms.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.2, pp.47-49 | CO1 | L2
+}
+
+::M1Q8::[html]For the canonical representation g(t) \= gI cos(2 pi fc t) - gQ sin(2 pi fc t), the natural envelope is{
+ =sqrt(gI^2 + gQ^2)   #Correct - the envelope is the magnitude of the complex envelope.
+ ~gI + gQ   #Wrong - a plain sum ignores that the two components are on orthogonal axes.
+ ~|gI| + |gQ|   #Wrong - the sum of absolute values is a common approximation but is not the envelope.
+ ~max(gI, gQ)   #Wrong - taking the larger component underestimates the magnitude by up to 41%.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.2, pp.49-52 | CO1 | L3
+}
+
+::M1Q9::[html]What sign precedes the quadrature term in the canonical bandpass representation?{
+ =Minus   #Correct - it follows from taking the real part of the product of two complex quantities.
+ ~Plus   #Wrong - a plus sign corresponds to the conjugate envelope and inverts the quadrature axis.
+ ~Either, they are equivalent   #Wrong - the sign flips the Q axis, which is not a harmless convention change.
+ ~It depends on the carrier frequency   #Wrong - the sign comes from the algebra of Re\{(gI + j gQ)(cos + j sin)\}, not from fc.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.2, pp.49-52 | CO1 | L3
+}
+
+::M1Q10::[html]In the AWGN model, N0/2 denotes{
+ =the two-sided power spectral density of the noise   #Correct - N0 is the one-sided density and N0/2 the two-sided one.
+ ~half the total noise power   #Wrong - total power over infinite bandwidth is unbounded; N0/2 is a density.
+ ~the noise variance per symbol   #Wrong - the variance per projection happens to equal N0/2, but the symbol has N dimensions.
+ ~the one-sided power spectral density   #Wrong - the one-sided density is N0, without the factor of two.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.323-324 | CO1 | L2
+}
+
+::M1Q11::[html]Which of these is NOT an assumption of the AWGN channel model?{
+ ~The noise is independent of the signal   #Wrong - additivity is exactly one of the three assumptions.
+ ~The noise samples are uncorrelated   #Wrong - whiteness means precisely that samples are uncorrelated.
+ ~The noise is Gaussian distributed   #Wrong - the Gaussian assumption is the third of the three.
+ =The noise power is finite over all frequencies   #Correct - a flat density over infinite bandwidth implies infinite total power; the model is deliberately idealised.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.323-324 | CO1 | L4
+}
+
+::M1Q12::[html]For M signals spanning an N-dimensional space, which relation always holds?{
+ =N <\= M   #Correct - the dimension can never exceed the number of signals and is often smaller.
+ ~N \= M   #Wrong - QPSK has M \= 4 and N \= 2, so equality is not general.
+ ~N >\= M   #Wrong - you cannot span more dimensions than you have signals.
+ ~N \= M - 1   #Wrong - there is no fixed offset; BPSK has M \= 2 and N \= 1, but QPSK has M \= 4 and N \= 2.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.324-332 | CO1 | L3
+}
+
+::M1Q13::[html]In the Gram-Schmidt procedure, a zero residual for signal s_i means{
+ =s_i is a linear combination of the previous signals and adds no dimension   #Correct - nothing new remains after subtracting the projections, so no new basis function is created.
+ ~s_i has zero energy   #Wrong - a signal with plenty of energy can still be fully represented by earlier ones.
+ ~the procedure has failed   #Wrong - it is the normal way the algorithm discovers that N < M.
+ ~s_i is orthogonal to all previous signals   #Wrong - an orthogonal signal gives a residual equal to itself, which is the opposite case.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.324-332 | CO1 | L4
+}
+
+::M1Q14::[html]The variance of each noise projection w_j onto an orthonormal basis function is{
+ =N0/2   #Correct - every axis sees the same variance, which is what makes the noise cloud spherical.
+ ~N0   #Wrong - that is the one-sided density, not the projection variance.
+ ~N0/4   #Wrong - no fourth appears anywhere in the derivation.
+ ~It depends on which basis function   #Wrong - orthonormality makes the variance identical on every axis, which is exactly the point.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.332-337 | CO1 | L3
+}
+
+::M1Q15::[html]The theorem of irrelevance justifies{
+ =discarding the component of x(t) outside the signal space   #Correct - that component is independent of the signal, so it cannot inform the decision.
+ ~ignoring the noise entirely   #Wrong - the noise inside the signal space is very much retained and dominates performance.
+ ~using a suboptimal receiver to save cost   #Wrong - the point is that discarding costs nothing; the receiver stays optimal.
+ ~sampling below the Nyquist rate   #Wrong - the theorem concerns the signal space, not the sampling rate.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.332-337 | CO1 | L4
+}
+
+::M1Q16::[html]With equally likely signals and AWGN, the maximum likelihood rule is equivalent to{
+ =choosing the signal at minimum Euclidean distance from the observation   #Correct - the Gaussian likelihood decreases monotonically with squared distance.
+ ~choosing the signal of largest energy   #Wrong - energy enters only through the -E_i/2 bias in the correlation form, never as a sole criterion.
+ ~choosing the signal of smallest energy   #Wrong - same objection; energy alone tells you nothing about which signal was sent.
+ ~choosing at random among all M   #Wrong - that discards the observation entirely and gives error probability (M-1)/M.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.337-344 | CO1 | L3
+}
+
+::M1Q17::[html]The impulse response of a filter matched to phi(t) over [0,T] is{
+ =phi(T - t)   #Correct - time reversal about T/2 is what converts convolution into correlation.
+ ~phi(t)   #Wrong - without reversal the convolution does not compute a correlation.
+ ~phi(t - T)   #Wrong - this delays without reversing, so the output does not peak at T.
+ ~-phi(t)   #Wrong - negating changes the sign of the output, not the correlation property.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.337-344 | CO1 | L2
+}
+
+::M1Q18::[html]The maximum output SNR of a matched filter for a pulse of energy E is{
+ =2E/N0   #Correct - and remarkably it depends on energy alone, not on shape.
+ ~E/N0   #Wrong - the factor of two comes from the two-sided density N0/2 in the denominator.
+ ~E/(2 N0)   #Wrong - this is off by a factor of four from the correct result.
+ ~It depends on the pulse shape   #Wrong - shape independence is the striking part of the matched-filter result.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.337-344 | CO1 | L3
+}
+
+::M1Q19::[html]A correlator and a matched filter produce the same value{
+ =only at the sampling instant t \= T   #Correct - their outputs differ throughout the interval and coincide exactly at T.
+ ~at every instant   #Wrong - the integrator ramps while the filter output follows a different trajectory.
+ ~never   #Wrong - they agree exactly at t \= T, which is the only instant that is sampled.
+ ~only for rectangular pulses   #Wrong - the equivalence at t \= T holds for any pulse shape.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.337-344 | CO1 | L4
+}
+
+::M1Q20::[html]Failing to reset the integrate-and-dump at each symbol boundary causes{
+ =accumulation across symbols, so each observation contains earlier symbols   #Correct - the observation drifts and the constellation smears into a diagonal blur.
+ ~a fixed 3 dB SNR loss   #Wrong - the degradation is unbounded and grows with the number of symbols, not a fixed 3 dB.
+ ~a carrier phase error   #Wrong - phase error is a separate impairment with a different signature.
+ ~no effect if the symbols are equally likely   #Wrong - the accumulation happens regardless of the symbol statistics.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.337-344 | CO1 | L4
+}

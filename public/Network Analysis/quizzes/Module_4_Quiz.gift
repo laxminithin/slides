@@ -1,0 +1,162 @@
+// BEC303 Network Analysis — Module 4: Laplace Transformation and Applications
+// 20 multiple choice questions, 1 mark each.
+
+::M4Q1::[html]The Laplace transform of the unit step u(t) is{
+ =1/s   #Correct — integrating the kernel from 0 to infinity gives 1/s.
+ ~1   #Wrong - 1 is the transform of the unit impulse.
+ ~s   #Wrong - s corresponds to differentiation, not to a step.
+ ~1/s²   #Wrong - 1/s squared is the transform of the ramp.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.14, pp.543-546 | CO4 | L1
+}
+
+::M4Q2::[html]The Laplace transform of e^(−at)·u(t) is{
+ =1/(s + a)   #Correct — with a pole at s \= −a matching the decay rate.
+ ~1/(s − a)   #Wrong - that pole is in the right half plane and corresponds to a growing exponential.
+ ~a/(s² + a²)   #Wrong - that is the transform of a sinusoid, not an exponential.
+ ~s/(s + a)   #Wrong - this is an improper form whose inverse would include an impulse.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.14, pp.543-546 | CO4 | L1
+}
+
+::M4Q3::[html]The differentiation theorem states that df/dt transforms to{
+ =s·F(s) − f(0−)   #Correct — the f(0−) term is exactly how the initial condition enters the algebra.
+ ~s·F(s)   #Wrong - dropping the initial-condition term forces a separate and error-prone boundary step later.
+ ~F(s)/s   #Wrong - dividing by s is the integration theorem.
+ ~s·F(s) + f(0−)   #Wrong - the sign is inverted, which flips the direction of the initial transient.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.14, pp.553-561 | CO4 | L2
+}
+
+::M4Q4::[html]In the s-domain, a capacitor of value C has impedance{
+ =1/(sC)   #Correct — the capacitor law integrates, so its impedance divides by s.
+ ~sC   #Wrong - sC makes the capacitor behave like an inductor and inverts the frequency response.
+ ~C/s   #Wrong - the capacitance belongs in the denominator with s, not the numerator.
+ ~s/C   #Wrong - this is dimensionally incorrect.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.571-578 | CO4 | L1
+}
+
+::M4Q5::[html]An inductor with initial current i(0−) is modelled in the s-domain as sL in series with{
+ =a voltage source of value L·i(0−)   #Correct — this is the source form of the f(0−) term from the differentiation theorem.
+ ~a voltage source of value i(0−)/s   #Wrong - that is the capacitor form, where the initial voltage divides by s.
+ ~a current source of value L·i(0−)   #Wrong - the series model requires a voltage source; the current-source form goes in parallel and has value i(0-)/s.
+ ~a short circuit   #Wrong - a short discards the stored energy entirely.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.571-578 | CO4 | L3
+}
+
+::M4Q6::[html]The final-value theorem may be applied only if{
+ =all poles of s·F(s) lie strictly in the left half plane   #Correct — a pole on the jω axis or in the right half plane means no final value exists, though the limit still returns a number.
+ ~F(s) is a proper rational function   #Wrong - properness matters for the inverse transform but does not govern the final-value theorem.
+ ~the numerator degree exceeds the denominator degree   #Wrong - that condition would make the function improper and is not the validity test.
+ ~the circuit contains no capacitors   #Wrong - capacitors are irrelevant; what matters is where the poles lie.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.14, pp.561-564 | CO4 | L4
+}
+
+::M4Q7::[html]For F(s) \= (3s + 6)/(s(s + 3)), the initial value f(0+) is{
+ =3   #Correct — s·F(s) \= (3s+6)/(s+3), which tends to 3 as s → ∞.
+ ~2   #Wrong - 2 is the final value, obtained as s tends to zero.
+ ~6   #Wrong - 6 is the numerator constant and is not a limit of the expression.
+ ~0   #Wrong - zero would require the numerator degree to be lower than it is.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.14, pp.561-564 | CO4 | L3
+}
+
+::M4Q8::[html]Partial fraction expansion of (s + 4)/(s(s + 2)) gives{
+ =2/s − 1/(s + 2)   #Correct — cover-up at s \= 0 gives 2 and at s \= −2 gives −1.
+ ~1/s + 1/(s + 2)   #Wrong - both residues are wrong; the cover-up evaluations were not performed.
+ ~2/s + 1/(s + 2)   #Wrong - the sign of the second residue is inverted.
+ ~4/s − 2/(s + 2)   #Wrong - these residues do not reconstruct the original numerator.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.14, pp.546-553 | CO4 | L3
+}
+
+::M4Q9::[html]The transfer function H(s) is defined with{
+ =all initial conditions set to zero   #Correct — H(s) is the zero-state ratio and is a property of the network alone.
+ ~initial conditions included as sources   #Wrong - including them makes the ratio depend on stored energy, so it is no longer a network property.
+ ~the load disconnected   #Wrong - the load is part of the network whose transfer function is being defined.
+ ~s set equal to jω   #Wrong - substituting j-omega gives the frequency response, a special case of H(s).
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.588-589 | CO4 | L3
+}
+
+::M4Q10::[html]The poles of a network function are{
+ =its natural frequencies   #Correct — they are the roots of the characteristic equation and set the natural response.
+ ~the frequencies it blocks completely   #Wrong - blocked frequencies are the zeros, the roots of the numerator.
+ ~always real and negative   #Wrong - poles are frequently complex, which is what produces ringing.
+ ~determined by the input waveform   #Wrong - poles belong to the network and are independent of the excitation.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.588-589 | CO4 | L2
+}
+
+::M4Q11::[html]The step response transform of a system with transfer function H(s) is{
+ =H(s)/s   #Correct — the step transform is 1/s, so the output is H(s)/s.
+ ~H(s)   #Wrong - H(s) alone is the impulse response transform.
+ ~H(s)/s²   #Wrong - dividing by s squared gives the ramp response.
+ ~s·H(s)   #Wrong - multiplying by s differentiates, giving the derivative of the impulse response.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.14, pp.543-546 | CO4 | L2
+}
+
+::M4Q12::[html]A triangular pulse rising from 0 to 1 over 0 ≤ t ≤ 1 and falling to 0 by t \= 2 is synthesised as{
+ =t·u(t) − 2(t−1)u(t−1) + (t−2)u(t−2)   #Correct — the coefficient of each ramp is the change in slope, which is −2 at t \= 1.
+ ~t·u(t) − (t−1)u(t−1)   #Wrong - this omits the final ramp and the waveform never returns to zero slope.
+ ~t·u(t) − (t−1)u(t−1) + (t−2)u(t−2)   #Wrong - using -1 instead of -2 makes the waveform flatten rather than descend.
+ ~u(t) − 2u(t−1) + u(t−2)   #Wrong - steps create jumps, not slope changes, so this produces a rectangular staircase.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., TB2 §6.8 | CO4 | L4
+}
+
+::M4Q13::[html]Convolution in the time domain corresponds in the s-domain to{
+ =multiplication   #Correct — Y(s) \= H(s)·X(s), which is why the transform route is so much cheaper.
+ ~addition   #Wrong - addition in s corresponds to addition in time, by linearity.
+ ~convolution again   #Wrong - the whole benefit of the transform is that convolution becomes multiplication.
+ ~division   #Wrong - division in s corresponds to deconvolution, the inverse problem.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.589-598 | CO4 | L2
+}
+
+::M4Q14::[html]For an RC low-pass with R \= 1 kΩ and C \= 1 µF, the pole is at{
+ =s \= −1000 rad/s   #Correct — the pole sits at −1/RC \= −1000 rad/s.
+ ~s \= −159.2 rad/s   #Wrong - 159.2 is the cutoff expressed in hertz, not the pole location in rad/s.
+ ~s \= −0.001 rad/s   #Wrong - this is RC itself rather than its reciprocal.
+ ~s \= +1000 rad/s   #Wrong - a right-half-plane pole would mean an unstable circuit, which a passive RC cannot be.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.598-602 | CO4 | L3
+}
+
+::M4Q15::[html]The −3 dB cutoff frequency of that same RC low-pass, in hertz, is{
+ =159.2 Hz   #Correct — f_c \= 1/(2πRC) \= 1000/(2π) \= 159.2 Hz.
+ ~1000 Hz   #Wrong - 1000 is the cutoff in rad/s; the conversion to hertz was omitted.
+ ~6283 Hz   #Wrong - this multiplies by 2 pi instead of dividing.
+ ~0.159 Hz   #Wrong - this is off by three orders of magnitude.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.598-602 | CO4 | L3
+}
+
+::M4Q16::[html]For a first-order filter the product of bandwidth in hertz and 10–90 % rise time in seconds is approximately{
+ =0.35   #Correct — this is why a fast circuit must also be a wideband circuit.
+ ~1.0   #Wrong - 1.0 would follow only if bandwidth were expressed in rad/s and rise time as a time constant.
+ ~2.2   #Wrong - 2.2 is the ratio of rise time to time constant, not this product.
+ ~6.28   #Wrong - 6.28 is 2 pi and appears in the rad/s-to-hertz conversion, not here.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.598-602 | CO4 | L5
+}
+
+::M4Q17::[html]Among poles at s \= −2000 and s \= −100 ± j400, the dominant pole is{
+ =the complex pair at −100 ± j400   #Correct — the pole nearest the jω axis decays slowest and therefore persists longest.
+ ~the real pole at −2000   #Wrong - a pole far from the axis decays fastest and contributes only a brief initial transient.
+ ~whichever has the largest magnitude   #Wrong - largest magnitude means fastest decay, which is the opposite of dominance.
+ ~they contribute equally   #Wrong - the 20\:1 ratio in decay rates makes one clearly dominant.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.602-606 | CO4 | L5
+}
+
+::M4Q18::[html]A pole located exactly on the jω axis corresponds to{
+ =an undamped sustained oscillation   #Correct — zero real part means zero decay, so the oscillation never dies.
+ ~an exponentially decaying response   #Wrong - decay requires a strictly negative real part.
+ ~an exponentially growing response   #Wrong - growth requires a positive real part, which a passive network cannot produce.
+ ~no response at all   #Wrong - the pole contributes a very much present sustained oscillation.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.602-606 | CO4 | L3
+}
+
+::M4Q19::[html]Cascading two identical unbuffered RC low-pass sections gives a transfer function that is{
+ =not the square of the single-section H(s), because of loading   #Correct — the second section draws current from the first, shifting the pole locations.
+ ~exactly the square of the single-section H(s)   #Wrong - squaring is valid only when a buffer isolates the sections.
+ ~the sum of the two section transfer functions   #Wrong - cascading multiplies transfer functions; it never adds them.
+ ~independent of the second section   #Wrong - the second section clearly changes the response, just not in the naive way.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.606-610 | CO4 | L5
+}
+
+::M4Q20::[html]A passive driving-point impedance must be a positive real function, which requires{
+ =no right-half-plane poles or zeros and Re\{Z\} ≥ 0 for Re\{s\} ≥ 0   #Correct — this is the realisability test for a passive one-port.
+ ~all poles on the jω axis   #Wrong - poles on the axis correspond to lossless resonance and are a special case, not the general requirement.
+ ~the numerator degree to exceed the denominator degree   #Wrong - that condition makes the function improper and is not required.
+ ~only real coefficients   #Wrong - real coefficients are necessary but nowhere near sufficient.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.15, pp.606-610 | CO4 | L5
+}

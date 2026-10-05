@@ -1,0 +1,1232 @@
+/* Electric Circuit Analysis (VTU 1BEE303) — engineering graph paper over slate ink.
+   --aea-data = voltages, currents and the traces they draw,
+   --aea-active = the element or loop currently under the pencil,
+   --aea-path = the transform domain, --aea-danger = the mistake. */
+
+.electric-circuit-analysis-deck,
+.aea-deck {
+  --aea-ink: #152430;
+  --aea-muted: #55677a;
+  --aea-cream: #fffdf8;
+  --aea-paper: #f5f3ec;
+  --aea-navy: #152430;
+  --aea-data: #1d4ed8;
+  --aea-active: #c2410c;
+  --aea-pointer: #7c3aed;
+  --aea-ok: #15803d;
+  --aea-danger: #b91c1c;
+  --aea-path: #0f766e;
+  --aea-sky: #e6eefb;
+  --aea-line: rgba(21, 36, 48, 0.12);
+  --aea-shadow: 0 16px 40px rgba(21, 36, 48, 0.1);
+  --aea-module: #1d4ed8;
+  --accent: #1d4ed8;
+  --accent-soft: #334155;
+  --card-accent: #1d4ed8;
+  color: var(--aea-ink);
+}
+
+/* One hue per module: formulate · shortcut · respond · transform · encapsulate */
+.electric-circuit-analysis-deck[data-aea-module="1"] { --aea-module: #1d4ed8; --accent: #1d4ed8; }
+.electric-circuit-analysis-deck[data-aea-module="2"] { --aea-module: #c2410c; --accent: #c2410c; }
+.electric-circuit-analysis-deck[data-aea-module="3"] { --aea-module: #0f766e; --accent: #0f766e; }
+.electric-circuit-analysis-deck[data-aea-module="4"] { --aea-module: #7c3aed; --accent: #7c3aed; }
+.electric-circuit-analysis-deck[data-aea-module="5"] { --aea-module: #15803d; --accent: #15803d; }
+
+.module-cover.electric-circuit-analysis { --card-accent: #1d4ed8; }
+
+.electric-circuit-analysis-deck .slide-frame {
+  background:
+    radial-gradient(920px 460px at 6% -18%, rgba(29, 78, 216, 0.1), transparent 58%),
+    radial-gradient(720px 380px at 96% 0%, rgba(194, 65, 12, 0.06), transparent 54%),
+    radial-gradient(540px 280px at 70% 110%, rgba(15, 118, 110, 0.08), transparent 50%),
+    linear-gradient(165deg, #fffdf9 0%, #fcfaf3 52%, #f6f4ed 100%);
+}
+
+/* Squared engineering paper — this subject is worked out with a pencil and a
+   ruler, and every diagram in it is drawn on a grid. */
+.electric-circuit-analysis-deck .slide-frame::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(29, 78, 216, 0.09) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, rgba(29, 78, 216, 0.09) 0 1px, transparent 1px 24px);
+  background-size: 24px 24px, 24px 24px;
+  mix-blend-mode: multiply;
+}
+
+.electric-circuit-analysis-deck[data-aea-module="2"] .slide-frame::after { opacity: 0.2; }
+.electric-circuit-analysis-deck[data-aea-module="3"] .slide-frame::after { opacity: 0.2; }
+.electric-circuit-analysis-deck[data-aea-module="4"] .slide-frame::after { opacity: 0.18; }
+.electric-circuit-analysis-deck[data-aea-module="5"] .slide-frame::after { opacity: 0.18; }
+
+.electric-circuit-analysis-deck .slide-header-copy .slide-kicker {
+  color: var(--aea-module);
+}
+
+.electric-circuit-analysis-deck .slide-header-copy .slide-title {
+  font-size: clamp(34px, 2.7vw, 48px);
+  line-height: 1.14;
+  padding-bottom: 4px;
+  overflow: visible;
+  color: var(--aea-navy);
+}
+
+/* ── Stage shell ── */
+.aea-stage {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px 16px;
+  box-sizing: border-box;
+}
+
+.aea-story {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.aea-story span {
+  font-size: clamp(10px, 0.85vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--aea-muted);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+.aea-story span.lit { opacity: 0.8; color: var(--aea-navy); }
+.aea-story span.now {
+  opacity: 1;
+  color: var(--aea-module);
+  transform: translateX(2px);
+}
+
+.aea-copy {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.aea-visual,
+.aea-visual-b {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+.aea-footer-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  min-width: 0;
+}
+.aea-takeaway,
+.aea-exam {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.35;
+}
+.aea-takeaway strong { color: var(--aea-ok); }
+.aea-exam strong {
+  color: var(--aea-active);
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+}
+
+/* ── Compositions ── */
+.aea-split-right {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(240px, 0.78fr) minmax(380px, 1.22fr);
+  grid-template-rows: 1fr auto;
+}
+/* Explicit placement so copy/visual don't collapse into the story column when
+   a slide renders without a <story> rail (e.g. the example beats). */
+.aea-split-right .aea-story { grid-row: 1 / 3; grid-column: 1; }
+.aea-split-right .aea-copy { grid-column: 2; }
+.aea-split-right .aea-visual { grid-column: 3; }
+.aea-split-right .aea-footer-band { grid-column: 2 / 4; }
+
+/* Algorithm beat: visual is the hero (left), algorithm/dry-run rail (right).
+   Explicit row/col placement + align-items:stretch gives BOTH cells the full
+   row height — without it the aspect-locked SVG collapsed the visual to its
+   intrinsic height and the copy cell shrank, clipping the dry-run panel. */
+.aea-split-left {
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.85fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+}
+.aea-split-left .aea-story { display: none; }
+.aea-split-left .aea-visual { grid-column: 1; grid-row: 1; min-height: 0; align-self: stretch; }
+.aea-split-left .aea-copy { grid-column: 2; grid-row: 1; min-height: 0; align-self: stretch; }
+.aea-split-left .aea-footer-band { grid-column: 1 / 3; grid-row: 2; }
+
+.aea-full-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.aea-full-stage .aea-story { display: none; }
+.aea-full-stage .aea-copy { max-width: 78%; }
+.aea-full-stage .aea-visual { min-height: 0; }
+
+/* Full-width, vertically-centred layout for text-grid framing slides
+   (syllabus audit, practice) — they used a half-width "board"
+   column and left the lower half empty. */
+.aea-fill {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.aea-fill .aea-story { display: none; }
+.aea-fill .aea-copy {
+  grid-row: 1;
+  align-content: safe start;
+  gap: 14px;
+  padding-block: 2px 6px;
+  overflow: hidden;
+}
+.aea-fill .aea-footer-band { grid-row: 2; }
+.aea-fill .aea-lead { font-size: clamp(22px, 1.7vw, 28px); }
+/* let the framing grids breathe across the full stage */
+.aea-fill .aea-syllabus-audit { grid-template-columns: repeat(auto-fit, minmax(184px, 1fr)); gap: 9px; }
+.aea-fill .aea-syllabus-audit article {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 11px;
+  min-height: 40px;
+}
+.aea-fill .aea-syllabus-audit strong { font-size: clamp(13px, 0.92vw, 16px); line-height: 1.18; }
+.aea-fill .aea-syllabus-audit em { font-size: 12px; }
+/* Hardened cap: the syllabus checklist must fit above the footer even in
+   the fullest module (22-24 long topic names). High-specificity + !important
+   so it wins over the platform legibility/base font unconditionally. */
+.aea-stage.aea-fill .aea-syllabus-audit strong { font-size: 15px !important; line-height: 1.16 !important; }
+.aea-stage.aea-fill .aea-syllabus-audit em { font-size: 11px !important; }
+.aea-stage.aea-fill .aea-syllabus-audit article { min-height: 38px !important; padding: 6px 10px !important; gap: 2px !important; }
+.aea-fill .aea-practice-list { gap: 18px; font-size: clamp(17px, 1.3vw, 21px); }
+
+.aea-hero-open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.aea-hero-open .aea-story,
+.aea-hero-open .aea-copy { display: none; }
+.aea-hero-open .aea-visual { min-height: 0; }
+.aea-hero-open .aea-footer-band { justify-content: center; }
+
+.aea-showcase {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 6px;
+}
+.aea-showcase .aea-story,
+.aea-showcase .aea-copy { display: none; }
+.aea-showcase .aea-visual { grid-row: 1; min-height: 0; }
+.aea-showcase .aea-footer-band {
+  justify-content: center;
+  border-top: 1px solid var(--aea-line);
+  padding-top: 6px;
+}
+.aea-showcase .aea-takeaway { font-size: clamp(14px, 1.05vw, 17px); }
+
+.aea-board {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.aea-board .aea-story { display: none; }
+.aea-board .aea-footer-band { grid-column: 1 / 3; }
+
+.aea-inspect {
+  grid-template-columns: minmax(220px, 0.42fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.aea-inspect .aea-story { display: none; }
+.aea-inspect .aea-visual { grid-column: 2; grid-row: 1; }
+.aea-inspect .aea-footer-band { grid-column: 1 / 3; }
+
+.aea-pipeline {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.aea-pipeline .aea-story { grid-row: 1 / 4; }
+.aea-pipeline .aea-copy,
+.aea-pipeline .aea-visual,
+.aea-pipeline .aea-footer-band { grid-column: 2; }
+
+.aea-memory-first {
+  grid-template-columns: minmax(200px, 0.32fr) minmax(420px, 1.2fr);
+  grid-template-rows: 1fr auto;
+}
+.aea-memory-first .aea-story { display: none; }
+.aea-memory-first .aea-visual { grid-column: 2; grid-row: 1; }
+.aea-memory-first .aea-footer-band { grid-column: 1 / 3; }
+
+.aea-algo-board {
+  grid-template-columns: minmax(260px, 0.48fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.aea-algo-board .aea-story { display: none; }
+.aea-algo-board .aea-footer-band { grid-column: 1 / 3; }
+
+.aea-code-split {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-rows: 1fr auto;
+}
+.aea-code-split .aea-story { display: none; }
+.aea-code-split .aea-footer-band { grid-column: 1 / 3; }
+
+.electric-circuit-analysis-deck .slide-frame[data-composition="full-stage"] .aea-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="hero-open"] .aea-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="memory-first"] .aea-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="showcase"] .aea-visual {
+  min-height: 0;
+}
+.aea-full-stage .aea-visual { min-height: 62%; }
+.aea-hero-open .aea-visual,
+.aea-memory-first .aea-visual { flex: 1 1 auto; }
+
+/* ── Typography blocks ── */
+.aea-lead {
+  margin: 0;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.38;
+  font-weight: 650;
+  color: var(--aea-navy);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.aea-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.34;
+}
+.aea-points li { padding-left: 2px; }
+.aea-points li::marker { color: var(--aea-module); font-weight: 800; }
+
+.aea-definition {
+  background: #fff;
+  border: 1px solid var(--aea-line);
+  border-left: 5px solid var(--aea-data);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--aea-shadow);
+}
+.aea-definition span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--aea-data);
+}
+.aea-definition strong {
+  display: block;
+  font-size: clamp(20px, 1.6vw, 28px);
+  margin: 4px 0;
+}
+.aea-definition p {
+  margin: 0;
+  font-size: clamp(15px, 1.1vw, 18px);
+}
+
+.aea-callout {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--aea-line);
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+}
+.aea-callout span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+}
+.aea-callout p {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.aea-callout-warn { border-left: 4px solid var(--aea-active); }
+.aea-callout-fault { border-left: 4px solid var(--aea-danger); }
+.aea-callout-ok { border-left: 4px solid var(--aea-ok); }
+.aea-callout-idea { border-left: 4px solid var(--aea-data); }
+.aea-callout-know { border-left: 4px solid var(--aea-pointer); }
+
+/* Scene shell */
+.aea-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.72), rgba(255, 250, 240, 0.28) 62%, transparent 78%);
+  overflow: hidden;
+  position: relative;
+}
+.aea-scene svg,
+.aea-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Code panel — light, readable (≥19px) */
+.aea-code-panel {
+  background: #ffffff;
+  border: 1.5px solid var(--aea-line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--aea-shadow);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.aea-code-line {
+  font-size: clamp(19px, 1.45vw, 22px);
+  line-height: 1.55;
+  color: var(--aea-navy);
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: pre;
+}
+.aea-code-line.is-current {
+  background: rgba(217, 119, 6, 0.14);
+  color: var(--aea-active);
+  box-shadow: inset 3px 0 0 var(--aea-active);
+}
+
+/* Linked list / stack / queue / tree helpers */
+.aea-ll-node { transform-box: fill-box; }
+.aea-stack-cell,
+.aea-queue-cell,
+.aea-tree-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ── Concept-native motion (aeam-*) ──
+   State-change animations — not fade-in as primary teaching motion. */
+
+@keyframes aeam-allocate {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  55% { transform: scale(0.96); }
+  70% { transform: scale(1.03); }
+}
+@keyframes aeam-shift {
+  0%, 12% { transform: translateX(0); }
+  45%, 55% { transform: translateX(28px); }
+  88%, 100% { transform: translateX(0); }
+}
+@keyframes aeam-insert {
+  0%, 15% { transform: translateY(-28px) scale(0.85); opacity: 0.35; }
+  40% { transform: translateY(0) scale(1.06); opacity: 1; }
+  55%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes aeam-delete {
+  0%, 20% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(0.92) translateY(6px); opacity: 0.45; }
+  70%, 100% { transform: scale(0.85); opacity: 0.2; }
+}
+@keyframes aeam-push {
+  0%, 10% { transform: translateY(-40px); opacity: 0.4; }
+  35% { transform: translateY(4px); opacity: 1; }
+  50%, 100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes aeam-pop {
+  0%, 15% { transform: translateY(0); opacity: 1; }
+  45% { transform: translateY(-36px); opacity: 0.35; }
+  70%, 100% { transform: translateY(-8px); opacity: 0.55; }
+}
+@keyframes aeam-enqueue {
+  0%, 12% { transform: translateX(40px); opacity: 0.35; }
+  40% { transform: translateX(-4px); opacity: 1; }
+  55%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes aeam-dequeue {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  45% { transform: translateX(-48px); opacity: 0.3; }
+  70%, 100% { transform: translateX(-12px); opacity: 0.5; }
+}
+@keyframes aeam-wrap {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(18deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(4deg); }
+}
+@keyframes aeam-pointer {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -24; }
+}
+@keyframes aeam-rewire {
+  0%, 20% { stroke-dashoffset: 40; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+@keyframes aeam-traverse {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -36; }
+}
+@keyframes aeam-search {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(20px); }
+  75% { transform: translateX(10px); }
+}
+@keyframes aeam-swap {
+  0%, 100% { transform: translate(0, 0); }
+  35% { transform: translate(14px, -10px); }
+  70% { transform: translate(-14px, 10px); }
+}
+@keyframes aeam-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.62; }
+}
+@keyframes aeam-wave {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.07); }
+  70% { transform: scale(1.02); }
+}
+@keyframes aeam-descend {
+  0%, 10% { transform: translate(0, -24px); opacity: 0.5; }
+  45% { transform: translate(36px, 40px); opacity: 1; }
+  70% { transform: translate(72px, 90px); opacity: 1; }
+  100% { transform: translate(72px, 90px); opacity: 0.85; }
+}
+@keyframes aeam-return {
+  0%, 15% { transform: translate(40px, 60px); opacity: 0.6; }
+  55% { transform: translate(10px, 10px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+.aeam-allocate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-allocate 2.4s ease-in-out infinite;
+}
+.aeam-shift {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-shift 2.8s ease-in-out infinite;
+}
+.aeam-insert {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-insert 2.6s ease-out infinite;
+}
+.aeam-delete {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-delete 2.8s ease-in-out infinite;
+}
+.aeam-push {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-push 2.4s ease-out infinite;
+}
+.aeam-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-pop 2.4s ease-in infinite;
+}
+.aeam-enqueue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-enqueue 2.5s ease-out infinite;
+}
+.aeam-dequeue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-dequeue 2.5s ease-in infinite;
+}
+.aeam-wrap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-wrap 3s ease-in-out infinite;
+}
+.aeam-pointer {
+  stroke-dasharray: 10 8;
+  animation: aeam-pointer 1.4s linear infinite;
+}
+.aeam-rewire {
+  stroke-dasharray: 12 10;
+  animation: aeam-rewire 2.2s ease-in-out infinite;
+}
+.aeam-traverse {
+  stroke-dasharray: 10 8;
+  animation: aeam-traverse 1.6s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.aeam-search {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-search 2.6s ease-in-out infinite;
+}
+.aeam-swap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-swap 2.4s ease-in-out infinite;
+}
+.aeam-pulse {
+  animation: aeam-pulse 1.9s ease-in-out infinite;
+}
+.aeam-wave {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-wave 2.2s ease-in-out infinite;
+}
+.aeam-descend {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-descend 3.2s ease-in-out infinite;
+}
+.aeam-return {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: aeam-return 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aeam-allocate, .aeam-shift, .aeam-insert, .aeam-delete,
+  .aeam-push, .aeam-pop, .aeam-enqueue, .aeam-dequeue,
+  .aeam-wrap, .aeam-pointer, .aeam-rewire, .aeam-traverse,
+  .aeam-search, .aeam-swap, .aeam-pulse, .aeam-wave,
+  .aeam-descend, .aeam-return {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Kit components ── */
+.aea-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 750;
+  color: var(--aea-navy);
+}
+.aea-flow i { color: var(--aea-module); font-style: normal; font-weight: 900; }
+
+.aea-algo-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+  font-size: clamp(15px, 1.15vw, 19px);
+  line-height: 1.4;
+}
+.aea-algo-steps li::marker { color: var(--aea-module); font-weight: 800; }
+
+.aea-complexity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--aea-line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.aea-complexity > div {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+.aea-complexity span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--aea-muted);
+}
+/* 1BEE303 cost cells hold a sentence ("one constraint per dependent source"),
+   not a big-O token, so they read at body size rather than display size. */
+.aea-complexity strong {
+  font-size: clamp(13px, 1.02vw, 16px);
+  line-height: 1.28;
+  font-weight: 750;
+  color: var(--aea-data);
+}
+.aea-complexity > p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--aea-muted);
+}
+
+.aea-code-panel span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--aea-module);
+  margin-bottom: 8px;
+  font-family: system-ui, sans-serif;
+}
+.aea-code-panel pre {
+  margin: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.aea-code-panel code {
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.45;
+  color: var(--aea-navy);
+  font-weight: 650;
+}
+
+.aea-dryrun {
+  display: grid;
+  gap: 8px;
+}
+.aea-dryrun section {
+  background: #fff;
+  border: 1px solid var(--aea-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.aea-dryrun span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--aea-module);
+}
+.aea-dryrun p { margin: 4px 0 0; font-size: 15px; }
+.aea-dryrun ol {
+  margin: 4px 0 0;
+  padding-left: 1.15em;
+  font-size: 14px;
+  display: grid;
+  gap: 3px;
+}
+
+.aea-term-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.aea-term-chips span {
+  background: var(--aea-sky);
+  color: var(--aea-data);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.aea-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.aea-roadmap article {
+  background: #fff;
+  border: 1px solid var(--aea-line);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+.aea-roadmap b { color: var(--aea-module); font-size: 12px; }
+.aea-roadmap strong { font-size: 14px; line-height: 1.25; }
+
+.aea-checkpoint-sheet {
+  display: grid;
+  gap: 7px;
+}
+.aea-checkpoint-sheet article {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.72fr) auto 1.85fr;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--aea-line);
+  border-radius: 12px;
+  padding: 7px 12px;
+}
+.aea-checkpoint-sheet code {
+  font-size: clamp(16px, 1.2vw, 21px);
+  font-weight: 800;
+  color: var(--aea-data);
+}
+.aea-checkpoint-sheet span { font-size: 12.5px; line-height: 1.25; color: var(--aea-muted); }
+
+.aea-syllabus-audit {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+.aea-syllabus-audit article {
+  background: #fff;
+  border: 1px solid var(--aea-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.aea-syllabus-audit strong { font-size: 14px; }
+.aea-syllabus-audit em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--aea-ok);
+}
+
+.aea-practice-list {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(15px, 1.15vw, 18px);
+}
+.aea-practice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.aea-practice-list em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--aea-active);
+  white-space: nowrap;
+}
+
+.aea-review-map {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 12px;
+}
+.aea-review-map h3 {
+  margin: 0;
+  font-size: clamp(22px, 2vw, 32px);
+  color: var(--aea-navy);
+}
+.aea-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.aea-review-topics span {
+  background: #fff;
+  border: 1.5px solid var(--aea-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ── Instructional motion (classroom-paced) ── */
+@keyframes aeam-flow-node {
+  0%, 100% { opacity: 0.55; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-4px); }
+}
+@keyframes aeam-flow-arrow {
+  0% { stroke-dashoffset: 24; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.4; }
+}
+@keyframes aeam-feedback {
+  0% { stroke-dashoffset: 40; opacity: 0.45; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -40; opacity: 0.45; }
+}
+@keyframes aeam-waterfall {
+  0% { opacity: 0; transform: translate(-12px, -18px); }
+  30%, 100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes aeam-cost-curve {
+  0% { stroke-dasharray: 0 800; }
+  100% { stroke-dasharray: 800 0; }
+}
+@keyframes aeam-cost-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+@keyframes aeam-grow {
+  0% { opacity: 0; transform: scaleX(0.55); transform-origin: center; }
+  45%, 100% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes aeam-spiral {
+  0% { opacity: 0.15; }
+  40% { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+@keyframes aeam-concurrent {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+@keyframes aeam-up-line {
+  0% { stroke-dasharray: 0 1200; }
+  100% { stroke-dasharray: 1200 0; }
+}
+@keyframes aeam-orbit {
+  0%, 100% { opacity: 0.65; }
+  50% { opacity: 1; }
+}
+@keyframes aeam-token {
+  0% { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateY(-170px) rotate(-360deg); }
+}
+@keyframes aeam-backlog {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(210px); }
+  70% { transform: translateX(420px); }
+  100% { transform: translateX(630px); }
+}
+@keyframes aeam-xp-step {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+@keyframes aeam-bar {
+  0% { transform: scaleX(0.2); transform-origin: left center; opacity: 0.4; }
+  50%, 100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes aeam-gate {
+  0%, 100% { opacity: 0.7; }
+  40% { opacity: 1; }
+}
+@keyframes aeam-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  40%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes aeam-pulse-soft {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.aeam-flow-node { animation: aeam-flow-node 3.2s ease-in-out infinite; }
+.aeam-flow-arrow { stroke-dasharray: 10 8; animation: aeam-flow-arrow 2.8s linear infinite; }
+.aeam-feedback { stroke-dasharray: 10 8; animation: aeam-feedback 3.6s linear infinite; }
+.aeam-waterfall { animation: aeam-waterfall 3.5s ease-out infinite; }
+.aeam-cost-curve { animation: aeam-cost-curve 4s ease-out infinite; }
+.aeam-cost-dot { animation: aeam-cost-dot 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.aeam-grow { animation: aeam-grow 3.8s ease-out infinite; }
+.aeam-spiral { animation: aeam-spiral 3.2s ease-in-out infinite; }
+.aeam-concurrent { animation: aeam-concurrent 2.8s ease-in-out infinite; }
+.aeam-up-line { animation: aeam-up-line 4.5s ease-out infinite; }
+.aeam-orbit { animation: aeam-orbit 2.6s ease-in-out infinite; }
+.aeam-token { animation: aeam-token 12s linear infinite; transform-box: fill-box; transform-origin: 450px 260px; }
+.aeam-backlog-card { animation: aeam-backlog 10s ease-in-out infinite; }
+.aeam-xp-step { animation: aeam-xp-step 3s ease-in-out infinite; }
+.aeam-bar { animation: aeam-bar 3.4s ease-out infinite; }
+.aeam-gate { animation: aeam-gate 2.8s ease-in-out infinite; }
+.aeam-fade-in { animation: aeam-fade-in 2.4s ease-out both; }
+.aeam-pulse { animation: aeam-pulse-soft 2.4s ease-in-out infinite; }
+.aeam-step { animation: aeam-pulse-soft 2.8s ease-in-out infinite; }
+.aeam-actor { animation: aeam-pulse-soft 3s ease-in-out infinite; }
+.aeam-usecase-step { animation: aeam-flow-node 2.8s ease-in-out infinite; }
+.aeam-system-box { animation: aeam-pulse-soft 2.6s ease-in-out infinite; }
+.aeam-risk-cell { animation: aeam-pulse-soft 3.2s ease-in-out infinite; }
+.aeam-risk-dot { animation: aeam-cost-dot 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.aeam-delay-0 { animation-delay: 0s; }
+.aeam-delay-1 { animation-delay: 0.35s; }
+.aeam-delay-2 { animation-delay: 0.7s; }
+.aeam-delay-3 { animation-delay: 1.05s; }
+.aeam-delay-4 { animation-delay: 1.4s; }
+
+/* ── Electric Circuit Analysis instructional motion ──
+   Every animation below shows a circuit mechanism: current marching, a phasor
+   turning, a transient decaying, a pole moving. Decoration is not the job. */
+@keyframes aeam-current {
+  0% { stroke-dashoffset: 36; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes aeam-current-rev {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 36; }
+}
+@keyframes aeam-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes aeam-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes aeam-draw {
+  0% { stroke-dashoffset: 900; }
+  55%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes aeam-sweep-x {
+  0% { transform: translateX(0); opacity: 0.25; }
+  12% { opacity: 1; }
+  100% { transform: translateX(var(--aeam-sweep, 620px)); opacity: 0.9; }
+}
+@keyframes aeam-switch {
+  0%, 35% { transform: rotate(-32deg); }
+  55%, 100% { transform: rotate(0deg); }
+}
+@keyframes aeam-decay-dot {
+  0% { transform: translate(0, 0); opacity: 0.4; }
+  10% { opacity: 1; }
+  100% { transform: translate(var(--aeam-dx, 560px), var(--aeam-dy, 210px)); opacity: 0.9; }
+}
+@keyframes aeam-ring {
+  0%, 100% { transform: translateY(0); }
+  18% { transform: translateY(-46px); }
+  36% { transform: translateY(32px); }
+  54% { transform: translateY(-19px); }
+  72% { transform: translateY(11px); }
+  86% { transform: translateY(-5px); }
+}
+@keyframes aeam-merge-l {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(118px); opacity: 0.35; }
+}
+@keyframes aeam-merge-r {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(-118px); opacity: 0.35; }
+}
+@keyframes aeam-collapse {
+  0%, 25% { transform: scale(1); opacity: 1; }
+  70%, 100% { transform: scale(0.42); opacity: 0.18; }
+}
+@keyframes aeam-emerge {
+  0%, 35% { transform: scale(0.55); opacity: 0; }
+  80%, 100% { transform: scale(1); opacity: 1; }
+}
+@keyframes aeam-slide-in {
+  0% { transform: translateX(-34px); opacity: 0; }
+  45%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes aeam-pole-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(var(--aeam-px, -70px), 0); }
+}
+@keyframes aeam-needle {
+  0%, 100% { transform: rotate(-58deg); }
+  50% { transform: rotate(52deg); }
+}
+@keyframes aeam-wave-shift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-180px); }
+}
+@keyframes aeam-cell-in {
+  0% { opacity: 0; transform: translateY(9px) scale(0.94); }
+  45%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes aeam-charge {
+  /* Floor stays high enough that pulsing LABELS remain readable. */
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+@keyframes aeam-flux {
+  0%, 100% { transform: scale(0.94); opacity: 0.72; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+@keyframes aeam-probe {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(var(--aeam-probe, 96px)); }
+}
+@keyframes aeam-flip {
+  0%, 20% { transform: scaleX(1); }
+  45%, 100% { transform: scaleX(-1); }
+}
+
+.aeam-current { stroke-dasharray: 9 9; animation: aeam-current 1.1s linear infinite; }
+.aeam-current-slow { stroke-dasharray: 9 9; animation: aeam-current 2.2s linear infinite; }
+.aeam-current-rev { stroke-dasharray: 9 9; animation: aeam-current-rev 1.4s linear infinite; }
+.aeam-spin { animation: aeam-spin 4.4s linear infinite; transform-box: fill-box; }
+.aeam-spin-slow { animation: aeam-spin-slow 6s linear infinite; transform-box: fill-box; }
+.aeam-draw { stroke-dasharray: 900; animation: aeam-draw 4s ease-out infinite; }
+.aeam-sweep-x { animation: aeam-sweep-x 3.6s linear infinite; }
+.aeam-switch { animation: aeam-switch 3.4s ease-in-out infinite; transform-box: fill-box; }
+.aeam-decay-dot { animation: aeam-decay-dot 3.8s ease-in infinite; transform-box: fill-box; }
+.aeam-ring { animation: aeam-ring 3.6s ease-in-out infinite; transform-box: fill-box; }
+.aeam-merge-l { animation: aeam-merge-l 3.8s ease-in-out infinite; transform-box: fill-box; }
+.aeam-merge-r { animation: aeam-merge-r 3.8s ease-in-out infinite; transform-box: fill-box; }
+.aeam-collapse { animation: aeam-collapse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+/* Reveals play ONCE and hold. Looping them would leave labelled steps and
+   formulas fading in and out under the reader — legibility beats motion. */
+.aeam-emerge { animation: aeam-emerge 1.2s ease-out both; transform-box: fill-box; transform-origin: center; }
+.aeam-slide-in { animation: aeam-slide-in 0.9s ease-out both; transform-box: fill-box; }
+.aeam-pole-drift { animation: aeam-pole-drift 4.4s ease-in-out infinite; transform-box: fill-box; }
+.aeam-needle { animation: aeam-needle 3.4s ease-in-out infinite; transform-box: fill-box; }
+.aeam-wave-shift { animation: aeam-wave-shift 2.4s linear infinite; }
+.aeam-cell-in { animation: aeam-cell-in 0.9s ease-out both; transform-box: fill-box; }
+.aeam-charge { animation: aeam-charge 2.2s ease-in-out infinite; }
+.aeam-flux { animation: aeam-flux 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.aeam-probe { animation: aeam-probe 3.2s ease-in-out infinite; transform-box: fill-box; }
+.aeam-flip { animation: aeam-flip 4.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.aeam-delay-5 { animation-delay: 1.75s; }
+.aeam-delay-6 { animation-delay: 2.1s; }
+.aeam-delay-7 { animation-delay: 2.45s; }
+
+
+.aea-scene, .aea-showcase-scene { width: 100%; height: 100%; min-height: 0; }
+.aea-svg { width: 100%; height: 100%; display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .electric-circuit-analysis-deck [class*="aeam-"] {
+    animation: none !important;
+  }
+}
+
+/* Dense algorithm slides (real algo steps + dry-run trace) must fit the
+   algo-board left column at 1280×720. Tighten only in that composition. */
+.aea-algo-board .aea-algo-steps { gap: 4px; font-size: clamp(14px, 1.02vw, 17px); line-height: 1.3; }
+.aea-algo-board .aea-dryrun { gap: 5px; }
+.aea-algo-board .aea-dryrun section { padding: 6px 11px; }
+.aea-algo-board .aea-dryrun ol { gap: 2px; font-size: 13.5px; }
+.aea-algo-board .aea-dryrun p { font-size: 14px; }
+.aea-algo-board .aea-lead { font-size: clamp(16px, 1.25vw, 20px); }
+
+/* ── 1BEE303-specific kit pieces (no Computer Graphics counterpart) ── */
+
+/* Textbook provenance carried from Phase 1. Units whose prescribed book was
+   not supplied render a chapter with no page range — that is intentional. */
+.aea-book-cite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--aea-muted);
+}
+.aea-book-cite b {
+  background: var(--aea-sky);
+  color: var(--aea-data);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.aea-book-cite span { font-style: normal; }
+.aea-book-cite em {
+  font-style: normal;
+  background: rgba(21, 128, 61, 0.1);
+  color: var(--aea-ok);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.aea-book-cite i {
+  font-style: normal;
+  border: 1px solid var(--aea-line);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.aea-quiz-card {
+  background: #fff;
+  border: 1px solid var(--aea-line);
+  border-left: 4px solid var(--aea-data);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: var(--aea-shadow);
+}
+.aea-quiz-card + .aea-quiz-card { margin-top: 8px; }
+.aea-quiz-card strong {
+  display: block;
+  font-size: 15.5px;
+  line-height: 1.3;
+  color: var(--aea-navy);
+}
+.aea-quiz-card ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 10px;
+  margin: 8px 0 0;
+  padding: 0 0 0 18px;
+  font-size: 13.5px;
+  font-weight: 650;
+}
+.aea-quiz-card li.is-correct {
+  color: var(--aea-ok);
+  font-weight: 800;
+}
+.aea-quiz-card li.is-correct::marker { color: var(--aea-ok); }
+.aea-quiz-card p {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--aea-muted);
+}
+
+/* Showcase beats hand the whole stage to one mechanism. */
+.aea-showcase-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Eight checkpoint rows must fit one 1280x720 stage above the footer band.
+   Sized against the longest 1BEE303 topic ("Sources of electrical energy:
+   independent and dependent") wrapping to two lines. !important so it beats
+   the platform legibility layer, which loads after this sheet. */
+.aea-stage.aea-fill .aea-checkpoint-sheet { gap: 6px !important; }
+.aea-stage.aea-fill .aea-checkpoint-sheet article {
+  grid-template-columns: minmax(180px, 1fr) auto 1.6fr !important;
+  gap: 10px !important;
+  padding: 6px 11px !important;
+}
+.aea-stage.aea-fill .aea-checkpoint-sheet strong {
+  font-size: 14.5px !important;
+  line-height: 1.2 !important;
+}
+.aea-stage.aea-fill .aea-checkpoint-sheet code { font-size: 13px !important; }
+.aea-stage.aea-fill .aea-checkpoint-sheet span { font-size: 12px !important; line-height: 1.24 !important; }
+
+/* Worked-step panel: body shrinks and the citation sits in a footer so a long
+   step loses type size rather than its last lines to `overflow: hidden`. */
+.aea-code-panel {
+  display: flex;
+  flex-direction: column;
+}
+.aea-code-panel pre {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.aea-code-panel.is-dense code {
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.34;
+}
+.aea-code-panel small {
+  display: block;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--aea-line);
+  font-family: system-ui, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--aea-muted);
+}

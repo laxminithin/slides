@@ -1,0 +1,162 @@
+// BEC303 Network Analysis — Module 3: Transient Behavior and Initial Conditions
+// 20 multiple choice questions, 1 mark each.
+
+::M3Q1::[html]Which quantity is guaranteed continuous across a switching instant?{
+ =Capacitor voltage   #Correct — a jump in capacitor voltage would require infinite current.
+ ~Capacitor current   #Wrong - capacitor current is free to step and usually does at a switching instant.
+ ~Resistor voltage   #Wrong - resistor voltage follows the current instantaneously and can jump.
+ ~Inductor voltage   #Wrong - inductor voltage is the element that jumps; it is the current that is continuous.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.7, pp.217-225 | CO3 | L1
+}
+
+::M3Q2::[html]In DC steady state an inductor behaves as{
+ =a short circuit   #Correct — di/dt is zero, so v \= L·di/dt \= 0 and the element is a short.
+ ~an open circuit   #Wrong - that is the DC behaviour of a capacitor.
+ ~a resistance equal to ωL   #Wrong - omega is zero in DC, so this reactance would be zero, which is a short, but the reasoning as stated is wrong.
+ ~a voltage source   #Wrong - an inductor stores energy but does not impose a voltage in steady state.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.7, pp.225-235 | CO3 | L1
+}
+
+::M3Q3::[html]An uncharged capacitor at t \= 0+ is correctly represented as{
+ =a short circuit   #Correct — with V₀ \= 0 the initial-condition source has zero value, which is a short.
+ ~an open circuit   #Wrong - an open circuit is the t \= infinity DC representation, not the t \= 0+ one.
+ ~a 1 V source   #Wrong - the initial-condition source equals the actual initial voltage, which here is zero.
+ ~a resistance of 1/ωC   #Wrong - this is a steady-state AC reactance and has no meaning at a switching instant.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.7, pp.217-247 | CO3 | L2
+}
+
+::M3Q4::[html]A 2 H inductor carrying 3 A is switched onto a 100 Ω resistor. The resistor voltage immediately after switching is{
+ =300 V   #Correct — the current is continuous at 3 A, so v \= 3 × 100 \= 300 V.
+ ~0 V   #Wrong - this assumes the current starts from zero, which violates inductor continuity.
+ ~6 V   #Wrong - this multiplies the inductance by the current, which has units of flux rather than volts.
+ ~150 V   #Wrong - halving has no basis; the full continuous current flows through the resistor.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.7, pp.225-235 | CO3 | L3
+}
+
+::M3Q5::[html]The time constant of a source-free RL circuit is{
+ =L/R   #Correct — L/R has units of seconds and sets the decay rate.
+ ~R/L   #Wrong - R/L is the neper frequency alpha for a series circuit, the reciprocal of the time constant.
+ ~RL   #Wrong - the product has the wrong units entirely.
+ ~1/(RL)   #Wrong - this is dimensionally incorrect and inverts the dependence on both elements.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.8, pp.261-268 | CO3 | L1
+}
+
+::M3Q6::[html]After one time constant an exponential decay has fallen to approximately{
+ =36.8% of its initial value   #Correct — e^(−1) \= 0.368.
+ ~50% of its initial value   #Wrong - 50 percent corresponds to 0.693 time constants, not one.
+ ~63.2% of its initial value   #Wrong - 63.2 percent is how far a rising response has travelled, not how much of a decay remains.
+ ~13.5% of its initial value   #Wrong - 13.5 percent corresponds to two time constants.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.8, pp.268-272 | CO3 | L2
+}
+
+::M3Q7::[html]A 10 µF capacitor discharging through 1 kΩ has a time constant of{
+ =10 ms   #Correct — τ \= RC \= 1000 × 10e−6 \= 0.01 s.
+ ~100 ms   #Wrong - this is off by a factor of ten in the capacitance.
+ ~1 ms   #Wrong - this is off by a factor of ten in the other direction.
+ ~10 s   #Wrong - this is off by three orders of magnitude, typically from a microfarad-to-farad slip.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.8, pp.272-275 | CO3 | L2
+}
+
+::M3Q8::[html]The total energy dissipated when a charged capacitor discharges fully through R is{
+ =½Cv(0)², independent of R   #Correct — all the stored energy ends up in the resistor regardless of its value.
+ ~½Cv(0)²/R   #Wrong - dividing stored energy by resistance does not even have units of energy.
+ ~proportional to R   #Wrong - R controls how fast the energy leaves, never how much.
+ ~zero, since the capacitor is lossless   #Wrong - the capacitor is lossless but the resistor is not, and the energy has to go somewhere.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.8, pp.272-275 | CO3 | L4
+}
+
+::M3Q9::[html]A rectangular pulse of width T is most usefully written as{
+ =u(t) − u(t − T)   #Correct — the difference of two steps turns a pulse response into a superposition of two step responses.
+ ~u(t) + u(t − T)   #Wrong - the sum produces a staircase rising to 2, not a pulse returning to zero.
+ ~T·u(t)   #Wrong - this scales a step by T and never turns off.
+ ~u(t)·u(t − T)   #Wrong - the product is simply u(t - T), which is a delayed step rather than a pulse.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.8, pp.282-286 | CO3 | L2
+}
+
+::M3Q10::[html]The general first-order response formula is{
+ =x(t) \= x(∞) + [x(0+) − x(∞)]·e^(−t/τ)   #Correct — the natural-response amplitude is the difference between the initial and final values.
+ ~x(t) \= x(0+)·e^(−t/τ)   #Wrong - this is the source-free case only and gives the wrong answer whenever the final value is non-zero.
+ ~x(t) \= x(∞)·e^(−t/τ)   #Wrong - this decays away from the final value rather than toward it.
+ ~x(t) \= x(0+) + x(∞)·e^(−t/τ)   #Wrong - this has the initial and final values in the wrong roles and does not satisfy either boundary condition.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.8, pp.286-295 | CO3 | L2
+}
+
+::M3Q11::[html]A 20 V source is switched onto a series 5 Ω and 2 H with zero initial current. The current at t \= 0.4 s is{
+ =2.53 A   #Correct — τ \= 0.4 s, so i \= 4(1 − e^(−1)) \= 4 × 0.632 \= 2.53 A.
+ ~4 A   #Wrong - 4 A is the final value, reached only asymptotically.
+ ~1.47 A   #Wrong - 1.47 A would be 36.8 percent of the final value, which is how much is still missing, not how much is present.
+ ~0 A   #Wrong - 0 A is the initial value, correct only at t \= 0.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.8, pp.286-295 | CO3 | L3
+}
+
+::M3Q12::[html]For a 5 V supply and a 2.5 V threshold, the RC delay to reach threshold is{
+ =0.693·RC   #Correct — t \= −RC·ln(1 − 0.5) \= 0.693·RC.
+ ~1·RC   #Wrong - one time constant corresponds to a 63.2 percent threshold, not 50 percent.
+ ~2.3·RC   #Wrong - 2.3 RC corresponds to a 90 percent threshold.
+ ~0.5·RC   #Wrong - the delay is not linearly proportional to the threshold fraction; the relation is logarithmic.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.8, pp.295-300 | CO3 | L4
+}
+
+::M3Q13::[html]An RC circuit with τ \= 1 ms charges toward 10 V for 2 ms and is then disconnected. The discharge starts from{
+ =8.65 V   #Correct — at 2τ the response has reached 10(1 − e^(−2)) \= 8.65 V.
+ ~10 V   #Wrong - the asymptote is never reached; using it overstates every later value by 16 percent.
+ ~6.32 V   #Wrong - 6.32 V is the value at one time constant, not two.
+ ~3.68 V   #Wrong - 3.68 V is what remains of a decay after one time constant, not a charging value.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.8, pp.300-306 | CO3 | L4
+}
+
+::M3Q14::[html]For a parallel RLC circuit the neper frequency is{
+ =α \= 1/(2RC)   #Correct — 1/(2RC) is the parallel form; R/(2L) is its series dual.
+ ~α \= R/(2L)   #Wrong - that is the series formula, and using it for a parallel circuit can flip the damping classification.
+ ~α \= 1/√(LC)   #Wrong - that is the resonant frequency omega-zero, not alpha.
+ ~α \= 2RC   #Wrong - this is dimensionally wrong and increases with R, which is backwards for a parallel circuit.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.9, pp.321-334 | CO3 | L2
+}
+
+::M3Q15::[html]A circuit with α \= 1000 s⁻¹ and ω₀ \= 10000 rad/s is{
+ =underdamped   #Correct — α < ω₀ gives complex roots and a ringing response.
+ ~overdamped   #Wrong - overdamped requires alpha greater than omega-zero.
+ ~critically damped   #Wrong - critical damping requires the two to be exactly equal.
+ ~unstable   #Wrong - a passive RLC circuit with positive R always decays and is therefore stable.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.9, pp.321-334 | CO3 | L3
+}
+
+::M3Q16::[html]The critically damped solution form is{
+ =(A₁ + A₂t)·e^(−αt)   #Correct — the repeated root needs the extra t factor to supply a second independent solution.
+ ~A·e^(−αt)   #Wrong - a single exponential has only one constant and cannot satisfy two initial conditions.
+ ~A₁e^(s₁t) + A₂e^(s₂t) with distinct real s   #Wrong - that is the overdamped form, which requires two distinct real roots.
+ ~e^(−αt)(B₁cos ω_d t + B₂sin ω_d t)   #Wrong - that is the underdamped form, which requires complex roots.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.9, pp.334-345 | CO3 | L3
+}
+
+::M3Q17::[html]For a series RLC circuit, increasing R{
+ =increases the damping   #Correct — α \= R/(2L) rises with R, so the response becomes less oscillatory.
+ ~decreases the damping   #Wrong - that is the parallel case, where R is a bypass rather than in the current path.
+ ~leaves the damping unchanged   #Wrong - R appears directly in alpha for a series circuit, so it cannot be neutral.
+ ~changes ω₀ but not α   #Wrong - omega-zero depends only on L and C and is unaffected by R in either topology.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.9, pp.345-359 | CO3 | L4
+}
+
+::M3Q18::[html]How many independent initial conditions are needed to determine a second-order response?{
+ =Two   #Correct — two constants appear in the natural response, so two conditions are required.
+ ~One   #Wrong - one condition leaves the second constant undetermined, and guessing it as zero is usually incorrect.
+ ~Three   #Wrong - the order of the equation sets the count, and this circuit is second order.
+ ~Four   #Wrong - four conditions would over-determine the system.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.9, pp.345-359 | CO3 | L2
+}
+
+::M3Q19::[html]When an inductive circuit is switched onto an AC supply, the largest transient offset occurs when switching at{
+ =a voltage zero crossing   #Correct — at a voltage zero the forced current is at its peak, so the natural term must cancel a large mismatch.
+ ~a voltage peak   #Wrong - switching at a voltage peak gives nearly the smallest transient in an inductive circuit.
+ ~a current peak   #Wrong - the current is zero before switching, so there is no current peak to switch at.
+ ~any instant, since the offset is fixed   #Wrong - the offset depends strongly on the switching angle, which is why inrush limiters exist.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.9, pp.359-361 | CO3 | L5
+}
+
+::M3Q20::[html]The final condition of a circuit driven by a sinusoidal source is{
+ =a steady sinusoid found by phasor analysis   #Correct — the transient decays and leaves the forced sinusoidal response behind.
+ ~zero   #Wrong - zero is the final value only for a source-free circuit.
+ ~a constant DC value   #Wrong - a constant final value is the DC-excitation case.
+ ~undefined   #Wrong - the steady state is perfectly well defined and is exactly what phasor analysis computes.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.10, pp.371-406 | CO3 | L3
+}

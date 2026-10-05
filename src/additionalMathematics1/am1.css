@@ -1,0 +1,1232 @@
+/* Electric Circuit Analysis (VTU 1BEE303) — engineering graph paper over slate ink.
+   --am1-data = voltages, currents and the traces they draw,
+   --am1-active = the element or loop currently under the pencil,
+   --am1-path = the transform domain, --am1-danger = the mistake. */
+
+.electric-circuit-analysis-deck,
+.am1-deck {
+  --am1-ink: #152430;
+  --am1-muted: #55677a;
+  --am1-cream: #fffdf8;
+  --am1-paper: #f5f3ec;
+  --am1-navy: #152430;
+  --am1-data: #1d4ed8;
+  --am1-active: #c2410c;
+  --am1-pointer: #7c3aed;
+  --am1-ok: #15803d;
+  --am1-danger: #b91c1c;
+  --am1-path: #0f766e;
+  --am1-sky: #e6eefb;
+  --am1-line: rgba(21, 36, 48, 0.12);
+  --am1-shadow: 0 16px 40px rgba(21, 36, 48, 0.1);
+  --am1-module: #1d4ed8;
+  --accent: #1d4ed8;
+  --accent-soft: #334155;
+  --card-accent: #1d4ed8;
+  color: var(--am1-ink);
+}
+
+/* One hue per module: formulate · shortcut · respond · transform · encapsulate */
+.electric-circuit-analysis-deck[data-am1-module="1"] { --am1-module: #1d4ed8; --accent: #1d4ed8; }
+.electric-circuit-analysis-deck[data-am1-module="2"] { --am1-module: #c2410c; --accent: #c2410c; }
+.electric-circuit-analysis-deck[data-am1-module="3"] { --am1-module: #0f766e; --accent: #0f766e; }
+.electric-circuit-analysis-deck[data-am1-module="4"] { --am1-module: #7c3aed; --accent: #7c3aed; }
+.electric-circuit-analysis-deck[data-am1-module="5"] { --am1-module: #15803d; --accent: #15803d; }
+
+.module-cover.electric-circuit-analysis { --card-accent: #1d4ed8; }
+
+.electric-circuit-analysis-deck .slide-frame {
+  background:
+    radial-gradient(920px 460px at 6% -18%, rgba(29, 78, 216, 0.1), transparent 58%),
+    radial-gradient(720px 380px at 96% 0%, rgba(194, 65, 12, 0.06), transparent 54%),
+    radial-gradient(540px 280px at 70% 110%, rgba(15, 118, 110, 0.08), transparent 50%),
+    linear-gradient(165deg, #fffdf9 0%, #fcfaf3 52%, #f6f4ed 100%);
+}
+
+/* Squared engineering paper — this subject is worked out with a pencil and a
+   ruler, and every diagram in it is drawn on a grid. */
+.electric-circuit-analysis-deck .slide-frame::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(29, 78, 216, 0.09) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, rgba(29, 78, 216, 0.09) 0 1px, transparent 1px 24px);
+  background-size: 24px 24px, 24px 24px;
+  mix-blend-mode: multiply;
+}
+
+.electric-circuit-analysis-deck[data-am1-module="2"] .slide-frame::after { opacity: 0.2; }
+.electric-circuit-analysis-deck[data-am1-module="3"] .slide-frame::after { opacity: 0.2; }
+.electric-circuit-analysis-deck[data-am1-module="4"] .slide-frame::after { opacity: 0.18; }
+.electric-circuit-analysis-deck[data-am1-module="5"] .slide-frame::after { opacity: 0.18; }
+
+.electric-circuit-analysis-deck .slide-header-copy .slide-kicker {
+  color: var(--am1-module);
+}
+
+.electric-circuit-analysis-deck .slide-header-copy .slide-title {
+  font-size: clamp(34px, 2.7vw, 48px);
+  line-height: 1.14;
+  padding-bottom: 4px;
+  overflow: visible;
+  color: var(--am1-navy);
+}
+
+/* ── Stage shell ── */
+.am1-stage {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px 16px;
+  box-sizing: border-box;
+}
+
+.am1-story {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.am1-story span {
+  font-size: clamp(10px, 0.85vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--am1-muted);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+.am1-story span.lit { opacity: 0.8; color: var(--am1-navy); }
+.am1-story span.now {
+  opacity: 1;
+  color: var(--am1-module);
+  transform: translateX(2px);
+}
+
+.am1-copy {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.am1-visual,
+.am1-visual-b {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+.am1-footer-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  min-width: 0;
+}
+.am1-takeaway,
+.am1-exam {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.35;
+}
+.am1-takeaway strong { color: var(--am1-ok); }
+.am1-exam strong {
+  color: var(--am1-active);
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+}
+
+/* ── Compositions ── */
+.am1-split-right {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(240px, 0.78fr) minmax(380px, 1.22fr);
+  grid-template-rows: 1fr auto;
+}
+/* Explicit placement so copy/visual don't collapse into the story column when
+   a slide renders without a <story> rail (e.g. the example beats). */
+.am1-split-right .am1-story { grid-row: 1 / 3; grid-column: 1; }
+.am1-split-right .am1-copy { grid-column: 2; }
+.am1-split-right .am1-visual { grid-column: 3; }
+.am1-split-right .am1-footer-band { grid-column: 2 / 4; }
+
+/* Algorithm beat: visual is the hero (left), algorithm/dry-run rail (right).
+   Explicit row/col placement + align-items:stretch gives BOTH cells the full
+   row height — without it the aspect-locked SVG collapsed the visual to its
+   intrinsic height and the copy cell shrank, clipping the dry-run panel. */
+.am1-split-left {
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.85fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+}
+.am1-split-left .am1-story { display: none; }
+.am1-split-left .am1-visual { grid-column: 1; grid-row: 1; min-height: 0; align-self: stretch; }
+.am1-split-left .am1-copy { grid-column: 2; grid-row: 1; min-height: 0; align-self: stretch; }
+.am1-split-left .am1-footer-band { grid-column: 1 / 3; grid-row: 2; }
+
+.am1-full-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.am1-full-stage .am1-story { display: none; }
+.am1-full-stage .am1-copy { max-width: 78%; }
+.am1-full-stage .am1-visual { min-height: 0; }
+
+/* Full-width, vertically-centred layout for text-grid framing slides
+   (syllabus audit, practice) — they used a half-width "board"
+   column and left the lower half empty. */
+.am1-fill {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.am1-fill .am1-story { display: none; }
+.am1-fill .am1-copy {
+  grid-row: 1;
+  align-content: safe start;
+  gap: 14px;
+  padding-block: 2px 6px;
+  overflow: hidden;
+}
+.am1-fill .am1-footer-band { grid-row: 2; }
+.am1-fill .am1-lead { font-size: clamp(22px, 1.7vw, 28px); }
+/* let the framing grids breathe across the full stage */
+.am1-fill .am1-syllabus-audit { grid-template-columns: repeat(auto-fit, minmax(184px, 1fr)); gap: 9px; }
+.am1-fill .am1-syllabus-audit article {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 11px;
+  min-height: 40px;
+}
+.am1-fill .am1-syllabus-audit strong { font-size: clamp(13px, 0.92vw, 16px); line-height: 1.18; }
+.am1-fill .am1-syllabus-audit em { font-size: 12px; }
+/* Hardened cap: the syllabus checklist must fit above the footer even in
+   the fullest module (22-24 long topic names). High-specificity + !important
+   so it wins over the platform legibility/base font unconditionally. */
+.am1-stage.am1-fill .am1-syllabus-audit strong { font-size: 15px !important; line-height: 1.16 !important; }
+.am1-stage.am1-fill .am1-syllabus-audit em { font-size: 11px !important; }
+.am1-stage.am1-fill .am1-syllabus-audit article { min-height: 38px !important; padding: 6px 10px !important; gap: 2px !important; }
+.am1-fill .am1-practice-list { gap: 18px; font-size: clamp(17px, 1.3vw, 21px); }
+
+.am1-hero-open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.am1-hero-open .am1-story,
+.am1-hero-open .am1-copy { display: none; }
+.am1-hero-open .am1-visual { min-height: 0; }
+.am1-hero-open .am1-footer-band { justify-content: center; }
+
+.am1-showcase {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 6px;
+}
+.am1-showcase .am1-story,
+.am1-showcase .am1-copy { display: none; }
+.am1-showcase .am1-visual { grid-row: 1; min-height: 0; }
+.am1-showcase .am1-footer-band {
+  justify-content: center;
+  border-top: 1px solid var(--am1-line);
+  padding-top: 6px;
+}
+.am1-showcase .am1-takeaway { font-size: clamp(14px, 1.05vw, 17px); }
+
+.am1-board {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.am1-board .am1-story { display: none; }
+.am1-board .am1-footer-band { grid-column: 1 / 3; }
+
+.am1-inspect {
+  grid-template-columns: minmax(220px, 0.42fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.am1-inspect .am1-story { display: none; }
+.am1-inspect .am1-visual { grid-column: 2; grid-row: 1; }
+.am1-inspect .am1-footer-band { grid-column: 1 / 3; }
+
+.am1-pipeline {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.am1-pipeline .am1-story { grid-row: 1 / 4; }
+.am1-pipeline .am1-copy,
+.am1-pipeline .am1-visual,
+.am1-pipeline .am1-footer-band { grid-column: 2; }
+
+.am1-memory-first {
+  grid-template-columns: minmax(200px, 0.32fr) minmax(420px, 1.2fr);
+  grid-template-rows: 1fr auto;
+}
+.am1-memory-first .am1-story { display: none; }
+.am1-memory-first .am1-visual { grid-column: 2; grid-row: 1; }
+.am1-memory-first .am1-footer-band { grid-column: 1 / 3; }
+
+.am1-algo-board {
+  grid-template-columns: minmax(260px, 0.48fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.am1-algo-board .am1-story { display: none; }
+.am1-algo-board .am1-footer-band { grid-column: 1 / 3; }
+
+.am1-code-split {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-rows: 1fr auto;
+}
+.am1-code-split .am1-story { display: none; }
+.am1-code-split .am1-footer-band { grid-column: 1 / 3; }
+
+.electric-circuit-analysis-deck .slide-frame[data-composition="full-stage"] .am1-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="hero-open"] .am1-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="memory-first"] .am1-visual,
+.electric-circuit-analysis-deck .slide-frame[data-composition="showcase"] .am1-visual {
+  min-height: 0;
+}
+.am1-full-stage .am1-visual { min-height: 62%; }
+.am1-hero-open .am1-visual,
+.am1-memory-first .am1-visual { flex: 1 1 auto; }
+
+/* ── Typography blocks ── */
+.am1-lead {
+  margin: 0;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.38;
+  font-weight: 650;
+  color: var(--am1-navy);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.am1-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.34;
+}
+.am1-points li { padding-left: 2px; }
+.am1-points li::marker { color: var(--am1-module); font-weight: 800; }
+
+.am1-definition {
+  background: #fff;
+  border: 1px solid var(--am1-line);
+  border-left: 5px solid var(--am1-data);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--am1-shadow);
+}
+.am1-definition span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--am1-data);
+}
+.am1-definition strong {
+  display: block;
+  font-size: clamp(20px, 1.6vw, 28px);
+  margin: 4px 0;
+}
+.am1-definition p {
+  margin: 0;
+  font-size: clamp(15px, 1.1vw, 18px);
+}
+
+.am1-callout {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--am1-line);
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+}
+.am1-callout span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+}
+.am1-callout p {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.am1-callout-warn { border-left: 4px solid var(--am1-active); }
+.am1-callout-fault { border-left: 4px solid var(--am1-danger); }
+.am1-callout-ok { border-left: 4px solid var(--am1-ok); }
+.am1-callout-idea { border-left: 4px solid var(--am1-data); }
+.am1-callout-know { border-left: 4px solid var(--am1-pointer); }
+
+/* Scene shell */
+.am1-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.72), rgba(255, 250, 240, 0.28) 62%, transparent 78%);
+  overflow: hidden;
+  position: relative;
+}
+.am1-scene svg,
+.am1-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Code panel — light, readable (≥19px) */
+.am1-code-panel {
+  background: #ffffff;
+  border: 1.5px solid var(--am1-line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--am1-shadow);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.am1-code-line {
+  font-size: clamp(19px, 1.45vw, 22px);
+  line-height: 1.55;
+  color: var(--am1-navy);
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: pre;
+}
+.am1-code-line.is-current {
+  background: rgba(217, 119, 6, 0.14);
+  color: var(--am1-active);
+  box-shadow: inset 3px 0 0 var(--am1-active);
+}
+
+/* Linked list / stack / queue / tree helpers */
+.am1-ll-node { transform-box: fill-box; }
+.am1-stack-cell,
+.am1-queue-cell,
+.am1-tree-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ── Concept-native motion (am1m-*) ──
+   State-change animations — not fade-in as primary teaching motion. */
+
+@keyframes am1m-allocate {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  55% { transform: scale(0.96); }
+  70% { transform: scale(1.03); }
+}
+@keyframes am1m-shift {
+  0%, 12% { transform: translateX(0); }
+  45%, 55% { transform: translateX(28px); }
+  88%, 100% { transform: translateX(0); }
+}
+@keyframes am1m-insert {
+  0%, 15% { transform: translateY(-28px) scale(0.85); opacity: 0.35; }
+  40% { transform: translateY(0) scale(1.06); opacity: 1; }
+  55%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes am1m-delete {
+  0%, 20% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(0.92) translateY(6px); opacity: 0.45; }
+  70%, 100% { transform: scale(0.85); opacity: 0.2; }
+}
+@keyframes am1m-push {
+  0%, 10% { transform: translateY(-40px); opacity: 0.4; }
+  35% { transform: translateY(4px); opacity: 1; }
+  50%, 100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes am1m-pop {
+  0%, 15% { transform: translateY(0); opacity: 1; }
+  45% { transform: translateY(-36px); opacity: 0.35; }
+  70%, 100% { transform: translateY(-8px); opacity: 0.55; }
+}
+@keyframes am1m-enqueue {
+  0%, 12% { transform: translateX(40px); opacity: 0.35; }
+  40% { transform: translateX(-4px); opacity: 1; }
+  55%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes am1m-dequeue {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  45% { transform: translateX(-48px); opacity: 0.3; }
+  70%, 100% { transform: translateX(-12px); opacity: 0.5; }
+}
+@keyframes am1m-wrap {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(18deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(4deg); }
+}
+@keyframes am1m-pointer {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -24; }
+}
+@keyframes am1m-rewire {
+  0%, 20% { stroke-dashoffset: 40; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+@keyframes am1m-traverse {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -36; }
+}
+@keyframes am1m-search {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(20px); }
+  75% { transform: translateX(10px); }
+}
+@keyframes am1m-swap {
+  0%, 100% { transform: translate(0, 0); }
+  35% { transform: translate(14px, -10px); }
+  70% { transform: translate(-14px, 10px); }
+}
+@keyframes am1m-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.62; }
+}
+@keyframes am1m-wave {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.07); }
+  70% { transform: scale(1.02); }
+}
+@keyframes am1m-descend {
+  0%, 10% { transform: translate(0, -24px); opacity: 0.5; }
+  45% { transform: translate(36px, 40px); opacity: 1; }
+  70% { transform: translate(72px, 90px); opacity: 1; }
+  100% { transform: translate(72px, 90px); opacity: 0.85; }
+}
+@keyframes am1m-return {
+  0%, 15% { transform: translate(40px, 60px); opacity: 0.6; }
+  55% { transform: translate(10px, 10px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+.am1m-allocate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-allocate 2.4s ease-in-out infinite;
+}
+.am1m-shift {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-shift 2.8s ease-in-out infinite;
+}
+.am1m-insert {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-insert 2.6s ease-out infinite;
+}
+.am1m-delete {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-delete 2.8s ease-in-out infinite;
+}
+.am1m-push {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-push 2.4s ease-out infinite;
+}
+.am1m-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-pop 2.4s ease-in infinite;
+}
+.am1m-enqueue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-enqueue 2.5s ease-out infinite;
+}
+.am1m-dequeue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-dequeue 2.5s ease-in infinite;
+}
+.am1m-wrap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-wrap 3s ease-in-out infinite;
+}
+.am1m-pointer {
+  stroke-dasharray: 10 8;
+  animation: am1m-pointer 1.4s linear infinite;
+}
+.am1m-rewire {
+  stroke-dasharray: 12 10;
+  animation: am1m-rewire 2.2s ease-in-out infinite;
+}
+.am1m-traverse {
+  stroke-dasharray: 10 8;
+  animation: am1m-traverse 1.6s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.am1m-search {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-search 2.6s ease-in-out infinite;
+}
+.am1m-swap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-swap 2.4s ease-in-out infinite;
+}
+.am1m-pulse {
+  animation: am1m-pulse 1.9s ease-in-out infinite;
+}
+.am1m-wave {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-wave 2.2s ease-in-out infinite;
+}
+.am1m-descend {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-descend 3.2s ease-in-out infinite;
+}
+.am1m-return {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: am1m-return 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .am1m-allocate, .am1m-shift, .am1m-insert, .am1m-delete,
+  .am1m-push, .am1m-pop, .am1m-enqueue, .am1m-dequeue,
+  .am1m-wrap, .am1m-pointer, .am1m-rewire, .am1m-traverse,
+  .am1m-search, .am1m-swap, .am1m-pulse, .am1m-wave,
+  .am1m-descend, .am1m-return {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Kit components ── */
+.am1-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 750;
+  color: var(--am1-navy);
+}
+.am1-flow i { color: var(--am1-module); font-style: normal; font-weight: 900; }
+
+.am1-algo-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+  font-size: clamp(15px, 1.15vw, 19px);
+  line-height: 1.4;
+}
+.am1-algo-steps li::marker { color: var(--am1-module); font-weight: 800; }
+
+.am1-complexity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--am1-line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.am1-complexity > div {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+.am1-complexity span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--am1-muted);
+}
+/* 1BEE303 cost cells hold a sentence ("one constraint per dependent source"),
+   not a big-O token, so they read at body size rather than display size. */
+.am1-complexity strong {
+  font-size: clamp(13px, 1.02vw, 16px);
+  line-height: 1.28;
+  font-weight: 750;
+  color: var(--am1-data);
+}
+.am1-complexity > p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--am1-muted);
+}
+
+.am1-code-panel span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--am1-module);
+  margin-bottom: 8px;
+  font-family: system-ui, sans-serif;
+}
+.am1-code-panel pre {
+  margin: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.am1-code-panel code {
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.45;
+  color: var(--am1-navy);
+  font-weight: 650;
+}
+
+.am1-dryrun {
+  display: grid;
+  gap: 8px;
+}
+.am1-dryrun section {
+  background: #fff;
+  border: 1px solid var(--am1-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.am1-dryrun span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--am1-module);
+}
+.am1-dryrun p { margin: 4px 0 0; font-size: 15px; }
+.am1-dryrun ol {
+  margin: 4px 0 0;
+  padding-left: 1.15em;
+  font-size: 14px;
+  display: grid;
+  gap: 3px;
+}
+
+.am1-term-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.am1-term-chips span {
+  background: var(--am1-sky);
+  color: var(--am1-data);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.am1-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.am1-roadmap article {
+  background: #fff;
+  border: 1px solid var(--am1-line);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+.am1-roadmap b { color: var(--am1-module); font-size: 12px; }
+.am1-roadmap strong { font-size: 14px; line-height: 1.25; }
+
+.am1-checkpoint-sheet {
+  display: grid;
+  gap: 7px;
+}
+.am1-checkpoint-sheet article {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.72fr) auto 1.85fr;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--am1-line);
+  border-radius: 12px;
+  padding: 7px 12px;
+}
+.am1-checkpoint-sheet code {
+  font-size: clamp(16px, 1.2vw, 21px);
+  font-weight: 800;
+  color: var(--am1-data);
+}
+.am1-checkpoint-sheet span { font-size: 12.5px; line-height: 1.25; color: var(--am1-muted); }
+
+.am1-syllabus-audit {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+.am1-syllabus-audit article {
+  background: #fff;
+  border: 1px solid var(--am1-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.am1-syllabus-audit strong { font-size: 14px; }
+.am1-syllabus-audit em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--am1-ok);
+}
+
+.am1-practice-list {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(15px, 1.15vw, 18px);
+}
+.am1-practice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.am1-practice-list em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--am1-active);
+  white-space: nowrap;
+}
+
+.am1-review-map {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 12px;
+}
+.am1-review-map h3 {
+  margin: 0;
+  font-size: clamp(22px, 2vw, 32px);
+  color: var(--am1-navy);
+}
+.am1-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.am1-review-topics span {
+  background: #fff;
+  border: 1.5px solid var(--am1-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ── Instructional motion (classroom-paced) ── */
+@keyframes am1m-flow-node {
+  0%, 100% { opacity: 0.55; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-4px); }
+}
+@keyframes am1m-flow-arrow {
+  0% { stroke-dashoffset: 24; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.4; }
+}
+@keyframes am1m-feedback {
+  0% { stroke-dashoffset: 40; opacity: 0.45; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -40; opacity: 0.45; }
+}
+@keyframes am1m-waterfall {
+  0% { opacity: 0; transform: translate(-12px, -18px); }
+  30%, 100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes am1m-cost-curve {
+  0% { stroke-dasharray: 0 800; }
+  100% { stroke-dasharray: 800 0; }
+}
+@keyframes am1m-cost-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+@keyframes am1m-grow {
+  0% { opacity: 0; transform: scaleX(0.55); transform-origin: center; }
+  45%, 100% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes am1m-spiral {
+  0% { opacity: 0.15; }
+  40% { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+@keyframes am1m-concurrent {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+@keyframes am1m-up-line {
+  0% { stroke-dasharray: 0 1200; }
+  100% { stroke-dasharray: 1200 0; }
+}
+@keyframes am1m-orbit {
+  0%, 100% { opacity: 0.65; }
+  50% { opacity: 1; }
+}
+@keyframes am1m-token {
+  0% { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateY(-170px) rotate(-360deg); }
+}
+@keyframes am1m-backlog {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(210px); }
+  70% { transform: translateX(420px); }
+  100% { transform: translateX(630px); }
+}
+@keyframes am1m-xp-step {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+@keyframes am1m-bar {
+  0% { transform: scaleX(0.2); transform-origin: left center; opacity: 0.4; }
+  50%, 100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes am1m-gate {
+  0%, 100% { opacity: 0.7; }
+  40% { opacity: 1; }
+}
+@keyframes am1m-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  40%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes am1m-pulse-soft {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.am1m-flow-node { animation: am1m-flow-node 3.2s ease-in-out infinite; }
+.am1m-flow-arrow { stroke-dasharray: 10 8; animation: am1m-flow-arrow 2.8s linear infinite; }
+.am1m-feedback { stroke-dasharray: 10 8; animation: am1m-feedback 3.6s linear infinite; }
+.am1m-waterfall { animation: am1m-waterfall 3.5s ease-out infinite; }
+.am1m-cost-curve { animation: am1m-cost-curve 4s ease-out infinite; }
+.am1m-cost-dot { animation: am1m-cost-dot 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.am1m-grow { animation: am1m-grow 3.8s ease-out infinite; }
+.am1m-spiral { animation: am1m-spiral 3.2s ease-in-out infinite; }
+.am1m-concurrent { animation: am1m-concurrent 2.8s ease-in-out infinite; }
+.am1m-up-line { animation: am1m-up-line 4.5s ease-out infinite; }
+.am1m-orbit { animation: am1m-orbit 2.6s ease-in-out infinite; }
+.am1m-token { animation: am1m-token 12s linear infinite; transform-box: fill-box; transform-origin: 450px 260px; }
+.am1m-backlog-card { animation: am1m-backlog 10s ease-in-out infinite; }
+.am1m-xp-step { animation: am1m-xp-step 3s ease-in-out infinite; }
+.am1m-bar { animation: am1m-bar 3.4s ease-out infinite; }
+.am1m-gate { animation: am1m-gate 2.8s ease-in-out infinite; }
+.am1m-fade-in { animation: am1m-fade-in 2.4s ease-out both; }
+.am1m-pulse { animation: am1m-pulse-soft 2.4s ease-in-out infinite; }
+.am1m-step { animation: am1m-pulse-soft 2.8s ease-in-out infinite; }
+.am1m-actor { animation: am1m-pulse-soft 3s ease-in-out infinite; }
+.am1m-usecase-step { animation: am1m-flow-node 2.8s ease-in-out infinite; }
+.am1m-system-box { animation: am1m-pulse-soft 2.6s ease-in-out infinite; }
+.am1m-risk-cell { animation: am1m-pulse-soft 3.2s ease-in-out infinite; }
+.am1m-risk-dot { animation: am1m-cost-dot 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.am1m-delay-0 { animation-delay: 0s; }
+.am1m-delay-1 { animation-delay: 0.35s; }
+.am1m-delay-2 { animation-delay: 0.7s; }
+.am1m-delay-3 { animation-delay: 1.05s; }
+.am1m-delay-4 { animation-delay: 1.4s; }
+
+/* ── Electric Circuit Analysis instructional motion ──
+   Every animation below shows a circuit mechanism: current marching, a phasor
+   turning, a transient decaying, a pole moving. Decoration is not the job. */
+@keyframes am1m-current {
+  0% { stroke-dashoffset: 36; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes am1m-current-rev {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 36; }
+}
+@keyframes am1m-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes am1m-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes am1m-draw {
+  0% { stroke-dashoffset: 900; }
+  55%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes am1m-sweep-x {
+  0% { transform: translateX(0); opacity: 0.25; }
+  12% { opacity: 1; }
+  100% { transform: translateX(var(--am1m-sweep, 620px)); opacity: 0.9; }
+}
+@keyframes am1m-switch {
+  0%, 35% { transform: rotate(-32deg); }
+  55%, 100% { transform: rotate(0deg); }
+}
+@keyframes am1m-decay-dot {
+  0% { transform: translate(0, 0); opacity: 0.4; }
+  10% { opacity: 1; }
+  100% { transform: translate(var(--am1m-dx, 560px), var(--am1m-dy, 210px)); opacity: 0.9; }
+}
+@keyframes am1m-ring {
+  0%, 100% { transform: translateY(0); }
+  18% { transform: translateY(-46px); }
+  36% { transform: translateY(32px); }
+  54% { transform: translateY(-19px); }
+  72% { transform: translateY(11px); }
+  86% { transform: translateY(-5px); }
+}
+@keyframes am1m-merge-l {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(118px); opacity: 0.35; }
+}
+@keyframes am1m-merge-r {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(-118px); opacity: 0.35; }
+}
+@keyframes am1m-collapse {
+  0%, 25% { transform: scale(1); opacity: 1; }
+  70%, 100% { transform: scale(0.42); opacity: 0.18; }
+}
+@keyframes am1m-emerge {
+  0%, 35% { transform: scale(0.55); opacity: 0; }
+  80%, 100% { transform: scale(1); opacity: 1; }
+}
+@keyframes am1m-slide-in {
+  0% { transform: translateX(-34px); opacity: 0; }
+  45%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes am1m-pole-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(var(--am1m-px, -70px), 0); }
+}
+@keyframes am1m-needle {
+  0%, 100% { transform: rotate(-58deg); }
+  50% { transform: rotate(52deg); }
+}
+@keyframes am1m-wave-shift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-180px); }
+}
+@keyframes am1m-cell-in {
+  0% { opacity: 0; transform: translateY(9px) scale(0.94); }
+  45%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes am1m-charge {
+  /* Floor stays high enough that pulsing LABELS remain readable. */
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+@keyframes am1m-flux {
+  0%, 100% { transform: scale(0.94); opacity: 0.72; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+@keyframes am1m-probe {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(var(--am1m-probe, 96px)); }
+}
+@keyframes am1m-flip {
+  0%, 20% { transform: scaleX(1); }
+  45%, 100% { transform: scaleX(-1); }
+}
+
+.am1m-current { stroke-dasharray: 9 9; animation: am1m-current 1.1s linear infinite; }
+.am1m-current-slow { stroke-dasharray: 9 9; animation: am1m-current 2.2s linear infinite; }
+.am1m-current-rev { stroke-dasharray: 9 9; animation: am1m-current-rev 1.4s linear infinite; }
+.am1m-spin { animation: am1m-spin 4.4s linear infinite; transform-box: fill-box; }
+.am1m-spin-slow { animation: am1m-spin-slow 6s linear infinite; transform-box: fill-box; }
+.am1m-draw { stroke-dasharray: 900; animation: am1m-draw 4s ease-out infinite; }
+.am1m-sweep-x { animation: am1m-sweep-x 3.6s linear infinite; }
+.am1m-switch { animation: am1m-switch 3.4s ease-in-out infinite; transform-box: fill-box; }
+.am1m-decay-dot { animation: am1m-decay-dot 3.8s ease-in infinite; transform-box: fill-box; }
+.am1m-ring { animation: am1m-ring 3.6s ease-in-out infinite; transform-box: fill-box; }
+.am1m-merge-l { animation: am1m-merge-l 3.8s ease-in-out infinite; transform-box: fill-box; }
+.am1m-merge-r { animation: am1m-merge-r 3.8s ease-in-out infinite; transform-box: fill-box; }
+.am1m-collapse { animation: am1m-collapse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+/* Reveals play ONCE and hold. Looping them would leave labelled steps and
+   formulas fading in and out under the reader — legibility beats motion. */
+.am1m-emerge { animation: am1m-emerge 1.2s ease-out both; transform-box: fill-box; transform-origin: center; }
+.am1m-slide-in { animation: am1m-slide-in 0.9s ease-out both; transform-box: fill-box; }
+.am1m-pole-drift { animation: am1m-pole-drift 4.4s ease-in-out infinite; transform-box: fill-box; }
+.am1m-needle { animation: am1m-needle 3.4s ease-in-out infinite; transform-box: fill-box; }
+.am1m-wave-shift { animation: am1m-wave-shift 2.4s linear infinite; }
+.am1m-cell-in { animation: am1m-cell-in 0.9s ease-out both; transform-box: fill-box; }
+.am1m-charge { animation: am1m-charge 2.2s ease-in-out infinite; }
+.am1m-flux { animation: am1m-flux 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.am1m-probe { animation: am1m-probe 3.2s ease-in-out infinite; transform-box: fill-box; }
+.am1m-flip { animation: am1m-flip 4.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.am1m-delay-5 { animation-delay: 1.75s; }
+.am1m-delay-6 { animation-delay: 2.1s; }
+.am1m-delay-7 { animation-delay: 2.45s; }
+
+
+.am1-scene, .am1-showcase-scene { width: 100%; height: 100%; min-height: 0; }
+.am1-svg { width: 100%; height: 100%; display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .electric-circuit-analysis-deck [class*="am1m-"] {
+    animation: none !important;
+  }
+}
+
+/* Dense algorithm slides (real algo steps + dry-run trace) must fit the
+   algo-board left column at 1280×720. Tighten only in that composition. */
+.am1-algo-board .am1-algo-steps { gap: 4px; font-size: clamp(14px, 1.02vw, 17px); line-height: 1.3; }
+.am1-algo-board .am1-dryrun { gap: 5px; }
+.am1-algo-board .am1-dryrun section { padding: 6px 11px; }
+.am1-algo-board .am1-dryrun ol { gap: 2px; font-size: 13.5px; }
+.am1-algo-board .am1-dryrun p { font-size: 14px; }
+.am1-algo-board .am1-lead { font-size: clamp(16px, 1.25vw, 20px); }
+
+/* ── 1BEE303-specific kit pieces (no Computer Graphics counterpart) ── */
+
+/* Textbook provenance carried from Phase 1. Units whose prescribed book was
+   not supplied render a chapter with no page range — that is intentional. */
+.am1-book-cite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--am1-muted);
+}
+.am1-book-cite b {
+  background: var(--am1-sky);
+  color: var(--am1-data);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.am1-book-cite span { font-style: normal; }
+.am1-book-cite em {
+  font-style: normal;
+  background: rgba(21, 128, 61, 0.1);
+  color: var(--am1-ok);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.am1-book-cite i {
+  font-style: normal;
+  border: 1px solid var(--am1-line);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.am1-quiz-card {
+  background: #fff;
+  border: 1px solid var(--am1-line);
+  border-left: 4px solid var(--am1-data);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: var(--am1-shadow);
+}
+.am1-quiz-card + .am1-quiz-card { margin-top: 8px; }
+.am1-quiz-card strong {
+  display: block;
+  font-size: 15.5px;
+  line-height: 1.3;
+  color: var(--am1-navy);
+}
+.am1-quiz-card ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 10px;
+  margin: 8px 0 0;
+  padding: 0 0 0 18px;
+  font-size: 13.5px;
+  font-weight: 650;
+}
+.am1-quiz-card li.is-correct {
+  color: var(--am1-ok);
+  font-weight: 800;
+}
+.am1-quiz-card li.is-correct::marker { color: var(--am1-ok); }
+.am1-quiz-card p {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--am1-muted);
+}
+
+/* Showcase beats hand the whole stage to one mechanism. */
+.am1-showcase-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Eight checkpoint rows must fit one 1280x720 stage above the footer band.
+   Sized against the longest 1BEE303 topic ("Sources of electrical energy:
+   independent and dependent") wrapping to two lines. !important so it beats
+   the platform legibility layer, which loads after this sheet. */
+.am1-stage.am1-fill .am1-checkpoint-sheet { gap: 6px !important; }
+.am1-stage.am1-fill .am1-checkpoint-sheet article {
+  grid-template-columns: minmax(180px, 1fr) auto 1.6fr !important;
+  gap: 10px !important;
+  padding: 6px 11px !important;
+}
+.am1-stage.am1-fill .am1-checkpoint-sheet strong {
+  font-size: 14.5px !important;
+  line-height: 1.2 !important;
+}
+.am1-stage.am1-fill .am1-checkpoint-sheet code { font-size: 13px !important; }
+.am1-stage.am1-fill .am1-checkpoint-sheet span { font-size: 12px !important; line-height: 1.24 !important; }
+
+/* Worked-step panel: body shrinks and the citation sits in a footer so a long
+   step loses type size rather than its last lines to `overflow: hidden`. */
+.am1-code-panel {
+  display: flex;
+  flex-direction: column;
+}
+.am1-code-panel pre {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.am1-code-panel.is-dense code {
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.34;
+}
+.am1-code-panel small {
+  display: block;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--am1-line);
+  font-family: system-ui, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--am1-muted);
+}

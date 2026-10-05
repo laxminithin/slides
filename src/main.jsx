@@ -48,6 +48,21 @@ import './distributedSystems/dist.css'
 import './unixSystemProgramming/unix.css'
 import './computerGraphics/cg.css'
 import './computerNetworksBcs502/cn502.css'
+import './networkAnalysis/na.css'
+import './pythonProgramming/py.css'
+import './digitalCommunication/dc.css'
+import './electricCircuitAnalysis/eca.css'
+import './analogElectronicsCircuits/aec.css'
+import './complexAnalysisTransforms/cat.css'
+import './highVoltageEngineering/hve.css'
+import './electricMotorDriveSystemsEv/emd.css'
+import './materialsScienceMetallurgy/msm.css'
+import './fluidMechanics/fm.css'
+import './digitalSystemDesignUsingVerilog/dsd.css'
+import './additionalMathematics1/am1.css'
+import './kinematicsOfMachines/kom.css'
+import './automationInManufacturing/aim.css'
+import './analogElectronicsAndLinearIntegratedCircuits/aea.css'
 import './lab/lab.css'
 /* V3.1 composition layer loads after subject sheets so anti-top-heavy rules win
    equal-specificity contests. V3.2 sparse intelligence loads last and keys off
@@ -66,6 +81,9 @@ import ChemistryResourcePage from './pages/ChemistryResourcePage.jsx'
 import DeepLearningResourcePage from './pages/DeepLearningResourcePage.jsx'
 import OperatingSystemsResourcePage from './pages/OperatingSystemsResourcePage.jsx'
 import ArtificialIntelligenceResourcePage from './pages/ArtificialIntelligenceResourcePage.jsx'
+import NetworkAnalysisResourcePage from './pages/NetworkAnalysisResourcePage.jsx'
+import PythonProgrammingResourcePage from './pages/PythonProgrammingResourcePage.jsx'
+import DigitalCommunicationResourcePage from './pages/DigitalCommunicationResourcePage.jsx'
 import FirstYearFoundationPlayground from './firstYearFoundation/Playground.jsx'
 
 createRoot(document.getElementById('root')).render(
@@ -93,6 +111,18 @@ createRoot(document.getElementById('root')).render(
         <Route path="/operating-systems/:moduleId/notes" element={<OperatingSystemsResourcePage type="notes" />} />
         <Route path="/artificial-intelligence/:moduleId/previous-year-questions" element={<ArtificialIntelligenceResourcePage type="questions" />} />
         <Route path="/artificial-intelligence/:moduleId/notes" element={<ArtificialIntelligenceResourcePage type="notes" />} />
+        <Route path="/network-analysis/:moduleId/previous-year-questions" element={<NetworkAnalysisResourcePage type="questions" />} />
+        <Route path="/network-analysis/:moduleId/notes" element={<NetworkAnalysisResourcePage type="notes" />} />
+        <Route path="/network-analysis/:moduleId/quiz" element={<NetworkAnalysisResourcePage type="quiz" />} />
+        <Route path="/network-analysis/:moduleId/assignment" element={<NetworkAnalysisResourcePage type="assignment" />} />
+        <Route path="/python-programming/:moduleId/previous-year-questions" element={<PythonProgrammingResourcePage type="questions" />} />
+        <Route path="/python-programming/:moduleId/notes" element={<PythonProgrammingResourcePage type="notes" />} />
+        <Route path="/python-programming/:moduleId/quiz" element={<PythonProgrammingResourcePage type="quiz" />} />
+        <Route path="/python-programming/:moduleId/assignment" element={<PythonProgrammingResourcePage type="assignment" />} />
+        <Route path="/digital-communication/:moduleId/previous-year-questions" element={<DigitalCommunicationResourcePage type="questions" />} />
+        <Route path="/digital-communication/:moduleId/notes" element={<DigitalCommunicationResourcePage type="notes" />} />
+        <Route path="/digital-communication/:moduleId/quiz" element={<DigitalCommunicationResourcePage type="quiz" />} />
+        <Route path="/digital-communication/:moduleId/assignment" element={<DigitalCommunicationResourcePage type="assignment" />} />
         <Route path="/__first-year-foundation" element={<FirstYearFoundationPlayground />} />
         <Route path="/*" element={<App />} />
       </Routes>

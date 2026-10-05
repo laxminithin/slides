@@ -1,0 +1,162 @@
+// BEC503 Digital Communication — Module 2: Digital Modulation Techniques
+// 20 multiple choice questions, 1 mark each.
+
+::M2Q1::[html]The bit error probability of coherent BPSK is{
+ =Q(sqrt(2 Eb/N0))   #Correct - antipodal signalling gives the factor of two inside the square root.
+ ~Q(sqrt(Eb/N0))   #Wrong - that is coherent BFSK, which is 3 dB worse.
+ ~0.5 exp(-Eb/N0)   #Wrong - that is DPSK, a differentially coherent scheme.
+ ~Q(Eb/N0)   #Wrong - the argument of the Q function must be a square root of an energy ratio, not the ratio itself.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.352-357 | CO2 | L1
+}
+
+::M2Q2::[html]How many dimensions does a QPSK constellation occupy?{
+ =2   #Correct - four points arranged in a plane spanned by two orthogonal carriers.
+ ~1   #Wrong - one dimension holds only two antipodal points, which is BPSK.
+ ~4   #Wrong - that confuses the number of signals with the dimension of the space.
+ ~log2(4) \= 2 bits, so 4   #Wrong - bits per symbol and dimensions are different quantities that happen to coincide here by accident.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.357-364 | CO2 | L2
+}
+
+::M2Q3::[html]Compared with BPSK at the same Eb/N0, QPSK has{
+ =the same bit error rate and twice the spectral efficiency   #Correct - the two quadrature channels are independent BPSK channels sharing the band.
+ ~twice the bit error rate and twice the spectral efficiency   #Wrong - the bit error rate is identical; only the symbol error rate is roughly doubled.
+ ~half the bit error rate and the same efficiency   #Wrong - QPSK does not improve on the BPSK bit error rate, it matches it.
+ ~the same bit error rate and the same efficiency   #Wrong - QPSK carries two bits per symbol, so the efficiency is doubled.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.357-364 | CO2 | L3
+}
+
+::M2Q4::[html]Gray mapping is used because{
+ =adjacent constellation points then differ in exactly one bit   #Correct - so the most likely symbol errors produce only one bit error each.
+ ~it increases the minimum distance   #Wrong - the geometry is unchanged; only the labels move.
+ ~it reduces the peak-to-average power ratio   #Wrong - PAPR depends on point positions, not on labelling.
+ ~it removes the need for a phase reference   #Wrong - differential encoding does that, not Gray mapping.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.357-364 | CO2 | L2
+}
+
+::M2Q5::[html]The minimum distance of M-ary PSK with symbol energy E is{
+ =2 sqrt(E) sin(pi/M)   #Correct - the chord subtending an angle 2 pi/M at radius sqrt(E).
+ ~2 sqrt(E) cos(pi/M)   #Wrong - cosine gives the wrong limit\: it should shrink as M grows, not approach 2 sqrt(E).
+ ~sqrt(E) sin(2 pi/M)   #Wrong - the half-angle belongs inside the sine, and the leading factor is 2.
+ ~2 pi sqrt(E)/M   #Wrong - that is the arc length, which overestimates the Euclidean distance.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.364-370 | CO2 | L3
+}
+
+::M2Q6::[html]Going from QPSK to 8-PSK at the same average symbol energy costs approximately{
+ =5.3 dB in minimum distance   #Correct - the chord falls from 1.414 sqrt(E) to 0.765 sqrt(E), a ratio of 1.85 or 5.3 dB.
+ ~3 dB   #Wrong - 3 dB is the orthogonal-versus-antipodal penalty, a different comparison.
+ ~1 dB   #Wrong - 1 dB is the rough noncoherent penalty, not the constellation-density penalty.
+ ~nothing, because the energy is unchanged   #Wrong - equal energy spread over more points necessarily reduces the spacing.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.364-370 | CO2 | L4
+}
+
+::M2Q7::[html]A key practical advantage of M-ary PSK over M-ary QAM is{
+ =constant envelope, so the amplifier can run near saturation   #Correct - all points lie on one circle, so the envelope never varies.
+ ~better minimum distance at every M   #Wrong - QAM overtakes PSK on minimum distance from M \= 8 upward.
+ ~lower receiver complexity at every M   #Wrong - QAM slices per axis and is generally simpler at high M.
+ ~immunity to phase error   #Wrong - PSK is if anything more sensitive to phase error, since all information is in the phase.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.370-375 | CO2 | L4
+}
+
+::M2Q8::[html]For square M-QAM the receiver can{
+ =slice the I and Q axes independently   #Correct - a square constellation is the product of two independent PAM axes.
+ ~only perform a full M-way distance search   #Wrong - the product structure is precisely what avoids the M-way search.
+ ~ignore the quadrature component   #Wrong - half the information lives on the quadrature axis.
+ ~work without symbol timing   #Wrong - symbol timing is required by every coherent scheme.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.370-375 | CO2 | L3
+}
+
+::M2Q9::[html]At M \= 16 and equal average energy, QAM outperforms PSK by roughly{
+ =4.2 dB   #Correct - 0.632 sqrt(E) against 0.390 sqrt(E), a ratio of 1.62.
+ ~1 dB   #Wrong - 1 dB is roughly the gap at M \= 8, not M \= 16.
+ ~10 dB   #Wrong - the gap is real but not that large at M \= 16.
+ ~they are identical   #Wrong - they are identical only at M \= 4, where both are QPSK.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.370-375 | CO2 | L4
+}
+
+::M2Q10::[html]Two BFSK signals are orthogonal for coherent detection when their frequency separation is a multiple of{
+ =1/(2 Tb)   #Correct - coherent detection permits the tighter spacing; noncoherent needs 1/Tb.
+ ~1/Tb   #Wrong - that is the noncoherent requirement, twice as wide.
+ ~2/Tb   #Wrong - wider than necessary and wastes bandwidth.
+ ~fc/2   #Wrong - the requirement depends on the bit duration, not on the carrier frequency.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.375-382 | CO2 | L3
+}
+
+::M2Q11::[html]The bit error probability of coherent BFSK is{
+ =Q(sqrt(Eb/N0))   #Correct - orthogonal signalling loses the factor of two, which is the 3 dB penalty.
+ ~Q(sqrt(2 Eb/N0))   #Wrong - that is BPSK, which is antipodal rather than orthogonal.
+ ~0.5 exp(-Eb/(2 N0))   #Wrong - that is noncoherent BFSK, a further 1 dB worse.
+ ~Q(2 sqrt(Eb/N0))   #Wrong - this would make BFSK better than BPSK, which orthogonal signalling cannot be.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.375-382 | CO2 | L2
+}
+
+::M2Q12::[html]Why does the difference variable in a coherent BFSK detector have variance N0 rather than N0/2?{
+ =Two independent noise projections of variance N0/2 are subtracted   #Correct - variances add under subtraction of independent variables.
+ ~The noise density doubles at the second frequency   #Wrong - white noise has the same density at every frequency.
+ ~The correlators are not orthogonal   #Wrong - they are orthogonal by construction, which is what makes the projections independent.
+ ~The bit duration is halved   #Wrong - the bit duration is unchanged.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.375-382 | CO2 | L4
+}
+
+::M2Q13::[html]A noncoherent receiver bases its decision on{
+ =the envelope sqrt(xI^2 + xQ^2) of each branch   #Correct - averaging the likelihood over an unknown uniform phase leaves only the envelope.
+ ~the signed correlator output   #Wrong - the sign is meaningless when the absolute phase is unknown.
+ ~the phase of each branch   #Wrong - the phase is precisely what is unavailable.
+ ~the derivative of the received signal   #Wrong - differentiation plays no part in envelope detection.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.400-410 | CO2 | L3
+}
+
+::M2Q14::[html]The bit error probability of noncoherent BFSK is{
+ =0.5 exp(-Eb/(2 N0))   #Correct - note the factor of two in the denominator of the exponent.
+ ~0.5 exp(-Eb/N0)   #Wrong - that is DPSK, which is about 3 dB better.
+ ~Q(sqrt(Eb/N0))   #Wrong - that is coherent BFSK.
+ ~exp(-Eb/N0)   #Wrong - the leading factor of one half is part of the exact result.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.410-411 | CO2 | L2
+}
+
+::M2Q15::[html]DPSK avoids the need for{
+ =an absolute carrier phase reference   #Correct - the previous symbol supplies a relative reference instead.
+ ~symbol timing recovery   #Wrong - symbol timing is still essential for the one-symbol delay to align.
+ ~a matched filter   #Wrong - matched filtering is still used within the symbol.
+ ~error control coding   #Wrong - coding is an independent design choice.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.411-415 | CO2 | L2
+}
+
+::M2Q16::[html]The bit error probability of DPSK is{
+ =0.5 exp(-Eb/N0)   #Correct - roughly 1 dB worse than coherent BPSK at usable error rates.
+ ~0.5 exp(-Eb/(2 N0))   #Wrong - that is noncoherent BFSK, about 3 dB worse than DPSK.
+ ~Q(sqrt(2 Eb/N0))   #Wrong - that is coherent BPSK, which DPSK approaches but does not equal.
+ ~Q(sqrt(Eb/N0))   #Wrong - that is coherent BFSK.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.411-415 | CO2 | L2
+}
+
+::M2Q17::[html]Why do DPSK errors tend to occur in pairs?{
+ =Each received symbol serves both as data and as the reference for the next decision   #Correct - a corrupted symbol poisons the decision it participates in and the following one.
+ ~The encoder outputs two bits per symbol   #Wrong - DPSK carries one bit per symbol.
+ ~The noise is correlated across symbols   #Wrong - AWGN is uncorrelated across symbols by assumption.
+ ~The delay line doubles the noise   #Wrong - the delay line contributes noise but does not double it, and that is not the pairing mechanism.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.411-415 | CO2 | L4
+}
+
+::M2Q18::[html]Ranking by required Eb/N0 at Pb \= 1e-5, from best to worst\:{
+ =BPSK, DPSK, coherent BFSK, noncoherent BFSK   #Correct - roughly 9.6, 10.3, 12.6 and 13.3 dB respectively.
+ ~BPSK, coherent BFSK, DPSK, noncoherent BFSK   #Wrong - DPSK is better than coherent BFSK, not worse.
+ ~noncoherent BFSK, DPSK, BPSK, coherent BFSK   #Wrong - this reverses the order almost completely.
+ ~They are all within 0.5 dB   #Wrong - the spread is nearly 4 dB.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.415-418 | CO2 | L5
+}
+
+::M2Q19::[html]A link is bandwidth limited with abundant power and a linear amplifier. The best choice is{
+ =high-order QAM   #Correct - spend the surplus power on spectral efficiency.
+ ~BPSK   #Wrong - BPSK has the lowest spectral efficiency of all, exactly the wrong direction.
+ ~noncoherent BFSK   #Wrong - FSK is spectrally wasteful and suits power-limited or phase-unstable links.
+ ~DPSK   #Wrong - DPSK has the same efficiency as BPSK and suits phase-unstable links.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.415-418 | CO2 | L5
+}
+
+::M2Q20::[html]Typical implementation loss to budget on top of a theoretical Eb/N0 figure is{
+ =1 to 2 dB   #Correct - filtering, quantisation, timing and phase imperfections each take a fraction of a dB.
+ ~0 dB   #Wrong - no real receiver achieves the theoretical bound exactly.
+ ~10 dB   #Wrong - a 10 dB implementation loss would indicate a broken design.
+ ~It is always negative   #Wrong - implementation loss is a loss; it cannot improve on the theoretical bound.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.7, pp.415-418 | CO2 | L2
+}

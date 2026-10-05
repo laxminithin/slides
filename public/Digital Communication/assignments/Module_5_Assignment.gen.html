@@ -1,0 +1,81 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BEC503 Module 5 Assignment</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 10.5pt; color: #12203A; line-height: 1.45; }
+h1 { font-size: 19pt; margin: 0 0 4pt; color: #12203A; }
+h2 { font-size: 13.5pt; margin: 16pt 0 5pt; padding-bottom: 3pt; border-bottom: 1.5pt solid #0F6FC6; color: #0F6FC6; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 11pt 0 3pt; color: #12203A; page-break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 8pt 0 2pt; color: #5A6478; page-break-after: avoid; }
+p { margin: 4pt 0; }
+ul, ol { margin: 4pt 0 4pt 16pt; padding: 0; }
+li { margin: 2pt 0; page-break-inside: avoid; }
+hr { border: 0; border-top: 0.75pt solid #D7DEE8; margin: 10pt 0; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; background: #F1F5FA; padding: 0 2pt; border-radius: 2pt; }
+pre { font-family: Consolas, monospace; font-size: 9pt; background: #F1F5FA; border-left: 2.5pt solid #0F6FC6; padding: 6pt 8pt; margin: 5pt 0; white-space: pre-wrap; page-break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0; font-size: 9.5pt; }
+th { background: #0F6FC6; color: #fff; text-align: left; padding: 4pt 5pt; font-weight: 600; }
+td { border: 0.5pt solid #D7DEE8; padding: 4pt 5pt; vertical-align: top; }
+tr { page-break-inside: avoid; }
+tbody tr:nth-child(even) td { background: #F7FAFD; }
+strong { color: #12203A; }
+.tag { font-family: Consolas, monospace; font-size: 9pt; color: #C2410C; }
+</style></head><body>
+<h1>BEC503 Digital Communication — Assignment 5 — Convolutional encoding and Viterbi decoding</h1>
+<p><strong>Module 5: Convolutional Codes</strong></p>
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>
+<tr><td>Maximum marks</td><td>20</td></tr>
+<tr><td>Weightage</td><td>10% of CIE</td></tr>
+<tr><td>Issue date</td><td>&lt;&lt;TBD&gt;&gt;</td></tr>
+<tr><td>Due date</td><td>&lt;&lt;TBD&gt;&gt;</td></tr>
+<tr><td>Items</td><td>8 problems + 3 theory questions</td></tr>
+<tr><td>CO / Bloom coverage</td><td>CO5: 7, CO4: 4 · L1–L2 0, L3–L4 2, L5–L6 9</td></tr>
+</tbody></table>
+<h2>Objective</h2>
+<p>Move confidently between the three representations of a convolutional encoder and decode a real received sequence by hand, showing every metric.</p>
+<h2>Learning outcomes</h2>
+<ul>
+<li>Student will be able to draw a convolutional encoder from its generators and encode a message including tail bits.</li>
+<li>Student will be able to construct the code tree, trellis and state diagram for the same encoder and explain what each is for.</li>
+<li>Student will be able to compute free distance and the resulting coding gain.</li>
+<li>Student will be able to execute the Viterbi algorithm by hand and justify every discarded path.</li>
+</ul>
+<hr/>
+<h2>Part A — Problems (17 marks)</h2>
+<p><strong>P1.</strong> For the rate 1/2, K = 3 encoder with generators (5,7) octal, draw the circuit, write both generator polynomials in D, and encode the message 11010 with the correct number of tail bits. Give the state sequence and the transmitted bits.  <code>[CO5 | L4 | 3 marks]</code></p>
+<p><strong>P2.</strong> For the same encoder, draw the code tree to depth 4 and the trellis to depth 6. Mark on the tree the first pair of nodes with identical subtrees and explain precisely why they can be merged.  <code>[CO5 | L4 | 3 marks]</code></p>
+<p><strong>P3.</strong> Draw the state diagram for that encoder, label every edge with D raised to its output weight, and derive the transfer function T(D). Expand it to four terms and state the free distance and the number of paths at each of the first three weights.  <code>[CO5 | L5 | 3 marks]</code></p>
+<p><strong>P4.</strong> Decode the received sequence 11 01 10 11 00 01 for that encoder using the Viterbi algorithm. Tabulate all four state metrics at every time step, mark every discarded branch, trace back, and state both the decoded message and the number of errors corrected.  <code>[CO5 | L5 | 3 marks]</code></p>
+<p><strong>P5.</strong> Repeat the decode of P4 using soft decision metrics, taking the received values as 0.9, -0.8, -0.2, 0.7, 0.6, 0.9, -0.9, 0.8, -0.7, -0.6, -0.2, 0.8. Compare the winning path margin against the hard decision case and comment on which decode was more confident.  <code>[CO5 | L5 | 2 marks]</code></p>
+<p><strong>P6.</strong> Convert the (5,7) encoder to recursive systematic form. Give the new generator matrix in D, compute the first eight terms of the parity impulse response, and confirm the free distance is unchanged.  <code>[CO4 | L5 | 1 marks]</code></p>
+<p><strong>P7.</strong> A link uses K = 7, rate 1/2, soft decision decoding at 2 Mbit/s. Compute the truncation depth, the survivor memory in bits, the decoding delay in microseconds, and the total coding gain against uncoded BPSK at a bit error rate of 1e-5.  <code>[CO5 | L5 | 1 marks]</code></p>
+<p><strong>P8.</strong> Design a puncture pattern taking a rate 1/2 code to rate 2/3. Show the pattern, state the transmitted bits per period, and explain what the decoder does at the punctured positions.  <code>[CO5 | L5 | 1 marks]</code></p>
+<h2>Part B — Theory (3 marks)</h2>
+<p><strong>T1.</strong> The Viterbi algorithm is described as optimal rather than heuristic. Construct the exchange argument that proves a discarded path can never be part of the maximum likelihood sequence.  <code>[CO4 | L5 | 1 marks]</code></p>
+<p><strong>T2.</strong> Turbo codes reach within a fraction of a decibel of capacity using two ordinary convolutional codes. Identify what the interleaver contributes that neither component code supplies on its own.  <code>[CO4 | L5 | 1 marks]</code></p>
+<p><strong>T3.</strong> Coding gain grows slowly with constraint length while decoder cost grows as 2^(K-1). Explain why K = 7 became the industry standard rather than K = 5 or K = 9.  <code>[CO4 | L5 | 1 marks]</code></p>
+<hr/>
+<h2>Submission guidelines</h2>
+<ul>
+<li>Format: PDF, single file</li>
+<li>File name: <code>&lt;USN&gt;_BEC503_Assignment5.pdf</code></li>
+<li>Channel: LMS upload</li>
+<li>Late policy: 10% per day, nothing after 5 days</li>
+<li>Every numerical answer must carry units and a stated reference direction.</li>
+</ul>
+<h2>Assessment rubric</h2>
+<table><thead><tr><th>Criterion</th><th>Weight</th><th>Excellent</th><th>Good</th><th>Satisfactory</th><th>Needs improvement</th></tr></thead><tbody>
+<tr><td>Correctness of encoding and representations</td><td>8</td><td>Encoder, tree, trellis and state diagram all correct and mutually consistent.</td><td>All present with minor labelling errors.</td><td>Some representations incorrect or inconsistent with each other.</td><td>Representations largely wrong or missing.</td></tr>
+<tr><td>Viterbi execution and metric bookkeeping</td><td>5</td><td>Every state metric shown at every step, discarded branches marked, traceback correct.</td><td>Correct result with incomplete metric tables.</td><td>Correct method with several metric errors.</td><td>Decode incorrect or method not followed.</td></tr>
+<tr><td>Free distance and coding gain analysis</td><td>4</td><td>Transfer function derived correctly and gain computed for both hard and soft decisions.</td><td>Free distance correct, gain partially analysed.</td><td>Free distance found by inspection without the transfer function.</td><td>Free distance wrong.</td></tr>
+<tr><td>System reasoning</td><td>3</td><td>Explains truncation depth, delay and puncturing with correct numbers and justification.</td><td>Correct numbers, thin justification.</td><td>Some system quantities computed, others omitted.</td><td>System questions unattempted.</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>20</strong></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
+<h2>Course outcome attainment</h2>
+<table><thead><tr><th>Course outcome</th><th>Marks carried</th></tr></thead><tbody>
+<tr><td>CO5</td><td>14</td></tr>
+<tr><td>CO4</td><td>6</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>20</strong></td></tr>
+</tbody></table>
+<h2>Academic integrity</h2>
+<p>Individual submission. Identical submissions score zero for both parties.</p>
+</body></html>

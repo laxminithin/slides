@@ -1,0 +1,1486 @@
+/* Network Analysis (VTU BEC303) — lab-notebook cream over navy ink.
+   --na-data = current, --na-active = the thing being measured right now,
+   --na-path = s-domain / phasor work, --na-danger = the common mistake. */
+
+.network-analysis-deck,
+.na-deck {
+  --na-ink: #0e1c2e;
+  --na-muted: #4f6076;
+  --na-cream: #fffbf2;
+  --na-paper: #f8f5ec;
+  --na-navy: #0e1c2e;
+  --na-data: #1d4ed8;
+  --na-active: #c2410c;
+  --na-pointer: #7c3aed;
+  --na-ok: #15803d;
+  --na-danger: #b91c1c;
+  --na-path: #0f766e;
+  --na-sky: #e8f0ff;
+  --na-line: rgba(16, 32, 51, 0.12);
+  --na-shadow: 0 16px 40px rgba(16, 32, 51, 0.1);
+  --na-module: #1d4ed8;
+  --accent: #1d4ed8;
+  --accent-soft: #7c3aed;
+  --card-accent: #1d4ed8;
+  color: var(--na-ink);
+}
+
+/* One hue per module: solve · simplify · switch · transform · characterise */
+.network-analysis-deck[data-na-module="1"] { --na-module: #1d4ed8; --accent: #1d4ed8; }
+.network-analysis-deck[data-na-module="2"] { --na-module: #c2410c; --accent: #c2410c; }
+.network-analysis-deck[data-na-module="3"] { --na-module: #7c3aed; --accent: #7c3aed; }
+.network-analysis-deck[data-na-module="4"] { --na-module: #0f766e; --accent: #0f766e; }
+.network-analysis-deck[data-na-module="5"] { --na-module: #15803d; --accent: #15803d; }
+
+.module-cover.network-analysis { --card-accent: #1d4ed8; }
+
+.network-analysis-deck .slide-frame {
+  background:
+    radial-gradient(920px 460px at 6% -18%, rgba(37, 99, 235, 0.1), transparent 58%),
+    radial-gradient(720px 380px at 96% 0%, rgba(217, 119, 6, 0.07), transparent 54%),
+    radial-gradient(540px 280px at 70% 110%, rgba(13, 148, 136, 0.07), transparent 50%),
+    linear-gradient(165deg, #fffcf7 0%, #fffaf0 52%, #faf7f0 100%);
+}
+
+.network-analysis-deck .slide-frame::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    radial-gradient(circle at 18% 28%, rgba(37, 99, 235, 0.14) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 62% 18%, rgba(217, 119, 6, 0.12) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 78% 72%, rgba(124, 58, 237, 0.12) 0 1px, transparent 1.6px);
+  background-size: 180px 140px, 220px 160px, 160px 120px;
+  mix-blend-mode: multiply;
+}
+
+.network-analysis-deck[data-na-module="2"] .slide-frame::after { opacity: 0.2; }
+.network-analysis-deck[data-na-module="3"] .slide-frame::after { opacity: 0.2; }
+.network-analysis-deck[data-na-module="4"] .slide-frame::after { opacity: 0.18; }
+.network-analysis-deck[data-na-module="5"] .slide-frame::after { opacity: 0.18; }
+
+.network-analysis-deck .slide-header-copy .slide-kicker {
+  color: var(--na-module);
+}
+
+.network-analysis-deck .slide-header-copy .slide-title {
+  font-size: clamp(34px, 2.7vw, 48px);
+  line-height: 1.14;
+  padding-bottom: 4px;
+  overflow: visible;
+  color: var(--na-navy);
+}
+
+/* ── Stage shell ── */
+.na-stage {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px 16px;
+  box-sizing: border-box;
+}
+
+.na-story {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.na-story span {
+  font-size: clamp(10px, 0.85vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--na-muted);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+.na-story span.lit { opacity: 0.8; color: var(--na-navy); }
+.na-story span.now {
+  opacity: 1;
+  color: var(--na-module);
+  transform: translateX(2px);
+}
+
+.na-copy {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.na-visual,
+.na-visual-b {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+.na-footer-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  min-width: 0;
+}
+.na-takeaway,
+.na-exam {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.35;
+}
+.na-takeaway strong { color: var(--na-ok); }
+.na-exam strong {
+  color: var(--na-active);
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+}
+
+/* ── Compositions ── */
+.na-split-right {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(240px, 0.78fr) minmax(380px, 1.22fr);
+  grid-template-rows: 1fr auto;
+}
+/* Explicit placement so copy/visual don't collapse into the story column when
+   a slide renders without a <story> rail (e.g. the example beats). */
+.na-split-right .na-story { grid-row: 1 / 3; grid-column: 1; }
+.na-split-right .na-copy { grid-column: 2; }
+.na-split-right .na-visual { grid-column: 3; }
+.na-split-right .na-footer-band { grid-column: 2 / 4; }
+
+/* Algorithm beat: visual is the hero (left), algorithm/dry-run rail (right).
+   Explicit row/col placement + align-items:stretch gives BOTH cells the full
+   row height — without it the aspect-locked SVG collapsed the visual to its
+   intrinsic height and the copy cell shrank, clipping the dry-run panel. */
+.na-split-left {
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.85fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+}
+.na-split-left .na-story { display: none; }
+.na-split-left .na-visual { grid-column: 1; grid-row: 1; min-height: 0; align-self: stretch; }
+.na-split-left .na-copy { grid-column: 2; grid-row: 1; min-height: 0; align-self: stretch; }
+.na-split-left .na-footer-band { grid-column: 1 / 3; grid-row: 2; }
+
+.na-full-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.na-full-stage .na-story { display: none; }
+.na-full-stage .na-copy { max-width: 78%; }
+.na-full-stage .na-visual { min-height: 0; }
+
+/* Full-width, vertically-centred layout for text-grid framing slides
+   (syllabus audit, practice, resources) — they used a half-width "board"
+   column and left the lower half empty. */
+.na-fill {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.na-fill .na-story { display: none; }
+.na-fill .na-copy {
+  grid-row: 1;
+  align-content: safe start;
+  gap: 14px;
+  padding-block: 2px 6px;
+  overflow: hidden;
+}
+.na-fill .na-footer-band { grid-row: 2; }
+.na-fill .na-lead { font-size: clamp(22px, 1.7vw, 28px); }
+/* let the framing grids breathe across the full stage */
+.na-fill .na-syllabus-audit { grid-template-columns: repeat(auto-fit, minmax(184px, 1fr)); gap: 9px; }
+.na-fill .na-syllabus-audit article {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 11px;
+  min-height: 40px;
+}
+.na-fill .na-syllabus-audit strong { font-size: clamp(13px, 0.92vw, 16px); line-height: 1.18; }
+.na-fill .na-syllabus-audit em { font-size: 12px; }
+/* Hardened cap: the syllabus checklist must fit above the footer even in
+   the fullest module (22-24 long topic names). High-specificity + !important
+   so it wins over the platform legibility/base font unconditionally. */
+.na-stage.na-fill .na-syllabus-audit strong { font-size: 15px !important; line-height: 1.16 !important; }
+.na-stage.na-fill .na-syllabus-audit em { font-size: 11px !important; }
+.na-stage.na-fill .na-syllabus-audit article { min-height: 38px !important; padding: 6px 10px !important; gap: 2px !important; }
+.na-fill .na-practice-list { gap: 18px; font-size: clamp(17px, 1.3vw, 21px); }
+.na-fill .na-resource-hub { gap: 18px; }
+.na-fill .na-resource-hub .na-resource-card { padding: 22px; }
+.na-fill .na-resource-hub .na-resource-card strong { font-size: 19px; }
+.na-fill .na-resource-hub .na-resource-card span { font-size: 15px; }
+
+.na-hero-open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.na-hero-open .na-story,
+.na-hero-open .na-copy { display: none; }
+.na-hero-open .na-visual { min-height: 0; }
+.na-hero-open .na-footer-band { justify-content: center; }
+
+.na-showcase {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 6px;
+}
+.na-showcase .na-story,
+.na-showcase .na-copy { display: none; }
+.na-showcase .na-visual { grid-row: 1; min-height: 0; }
+.na-showcase .na-footer-band {
+  justify-content: center;
+  border-top: 1px solid var(--na-line);
+  padding-top: 6px;
+}
+.na-showcase .na-takeaway { font-size: clamp(14px, 1.05vw, 17px); }
+
+.na-board {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.na-board .na-story { display: none; }
+.na-board .na-footer-band { grid-column: 1 / 3; }
+
+.na-inspect {
+  grid-template-columns: minmax(220px, 0.42fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.na-inspect .na-story { display: none; }
+.na-inspect .na-visual { grid-column: 2; grid-row: 1; }
+.na-inspect .na-footer-band { grid-column: 1 / 3; }
+
+.na-pipeline {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.na-pipeline .na-story { grid-row: 1 / 4; }
+.na-pipeline .na-copy,
+.na-pipeline .na-visual,
+.na-pipeline .na-footer-band { grid-column: 2; }
+
+.na-memory-first {
+  grid-template-columns: minmax(200px, 0.32fr) minmax(420px, 1.2fr);
+  grid-template-rows: 1fr auto;
+}
+.na-memory-first .na-story { display: none; }
+.na-memory-first .na-visual { grid-column: 2; grid-row: 1; }
+.na-memory-first .na-footer-band { grid-column: 1 / 3; }
+
+.na-algo-board {
+  grid-template-columns: minmax(260px, 0.48fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.na-algo-board .na-story { display: none; }
+.na-algo-board .na-footer-band { grid-column: 1 / 3; }
+
+.na-code-split {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-rows: 1fr auto;
+}
+.na-code-split .na-story { display: none; }
+.na-code-split .na-footer-band { grid-column: 1 / 3; }
+
+.network-analysis-deck .slide-frame[data-composition="full-stage"] .na-visual,
+.network-analysis-deck .slide-frame[data-composition="hero-open"] .na-visual,
+.network-analysis-deck .slide-frame[data-composition="memory-first"] .na-visual,
+.network-analysis-deck .slide-frame[data-composition="showcase"] .na-visual {
+  min-height: 0;
+}
+.na-full-stage .na-visual { min-height: 62%; }
+.na-hero-open .na-visual,
+.na-memory-first .na-visual { flex: 1 1 auto; }
+
+/* ── Typography blocks ── */
+.na-lead {
+  margin: 0;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.38;
+  font-weight: 650;
+  color: var(--na-navy);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.na-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.34;
+}
+.na-points li { padding-left: 2px; }
+.na-points li::marker { color: var(--na-module); font-weight: 800; }
+
+.na-definition {
+  background: #fff;
+  border: 1px solid var(--na-line);
+  border-left: 5px solid var(--na-data);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--na-shadow);
+}
+.na-definition span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--na-data);
+}
+.na-definition strong {
+  display: block;
+  font-size: clamp(20px, 1.6vw, 28px);
+  margin: 4px 0;
+}
+.na-definition p {
+  margin: 0;
+  font-size: clamp(15px, 1.1vw, 18px);
+}
+
+.na-callout {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--na-line);
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+}
+.na-callout span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+}
+.na-callout p {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.na-callout-warn { border-left: 4px solid var(--na-active); }
+.na-callout-fault { border-left: 4px solid var(--na-danger); }
+.na-callout-ok { border-left: 4px solid var(--na-ok); }
+.na-callout-idea { border-left: 4px solid var(--na-data); }
+.na-callout-know { border-left: 4px solid var(--na-pointer); }
+
+/* Scene shell */
+.na-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.72), rgba(255, 250, 240, 0.28) 62%, transparent 78%);
+  overflow: hidden;
+  position: relative;
+}
+.na-scene svg,
+.na-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Code panel — light, readable (≥19px) */
+.na-code-panel {
+  background: #ffffff;
+  border: 1.5px solid var(--na-line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--na-shadow);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.na-code-line {
+  font-size: clamp(19px, 1.45vw, 22px);
+  line-height: 1.55;
+  color: var(--na-navy);
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: pre;
+}
+.na-code-line.is-current {
+  background: rgba(217, 119, 6, 0.14);
+  color: var(--na-active);
+  box-shadow: inset 3px 0 0 var(--na-active);
+}
+
+/* Linked list / stack / queue / tree helpers */
+.na-ll-node { transform-box: fill-box; }
+.na-stack-cell,
+.na-queue-cell,
+.na-tree-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ── Concept-native motion (nam-*) ──
+   State-change animations — not fade-in as primary teaching motion. */
+
+@keyframes nam-allocate {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  55% { transform: scale(0.96); }
+  70% { transform: scale(1.03); }
+}
+@keyframes nam-shift {
+  0%, 12% { transform: translateX(0); }
+  45%, 55% { transform: translateX(28px); }
+  88%, 100% { transform: translateX(0); }
+}
+@keyframes nam-insert {
+  0%, 15% { transform: translateY(-28px) scale(0.85); opacity: 0.35; }
+  40% { transform: translateY(0) scale(1.06); opacity: 1; }
+  55%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes nam-delete {
+  0%, 20% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(0.92) translateY(6px); opacity: 0.45; }
+  70%, 100% { transform: scale(0.85); opacity: 0.2; }
+}
+@keyframes nam-push {
+  0%, 10% { transform: translateY(-40px); opacity: 0.4; }
+  35% { transform: translateY(4px); opacity: 1; }
+  50%, 100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes nam-pop {
+  0%, 15% { transform: translateY(0); opacity: 1; }
+  45% { transform: translateY(-36px); opacity: 0.35; }
+  70%, 100% { transform: translateY(-8px); opacity: 0.55; }
+}
+@keyframes nam-enqueue {
+  0%, 12% { transform: translateX(40px); opacity: 0.35; }
+  40% { transform: translateX(-4px); opacity: 1; }
+  55%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes nam-dequeue {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  45% { transform: translateX(-48px); opacity: 0.3; }
+  70%, 100% { transform: translateX(-12px); opacity: 0.5; }
+}
+@keyframes nam-wrap {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(18deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(4deg); }
+}
+@keyframes nam-pointer {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -24; }
+}
+@keyframes nam-rewire {
+  0%, 20% { stroke-dashoffset: 40; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+@keyframes nam-traverse {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -36; }
+}
+@keyframes nam-search {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(20px); }
+  75% { transform: translateX(10px); }
+}
+@keyframes nam-swap {
+  0%, 100% { transform: translate(0, 0); }
+  35% { transform: translate(14px, -10px); }
+  70% { transform: translate(-14px, 10px); }
+}
+@keyframes nam-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.62; }
+}
+@keyframes nam-wave {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.07); }
+  70% { transform: scale(1.02); }
+}
+@keyframes nam-descend {
+  0%, 10% { transform: translate(0, -24px); opacity: 0.5; }
+  45% { transform: translate(36px, 40px); opacity: 1; }
+  70% { transform: translate(72px, 90px); opacity: 1; }
+  100% { transform: translate(72px, 90px); opacity: 0.85; }
+}
+@keyframes nam-return {
+  0%, 15% { transform: translate(40px, 60px); opacity: 0.6; }
+  55% { transform: translate(10px, 10px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+.nam-allocate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-allocate 2.4s ease-in-out infinite;
+}
+.nam-shift {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-shift 2.8s ease-in-out infinite;
+}
+.nam-insert {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-insert 2.6s ease-out infinite;
+}
+.nam-delete {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-delete 2.8s ease-in-out infinite;
+}
+.nam-push {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-push 2.4s ease-out infinite;
+}
+.nam-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-pop 2.4s ease-in infinite;
+}
+.nam-enqueue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-enqueue 2.5s ease-out infinite;
+}
+.nam-dequeue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-dequeue 2.5s ease-in infinite;
+}
+.nam-wrap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-wrap 3s ease-in-out infinite;
+}
+.nam-pointer {
+  stroke-dasharray: 10 8;
+  animation: nam-pointer 1.4s linear infinite;
+}
+.nam-rewire {
+  stroke-dasharray: 12 10;
+  animation: nam-rewire 2.2s ease-in-out infinite;
+}
+.nam-traverse {
+  stroke-dasharray: 10 8;
+  animation: nam-traverse 1.6s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.nam-search {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-search 2.6s ease-in-out infinite;
+}
+.nam-swap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-swap 2.4s ease-in-out infinite;
+}
+.nam-pulse {
+  animation: nam-pulse 1.9s ease-in-out infinite;
+}
+.nam-wave {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-wave 2.2s ease-in-out infinite;
+}
+.nam-descend {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-descend 3.2s ease-in-out infinite;
+}
+.nam-return {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nam-return 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nam-allocate, .nam-shift, .nam-insert, .nam-delete,
+  .nam-push, .nam-pop, .nam-enqueue, .nam-dequeue,
+  .nam-wrap, .nam-pointer, .nam-rewire, .nam-traverse,
+  .nam-search, .nam-swap, .nam-pulse, .nam-wave,
+  .nam-descend, .nam-return {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Kit components ── */
+.na-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 750;
+  color: var(--na-navy);
+}
+.na-flow i { color: var(--na-module); font-style: normal; font-weight: 900; }
+
+.na-algo-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+  font-size: clamp(15px, 1.15vw, 19px);
+  line-height: 1.4;
+}
+.na-algo-steps li::marker { color: var(--na-module); font-weight: 800; }
+
+.na-complexity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--na-line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.na-complexity > div {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+.na-complexity span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--na-muted);
+}
+/* BEC303 cost cells hold a sentence ("one constraint per dependent source"),
+   not a big-O token, so they read at body size rather than display size. */
+.na-complexity strong {
+  font-size: clamp(13px, 1.02vw, 16px);
+  line-height: 1.28;
+  font-weight: 750;
+  color: var(--na-data);
+}
+.na-complexity > p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--na-muted);
+}
+
+.na-code-panel span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--na-module);
+  margin-bottom: 8px;
+  font-family: system-ui, sans-serif;
+}
+.na-code-panel pre {
+  margin: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.na-code-panel code {
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.45;
+  color: var(--na-navy);
+  font-weight: 650;
+}
+
+.na-dryrun {
+  display: grid;
+  gap: 8px;
+}
+.na-dryrun section {
+  background: #fff;
+  border: 1px solid var(--na-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.na-dryrun span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--na-module);
+}
+.na-dryrun p { margin: 4px 0 0; font-size: 15px; }
+.na-dryrun ol {
+  margin: 4px 0 0;
+  padding-left: 1.15em;
+  font-size: 14px;
+  display: grid;
+  gap: 3px;
+}
+
+.na-term-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.na-term-chips span {
+  background: var(--na-sky);
+  color: var(--na-data);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.na-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.na-roadmap article {
+  background: #fff;
+  border: 1px solid var(--na-line);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+.na-roadmap b { color: var(--na-module); font-size: 12px; }
+.na-roadmap strong { font-size: 14px; line-height: 1.25; }
+
+.na-checkpoint-sheet {
+  display: grid;
+  gap: 7px;
+}
+.na-checkpoint-sheet article {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.72fr) auto 1.85fr;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--na-line);
+  border-radius: 12px;
+  padding: 7px 12px;
+}
+.na-checkpoint-sheet code {
+  font-size: clamp(16px, 1.2vw, 21px);
+  font-weight: 800;
+  color: var(--na-data);
+}
+.na-checkpoint-sheet span { font-size: 12.5px; line-height: 1.25; color: var(--na-muted); }
+
+.na-syllabus-audit {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+.na-syllabus-audit article {
+  background: #fff;
+  border: 1px solid var(--na-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.na-syllabus-audit strong { font-size: 14px; }
+.na-syllabus-audit em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--na-ok);
+}
+
+.na-practice-list {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(15px, 1.15vw, 18px);
+}
+.na-practice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.na-practice-list em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--na-active);
+  white-space: nowrap;
+}
+
+.na-review-map {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 12px;
+}
+.na-review-map h3 {
+  margin: 0;
+  font-size: clamp(22px, 2vw, 32px);
+  color: var(--na-navy);
+}
+.na-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.na-review-topics span {
+  background: #fff;
+  border: 1.5px solid var(--na-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.na-resource-hub {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.na-resource-hub a {
+  display: grid;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid var(--na-line);
+  border-radius: 14px;
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--na-shadow);
+}
+.na-resource-hub a:hover { border-color: var(--na-module); }
+.na-resource-hub strong { font-size: 16px; }
+.na-resource-hub span { font-size: 13px; color: var(--na-muted); }
+.na-study-tip {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background: var(--na-sky);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--na-navy);
+}
+
+.na-resource-hub .na-resource-card {
+  display: grid;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid var(--na-line);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: var(--na-shadow);
+}
+.na-resource-hub .na-resource-card strong { font-size: 16px; }
+.na-resource-hub .na-resource-card span { font-size: 13px; color: var(--na-muted); }
+
+/* ── SEPM instructional motion (classroom-paced) ── */
+@keyframes nam-flow-node {
+  0%, 100% { opacity: 0.55; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-4px); }
+}
+@keyframes nam-flow-arrow {
+  0% { stroke-dashoffset: 24; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.4; }
+}
+@keyframes nam-feedback {
+  0% { stroke-dashoffset: 40; opacity: 0.45; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -40; opacity: 0.45; }
+}
+@keyframes nam-waterfall {
+  0% { opacity: 0; transform: translate(-12px, -18px); }
+  30%, 100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes nam-cost-curve {
+  0% { stroke-dasharray: 0 800; }
+  100% { stroke-dasharray: 800 0; }
+}
+@keyframes nam-cost-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+@keyframes nam-grow {
+  0% { opacity: 0; transform: scaleX(0.55); transform-origin: center; }
+  45%, 100% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes nam-spiral {
+  0% { opacity: 0.15; }
+  40% { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+@keyframes nam-concurrent {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+@keyframes nam-up-line {
+  0% { stroke-dasharray: 0 1200; }
+  100% { stroke-dasharray: 1200 0; }
+}
+@keyframes nam-orbit {
+  0%, 100% { opacity: 0.65; }
+  50% { opacity: 1; }
+}
+@keyframes nam-token {
+  0% { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateY(-170px) rotate(-360deg); }
+}
+@keyframes nam-backlog {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(210px); }
+  70% { transform: translateX(420px); }
+  100% { transform: translateX(630px); }
+}
+@keyframes nam-xp-step {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+@keyframes nam-bar {
+  0% { transform: scaleX(0.2); transform-origin: left center; opacity: 0.4; }
+  50%, 100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes nam-gate {
+  0%, 100% { opacity: 0.7; }
+  40% { opacity: 1; }
+}
+@keyframes nam-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  40%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes nam-pulse-soft {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.nam-flow-node { animation: nam-flow-node 3.2s ease-in-out infinite; }
+.nam-flow-arrow { stroke-dasharray: 10 8; animation: nam-flow-arrow 2.8s linear infinite; }
+.nam-feedback { stroke-dasharray: 10 8; animation: nam-feedback 3.6s linear infinite; }
+.nam-waterfall { animation: nam-waterfall 3.5s ease-out infinite; }
+.nam-cost-curve { animation: nam-cost-curve 4s ease-out infinite; }
+.nam-cost-dot { animation: nam-cost-dot 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.nam-grow { animation: nam-grow 3.8s ease-out infinite; }
+.nam-spiral { animation: nam-spiral 3.2s ease-in-out infinite; }
+.nam-concurrent { animation: nam-concurrent 2.8s ease-in-out infinite; }
+.nam-up-line { animation: nam-up-line 4.5s ease-out infinite; }
+.nam-orbit { animation: nam-orbit 2.6s ease-in-out infinite; }
+.nam-token { animation: nam-token 12s linear infinite; transform-box: fill-box; transform-origin: 450px 260px; }
+.nam-backlog-card { animation: nam-backlog 10s ease-in-out infinite; }
+.nam-xp-step { animation: nam-xp-step 3s ease-in-out infinite; }
+.nam-bar { animation: nam-bar 3.4s ease-out infinite; }
+.nam-gate { animation: nam-gate 2.8s ease-in-out infinite; }
+.nam-fade-in { animation: nam-fade-in 2.4s ease-out both; }
+.nam-pulse { animation: nam-pulse-soft 2.4s ease-in-out infinite; }
+.nam-step { animation: nam-pulse-soft 2.8s ease-in-out infinite; }
+.nam-actor { animation: nam-pulse-soft 3s ease-in-out infinite; }
+.nam-usecase-step { animation: nam-flow-node 2.8s ease-in-out infinite; }
+.nam-system-box { animation: nam-pulse-soft 2.6s ease-in-out infinite; }
+.nam-risk-cell { animation: nam-pulse-soft 3.2s ease-in-out infinite; }
+.nam-risk-dot { animation: nam-cost-dot 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.nam-delay-0 { animation-delay: 0s; }
+.nam-delay-1 { animation-delay: 0.35s; }
+.nam-delay-2 { animation-delay: 0.7s; }
+.nam-delay-3 { animation-delay: 1.05s; }
+.nam-delay-4 { animation-delay: 1.4s; }
+
+/* ── Network Analysis instructional motion ──
+   Every animation below shows a circuit mechanism: current marching, a phasor
+   turning, a transient decaying, a pole moving. Decoration is not the job. */
+@keyframes nam-current {
+  0% { stroke-dashoffset: 36; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes nam-current-rev {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 36; }
+}
+@keyframes nam-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes nam-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes nam-draw {
+  0% { stroke-dashoffset: 900; }
+  55%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes nam-sweep-x {
+  0% { transform: translateX(0); opacity: 0.25; }
+  12% { opacity: 1; }
+  100% { transform: translateX(var(--nam-sweep, 620px)); opacity: 0.9; }
+}
+@keyframes nam-switch {
+  0%, 35% { transform: rotate(-32deg); }
+  55%, 100% { transform: rotate(0deg); }
+}
+@keyframes nam-decay-dot {
+  0% { transform: translate(0, 0); opacity: 0.4; }
+  10% { opacity: 1; }
+  100% { transform: translate(var(--nam-dx, 560px), var(--nam-dy, 210px)); opacity: 0.9; }
+}
+@keyframes nam-ring {
+  0%, 100% { transform: translateY(0); }
+  18% { transform: translateY(-46px); }
+  36% { transform: translateY(32px); }
+  54% { transform: translateY(-19px); }
+  72% { transform: translateY(11px); }
+  86% { transform: translateY(-5px); }
+}
+@keyframes nam-merge-l {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(118px); opacity: 0.35; }
+}
+@keyframes nam-merge-r {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(-118px); opacity: 0.35; }
+}
+@keyframes nam-collapse {
+  0%, 25% { transform: scale(1); opacity: 1; }
+  70%, 100% { transform: scale(0.42); opacity: 0.18; }
+}
+@keyframes nam-emerge {
+  0%, 35% { transform: scale(0.55); opacity: 0; }
+  80%, 100% { transform: scale(1); opacity: 1; }
+}
+@keyframes nam-slide-in {
+  0% { transform: translateX(-34px); opacity: 0; }
+  45%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes nam-pole-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(var(--nam-px, -70px), 0); }
+}
+@keyframes nam-needle {
+  0%, 100% { transform: rotate(-58deg); }
+  50% { transform: rotate(52deg); }
+}
+@keyframes nam-wave-shift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-180px); }
+}
+@keyframes nam-cell-in {
+  0% { opacity: 0; transform: translateY(9px) scale(0.94); }
+  45%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes nam-charge {
+  /* Floor stays high enough that pulsing LABELS remain readable. */
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+@keyframes nam-flux {
+  0%, 100% { transform: scale(0.94); opacity: 0.72; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+@keyframes nam-probe {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(var(--nam-probe, 96px)); }
+}
+@keyframes nam-flip {
+  0%, 20% { transform: scaleX(1); }
+  45%, 100% { transform: scaleX(-1); }
+}
+
+.nam-current { stroke-dasharray: 9 9; animation: nam-current 1.1s linear infinite; }
+.nam-current-slow { stroke-dasharray: 9 9; animation: nam-current 2.2s linear infinite; }
+.nam-current-rev { stroke-dasharray: 9 9; animation: nam-current-rev 1.4s linear infinite; }
+.nam-spin { animation: nam-spin 4.4s linear infinite; transform-box: fill-box; }
+.nam-spin-slow { animation: nam-spin-slow 6s linear infinite; transform-box: fill-box; }
+.nam-draw { stroke-dasharray: 900; animation: nam-draw 4s ease-out infinite; }
+.nam-sweep-x { animation: nam-sweep-x 3.6s linear infinite; }
+.nam-switch { animation: nam-switch 3.4s ease-in-out infinite; transform-box: fill-box; }
+.nam-decay-dot { animation: nam-decay-dot 3.8s ease-in infinite; transform-box: fill-box; }
+.nam-ring { animation: nam-ring 3.6s ease-in-out infinite; transform-box: fill-box; }
+.nam-merge-l { animation: nam-merge-l 3.8s ease-in-out infinite; transform-box: fill-box; }
+.nam-merge-r { animation: nam-merge-r 3.8s ease-in-out infinite; transform-box: fill-box; }
+.nam-collapse { animation: nam-collapse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+/* Reveals play ONCE and hold. Looping them would leave labelled steps and
+   formulas fading in and out under the reader — legibility beats motion. */
+.nam-emerge { animation: nam-emerge 1.2s ease-out both; transform-box: fill-box; transform-origin: center; }
+.nam-slide-in { animation: nam-slide-in 0.9s ease-out both; transform-box: fill-box; }
+.nam-pole-drift { animation: nam-pole-drift 4.4s ease-in-out infinite; transform-box: fill-box; }
+.nam-needle { animation: nam-needle 3.4s ease-in-out infinite; transform-box: fill-box; }
+.nam-wave-shift { animation: nam-wave-shift 2.4s linear infinite; }
+.nam-cell-in { animation: nam-cell-in 0.9s ease-out both; transform-box: fill-box; }
+.nam-charge { animation: nam-charge 2.2s ease-in-out infinite; }
+.nam-flux { animation: nam-flux 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.nam-probe { animation: nam-probe 3.2s ease-in-out infinite; transform-box: fill-box; }
+.nam-flip { animation: nam-flip 4.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.nam-delay-5 { animation-delay: 1.75s; }
+.nam-delay-6 { animation-delay: 2.1s; }
+.nam-delay-7 { animation-delay: 2.45s; }
+
+
+.na-scene, .na-showcase-scene { width: 100%; height: 100%; min-height: 0; }
+.na-svg { width: 100%; height: 100%; display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .network-analysis-deck [class*="nam-"] {
+    animation: none !important;
+  }
+}
+
+/* Dense algorithm slides (real algo steps + dry-run trace) must fit the
+   algo-board left column at 1280×720. Tighten only in that composition. */
+.na-algo-board .na-algo-steps { gap: 4px; font-size: clamp(14px, 1.02vw, 17px); line-height: 1.3; }
+.na-algo-board .na-dryrun { gap: 5px; }
+.na-algo-board .na-dryrun section { padding: 6px 11px; }
+.na-algo-board .na-dryrun ol { gap: 2px; font-size: 13.5px; }
+.na-algo-board .na-dryrun p { font-size: 14px; }
+.na-algo-board .na-lead { font-size: clamp(16px, 1.25vw, 20px); }
+
+/* ── BEC303-specific kit pieces (no Computer Graphics counterpart) ── */
+
+/* Textbook provenance carried from Phase 1. Units whose prescribed book was
+   not supplied render a chapter with no page range — that is intentional. */
+.na-book-cite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--na-muted);
+}
+.na-book-cite b {
+  background: var(--na-sky);
+  color: var(--na-data);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.na-book-cite span { font-style: normal; }
+.na-book-cite em {
+  font-style: normal;
+  background: rgba(21, 128, 61, 0.1);
+  color: var(--na-ok);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.na-book-cite i {
+  font-style: normal;
+  border: 1px solid var(--na-line);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.na-quiz-card {
+  background: #fff;
+  border: 1px solid var(--na-line);
+  border-left: 4px solid var(--na-data);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: var(--na-shadow);
+}
+.na-quiz-card + .na-quiz-card { margin-top: 8px; }
+.na-quiz-card strong {
+  display: block;
+  font-size: 15.5px;
+  line-height: 1.3;
+  color: var(--na-navy);
+}
+.na-quiz-card ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 10px;
+  margin: 8px 0 0;
+  padding: 0 0 0 18px;
+  font-size: 13.5px;
+  font-weight: 650;
+}
+.na-quiz-card li.is-correct {
+  color: var(--na-ok);
+  font-weight: 800;
+}
+.na-quiz-card li.is-correct::marker { color: var(--na-ok); }
+.na-quiz-card p {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--na-muted);
+}
+
+/* Showcase beats hand the whole stage to one mechanism. */
+.na-showcase-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* ── Resource pages (/network-analysis/:module/notes|quiz|assignment|pyq) ──
+   These render outside .network-analysis-deck, so they carry literal colours
+   rather than the deck custom properties. */
+
+.na-study h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  color: #0e1c2e;
+}
+.na-study .na-study-lead {
+  margin: 10px 0;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: #334155;
+}
+.na-study .na-study-section {
+  margin: 26px 0 6px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(14, 28, 46, 0.1);
+  font-size: 1.08rem;
+  color: #1d4ed8;
+}
+.na-study .na-study-meta {
+  margin: 6px 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+}
+.na-study .na-study-rules {
+  margin: 10px 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 5px;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.na-study-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 4px;
+}
+.na-study-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(29, 78, 216, 0.28);
+  background: #e8f0ff;
+  color: #1d4ed8;
+  font-size: 0.83rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.na-study-download:hover { background: #d8e6ff; }
+
+.na-study .na-study-takeaway,
+.na-study .na-study-mistake {
+  margin: 8px 0 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+.na-study .na-study-takeaway b { color: #15803d; margin-right: 6px; }
+.na-study .na-study-mistake b { color: #b91c1c; margin-right: 6px; }
+
+.na-study-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 9px;
+}
+.na-study-chips span {
+  background: #e8f0ff;
+  color: #1d4ed8;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 0.74rem;
+  font-weight: 750;
+}
+
+.na-study-options {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding: 0;
+}
+.na-study-option {
+  width: 100%;
+  text-align: left;
+  padding: 9px 13px;
+  border-radius: 10px;
+  border: 1px solid rgba(14, 28, 46, 0.14);
+  background: #fff;
+  font: 650 0.92rem/1.35 inherit;
+  color: #0e1c2e;
+  cursor: pointer;
+}
+.na-study-option:hover { border-color: #1d4ed8; }
+.na-study-option.is-correct { border-color: #15803d; background: rgba(21, 128, 61, 0.1); color: #15803d; }
+.na-study-option.is-wrong { border-color: #b91c1c; background: rgba(185, 28, 28, 0.08); color: #b91c1c; }
+
+.na-study-feedback {
+  margin: 10px 0 0;
+  padding: 9px 13px;
+  border-radius: 10px;
+  border-left: 4px solid #b91c1c;
+  background: rgba(185, 28, 28, 0.06);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #334155;
+}
+.na-study-feedback.is-correct {
+  border-left-color: #15803d;
+  background: rgba(21, 128, 61, 0.08);
+}
+
+.na-study-toggle {
+  margin-top: 9px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(29, 78, 216, 0.3);
+  background: #fff;
+  color: #1d4ed8;
+  font: 800 0.8rem/1 inherit;
+  cursor: pointer;
+}
+.na-study-answer {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f8f5ec;
+  border: 1px solid rgba(14, 28, 46, 0.1);
+}
+.na-study-answer p { margin: 0; font-size: 0.92rem; line-height: 1.5; color: #334155; }
+.na-study-answer ul { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 4px; font-size: 0.86rem; }
+.na-study-answer li b { color: #1d4ed8; margin-right: 6px; }
+
+.na-study-rubric { display: grid; gap: 12px; margin-top: 12px; }
+.na-study-rubric article {
+  border: 1px solid rgba(14, 28, 46, 0.12);
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: #fff;
+}
+.na-study-rubric header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.na-study-rubric header strong { font-size: 1rem; color: #0e1c2e; }
+.na-study-rubric header em { font-style: normal; font-weight: 800; color: #1d4ed8; font-size: 0.82rem; }
+.na-study-rubric dl { margin: 0; display: grid; gap: 6px; }
+.na-study-rubric dt {
+  text-transform: capitalize;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #64748b;
+}
+.na-study-rubric dd { margin: 2px 0 0; font-size: 0.88rem; line-height: 1.42; color: #334155; }
+
+.na-study-modnav {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.na-study-modnav a {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(14, 28, 46, 0.14);
+  background: #fff;
+  color: #0e1c2e;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.na-study-modnav a.is-current { background: #1d4ed8; border-color: #1d4ed8; color: #fff; }
+
+/* Eight checkpoint rows must fit one 1280x720 stage above the footer band.
+   Sized against the longest BEC303 topic ("Sources of electrical energy:
+   independent and dependent") wrapping to two lines. !important so it beats
+   the platform legibility layer, which loads after this sheet. */
+.na-stage.na-fill .na-checkpoint-sheet { gap: 6px !important; }
+.na-stage.na-fill .na-checkpoint-sheet article {
+  grid-template-columns: minmax(180px, 1fr) auto 1.6fr !important;
+  gap: 10px !important;
+  padding: 6px 11px !important;
+}
+.na-stage.na-fill .na-checkpoint-sheet strong {
+  font-size: 14.5px !important;
+  line-height: 1.2 !important;
+}
+.na-stage.na-fill .na-checkpoint-sheet code { font-size: 13px !important; }
+.na-stage.na-fill .na-checkpoint-sheet span { font-size: 12px !important; line-height: 1.24 !important; }
+
+/* Resource cards are real links now (the platform's own link slot is dead
+   code), so they need the affordance an anchor gets. */
+.na-resource-hub a.na-resource-card {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 140ms ease, transform 140ms ease;
+}
+.na-resource-hub a.na-resource-card:hover {
+  border-color: var(--na-module);
+  transform: translateY(-2px);
+}
+.na-resource-hub a.na-resource-card:focus-visible {
+  outline: 3px solid var(--na-module);
+  outline-offset: 2px;
+}
+
+/* The resources slide holds one short row of cards; centre it rather than
+   pinning it to the top of an otherwise empty stage. */
+.na-stage.na-fill .na-copy:has(> .na-resource-hub) { align-content: center; }
+.na-stage.na-fill .na-resource-hub a.na-resource-card { padding: 22px 20px; }
+
+/* Worked-step panel: body shrinks and the citation sits in a footer so a long
+   step loses type size rather than its last lines to `overflow: hidden`. */
+.na-code-panel {
+  display: flex;
+  flex-direction: column;
+}
+.na-code-panel pre {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.na-code-panel.is-dense code {
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.34;
+}
+.na-code-panel small {
+  display: block;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--na-line);
+  font-family: system-ui, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--na-muted);
+}

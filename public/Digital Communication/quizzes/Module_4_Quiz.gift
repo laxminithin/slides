@@ -1,0 +1,162 @@
+// BEC503 Digital Communication — Module 4: Error Control Coding: Linear Block and Cyclic Codes
+// 20 multiple choice questions, 1 mark each.
+
+::M4Q1::[html]The defining property of a linear block code is that{
+ =the sum of any two codewords is a codeword   #Correct - closure under modulo-2 addition makes the code a subspace.
+ ~all codewords have the same weight   #Wrong - codeword weights generally vary; only the minimum matters.
+ ~the code is systematic   #Wrong - systematic form is a convenience, not part of the definition.
+ ~every codeword has even parity   #Wrong - that is one particular single-parity-check code.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.582-586 | CO4 | L1
+}
+
+::M4Q2::[html]An (n,k) linear block code has how many codewords?{
+ =2^k   #Correct - one codeword per distinct k-bit message.
+ ~2^n   #Wrong - that is the total number of n-tuples, most of which are not codewords.
+ ~n - k   #Wrong - that is the number of parity bits.
+ ~2^(n-k)   #Wrong - that is the number of distinct syndromes, hence the number of cosets.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.582-586 | CO4 | L2
+}
+
+::M4Q3::[html]Encoding with a generator matrix is{
+ =c \= mG   #Correct - a 1-by-k row vector times a k-by-n matrix gives a 1-by-n codeword.
+ ~c \= Gm   #Wrong - the dimensions do not conform in that order for row-vector convention.
+ ~c \= mH   #Wrong - H tests codewords; it does not build them.
+ ~c \= m + G   #Wrong - a vector and a matrix cannot be added.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.582-586 | CO5 | L2
+}
+
+::M4Q4::[html]The relation between G and H is{
+ =G H^T \= 0   #Correct - every row of G is a codeword, and every codeword is annihilated by H.
+ ~G H \= I   #Wrong - the product is the zero matrix, not the identity.
+ ~G \= H^T   #Wrong - they have different dimensions in general.
+ ~G + H \= 0   #Wrong - addition is not defined between matrices of different shapes.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.582-586 | CO5 | L3
+}
+
+::M4Q5::[html]For a systematic code with G \= [I | P], the parity check matrix is{
+ =H \= [P^T | I]   #Correct - the transpose is essential for G H^T to vanish.
+ ~H \= [P | I]   #Wrong - omitting the transpose breaks the orthogonality relation.
+ ~H \= [I | P^T]   #Wrong - the identity block must occupy the parity positions, not the message positions.
+ ~H \= [I | P]   #Wrong - that is G itself, which does not annihilate the code.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.582-586 | CO5 | L3
+}
+
+::M4Q6::[html]The syndrome of a received vector r is{
+ =s \= r H^T   #Correct - and it depends only on the error pattern, not on the codeword.
+ ~s \= r G^T   #Wrong - G builds codewords; it is not the test matrix.
+ ~s \= r + c   #Wrong - the receiver does not know c, which is the whole difficulty.
+ ~s \= r H   #Wrong - the dimensions require the transpose.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.586-590 | CO4 | L2
+}
+
+::M4Q7::[html]Why does the syndrome depend only on the error pattern?{
+ =Because c H^T \= 0 for every codeword, so the codeword term vanishes   #Correct - s \= (c+e)H^T \= cH^T + eH^T \= eH^T.
+ ~Because the error is always smaller than the codeword   #Wrong - relative magnitude has no meaning over GF(2).
+ ~Because H is chosen after the codeword is known   #Wrong - H is fixed by the code design before any transmission.
+ ~It does not; it depends on both   #Wrong - the independence from c is the defining usefulness of the syndrome.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.586-590 | CO4 | L4
+}
+
+::M4Q8::[html]For a linear code, the minimum distance equals{
+ =the minimum weight over all non-zero codewords   #Correct - because the difference of two codewords is itself a codeword.
+ ~the average codeword weight   #Wrong - the average says nothing about the closest pair.
+ ~the weight of the all-ones codeword   #Wrong - the all-ones word need not even be a codeword.
+ ~n - k   #Wrong - the number of parity bits bounds d_min but does not equal it.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.586-590 | CO4 | L3
+}
+
+::M4Q9::[html]A code with d_min \= 5 can correct up to{
+ =2 errors   #Correct - t \= floor((5-1)/2) \= 2.
+ ~4 errors   #Wrong - four is the detection capability, not the correction capability.
+ ~5 errors   #Wrong - correction can never reach d_min itself.
+ ~1 error   #Wrong - that would be the figure for d_min \= 3.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.586-590 | CO4 | L3
+}
+
+::M4Q10::[html]Increasing d_min from 3 to 4 buys{
+ =one more detected error but no more corrected errors   #Correct - floor(3/2) \= 1, the same as floor(2/2), so only detection improves.
+ ~one more corrected error   #Wrong - the floor function absorbs the even increment.
+ ~two more corrected errors   #Wrong - even one extra correction requires d_min \= 5.
+ ~nothing at all   #Wrong - the detection guarantee does improve from 2 to 3.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.586-590 | CO4 | L4
+}
+
+::M4Q11::[html]In a standard array, the coset leader is{
+ =the minimum-weight member of the coset   #Correct - minimum weight means most likely on a BSC, which makes the decoder maximum likelihood.
+ ~the first member listed   #Wrong - ordering is a presentation choice; weight is the criterion.
+ ~always a codeword   #Wrong - only the first coset consists of codewords.
+ ~the all-zero vector   #Wrong - that is the leader of the zeroth coset only.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.590-593 | CO5 | L3
+}
+
+::M4Q12::[html]How many cosets does the standard array of an (n,k) code have?{
+ =2^(n-k)   #Correct - one per distinct syndrome.
+ ~2^k   #Wrong - that is the number of codewords, which is the row length.
+ ~2^n   #Wrong - that is the total number of n-tuples in the whole array.
+ ~n - k   #Wrong - that is the syndrome length in bits, not the count.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.590-593 | CO5 | L3
+}
+
+::M4Q13::[html]A Hamming code with m parity bits has parameters{
+ =(2^m - 1, 2^m - 1 - m)   #Correct - the block length is the number of non-zero m-bit columns.
+ ~(2^m, 2^m - m)   #Wrong - the all-zero column is excluded, so the length is one less.
+ ~(m, m-1)   #Wrong - that is a single-parity-check code.
+ ~(2^m - 1, m)   #Wrong - this reverses the roles of the message and parity counts.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.590-593 | CO5 | L2
+}
+
+::M4Q14::[html]The minimum distance of every Hamming code is{
+ =3   #Correct - distinct non-zero columns guarantee exactly 3, for every m.
+ ~m   #Wrong - m sets the number of parity bits, not the distance.
+ ~2^m - 1   #Wrong - that is the block length.
+ ~It grows with the block length   #Wrong - a longer Hamming code has better rate and the same distance of 3.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.590-593 | CO5 | L3
+}
+
+::M4Q15::[html]A cyclic code is a linear block code in which{
+ =every cyclic shift of a codeword is a codeword   #Correct - that closure under shifting is the defining extra property.
+ ~all codewords are cyclic permutations of one another   #Wrong - the shifts of one codeword form only part of the code.
+ ~the generator matrix is circulant only   #Wrong - the circulant matrix is a consequence, not the definition.
+ ~n is always odd   #Wrong - block length parity is unrelated to the cyclic property.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.593-597 | CO4 | L2
+}
+
+::M4Q16::[html]A cyclic shift of a codeword corresponds in polynomial terms to{
+ =multiplication by x modulo x^n - 1   #Correct - and the modulo operation is what wraps the top coefficient round.
+ ~addition of x   #Wrong - addition changes one coefficient rather than shifting all of them.
+ ~division by x   #Wrong - division by x shifts the wrong way and may not be defined.
+ ~squaring the polynomial   #Wrong - squaring is unrelated to shifting.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.593-597 | CO4 | L3
+}
+
+::M4Q17::[html]The generator polynomial of an (n,k) cyclic code has degree{
+ =n - k   #Correct - the same as the number of parity bits.
+ ~k   #Wrong - k is the degree of the parity check polynomial h(x).
+ ~n   #Wrong - a degree-n polynomial cannot be a codeword of length n.
+ ~k - 1   #Wrong - that is the maximum degree of a message polynomial.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.593-597 | CO5 | L2
+}
+
+::M4Q18::[html]A valid generator polynomial for a cyclic code of length n must{
+ =divide x^n - 1   #Correct - divisibility is what makes the code closed under cyclic shifts.
+ ~be irreducible   #Wrong - g(x) is often a product of several irreducible factors.
+ ~have degree k   #Wrong - the degree is n-k, not k.
+ ~have all coefficients equal to 1   #Wrong - there is no such constraint on the coefficients.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.593-597 | CO5 | L4
+}
+
+::M4Q19::[html]Systematic cyclic encoding forms the codeword as{
+ =x^(n-k) m(x) + [x^(n-k) m(x) mod g(x)]   #Correct - shift the message up, then append the remainder as parity.
+ ~m(x) g(x)   #Wrong - that is valid encoding but not systematic; the message is not visible.
+ ~m(x) + g(x)   #Wrong - addition does not produce a multiple of g(x).
+ ~m(x) mod g(x)   #Wrong - the remainder alone discards the message entirely.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.597-601 | CO5 | L4
+}
+
+::M4Q20::[html]The syndrome of a received polynomial in a cyclic code is{
+ =the remainder of r(x) divided by g(x)   #Correct - and the same shift register that encodes also computes it.
+ ~the remainder of r(x) divided by h(x)   #Wrong - dividing by the parity check polynomial gives no usable error information.
+ ~r(x) multiplied by g(x)   #Wrong - multiplication is the encoding operation, not the test.
+ ~the quotient of r(x) divided by g(x)   #Wrong - the quotient discards exactly the information the syndrome needs.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.601-605 | CO5 | L3
+}

@@ -1,0 +1,162 @@
+// BEC303 Network Analysis — Module 5: Two-Port Networks
+// 20 multiple choice questions, 1 mark each.
+
+::M5Q1::[html]The port condition requires that{
+ =the current entering one terminal equals the current leaving the other   #Correct — without it, no single impedance describes the terminal pair.
+ ~both terminals be at the same potential   #Wrong - equal potentials would mean zero port voltage, which is a short circuit.
+ ~the port be terminated in a matched load   #Wrong - matching is a design choice, not a requirement for the pair to be a port.
+ ~the network be reciprocal   #Wrong - reciprocity is a separate property and is not needed for the port condition.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.687-692 | CO5 | L2
+}
+
+::M5Q2::[html]How many independent parameters characterise a linear two-port at a given frequency?{
+ =Four   #Correct — two of the four port variables are expressed in terms of the other two, needing four coefficients.
+ ~Two   #Wrong - two coefficients would describe a one-port, not a two-port.
+ ~Six   #Wrong - six is the number of common parameter sets, not the number of parameters in each.
+ ~It depends on the number of internal elements   #Wrong - the internal element count is exactly what the abstraction discards.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.687-692 | CO5 | L2
+}
+
+::M5Q3::[html]The y parameters are measured with{
+ =one port short-circuited   #Correct — setting a port voltage to zero isolates a single coefficient.
+ ~one port open-circuited   #Wrong - open circuits set a port current to zero, which is the z-parameter condition.
+ ~both ports matched   #Wrong - matched terminations are the scattering-parameter condition.
+ ~the network unterminated   #Wrong - some definite termination is always needed to isolate individual coefficients.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.692-699 | CO5 | L2
+}
+
+::M5Q4::[html]z₁₁ is defined as{
+ =V₁/I₁ with port 2 open-circuited   #Correct — the open circuit forces I₂ \= 0, isolating the coefficient.
+ ~V₁/I₁ with port 2 short-circuited   #Wrong - a short gives a different and generally much smaller number.
+ ~V₁/I₁ with port 2 matched   #Wrong - matching is not the defining condition for z parameters.
+ ~the input impedance under any load   #Wrong - the terminated input impedance depends on the load and is not z11.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.708-713 | CO5 | L2
+}
+
+::M5Q5::[html]The y parameters map naturally onto which equivalent circuit?{
+ =The π network   #Correct — shunt admittances add, which is what y parameters describe.
+ ~The T network   #Wrong - the T network is the natural equivalent for z parameters.
+ ~The ladder network   #Wrong - a ladder is a cascade and is naturally handled by ABCD parameters.
+ ~The bridged-T network   #Wrong - the bridged-T is a specific topology and not the generic equivalent for any parameter set.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.699-708 | CO5 | L3
+}
+
+::M5Q6::[html]For z \= [[30, 20], [20, 30]] Ω, the determinant Δz is{
+ =500   #Correct — 30 × 30 − 20 × 20 \= 900 − 400 \= 500.
+ ~900   #Wrong - 900 is the product of the diagonal alone, with the off-diagonal term not subtracted.
+ ~400   #Wrong - 400 is the off-diagonal product alone.
+ ~1300   #Wrong - this adds the two products instead of subtracting.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.692-713 | CO5 | L2
+}
+
+::M5Q7::[html]To convert a z matrix to a y matrix you must{
+ =invert the matrix   #Correct — y \= z⁻¹, provided the determinant is non-zero.
+ ~reciprocate each element   #Wrong - elementwise reciprocation is not matrix inversion; for a typical z it is off by tens of percent.
+ ~transpose the matrix   #Wrong - transposition swaps the off-diagonal terms and does nothing useful here.
+ ~divide by the trace   #Wrong - the trace plays no role in a 2x2 inversion.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.692-713 | CO5 | L3
+}
+
+::M5Q8::[html]The h parameters have mixed units because{
+ =they relate mixed variables — V₁ and I₂ to I₁ and V₂   #Correct — h₁₁ is in ohms, h₂₂ in siemens, and the other two are dimensionless.
+ ~they were defined before SI units existed   #Wrong - the mixed units follow from the variable choice, not from historical accident.
+ ~they apply only to nonlinear devices   #Wrong - h parameters describe linear small-signal models.
+ ~they are measured at mixed frequencies   #Wrong - all four are measured at the same frequency.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.713-716 | CO5 | L3
+}
+
+::M5Q9::[html]In transistor datasheets, h₂₁ corresponds to{
+ =h_fe, the forward current gain   #Correct — h₂₁ is the short-circuit forward current gain.
+ ~h_ie, the input impedance   #Wrong - h_ie corresponds to h11, the input impedance.
+ ~the output conductance   #Wrong - the output conductance is h22.
+ ~the reverse voltage ratio   #Wrong - the reverse voltage ratio is h12.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.713-716 | CO5 | L2
+}
+
+::M5Q10::[html]A lone series impedance between two ports has{
+ =no z representation, because opening a port leaves no current path   #Correct — this is the standard example of why more than one parameter set is needed.
+ ~no y representation   #Wrong - the y matrix exists for this network; it is z that fails.
+ ~neither a z nor an ABCD representation   #Wrong - its ABCD matrix is the perfectly well-defined [[1, Z], [0, 1]].
+ ~all six representations   #Wrong - if all six existed there would be no reason for six sets to exist.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.692-716 | CO5 | L4
+}
+
+::M5Q11::[html]The ABCD matrix of a single series impedance Z is{
+ =[[1, Z], [0, 1]]   #Correct — an open output gives A \= 1 and C \= 0; a shorted output gives B \= Z and D \= 1.
+ ~[[1, 0], [Z, 1]]   #Wrong - that is the shunt-admittance matrix with Y in the lower-left position.
+ ~[[Z, 1], [1, 0]]   #Wrong - this violates the AD - BC \= 1 reciprocity condition.
+ ~[[1, 1], [Z, Z]]   #Wrong - this is dimensionally inconsistent and fails every check.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.716-720 | CO5 | L3
+}
+
+::M5Q12::[html]For cascaded two-ports the overall ABCD matrix is{
+ =the ordered product of the individual matrices   #Correct — the order must follow signal flow, since matrix multiplication does not commute.
+ ~the sum of the individual matrices   #Wrong - addition applies to y for parallel and z for series connections, not to cascades.
+ ~the product in any order   #Wrong - reversing the order describes a physically different cascade.
+ ~the inverse of the product   #Wrong - inversion corresponds to looking through the network backwards, not to cascading.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.716-720 | CO5 | L3
+}
+
+::M5Q13::[html]Cascading a series 10 Ω with a shunt 0.05 S gives an overall ABCD of{
+ =[[1.5, 10], [0.05, 1]]   #Correct — the product [[1,10],[0,1]]·[[1,0],[0.05,1]] gives A \= 1.5 and D \= 1, and AD − BC \= 1.
+ ~[[1, 10], [0.05, 1.5]]   #Wrong - the 1.5 appears in the A position, not the D position, for this order.
+ ~[[1.5, 10], [0.05, 1.5]]   #Wrong - this would give AD - BC \= 2.25 - 0.5, which fails the reciprocity check.
+ ~[[1, 10], [0.05, 1]]   #Wrong - this omits the loading interaction between the two elements entirely.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.716-720 | CO5 | L4
+}
+
+::M5Q14::[html]The reciprocity condition for ABCD parameters is{
+ =AD − BC \= 1   #Correct — this is the ABCD form of the reciprocity statement.
+ ~A \= D   #Wrong - A \= D is the symmetry condition, which is a different claim.
+ ~B \= C   #Wrong - B and C have different units and cannot be equal.
+ ~A + D \= 2   #Wrong - this has no standing as either a reciprocity or a symmetry condition.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.699-720 | CO5 | L3
+}
+
+::M5Q15::[html]A network with z \= [[30, 20], [20, 45]] Ω is{
+ =reciprocal but not symmetric   #Correct — z₁₂ \= z₂₁ gives reciprocity, but z₁₁ ≠ z₂₂ so it is not symmetric.
+ ~symmetric but not reciprocal   #Wrong - the symmetry condition is the one that fails here, not the reciprocity condition.
+ ~both reciprocal and symmetric   #Wrong - symmetry requires equal diagonal entries, and 30 is not 45.
+ ~neither   #Wrong - the equal off-diagonal entries do establish reciprocity.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.699-708 | CO5 | L4
+}
+
+::M5Q16::[html]The input impedance of a terminated two-port is{
+ =z₁₁ − z₁₂z₂₁/(z₂₂ + Z_L)   #Correct — the second term is the load reflected back through the network.
+ ~z₁₁   #Wrong - z11 is the open-circuit value only and ignores the load entirely.
+ ~z₁₁ + Z_L   #Wrong - the load does not simply add in series; it is reflected through the transfer terms.
+ ~z₁₁z₂₂/(z₁₂z₂₁)   #Wrong - this expression has no physical basis and is dimensionally wrong.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.708-713 | CO5 | L3
+}
+
+::M5Q17::[html]For z \= [[30, 20], [20, 30]] Ω with a 50 Ω load, Z_in is{
+ =25 Ω   #Correct — 30 − (20 × 20)/(30 + 50) \= 30 − 5 \= 25 Ω.
+ ~30 Ω   #Wrong - 30 ohm is z11, the value only for an open-circuited output.
+ ~80 Ω   #Wrong - this adds the load to z11, which is not how the load enters.
+ ~16.7 Ω   #Wrong - 16.7 ohm is the value for a short-circuited output, not a 50 ohm load.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.708-713 | CO5 | L4
+}
+
+::M5Q18::[html]The output impedance of a two-port depends on{
+ =the source impedance at port 1   #Correct — Z_out \= z₂₂ − z₁₂z₂₁/(z₁₁ + Z_S), reflecting the source through the network.
+ ~the load impedance at port 2   #Wrong - the load is what Z_out is presented to; it cannot also determine it.
+ ~neither termination   #Wrong - each terminated impedance depends on the termination at the far port.
+ ~the frequency only   #Wrong - frequency matters, but so does the source impedance.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.708-713 | CO5 | L4
+}
+
+::M5Q19::[html]Why do scattering parameters replace y parameters at high frequency?{
+ =A true short circuit is hard to realise because of lead inductance   #Correct — lead inductance makes the short an impedance that rises with frequency, corrupting the measurement.
+ ~y parameters do not exist above a certain frequency   #Wrong - the parameters exist mathematically; it is the measurement that becomes impractical.
+ ~Scattering parameters have simpler units   #Wrong - scattering parameters are dimensionless, but that is not the motivating reason.
+ ~y parameters cannot describe reciprocal networks   #Wrong - y parameters describe reciprocal networks perfectly well.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.692-713 | CO5 | L5
+}
+
+::M5Q20::[html]Two-ports connected in parallel have which matrices that add?{
+ =y   #Correct — parallel connection puts the same voltages across both, so the currents and therefore the admittances add.
+ ~z   #Wrong - z matrices add for a series connection, not a parallel one.
+ ~h   #Wrong - h matrices add for a series-parallel connection, a different arrangement again.
+ ~ABCD   #Wrong - ABCD matrices multiply for a cascade; they never add.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.17, pp.692-720 | CO5 | L4
+}

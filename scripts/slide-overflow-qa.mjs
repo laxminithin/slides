@@ -29,6 +29,13 @@ const DEFAULT_VIEWPORTS = [
 ]
 
 const SUBJECTS = [
+  { id: 'analog-electronics-and-linear-integrated-circuits', modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'] },
+  { id: 'automation-in-manufacturing', modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'] },
+  { id: 'kinematics-of-machines', modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'] },
+  { id: 'additional-mathematics-1', modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'] },
+  { id: 'digital-system-design-using-verilog', modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'] },
+  { id: 'fluid-mechanics', modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'] },
+  { id: 'materials-science-metallurgy', modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'] },
   {
     id: 'big-data-analytics',
     modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'],
@@ -83,6 +90,38 @@ const SUBJECTS = [
   },
   {
     id: 'distributed-systems',
+    modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'],
+  },
+  {
+    id: 'network-analysis',
+    modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'],
+  },
+  {
+    id: 'python-programming',
+    modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'],
+  },
+  {
+    id: 'digital-communication',
+    modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'],
+  },
+  {
+    id: 'electric-circuit-analysis',
+    modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'],
+  },
+  {
+    id: 'analog-electronics-circuits',
+    modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'],
+  },
+  {
+    id: 'complex-analysis-transforms-optimization',
+    modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'],
+  },
+  {
+    id: 'high-voltage-engineering',
+    modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'],
+  },
+  {
+    id: 'electric-motor-drive-systems-ev',
     modules: ['module-1', 'module-2', 'module-3', 'module-4', 'module-5'],
   },
 ]

@@ -1,0 +1,162 @@
+// BEC503 Digital Communication — Module 3: Information Theory
+// 20 multiple choice questions, 1 mark each.
+
+::M3Q1::[html]The self-information of an event of probability p is{
+ =log2(1/p)   #Correct - rarer events carry more information, without bound.
+ ~p log2(p)   #Wrong - that is a single term of the entropy sum, not the self-information.
+ ~1 - p   #Wrong - a linear measure fails the additivity requirement for independent events.
+ ~log2(p)   #Wrong - this is negative for p < 1; the sign must be reversed.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.207-214 | CO3 | L1
+}
+
+::M3Q2::[html]Why is the logarithm used to measure information?{
+ =It makes the information of independent events add   #Correct - probabilities multiply, and only the logarithm turns that into addition.
+ ~It keeps the numbers small   #Wrong - convenience of scale is not a mathematical requirement.
+ ~It matches the decibel convention   #Wrong - decibels are a separate convention with no bearing on this.
+ ~It is required for the units to be bits   #Wrong - the base sets the unit; the choice of a logarithm at all is what additivity forces.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.207-214 | CO3 | L3
+}
+
+::M3Q3::[html]The entropy of a source with four equally likely symbols is{
+ =2 bits   #Correct - log2(4) \= 2, the maximum for a four-symbol alphabet.
+ ~1 bit   #Wrong - one bit is the maximum for a two-symbol alphabet.
+ ~4 bits   #Wrong - that is the alphabet size, not its logarithm.
+ ~0.25 bits   #Wrong - that is a probability, not an entropy.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.207-214 | CO3 | L2
+}
+
+::M3Q4::[html]Entropy is maximised when{
+ =all symbols are equally likely   #Correct - uniformity means maximum uncertainty, giving H \= log2(K).
+ ~one symbol dominates   #Wrong - a dominant symbol reduces uncertainty and lowers the entropy.
+ ~the alphabet is binary   #Wrong - alphabet size sets the ceiling; it does not determine whether the ceiling is reached.
+ ~the source has memory   #Wrong - memory reduces the entropy rate below the per-symbol entropy.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.207-214 | CO3 | L2
+}
+
+::M3Q5::[html]For a memoryless source, the entropy of the nth extension is{
+ =n H(X)   #Correct - independence makes the block entropy simply additive.
+ ~H(X)^n   #Wrong - probabilities multiply, but entropies, being logarithms, add.
+ ~H(X)/n   #Wrong - the block contains n symbols, so its entropy is larger, not smaller.
+ ~n log2(H(X))   #Wrong - there is no nested logarithm in the relation.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.207-214 | CO3 | L3
+}
+
+::M3Q6::[html]The source coding theorem bounds the average code length L by{
+ =H(X) <\= L < H(X) + 1   #Correct - entropy is a floor and entropy plus one bit is always achievable.
+ ~L <\= H(X)   #Wrong - no uniquely decodable code can beat the entropy.
+ ~L \= H(X) exactly   #Wrong - equality holds only when every ideal length is a whole number.
+ ~L >\= 2 H(X)   #Wrong - there is no such factor-of-two penalty.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.214-215 | CO3 | L2
+}
+
+::M3Q7::[html]A prefix code is one in which{
+ =no codeword is a prefix of any other   #Correct - this is what makes decoding instantaneous with no lookahead.
+ ~all codewords have the same length   #Wrong - that is a fixed-length code, which is one special case of a prefix code.
+ ~every codeword starts with 0   #Wrong - there is no constraint on the leading bit.
+ ~the shortest codeword is a prefix of the longest   #Wrong - that is precisely the condition a prefix code forbids.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.215-223 | CO3 | L1
+}
+
+::M3Q8::[html]The Kraft inequality for lengths 1, 2, 2, 3 gives{
+ =1.125, so no prefix code exists   #Correct - 0.5 + 0.25 + 0.25 + 0.125 \= 1.125, which exceeds one.
+ ~1.0, so a full tree exists   #Wrong - recompute\: the two length-2 codewords claim 0.25 each, pushing the total past one.
+ ~0.875, with a spare branch   #Wrong - that would be the sum for lengths 1, 2, 3, 3.
+ ~2.0, so two codes exist   #Wrong - the Kraft sum is not a count of codes.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.215-223 | CO3 | L4
+}
+
+::M3Q9::[html]Huffman coding is optimal in the sense that{
+ =no other prefix code has a smaller average length for the same distribution   #Correct - optimality is over prefix codes at the given symbol granularity.
+ ~it always achieves the entropy exactly   #Wrong - it reaches entropy exactly only when all probabilities are negative powers of two.
+ ~it has the smallest code length variance   #Wrong - different tie-breakings give the same mean but different variances.
+ ~it works without knowing the probabilities   #Wrong - that describes Lempel-Ziv; Huffman needs the distribution.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.215-223 | CO3 | L3
+}
+
+::M3Q10::[html]Lempel-Ziv coding is called universal because{
+ =it requires no prior knowledge of the source statistics   #Correct - it learns the structure from the data and still approaches the entropy rate.
+ ~it works on any alphabet size   #Wrong - alphabet flexibility is not what the term universal denotes here.
+ ~it is used in every compression standard   #Wrong - ubiquity is not the definition, and it is not in every standard.
+ ~it achieves zero redundancy   #Wrong - no practical code achieves exactly zero redundancy.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.215-223 | CO3 | L2
+}
+
+::M3Q11::[html]Each row of a discrete memoryless channel transition matrix sums to{
+ =1   #Correct - given any input, some output must occur.
+ ~0   #Wrong - probabilities are non-negative and cannot sum to zero unless all are zero.
+ ~the input probability   #Wrong - the input probability is a separate quantity that multiplies the row.
+ ~the channel capacity   #Wrong - capacity is derived from the matrix, not equal to a row sum.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.223-226 | CO3 | L2
+}
+
+::M3Q12::[html]The capacity of a binary symmetric channel with crossover p is{
+ =1 - H(p)   #Correct - the binary entropy of the crossover probability is what the channel destroys.
+ ~1 - p   #Wrong - that is the erasure channel capacity, which is larger.
+ ~H(p)   #Wrong - that is the equivocation, the part lost, not the part carried.
+ ~p log2(p)   #Wrong - this is a single term of an entropy sum and is negative.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.223-226 | CO3 | L2
+}
+
+::M3Q13::[html]At the same disturbance probability of 0.1, which carries more information?{
+ =The erasure channel, because the receiver knows which bits were lost   #Correct - 0.9 against 0.531 bits per use; knowing the location of the damage is valuable.
+ ~The symmetric channel, because no bits are discarded   #Wrong - a silently flipped bit is more damaging than a flagged missing one.
+ ~They are equal   #Wrong - the gap is a factor of 1.7 at this probability.
+ ~Neither carries any information   #Wrong - both have substantial capacity at p \= 0.1.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.223-226 | CO3 | L4
+}
+
+::M3Q14::[html]Mutual information I(X;Y) equals{
+ =H(X) - H(X|Y)   #Correct - the uncertainty removed by observing the output.
+ ~H(X) - H(Y)   #Wrong - a difference of marginals can be negative; mutual information never is.
+ ~H(X) + H(Y)   #Wrong - that is an upper bound on the joint entropy, not the mutual information.
+ ~H(X|Y) - H(X)   #Wrong - this is the negative of the correct expression.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.226-230 | CO3 | L2
+}
+
+::M3Q15::[html]The term H(X|Y) is called{
+ =the equivocation   #Correct - the uncertainty about the input that survives observing the output.
+ ~the capacity   #Wrong - capacity is the maximised mutual information.
+ ~the redundancy   #Wrong - redundancy concerns source coding efficiency.
+ ~the entropy rate   #Wrong - the entropy rate describes a source with memory.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.226-230 | CO3 | L1
+}
+
+::M3Q16::[html]The data processing inequality implies that{
+ =no receiver post-processing can increase the information delivered by the channel   #Correct - processing can preserve or destroy information, never create it.
+ ~longer codes always help   #Wrong - block length is a separate matter from the inequality.
+ ~capacity depends on the decoder   #Wrong - capacity is a property of the channel alone.
+ ~mutual information can be negative   #Wrong - mutual information is non-negative by definition.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.226-230 | CO3 | L4
+}
+
+::M3Q17::[html]Channel capacity is defined as{
+ =the maximum of I(X;Y) over all input distributions   #Correct - the maximisation is over the transmitter design space.
+ ~the maximum of H(X)   #Wrong - that would ignore the channel entirely.
+ ~the minimum of H(X|Y)   #Wrong - minimising equivocation alone does not account for the input entropy.
+ ~the bit rate of the fastest known code   #Wrong - capacity is independent of any particular code.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.230-232 | CO3 | L2
+}
+
+::M3Q18::[html]The channel coding theorem guarantees that for R < C{
+ =codes exist whose error probability tends to zero as block length grows   #Correct - it is an existence result proved by random coding.
+ ~any code will work   #Wrong - a poor code below capacity still performs poorly.
+ ~the error probability is exactly zero   #Wrong - it tends to zero as the block length grows, never reaching zero for finite n.
+ ~no coding is needed   #Wrong - coding is exactly what makes the guarantee achievable.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.232-237 | CO3 | L3
+}
+
+::M3Q19::[html]A channel of bandwidth 3 kHz and SNR 20 dB has capacity approximately{
+ =20 kbit/s   #Correct - 3000 x log2(101) \= 3000 x 6.66 \= 20 kbit/s.
+ ~60 kbit/s   #Wrong - this would require an SNR near 60 dB.
+ ~6 kbit/s   #Wrong - this uses log2(1 + 1) rather than log2(1 + 100).
+ ~200 kbit/s   #Wrong - substituting 20 dB directly as a linear ratio gives the wrong scale entirely.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.240-244 | CO3 | L4
+}
+
+::M3Q20::[html]The Shannon limit of -1.59 dB in Eb/N0 applies{
+ =in the limit of spectral efficiency tending to zero   #Correct - it is the infinite-bandwidth limit; finite efficiency demands more.
+ ~to every system regardless of spectral efficiency   #Wrong - at 2 bit/s/Hz the minimum is 1.76 dB, well above -1.59 dB.
+ ~only to BPSK   #Wrong - the bound is modulation-independent.
+ ~only to coded systems   #Wrong - it bounds coded and uncoded systems alike.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.5, pp.240-244 | CO3 | L5
+}

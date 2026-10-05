@@ -1,0 +1,480 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BEC503 Module 2 Quiz</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 10.5pt; color: #12203A; line-height: 1.45; }
+h1 { font-size: 19pt; margin: 0 0 4pt; color: #12203A; }
+h2 { font-size: 13.5pt; margin: 16pt 0 5pt; padding-bottom: 3pt; border-bottom: 1.5pt solid #0F6FC6; color: #0F6FC6; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 11pt 0 3pt; color: #12203A; page-break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 8pt 0 2pt; color: #5A6478; page-break-after: avoid; }
+p { margin: 4pt 0; }
+ul, ol { margin: 4pt 0 4pt 16pt; padding: 0; }
+li { margin: 2pt 0; page-break-inside: avoid; }
+hr { border: 0; border-top: 0.75pt solid #D7DEE8; margin: 10pt 0; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; background: #F1F5FA; padding: 0 2pt; border-radius: 2pt; }
+pre { font-family: Consolas, monospace; font-size: 9pt; background: #F1F5FA; border-left: 2.5pt solid #0F6FC6; padding: 6pt 8pt; margin: 5pt 0; white-space: pre-wrap; page-break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0; font-size: 9.5pt; }
+th { background: #0F6FC6; color: #fff; text-align: left; padding: 4pt 5pt; font-weight: 600; }
+td { border: 0.5pt solid #D7DEE8; padding: 4pt 5pt; vertical-align: top; }
+tr { page-break-inside: avoid; }
+tbody tr:nth-child(even) td { background: #F7FAFD; }
+strong { color: #12203A; }
+.tag { font-family: Consolas, monospace; font-size: 9pt; color: #C2410C; }
+</style></head><body>
+<h1>BEC503 Digital Communication — Module 2 Quiz</h1>
+<p><strong>Digital Modulation Techniques</strong></p>
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>
+<tr><td>Subject code</td><td>BEC503</td></tr>
+<tr><td>Module</td><td>2 — Digital Modulation Techniques</td></tr>
+<tr><td>Duration</td><td>45 minutes</td></tr>
+<tr><td>Maximum marks</td><td>50 (Part A 20 + Part B 30)</td></tr>
+<tr><td>Attempts allowed</td><td>1</td></tr>
+<tr><td>Passing marks</td><td>20</td></tr>
+<tr><td>Textbook</td><td>Simon Haykin, Digital Communication Systems, 1st ed., 2014</td></tr>
+</tbody></table>
+<h2>Instructions</h2>
+<ul>
+<li>Part A carries 20 one-mark multiple choice questions. Exactly one option is correct.</li>
+<li>Part B carries 13 short questions totalling 30 marks.</li>
+<li>Express all error probabilities in terms of the Q function or an exponential, as appropriate to the scheme.</li>
+<li>State clearly whether an energy is per bit or per symbol in every answer.</li>
+<li>Non-programmable calculators are permitted. No textbooks or notes.</li>
+</ul>
+<h2>Course outcome and Bloom coverage</h2>
+<table><thead><tr><th>Band</th><th>Questions</th><th>Share</th><th>Target</th></tr></thead><tbody>
+<tr><td>L1–L2 Remember / Understand</td><td>8</td><td>24%</td><td>~30%</td></tr>
+<tr><td>L3–L4 Apply / Analyse</td><td>20</td><td>61%</td><td>~45%</td></tr>
+<tr><td>L5–L6 Evaluate / Create</td><td>5</td><td>15%</td><td>~25%</td></tr>
+</tbody></table>
+<p>Course outcome spread: CO2: 33. Total questions: 33.</p>
+<hr/>
+<h2>Part A — Multiple choice (20 × 1 mark = 20 marks)</h2>
+<p><strong>A1.</strong> The bit error probability of coherent BPSK is  <code>[CO2 | L1 | 1 mark | easy | Ch.7, pp.352-357]</code></p>
+<ul>
+<li>(A) Q(sqrt(2 Eb/N0))</li>
+<li>(B) Q(sqrt(Eb/N0))</li>
+<li>(C) 0.5 exp(-Eb/N0)</li>
+<li>(D) Q(Eb/N0)</li>
+</ul>
+<p><strong>A2.</strong> How many dimensions does a QPSK constellation occupy?  <code>[CO2 | L2 | 1 mark | medium | Ch.7, pp.357-364]</code></p>
+<ul>
+<li>(A) 2</li>
+<li>(B) 1</li>
+<li>(C) 4</li>
+<li>(D) log2(4) = 2 bits, so 4</li>
+</ul>
+<p><strong>A3.</strong> Compared with BPSK at the same Eb/N0, QPSK has  <code>[CO2 | L3 | 1 mark | medium | Ch.7, pp.357-364]</code></p>
+<ul>
+<li>(A) the same bit error rate and twice the spectral efficiency</li>
+<li>(B) twice the bit error rate and twice the spectral efficiency</li>
+<li>(C) half the bit error rate and the same efficiency</li>
+<li>(D) the same bit error rate and the same efficiency</li>
+</ul>
+<p><strong>A4.</strong> Gray mapping is used because  <code>[CO2 | L2 | 1 mark | easy | Ch.7, pp.357-364]</code></p>
+<ul>
+<li>(A) adjacent constellation points then differ in exactly one bit</li>
+<li>(B) it increases the minimum distance</li>
+<li>(C) it reduces the peak-to-average power ratio</li>
+<li>(D) it removes the need for a phase reference</li>
+</ul>
+<p><strong>A5.</strong> The minimum distance of M-ary PSK with symbol energy E is  <code>[CO2 | L3 | 1 mark | medium | Ch.7, pp.364-370]</code></p>
+<ul>
+<li>(A) 2 sqrt(E) sin(pi/M)</li>
+<li>(B) 2 sqrt(E) cos(pi/M)</li>
+<li>(C) sqrt(E) sin(2 pi/M)</li>
+<li>(D) 2 pi sqrt(E)/M</li>
+</ul>
+<p><strong>A6.</strong> Going from QPSK to 8-PSK at the same average symbol energy costs approximately  <code>[CO2 | L4 | 1 mark | hard | Ch.7, pp.364-370]</code></p>
+<ul>
+<li>(A) 5.3 dB in minimum distance</li>
+<li>(B) 3 dB</li>
+<li>(C) 1 dB</li>
+<li>(D) nothing, because the energy is unchanged</li>
+</ul>
+<p><strong>A7.</strong> A key practical advantage of M-ary PSK over M-ary QAM is  <code>[CO2 | L4 | 1 mark | medium | Ch.7, pp.370-375]</code></p>
+<ul>
+<li>(A) constant envelope, so the amplifier can run near saturation</li>
+<li>(B) better minimum distance at every M</li>
+<li>(C) lower receiver complexity at every M</li>
+<li>(D) immunity to phase error</li>
+</ul>
+<p><strong>A8.</strong> For square M-QAM the receiver can  <code>[CO2 | L3 | 1 mark | medium | Ch.7, pp.370-375]</code></p>
+<ul>
+<li>(A) slice the I and Q axes independently</li>
+<li>(B) only perform a full M-way distance search</li>
+<li>(C) ignore the quadrature component</li>
+<li>(D) work without symbol timing</li>
+</ul>
+<p><strong>A9.</strong> At M = 16 and equal average energy, QAM outperforms PSK by roughly  <code>[CO2 | L4 | 1 mark | hard | Ch.7, pp.370-375]</code></p>
+<ul>
+<li>(A) 4.2 dB</li>
+<li>(B) 1 dB</li>
+<li>(C) 10 dB</li>
+<li>(D) they are identical</li>
+</ul>
+<p><strong>A10.</strong> Two BFSK signals are orthogonal for coherent detection when their frequency separation is a multiple of  <code>[CO2 | L3 | 1 mark | hard | Ch.7, pp.375-382]</code></p>
+<ul>
+<li>(A) 1/(2 Tb)</li>
+<li>(B) 1/Tb</li>
+<li>(C) 2/Tb</li>
+<li>(D) fc/2</li>
+</ul>
+<p><strong>A11.</strong> The bit error probability of coherent BFSK is  <code>[CO2 | L2 | 1 mark | medium | Ch.7, pp.375-382]</code></p>
+<ul>
+<li>(A) Q(sqrt(Eb/N0))</li>
+<li>(B) Q(sqrt(2 Eb/N0))</li>
+<li>(C) 0.5 exp(-Eb/(2 N0))</li>
+<li>(D) Q(2 sqrt(Eb/N0))</li>
+</ul>
+<p><strong>A12.</strong> Why does the difference variable in a coherent BFSK detector have variance N0 rather than N0/2?  <code>[CO2 | L4 | 1 mark | hard | Ch.7, pp.375-382]</code></p>
+<ul>
+<li>(A) Two independent noise projections of variance N0/2 are subtracted</li>
+<li>(B) The noise density doubles at the second frequency</li>
+<li>(C) The correlators are not orthogonal</li>
+<li>(D) The bit duration is halved</li>
+</ul>
+<p><strong>A13.</strong> A noncoherent receiver bases its decision on  <code>[CO2 | L3 | 1 mark | medium | Ch.7, pp.400-410]</code></p>
+<ul>
+<li>(A) the envelope sqrt(xI^2 + xQ^2) of each branch</li>
+<li>(B) the signed correlator output</li>
+<li>(C) the phase of each branch</li>
+<li>(D) the derivative of the received signal</li>
+</ul>
+<p><strong>A14.</strong> The bit error probability of noncoherent BFSK is  <code>[CO2 | L2 | 1 mark | medium | Ch.7, pp.410-411]</code></p>
+<ul>
+<li>(A) 0.5 exp(-Eb/(2 N0))</li>
+<li>(B) 0.5 exp(-Eb/N0)</li>
+<li>(C) Q(sqrt(Eb/N0))</li>
+<li>(D) exp(-Eb/N0)</li>
+</ul>
+<p><strong>A15.</strong> DPSK avoids the need for  <code>[CO2 | L2 | 1 mark | easy | Ch.7, pp.411-415]</code></p>
+<ul>
+<li>(A) an absolute carrier phase reference</li>
+<li>(B) symbol timing recovery</li>
+<li>(C) a matched filter</li>
+<li>(D) error control coding</li>
+</ul>
+<p><strong>A16.</strong> The bit error probability of DPSK is  <code>[CO2 | L2 | 1 mark | medium | Ch.7, pp.411-415]</code></p>
+<ul>
+<li>(A) 0.5 exp(-Eb/N0)</li>
+<li>(B) 0.5 exp(-Eb/(2 N0))</li>
+<li>(C) Q(sqrt(2 Eb/N0))</li>
+<li>(D) Q(sqrt(Eb/N0))</li>
+</ul>
+<p><strong>A17.</strong> Why do DPSK errors tend to occur in pairs?  <code>[CO2 | L4 | 1 mark | hard | Ch.7, pp.411-415]</code></p>
+<ul>
+<li>(A) Each received symbol serves both as data and as the reference for the next decision</li>
+<li>(B) The encoder outputs two bits per symbol</li>
+<li>(C) The noise is correlated across symbols</li>
+<li>(D) The delay line doubles the noise</li>
+</ul>
+<p><strong>A18.</strong> Ranking by required Eb/N0 at Pb = 1e-5, from best to worst:  <code>[CO2 | L5 | 1 mark | hard | Ch.7, pp.415-418]</code></p>
+<ul>
+<li>(A) BPSK, DPSK, coherent BFSK, noncoherent BFSK</li>
+<li>(B) BPSK, coherent BFSK, DPSK, noncoherent BFSK</li>
+<li>(C) noncoherent BFSK, DPSK, BPSK, coherent BFSK</li>
+<li>(D) They are all within 0.5 dB</li>
+</ul>
+<p><strong>A19.</strong> A link is bandwidth limited with abundant power and a linear amplifier. The best choice is  <code>[CO2 | L5 | 1 mark | medium | Ch.7, pp.415-418]</code></p>
+<ul>
+<li>(A) high-order QAM</li>
+<li>(B) BPSK</li>
+<li>(C) noncoherent BFSK</li>
+<li>(D) DPSK</li>
+</ul>
+<p><strong>A20.</strong> Typical implementation loss to budget on top of a theoretical Eb/N0 figure is  <code>[CO2 | L2 | 1 mark | medium | Ch.7, pp.415-418]</code></p>
+<ul>
+<li>(A) 1 to 2 dB</li>
+<li>(B) 0 dB</li>
+<li>(C) 10 dB</li>
+<li>(D) It is always negative</li>
+</ul>
+<hr/>
+<h2>Part B — Descriptive (13 questions, 30 marks)</h2>
+<p><strong>B1.</strong> Derive the bit error probability of coherent BPSK from the signal-space geometry.  <code>[CO2 | L4 | 3 marks | Ch.7, pp.352-357]</code></p>
+<p><strong>B2.</strong> Explain why QPSK achieves twice the bit rate of BPSK in the same bandwidth at the same bit error rate.  <code>[CO2 | L4 | 3 marks | Ch.7, pp.357-364]</code></p>
+<p><strong>B3.</strong> Derive the minimum distance of M-ary PSK and use it to compare M = 4, 8 and 16 at equal symbol energy.  <code>[CO2 | L4 | 3 marks | Ch.7, pp.364-370]</code></p>
+<p><strong>B4.</strong> Explain why 16-QAM outperforms 16-PSK, and state the practical cost of choosing it.  <code>[CO2 | L5 | 3 marks | Ch.7, pp.370-375]</code></p>
+<p><strong>B5.</strong> Show why coherent BFSK is exactly 3 dB worse than coherent BPSK.  <code>[CO2 | L4 | 2 marks | Ch.7, pp.375-382]</code></p>
+<p><strong>B6.</strong> Explain why the decision variable in a coherent BFSK receiver has variance N0.  <code>[CO2 | L4 | 2 marks | Ch.7, pp.375-382]</code></p>
+<p><strong>B7.</strong> Describe the noncoherent BFSK receiver and state its two costs relative to coherent detection.  <code>[CO2 | L3 | 2 marks | Ch.7, pp.410-411]</code></p>
+<p><strong>B8.</strong> Explain how differential encoding works in DPSK and why the scheme needs no absolute phase reference.  <code>[CO2 | L3 | 2 marks | Ch.7, pp.411-415]</code></p>
+<p><strong>B9.</strong> Why is DPSK about 1 dB worse than coherent BPSK, and why do its errors come in pairs?  <code>[CO2 | L4 | 2 marks | Ch.7, pp.411-415]</code></p>
+<p><strong>B10.</strong> Explain why Gray mapping reduces the bit error rate without changing the constellation geometry.  <code>[CO2 | L3 | 2 marks | Ch.7, pp.357-364]</code></p>
+<p><strong>B11.</strong> A link has 500 kHz of bandwidth, needs 1 Mbit/s, and has a received Eb/N0 of 11 dB with a saturated amplifier. Choose a scheme and justify it.  <code>[CO2 | L5 | 2 marks | Ch.7, pp.415-418]</code></p>
+<p><strong>B12.</strong> Explain what constant envelope means and why it matters for the power amplifier.  <code>[CO2 | L3 | 2 marks | Ch.7, pp.370-375]</code></p>
+<p><strong>B13.</strong> Show, with numbers, how sensitive the Q function is to its argument, and explain why link budgets are argued over in tenths of a decibel.  <code>[CO2 | L5 | 2 marks | Ch.7, pp.344-352]</code></p>
+<hr/>
+<h2>Answer key — Part A</h2>
+<table><thead><tr><th>Q</th><th>Answer</th><th>CO</th><th>Bloom</th><th>Reference</th></tr></thead><tbody>
+<tr><td>A1</td><td>A</td><td>CO2</td><td>L1</td><td>Ch.7, pp.352-357</td></tr>
+<tr><td>A2</td><td>A</td><td>CO2</td><td>L2</td><td>Ch.7, pp.357-364</td></tr>
+<tr><td>A3</td><td>A</td><td>CO2</td><td>L3</td><td>Ch.7, pp.357-364</td></tr>
+<tr><td>A4</td><td>A</td><td>CO2</td><td>L2</td><td>Ch.7, pp.357-364</td></tr>
+<tr><td>A5</td><td>A</td><td>CO2</td><td>L3</td><td>Ch.7, pp.364-370</td></tr>
+<tr><td>A6</td><td>A</td><td>CO2</td><td>L4</td><td>Ch.7, pp.364-370</td></tr>
+<tr><td>A7</td><td>A</td><td>CO2</td><td>L4</td><td>Ch.7, pp.370-375</td></tr>
+<tr><td>A8</td><td>A</td><td>CO2</td><td>L3</td><td>Ch.7, pp.370-375</td></tr>
+<tr><td>A9</td><td>A</td><td>CO2</td><td>L4</td><td>Ch.7, pp.370-375</td></tr>
+<tr><td>A10</td><td>A</td><td>CO2</td><td>L3</td><td>Ch.7, pp.375-382</td></tr>
+<tr><td>A11</td><td>A</td><td>CO2</td><td>L2</td><td>Ch.7, pp.375-382</td></tr>
+<tr><td>A12</td><td>A</td><td>CO2</td><td>L4</td><td>Ch.7, pp.375-382</td></tr>
+<tr><td>A13</td><td>A</td><td>CO2</td><td>L3</td><td>Ch.7, pp.400-410</td></tr>
+<tr><td>A14</td><td>A</td><td>CO2</td><td>L2</td><td>Ch.7, pp.410-411</td></tr>
+<tr><td>A15</td><td>A</td><td>CO2</td><td>L2</td><td>Ch.7, pp.411-415</td></tr>
+<tr><td>A16</td><td>A</td><td>CO2</td><td>L2</td><td>Ch.7, pp.411-415</td></tr>
+<tr><td>A17</td><td>A</td><td>CO2</td><td>L4</td><td>Ch.7, pp.411-415</td></tr>
+<tr><td>A18</td><td>A</td><td>CO2</td><td>L5</td><td>Ch.7, pp.415-418</td></tr>
+<tr><td>A19</td><td>A</td><td>CO2</td><td>L5</td><td>Ch.7, pp.415-418</td></tr>
+<tr><td>A20</td><td>A</td><td>CO2</td><td>L2</td><td>Ch.7, pp.415-418</td></tr>
+</tbody></table>
+<h2>Part A — why each option is right or wrong</h2>
+<p><strong>A1.</strong> Correct answer: (A) Q(sqrt(2 Eb/N0))</p>
+<ul>
+<li>(A) Correct - antipodal signalling gives the factor of two inside the square root.</li>
+<li>(B) Wrong - that is coherent BFSK, which is 3 dB worse.</li>
+<li>(C) Wrong - that is DPSK, a differentially coherent scheme.</li>
+<li>(D) Wrong - the argument of the Q function must be a square root of an energy ratio, not the ratio itself.</li>
+</ul>
+<p><strong>A2.</strong> Correct answer: (A) 2</p>
+<ul>
+<li>(A) Correct - four points arranged in a plane spanned by two orthogonal carriers.</li>
+<li>(B) Wrong - one dimension holds only two antipodal points, which is BPSK.</li>
+<li>(C) Wrong - that confuses the number of signals with the dimension of the space.</li>
+<li>(D) Wrong - bits per symbol and dimensions are different quantities that happen to coincide here by accident.</li>
+</ul>
+<p><strong>A3.</strong> Correct answer: (A) the same bit error rate and twice the spectral efficiency</p>
+<ul>
+<li>(A) Correct - the two quadrature channels are independent BPSK channels sharing the band.</li>
+<li>(B) Wrong - the bit error rate is identical; only the symbol error rate is roughly doubled.</li>
+<li>(C) Wrong - QPSK does not improve on the BPSK bit error rate, it matches it.</li>
+<li>(D) Wrong - QPSK carries two bits per symbol, so the efficiency is doubled.</li>
+</ul>
+<p><strong>A4.</strong> Correct answer: (A) adjacent constellation points then differ in exactly one bit</p>
+<ul>
+<li>(A) Correct - so the most likely symbol errors produce only one bit error each.</li>
+<li>(B) Wrong - the geometry is unchanged; only the labels move.</li>
+<li>(C) Wrong - PAPR depends on point positions, not on labelling.</li>
+<li>(D) Wrong - differential encoding does that, not Gray mapping.</li>
+</ul>
+<p><strong>A5.</strong> Correct answer: (A) 2 sqrt(E) sin(pi/M)</p>
+<ul>
+<li>(A) Correct - the chord subtending an angle 2 pi/M at radius sqrt(E).</li>
+<li>(B) Wrong - cosine gives the wrong limit: it should shrink as M grows, not approach 2 sqrt(E).</li>
+<li>(C) Wrong - the half-angle belongs inside the sine, and the leading factor is 2.</li>
+<li>(D) Wrong - that is the arc length, which overestimates the Euclidean distance.</li>
+</ul>
+<p><strong>A6.</strong> Correct answer: (A) 5.3 dB in minimum distance</p>
+<ul>
+<li>(A) Correct - the chord falls from 1.414 sqrt(E) to 0.765 sqrt(E), a ratio of 1.85 or 5.3 dB.</li>
+<li>(B) Wrong - 3 dB is the orthogonal-versus-antipodal penalty, a different comparison.</li>
+<li>(C) Wrong - 1 dB is the rough noncoherent penalty, not the constellation-density penalty.</li>
+<li>(D) Wrong - equal energy spread over more points necessarily reduces the spacing.</li>
+</ul>
+<p><strong>A7.</strong> Correct answer: (A) constant envelope, so the amplifier can run near saturation</p>
+<ul>
+<li>(A) Correct - all points lie on one circle, so the envelope never varies.</li>
+<li>(B) Wrong - QAM overtakes PSK on minimum distance from M = 8 upward.</li>
+<li>(C) Wrong - QAM slices per axis and is generally simpler at high M.</li>
+<li>(D) Wrong - PSK is if anything more sensitive to phase error, since all information is in the phase.</li>
+</ul>
+<p><strong>A8.</strong> Correct answer: (A) slice the I and Q axes independently</p>
+<ul>
+<li>(A) Correct - a square constellation is the product of two independent PAM axes.</li>
+<li>(B) Wrong - the product structure is precisely what avoids the M-way search.</li>
+<li>(C) Wrong - half the information lives on the quadrature axis.</li>
+<li>(D) Wrong - symbol timing is required by every coherent scheme.</li>
+</ul>
+<p><strong>A9.</strong> Correct answer: (A) 4.2 dB</p>
+<ul>
+<li>(A) Correct - 0.632 sqrt(E) against 0.390 sqrt(E), a ratio of 1.62.</li>
+<li>(B) Wrong - 1 dB is roughly the gap at M = 8, not M = 16.</li>
+<li>(C) Wrong - the gap is real but not that large at M = 16.</li>
+<li>(D) Wrong - they are identical only at M = 4, where both are QPSK.</li>
+</ul>
+<p><strong>A10.</strong> Correct answer: (A) 1/(2 Tb)</p>
+<ul>
+<li>(A) Correct - coherent detection permits the tighter spacing; noncoherent needs 1/Tb.</li>
+<li>(B) Wrong - that is the noncoherent requirement, twice as wide.</li>
+<li>(C) Wrong - wider than necessary and wastes bandwidth.</li>
+<li>(D) Wrong - the requirement depends on the bit duration, not on the carrier frequency.</li>
+</ul>
+<p><strong>A11.</strong> Correct answer: (A) Q(sqrt(Eb/N0))</p>
+<ul>
+<li>(A) Correct - orthogonal signalling loses the factor of two, which is the 3 dB penalty.</li>
+<li>(B) Wrong - that is BPSK, which is antipodal rather than orthogonal.</li>
+<li>(C) Wrong - that is noncoherent BFSK, a further 1 dB worse.</li>
+<li>(D) Wrong - this would make BFSK better than BPSK, which orthogonal signalling cannot be.</li>
+</ul>
+<p><strong>A12.</strong> Correct answer: (A) Two independent noise projections of variance N0/2 are subtracted</p>
+<ul>
+<li>(A) Correct - variances add under subtraction of independent variables.</li>
+<li>(B) Wrong - white noise has the same density at every frequency.</li>
+<li>(C) Wrong - they are orthogonal by construction, which is what makes the projections independent.</li>
+<li>(D) Wrong - the bit duration is unchanged.</li>
+</ul>
+<p><strong>A13.</strong> Correct answer: (A) the envelope sqrt(xI^2 + xQ^2) of each branch</p>
+<ul>
+<li>(A) Correct - averaging the likelihood over an unknown uniform phase leaves only the envelope.</li>
+<li>(B) Wrong - the sign is meaningless when the absolute phase is unknown.</li>
+<li>(C) Wrong - the phase is precisely what is unavailable.</li>
+<li>(D) Wrong - differentiation plays no part in envelope detection.</li>
+</ul>
+<p><strong>A14.</strong> Correct answer: (A) 0.5 exp(-Eb/(2 N0))</p>
+<ul>
+<li>(A) Correct - note the factor of two in the denominator of the exponent.</li>
+<li>(B) Wrong - that is DPSK, which is about 3 dB better.</li>
+<li>(C) Wrong - that is coherent BFSK.</li>
+<li>(D) Wrong - the leading factor of one half is part of the exact result.</li>
+</ul>
+<p><strong>A15.</strong> Correct answer: (A) an absolute carrier phase reference</p>
+<ul>
+<li>(A) Correct - the previous symbol supplies a relative reference instead.</li>
+<li>(B) Wrong - symbol timing is still essential for the one-symbol delay to align.</li>
+<li>(C) Wrong - matched filtering is still used within the symbol.</li>
+<li>(D) Wrong - coding is an independent design choice.</li>
+</ul>
+<p><strong>A16.</strong> Correct answer: (A) 0.5 exp(-Eb/N0)</p>
+<ul>
+<li>(A) Correct - roughly 1 dB worse than coherent BPSK at usable error rates.</li>
+<li>(B) Wrong - that is noncoherent BFSK, about 3 dB worse than DPSK.</li>
+<li>(C) Wrong - that is coherent BPSK, which DPSK approaches but does not equal.</li>
+<li>(D) Wrong - that is coherent BFSK.</li>
+</ul>
+<p><strong>A17.</strong> Correct answer: (A) Each received symbol serves both as data and as the reference for the next decision</p>
+<ul>
+<li>(A) Correct - a corrupted symbol poisons the decision it participates in and the following one.</li>
+<li>(B) Wrong - DPSK carries one bit per symbol.</li>
+<li>(C) Wrong - AWGN is uncorrelated across symbols by assumption.</li>
+<li>(D) Wrong - the delay line contributes noise but does not double it, and that is not the pairing mechanism.</li>
+</ul>
+<p><strong>A18.</strong> Correct answer: (A) BPSK, DPSK, coherent BFSK, noncoherent BFSK</p>
+<ul>
+<li>(A) Correct - roughly 9.6, 10.3, 12.6 and 13.3 dB respectively.</li>
+<li>(B) Wrong - DPSK is better than coherent BFSK, not worse.</li>
+<li>(C) Wrong - this reverses the order almost completely.</li>
+<li>(D) Wrong - the spread is nearly 4 dB.</li>
+</ul>
+<p><strong>A19.</strong> Correct answer: (A) high-order QAM</p>
+<ul>
+<li>(A) Correct - spend the surplus power on spectral efficiency.</li>
+<li>(B) Wrong - BPSK has the lowest spectral efficiency of all, exactly the wrong direction.</li>
+<li>(C) Wrong - FSK is spectrally wasteful and suits power-limited or phase-unstable links.</li>
+<li>(D) Wrong - DPSK has the same efficiency as BPSK and suits phase-unstable links.</li>
+</ul>
+<p><strong>A20.</strong> Correct answer: (A) 1 to 2 dB</p>
+<ul>
+<li>(A) Correct - filtering, quantisation, timing and phase imperfections each take a fraction of a dB.</li>
+<li>(B) Wrong - no real receiver achieves the theoretical bound exactly.</li>
+<li>(C) Wrong - a 10 dB implementation loss would indicate a broken design.</li>
+<li>(D) Wrong - implementation loss is a loss; it cannot improve on the theoretical bound.</li>
+</ul>
+<hr/>
+<h2>Part B — model answers and marking scheme</h2>
+<h3>B1 (3 marks) — CO2, L4, Ch.7, pp.352-357</h3>
+<p><strong>Question.</strong> Derive the bit error probability of coherent BPSK from the signal-space geometry.</p>
+<p><strong>Model answer.</strong> The two signals are at +sqrt(Eb) and -sqrt(Eb) on a single axis, so the distance from each to the threshold at zero is sqrt(Eb). The noise projection on that axis is Gaussian with zero mean and variance N0/2, hence standard deviation sqrt(N0/2). An error occurs when the noise carries the observation past the threshold, which happens with probability Q(sqrt(Eb)/sqrt(N0/2)). Simplifying the ratio gives Q(sqrt(2 Eb/N0)). This is the smallest error probability achievable by any binary scheme in AWGN, because antipodal signalling maximises the distance for a given energy.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct geometry: distance to threshold and noise standard deviation</td><td>2</td></tr>
+<tr><td>Correct simplification to Q(sqrt(2 Eb/N0)) with the optimality remark</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B2 (3 marks) — CO2, L4, Ch.7, pp.357-364</h3>
+<p><strong>Question.</strong> Explain why QPSK achieves twice the bit rate of BPSK in the same bandwidth at the same bit error rate.</p>
+<p><strong>Model answer.</strong> QPSK modulates two independent bit streams onto cos and -sin carriers at the same frequency. Those carriers are orthogonal, so the two streams do not interfere and the receiver recovers each with an independent sign decision. Each quadrature channel is an ordinary BPSK channel carrying energy E/2 per symbol, and since the symbol carries two bits, E/2 = Eb. The bit error probability of each channel is therefore Q(sqrt(2 Eb/N0)), identical to BPSK. The bandwidth is set by the symbol rate, which for the same bit rate is halved, so the spectral efficiency doubles. The costs are a four-fold phase ambiguity and a more demanding carrier recovery.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct orthogonality argument for independent channels</td><td>1</td></tr>
+<tr><td>Correct energy bookkeeping showing E/2 = Eb</td><td>1</td></tr>
+<tr><td>Correct statement of the bandwidth or efficiency consequence</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B3 (3 marks) — CO2, L4, Ch.7, pp.364-370</h3>
+<p><strong>Question.</strong> Derive the minimum distance of M-ary PSK and use it to compare M = 4, 8 and 16 at equal symbol energy.</p>
+<p><strong>Model answer.</strong> The M points lie on a circle of radius sqrt(E) separated by angle 2 pi/M. The chord between adjacent points subtends that angle at the centre, so its length is 2 sqrt(E) sin(pi/M). For M = 4 this is 2 sqrt(E) sin(45) = 1.414 sqrt(E); for M = 8, 2 sqrt(E) sin(22.5) = 0.765 sqrt(E); for M = 16, 2 sqrt(E) sin(11.25) = 0.390 sqrt(E). The ratio from M = 4 to M = 8 is 1.85, which is 5.3 dB in power terms, and from 8 to 16 a further 1.96 or 5.9 dB. Each extra bit per symbol therefore costs roughly 6 dB beyond QPSK, which is why high-order PSK is rare.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct chord derivation</td><td>1</td></tr>
+<tr><td>All three numerical distances correct</td><td>1</td></tr>
+<tr><td>Correct dB comparison and conclusion</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B4 (3 marks) — CO2, L5, Ch.7, pp.370-375</h3>
+<p><strong>Question.</strong> Explain why 16-QAM outperforms 16-PSK, and state the practical cost of choosing it.</p>
+<p><strong>Model answer.</strong> PSK confines all points to a single circle, so as M grows the points crowd together along one dimension of freedom. QAM uses the interior of the plane as a rectangular lattice, which packs the same number of points with greater spacing for the same average energy. Numerically, 16-QAM has d_min = 0.632 sqrt(E) against 0.390 sqrt(E) for 16-PSK, a ratio of 1.62 or about 4.2 dB. The practical cost is that the QAM envelope varies between points, giving a peak-to-average power ratio of 2.55, so the power amplifier must be backed off from saturation. On a satellite link where the amplifier runs saturated, that back-off can consume the whole 4.2 dB advantage.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct geometric explanation of interior packing</td><td>1</td></tr>
+<tr><td>Correct numerical comparison of minimum distances</td><td>1</td></tr>
+<tr><td>Correct statement of the PAPR and back-off cost</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B5 (2 marks) — CO2, L4, Ch.7, pp.375-382</h3>
+<p><strong>Question.</strong> Show why coherent BFSK is exactly 3 dB worse than coherent BPSK.</p>
+<p><strong>Model answer.</strong> BPSK is antipodal: two points on one axis at ±sqrt(Eb), separated by 2 sqrt(Eb). BFSK is orthogonal: two points on perpendicular axes at distance sqrt(Eb) from the origin, separated by sqrt(2 Eb) by Pythagoras. The ratio of distances is 2/sqrt(2) = sqrt(2). Since error probability is Q of half the distance divided by sqrt(N0/2), the argument for BFSK is smaller by a factor sqrt(2), giving Q(sqrt(Eb/N0)) against Q(sqrt(2 Eb/N0)). A factor of sqrt(2) in the argument corresponds to a factor of 2 in energy, which is 3 dB. The penalty is purely geometric and buys the possibility of noncoherent detection.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct distances for both geometries and the resulting ratio</td><td>1</td></tr>
+<tr><td>Correct identification of the factor of 2 in energy as 3 dB</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B6 (2 marks) — CO2, L4, Ch.7, pp.375-382</h3>
+<p><strong>Question.</strong> Explain why the decision variable in a coherent BFSK receiver has variance N0.</p>
+<p><strong>Model answer.</strong> The receiver forms the difference of two correlator outputs, one for each signalling frequency. Each output contains an independent noise projection of variance N0/2, independent because the two basis functions are orthogonal and the noise is white. When two independent random variables are subtracted, their variances add rather than cancel, so the difference has variance N0/2 + N0/2 = N0. The mean of the difference is sqrt(Eb), so the error probability is Q(sqrt(Eb)/sqrt(N0)) = Q(sqrt(Eb/N0)). Using N0/2 here is the most common error and erases the 3 dB penalty entirely.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct statement that variances add under subtraction of independent variables</td><td>1</td></tr>
+<tr><td>Correct resulting error expression</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B7 (2 marks) — CO2, L3, Ch.7, pp.410-411</h3>
+<p><strong>Question.</strong> Describe the noncoherent BFSK receiver and state its two costs relative to coherent detection.</p>
+<p><strong>Model answer.</strong> The received signal passes through two bandpass filters centred on the two signalling frequencies, each followed by an envelope detector, and the branch with the larger envelope at the end of the bit interval wins. No carrier phase reference is used anywhere. The first cost is about 1 dB of energy: Pb = 0.5 exp(-Eb/(2 N0)) against Q(sqrt(Eb/N0)) for coherent detection. The second cost is bandwidth: orthogonality without phase alignment requires the frequency separation to be a multiple of 1/Tb rather than 1/(2Tb), so twice the separation and a wider occupied band.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct receiver structure with filters and envelope detectors</td><td>1</td></tr>
+<tr><td>Both costs correctly stated, energy and bandwidth</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B8 (2 marks) — CO2, L3, Ch.7, pp.411-415</h3>
+<p><strong>Question.</strong> Explain how differential encoding works in DPSK and why the scheme needs no absolute phase reference.</p>
+<p><strong>Model answer.</strong> The transmitter encodes each bit as a change relative to the previous symbol phase: typically the phase is kept unchanged for a 1 and reversed for a 0. The information therefore lives in the difference between consecutive phases, not in either phase individually. The receiver multiplies the incoming waveform by a copy delayed by one symbol and integrates, which extracts the cosine of the phase difference. Any constant phase offset common to both symbols cancels in that difference, so the receiver is immune to an unknown but slowly varying carrier phase and needs no absolute reference and no ambiguity resolution.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct encoding rule and the location of the information in the difference</td><td>1</td></tr>
+<tr><td>Correct explanation that a common phase offset cancels in the product</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B9 (2 marks) — CO2, L4, Ch.7, pp.411-415</h3>
+<p><strong>Question.</strong> Why is DPSK about 1 dB worse than coherent BPSK, and why do its errors come in pairs?</p>
+<p><strong>Model answer.</strong> The reference against which each decision is made is the previous received symbol, which is itself corrupted by noise. Noise therefore enters the decision variable twice — once through the current symbol and once through the reference — rather than once, which degrades the effective signal-to-noise ratio and gives Pb = 0.5 exp(-Eb/N0), roughly 1 dB worse than Q(sqrt(2 Eb/N0)) at Pb = 1e-5. Errors pair because each received symbol participates in two consecutive decisions: as the data for one and as the reference for the next. A single badly corrupted symbol therefore tends to corrupt both.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct explanation of the noisy reference and the resulting 1 dB</td><td>1</td></tr>
+<tr><td>Correct explanation of error pairing through the double use of each symbol</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B10 (2 marks) — CO2, L3, Ch.7, pp.357-364</h3>
+<p><strong>Question.</strong> Explain why Gray mapping reduces the bit error rate without changing the constellation geometry.</p>
+<p><strong>Model answer.</strong> At usable signal-to-noise ratios almost every symbol error is a slip to a nearest neighbour, because the probability of a longer jump falls off exponentially with squared distance. Gray mapping labels the constellation so that every pair of adjacent points differs in exactly one bit position. A nearest-neighbour symbol error therefore produces exactly one bit error, whereas an arbitrary labelling can produce two or more. The symbol error rate is completely unchanged, since the points have not moved; only the number of bit errors per symbol error falls, typically from about 1.5 to exactly 1, giving Pb = Ps/log2(M).</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct statement that nearest-neighbour errors dominate</td><td>1</td></tr>
+<tr><td>Correct conclusion that Ps is unchanged and only Pb improves</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B11 (2 marks) — CO2, L5, Ch.7, pp.415-418</h3>
+<p><strong>Question.</strong> A link has 500 kHz of bandwidth, needs 1 Mbit/s, and has a received Eb/N0 of 11 dB with a saturated amplifier. Choose a scheme and justify it.</p>
+<p><strong>Model answer.</strong> The required spectral efficiency is 1 Mbit/s divided by 500 kHz, which is 2 bit/s/Hz, so at least four constellation points are needed and BPSK is eliminated immediately. QPSK provides exactly 2 bit/s/Hz and requires about 9.6 dB for Pb = 1e-5, leaving 1.4 dB of margin against the available 11 dB, which is just enough to cover typical implementation loss. 16-QAM would give 4 bit/s/Hz but requires about 13.4 dB, which is not available, and its varying envelope is incompatible with a saturated amplifier. The answer is QPSK, and the margin is tight enough that coding should be considered.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct efficiency calculation and elimination of BPSK</td><td>1</td></tr>
+<tr><td>Correct choice of QPSK with margin and amplifier justification</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B12 (2 marks) — CO2, L3, Ch.7, pp.370-375</h3>
+<p><strong>Question.</strong> Explain what constant envelope means and why it matters for the power amplifier.</p>
+<p><strong>Model answer.</strong> A constant-envelope modulation keeps the instantaneous amplitude of the transmitted waveform fixed, varying only its phase or frequency; all PSK and FSK schemes have this property because their constellation points lie on one circle. It matters because a power amplifier is most efficient when driven into saturation, but saturation compresses amplitude variations and distorts any signal whose envelope varies. A constant-envelope signal passes through a saturated amplifier undistorted, so the amplifier can run at maximum efficiency. A QAM signal must instead be backed off by several decibels, wasting DC power and heat, which is why battery-powered and satellite transmitters have historically preferred PSK.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct definition and which schemes have the property</td><td>1</td></tr>
+<tr><td>Correct explanation of the amplifier efficiency consequence</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B13 (2 marks) — CO2, L5, Ch.7, pp.344-352</h3>
+<p><strong>Question.</strong> Show, with numbers, how sensitive the Q function is to its argument, and explain why link budgets are argued over in tenths of a decibel.</p>
+<p><strong>Model answer.</strong> Q falls roughly as exp(-x^2/2), so small changes in the argument produce large changes in probability. For BPSK at Eb/N0 = 7 dB the argument is sqrt(2 x 5.01) = 3.17 and Pb is about 7.6e-4; at 8 dB the argument is 3.55 and Pb about 1.9e-4; at 9 dB, 3.99 and about 3.3e-5. Each decibel therefore reduces the error rate by roughly a factor of four to six in this region. A tenth of a decibel is worth several percent in error rate, and across a chain of a dozen components in a link budget those tenths accumulate into whole decibels, which is why they are tracked individually.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>At least two correct numerical evaluations showing the steepness</td><td>1</td></tr>
+<tr><td>Correct link-budget argument about accumulation of small losses</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+</body></html>

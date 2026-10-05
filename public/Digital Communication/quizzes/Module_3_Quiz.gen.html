@@ -1,0 +1,480 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BEC503 Module 3 Quiz</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 10.5pt; color: #12203A; line-height: 1.45; }
+h1 { font-size: 19pt; margin: 0 0 4pt; color: #12203A; }
+h2 { font-size: 13.5pt; margin: 16pt 0 5pt; padding-bottom: 3pt; border-bottom: 1.5pt solid #0F6FC6; color: #0F6FC6; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 11pt 0 3pt; color: #12203A; page-break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 8pt 0 2pt; color: #5A6478; page-break-after: avoid; }
+p { margin: 4pt 0; }
+ul, ol { margin: 4pt 0 4pt 16pt; padding: 0; }
+li { margin: 2pt 0; page-break-inside: avoid; }
+hr { border: 0; border-top: 0.75pt solid #D7DEE8; margin: 10pt 0; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; background: #F1F5FA; padding: 0 2pt; border-radius: 2pt; }
+pre { font-family: Consolas, monospace; font-size: 9pt; background: #F1F5FA; border-left: 2.5pt solid #0F6FC6; padding: 6pt 8pt; margin: 5pt 0; white-space: pre-wrap; page-break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0; font-size: 9.5pt; }
+th { background: #0F6FC6; color: #fff; text-align: left; padding: 4pt 5pt; font-weight: 600; }
+td { border: 0.5pt solid #D7DEE8; padding: 4pt 5pt; vertical-align: top; }
+tr { page-break-inside: avoid; }
+tbody tr:nth-child(even) td { background: #F7FAFD; }
+strong { color: #12203A; }
+.tag { font-family: Consolas, monospace; font-size: 9pt; color: #C2410C; }
+</style></head><body>
+<h1>BEC503 Digital Communication — Module 3 Quiz</h1>
+<p><strong>Information Theory</strong></p>
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>
+<tr><td>Subject code</td><td>BEC503</td></tr>
+<tr><td>Module</td><td>3 — Information Theory</td></tr>
+<tr><td>Duration</td><td>45 minutes</td></tr>
+<tr><td>Maximum marks</td><td>50 (Part A 20 + Part B 30)</td></tr>
+<tr><td>Attempts allowed</td><td>1</td></tr>
+<tr><td>Passing marks</td><td>20</td></tr>
+<tr><td>Textbook</td><td>Simon Haykin, Digital Communication Systems, 1st ed., 2014</td></tr>
+</tbody></table>
+<h2>Instructions</h2>
+<ul>
+<li>Part A carries 20 one-mark multiple choice questions. Exactly one option is correct.</li>
+<li>Part B carries 13 short questions totalling 30 marks.</li>
+<li>All logarithms are to base 2 unless stated otherwise; give entropies in bits.</li>
+<li>Show the intermediate terms of every entropy calculation, not just the final number.</li>
+<li>Non-programmable calculators are permitted. No textbooks or notes.</li>
+</ul>
+<h2>Course outcome and Bloom coverage</h2>
+<table><thead><tr><th>Band</th><th>Questions</th><th>Share</th><th>Target</th></tr></thead><tbody>
+<tr><td>L1–L2 Remember / Understand</td><td>11</td><td>33%</td><td>~30%</td></tr>
+<tr><td>L3–L4 Apply / Analyse</td><td>18</td><td>55%</td><td>~45%</td></tr>
+<tr><td>L5–L6 Evaluate / Create</td><td>4</td><td>12%</td><td>~25%</td></tr>
+</tbody></table>
+<p>Course outcome spread: CO3: 33. Total questions: 33.</p>
+<hr/>
+<h2>Part A — Multiple choice (20 × 1 mark = 20 marks)</h2>
+<p><strong>A1.</strong> The self-information of an event of probability p is  <code>[CO3 | L1 | 1 mark | easy | Ch.5, pp.207-214]</code></p>
+<ul>
+<li>(A) log2(1/p)</li>
+<li>(B) p log2(p)</li>
+<li>(C) 1 - p</li>
+<li>(D) log2(p)</li>
+</ul>
+<p><strong>A2.</strong> Why is the logarithm used to measure information?  <code>[CO3 | L3 | 1 mark | medium | Ch.5, pp.207-214]</code></p>
+<ul>
+<li>(A) It makes the information of independent events add</li>
+<li>(B) It keeps the numbers small</li>
+<li>(C) It matches the decibel convention</li>
+<li>(D) It is required for the units to be bits</li>
+</ul>
+<p><strong>A3.</strong> The entropy of a source with four equally likely symbols is  <code>[CO3 | L2 | 1 mark | easy | Ch.5, pp.207-214]</code></p>
+<ul>
+<li>(A) 2 bits</li>
+<li>(B) 1 bit</li>
+<li>(C) 4 bits</li>
+<li>(D) 0.25 bits</li>
+</ul>
+<p><strong>A4.</strong> Entropy is maximised when  <code>[CO3 | L2 | 1 mark | easy | Ch.5, pp.207-214]</code></p>
+<ul>
+<li>(A) all symbols are equally likely</li>
+<li>(B) one symbol dominates</li>
+<li>(C) the alphabet is binary</li>
+<li>(D) the source has memory</li>
+</ul>
+<p><strong>A5.</strong> For a memoryless source, the entropy of the nth extension is  <code>[CO3 | L3 | 1 mark | medium | Ch.5, pp.207-214]</code></p>
+<ul>
+<li>(A) n H(X)</li>
+<li>(B) H(X)^n</li>
+<li>(C) H(X)/n</li>
+<li>(D) n log2(H(X))</li>
+</ul>
+<p><strong>A6.</strong> The source coding theorem bounds the average code length L by  <code>[CO3 | L2 | 1 mark | medium | Ch.5, pp.214-215]</code></p>
+<ul>
+<li>(A) H(X) &lt;= L &lt; H(X) + 1</li>
+<li>(B) L &lt;= H(X)</li>
+<li>(C) L = H(X) exactly</li>
+<li>(D) L &gt;= 2 H(X)</li>
+</ul>
+<p><strong>A7.</strong> A prefix code is one in which  <code>[CO3 | L1 | 1 mark | easy | Ch.5, pp.215-223]</code></p>
+<ul>
+<li>(A) no codeword is a prefix of any other</li>
+<li>(B) all codewords have the same length</li>
+<li>(C) every codeword starts with 0</li>
+<li>(D) the shortest codeword is a prefix of the longest</li>
+</ul>
+<p><strong>A8.</strong> The Kraft inequality for lengths 1, 2, 2, 3 gives  <code>[CO3 | L4 | 1 mark | hard | Ch.5, pp.215-223]</code></p>
+<ul>
+<li>(A) 1.125, so no prefix code exists</li>
+<li>(B) 1.0, so a full tree exists</li>
+<li>(C) 0.875, with a spare branch</li>
+<li>(D) 2.0, so two codes exist</li>
+</ul>
+<p><strong>A9.</strong> Huffman coding is optimal in the sense that  <code>[CO3 | L3 | 1 mark | medium | Ch.5, pp.215-223]</code></p>
+<ul>
+<li>(A) no other prefix code has a smaller average length for the same distribution</li>
+<li>(B) it always achieves the entropy exactly</li>
+<li>(C) it has the smallest code length variance</li>
+<li>(D) it works without knowing the probabilities</li>
+</ul>
+<p><strong>A10.</strong> Lempel-Ziv coding is called universal because  <code>[CO3 | L2 | 1 mark | medium | Ch.5, pp.215-223]</code></p>
+<ul>
+<li>(A) it requires no prior knowledge of the source statistics</li>
+<li>(B) it works on any alphabet size</li>
+<li>(C) it is used in every compression standard</li>
+<li>(D) it achieves zero redundancy</li>
+</ul>
+<p><strong>A11.</strong> Each row of a discrete memoryless channel transition matrix sums to  <code>[CO3 | L2 | 1 mark | easy | Ch.5, pp.223-226]</code></p>
+<ul>
+<li>(A) 1</li>
+<li>(B) 0</li>
+<li>(C) the input probability</li>
+<li>(D) the channel capacity</li>
+</ul>
+<p><strong>A12.</strong> The capacity of a binary symmetric channel with crossover p is  <code>[CO3 | L2 | 1 mark | medium | Ch.5, pp.223-226]</code></p>
+<ul>
+<li>(A) 1 - H(p)</li>
+<li>(B) 1 - p</li>
+<li>(C) H(p)</li>
+<li>(D) p log2(p)</li>
+</ul>
+<p><strong>A13.</strong> At the same disturbance probability of 0.1, which carries more information?  <code>[CO3 | L4 | 1 mark | hard | Ch.5, pp.223-226]</code></p>
+<ul>
+<li>(A) The erasure channel, because the receiver knows which bits were lost</li>
+<li>(B) The symmetric channel, because no bits are discarded</li>
+<li>(C) They are equal</li>
+<li>(D) Neither carries any information</li>
+</ul>
+<p><strong>A14.</strong> Mutual information I(X;Y) equals  <code>[CO3 | L2 | 1 mark | medium | Ch.5, pp.226-230]</code></p>
+<ul>
+<li>(A) H(X) - H(X|Y)</li>
+<li>(B) H(X) - H(Y)</li>
+<li>(C) H(X) + H(Y)</li>
+<li>(D) H(X|Y) - H(X)</li>
+</ul>
+<p><strong>A15.</strong> The term H(X|Y) is called  <code>[CO3 | L1 | 1 mark | medium | Ch.5, pp.226-230]</code></p>
+<ul>
+<li>(A) the equivocation</li>
+<li>(B) the capacity</li>
+<li>(C) the redundancy</li>
+<li>(D) the entropy rate</li>
+</ul>
+<p><strong>A16.</strong> The data processing inequality implies that  <code>[CO3 | L4 | 1 mark | hard | Ch.5, pp.226-230]</code></p>
+<ul>
+<li>(A) no receiver post-processing can increase the information delivered by the channel</li>
+<li>(B) longer codes always help</li>
+<li>(C) capacity depends on the decoder</li>
+<li>(D) mutual information can be negative</li>
+</ul>
+<p><strong>A17.</strong> Channel capacity is defined as  <code>[CO3 | L2 | 1 mark | medium | Ch.5, pp.230-232]</code></p>
+<ul>
+<li>(A) the maximum of I(X;Y) over all input distributions</li>
+<li>(B) the maximum of H(X)</li>
+<li>(C) the minimum of H(X|Y)</li>
+<li>(D) the bit rate of the fastest known code</li>
+</ul>
+<p><strong>A18.</strong> The channel coding theorem guarantees that for R &lt; C  <code>[CO3 | L3 | 1 mark | medium | Ch.5, pp.232-237]</code></p>
+<ul>
+<li>(A) codes exist whose error probability tends to zero as block length grows</li>
+<li>(B) any code will work</li>
+<li>(C) the error probability is exactly zero</li>
+<li>(D) no coding is needed</li>
+</ul>
+<p><strong>A19.</strong> A channel of bandwidth 3 kHz and SNR 20 dB has capacity approximately  <code>[CO3 | L4 | 1 mark | hard | Ch.5, pp.240-244]</code></p>
+<ul>
+<li>(A) 20 kbit/s</li>
+<li>(B) 60 kbit/s</li>
+<li>(C) 6 kbit/s</li>
+<li>(D) 200 kbit/s</li>
+</ul>
+<p><strong>A20.</strong> The Shannon limit of -1.59 dB in Eb/N0 applies  <code>[CO3 | L5 | 1 mark | hard | Ch.5, pp.240-244]</code></p>
+<ul>
+<li>(A) in the limit of spectral efficiency tending to zero</li>
+<li>(B) to every system regardless of spectral efficiency</li>
+<li>(C) only to BPSK</li>
+<li>(D) only to coded systems</li>
+</ul>
+<hr/>
+<h2>Part B — Descriptive (13 questions, 30 marks)</h2>
+<p><strong>B1.</strong> Define entropy and compute it for a source with probabilities 0.4, 0.3, 0.2 and 0.1.  <code>[CO3 | L3 | 3 marks | Ch.5, pp.207-214]</code></p>
+<p><strong>B2.</strong> Construct a Huffman code for probabilities 0.4, 0.3, 0.2, 0.1 and compute its efficiency.  <code>[CO3 | L4 | 3 marks | Ch.5, pp.215-223]</code></p>
+<p><strong>B3.</strong> State the Kraft inequality, explain what it tests, and apply it to lengths 2, 2, 2, 3, 3.  <code>[CO3 | L4 | 3 marks | Ch.5, pp.215-223]</code></p>
+<p><strong>B4.</strong> Compare the binary symmetric and binary erasure channels at the same disturbance probability of 0.2.  <code>[CO3 | L4 | 3 marks | Ch.5, pp.223-226]</code></p>
+<p><strong>B5.</strong> Define mutual information and explain why it can never be negative.  <code>[CO3 | L3 | 2 marks | Ch.5, pp.226-230]</code></p>
+<p><strong>B6.</strong> Compute the mutual information of a BSC with p = 0.2 and equiprobable inputs.  <code>[CO3 | L4 | 2 marks | Ch.5, pp.226-230]</code></p>
+<p><strong>B7.</strong> Explain why the maximisation in the definition of capacity is over input distributions and not over channel matrices.  <code>[CO3 | L4 | 2 marks | Ch.5, pp.230-232]</code></p>
+<p><strong>B8.</strong> State the channel coding theorem and explain what it does not tell you.  <code>[CO3 | L4 | 2 marks | Ch.5, pp.232-237]</code></p>
+<p><strong>B9.</strong> A channel has 4 kHz of bandwidth and an SNR of 25 dB. Compute its capacity and state one assumption behind the figure.  <code>[CO3 | L4 | 2 marks | Ch.5, pp.240-244]</code></p>
+<p><strong>B10.</strong> Explain why capacity grows linearly with bandwidth but only logarithmically with power.  <code>[CO3 | L5 | 2 marks | Ch.5, pp.240-244]</code></p>
+<p><strong>B11.</strong> What is the Shannon limit, and why is it wrong to quote -1.6 dB for every system?  <code>[CO3 | L5 | 2 marks | Ch.5, pp.240-244]</code></p>
+<p><strong>B12.</strong> Explain why coding blocks of n symbols brings the average code length closer to the entropy.  <code>[CO3 | L4 | 2 marks | Ch.5, pp.207-215]</code></p>
+<p><strong>B13.</strong> Compare Huffman and Lempel-Ziv coding, and say when each is the right choice.  <code>[CO3 | L5 | 2 marks | Ch.5, pp.215-223]</code></p>
+<hr/>
+<h2>Answer key — Part A</h2>
+<table><thead><tr><th>Q</th><th>Answer</th><th>CO</th><th>Bloom</th><th>Reference</th></tr></thead><tbody>
+<tr><td>A1</td><td>A</td><td>CO3</td><td>L1</td><td>Ch.5, pp.207-214</td></tr>
+<tr><td>A2</td><td>A</td><td>CO3</td><td>L3</td><td>Ch.5, pp.207-214</td></tr>
+<tr><td>A3</td><td>A</td><td>CO3</td><td>L2</td><td>Ch.5, pp.207-214</td></tr>
+<tr><td>A4</td><td>A</td><td>CO3</td><td>L2</td><td>Ch.5, pp.207-214</td></tr>
+<tr><td>A5</td><td>A</td><td>CO3</td><td>L3</td><td>Ch.5, pp.207-214</td></tr>
+<tr><td>A6</td><td>A</td><td>CO3</td><td>L2</td><td>Ch.5, pp.214-215</td></tr>
+<tr><td>A7</td><td>A</td><td>CO3</td><td>L1</td><td>Ch.5, pp.215-223</td></tr>
+<tr><td>A8</td><td>A</td><td>CO3</td><td>L4</td><td>Ch.5, pp.215-223</td></tr>
+<tr><td>A9</td><td>A</td><td>CO3</td><td>L3</td><td>Ch.5, pp.215-223</td></tr>
+<tr><td>A10</td><td>A</td><td>CO3</td><td>L2</td><td>Ch.5, pp.215-223</td></tr>
+<tr><td>A11</td><td>A</td><td>CO3</td><td>L2</td><td>Ch.5, pp.223-226</td></tr>
+<tr><td>A12</td><td>A</td><td>CO3</td><td>L2</td><td>Ch.5, pp.223-226</td></tr>
+<tr><td>A13</td><td>A</td><td>CO3</td><td>L4</td><td>Ch.5, pp.223-226</td></tr>
+<tr><td>A14</td><td>A</td><td>CO3</td><td>L2</td><td>Ch.5, pp.226-230</td></tr>
+<tr><td>A15</td><td>A</td><td>CO3</td><td>L1</td><td>Ch.5, pp.226-230</td></tr>
+<tr><td>A16</td><td>A</td><td>CO3</td><td>L4</td><td>Ch.5, pp.226-230</td></tr>
+<tr><td>A17</td><td>A</td><td>CO3</td><td>L2</td><td>Ch.5, pp.230-232</td></tr>
+<tr><td>A18</td><td>A</td><td>CO3</td><td>L3</td><td>Ch.5, pp.232-237</td></tr>
+<tr><td>A19</td><td>A</td><td>CO3</td><td>L4</td><td>Ch.5, pp.240-244</td></tr>
+<tr><td>A20</td><td>A</td><td>CO3</td><td>L5</td><td>Ch.5, pp.240-244</td></tr>
+</tbody></table>
+<h2>Part A — why each option is right or wrong</h2>
+<p><strong>A1.</strong> Correct answer: (A) log2(1/p)</p>
+<ul>
+<li>(A) Correct - rarer events carry more information, without bound.</li>
+<li>(B) Wrong - that is a single term of the entropy sum, not the self-information.</li>
+<li>(C) Wrong - a linear measure fails the additivity requirement for independent events.</li>
+<li>(D) Wrong - this is negative for p &lt; 1; the sign must be reversed.</li>
+</ul>
+<p><strong>A2.</strong> Correct answer: (A) It makes the information of independent events add</p>
+<ul>
+<li>(A) Correct - probabilities multiply, and only the logarithm turns that into addition.</li>
+<li>(B) Wrong - convenience of scale is not a mathematical requirement.</li>
+<li>(C) Wrong - decibels are a separate convention with no bearing on this.</li>
+<li>(D) Wrong - the base sets the unit; the choice of a logarithm at all is what additivity forces.</li>
+</ul>
+<p><strong>A3.</strong> Correct answer: (A) 2 bits</p>
+<ul>
+<li>(A) Correct - log2(4) = 2, the maximum for a four-symbol alphabet.</li>
+<li>(B) Wrong - one bit is the maximum for a two-symbol alphabet.</li>
+<li>(C) Wrong - that is the alphabet size, not its logarithm.</li>
+<li>(D) Wrong - that is a probability, not an entropy.</li>
+</ul>
+<p><strong>A4.</strong> Correct answer: (A) all symbols are equally likely</p>
+<ul>
+<li>(A) Correct - uniformity means maximum uncertainty, giving H = log2(K).</li>
+<li>(B) Wrong - a dominant symbol reduces uncertainty and lowers the entropy.</li>
+<li>(C) Wrong - alphabet size sets the ceiling; it does not determine whether the ceiling is reached.</li>
+<li>(D) Wrong - memory reduces the entropy rate below the per-symbol entropy.</li>
+</ul>
+<p><strong>A5.</strong> Correct answer: (A) n H(X)</p>
+<ul>
+<li>(A) Correct - independence makes the block entropy simply additive.</li>
+<li>(B) Wrong - probabilities multiply, but entropies, being logarithms, add.</li>
+<li>(C) Wrong - the block contains n symbols, so its entropy is larger, not smaller.</li>
+<li>(D) Wrong - there is no nested logarithm in the relation.</li>
+</ul>
+<p><strong>A6.</strong> Correct answer: (A) H(X) &lt;= L &lt; H(X) + 1</p>
+<ul>
+<li>(A) Correct - entropy is a floor and entropy plus one bit is always achievable.</li>
+<li>(B) Wrong - no uniquely decodable code can beat the entropy.</li>
+<li>(C) Wrong - equality holds only when every ideal length is a whole number.</li>
+<li>(D) Wrong - there is no such factor-of-two penalty.</li>
+</ul>
+<p><strong>A7.</strong> Correct answer: (A) no codeword is a prefix of any other</p>
+<ul>
+<li>(A) Correct - this is what makes decoding instantaneous with no lookahead.</li>
+<li>(B) Wrong - that is a fixed-length code, which is one special case of a prefix code.</li>
+<li>(C) Wrong - there is no constraint on the leading bit.</li>
+<li>(D) Wrong - that is precisely the condition a prefix code forbids.</li>
+</ul>
+<p><strong>A8.</strong> Correct answer: (A) 1.125, so no prefix code exists</p>
+<ul>
+<li>(A) Correct - 0.5 + 0.25 + 0.25 + 0.125 = 1.125, which exceeds one.</li>
+<li>(B) Wrong - recompute: the two length-2 codewords claim 0.25 each, pushing the total past one.</li>
+<li>(C) Wrong - that would be the sum for lengths 1, 2, 3, 3.</li>
+<li>(D) Wrong - the Kraft sum is not a count of codes.</li>
+</ul>
+<p><strong>A9.</strong> Correct answer: (A) no other prefix code has a smaller average length for the same distribution</p>
+<ul>
+<li>(A) Correct - optimality is over prefix codes at the given symbol granularity.</li>
+<li>(B) Wrong - it reaches entropy exactly only when all probabilities are negative powers of two.</li>
+<li>(C) Wrong - different tie-breakings give the same mean but different variances.</li>
+<li>(D) Wrong - that describes Lempel-Ziv; Huffman needs the distribution.</li>
+</ul>
+<p><strong>A10.</strong> Correct answer: (A) it requires no prior knowledge of the source statistics</p>
+<ul>
+<li>(A) Correct - it learns the structure from the data and still approaches the entropy rate.</li>
+<li>(B) Wrong - alphabet flexibility is not what the term universal denotes here.</li>
+<li>(C) Wrong - ubiquity is not the definition, and it is not in every standard.</li>
+<li>(D) Wrong - no practical code achieves exactly zero redundancy.</li>
+</ul>
+<p><strong>A11.</strong> Correct answer: (A) 1</p>
+<ul>
+<li>(A) Correct - given any input, some output must occur.</li>
+<li>(B) Wrong - probabilities are non-negative and cannot sum to zero unless all are zero.</li>
+<li>(C) Wrong - the input probability is a separate quantity that multiplies the row.</li>
+<li>(D) Wrong - capacity is derived from the matrix, not equal to a row sum.</li>
+</ul>
+<p><strong>A12.</strong> Correct answer: (A) 1 - H(p)</p>
+<ul>
+<li>(A) Correct - the binary entropy of the crossover probability is what the channel destroys.</li>
+<li>(B) Wrong - that is the erasure channel capacity, which is larger.</li>
+<li>(C) Wrong - that is the equivocation, the part lost, not the part carried.</li>
+<li>(D) Wrong - this is a single term of an entropy sum and is negative.</li>
+</ul>
+<p><strong>A13.</strong> Correct answer: (A) The erasure channel, because the receiver knows which bits were lost</p>
+<ul>
+<li>(A) Correct - 0.9 against 0.531 bits per use; knowing the location of the damage is valuable.</li>
+<li>(B) Wrong - a silently flipped bit is more damaging than a flagged missing one.</li>
+<li>(C) Wrong - the gap is a factor of 1.7 at this probability.</li>
+<li>(D) Wrong - both have substantial capacity at p = 0.1.</li>
+</ul>
+<p><strong>A14.</strong> Correct answer: (A) H(X) - H(X|Y)</p>
+<ul>
+<li>(A) Correct - the uncertainty removed by observing the output.</li>
+<li>(B) Wrong - a difference of marginals can be negative; mutual information never is.</li>
+<li>(C) Wrong - that is an upper bound on the joint entropy, not the mutual information.</li>
+<li>(D) Wrong - this is the negative of the correct expression.</li>
+</ul>
+<p><strong>A15.</strong> Correct answer: (A) the equivocation</p>
+<ul>
+<li>(A) Correct - the uncertainty about the input that survives observing the output.</li>
+<li>(B) Wrong - capacity is the maximised mutual information.</li>
+<li>(C) Wrong - redundancy concerns source coding efficiency.</li>
+<li>(D) Wrong - the entropy rate describes a source with memory.</li>
+</ul>
+<p><strong>A16.</strong> Correct answer: (A) no receiver post-processing can increase the information delivered by the channel</p>
+<ul>
+<li>(A) Correct - processing can preserve or destroy information, never create it.</li>
+<li>(B) Wrong - block length is a separate matter from the inequality.</li>
+<li>(C) Wrong - capacity is a property of the channel alone.</li>
+<li>(D) Wrong - mutual information is non-negative by definition.</li>
+</ul>
+<p><strong>A17.</strong> Correct answer: (A) the maximum of I(X;Y) over all input distributions</p>
+<ul>
+<li>(A) Correct - the maximisation is over the transmitter design space.</li>
+<li>(B) Wrong - that would ignore the channel entirely.</li>
+<li>(C) Wrong - minimising equivocation alone does not account for the input entropy.</li>
+<li>(D) Wrong - capacity is independent of any particular code.</li>
+</ul>
+<p><strong>A18.</strong> Correct answer: (A) codes exist whose error probability tends to zero as block length grows</p>
+<ul>
+<li>(A) Correct - it is an existence result proved by random coding.</li>
+<li>(B) Wrong - a poor code below capacity still performs poorly.</li>
+<li>(C) Wrong - it tends to zero as the block length grows, never reaching zero for finite n.</li>
+<li>(D) Wrong - coding is exactly what makes the guarantee achievable.</li>
+</ul>
+<p><strong>A19.</strong> Correct answer: (A) 20 kbit/s</p>
+<ul>
+<li>(A) Correct - 3000 x log2(101) = 3000 x 6.66 = 20 kbit/s.</li>
+<li>(B) Wrong - this would require an SNR near 60 dB.</li>
+<li>(C) Wrong - this uses log2(1 + 1) rather than log2(1 + 100).</li>
+<li>(D) Wrong - substituting 20 dB directly as a linear ratio gives the wrong scale entirely.</li>
+</ul>
+<p><strong>A20.</strong> Correct answer: (A) in the limit of spectral efficiency tending to zero</p>
+<ul>
+<li>(A) Correct - it is the infinite-bandwidth limit; finite efficiency demands more.</li>
+<li>(B) Wrong - at 2 bit/s/Hz the minimum is 1.76 dB, well above -1.59 dB.</li>
+<li>(C) Wrong - the bound is modulation-independent.</li>
+<li>(D) Wrong - it bounds coded and uncoded systems alike.</li>
+</ul>
+<hr/>
+<h2>Part B — model answers and marking scheme</h2>
+<h3>B1 (3 marks) — CO3, L3, Ch.5, pp.207-214</h3>
+<p><strong>Question.</strong> Define entropy and compute it for a source with probabilities 0.4, 0.3, 0.2 and 0.1.</p>
+<p><strong>Model answer.</strong> Entropy is the expected self-information, H(X) = -sum p_k log2(p_k), measured in bits per symbol. Term by term: 0.4 log2(1/0.4) = 0.4 x 1.322 = 0.529; 0.3 x 1.737 = 0.521; 0.2 x 2.322 = 0.464; 0.1 x 3.322 = 0.332. The sum is 1.846 bits per symbol. The maximum for a four-symbol alphabet is log2(4) = 2 bits, so this source has 0.154 bits per symbol of redundancy that a compressor could in principle recover.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct definition with units</td><td>1</td></tr>
+<tr><td>All four terms computed correctly</td><td>1</td></tr>
+<tr><td>Correct total and comparison against log2(4)</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B2 (3 marks) — CO3, L4, Ch.5, pp.215-223</h3>
+<p><strong>Question.</strong> Construct a Huffman code for probabilities 0.4, 0.3, 0.2, 0.1 and compute its efficiency.</p>
+<p><strong>Model answer.</strong> Merge the two smallest, 0.2 and 0.1, into 0.3. Now merge 0.3 and 0.3 into 0.6. Finally merge 0.4 and 0.6 into 1.0. Reading root to leaf gives A = 0, B = 10, C = 110, D = 111. The average length is 0.4(1) + 0.3(2) + 0.2(3) + 0.1(3) = 0.4 + 0.6 + 0.6 + 0.3 = 1.9 bits per symbol. The entropy is 1.846 bits, so the efficiency is 1.846/1.9 = 97.2% and the redundancy is 2.8%. The loss comes entirely from rounding ideal lengths to whole bits.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct merge sequence</td><td>1</td></tr>
+<tr><td>Correct codewords with prefix property</td><td>1</td></tr>
+<tr><td>Correct average length and efficiency</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B3 (3 marks) — CO3, L4, Ch.5, pp.215-223</h3>
+<p><strong>Question.</strong> State the Kraft inequality, explain what it tests, and apply it to lengths 2, 2, 2, 3, 3.</p>
+<p><strong>Model answer.</strong> The Kraft inequality states that a prefix code with lengths l_1..l_K exists if and only if the sum of 2^(-l_k) is at most one. It tests existence, not optimality: it asks whether the lengths fit into a binary tree without any codeword being an ancestor of another. For the given lengths: 3 x 2^-2 + 2 x 2^-3 = 0.75 + 0.25 = 1.0 exactly. A prefix code exists and the tree is full, so no further codeword can be added at any length without lengthening an existing one. An example is 00, 01, 10, 110, 111.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct statement of the inequality and what it tests</td><td>1</td></tr>
+<tr><td>Correct arithmetic giving exactly 1.0</td><td>1</td></tr>
+<tr><td>Correct conclusion including a valid example code</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B4 (3 marks) — CO3, L4, Ch.5, pp.223-226</h3>
+<p><strong>Question.</strong> Compare the binary symmetric and binary erasure channels at the same disturbance probability of 0.2.</p>
+<p><strong>Model answer.</strong> On the BSC each bit is flipped with probability 0.2 and the receiver cannot tell which. Its capacity is 1 - H(0.2) = 1 - 0.722 = 0.278 bits per use. On the BEC each bit is replaced by an erasure symbol with probability 0.2 and the receiver always knows which bits are missing. Its capacity is 1 - 0.2 = 0.8 bits per use. The erasure channel carries 2.9 times as much information at the same disturbance rate, because a flagged loss can be repaired by a code that only has to fill known gaps, whereas a silent flip must first be located.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Both capacities computed correctly</td><td>2</td></tr>
+<tr><td>Correct explanation of why knowing the error location is worth so much</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B5 (2 marks) — CO3, L3, Ch.5, pp.226-230</h3>
+<p><strong>Question.</strong> Define mutual information and explain why it can never be negative.</p>
+<p><strong>Model answer.</strong> Mutual information is I(X;Y) = H(X) - H(X|Y), the reduction in uncertainty about the input produced by observing the output. It is non-negative because conditioning cannot increase entropy: H(X|Y) &lt;= H(X) always, with equality if and only if X and Y are independent. Intuitively, an observation can leave you no more uncertain than you were before, even if the observation is pure noise, because in the worst case you simply ignore it. This is why a completely useless channel gives I = 0 rather than a negative value.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct definition with the interpretation as uncertainty reduction</td><td>1</td></tr>
+<tr><td>Correct non-negativity argument via conditioning reduces entropy</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B6 (2 marks) — CO3, L4, Ch.5, pp.226-230</h3>
+<p><strong>Question.</strong> Compute the mutual information of a BSC with p = 0.2 and equiprobable inputs.</p>
+<p><strong>Model answer.</strong> With equiprobable inputs, H(X) = 1 bit and the output is also equiprobable, so H(Y) = 1 bit. The conditional entropy H(Y|X) is the binary entropy of the crossover probability, the same for either input: H(0.2) = -0.2 log2(0.2) - 0.8 log2(0.8) = 0.464 + 0.258 = 0.722 bits. Therefore I(X;Y) = H(Y) - H(Y|X) = 1 - 0.722 = 0.278 bits per channel use. Since the channel is symmetric and the input is uniform, this also equals its capacity.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct H(Y) and H(Y</td><td>X)</td><td>1</td></tr>
+<tr><td>Correct mutual information and the note that it equals capacity here</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B7 (2 marks) — CO3, L4, Ch.5, pp.230-232</h3>
+<p><strong>Question.</strong> Explain why the maximisation in the definition of capacity is over input distributions and not over channel matrices.</p>
+<p><strong>Model answer.</strong> The channel matrix describes the physical medium — its noise, attenuation and interference — and the engineer cannot change it by choosing a code or a modulation. What is under the transmitter designer control is the distribution over input symbols: how often each is used. Capacity therefore asks for the best that can be extracted from a given physical channel by the best possible choice of input statistics. Because mutual information is concave in the input distribution for a fixed channel, this maximisation has a unique global optimum and is well posed. For symmetric channels the optimum is the uniform distribution.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct distinction between what is fixed and what is chosen</td><td>1</td></tr>
+<tr><td>Correct note on concavity or the uniform optimum for symmetric channels</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B8 (2 marks) — CO3, L4, Ch.5, pp.232-237</h3>
+<p><strong>Question.</strong> State the channel coding theorem and explain what it does not tell you.</p>
+<p><strong>Model answer.</strong> For any rate R less than the capacity C, there exist codes of sufficiently large block length whose error probability can be made as small as desired; and for R greater than C, the error probability of every code is bounded away from zero. What it does not tell you is which code to use. The proof is by random coding: it shows that averaged over all codes the error probability is small, hence at least one good code exists, but it exhibits none and gives no decoding algorithm. Closing that gap took forty-five years, from 1948 to the invention of turbo codes in 1993.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct statement of both the forward result and the converse</td><td>1</td></tr>
+<tr><td>Correct explanation that it is a non-constructive existence result</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B9 (2 marks) — CO3, L4, Ch.5, pp.240-244</h3>
+<p><strong>Question.</strong> A channel has 4 kHz of bandwidth and an SNR of 25 dB. Compute its capacity and state one assumption behind the figure.</p>
+<p><strong>Model answer.</strong> Convert the SNR to a linear ratio: 10^(25/10) = 316.2. Then C = B log2(1 + S/N) = 4000 x log2(317.2) = 4000 x 8.31 = 33.2 kbit/s. The assumption most worth naming is that the noise is additive, white and Gaussian; the formula does not apply to a channel dominated by interference or impulsive noise. A second assumption is that the channel is strictly band-limited to 4 kHz with a flat response across that band.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct dB to linear conversion and capacity value</td><td>1</td></tr>
+<tr><td>A valid assumption correctly identified</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B10 (2 marks) — CO3, L5, Ch.5, pp.240-244</h3>
+<p><strong>Question.</strong> Explain why capacity grows linearly with bandwidth but only logarithmically with power.</p>
+<p><strong>Model answer.</strong> In C = B log2(1 + S/N), the bandwidth B appears as a multiplying factor, so doubling it doubles the capacity — each extra hertz is an extra independent channel use per second. Power appears only inside the logarithm, so doubling S adds log2(2) = 1 bit per hertz at high SNR and less at low SNR. Furthermore, widening the band admits more noise, since N = N0 B, so the SNR falls as B rises and the growth is not quite linear in practice; in the infinite-bandwidth limit capacity saturates at 1.44 S/N0. The practical consequence is that spectrum is generally the more valuable resource.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct explanation of the multiplicative versus logarithmic roles</td><td>1</td></tr>
+<tr><td>Correct note that noise also grows with bandwidth, giving the saturating limit</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B11 (2 marks) — CO3, L5, Ch.5, pp.240-244</h3>
+<p><strong>Question.</strong> What is the Shannon limit, and why is it wrong to quote -1.6 dB for every system?</p>
+<p><strong>Model answer.</strong> Rearranging the capacity law in terms of energy per bit gives the requirement Eb/N0 &gt; (2^r - 1)/r, where r is the spectral efficiency in bits per second per hertz. As r tends to zero — meaning unlimited bandwidth per bit — this bound tends to ln(2), which is -1.59 dB. That is the Shannon limit. It is wrong to quote it for every system because it applies only in that zero-efficiency limit. A system operating at 2 bit/s/Hz faces a minimum of (4-1)/2 = 1.5, which is 1.76 dB, and one at 4 bit/s/Hz faces 5.7 dB. The limit tightens rapidly as spectral efficiency rises.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct derivation of the bound and the ln(2) limit</td><td>1</td></tr>
+<tr><td>Correct explanation with at least one finite-efficiency counterexample</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B12 (2 marks) — CO3, L4, Ch.5, pp.207-215</h3>
+<p><strong>Question.</strong> Explain why coding blocks of n symbols brings the average code length closer to the entropy.</p>
+<p><strong>Model answer.</strong> Any prefix code must use a whole number of bits per codeword, but the ideal length log2(1/p_k) is generally not an integer, so each symbol wastes up to one bit through rounding. The source coding theorem applied to the nth extension gives H(X^n) &lt;= L_n &lt; H(X^n) + 1, and since H(X^n) = n H(X) for a memoryless source, dividing through by n gives H(X) &lt;= L_n/n &lt; H(X) + 1/n. The rounding waste is therefore shared across n symbols and shrinks as 1/n. The cost is that the alphabet grows as K^n, so the code table becomes impractical well before the waste becomes negligible.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct identification of integer rounding as the source of the excess</td><td>1</td></tr>
+<tr><td>Correct block-form bound showing the 1/n term, plus the alphabet-growth cost</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B13 (2 marks) — CO3, L5, Ch.5, pp.215-223</h3>
+<p><strong>Question.</strong> Compare Huffman and Lempel-Ziv coding, and say when each is the right choice.</p>
+<p><strong>Model answer.</strong> Huffman requires the symbol probabilities in advance and produces the optimal prefix code for a memoryless source at a given symbol granularity, but it cannot exploit dependence between symbols and wastes up to one bit per symbol on rounding. Lempel-Ziv needs no prior statistics, learns a dictionary of repeated phrases as it reads, and approaches the entropy rate of any stationary ergodic source, so it captures memory that Huffman ignores. Huffman is the right choice when the statistics are known and stable and the source really is memoryless, or as a back-end stage. Lempel-Ziv is right for text, code and images, where repetition rather than symbol skew is the dominant redundancy.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct statement of what each requires and exploits</td><td>1</td></tr>
+<tr><td>Correct selection criteria with a valid example for each</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+</body></html>

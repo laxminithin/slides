@@ -1,0 +1,479 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BEC503 Module 4 Quiz</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 10.5pt; color: #12203A; line-height: 1.45; }
+h1 { font-size: 19pt; margin: 0 0 4pt; color: #12203A; }
+h2 { font-size: 13.5pt; margin: 16pt 0 5pt; padding-bottom: 3pt; border-bottom: 1.5pt solid #0F6FC6; color: #0F6FC6; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 11pt 0 3pt; color: #12203A; page-break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 8pt 0 2pt; color: #5A6478; page-break-after: avoid; }
+p { margin: 4pt 0; }
+ul, ol { margin: 4pt 0 4pt 16pt; padding: 0; }
+li { margin: 2pt 0; page-break-inside: avoid; }
+hr { border: 0; border-top: 0.75pt solid #D7DEE8; margin: 10pt 0; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; background: #F1F5FA; padding: 0 2pt; border-radius: 2pt; }
+pre { font-family: Consolas, monospace; font-size: 9pt; background: #F1F5FA; border-left: 2.5pt solid #0F6FC6; padding: 6pt 8pt; margin: 5pt 0; white-space: pre-wrap; page-break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0; font-size: 9.5pt; }
+th { background: #0F6FC6; color: #fff; text-align: left; padding: 4pt 5pt; font-weight: 600; }
+td { border: 0.5pt solid #D7DEE8; padding: 4pt 5pt; vertical-align: top; }
+tr { page-break-inside: avoid; }
+tbody tr:nth-child(even) td { background: #F7FAFD; }
+strong { color: #12203A; }
+.tag { font-family: Consolas, monospace; font-size: 9pt; color: #C2410C; }
+</style></head><body>
+<h1>BEC503 Digital Communication — Module 4 Quiz</h1>
+<p><strong>Error Control Coding: Linear Block and Cyclic Codes</strong></p>
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>
+<tr><td>Subject code</td><td>BEC503</td></tr>
+<tr><td>Module</td><td>4 — Error Control Coding: Linear Block and Cyclic Codes</td></tr>
+<tr><td>Duration</td><td>45 minutes</td></tr>
+<tr><td>Maximum marks</td><td>50 (Part A 20 + Part B 30)</td></tr>
+<tr><td>Attempts allowed</td><td>1</td></tr>
+<tr><td>Passing marks</td><td>20</td></tr>
+<tr><td>Textbook</td><td>Simon Haykin, Digital Communication Systems, 1st ed., 2014</td></tr>
+</tbody></table>
+<h2>Instructions</h2>
+<ul>
+<li>Part A carries 20 one-mark multiple choice questions. Exactly one option is correct.</li>
+<li>Part B carries 13 short questions totalling 30 marks.</li>
+<li>All arithmetic is over GF(2): addition is XOR and subtraction is the same as addition.</li>
+<li>Write polynomials with ascending powers and state the coefficient order used for any bit vector.</li>
+<li>Non-programmable calculators are permitted. No textbooks or notes.</li>
+</ul>
+<h2>Course outcome and Bloom coverage</h2>
+<table><thead><tr><th>Band</th><th>Questions</th><th>Share</th><th>Target</th></tr></thead><tbody>
+<tr><td>L1–L2 Remember / Understand</td><td>7</td><td>21%</td><td>~30%</td></tr>
+<tr><td>L3–L4 Apply / Analyse</td><td>21</td><td>64%</td><td>~45%</td></tr>
+<tr><td>L5–L6 Evaluate / Create</td><td>5</td><td>15%</td><td>~25%</td></tr>
+</tbody></table>
+<p>Course outcome spread: CO4: 15, CO5: 18. Total questions: 33.</p>
+<hr/>
+<h2>Part A — Multiple choice (20 × 1 mark = 20 marks)</h2>
+<p><strong>A1.</strong> The defining property of a linear block code is that  <code>[CO4 | L1 | 1 mark | easy | Ch.10, pp.582-586]</code></p>
+<ul>
+<li>(A) the sum of any two codewords is a codeword</li>
+<li>(B) all codewords have the same weight</li>
+<li>(C) the code is systematic</li>
+<li>(D) every codeword has even parity</li>
+</ul>
+<p><strong>A2.</strong> An (n,k) linear block code has how many codewords?  <code>[CO4 | L2 | 1 mark | easy | Ch.10, pp.582-586]</code></p>
+<ul>
+<li>(A) 2^k</li>
+<li>(B) 2^n</li>
+<li>(C) n - k</li>
+<li>(D) 2^(n-k)</li>
+</ul>
+<p><strong>A3.</strong> Encoding with a generator matrix is  <code>[CO5 | L2 | 1 mark | easy | Ch.10, pp.582-586]</code></p>
+<ul>
+<li>(A) c = mG</li>
+<li>(B) c = Gm</li>
+<li>(C) c = mH</li>
+<li>(D) c = m + G</li>
+</ul>
+<p><strong>A4.</strong> The relation between G and H is  <code>[CO5 | L3 | 1 mark | medium | Ch.10, pp.582-586]</code></p>
+<ul>
+<li>(A) G H^T = 0</li>
+<li>(B) G H = I</li>
+<li>(C) G = H^T</li>
+<li>(D) G + H = 0</li>
+</ul>
+<p><strong>A5.</strong> For a systematic code with G = [I | P], the parity check matrix is  <code>[CO5 | L3 | 1 mark | medium | Ch.10, pp.582-586]</code></p>
+<ul>
+<li>(A) H = [P^T | I]</li>
+<li>(B) H = [P | I]</li>
+<li>(C) H = [I | P^T]</li>
+<li>(D) H = [I | P]</li>
+</ul>
+<p><strong>A6.</strong> The syndrome of a received vector r is  <code>[CO4 | L2 | 1 mark | easy | Ch.10, pp.586-590]</code></p>
+<ul>
+<li>(A) s = r H^T</li>
+<li>(B) s = r G^T</li>
+<li>(C) s = r + c</li>
+<li>(D) s = r H</li>
+</ul>
+<p><strong>A7.</strong> Why does the syndrome depend only on the error pattern?  <code>[CO4 | L4 | 1 mark | medium | Ch.10, pp.586-590]</code></p>
+<ul>
+<li>(A) Because c H^T = 0 for every codeword, so the codeword term vanishes</li>
+<li>(B) Because the error is always smaller than the codeword</li>
+<li>(C) Because H is chosen after the codeword is known</li>
+<li>(D) It does not; it depends on both</li>
+</ul>
+<p><strong>A8.</strong> For a linear code, the minimum distance equals  <code>[CO4 | L3 | 1 mark | medium | Ch.10, pp.586-590]</code></p>
+<ul>
+<li>(A) the minimum weight over all non-zero codewords</li>
+<li>(B) the average codeword weight</li>
+<li>(C) the weight of the all-ones codeword</li>
+<li>(D) n - k</li>
+</ul>
+<p><strong>A9.</strong> A code with d_min = 5 can correct up to  <code>[CO4 | L3 | 1 mark | easy | Ch.10, pp.586-590]</code></p>
+<ul>
+<li>(A) 2 errors</li>
+<li>(B) 4 errors</li>
+<li>(C) 5 errors</li>
+<li>(D) 1 error</li>
+</ul>
+<p><strong>A10.</strong> Increasing d_min from 3 to 4 buys  <code>[CO4 | L4 | 1 mark | hard | Ch.10, pp.586-590]</code></p>
+<ul>
+<li>(A) one more detected error but no more corrected errors</li>
+<li>(B) one more corrected error</li>
+<li>(C) two more corrected errors</li>
+<li>(D) nothing at all</li>
+</ul>
+<p><strong>A11.</strong> In a standard array, the coset leader is  <code>[CO5 | L3 | 1 mark | medium | Ch.10, pp.590-593]</code></p>
+<ul>
+<li>(A) the minimum-weight member of the coset</li>
+<li>(B) the first member listed</li>
+<li>(C) always a codeword</li>
+<li>(D) the all-zero vector</li>
+</ul>
+<p><strong>A12.</strong> How many cosets does the standard array of an (n,k) code have?  <code>[CO5 | L3 | 1 mark | medium | Ch.10, pp.590-593]</code></p>
+<ul>
+<li>(A) 2^(n-k)</li>
+<li>(B) 2^k</li>
+<li>(C) 2^n</li>
+<li>(D) n - k</li>
+</ul>
+<p><strong>A13.</strong> A Hamming code with m parity bits has parameters  <code>[CO5 | L2 | 1 mark | medium | Ch.10, pp.590-593]</code></p>
+<ul>
+<li>(A) (2^m - 1, 2^m - 1 - m)</li>
+<li>(B) (2^m, 2^m - m)</li>
+<li>(C) (m, m-1)</li>
+<li>(D) (2^m - 1, m)</li>
+</ul>
+<p><strong>A14.</strong> The minimum distance of every Hamming code is  <code>[CO5 | L3 | 1 mark | medium | Ch.10, pp.590-593]</code></p>
+<ul>
+<li>(A) 3</li>
+<li>(B) m</li>
+<li>(C) 2^m - 1</li>
+<li>(D) It grows with the block length</li>
+</ul>
+<p><strong>A15.</strong> A cyclic code is a linear block code in which  <code>[CO4 | L2 | 1 mark | easy | Ch.10, pp.593-597]</code></p>
+<ul>
+<li>(A) every cyclic shift of a codeword is a codeword</li>
+<li>(B) all codewords are cyclic permutations of one another</li>
+<li>(C) the generator matrix is circulant only</li>
+<li>(D) n is always odd</li>
+</ul>
+<p><strong>A16.</strong> A cyclic shift of a codeword corresponds in polynomial terms to  <code>[CO4 | L3 | 1 mark | medium | Ch.10, pp.593-597]</code></p>
+<ul>
+<li>(A) multiplication by x modulo x^n - 1</li>
+<li>(B) addition of x</li>
+<li>(C) division by x</li>
+<li>(D) squaring the polynomial</li>
+</ul>
+<p><strong>A17.</strong> The generator polynomial of an (n,k) cyclic code has degree  <code>[CO5 | L2 | 1 mark | medium | Ch.10, pp.593-597]</code></p>
+<ul>
+<li>(A) n - k</li>
+<li>(B) k</li>
+<li>(C) n</li>
+<li>(D) k - 1</li>
+</ul>
+<p><strong>A18.</strong> A valid generator polynomial for a cyclic code of length n must  <code>[CO5 | L4 | 1 mark | hard | Ch.10, pp.593-597]</code></p>
+<ul>
+<li>(A) divide x^n - 1</li>
+<li>(B) be irreducible</li>
+<li>(C) have degree k</li>
+<li>(D) have all coefficients equal to 1</li>
+</ul>
+<p><strong>A19.</strong> Systematic cyclic encoding forms the codeword as  <code>[CO5 | L4 | 1 mark | hard | Ch.10, pp.597-601]</code></p>
+<ul>
+<li>(A) x^(n-k) m(x) + [x^(n-k) m(x) mod g(x)]</li>
+<li>(B) m(x) g(x)</li>
+<li>(C) m(x) + g(x)</li>
+<li>(D) m(x) mod g(x)</li>
+</ul>
+<p><strong>A20.</strong> The syndrome of a received polynomial in a cyclic code is  <code>[CO5 | L3 | 1 mark | medium | Ch.10, pp.601-605]</code></p>
+<ul>
+<li>(A) the remainder of r(x) divided by g(x)</li>
+<li>(B) the remainder of r(x) divided by h(x)</li>
+<li>(C) r(x) multiplied by g(x)</li>
+<li>(D) the quotient of r(x) divided by g(x)</li>
+</ul>
+<hr/>
+<h2>Part B — Descriptive (13 questions, 30 marks)</h2>
+<p><strong>B1.</strong> Explain why linearity makes the minimum distance equal to the minimum weight, and why that matters computationally.  <code>[CO4 | L4 | 3 marks | Ch.10, pp.586-590]</code></p>
+<p><strong>B2.</strong> Given G = [[1,0,0,1,1],[0,1,0,1,0],[0,0,1,0,1]], write H and verify the orthogonality relation.  <code>[CO5 | L4 | 3 marks | Ch.10, pp.582-586]</code></p>
+<p><strong>B3.</strong> Explain syndrome decoding and state precisely what a zero syndrome does and does not guarantee.  <code>[CO4 | L4 | 3 marks | Ch.10, pp.586-593]</code></p>
+<p><strong>B4.</strong> Describe the construction of a Hamming code and explain the syndrome-as-address property.  <code>[CO5 | L4 | 3 marks | Ch.10, pp.590-593]</code></p>
+<p><strong>B5.</strong> Explain why a cyclic code needs only a generator polynomial rather than a generator matrix.  <code>[CO4 | L5 | 2 marks | Ch.10, pp.593-597]</code></p>
+<p><strong>B6.</strong> Compare forward error correction with automatic repeat request and give one link where each is clearly right.  <code>[CO4 | L4 | 2 marks | Ch.10, pp.577-579]</code></p>
+<p><strong>B7.</strong> A code has d_min = 7. State its pure detection capability, its pure correction capability, and one valid mixed strategy.  <code>[CO4 | L4 | 2 marks | Ch.10, pp.586-590]</code></p>
+<p><strong>B8.</strong> Encode the message 1101 with g(x) = x^3 + x + 1 systematically for a (7,4) cyclic code.  <code>[CO5 | L4 | 2 marks | Ch.10, pp.597-601]</code></p>
+<p><strong>B9.</strong> Explain how the shift-register encoder for a cyclic code works and why it is so cheap.  <code>[CO5 | L5 | 2 marks | Ch.10, pp.597-601]</code></p>
+<p><strong>B10.</strong> Explain why the generator polynomial must divide x^n - 1.  <code>[CO5 | L5 | 2 marks | Ch.10, pp.593-597]</code></p>
+<p><strong>B11.</strong> For the (7,4) code with g(x) = x^3 + x + 1, a word is received as 1001100. Find the syndrome and correct it.  <code>[CO5 | L4 | 2 marks | Ch.10, pp.601-605]</code></p>
+<p><strong>B12.</strong> Why are cyclic codes good at detecting burst errors, and what is the guarantee?  <code>[CO4 | L5 | 2 marks | Ch.10, pp.601-605]</code></p>
+<p><strong>B13.</strong> Explain why a longer Hamming code is not a stronger Hamming code.  <code>[CO5 | L5 | 2 marks | Ch.10, pp.590-593]</code></p>
+<hr/>
+<h2>Answer key — Part A</h2>
+<table><thead><tr><th>Q</th><th>Answer</th><th>CO</th><th>Bloom</th><th>Reference</th></tr></thead><tbody>
+<tr><td>A1</td><td>A</td><td>CO4</td><td>L1</td><td>Ch.10, pp.582-586</td></tr>
+<tr><td>A2</td><td>A</td><td>CO4</td><td>L2</td><td>Ch.10, pp.582-586</td></tr>
+<tr><td>A3</td><td>A</td><td>CO5</td><td>L2</td><td>Ch.10, pp.582-586</td></tr>
+<tr><td>A4</td><td>A</td><td>CO5</td><td>L3</td><td>Ch.10, pp.582-586</td></tr>
+<tr><td>A5</td><td>A</td><td>CO5</td><td>L3</td><td>Ch.10, pp.582-586</td></tr>
+<tr><td>A6</td><td>A</td><td>CO4</td><td>L2</td><td>Ch.10, pp.586-590</td></tr>
+<tr><td>A7</td><td>A</td><td>CO4</td><td>L4</td><td>Ch.10, pp.586-590</td></tr>
+<tr><td>A8</td><td>A</td><td>CO4</td><td>L3</td><td>Ch.10, pp.586-590</td></tr>
+<tr><td>A9</td><td>A</td><td>CO4</td><td>L3</td><td>Ch.10, pp.586-590</td></tr>
+<tr><td>A10</td><td>A</td><td>CO4</td><td>L4</td><td>Ch.10, pp.586-590</td></tr>
+<tr><td>A11</td><td>A</td><td>CO5</td><td>L3</td><td>Ch.10, pp.590-593</td></tr>
+<tr><td>A12</td><td>A</td><td>CO5</td><td>L3</td><td>Ch.10, pp.590-593</td></tr>
+<tr><td>A13</td><td>A</td><td>CO5</td><td>L2</td><td>Ch.10, pp.590-593</td></tr>
+<tr><td>A14</td><td>A</td><td>CO5</td><td>L3</td><td>Ch.10, pp.590-593</td></tr>
+<tr><td>A15</td><td>A</td><td>CO4</td><td>L2</td><td>Ch.10, pp.593-597</td></tr>
+<tr><td>A16</td><td>A</td><td>CO4</td><td>L3</td><td>Ch.10, pp.593-597</td></tr>
+<tr><td>A17</td><td>A</td><td>CO5</td><td>L2</td><td>Ch.10, pp.593-597</td></tr>
+<tr><td>A18</td><td>A</td><td>CO5</td><td>L4</td><td>Ch.10, pp.593-597</td></tr>
+<tr><td>A19</td><td>A</td><td>CO5</td><td>L4</td><td>Ch.10, pp.597-601</td></tr>
+<tr><td>A20</td><td>A</td><td>CO5</td><td>L3</td><td>Ch.10, pp.601-605</td></tr>
+</tbody></table>
+<h2>Part A — why each option is right or wrong</h2>
+<p><strong>A1.</strong> Correct answer: (A) the sum of any two codewords is a codeword</p>
+<ul>
+<li>(A) Correct - closure under modulo-2 addition makes the code a subspace.</li>
+<li>(B) Wrong - codeword weights generally vary; only the minimum matters.</li>
+<li>(C) Wrong - systematic form is a convenience, not part of the definition.</li>
+<li>(D) Wrong - that is one particular single-parity-check code.</li>
+</ul>
+<p><strong>A2.</strong> Correct answer: (A) 2^k</p>
+<ul>
+<li>(A) Correct - one codeword per distinct k-bit message.</li>
+<li>(B) Wrong - that is the total number of n-tuples, most of which are not codewords.</li>
+<li>(C) Wrong - that is the number of parity bits.</li>
+<li>(D) Wrong - that is the number of distinct syndromes, hence the number of cosets.</li>
+</ul>
+<p><strong>A3.</strong> Correct answer: (A) c = mG</p>
+<ul>
+<li>(A) Correct - a 1-by-k row vector times a k-by-n matrix gives a 1-by-n codeword.</li>
+<li>(B) Wrong - the dimensions do not conform in that order for row-vector convention.</li>
+<li>(C) Wrong - H tests codewords; it does not build them.</li>
+<li>(D) Wrong - a vector and a matrix cannot be added.</li>
+</ul>
+<p><strong>A4.</strong> Correct answer: (A) G H^T = 0</p>
+<ul>
+<li>(A) Correct - every row of G is a codeword, and every codeword is annihilated by H.</li>
+<li>(B) Wrong - the product is the zero matrix, not the identity.</li>
+<li>(C) Wrong - they have different dimensions in general.</li>
+<li>(D) Wrong - addition is not defined between matrices of different shapes.</li>
+</ul>
+<p><strong>A5.</strong> Correct answer: (A) H = [P^T | I]</p>
+<ul>
+<li>(A) Correct - the transpose is essential for G H^T to vanish.</li>
+<li>(B) Wrong - omitting the transpose breaks the orthogonality relation.</li>
+<li>(C) Wrong - the identity block must occupy the parity positions, not the message positions.</li>
+<li>(D) Wrong - that is G itself, which does not annihilate the code.</li>
+</ul>
+<p><strong>A6.</strong> Correct answer: (A) s = r H^T</p>
+<ul>
+<li>(A) Correct - and it depends only on the error pattern, not on the codeword.</li>
+<li>(B) Wrong - G builds codewords; it is not the test matrix.</li>
+<li>(C) Wrong - the receiver does not know c, which is the whole difficulty.</li>
+<li>(D) Wrong - the dimensions require the transpose.</li>
+</ul>
+<p><strong>A7.</strong> Correct answer: (A) Because c H^T = 0 for every codeword, so the codeword term vanishes</p>
+<ul>
+<li>(A) Correct - s = (c+e)H^T = cH^T + eH^T = eH^T.</li>
+<li>(B) Wrong - relative magnitude has no meaning over GF(2).</li>
+<li>(C) Wrong - H is fixed by the code design before any transmission.</li>
+<li>(D) Wrong - the independence from c is the defining usefulness of the syndrome.</li>
+</ul>
+<p><strong>A8.</strong> Correct answer: (A) the minimum weight over all non-zero codewords</p>
+<ul>
+<li>(A) Correct - because the difference of two codewords is itself a codeword.</li>
+<li>(B) Wrong - the average says nothing about the closest pair.</li>
+<li>(C) Wrong - the all-ones word need not even be a codeword.</li>
+<li>(D) Wrong - the number of parity bits bounds d_min but does not equal it.</li>
+</ul>
+<p><strong>A9.</strong> Correct answer: (A) 2 errors</p>
+<ul>
+<li>(A) Correct - t = floor((5-1)/2) = 2.</li>
+<li>(B) Wrong - four is the detection capability, not the correction capability.</li>
+<li>(C) Wrong - correction can never reach d_min itself.</li>
+<li>(D) Wrong - that would be the figure for d_min = 3.</li>
+</ul>
+<p><strong>A10.</strong> Correct answer: (A) one more detected error but no more corrected errors</p>
+<ul>
+<li>(A) Correct - floor(3/2) = 1, the same as floor(2/2), so only detection improves.</li>
+<li>(B) Wrong - the floor function absorbs the even increment.</li>
+<li>(C) Wrong - even one extra correction requires d_min = 5.</li>
+<li>(D) Wrong - the detection guarantee does improve from 2 to 3.</li>
+</ul>
+<p><strong>A11.</strong> Correct answer: (A) the minimum-weight member of the coset</p>
+<ul>
+<li>(A) Correct - minimum weight means most likely on a BSC, which makes the decoder maximum likelihood.</li>
+<li>(B) Wrong - ordering is a presentation choice; weight is the criterion.</li>
+<li>(C) Wrong - only the first coset consists of codewords.</li>
+<li>(D) Wrong - that is the leader of the zeroth coset only.</li>
+</ul>
+<p><strong>A12.</strong> Correct answer: (A) 2^(n-k)</p>
+<ul>
+<li>(A) Correct - one per distinct syndrome.</li>
+<li>(B) Wrong - that is the number of codewords, which is the row length.</li>
+<li>(C) Wrong - that is the total number of n-tuples in the whole array.</li>
+<li>(D) Wrong - that is the syndrome length in bits, not the count.</li>
+</ul>
+<p><strong>A13.</strong> Correct answer: (A) (2^m - 1, 2^m - 1 - m)</p>
+<ul>
+<li>(A) Correct - the block length is the number of non-zero m-bit columns.</li>
+<li>(B) Wrong - the all-zero column is excluded, so the length is one less.</li>
+<li>(C) Wrong - that is a single-parity-check code.</li>
+<li>(D) Wrong - this reverses the roles of the message and parity counts.</li>
+</ul>
+<p><strong>A14.</strong> Correct answer: (A) 3</p>
+<ul>
+<li>(A) Correct - distinct non-zero columns guarantee exactly 3, for every m.</li>
+<li>(B) Wrong - m sets the number of parity bits, not the distance.</li>
+<li>(C) Wrong - that is the block length.</li>
+<li>(D) Wrong - a longer Hamming code has better rate and the same distance of 3.</li>
+</ul>
+<p><strong>A15.</strong> Correct answer: (A) every cyclic shift of a codeword is a codeword</p>
+<ul>
+<li>(A) Correct - that closure under shifting is the defining extra property.</li>
+<li>(B) Wrong - the shifts of one codeword form only part of the code.</li>
+<li>(C) Wrong - the circulant matrix is a consequence, not the definition.</li>
+<li>(D) Wrong - block length parity is unrelated to the cyclic property.</li>
+</ul>
+<p><strong>A16.</strong> Correct answer: (A) multiplication by x modulo x^n - 1</p>
+<ul>
+<li>(A) Correct - and the modulo operation is what wraps the top coefficient round.</li>
+<li>(B) Wrong - addition changes one coefficient rather than shifting all of them.</li>
+<li>(C) Wrong - division by x shifts the wrong way and may not be defined.</li>
+<li>(D) Wrong - squaring is unrelated to shifting.</li>
+</ul>
+<p><strong>A17.</strong> Correct answer: (A) n - k</p>
+<ul>
+<li>(A) Correct - the same as the number of parity bits.</li>
+<li>(B) Wrong - k is the degree of the parity check polynomial h(x).</li>
+<li>(C) Wrong - a degree-n polynomial cannot be a codeword of length n.</li>
+<li>(D) Wrong - that is the maximum degree of a message polynomial.</li>
+</ul>
+<p><strong>A18.</strong> Correct answer: (A) divide x^n - 1</p>
+<ul>
+<li>(A) Correct - divisibility is what makes the code closed under cyclic shifts.</li>
+<li>(B) Wrong - g(x) is often a product of several irreducible factors.</li>
+<li>(C) Wrong - the degree is n-k, not k.</li>
+<li>(D) Wrong - there is no such constraint on the coefficients.</li>
+</ul>
+<p><strong>A19.</strong> Correct answer: (A) x^(n-k) m(x) + [x^(n-k) m(x) mod g(x)]</p>
+<ul>
+<li>(A) Correct - shift the message up, then append the remainder as parity.</li>
+<li>(B) Wrong - that is valid encoding but not systematic; the message is not visible.</li>
+<li>(C) Wrong - addition does not produce a multiple of g(x).</li>
+<li>(D) Wrong - the remainder alone discards the message entirely.</li>
+</ul>
+<p><strong>A20.</strong> Correct answer: (A) the remainder of r(x) divided by g(x)</p>
+<ul>
+<li>(A) Correct - and the same shift register that encodes also computes it.</li>
+<li>(B) Wrong - dividing by the parity check polynomial gives no usable error information.</li>
+<li>(C) Wrong - multiplication is the encoding operation, not the test.</li>
+<li>(D) Wrong - the quotient discards exactly the information the syndrome needs.</li>
+</ul>
+<hr/>
+<h2>Part B — model answers and marking scheme</h2>
+<h3>B1 (3 marks) — CO4, L4, Ch.10, pp.586-590</h3>
+<p><strong>Question.</strong> Explain why linearity makes the minimum distance equal to the minimum weight, and why that matters computationally.</p>
+<p><strong>Model answer.</strong> For a linear code the sum of any two codewords is a codeword, and over GF(2) addition and subtraction are the same operation. The distance between codewords c1 and c2 is the weight of their difference, which is the weight of c1 + c2, itself a codeword. Minimising distance over all pairs is therefore the same as minimising weight over all non-zero codewords. Computationally this replaces a search over 2^k choose 2 pairs with a search over 2^k - 1 words, a reduction of a factor of roughly 2^k. For a (7,4) code that is 120 comparisons reduced to 15 weight evaluations.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct argument that distance is the weight of the difference and the difference is a codeword</td><td>2</td></tr>
+<tr><td>Correct statement of the computational saving with a concrete count</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B2 (3 marks) — CO5, L4, Ch.10, pp.582-586</h3>
+<p><strong>Question.</strong> Given G = [[1,0,0,1,1],[0,1,0,1,0],[0,0,1,0,1]], write H and verify the orthogonality relation.</p>
+<p><strong>Model answer.</strong> G is systematic with I_3 in the first three columns, so P is the last two columns: P = [[1,1],[1,0],[0,1]]. Then P transpose = [[1,1,0],[1,0,1]] and H = [P transpose | I_2] = [[1,1,0,1,0],[1,0,1,0,1]]. To verify, take row 1 of G, 10011, and compute its inner products with the rows of H: 1x1 + 0x1 + 0x0 + 1x1 + 1x0 = 1 + 1 = 0 mod 2, and 1x1 + 0x0 + 0x1 + 1x0 + 1x1 = 1 + 1 = 0 mod 2. Both vanish, and the same holds for the other two rows, so G H transpose = 0.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct P and P transpose</td><td>1</td></tr>
+<tr><td>Correct H</td><td>1</td></tr>
+<tr><td>Correct verification on at least one row</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B3 (3 marks) — CO4, L4, Ch.10, pp.586-593</h3>
+<p><strong>Question.</strong> Explain syndrome decoding and state precisely what a zero syndrome does and does not guarantee.</p>
+<p><strong>Model answer.</strong> The receiver computes s = r H transpose. Since r = c + e and c H transpose = 0, the syndrome equals e H transpose and therefore depends only on the error pattern. Each of the 2^(n-k) possible syndromes corresponds to one coset of the code, and the decoder stores the minimum-weight member of each coset as its most likely error pattern. Decoding is a lookup followed by an addition. A zero syndrome guarantees only that the received word is a valid codeword; it does not guarantee that no error occurred, because if the error pattern is itself a non-zero codeword the syndrome is zero and the error passes undetected. That is precisely the undetected error event the minimum distance bounds.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct derivation of s = eH^T and the coset lookup procedure</td><td>2</td></tr>
+<tr><td>Correct statement that a zero syndrome permits an undetected error equal to a codeword</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B4 (3 marks) — CO5, L4, Ch.10, pp.590-593</h3>
+<p><strong>Question.</strong> Describe the construction of a Hamming code and explain the syndrome-as-address property.</p>
+<p><strong>Model answer.</strong> For a chosen m, build H with all 2^m - 1 non-zero binary m-tuples as its columns, each appearing exactly once, giving n = 2^m - 1 and k = n - m. Since no column is zero and no two columns are equal, no single or double error can produce a zero syndrome, so d_min = 3 and the code corrects one error. The syndrome of a single error in position j is exactly column j of H. If the columns are ordered so that column j is the binary representation of j, then the syndrome read as a binary number is the index of the corrupted bit. Decoding needs no lookup table at all: compute the syndrome, interpret it as an address, flip that bit.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct column construction and the resulting parameters</td><td>1</td></tr>
+<tr><td>Correct argument that distinct non-zero columns force d_min = 3</td><td>1</td></tr>
+<tr><td>Correct explanation of the address property</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B5 (2 marks) — CO4, L5, Ch.10, pp.593-597</h3>
+<p><strong>Question.</strong> Explain why a cyclic code needs only a generator polynomial rather than a generator matrix.</p>
+<p><strong>Model answer.</strong> Representing codewords as polynomials modulo x^n - 1, a cyclic shift becomes multiplication by x. A code closed under both addition and multiplication by x is closed under multiplication by any polynomial, which makes it an ideal in the ring GF(2)[x]/(x^n - 1). Every ideal in that ring is principal, meaning it is generated by a single polynomial, and that polynomial is the non-zero codeword of least degree, g(x). Every codeword is therefore a multiple of g(x), so specifying g(x) specifies the entire code. The storage falls from a k-by-n matrix to n-k+1 coefficients, and the encoder falls from a matrix multiplier to a shift register.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct argument that the code is an ideal and ideals are principal</td><td>1</td></tr>
+<tr><td>Correct statement of the storage and hardware consequence</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B6 (2 marks) — CO4, L4, Ch.10, pp.577-579</h3>
+<p><strong>Question.</strong> Compare forward error correction with automatic repeat request and give one link where each is clearly right.</p>
+<p><strong>Model answer.</strong> FEC adds parity permanently so the receiver repairs errors without a return path, costing a fixed fraction (n-k)/n of the bandwidth but adding no variable delay. ARQ adds only detection redundancy and requests retransmission, costing bandwidth only when errors occur but requiring a feedback channel and a round-trip delay per failure. FEC is clearly right for a deep-space link, where the round trip is tens of minutes and retransmission is not a realistic option. ARQ is clearly right for a wired local network, where the round trip is microseconds, errors are rare, and paying a permanent bandwidth premium would be wasteful.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct description of both mechanisms and their costs</td><td>1</td></tr>
+<tr><td>A valid and correctly justified example of each</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B7 (2 marks) — CO4, L4, Ch.10, pp.586-590</h3>
+<p><strong>Question.</strong> A code has d_min = 7. State its pure detection capability, its pure correction capability, and one valid mixed strategy.</p>
+<p><strong>Model answer.</strong> Pure detection: d_min - 1 = 6 errors can always be detected, because six or fewer changes cannot carry one codeword onto another. Pure correction: t = floor((7-1)/2) = 3 errors, since spheres of radius 3 around distinct codewords are disjoint when 2t &lt; 7. A valid mixed strategy is to correct 2 and detect 4 simultaneously, since t + l + 1 = 2 + 4 + 1 = 7 &lt;= d_min and l &gt;= t. Another is to correct 1 and detect 5. The distance budget is spent either way; the choice depends on whether an undetected error or a retransmission is the more costly outcome.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct detection and correction figures</td><td>1</td></tr>
+<tr><td>A valid mixed strategy satisfying t + l + 1 &lt;= d_min with l &gt;= t</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B8 (2 marks) — CO5, L4, Ch.10, pp.597-601</h3>
+<p><strong>Question.</strong> Encode the message 1101 with g(x) = x^3 + x + 1 systematically for a (7,4) cyclic code.</p>
+<p><strong>Model answer.</strong> The message polynomial is m(x) = 1 + x + x^3 for the bit order 1101. Multiply by x^(n-k) = x^3 to get x^3 + x^4 + x^6. Divide this by g(x) = x^3 + x + 1 over GF(2). The long division yields a remainder of degree less than 3; carrying it out gives r(x) = x, that is the parity bits 010. The codeword is the message in the top four positions followed by the parity: 1101 010, or 1101010. Verifying, this polynomial is divisible by g(x) with zero remainder, confirming it is a codeword.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct shift by x^3 and the division set up</td><td>1</td></tr>
+<tr><td>Correct remainder and assembled systematic codeword</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B9 (2 marks) — CO5, L5, Ch.10, pp.597-601</h3>
+<p><strong>Question.</strong> Explain how the shift-register encoder for a cyclic code works and why it is so cheap.</p>
+<p><strong>Model answer.</strong> The encoder is a shift register of n-k stages with XOR gates placed at the taps corresponding to the non-zero coefficients of g(x), and a feedback path from the output back into those taps. Clocking the message bits in performs polynomial division by g(x) progressively, so after k clocks the register holds the remainder, which is the parity. A switch then shifts those n-k parity bits out behind the message. The cost is n-k flip-flops and at most n-k XOR gates, independent of k, whereas a general linear code needs a k-by-n matrix multiplier. That difference is the main reason cyclic codes dominate practical systems.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct description of the register, taps and feedback performing division</td><td>1</td></tr>
+<tr><td>Correct statement of the gate count and the comparison with a matrix encoder</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B10 (2 marks) — CO5, L5, Ch.10, pp.593-597</h3>
+<p><strong>Question.</strong> Explain why the generator polynomial must divide x^n - 1.</p>
+<p><strong>Model answer.</strong> A cyclic code must be closed under multiplication by x modulo x^n - 1. Consider the codeword x^(k-1) g(x), the highest-degree generator multiple that still fits. Shifting it once gives x^k g(x), whose degree is n, so the modulo reduction applies and produces x^k g(x) - (x^n - 1) times a constant. For that reduced polynomial to remain a multiple of g(x), and hence a codeword, g(x) must divide x^n - 1. If it does not, the shifted word falls outside the set of multiples of g(x), the code is not closed under shifting, and the shift-register syndrome circuits that assume cyclic structure give wrong answers.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct argument via the highest-degree shift and the modulo reduction</td><td>1</td></tr>
+<tr><td>Correct statement of the consequence if divisibility fails</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B11 (2 marks) — CO5, L4, Ch.10, pp.601-605</h3>
+<p><strong>Question.</strong> For the (7,4) code with g(x) = x^3 + x + 1, a word is received as 1001100. Find the syndrome and correct it.</p>
+<p><strong>Model answer.</strong> Write r(x) = 1 + x^3 + x^4 for the bit order given. Divide by g(x) = x^3 + x + 1 over GF(2). The long division gives a remainder of x^2 + x, that is the syndrome 011. This syndrome is non-zero, so an error is present. Comparing 011 against the syndrome table for single errors identifies position 3. Adding the error pattern 0010000 to the received word gives 1011100, which divides by g(x) with zero remainder and is therefore the transmitted codeword. The recovered message is the first four bits, 1011.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct syndrome from the division</td><td>1</td></tr>
+<tr><td>Correct error location, correction and extracted message</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B12 (2 marks) — CO4, L5, Ch.10, pp.601-605</h3>
+<p><strong>Question.</strong> Why are cyclic codes good at detecting burst errors, and what is the guarantee?</p>
+<p><strong>Model answer.</strong> A burst of length l confined to consecutive positions corresponds to an error polynomial of the form x^i b(x), where b(x) has degree less than l. The syndrome is that polynomial reduced modulo g(x). If l is at most n-k, the degree of b(x) is less than the degree of g(x), so g(x) cannot divide x^i b(x) unless b(x) is zero — x^i is coprime to g(x) whenever g(0) = 1, which holds for any sensible generator. The remainder is therefore non-zero and the burst is detected. The guarantee is that every burst of length n-k or shorter is detected, which is why CRC codes, which are cyclic, are used for frame checking throughout networking.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct representation of a burst as x^i b(x) and the degree argument</td><td>1</td></tr>
+<tr><td>Correct statement of the n-k guarantee with a practical example</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B13 (2 marks) — CO5, L5, Ch.10, pp.590-593</h3>
+<p><strong>Question.</strong> Explain why a longer Hamming code is not a stronger Hamming code.</p>
+<p><strong>Model answer.</strong> The construction places all non-zero m-bit vectors as the columns of H, and the distance argument depends only on those columns being distinct and non-zero, which is true for every m. Hence d_min = 3 for every Hamming code, and the correction capability is exactly one error regardless of block length. What does improve with m is the rate: a (7,4) code has rate 0.571 while a (255,247) code has rate 0.969. But a single error in 255 bits is far more likely than a single error in 7 bits at the same bit error rate, so the longer code fails more often despite its better rate. Longer Hamming codes buy efficiency, not robustness.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct explanation that d_min = 3 for every m</td><td>1</td></tr>
+<tr><td>Correct rate-versus-robustness comparison with numbers</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+</body></html>

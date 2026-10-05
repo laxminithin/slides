@@ -1,0 +1,162 @@
+// BEC303 Network Analysis — Module 2: Network Theorems for DC and AC Circuits
+// 20 multiple choice questions, 1 mark each.
+
+::M2Q1::[html]Superposition may be applied to compute which of the following?{
+ =Branch current   #Correct — current is a linear response and therefore decomposes across sources.
+ ~Power in a resistor   #Wrong - power is quadratic, so expanding the square leaves a cross term that superposition of powers discards.
+ ~RMS value of a total waveform   #Wrong - RMS involves squaring, so it inherits the same quadratic problem as power.
+ ~Energy stored in a capacitor   #Wrong - stored energy is proportional to v squared and is therefore not a linear response.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.123-133 | CO2 | L2
+}
+
+::M2Q2::[html]Two sources each drive 2 mA through a 1 kΩ resistor. The true power in the resistor is{
+ =16 mW   #Correct — total current is 4 mA, so p \= (0.004)²·1000 \= 16 mW.
+ ~8 mW   #Wrong - 8 mW is the naive sum of partial powers, which discards the 8 mW cross term.
+ ~4 mW   #Wrong - 4 mW is one partial power alone.
+ ~32 mW   #Wrong - this doubles the correct answer, as if the currents were 8 mA.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.123-133 | CO2 | L3
+}
+
+::M2Q3::[html]When applying superposition, an ideal independent current source is deactivated by{
+ =replacing it with an open circuit   #Correct — zero current through a branch is exactly an open circuit.
+ ~replacing it with a short circuit   #Wrong - shorting deactivates a voltage source; shorting a current source forces its full current through the short.
+ ~setting its parallel resistance to zero   #Wrong - any associated resistance stays in the circuit unchanged.
+ ~reversing its direction   #Wrong - reversing a source changes the excitation rather than removing it.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.123-133 | CO2 | L1
+}
+
+::M2Q4::[html]A practical 10 V source with 2 Ω internal resistance is deactivated for a superposition step. The branch becomes{
+ =a plain 2 Ω resistance   #Correct — only the ideal source part is zeroed; the internal resistance belongs to the network.
+ ~a short circuit   #Wrong - this deletes the internal resistance and changes every parallel combination downstream.
+ ~an open circuit   #Wrong - an open circuit would remove the branch entirely, which is the deactivation rule for a current source.
+ ~a 10 V source with no resistance   #Wrong - this leaves the excitation live, which is the opposite of deactivation.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.123-133 | CO2 | L2
+}
+
+::M2Q5::[html]Sources at 0 rad/s, 377 rad/s and 1000 rad/s drive the same network. The responses must be combined{
+ =in the time domain, after solving each frequency separately   #Correct — phasors at different frequencies have no fixed relative phase, so only the time-domain waveforms may be added.
+ ~as phasors, by vector addition   #Wrong - vector addition of phasors is valid only within a single frequency.
+ ~by taking the largest of the three   #Wrong - this simply discards two of the three contributions.
+ ~as RMS magnitudes in quadrature   #Wrong - quadrature addition applies to RMS power contributions, not to the instantaneous response.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.123-133 | CO2 | L4
+}
+
+::M2Q6::[html]The reciprocity theorem requires the network to be{
+ =linear, passive, bilateral, with zero initial conditions   #Correct — all four conditions are needed together; dropping any one voids the guarantee.
+ ~linear only   #Wrong - linearity alone suffices for superposition and Thevenin but not for reciprocity.
+ ~linear and containing at least one dependent source   #Wrong - a dependent source is precisely what destroys bilaterality and breaks the theorem.
+ ~planar and resistive   #Wrong - planarity is a requirement of mesh analysis, not of reciprocity, and reactive elements are permitted.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., TB2 §4.9 | CO2 | L2
+}
+
+::M2Q7::[html]A 20 V source in branch A produces 4 mA in branch B of a passive ladder. Moving the source to branch B produces, in branch A,{
+ =4 mA   #Correct — the transfer resistance of 5 kΩ is symmetric, so the same 4 mA appears.
+ ~20 mA   #Wrong - this divides the source value by 1 kilohm for no stated reason.
+ ~a value that cannot be found without re-solving   #Wrong - reciprocity exists exactly so that the second configuration need not be re-solved.
+ ~2 mA   #Wrong - halving the current has no basis; reciprocity preserves the value exactly.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., TB2 §4.9 | CO2 | L3
+}
+
+::M2Q8::[html]Which network is non-reciprocal?{
+ =A common-emitter amplifier small-signal model   #Correct — the current-controlled current source transmits forwards only, so z₁₂ ≠ z₂₁.
+ ~An unbalanced resistive ladder   #Wrong - physical asymmetry does not break reciprocity; a passive ladder is always reciprocal.
+ ~An LC low-pass filter   #Wrong - an LC filter is passive and bilateral and is therefore reciprocal.
+ ~An ideal transformer   #Wrong - an ideal transformer transmits equally in both directions and is reciprocal.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., TB2 §4.9 | CO2 | L3
+}
+
+::M2Q9::[html]The Thévenin voltage of a network is defined as{
+ =the open-circuit voltage at the port   #Correct — the load must be removed, or the divider is loaded and the value comes out low.
+ ~the voltage across the load when connected   #Wrong - this is the loaded terminal voltage, always less than V_th for a positive R_th.
+ ~the voltage across the internal resistance   #Wrong - the internal resistance drop is what separates V_th from the loaded voltage.
+ ~the short-circuit current times the load resistance   #Wrong - I_sc times R_th gives V_th; using the load resistance instead is a different and wrong quantity.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.141-152 | CO2 | L1
+}
+
+::M2Q10::[html]For a network containing dependent sources, R_th is best found by{
+ =applying a test source at the dead port and taking V_test/I_test   #Correct — dependent sources may not be deactivated, so the test-source method is the only generally safe route.
+ ~deactivating all sources and reducing the resistive network   #Wrong - deactivating a dependent source changes the network and gives a wrong R_th, often by tens of percent.
+ ~measuring the load resistance   #Wrong - R_th is a property of the source network and has nothing to do with the load.
+ ~summing all resistances in the network   #Wrong - resistances only add in series; a network sum has no meaning.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.141-152 | CO2 | L3
+}
+
+::M2Q11::[html]A 12 V source in series with 4 kΩ, with 6 kΩ to ground, has a Thévenin equivalent at the 6 kΩ of{
+ =7.2 V, 2.4 kΩ   #Correct — V_th \= 12·6/10 \= 7.2 V and R_th \= 4k ∥ 6k \= 2.4 kΩ.
+ ~12 V, 10 kΩ   #Wrong - this ignores the divider and adds the resistors in series instead of in parallel.
+ ~7.2 V, 10 kΩ   #Wrong - the voltage is right but R_th uses a series rather than a parallel combination.
+ ~4.8 V, 2.4 kΩ   #Wrong - 4.8 V comes from using the 4 kilohm rather than the 6 kilohm in the divider numerator.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.141-152 | CO2 | L3
+}
+
+::M2Q12::[html]The Norton current I_N is{
+ =the short-circuit current at the port   #Correct — I_N is a property of the network alone, measured with the terminals shorted.
+ ~V_th divided by the load resistance   #Wrong - dividing by the load brings the load into a quantity that must be load-independent.
+ ~the current through the load when connected   #Wrong - the load current depends on the load and is not the Norton parameter.
+ ~the sum of all source currents   #Wrong - source currents redistribute through the network and do not simply add at the port.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.141-152 | CO2 | L2
+}
+
+::M2Q13::[html]Maximum power is delivered to a DC load when{
+ =R_L \= R_th   #Correct — differentiating p \= V_th²R_L/(R_th+R_L)² and setting the result to zero gives R_L \= R_th.
+ ~R_L ≫ R_th   #Wrong - this maximises efficiency, not delivered power, and the delivered power tends to zero.
+ ~R_L ≪ R_th   #Wrong - this maximises current but the load voltage collapses, so delivered power again tends to zero.
+ ~R_L \= 2·R_th   #Wrong - a 2\:1 mismatch delivers about 89 percent of the maximum, not the maximum itself.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.152-154 | CO2 | L2
+}
+
+::M2Q14::[html]At the maximum power transfer condition the efficiency of power delivery is{
+ =50%   #Correct — R_L equals R_th, so the two dissipate equally and half the total power is lost internally.
+ ~100%   #Wrong - 100 percent efficiency would require zero internal resistance, which contradicts the matched condition.
+ ~75%   #Wrong - 75 percent corresponds to R_L \= 3 R_th, a deliberate mismatch.
+ ~undefined   #Wrong - efficiency is perfectly well defined as the ratio of load power to total power.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.152-154 | CO2 | L3
+}
+
+::M2Q15::[html]With V_th \= 12 V and R_th \= 50 Ω, the maximum power deliverable to a load is{
+ =0.72 W   #Correct — p_max \= V_th²/(4R_th) \= 144/200 \= 0.72 W.
+ ~2.88 W   #Wrong - this omits the factor of 4 and computes V_th squared over R_th.
+ ~1.44 W   #Wrong - this uses a factor of 2 instead of 4 in the denominator.
+ ~0.36 W   #Wrong - this halves the correct answer, as if only a quarter of the power reached the load.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.152-154 | CO2 | L3
+}
+
+::M2Q16::[html]For an AC source with Z_th \= 30 + j40 Ω, maximum power is delivered when Z_L equals{
+ =30 − j40 Ω   #Correct — the conjugate match cancels the source reactance and leaves a purely resistive loop.
+ ~30 + j40 Ω   #Wrong - this doubles the loop reactance instead of cancelling it, applying the DC rule to an AC problem.
+ ~50 Ω   #Wrong - matching the magnitude leaves the reactances uncancelled and falls short of the maximum.
+ ~−30 + j40 Ω   #Wrong - a negative resistance is not realisable in a passive load and does not follow from the conjugate rule.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.10, pp.397-406 | CO2 | L4
+}
+
+::M2Q17::[html]In a 50 Ω RF system the load is matched primarily to{
+ =prevent reflections on the transmission line   #Correct — a mismatch returns energy down the line and corrupts the signal, which matters more than raw power transfer.
+ ~maximise efficiency   #Wrong - a matched termination is only 50 percent efficient, so efficiency cannot be the motive.
+ ~minimise the source current   #Wrong - source current is not a design target in a transmission-line interface.
+ ~simplify the Thévenin calculation   #Wrong - calculation convenience never drives a physical impedance standard.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.152-154 | CO2 | L4
+}
+
+::M2Q18::[html]An audio power amplifier is designed with output impedance far below the loudspeaker impedance in order to{
+ =obtain high efficiency and a high damping factor   #Correct — a deliberate mismatch trades peak deliverable power for efficiency and cone control.
+ ~deliver maximum possible power to the speaker   #Wrong - maximum power would require matching the speaker impedance, which is exactly what is avoided.
+ ~satisfy the reciprocity conditions   #Wrong - reciprocity is irrelevant here and an amplifier is non-reciprocal by design.
+ ~make the Thévenin equivalent exact   #Wrong - the Thevenin equivalent is exact for any linear network regardless of the impedance ratio.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.152-154 | CO2 | L4
+}
+
+::M2Q19::[html]To confirm both parameters of a claimed Thévenin equivalent, you should check{
+ =the open-circuit and the short-circuit cases   #Correct — two parameters require two independent conditions, and these are the cheapest pair.
+ ~the open-circuit case only   #Wrong - the open-circuit case confirms V_th and leaves R_th entirely untested.
+ ~the power balance only   #Wrong - a power balance can be satisfied by a wrong pair of parameters that happen to be self-consistent.
+ ~the matched-load case only   #Wrong - a single load value gives one equation for two unknowns.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.141-152 | CO2 | L5
+}
+
+::M2Q20::[html]If a load is to be swept over five values, the cheapest route to the load power is{
+ =compute one Thévenin equivalent, then five divider evaluations   #Correct — the equivalent costs two solves once, after which each load value is trivial.
+ ~five full nodal analyses   #Wrong - this repeats the full network solution five times and ignores that only one branch changes.
+ ~five superposition solves   #Wrong - superposition is more expensive still, requiring one solve per source per load value.
+ ~five reciprocity swaps   #Wrong - reciprocity swaps excitation and response; it does not help with a varying load.
+ ####General feedback: W. H. Hayt, J. E. Kemmerly and S. M. Durbin, Engineering Circuit Analysis 8th ed., Ch.5, pp.123-154 | CO2 | L5
+}

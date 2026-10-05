@@ -1,0 +1,209 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BEC503 Syllabus Mapping</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 10.5pt; color: #12203A; line-height: 1.45; }
+h1 { font-size: 19pt; margin: 0 0 4pt; color: #12203A; }
+h2 { font-size: 13.5pt; margin: 16pt 0 5pt; padding-bottom: 3pt; border-bottom: 1.5pt solid #0F6FC6; color: #0F6FC6; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 11pt 0 3pt; color: #12203A; page-break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 8pt 0 2pt; color: #5A6478; page-break-after: avoid; }
+p { margin: 4pt 0; }
+ul, ol { margin: 4pt 0 4pt 16pt; padding: 0; }
+li { margin: 2pt 0; page-break-inside: avoid; }
+hr { border: 0; border-top: 0.75pt solid #D7DEE8; margin: 10pt 0; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; background: #F1F5FA; padding: 0 2pt; border-radius: 2pt; }
+pre { font-family: Consolas, monospace; font-size: 9pt; background: #F1F5FA; border-left: 2.5pt solid #0F6FC6; padding: 6pt 8pt; margin: 5pt 0; white-space: pre-wrap; page-break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0; font-size: 9.5pt; }
+th { background: #0F6FC6; color: #fff; text-align: left; padding: 4pt 5pt; font-weight: 600; }
+td { border: 0.5pt solid #D7DEE8; padding: 4pt 5pt; vertical-align: top; }
+tr { page-break-inside: avoid; }
+tbody tr:nth-child(even) td { background: #F7FAFD; }
+strong { color: #12203A; }
+.tag { font-family: Consolas, monospace; font-size: 9pt; color: #C2410C; }
+</style></head><body>
+<h1>BEC503 Digital Communication — Syllabus mapping</h1>
+<p>EC branch, semester 5, 2025 scheme. Prescribed textbook: Simon Haykin, <em>Digital Communication Systems</em>, John Wiley &amp; Sons, 1st edition, 2014.</p>
+<h2>Course outcomes</h2>
+<table><thead><tr><th>CO</th><th>Statement</th></tr></thead><tbody>
+<tr><td>CO1</td><td>Apply the concept of signal conversion to vectors in communication transmission and reception.</td></tr>
+<tr><td>CO2</td><td>Perform the mathematical analysis of digital communication systems for different modulation techniques.</td></tr>
+<tr><td>CO3</td><td>Apply the source coding and channel coding principles for the discrete memoryless channels.</td></tr>
+<tr><td>CO4</td><td>Compute the codewords for the error correction and detection of a digital data using Linear Block Code, Cyclic Codes and Convolution Codes.</td></tr>
+<tr><td>CO5</td><td>Design encoding and decoding circuits for Linear Block Code, Cyclic Codes and Convolution Codes.</td></tr>
+</tbody></table>
+<h2>Module plan</h2>
+<table><thead><tr><th>Module</th><th>Title</th><th>Hours</th><th>Chapters</th><th>Units</th><th>Deck slides</th><th>COs</th></tr></thead><tbody>
+<tr><td>1</td><td>Bandpass Signals to Equivalent Lowpass and Signalling over AWGN Channels</td><td>10</td><td>TB1 (Haykin 2014) Ch. 2.8-2.11 pp. 42-52 and Ch. 7.1-7.4 pp. 323-344</td><td>16</td><td>56</td><td>CO1</td></tr>
+<tr><td>2</td><td>Digital Modulation Techniques</td><td>10</td><td>TB1 (Haykin 2014) Ch. 7.5-7.8 pp. 344-398 and Ch. 7.10-7.14 pp. 400-418</td><td>16</td><td>56</td><td>CO2</td></tr>
+<tr><td>3</td><td>Information Theory</td><td>10</td><td>TB1 (Haykin 2014) Ch. 5.1-5.10 pp. 207-244</td><td>16</td><td>56</td><td>CO3</td></tr>
+<tr><td>4</td><td>Error Control Coding: Linear Block and Cyclic Codes</td><td>10</td><td>TB1 (Haykin 2014) Ch. 10.1-10.5 pp. 577-605</td><td>16</td><td>56</td><td>CO4, CO5</td></tr>
+<tr><td>5</td><td>Convolutional Codes</td><td>10</td><td>TB1 (Haykin 2014) Ch. 10.6-10.8 pp. 605-623</td><td>16</td><td>56</td><td>CO4, CO5</td></tr>
+</tbody></table>
+<hr/>
+<h2>Module 1 — Bandpass Signals to Equivalent Lowpass and Signalling over AWGN Channels</h2>
+<p>Driving question: How do I turn a radio-frequency waveform into a handful of numbers, and what is the best possible receiver once I have?</p>
+<h3>Topic to chapter, pages and deck slides</h3>
+<table><thead><tr><th>#</th><th>Teaching unit</th><th>Chapter</th><th>Pages</th><th>Deck slides</th><th>CO</th><th>Bloom</th></tr></thead><tbody>
+<tr><td>1</td><td>Why a bandpass signal needs a lowpass equivalent</td><td>Ch. 2</td><td>42-45</td><td>5, 6, 7</td><td>CO1</td><td>L2</td></tr>
+<tr><td>2</td><td>The Hilbert transform as a wideband 90-degree phase shifter</td><td>Ch. 2</td><td>42-45</td><td>8, 9, 10</td><td>CO1</td><td>L2</td></tr>
+<tr><td>3</td><td>Properties of the Hilbert transform and why they matter</td><td>Ch. 2</td><td>42-45</td><td>11, 12, 13</td><td>CO1</td><td>L3</td></tr>
+<tr><td>4</td><td>The pre-envelope, or analytic signal</td><td>Ch. 2</td><td>45-47</td><td>14, 15, 16</td><td>CO1</td><td>L3</td></tr>
+<tr><td>5</td><td>The complex envelope: removing the carrier</td><td>Ch. 2</td><td>47-49</td><td>17, 18, 19</td><td>CO1</td><td>L3</td></tr>
+<tr><td>6</td><td>Canonical representation: in-phase and quadrature components</td><td>Ch. 2</td><td>49-52</td><td>20, 21, 22</td><td>CO1</td><td>L3</td></tr>
+<tr><td>7</td><td>Polar form: natural envelope and phase</td><td>Ch. 2</td><td>49-52</td><td>23, 24, 25</td><td>CO1</td><td>L3</td></tr>
+<tr><td>8</td><td>The AWGN channel model and what it assumes</td><td>Ch. 7</td><td>323-324</td><td>26, 27, 28</td><td>CO1</td><td>L2</td></tr>
+<tr><td>9</td><td>Geometric representation: signals as points in a vector space</td><td>Ch. 7</td><td>324-332</td><td>29, 30, 31</td><td>CO1</td><td>L3</td></tr>
+<tr><td>10</td><td>The Gram-Schmidt orthogonalization procedure</td><td>Ch. 7</td><td>324-332</td><td>32, 33, 34</td><td>CO1</td><td>L4</td></tr>
+<tr><td>11</td><td>Energy, distance and the constellation diagram</td><td>Ch. 7</td><td>324-332</td><td>35, 36, 37</td><td>CO1</td><td>L4</td></tr>
+<tr><td>12</td><td>Converting the continuous AWGN channel into a vector channel</td><td>Ch. 7</td><td>332-337</td><td>38, 39, 40</td><td>CO1</td><td>L4</td></tr>
+<tr><td>13</td><td>The theorem of irrelevance and sufficient statistics</td><td>Ch. 7</td><td>332-337</td><td>41, 42, 43</td><td>CO1</td><td>L4</td></tr>
+<tr><td>14</td><td>Maximum likelihood decoding and decision regions</td><td>Ch. 7</td><td>337-344</td><td>44, 45, 46</td><td>CO1</td><td>L4</td></tr>
+<tr><td>15</td><td>The correlation receiver</td><td>Ch. 7</td><td>337-344</td><td>47, 48, 49</td><td>CO1</td><td>L3</td></tr>
+<tr><td>16</td><td>The matched filter receiver and its equivalence to the correlator</td><td>Ch. 7</td><td>337-344</td><td>50, 51, 52</td><td>CO1</td><td>L4</td></tr>
+</tbody></table>
+<h3>Verbatim syllabus lines</h3>
+<ul>
+<li>Bandpass Signals to Equivalent Lowpass: Hilbert Transform, Pre-envelopes, Complex envelopes of Band-pass Signals, Canonical Representation of Bandpass signals</li>
+<li>Signalling over AWGN Channels- Introduction, Geometric representation of signals, Gram-Schmidt Orthogonalization procedure</li>
+<li>Conversion of the continuous AWGN channel into a vector channel</li>
+<li>Optimum receivers using coherent detection: ML Decoding, Correlation receiver, matched filter receiver</li>
+<li>Text book 1: Ch 2.8-2.11, Ch 7.1-7.4</li>
+<li>Number of Hours: 10</li>
+</ul>
+<h3>Provenance</h3>
+<p>Built from TB1 Sections 2.8-2.11 and 7.1-7.4, the sections the syllabus names. The organising idea is a single change of representation: a bandpass waveform carries no information in its carrier, so the carrier is removed analytically to leave a complex lowpass envelope, and that envelope is then projected onto an orthonormal basis so that a continuous waveform becomes a point in a finite-dimensional space. Once signals are points and noise is a Gaussian cloud, the optimum receiver is forced rather than invented: it is nearest-neighbour decision, and the correlation receiver and matched filter are two circuits computing the same projection.</p>
+<hr/>
+<h2>Module 2 — Digital Modulation Techniques</h2>
+<p>Driving question: Given a fixed power budget and a fixed band, how many bits per second can I push through, and what does each extra bit cost in reliability?</p>
+<h3>Topic to chapter, pages and deck slides</h3>
+<table><thead><tr><th>#</th><th>Teaching unit</th><th>Chapter</th><th>Pages</th><th>Deck slides</th><th>CO</th><th>Bloom</th></tr></thead><tbody>
+<tr><td>1</td><td>The Q function and the shape of every error probability</td><td>Ch. 7</td><td>344-352</td><td>5, 6, 7</td><td>CO2</td><td>L2</td></tr>
+<tr><td>2</td><td>BPSK: constellation, generation and bandwidth</td><td>Ch. 7</td><td>352-357</td><td>8, 9, 10</td><td>CO2</td><td>L2</td></tr>
+<tr><td>3</td><td>BPSK: coherent detection and bit error probability</td><td>Ch. 7</td><td>352-357</td><td>11, 12, 13</td><td>CO2</td><td>L4</td></tr>
+<tr><td>4</td><td>QPSK: constellation and Gray mapping</td><td>Ch. 7</td><td>357-364</td><td>14, 15, 16</td><td>CO2</td><td>L3</td></tr>
+<tr><td>5</td><td>QPSK: generation, detection and error probability</td><td>Ch. 7</td><td>357-364</td><td>17, 18, 19</td><td>CO2</td><td>L4</td></tr>
+<tr><td>6</td><td>M-ary PSK: constellation and decision regions</td><td>Ch. 7</td><td>364-370</td><td>20, 21, 22</td><td>CO2</td><td>L4</td></tr>
+<tr><td>7</td><td>M-ary PSK: error probability and the power-bandwidth trade-off</td><td>Ch. 7</td><td>364-370</td><td>23, 24, 25</td><td>CO2</td><td>L5</td></tr>
+<tr><td>8</td><td>M-ary QAM: using the interior of the plane</td><td>Ch. 7</td><td>370-375</td><td>26, 27, 28</td><td>CO2</td><td>L4</td></tr>
+<tr><td>9</td><td>M-ary QAM: error probability and comparison with PSK</td><td>Ch. 7</td><td>370-375</td><td>29, 30, 31</td><td>CO2</td><td>L5</td></tr>
+<tr><td>10</td><td>BFSK: orthogonal signalling in two dimensions</td><td>Ch. 7</td><td>375-382</td><td>32, 33, 34</td><td>CO2</td><td>L3</td></tr>
+<tr><td>11</td><td>BFSK: coherent detection and error probability</td><td>Ch. 7</td><td>375-382</td><td>35, 36, 37</td><td>CO2</td><td>L4</td></tr>
+<tr><td>12</td><td>Comparing BPSK, QPSK and BFSK on one chart</td><td>Ch. 7</td><td>415-418</td><td>38, 39, 40</td><td>CO2</td><td>L5</td></tr>
+<tr><td>13</td><td>Detection of signals with unknown phase</td><td>Ch. 7</td><td>400-410</td><td>41, 42, 43</td><td>CO2</td><td>L4</td></tr>
+<tr><td>14</td><td>BFSK using noncoherent detection</td><td>Ch. 7</td><td>410-411</td><td>44, 45, 46</td><td>CO2</td><td>L4</td></tr>
+<tr><td>15</td><td>Differential phase-shift keying</td><td>Ch. 7</td><td>411-415</td><td>47, 48, 49</td><td>CO2</td><td>L4</td></tr>
+<tr><td>16</td><td>Choosing a modulation scheme for a given link</td><td>Ch. 7</td><td>415-418</td><td>50, 51, 52</td><td>CO2</td><td>L5</td></tr>
+</tbody></table>
+<h3>Verbatim syllabus lines</h3>
+<ul>
+<li>Digital Modulation Techniques: Phase shift Keying techniques using coherent detection: generation, detection and error probabilities of BPSK and QPSK</li>
+<li>M-ary PSK, M-ary QAM</li>
+<li>Frequency shift keying techniques using Coherent detection: BFSK generation, detection and error probability</li>
+<li>BFSK using Noncoherent Detection, Differential Phase Shift Keying</li>
+<li>Text book 1: Ch 7.6, 7.7, 7.8, 7.12, 7.13</li>
+<li>Number of Hours: 10</li>
+</ul>
+<h3>Provenance</h3>
+<p>Built from TB1 Sections 7.5-7.8 and 7.10-7.14, which the syllabus names. Every scheme in this module is the same three questions asked again: where are the constellation points, what is the minimum distance in terms of energy per bit, and what does the receiver need to know about the carrier. The unifying result is that error probability always takes the form Q of a distance divided by the noise spread, so once a constellation is drawn its performance follows without further integration. Noncoherent detection is introduced at the end as the price paid when phase is unavailable, which sets up the trade-off between receiver simplicity and about 1 dB of energy.</p>
+<hr/>
+<h2>Module 3 — Information Theory</h2>
+<p>Driving question: What is the least I can pay to represent a source, and the most I can push through a channel, before the mathematics says no?</p>
+<h3>Topic to chapter, pages and deck slides</h3>
+<table><thead><tr><th>#</th><th>Teaching unit</th><th>Chapter</th><th>Pages</th><th>Deck slides</th><th>CO</th><th>Bloom</th></tr></thead><tbody>
+<tr><td>1</td><td>Information as surprise: the logarithmic measure</td><td>Ch. 5</td><td>207-214</td><td>5, 6, 7</td><td>CO3</td><td>L2</td></tr>
+<tr><td>2</td><td>Entropy: the average information per symbol</td><td>Ch. 5</td><td>207-214</td><td>8, 9, 10</td><td>CO3</td><td>L3</td></tr>
+<tr><td>3</td><td>Properties of entropy and the extension of a source</td><td>Ch. 5</td><td>207-214</td><td>11, 12, 13</td><td>CO3</td><td>L4</td></tr>
+<tr><td>4</td><td>The source coding theorem</td><td>Ch. 5</td><td>214-215</td><td>14, 15, 16</td><td>CO3</td><td>L3</td></tr>
+<tr><td>5</td><td>Prefix codes and the Kraft inequality</td><td>Ch. 5</td><td>215-223</td><td>17, 18, 19</td><td>CO3</td><td>L4</td></tr>
+<tr><td>6</td><td>Huffman coding</td><td>Ch. 5</td><td>215-223</td><td>20, 21, 22</td><td>CO3</td><td>L4</td></tr>
+<tr><td>7</td><td>Lempel-Ziv coding and the case for dictionary methods</td><td>Ch. 5</td><td>215-223</td><td>23, 24, 25</td><td>CO3</td><td>L4</td></tr>
+<tr><td>8</td><td>Code efficiency, redundancy and where compression stops</td><td>Ch. 5</td><td>215-223</td><td>26, 27, 28</td><td>CO3</td><td>L4</td></tr>
+<tr><td>9</td><td>Discrete memoryless channels and the transition matrix</td><td>Ch. 5</td><td>223-226</td><td>29, 30, 31</td><td>CO3</td><td>L3</td></tr>
+<tr><td>10</td><td>The binary symmetric and binary erasure channels</td><td>Ch. 5</td><td>223-226</td><td>32, 33, 34</td><td>CO3</td><td>L4</td></tr>
+<tr><td>11</td><td>Mutual information: what the output tells you about the input</td><td>Ch. 5</td><td>226-230</td><td>35, 36, 37</td><td>CO3</td><td>L4</td></tr>
+<tr><td>12</td><td>Properties of mutual information</td><td>Ch. 5</td><td>226-230</td><td>38, 39, 40</td><td>CO3</td><td>L4</td></tr>
+<tr><td>13</td><td>Channel capacity</td><td>Ch. 5</td><td>230-232</td><td>41, 42, 43</td><td>CO3</td><td>L4</td></tr>
+<tr><td>14</td><td>The channel coding theorem</td><td>Ch. 5</td><td>232-237</td><td>44, 45, 46</td><td>CO3</td><td>L4</td></tr>
+<tr><td>15</td><td>The Information Capacity Law</td><td>Ch. 5</td><td>240-244</td><td>47, 48, 49</td><td>CO3</td><td>L4</td></tr>
+<tr><td>16</td><td>The bandwidth-power trade-off and the Shannon limit</td><td>Ch. 5</td><td>240-244</td><td>50, 51, 52</td><td>CO3</td><td>L5</td></tr>
+</tbody></table>
+<h3>Verbatim syllabus lines</h3>
+<ul>
+<li>Information theory: Introduction, Entropy, Source Coding Theorem</li>
+<li>Lossless Data Compression Algorithms, Discrete Memoryless Channels</li>
+<li>Mutual Information, Channel capacity, Channel Coding Theorem</li>
+<li>Information Capacity Law (Statement)</li>
+<li>Text book 1: Ch 5.1-5.10</li>
+<li>Number of Hours: 10</li>
+</ul>
+<h3>Provenance</h3>
+<p>Built from TB1 Sections 5.1-5.10, which the syllabus names. The module has two halves that mirror each other. The source-coding half asks how few bits a source needs and answers with entropy, achieved by Huffman and Lempel-Ziv. The channel-coding half asks how many bits a channel can carry and answers with capacity, the maximum of mutual information over input distributions. Both are existence results: they say what is possible without saying how, which is exactly the gap that Modules 4 and 5 fill. The Information Capacity Law at the end unifies them and produces the Shannon limit of -1.6 dB, the number every coding scheme is ultimately measured against.</p>
+<hr/>
+<h2>Module 4 — Error Control Coding: Linear Block and Cyclic Codes</h2>
+<p>Driving question: How do I add redundancy so that the receiver can find and repair errors it cannot even see?</p>
+<h3>Topic to chapter, pages and deck slides</h3>
+<table><thead><tr><th>#</th><th>Teaching unit</th><th>Chapter</th><th>Pages</th><th>Deck slides</th><th>CO</th><th>Bloom</th></tr></thead><tbody>
+<tr><td>1</td><td>Forward error correction versus automatic repeat request</td><td>Ch. 10</td><td>577-579</td><td>5, 6, 7</td><td>CO4</td><td>L3</td></tr>
+<tr><td>2</td><td>Linear block codes: the definition and why linearity matters</td><td>Ch. 10</td><td>582-586</td><td>8, 9, 10</td><td>CO4</td><td>L3</td></tr>
+<tr><td>3</td><td>The generator matrix</td><td>Ch. 10</td><td>582-586</td><td>11, 12, 13</td><td>CO5</td><td>L3</td></tr>
+<tr><td>4</td><td>The parity check matrix</td><td>Ch. 10</td><td>582-586</td><td>14, 15, 16</td><td>CO5</td><td>L4</td></tr>
+<tr><td>5</td><td>Systematic form and why encoders prefer it</td><td>Ch. 10</td><td>582-586</td><td>17, 18, 19</td><td>CO5</td><td>L3</td></tr>
+<tr><td>6</td><td>The syndrome and its properties</td><td>Ch. 10</td><td>586-590</td><td>20, 21, 22</td><td>CO4</td><td>L4</td></tr>
+<tr><td>7</td><td>Minimum distance and minimum weight</td><td>Ch. 10</td><td>586-590</td><td>23, 24, 25</td><td>CO4</td><td>L4</td></tr>
+<tr><td>8</td><td>Error detection and correction capability</td><td>Ch. 10</td><td>586-590</td><td>26, 27, 28</td><td>CO4</td><td>L4</td></tr>
+<tr><td>9</td><td>Syndrome decoding and the standard array</td><td>Ch. 10</td><td>590-593</td><td>29, 30, 31</td><td>CO5</td><td>L4</td></tr>
+<tr><td>10</td><td>Hamming codes</td><td>Ch. 10</td><td>590-593</td><td>32, 33, 34</td><td>CO5</td><td>L4</td></tr>
+<tr><td>11</td><td>Cyclic codes: definition and properties</td><td>Ch. 10</td><td>593-597</td><td>35, 36, 37</td><td>CO4</td><td>L4</td></tr>
+<tr><td>12</td><td>The generator polynomial</td><td>Ch. 10</td><td>593-597</td><td>38, 39, 40</td><td>CO5</td><td>L4</td></tr>
+<tr><td>13</td><td>Parity check polynomial and matrix forms</td><td>Ch. 10</td><td>597-601</td><td>41, 42, 43</td><td>CO5</td><td>L4</td></tr>
+<tr><td>14</td><td>Systematic cyclic encoding with a shift register</td><td>Ch. 10</td><td>597-601</td><td>44, 45, 46</td><td>CO5</td><td>L5</td></tr>
+<tr><td>15</td><td>Syndrome computation for cyclic codes and a worked example</td><td>Ch. 10</td><td>601-605</td><td>47, 48, 49</td><td>CO5</td><td>L5</td></tr>
+<tr><td>16</td><td>Cyclic redundancy checks and burst error detection</td><td>Ch. 10</td><td>601-605</td><td>50, 51, 52</td><td>CO4</td><td>L5</td></tr>
+</tbody></table>
+<h3>Verbatim syllabus lines</h3>
+<ul>
+<li>Error Control Coding: Error Control Using Forward error Correction</li>
+<li>Linear Block Codes: Definitions, Matrix Descriptions, Syndrome and its properties</li>
+<li>Minimum distance Considerations, Syndrome Decoding, Hamming Codes</li>
+<li>Cyclic Codes: Properties, Generator and Parity Check Polynomial and matrices, Encoding, Syndrome computation, Examples</li>
+<li>Text book 1: Ch 10.2, 10.4, 10.5</li>
+<li>Number of Hours: 10</li>
+</ul>
+<h3>Provenance</h3>
+<p>Built from TB1 Sections 10.1-10.5, which the syllabus names. The module is the constructive answer to Module 3: capacity said good codes exist, and this is the first family that can actually be built and decoded. The organising idea is linear algebra over GF(2) — codewords form a subspace, the generator matrix is its basis, the parity check matrix annihilates it, and the syndrome is the image of the received word under that annihilator. Everything about detection and correction capability follows from one number, the minimum distance. Cyclic codes then add structure so that matrix multiplication becomes polynomial arithmetic and the encoder collapses to a shift register.</p>
+<hr/>
+<h2>Module 5 — Convolutional Codes</h2>
+<p>Driving question: How do I code a continuous stream with no block boundaries, and how does the decoder find the best path without checking every one?</p>
+<h3>Topic to chapter, pages and deck slides</h3>
+<table><thead><tr><th>#</th><th>Teaching unit</th><th>Chapter</th><th>Pages</th><th>Deck slides</th><th>CO</th><th>Bloom</th></tr></thead><tbody>
+<tr><td>1</td><td>The convolutional encoder: memory instead of blocks</td><td>Ch. 10</td><td>605-608</td><td>5, 6, 7</td><td>CO4</td><td>L2</td></tr>
+<tr><td>2</td><td>Constraint length, rate and generator sequences</td><td>Ch. 10</td><td>605-608</td><td>8, 9, 10</td><td>CO4</td><td>L3</td></tr>
+<tr><td>3</td><td>Impulse response and generator polynomials</td><td>Ch. 10</td><td>605-608</td><td>11, 12, 13</td><td>CO5</td><td>L4</td></tr>
+<tr><td>4</td><td>Time-domain encoding: convolution by hand</td><td>Ch. 10</td><td>605-608</td><td>14, 15, 16</td><td>CO5</td><td>L4</td></tr>
+<tr><td>5</td><td>The code tree and why it does not scale</td><td>Ch. 10</td><td>608-613</td><td>17, 18, 19</td><td>CO4</td><td>L3</td></tr>
+<tr><td>6</td><td>The trellis diagram</td><td>Ch. 10</td><td>608-613</td><td>20, 21, 22</td><td>CO5</td><td>L4</td></tr>
+<tr><td>7</td><td>The state diagram and the transfer function</td><td>Ch. 10</td><td>608-613</td><td>23, 24, 25</td><td>CO5</td><td>L5</td></tr>
+<tr><td>8</td><td>Recursive systematic convolutional codes</td><td>Ch. 10</td><td>610-613</td><td>26, 27, 28</td><td>CO4</td><td>L5</td></tr>
+<tr><td>9</td><td>Free distance and coding gain</td><td>Ch. 10</td><td>610-613</td><td>29, 30, 31</td><td>CO4</td><td>L5</td></tr>
+<tr><td>10</td><td>Optimum decoding: what the decoder is actually trying to do</td><td>Ch. 10</td><td>613-614</td><td>32, 33, 34</td><td>CO4</td><td>L4</td></tr>
+<tr><td>11</td><td>The Viterbi algorithm: add, compare, select</td><td>Ch. 10</td><td>614-618</td><td>35, 36, 37</td><td>CO5</td><td>L4</td></tr>
+<tr><td>12</td><td>A full Viterbi decoding example</td><td>Ch. 10</td><td>618-623</td><td>38, 39, 40</td><td>CO5</td><td>L5</td></tr>
+<tr><td>13</td><td>Traceback, truncation depth and decoding delay</td><td>Ch. 10</td><td>618-623</td><td>41, 42, 43</td><td>CO5</td><td>L5</td></tr>
+<tr><td>14</td><td>Hard versus soft decision decoding</td><td>Ch. 10</td><td>618-623</td><td>44, 45, 46</td><td>CO5</td><td>L5</td></tr>
+<tr><td>15</td><td>Choosing and deploying a convolutional code</td><td>Ch. 10</td><td>618-623</td><td>47, 48, 49</td><td>CO5</td><td>L5</td></tr>
+<tr><td>16</td><td>Block codes and convolutional codes compared</td><td>Ch. 10</td><td>605-623</td><td>50, 51, 52</td><td>CO4</td><td>L5</td></tr>
+</tbody></table>
+<h3>Verbatim syllabus lines</h3>
+<ul>
+<li>Convolutional Codes: Convolutional Encoder, Code tree, Trellis Graph and State graph</li>
+<li>Recursive systematic Convolutional codes</li>
+<li>Optimum decoding of Convolutional codes</li>
+<li>Maximum Likelihood Decoding of Convolutional codes: The Viterbi Algorithm, Examples</li>
+<li>Text book 1: Ch 10.6, 10.7, 10.8</li>
+<li>Number of Hours: 10</li>
+</ul>
+<h3>Provenance</h3>
+<p>Built from TB1 Sections 10.6-10.8, which the syllabus names. The shift from Module 4 is from blocks to streams: a convolutional encoder has memory, so each output depends on several past inputs and there is no block boundary to align to. The same encoder admits three equivalent pictures — tree, trellis and state diagram — and the module spends time on why the trellis is the useful one: it is the only one that does not grow with sequence length, which is precisely what makes the Viterbi algorithm linear rather than exponential. Free distance replaces minimum distance as the figure of merit, and the module closes on hard versus soft decision decoding, where 2 dB is available for the cost of keeping more than one bit from the demodulator.</p>
+<hr/>
+<h2>Note on textbook page numbers</h2>
+<p>All TB1 chapter and page references were taken from the supplied Digital Communication Systems PDF's own table of contents; the file extracted to roughly 2.1 million characters of machine-readable text, so no TB1 page reference in this document is from memory.</p>
+</body></html>

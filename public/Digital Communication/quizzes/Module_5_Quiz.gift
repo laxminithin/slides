@@ -1,0 +1,162 @@
+// BEC503 Digital Communication — Module 5: Convolutional Codes
+// 20 multiple choice questions, 1 mark each.
+
+::M5Q1::[html]The constraint length K of a convolutional encoder with M memory stages is{
+ =M + 1   #Correct - it counts the input bits influencing any one output bit.
+ ~M   #Wrong - M is the memory order; the current input must be counted as well.
+ ~2^M   #Wrong - that is the number of trellis states.
+ ~M - 1   #Wrong - this is smaller than the memory, which cannot be right.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.605-608 | CO4 | L1
+}
+
+::M5Q2::[html]A convolutional encoder with M \= 3 has how many trellis states?{
+ =8   #Correct - 2^M \= 2^3 \= 8.
+ ~3   #Wrong - that is the memory order, not the state count.
+ ~4   #Wrong - that would be M \= 2.
+ ~16   #Wrong - that would be M \= 4.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.605-608 | CO4 | L2
+}
+
+::M5Q3::[html]The generator pair (7,5) in octal corresponds in binary to{
+ =111 and 101   #Correct - 7 is 111 and 5 is 101 in three-bit binary.
+ ~110 and 100   #Wrong - 110 is 6 and 100 is 4.
+ ~111 and 011   #Wrong - 011 is 3, not 5.
+ ~101 and 111   #Wrong - the order is reversed; the first generator is 7.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.605-608 | CO4 | L2
+}
+
+::M5Q4::[html]The generator sequences of a convolutional encoder are{
+ =the impulse responses of its output branches   #Correct - which is why the encoding operation is a convolution.
+ ~the parity check polynomials   #Wrong - parity check polynomials belong to cyclic block codes.
+ ~the state transition probabilities   #Wrong - the encoder is deterministic, with no probabilities involved.
+ ~the tail bits   #Wrong - tail bits flush the register and are not generators.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.605-608 | CO5 | L3
+}
+
+::M5Q5::[html]Why are tail bits appended to a message before convolutional encoding?{
+ =To return the encoder to the all-zero state so the decoder has a known endpoint   #Correct - and they cost rate, which matters for short messages.
+ ~To increase the code rate   #Wrong - they lower the effective rate rather than raising it.
+ ~To mark the end of the frame for the demodulator   #Wrong - frame marking is a separate function performed elsewhere.
+ ~To randomise the output   #Wrong - randomisation is the job of a scrambler.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.605-608 | CO5 | L3
+}
+
+::M5Q6::[html]A code tree after L time steps has how many paths?{
+ =2^L   #Correct - which is precisely why the tree is useless for real decoding.
+ ~2^M   #Wrong - that is the number of distinct states, not paths.
+ ~L * 2^M   #Wrong - that is the Viterbi work count, which is the point of merging.
+ ~L^2   #Wrong - the growth is exponential, not polynomial.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.608-613 | CO4 | L3
+}
+
+::M5Q7::[html]The trellis differs from the code tree in that{
+ =nodes with the same state at the same time are merged   #Correct - merging keeps the width constant at 2^M.
+ ~it shows only the correct path   #Wrong - the trellis shows every possible path, just compactly.
+ ~it omits the output labels   #Wrong - branch output labels are retained and essential.
+ ~it grows twice as fast   #Wrong - the trellis does not grow at all in width.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.608-613 | CO5 | L3
+}
+
+::M5Q8::[html]The width of a trellis at each time step is{
+ =2^M, constant in sequence length   #Correct - and that constancy is what makes Viterbi decoding linear in L.
+ ~2^L   #Wrong - that is the tree path count.
+ ~growing linearly with time   #Wrong - the width is fixed after the first M steps.
+ ~equal to the code rate   #Wrong - the rate is a ratio, not a node count.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.608-613 | CO5 | L2
+}
+
+::M5Q9::[html]When computing the transfer function from the state diagram, the self-loop on the all-zero state is{
+ =removed, because it represents staying in the zero state   #Correct - and the zero state is split into a source and a sink.
+ ~kept, to count idle time   #Wrong - keeping it makes the series diverge without adding information.
+ ~labelled D^0   #Wrong - labelling it does not solve the divergence problem.
+ ~replaced by a branch to the all-ones state   #Wrong - no such substitution is part of the method.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.608-613 | CO5 | L4
+}
+
+::M5Q10::[html]The free distance of a convolutional code is{
+ =the minimum weight of a path diverging from and remerging with the all-zero path   #Correct - it is defined relative to the all-zero path, which linearity permits.
+ ~the minimum weight of any codeword   #Wrong - there are no fixed-length codewords in a convolutional code.
+ ~the constraint length   #Wrong - K influences d_free but is a different quantity.
+ ~the number of states   #Wrong - the state count is 2^M and unrelated to weight.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.610-613 | CO4 | L3
+}
+
+::M5Q11::[html]For a rate 1/2 code with d_free \= 5, the asymptotic hard-decision coding gain is about{
+ =4 dB   #Correct - 10 log10(0.5 x 5) \= 10 log10(2.5) \= 3.98 dB.
+ ~7 dB   #Wrong - that is roughly the soft-decision figure, about 3 dB higher.
+ ~2.5 dB   #Wrong - this is the linear product R x d_free, not its value in dB.
+ ~10 dB   #Wrong - that would need a far larger free distance.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.610-613 | CO4 | L4
+}
+
+::M5Q12::[html]A recursive systematic convolutional code, compared with its non-recursive equivalent, has{
+ =the same free distance but an infinite impulse response   #Correct - and the infinite response is exactly what turbo codes exploit.
+ ~a larger free distance   #Wrong - the free distance is identical, which is why RSC alone is no better.
+ ~fewer states   #Wrong - the state count is unchanged.
+ ~a higher rate   #Wrong - the rate is unchanged.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.610-613 | CO4 | L4
+}
+
+::M5Q13::[html]Optimum decoding of a convolutional code means{
+ =maximum likelihood sequence estimation over all trellis paths   #Correct - and the Viterbi algorithm achieves it exactly, not approximately.
+ ~decoding each bit independently   #Wrong - the memory couples the bits, so independent decisions are suboptimal.
+ ~syndrome lookup   #Wrong - syndromes belong to block codes.
+ ~majority voting across branches   #Wrong - majority voting is a repetition-code idea.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.613-614 | CO4 | L3
+}
+
+::M5Q14::[html]The Viterbi algorithm is{
+ =exactly maximum likelihood, not an approximation   #Correct - discarded paths provably cannot win, so nothing optimal is lost.
+ ~a suboptimal heuristic that is fast   #Wrong - it returns precisely the maximum likelihood sequence.
+ ~optimal only for hard decisions   #Wrong - it is optimal for soft decisions too; only the metric changes.
+ ~optimal only for rate 1/2 codes   #Wrong - it applies to any rate and any constraint length.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.613-618 | CO4 | L4
+}
+
+::M5Q15::[html]The core operation of the Viterbi algorithm at each state is{
+ =add, compare, select   #Correct - add the branch metric, compare the candidates, select the survivor.
+ ~multiply and accumulate   #Wrong - metrics are added, not multiplied, because logarithms are used.
+ ~sort and prune   #Wrong - there is no sorting; each state has only two candidates.
+ ~divide and conquer   #Wrong - the recursion is sequential in time, not a divide-and-conquer split.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.614-618 | CO5 | L2
+}
+
+::M5Q16::[html]The total work of the Viterbi algorithm for an L-bit message is{
+ =O(L * 2^M)   #Correct - constant work per time step, repeated L times.
+ ~O(2^L)   #Wrong - that is the exhaustive search the algorithm avoids.
+ ~O(L^2)   #Wrong - the work is linear in L, not quadratic.
+ ~O(L)   #Wrong - this omits the per-step state factor 2^M.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.614-618 | CO5 | L3
+}
+
+::M5Q17::[html]A survivor path discarded by the Viterbi algorithm is discarded because{
+ =any continuation of it is beaten by the same continuation of the winner   #Correct - which is why discarding costs no optimality at all.
+ ~it has too many ones   #Wrong - path weight alone is not the criterion; the metric relative to the received sequence is.
+ ~it left the all-zero state   #Wrong - leaving the zero state is entirely normal.
+ ~it is longer than the truncation depth   #Wrong - truncation depth governs traceback, not the discard decision.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.614-618 | CO5 | L4
+}
+
+::M5Q18::[html]A practical traceback truncation depth is about{
+ =5 times the constraint length   #Correct - by then the survivor paths have almost certainly merged.
+ ~equal to the constraint length   #Wrong - at that depth the paths have often not merged and errors are introduced.
+ ~the full message length   #Wrong - that is impossible for a continuous stream and wastes memory.
+ ~one time step   #Wrong - one step gives no merging whatsoever.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.618-623 | CO5 | L4
+}
+
+::M5Q19::[html]Soft decision decoding typically gains about how much over hard decision?{
+ =2 dB   #Correct - and three bits of quantisation captures nearly all of it.
+ ~6 dB   #Wrong - that is closer to the total coding gain of a good code, not the soft-hard gap.
+ ~0.5 dB   #Wrong - the gap is substantially larger than half a decibel.
+ ~10 dB   #Wrong - no quantisation choice yields that much.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.618-623 | CO5 | L3
+}
+
+::M5Q20::[html]Puncturing a convolutional code{
+ =raises the rate by deleting coded bits to a fixed pattern   #Correct - and the decoder inserts a neutral metric where bits were deleted.
+ ~lowers the rate by adding parity   #Wrong - deleting bits raises the rate rather than lowering it.
+ ~changes the constraint length   #Wrong - the encoder and its memory are untouched.
+ ~requires a different decoder architecture   #Wrong - the same Viterbi decoder is used with neutral metrics at punctured positions.
+ ####General feedback: Simon Haykin, Digital Communication Systems 1st ed., Ch.10, pp.618-623 | CO5 | L4
+}

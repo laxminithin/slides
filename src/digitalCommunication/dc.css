@@ -1,0 +1,1549 @@
+/* Digital Communication (VTU BEC503) — signal-lab paper over deep navy ink.
+   --dc-data = the signal itself, --dc-active = noise and the error event,
+   --dc-path = the bound or limit being approached, --dc-danger = the mistake. */
+
+.digital-communication-deck,
+.dc-deck {
+  --dc-ink: #0b1e2d;
+  --dc-muted: #4a5d72;
+  --dc-cream: #fffcf6;
+  --dc-paper: #f6f4ed;
+  --dc-navy: #0b1e2d;
+  --dc-data: #0369a1;
+  --dc-active: #be123c;
+  --dc-pointer: #6d28d9;
+  --dc-ok: #047857;
+  --dc-danger: #b91c1c;
+  --dc-path: #b45309;
+  --dc-sky: #e4f1fa;
+  --dc-line: rgba(11, 30, 45, 0.12);
+  --dc-shadow: 0 16px 40px rgba(11, 30, 45, 0.1);
+  --dc-module: #0369a1;
+  --accent: #0369a1;
+  --accent-soft: #0e7490;
+  --card-accent: #0369a1;
+  color: var(--dc-ink);
+}
+
+/* One hue per module: represent · modulate · bound · protect · decode */
+.digital-communication-deck[data-dc-module="1"] { --dc-module: #0369a1; --accent: #0369a1; }
+.digital-communication-deck[data-dc-module="2"] { --dc-module: #be123c; --accent: #be123c; }
+.digital-communication-deck[data-dc-module="3"] { --dc-module: #b45309; --accent: #b45309; }
+.digital-communication-deck[data-dc-module="4"] { --dc-module: #4338ca; --accent: #4338ca; }
+.digital-communication-deck[data-dc-module="5"] { --dc-module: #047857; --accent: #047857; }
+
+.module-cover.digital-communication { --card-accent: #0369a1; }
+
+.digital-communication-deck .slide-frame {
+  background:
+    radial-gradient(920px 460px at 6% -18%, rgba(3, 105, 161, 0.11), transparent 58%),
+    radial-gradient(720px 380px at 96% 0%, rgba(190, 18, 60, 0.06), transparent 54%),
+    radial-gradient(540px 280px at 70% 110%, rgba(14, 116, 144, 0.08), transparent 50%),
+    linear-gradient(165deg, #fffdf9 0%, #fdfaf3 52%, #f7f5ee 100%);
+}
+
+/* A faint scan-line wash instead of the notebook dot grid — this subject is
+   read off an oscilloscope, not a squared page. */
+.digital-communication-deck .slide-frame::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(3, 105, 161, 0.1) 0 1px, transparent 1px 7px),
+    radial-gradient(circle at 74% 24%, rgba(190, 18, 60, 0.1) 0 1px, transparent 1.6px);
+  background-size: 100% 7px, 210px 150px;
+  mix-blend-mode: multiply;
+}
+
+.digital-communication-deck[data-dc-module="2"] .slide-frame::after { opacity: 0.2; }
+.digital-communication-deck[data-dc-module="3"] .slide-frame::after { opacity: 0.2; }
+.digital-communication-deck[data-dc-module="4"] .slide-frame::after { opacity: 0.18; }
+.digital-communication-deck[data-dc-module="5"] .slide-frame::after { opacity: 0.18; }
+
+.digital-communication-deck .slide-header-copy .slide-kicker {
+  color: var(--dc-module);
+}
+
+.digital-communication-deck .slide-header-copy .slide-title {
+  font-size: clamp(34px, 2.7vw, 48px);
+  line-height: 1.14;
+  padding-bottom: 4px;
+  overflow: visible;
+  color: var(--dc-navy);
+}
+
+/* ── Stage shell ── */
+.dc-stage {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px 16px;
+  box-sizing: border-box;
+}
+
+.dc-story {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.dc-story span {
+  font-size: clamp(10px, 0.85vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dc-muted);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+.dc-story span.lit { opacity: 0.8; color: var(--dc-navy); }
+.dc-story span.now {
+  opacity: 1;
+  color: var(--dc-module);
+  transform: translateX(2px);
+}
+
+.dc-copy {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.dc-visual,
+.dc-visual-b {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+.dc-footer-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  min-width: 0;
+}
+.dc-takeaway,
+.dc-exam {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.35;
+}
+.dc-takeaway strong { color: var(--dc-ok); }
+.dc-exam strong {
+  color: var(--dc-active);
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+}
+
+/* ── Compositions ── */
+.dc-split-right {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(240px, 0.78fr) minmax(380px, 1.22fr);
+  grid-template-rows: 1fr auto;
+}
+/* Explicit placement so copy/visual don't collapse into the story column when
+   a slide renders without a <story> rail (e.g. the example beats). */
+.dc-split-right .dc-story { grid-row: 1 / 3; grid-column: 1; }
+.dc-split-right .dc-copy { grid-column: 2; }
+.dc-split-right .dc-visual { grid-column: 3; }
+.dc-split-right .dc-footer-band { grid-column: 2 / 4; }
+
+/* Algorithm beat: visual is the hero (left), algorithm/dry-run rail (right).
+   Explicit row/col placement + align-items:stretch gives BOTH cells the full
+   row height — without it the aspect-locked SVG collapsed the visual to its
+   intrinsic height and the copy cell shrank, clipping the dry-run panel. */
+.dc-split-left {
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.85fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+}
+.dc-split-left .dc-story { display: none; }
+.dc-split-left .dc-visual { grid-column: 1; grid-row: 1; min-height: 0; align-self: stretch; }
+.dc-split-left .dc-copy { grid-column: 2; grid-row: 1; min-height: 0; align-self: stretch; }
+.dc-split-left .dc-footer-band { grid-column: 1 / 3; grid-row: 2; }
+
+.dc-full-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.dc-full-stage .dc-story { display: none; }
+.dc-full-stage .dc-copy { max-width: 78%; }
+.dc-full-stage .dc-visual { min-height: 0; }
+
+/* Full-width, vertically-centred layout for text-grid framing slides
+   (syllabus audit, practice, resources) — they used a half-width "board"
+   column and left the lower half empty. */
+.dc-fill {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.dc-fill .dc-story { display: none; }
+.dc-fill .dc-copy {
+  grid-row: 1;
+  align-content: safe start;
+  gap: 14px;
+  padding-block: 2px 6px;
+  overflow: hidden;
+}
+.dc-fill .dc-footer-band { grid-row: 2; }
+.dc-fill .dc-lead { font-size: clamp(22px, 1.7vw, 28px); }
+/* let the framing grids breathe across the full stage */
+.dc-fill .dc-syllabus-audit { grid-template-columns: repeat(auto-fit, minmax(184px, 1fr)); gap: 9px; }
+.dc-fill .dc-syllabus-audit article {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 11px;
+  min-height: 40px;
+}
+.dc-fill .dc-syllabus-audit strong { font-size: clamp(13px, 0.92vw, 16px); line-height: 1.18; }
+.dc-fill .dc-syllabus-audit em { font-size: 12px; }
+/* Hardened cap: the syllabus checklist must fit above the footer even in
+   the fullest module (22-24 long topic names). High-specificity + !important
+   so it wins over the platform legibility/base font unconditionally. */
+.dc-stage.dc-fill .dc-syllabus-audit strong { font-size: 15px !important; line-height: 1.16 !important; }
+.dc-stage.dc-fill .dc-syllabus-audit em { font-size: 11px !important; }
+.dc-stage.dc-fill .dc-syllabus-audit article { min-height: 38px !important; padding: 6px 10px !important; gap: 2px !important; }
+.dc-fill .dc-practice-list { gap: 18px; font-size: clamp(17px, 1.3vw, 21px); }
+.dc-fill .dc-resource-hub { gap: 18px; }
+.dc-fill .dc-resource-hub .dc-resource-card { padding: 22px; }
+.dc-fill .dc-resource-hub .dc-resource-card strong { font-size: 19px; }
+.dc-fill .dc-resource-hub .dc-resource-card span { font-size: 15px; }
+
+.dc-hero-open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.dc-hero-open .dc-story,
+.dc-hero-open .dc-copy { display: none; }
+.dc-hero-open .dc-visual { min-height: 0; }
+.dc-hero-open .dc-footer-band { justify-content: center; }
+
+.dc-showcase {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 6px;
+}
+.dc-showcase .dc-story,
+.dc-showcase .dc-copy { display: none; }
+.dc-showcase .dc-visual { grid-row: 1; min-height: 0; }
+.dc-showcase .dc-footer-band {
+  justify-content: center;
+  border-top: 1px solid var(--dc-line);
+  padding-top: 6px;
+}
+.dc-showcase .dc-takeaway { font-size: clamp(14px, 1.05vw, 17px); }
+
+.dc-board {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.dc-board .dc-story { display: none; }
+.dc-board .dc-footer-band { grid-column: 1 / 3; }
+
+.dc-inspect {
+  grid-template-columns: minmax(220px, 0.42fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.dc-inspect .dc-story { display: none; }
+.dc-inspect .dc-visual { grid-column: 2; grid-row: 1; }
+.dc-inspect .dc-footer-band { grid-column: 1 / 3; }
+
+.dc-pipeline {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.dc-pipeline .dc-story { grid-row: 1 / 4; }
+.dc-pipeline .dc-copy,
+.dc-pipeline .dc-visual,
+.dc-pipeline .dc-footer-band { grid-column: 2; }
+
+.dc-memory-first {
+  grid-template-columns: minmax(200px, 0.32fr) minmax(420px, 1.2fr);
+  grid-template-rows: 1fr auto;
+}
+.dc-memory-first .dc-story { display: none; }
+.dc-memory-first .dc-visual { grid-column: 2; grid-row: 1; }
+.dc-memory-first .dc-footer-band { grid-column: 1 / 3; }
+
+.dc-algo-board {
+  grid-template-columns: minmax(260px, 0.48fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.dc-algo-board .dc-story { display: none; }
+.dc-algo-board .dc-footer-band { grid-column: 1 / 3; }
+
+.dc-code-split {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-rows: 1fr auto;
+}
+.dc-code-split .dc-story { display: none; }
+.dc-code-split .dc-footer-band { grid-column: 1 / 3; }
+
+.digital-communication-deck .slide-frame[data-composition="full-stage"] .dc-visual,
+.digital-communication-deck .slide-frame[data-composition="hero-open"] .dc-visual,
+.digital-communication-deck .slide-frame[data-composition="memory-first"] .dc-visual,
+.digital-communication-deck .slide-frame[data-composition="showcase"] .dc-visual {
+  min-height: 0;
+}
+.dc-full-stage .dc-visual { min-height: 62%; }
+.dc-hero-open .dc-visual,
+.dc-memory-first .dc-visual { flex: 1 1 auto; }
+
+/* ── Typography blocks ── */
+.dc-lead {
+  margin: 0;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.38;
+  font-weight: 650;
+  color: var(--dc-navy);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.dc-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.34;
+}
+.dc-points li { padding-left: 2px; }
+.dc-points li::marker { color: var(--dc-module); font-weight: 800; }
+
+.dc-definition {
+  background: #fff;
+  border: 1px solid var(--dc-line);
+  border-left: 5px solid var(--dc-data);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--dc-shadow);
+}
+.dc-definition span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--dc-data);
+}
+.dc-definition strong {
+  display: block;
+  font-size: clamp(20px, 1.6vw, 28px);
+  margin: 4px 0;
+}
+.dc-definition p {
+  margin: 0;
+  font-size: clamp(15px, 1.1vw, 18px);
+}
+
+.dc-callout {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--dc-line);
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+}
+.dc-callout span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+}
+.dc-callout p {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.dc-callout-warn { border-left: 4px solid var(--dc-active); }
+.dc-callout-fault { border-left: 4px solid var(--dc-danger); }
+.dc-callout-ok { border-left: 4px solid var(--dc-ok); }
+.dc-callout-idea { border-left: 4px solid var(--dc-data); }
+.dc-callout-know { border-left: 4px solid var(--dc-pointer); }
+
+/* Scene shell */
+.dc-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.72), rgba(255, 250, 240, 0.28) 62%, transparent 78%);
+  overflow: hidden;
+  position: relative;
+}
+.dc-scene svg,
+.dc-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Code panel — light, readable (≥19px) */
+.dc-code-panel {
+  background: #ffffff;
+  border: 1.5px solid var(--dc-line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--dc-shadow);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.dc-code-line {
+  font-size: clamp(19px, 1.45vw, 22px);
+  line-height: 1.55;
+  color: var(--dc-navy);
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: pre;
+}
+.dc-code-line.is-current {
+  background: rgba(217, 119, 6, 0.14);
+  color: var(--dc-active);
+  box-shadow: inset 3px 0 0 var(--dc-active);
+}
+
+/* Linked list / stack / queue / tree helpers */
+.dc-ll-node { transform-box: fill-box; }
+.dc-stack-cell,
+.dc-queue-cell,
+.dc-tree-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ── Concept-native motion (dcm-*) ──
+   State-change animations — not fade-in as primary teaching motion. */
+
+@keyframes dcm-allocate {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  55% { transform: scale(0.96); }
+  70% { transform: scale(1.03); }
+}
+@keyframes dcm-shift {
+  0%, 12% { transform: translateX(0); }
+  45%, 55% { transform: translateX(28px); }
+  88%, 100% { transform: translateX(0); }
+}
+@keyframes dcm-insert {
+  0%, 15% { transform: translateY(-28px) scale(0.85); opacity: 0.35; }
+  40% { transform: translateY(0) scale(1.06); opacity: 1; }
+  55%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes dcm-delete {
+  0%, 20% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(0.92) translateY(6px); opacity: 0.45; }
+  70%, 100% { transform: scale(0.85); opacity: 0.2; }
+}
+@keyframes dcm-push {
+  0%, 10% { transform: translateY(-40px); opacity: 0.4; }
+  35% { transform: translateY(4px); opacity: 1; }
+  50%, 100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes dcm-pop {
+  0%, 15% { transform: translateY(0); opacity: 1; }
+  45% { transform: translateY(-36px); opacity: 0.35; }
+  70%, 100% { transform: translateY(-8px); opacity: 0.55; }
+}
+@keyframes dcm-enqueue {
+  0%, 12% { transform: translateX(40px); opacity: 0.35; }
+  40% { transform: translateX(-4px); opacity: 1; }
+  55%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes dcm-dequeue {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  45% { transform: translateX(-48px); opacity: 0.3; }
+  70%, 100% { transform: translateX(-12px); opacity: 0.5; }
+}
+@keyframes dcm-wrap {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(18deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(4deg); }
+}
+@keyframes dcm-pointer {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -24; }
+}
+@keyframes dcm-rewire {
+  0%, 20% { stroke-dashoffset: 40; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+@keyframes dcm-traverse {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -36; }
+}
+@keyframes dcm-search {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(20px); }
+  75% { transform: translateX(10px); }
+}
+@keyframes dcm-swap {
+  0%, 100% { transform: translate(0, 0); }
+  35% { transform: translate(14px, -10px); }
+  70% { transform: translate(-14px, 10px); }
+}
+@keyframes dcm-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.62; }
+}
+@keyframes dcm-wave {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.07); }
+  70% { transform: scale(1.02); }
+}
+@keyframes dcm-descend {
+  0%, 10% { transform: translate(0, -24px); opacity: 0.5; }
+  45% { transform: translate(36px, 40px); opacity: 1; }
+  70% { transform: translate(72px, 90px); opacity: 1; }
+  100% { transform: translate(72px, 90px); opacity: 0.85; }
+}
+@keyframes dcm-return {
+  0%, 15% { transform: translate(40px, 60px); opacity: 0.6; }
+  55% { transform: translate(10px, 10px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+.dcm-allocate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-allocate 2.4s ease-in-out infinite;
+}
+.dcm-shift {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-shift 2.8s ease-in-out infinite;
+}
+.dcm-insert {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-insert 2.6s ease-out infinite;
+}
+.dcm-delete {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-delete 2.8s ease-in-out infinite;
+}
+.dcm-push {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-push 2.4s ease-out infinite;
+}
+.dcm-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-pop 2.4s ease-in infinite;
+}
+.dcm-enqueue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-enqueue 2.5s ease-out infinite;
+}
+.dcm-dequeue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-dequeue 2.5s ease-in infinite;
+}
+.dcm-wrap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-wrap 3s ease-in-out infinite;
+}
+.dcm-pointer {
+  stroke-dasharray: 10 8;
+  animation: dcm-pointer 1.4s linear infinite;
+}
+.dcm-rewire {
+  stroke-dasharray: 12 10;
+  animation: dcm-rewire 2.2s ease-in-out infinite;
+}
+.dcm-traverse {
+  stroke-dasharray: 10 8;
+  animation: dcm-traverse 1.6s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.dcm-search {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-search 2.6s ease-in-out infinite;
+}
+.dcm-swap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-swap 2.4s ease-in-out infinite;
+}
+.dcm-pulse {
+  animation: dcm-pulse 1.9s ease-in-out infinite;
+}
+.dcm-wave {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-wave 2.2s ease-in-out infinite;
+}
+.dcm-descend {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-descend 3.2s ease-in-out infinite;
+}
+.dcm-return {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: dcm-return 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dcm-allocate, .dcm-shift, .dcm-insert, .dcm-delete,
+  .dcm-push, .dcm-pop, .dcm-enqueue, .dcm-dequeue,
+  .dcm-wrap, .dcm-pointer, .dcm-rewire, .dcm-traverse,
+  .dcm-search, .dcm-swap, .dcm-pulse, .dcm-wave,
+  .dcm-descend, .dcm-return {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Kit components ── */
+.dc-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 750;
+  color: var(--dc-navy);
+}
+.dc-flow i { color: var(--dc-module); font-style: normal; font-weight: 900; }
+
+.dc-algo-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+  font-size: clamp(15px, 1.15vw, 19px);
+  line-height: 1.4;
+}
+.dc-algo-steps li::marker { color: var(--dc-module); font-weight: 800; }
+
+.dc-complexity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--dc-line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.dc-complexity > div {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+.dc-complexity span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--dc-muted);
+}
+/* BEC503 cost cells hold a sentence ("one constraint per dependent source"),
+   not a big-O token, so they read at body size rather than display size. */
+.dc-complexity strong {
+  font-size: clamp(13px, 1.02vw, 16px);
+  line-height: 1.28;
+  font-weight: 750;
+  color: var(--dc-data);
+}
+.dc-complexity > p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--dc-muted);
+}
+
+.dc-code-panel span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--dc-module);
+  margin-bottom: 8px;
+  font-family: system-ui, sans-serif;
+}
+.dc-code-panel pre {
+  margin: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.dc-code-panel code {
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.45;
+  color: var(--dc-navy);
+  font-weight: 650;
+}
+
+.dc-dryrun {
+  display: grid;
+  gap: 8px;
+}
+.dc-dryrun section {
+  background: #fff;
+  border: 1px solid var(--dc-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.dc-dryrun span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--dc-module);
+}
+.dc-dryrun p { margin: 4px 0 0; font-size: 15px; }
+.dc-dryrun ol {
+  margin: 4px 0 0;
+  padding-left: 1.15em;
+  font-size: 14px;
+  display: grid;
+  gap: 3px;
+}
+
+.dc-term-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.dc-term-chips span {
+  background: var(--dc-sky);
+  color: var(--dc-data);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.dc-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.dc-roadmap article {
+  background: #fff;
+  border: 1px solid var(--dc-line);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+.dc-roadmap b { color: var(--dc-module); font-size: 12px; }
+.dc-roadmap strong { font-size: 14px; line-height: 1.25; }
+
+.dc-checkpoint-sheet {
+  display: grid;
+  gap: 7px;
+}
+.dc-checkpoint-sheet article {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.72fr) auto 1.85fr;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--dc-line);
+  border-radius: 12px;
+  padding: 7px 12px;
+}
+.dc-checkpoint-sheet code {
+  font-size: clamp(16px, 1.2vw, 21px);
+  font-weight: 800;
+  color: var(--dc-data);
+}
+.dc-checkpoint-sheet span { font-size: 12.5px; line-height: 1.25; color: var(--dc-muted); }
+
+.dc-syllabus-audit {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+.dc-syllabus-audit article {
+  background: #fff;
+  border: 1px solid var(--dc-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.dc-syllabus-audit strong { font-size: 14px; }
+.dc-syllabus-audit em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--dc-ok);
+}
+
+.dc-practice-list {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(15px, 1.15vw, 18px);
+}
+.dc-practice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.dc-practice-list em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--dc-active);
+  white-space: nowrap;
+}
+
+.dc-review-map {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 12px;
+}
+.dc-review-map h3 {
+  margin: 0;
+  font-size: clamp(22px, 2vw, 32px);
+  color: var(--dc-navy);
+}
+.dc-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dc-review-topics span {
+  background: #fff;
+  border: 1.5px solid var(--dc-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.dc-resource-hub {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.dc-resource-hub a {
+  display: grid;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid var(--dc-line);
+  border-radius: 14px;
+  padding: 14px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--dc-shadow);
+}
+.dc-resource-hub a:hover { border-color: var(--dc-module); }
+.dc-resource-hub strong { font-size: 16px; }
+.dc-resource-hub span { font-size: 13px; color: var(--dc-muted); }
+.dc-study-tip {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background: var(--dc-sky);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--dc-navy);
+}
+
+.dc-resource-hub .dc-resource-card {
+  display: grid;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid var(--dc-line);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: var(--dc-shadow);
+}
+.dc-resource-hub .dc-resource-card strong { font-size: 16px; }
+.dc-resource-hub .dc-resource-card span { font-size: 13px; color: var(--dc-muted); }
+
+/* ── SEPM instructional motion (classroom-paced) ── */
+@keyframes dcm-flow-node {
+  0%, 100% { opacity: 0.55; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-4px); }
+}
+@keyframes dcm-flow-arrow {
+  0% { stroke-dashoffset: 24; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.4; }
+}
+@keyframes dcm-feedback {
+  0% { stroke-dashoffset: 40; opacity: 0.45; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -40; opacity: 0.45; }
+}
+@keyframes dcm-waterfall {
+  0% { opacity: 0; transform: translate(-12px, -18px); }
+  30%, 100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes dcm-cost-curve {
+  0% { stroke-dasharray: 0 800; }
+  100% { stroke-dasharray: 800 0; }
+}
+@keyframes dcm-cost-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+@keyframes dcm-grow {
+  0% { opacity: 0; transform: scaleX(0.55); transform-origin: center; }
+  45%, 100% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes dcm-spiral {
+  0% { opacity: 0.15; }
+  40% { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+@keyframes dcm-concurrent {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+@keyframes dcm-up-line {
+  0% { stroke-dasharray: 0 1200; }
+  100% { stroke-dasharray: 1200 0; }
+}
+@keyframes dcm-orbit {
+  0%, 100% { opacity: 0.65; }
+  50% { opacity: 1; }
+}
+@keyframes dcm-token {
+  0% { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateY(-170px) rotate(-360deg); }
+}
+@keyframes dcm-backlog {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(210px); }
+  70% { transform: translateX(420px); }
+  100% { transform: translateX(630px); }
+}
+@keyframes dcm-xp-step {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+@keyframes dcm-bar {
+  0% { transform: scaleX(0.2); transform-origin: left center; opacity: 0.4; }
+  50%, 100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes dcm-gate {
+  0%, 100% { opacity: 0.7; }
+  40% { opacity: 1; }
+}
+@keyframes dcm-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  40%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes dcm-pulse-soft {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.dcm-flow-node { animation: dcm-flow-node 3.2s ease-in-out infinite; }
+.dcm-flow-arrow { stroke-dasharray: 10 8; animation: dcm-flow-arrow 2.8s linear infinite; }
+.dcm-feedback { stroke-dasharray: 10 8; animation: dcm-feedback 3.6s linear infinite; }
+.dcm-waterfall { animation: dcm-waterfall 3.5s ease-out infinite; }
+.dcm-cost-curve { animation: dcm-cost-curve 4s ease-out infinite; }
+.dcm-cost-dot { animation: dcm-cost-dot 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.dcm-grow { animation: dcm-grow 3.8s ease-out infinite; }
+.dcm-spiral { animation: dcm-spiral 3.2s ease-in-out infinite; }
+.dcm-concurrent { animation: dcm-concurrent 2.8s ease-in-out infinite; }
+.dcm-up-line { animation: dcm-up-line 4.5s ease-out infinite; }
+.dcm-orbit { animation: dcm-orbit 2.6s ease-in-out infinite; }
+.dcm-token { animation: dcm-token 12s linear infinite; transform-box: fill-box; transform-origin: 450px 260px; }
+.dcm-backlog-card { animation: dcm-backlog 10s ease-in-out infinite; }
+.dcm-xp-step { animation: dcm-xp-step 3s ease-in-out infinite; }
+.dcm-bar { animation: dcm-bar 3.4s ease-out infinite; }
+.dcm-gate { animation: dcm-gate 2.8s ease-in-out infinite; }
+.dcm-fade-in { animation: dcm-fade-in 2.4s ease-out both; }
+.dcm-pulse { animation: dcm-pulse-soft 2.4s ease-in-out infinite; }
+.dcm-step { animation: dcm-pulse-soft 2.8s ease-in-out infinite; }
+.dcm-actor { animation: dcm-pulse-soft 3s ease-in-out infinite; }
+.dcm-usecase-step { animation: dcm-flow-node 2.8s ease-in-out infinite; }
+.dcm-system-box { animation: dcm-pulse-soft 2.6s ease-in-out infinite; }
+.dcm-risk-cell { animation: dcm-pulse-soft 3.2s ease-in-out infinite; }
+.dcm-risk-dot { animation: dcm-cost-dot 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.dcm-delay-0 { animation-delay: 0s; }
+.dcm-delay-1 { animation-delay: 0.35s; }
+.dcm-delay-2 { animation-delay: 0.7s; }
+.dcm-delay-3 { animation-delay: 1.05s; }
+.dcm-delay-4 { animation-delay: 1.4s; }
+
+/* ── Digital Communication instructional motion ──
+   Every animation below shows a circuit mechanism: current marching, a phasor
+   turning, a transient decaying, a pole moving. Decoration is not the job. */
+@keyframes dcm-current {
+  0% { stroke-dashoffset: 36; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes dcm-current-rev {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 36; }
+}
+@keyframes dcm-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes dcm-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes dcm-draw {
+  0% { stroke-dashoffset: 900; }
+  55%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes dcm-sweep-x {
+  0% { transform: translateX(0); opacity: 0.25; }
+  12% { opacity: 1; }
+  100% { transform: translateX(var(--dcm-sweep, 620px)); opacity: 0.9; }
+}
+@keyframes dcm-switch {
+  0%, 35% { transform: rotate(-32deg); }
+  55%, 100% { transform: rotate(0deg); }
+}
+@keyframes dcm-decay-dot {
+  0% { transform: translate(0, 0); opacity: 0.4; }
+  10% { opacity: 1; }
+  100% { transform: translate(var(--dcm-dx, 560px), var(--dcm-dy, 210px)); opacity: 0.9; }
+}
+@keyframes dcm-ring {
+  0%, 100% { transform: translateY(0); }
+  18% { transform: translateY(-46px); }
+  36% { transform: translateY(32px); }
+  54% { transform: translateY(-19px); }
+  72% { transform: translateY(11px); }
+  86% { transform: translateY(-5px); }
+}
+@keyframes dcm-merge-l {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(118px); opacity: 0.35; }
+}
+@keyframes dcm-merge-r {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(-118px); opacity: 0.35; }
+}
+@keyframes dcm-collapse {
+  0%, 25% { transform: scale(1); opacity: 1; }
+  70%, 100% { transform: scale(0.42); opacity: 0.18; }
+}
+@keyframes dcm-emerge {
+  0%, 35% { transform: scale(0.55); opacity: 0; }
+  80%, 100% { transform: scale(1); opacity: 1; }
+}
+@keyframes dcm-slide-in {
+  0% { transform: translateX(-34px); opacity: 0; }
+  45%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes dcm-pole-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(var(--dcm-px, -70px), 0); }
+}
+@keyframes dcm-needle {
+  0%, 100% { transform: rotate(-58deg); }
+  50% { transform: rotate(52deg); }
+}
+@keyframes dcm-wave-shift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-180px); }
+}
+@keyframes dcm-cell-in {
+  0% { opacity: 0; transform: translateY(9px) scale(0.94); }
+  45%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes dcm-charge {
+  /* Floor stays high enough that pulsing LABELS remain readable. */
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+@keyframes dcm-flux {
+  0%, 100% { transform: scale(0.94); opacity: 0.72; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+@keyframes dcm-probe {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(var(--dcm-probe, 96px)); }
+}
+@keyframes dcm-flip {
+  0%, 20% { transform: scaleX(1); }
+  45%, 100% { transform: scaleX(-1); }
+}
+
+.dcm-current { stroke-dasharray: 9 9; animation: dcm-current 1.1s linear infinite; }
+.dcm-current-slow { stroke-dasharray: 9 9; animation: dcm-current 2.2s linear infinite; }
+.dcm-current-rev { stroke-dasharray: 9 9; animation: dcm-current-rev 1.4s linear infinite; }
+.dcm-spin { animation: dcm-spin 4.4s linear infinite; transform-box: fill-box; }
+.dcm-spin-slow { animation: dcm-spin-slow 6s linear infinite; transform-box: fill-box; }
+.dcm-draw { stroke-dasharray: 900; animation: dcm-draw 4s ease-out infinite; }
+.dcm-sweep-x { animation: dcm-sweep-x 3.6s linear infinite; }
+.dcm-switch { animation: dcm-switch 3.4s ease-in-out infinite; transform-box: fill-box; }
+.dcm-decay-dot { animation: dcm-decay-dot 3.8s ease-in infinite; transform-box: fill-box; }
+.dcm-ring { animation: dcm-ring 3.6s ease-in-out infinite; transform-box: fill-box; }
+.dcm-merge-l { animation: dcm-merge-l 3.8s ease-in-out infinite; transform-box: fill-box; }
+.dcm-merge-r { animation: dcm-merge-r 3.8s ease-in-out infinite; transform-box: fill-box; }
+.dcm-collapse { animation: dcm-collapse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+/* Reveals play ONCE and hold. Looping them would leave labelled steps and
+   formulas fading in and out under the reader — legibility beats motion. */
+.dcm-emerge { animation: dcm-emerge 1.2s ease-out both; transform-box: fill-box; transform-origin: center; }
+.dcm-slide-in { animation: dcm-slide-in 0.9s ease-out both; transform-box: fill-box; }
+.dcm-pole-drift { animation: dcm-pole-drift 4.4s ease-in-out infinite; transform-box: fill-box; }
+.dcm-needle { animation: dcm-needle 3.4s ease-in-out infinite; transform-box: fill-box; }
+.dcm-wave-shift { animation: dcm-wave-shift 2.4s linear infinite; }
+.dcm-cell-in { animation: dcm-cell-in 0.9s ease-out both; transform-box: fill-box; }
+.dcm-charge { animation: dcm-charge 2.2s ease-in-out infinite; }
+.dcm-flux { animation: dcm-flux 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.dcm-probe { animation: dcm-probe 3.2s ease-in-out infinite; transform-box: fill-box; }
+.dcm-flip { animation: dcm-flip 4.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.dcm-delay-5 { animation-delay: 1.75s; }
+.dcm-delay-6 { animation-delay: 2.1s; }
+.dcm-delay-7 { animation-delay: 2.45s; }
+
+
+.dc-scene, .dc-showcase-scene { width: 100%; height: 100%; min-height: 0; }
+.dc-svg { width: 100%; height: 100%; display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .digital-communication-deck [class*="dcm-"] {
+    animation: none !important;
+  }
+}
+
+/* Dense algorithm slides (real algo steps + dry-run trace) must fit the
+   algo-board left column at 1280×720. Tighten only in that composition. */
+.dc-algo-board .dc-algo-steps { gap: 4px; font-size: clamp(14px, 1.02vw, 17px); line-height: 1.3; }
+.dc-algo-board .dc-dryrun { gap: 5px; }
+.dc-algo-board .dc-dryrun section { padding: 6px 11px; }
+.dc-algo-board .dc-dryrun ol { gap: 2px; font-size: 13.5px; }
+.dc-algo-board .dc-dryrun p { font-size: 14px; }
+.dc-algo-board .dc-lead { font-size: clamp(16px, 1.25vw, 20px); }
+
+/* ── BEC503-specific kit pieces (no Computer Graphics counterpart) ── */
+
+/* Textbook provenance carried from Phase 1. Units whose prescribed book was
+   not supplied render a chapter with no page range — that is intentional. */
+.dc-book-cite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--dc-muted);
+}
+.dc-book-cite b {
+  background: var(--dc-sky);
+  color: var(--dc-data);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.dc-book-cite span { font-style: normal; }
+.dc-book-cite em {
+  font-style: normal;
+  background: rgba(21, 128, 61, 0.1);
+  color: var(--dc-ok);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.dc-book-cite i {
+  font-style: normal;
+  border: 1px solid var(--dc-line);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.dc-quiz-card {
+  background: #fff;
+  border: 1px solid var(--dc-line);
+  border-left: 4px solid var(--dc-data);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: var(--dc-shadow);
+}
+.dc-quiz-card + .dc-quiz-card { margin-top: 8px; }
+.dc-quiz-card strong {
+  display: block;
+  font-size: 15.5px;
+  line-height: 1.3;
+  color: var(--dc-navy);
+}
+.dc-quiz-card ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 10px;
+  margin: 8px 0 0;
+  padding: 0 0 0 18px;
+  font-size: 13.5px;
+  font-weight: 650;
+}
+.dc-quiz-card li.is-correct {
+  color: var(--dc-ok);
+  font-weight: 800;
+}
+.dc-quiz-card li.is-correct::marker { color: var(--dc-ok); }
+.dc-quiz-card p {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--dc-muted);
+}
+
+/* Showcase beats hand the whole stage to one mechanism. */
+.dc-showcase-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* ── Resource pages (/digital-communication/:module/notes|quiz|assignment|pyq) ──
+   These render outside .digital-communication-deck, so they carry literal colours
+   rather than the deck custom properties. */
+
+.dc-study h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  color: #0e1c2e;
+}
+.dc-study .dc-study-lead {
+  margin: 10px 0;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: #334155;
+}
+.dc-study .dc-study-section {
+  margin: 26px 0 6px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(14, 28, 46, 0.1);
+  font-size: 1.08rem;
+  color: #1d4ed8;
+}
+.dc-study .dc-study-meta {
+  margin: 6px 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748b;
+}
+.dc-study .dc-study-rules {
+  margin: 10px 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 5px;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+.dc-study-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 4px;
+}
+.dc-study-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(29, 78, 216, 0.28);
+  background: #e8f0ff;
+  color: #1d4ed8;
+  font-size: 0.83rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.dc-study-download:hover { background: #d8e6ff; }
+
+.dc-study .dc-study-takeaway,
+.dc-study .dc-study-mistake {
+  margin: 8px 0 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+.dc-study .dc-study-takeaway b { color: #15803d; margin-right: 6px; }
+.dc-study .dc-study-mistake b { color: #b91c1c; margin-right: 6px; }
+
+.dc-study-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 9px;
+}
+.dc-study-chips span {
+  background: #e8f0ff;
+  color: #1d4ed8;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 0.74rem;
+  font-weight: 750;
+}
+
+.dc-study-options {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding: 0;
+}
+.dc-study-option {
+  width: 100%;
+  text-align: left;
+  padding: 9px 13px;
+  border-radius: 10px;
+  border: 1px solid rgba(14, 28, 46, 0.14);
+  background: #fff;
+  font: 650 0.92rem/1.35 inherit;
+  color: #0e1c2e;
+  cursor: pointer;
+}
+.dc-study-option:hover { border-color: #1d4ed8; }
+.dc-study-option.is-correct { border-color: #15803d; background: rgba(21, 128, 61, 0.1); color: #15803d; }
+.dc-study-option.is-wrong { border-color: #b91c1c; background: rgba(185, 28, 28, 0.08); color: #b91c1c; }
+
+.dc-study-feedback {
+  margin: 10px 0 0;
+  padding: 9px 13px;
+  border-radius: 10px;
+  border-left: 4px solid #b91c1c;
+  background: rgba(185, 28, 28, 0.06);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #334155;
+}
+.dc-study-feedback.is-correct {
+  border-left-color: #15803d;
+  background: rgba(21, 128, 61, 0.08);
+}
+
+.dc-study-toggle {
+  margin-top: 9px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(29, 78, 216, 0.3);
+  background: #fff;
+  color: #1d4ed8;
+  font: 800 0.8rem/1 inherit;
+  cursor: pointer;
+}
+.dc-study-answer {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #f8f5ec;
+  border: 1px solid rgba(14, 28, 46, 0.1);
+}
+.dc-study-answer p { margin: 0; font-size: 0.92rem; line-height: 1.5; color: #334155; }
+.dc-study-answer ul { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 4px; font-size: 0.86rem; }
+.dc-study-answer li b { color: #1d4ed8; margin-right: 6px; }
+
+.dc-study-rubric { display: grid; gap: 12px; margin-top: 12px; }
+.dc-study-rubric article {
+  border: 1px solid rgba(14, 28, 46, 0.12);
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: #fff;
+}
+.dc-study-rubric header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.dc-study-rubric header strong { font-size: 1rem; color: #0e1c2e; }
+.dc-study-rubric header em { font-style: normal; font-weight: 800; color: #1d4ed8; font-size: 0.82rem; }
+.dc-study-rubric dl { margin: 0; display: grid; gap: 6px; }
+.dc-study-rubric dt {
+  text-transform: capitalize;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #64748b;
+}
+.dc-study-rubric dd { margin: 2px 0 0; font-size: 0.88rem; line-height: 1.42; color: #334155; }
+
+.dc-study-modnav {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dc-study-modnav a {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(14, 28, 46, 0.14);
+  background: #fff;
+  color: #0e1c2e;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.dc-study-modnav a.is-current { background: #1d4ed8; border-color: #1d4ed8; color: #fff; }
+
+/* Eight checkpoint rows must fit one 1280x720 stage above the footer band.
+   Sized against the longest BEC503 topic ("Sources of electrical energy:
+   independent and dependent") wrapping to two lines. !important so it beats
+   the platform legibility layer, which loads after this sheet. */
+.dc-stage.dc-fill .dc-checkpoint-sheet { gap: 6px !important; }
+.dc-stage.dc-fill .dc-checkpoint-sheet article {
+  grid-template-columns: minmax(180px, 1fr) auto 1.6fr !important;
+  gap: 10px !important;
+  padding: 6px 11px !important;
+}
+.dc-stage.dc-fill .dc-checkpoint-sheet strong {
+  font-size: 14.5px !important;
+  line-height: 1.2 !important;
+}
+.dc-stage.dc-fill .dc-checkpoint-sheet code { font-size: 13px !important; }
+.dc-stage.dc-fill .dc-checkpoint-sheet span { font-size: 12px !important; line-height: 1.24 !important; }
+
+/* Resource cards are real links now (the platform's own link slot is dead
+   code), so they need the affordance an anchor gets. */
+.dc-resource-hub a.dc-resource-card {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 140ms ease, transform 140ms ease;
+}
+.dc-resource-hub a.dc-resource-card:hover {
+  border-color: var(--dc-module);
+  transform: translateY(-2px);
+}
+.dc-resource-hub a.dc-resource-card:focus-visible {
+  outline: 3px solid var(--dc-module);
+  outline-offset: 2px;
+}
+
+/* The resources slide holds one short row of cards; centre it rather than
+   pinning it to the top of an otherwise empty stage. */
+.dc-stage.dc-fill .dc-copy:has(> .dc-resource-hub) { align-content: center; }
+.dc-stage.dc-fill .dc-resource-hub a.dc-resource-card { padding: 22px 20px; }
+
+/* ── BEC503 home-card glyph: a carrier crossing into a constellation ──
+   The platform had no visual for a signals subject — `analog` draws a circuit
+   node graph, which is the wrong claim about what this course is. */
+.subject-visual-signal {
+  color: #0369a1;
+}
+
+.subject-visual-signal .sig-wave,
+.subject-visual-signal .sig-pt {
+  position: absolute;
+  display: block;
+}
+
+.subject-visual-signal .sig-wave {
+  left: 10px;
+  width: 52px;
+  height: 22px;
+  border-radius: 999px;
+  border: 2.2px solid currentColor;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.subject-visual-signal .sw1 { top: 26px; transform: rotate(-24deg); opacity: 0.75; }
+.subject-visual-signal .sw2 { top: 48px; left: 34px; transform: rotate(-24deg); opacity: 0.4; }
+
+.subject-visual-signal .sig-pt {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #be123c;
+  opacity: 0.85;
+}
+.subject-visual-signal .sp1 { left: 74px; top: 22px; }
+.subject-visual-signal .sp2 { left: 98px; top: 22px; }
+.subject-visual-signal .sp3 { left: 74px; top: 52px; }
+.subject-visual-signal .sp4 { left: 98px; top: 52px; animation: dc-pt-drift 2.6s ease-in-out infinite; }
+
+@keyframes dc-pt-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(4px, -4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subject-visual-signal .sp4 { animation: none; }
+}
+
+/* ── BEC503 worked steps on the notes page ──
+   `code` for this subject is a two-to-five line derivation, so it renders as a
+   held block rather than wrapping like prose. */
+.dc-study-code {
+  margin: 10px 0 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #0b1e2d;
+  color: #e2e8f0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* Worked-step panel: body shrinks and the citation sits in a footer so a long
+   step loses type size rather than its last lines to `overflow: hidden`. */
+.dc-code-panel {
+  display: flex;
+  flex-direction: column;
+}
+.dc-code-panel pre {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.dc-code-panel.is-dense code {
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.34;
+}
+.dc-code-panel small {
+  display: block;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--dc-line);
+  font-family: system-ui, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--dc-muted);
+}

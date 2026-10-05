@@ -1,0 +1,1233 @@
+/* Complex Analysis, Transforms and Optimization (VTU 1BMATEE301) —
+   squared notebook paper over deep violet ink.
+   --cat-data = the function or curve under discussion,
+   --cat-active = the operation being performed on it,
+   --cat-path = the domain or region, --cat-danger = the mistake. */
+
+.complex-analysis-transforms-optimization-deck,
+.cat-deck {
+  --cat-ink: #1e1b3a;
+  --cat-muted: #5b5b7a;
+  --cat-cream: #fdfcff;
+  --cat-paper: #f3f2fa;
+  --cat-navy: #1e1b3a;
+  --cat-data: #4338ca;
+  --cat-active: #db2777;
+  --cat-pointer: #b45309;
+  --cat-ok: #0d9488;
+  --cat-danger: #dc2626;
+  --cat-path: #0284c7;
+  --cat-sky: #e8e6fb;
+  --cat-line: rgba(30, 27, 58, 0.12);
+  --cat-shadow: 0 16px 40px rgba(30, 27, 58, 0.1);
+  --cat-module: #4338ca;
+  --accent: #4338ca;
+  --accent-soft: #3730a3;
+  --card-accent: #4338ca;
+  color: var(--cat-ink);
+}
+
+/* One hue per module: analyse · decompose · transform · infer · optimise */
+.complex-analysis-transforms-optimization-deck[data-cat-module="1"] { --cat-module: #4338ca; --accent: #4338ca; }
+.complex-analysis-transforms-optimization-deck[data-cat-module="2"] { --cat-module: #db2777; --accent: #db2777; }
+.complex-analysis-transforms-optimization-deck[data-cat-module="3"] { --cat-module: #0284c7; --accent: #0284c7; }
+.complex-analysis-transforms-optimization-deck[data-cat-module="4"] { --cat-module: #0d9488; --accent: #0d9488; }
+.complex-analysis-transforms-optimization-deck[data-cat-module="5"] { --cat-module: #b45309; --accent: #b45309; }
+
+.module-cover.complex-analysis-transforms-optimization { --card-accent: #4338ca; }
+
+.complex-analysis-transforms-optimization-deck .slide-frame {
+  background:
+    radial-gradient(920px 460px at 6% -18%, rgba(67, 56, 202, 0.1), transparent 58%),
+    radial-gradient(720px 380px at 96% 0%, rgba(219, 39, 119, 0.06), transparent 54%),
+    radial-gradient(540px 280px at 70% 110%, rgba(2, 132, 199, 0.07), transparent 50%),
+    linear-gradient(165deg, #fefdff 0%, #fbfaff 52%, #f4f3fb 100%);
+}
+
+/* Ruled notebook paper with a margin rule — this subject is worked out line
+   by line in an exercise book, not drawn on a board. */
+.complex-analysis-transforms-optimization-deck .slide-frame::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(67, 56, 202, 0.1) 0 1px, transparent 1px 30px),
+    linear-gradient(90deg, transparent 0 78px, rgba(219, 39, 119, 0.45) 78px 80px, transparent 80px);
+  background-size: 100% 30px, 100% 100%;
+  mix-blend-mode: multiply;
+}
+
+.complex-analysis-transforms-optimization-deck[data-cat-module="2"] .slide-frame::after { opacity: 0.2; }
+.complex-analysis-transforms-optimization-deck[data-cat-module="3"] .slide-frame::after { opacity: 0.2; }
+.complex-analysis-transforms-optimization-deck[data-cat-module="4"] .slide-frame::after { opacity: 0.18; }
+.complex-analysis-transforms-optimization-deck[data-cat-module="5"] .slide-frame::after { opacity: 0.18; }
+
+.complex-analysis-transforms-optimization-deck .slide-header-copy .slide-kicker {
+  color: var(--cat-module);
+}
+
+.complex-analysis-transforms-optimization-deck .slide-header-copy .slide-title {
+  font-size: clamp(34px, 2.7vw, 48px);
+  line-height: 1.14;
+  padding-bottom: 4px;
+  overflow: visible;
+  color: var(--cat-navy);
+}
+
+/* ── Stage shell ── */
+.cat-stage {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px 16px;
+  box-sizing: border-box;
+}
+
+.cat-story {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.cat-story span {
+  font-size: clamp(10px, 0.85vw, 13px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cat-muted);
+  opacity: 0.45;
+  white-space: nowrap;
+}
+.cat-story span.lit { opacity: 0.8; color: var(--cat-navy); }
+.cat-story span.now {
+  opacity: 1;
+  color: var(--cat-module);
+  transform: translateX(2px);
+}
+
+.cat-copy {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.cat-visual,
+.cat-visual-b {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: stretch;
+}
+.cat-footer-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  min-width: 0;
+}
+.cat-takeaway,
+.cat-exam {
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1vw, 16px);
+  line-height: 1.35;
+}
+.cat-takeaway strong { color: var(--cat-ok); }
+.cat-exam strong {
+  color: var(--cat-active);
+  letter-spacing: 0.04em;
+  font-size: 0.78em;
+}
+
+/* ── Compositions ── */
+.cat-split-right {
+  grid-template-columns: minmax(72px, 0.08fr) minmax(240px, 0.78fr) minmax(380px, 1.22fr);
+  grid-template-rows: 1fr auto;
+}
+/* Explicit placement so copy/visual don't collapse into the story column when
+   a slide renders without a <story> rail (e.g. the example beats). */
+.cat-split-right .cat-story { grid-row: 1 / 3; grid-column: 1; }
+.cat-split-right .cat-copy { grid-column: 2; }
+.cat-split-right .cat-visual { grid-column: 3; }
+.cat-split-right .cat-footer-band { grid-column: 2 / 4; }
+
+/* Algorithm beat: visual is the hero (left), algorithm/dry-run rail (right).
+   Explicit row/col placement + align-items:stretch gives BOTH cells the full
+   row height — without it the aspect-locked SVG collapsed the visual to its
+   intrinsic height and the copy cell shrank, clipping the dry-run panel. */
+.cat-split-left {
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.85fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+}
+.cat-split-left .cat-story { display: none; }
+.cat-split-left .cat-visual { grid-column: 1; grid-row: 1; min-height: 0; align-self: stretch; }
+.cat-split-left .cat-copy { grid-column: 2; grid-row: 1; min-height: 0; align-self: stretch; }
+.cat-split-left .cat-footer-band { grid-column: 1 / 3; grid-row: 2; }
+
+.cat-full-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.cat-full-stage .cat-story { display: none; }
+.cat-full-stage .cat-copy { max-width: 78%; }
+.cat-full-stage .cat-visual { min-height: 0; }
+
+/* Full-width, vertically-centred layout for text-grid framing slides
+   (syllabus audit, practice) — they used a half-width "board"
+   column and left the lower half empty. */
+.cat-fill {
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+.cat-fill .cat-story { display: none; }
+.cat-fill .cat-copy {
+  grid-row: 1;
+  align-content: safe start;
+  gap: 14px;
+  padding-block: 2px 6px;
+  overflow: hidden;
+}
+.cat-fill .cat-footer-band { grid-row: 2; }
+.cat-fill .cat-lead { font-size: clamp(22px, 1.7vw, 28px); }
+/* let the framing grids breathe across the full stage */
+.cat-fill .cat-syllabus-audit { grid-template-columns: repeat(auto-fit, minmax(184px, 1fr)); gap: 9px; }
+.cat-fill .cat-syllabus-audit article {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
+  padding: 7px 11px;
+  min-height: 40px;
+}
+.cat-fill .cat-syllabus-audit strong { font-size: clamp(13px, 0.92vw, 16px); line-height: 1.18; }
+.cat-fill .cat-syllabus-audit em { font-size: 12px; }
+/* Hardened cap: the syllabus checklist must fit above the footer even in
+   the fullest module (22-24 long topic names). High-specificity + !important
+   so it wins over the platform legibility/base font unconditionally. */
+.cat-stage.cat-fill .cat-syllabus-audit strong { font-size: 15px !important; line-height: 1.16 !important; }
+.cat-stage.cat-fill .cat-syllabus-audit em { font-size: 11px !important; }
+.cat-stage.cat-fill .cat-syllabus-audit article { min-height: 38px !important; padding: 6px 10px !important; gap: 2px !important; }
+.cat-fill .cat-practice-list { gap: 18px; font-size: clamp(17px, 1.3vw, 21px); }
+
+.cat-hero-open {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+}
+.cat-hero-open .cat-story,
+.cat-hero-open .cat-copy { display: none; }
+.cat-hero-open .cat-visual { min-height: 0; }
+.cat-hero-open .cat-footer-band { justify-content: center; }
+
+.cat-showcase {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 6px;
+}
+.cat-showcase .cat-story,
+.cat-showcase .cat-copy { display: none; }
+.cat-showcase .cat-visual { grid-row: 1; min-height: 0; }
+.cat-showcase .cat-footer-band {
+  justify-content: center;
+  border-top: 1px solid var(--cat-line);
+  padding-top: 6px;
+}
+.cat-showcase .cat-takeaway { font-size: clamp(14px, 1.05vw, 17px); }
+
+.cat-board {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+}
+.cat-board .cat-story { display: none; }
+.cat-board .cat-footer-band { grid-column: 1 / 3; }
+
+.cat-inspect {
+  grid-template-columns: minmax(220px, 0.42fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.cat-inspect .cat-story { display: none; }
+.cat-inspect .cat-visual { grid-column: 2; grid-row: 1; }
+.cat-inspect .cat-footer-band { grid-column: 1 / 3; }
+
+.cat-pipeline {
+  grid-template-columns: minmax(72px, 0.08fr) 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+.cat-pipeline .cat-story { grid-row: 1 / 4; }
+.cat-pipeline .cat-copy,
+.cat-pipeline .cat-visual,
+.cat-pipeline .cat-footer-band { grid-column: 2; }
+
+.cat-memory-first {
+  grid-template-columns: minmax(200px, 0.32fr) minmax(420px, 1.2fr);
+  grid-template-rows: 1fr auto;
+}
+.cat-memory-first .cat-story { display: none; }
+.cat-memory-first .cat-visual { grid-column: 2; grid-row: 1; }
+.cat-memory-first .cat-footer-band { grid-column: 1 / 3; }
+
+.cat-algo-board {
+  grid-template-columns: minmax(260px, 0.48fr) 1fr;
+  grid-template-rows: 1fr auto;
+}
+.cat-algo-board .cat-story { display: none; }
+.cat-algo-board .cat-footer-band { grid-column: 1 / 3; }
+
+.cat-code-split {
+  grid-template-columns: minmax(320px, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-rows: 1fr auto;
+}
+.cat-code-split .cat-story { display: none; }
+.cat-code-split .cat-footer-band { grid-column: 1 / 3; }
+
+.complex-analysis-transforms-optimization-deck .slide-frame[data-composition="full-stage"] .cat-visual,
+.complex-analysis-transforms-optimization-deck .slide-frame[data-composition="hero-open"] .cat-visual,
+.complex-analysis-transforms-optimization-deck .slide-frame[data-composition="memory-first"] .cat-visual,
+.complex-analysis-transforms-optimization-deck .slide-frame[data-composition="showcase"] .cat-visual {
+  min-height: 0;
+}
+.cat-full-stage .cat-visual { min-height: 62%; }
+.cat-hero-open .cat-visual,
+.cat-memory-first .cat-visual { flex: 1 1 auto; }
+
+/* ── Typography blocks ── */
+.cat-lead {
+  margin: 0;
+  font-size: clamp(21px, 1.55vw, 26px);
+  line-height: 1.38;
+  font-weight: 650;
+  color: var(--cat-navy);
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.cat-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.34;
+}
+.cat-points li { padding-left: 2px; }
+.cat-points li::marker { color: var(--cat-module); font-weight: 800; }
+
+.cat-definition {
+  background: #fff;
+  border: 1px solid var(--cat-line);
+  border-left: 5px solid var(--cat-data);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--cat-shadow);
+}
+.cat-definition span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--cat-data);
+}
+.cat-definition strong {
+  display: block;
+  font-size: clamp(20px, 1.6vw, 28px);
+  margin: 4px 0;
+}
+.cat-definition p {
+  margin: 0;
+  font-size: clamp(15px, 1.1vw, 18px);
+}
+
+.cat-callout {
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--cat-line);
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.06);
+}
+.cat-callout span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+}
+.cat-callout p {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.cat-callout-warn { border-left: 4px solid var(--cat-active); }
+.cat-callout-fault { border-left: 4px solid var(--cat-danger); }
+.cat-callout-ok { border-left: 4px solid var(--cat-ok); }
+.cat-callout-idea { border-left: 4px solid var(--cat-data); }
+.cat-callout-know { border-left: 4px solid var(--cat-pointer); }
+
+/* Scene shell */
+.cat-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.72), rgba(255, 250, 240, 0.28) 62%, transparent 78%);
+  overflow: hidden;
+  position: relative;
+}
+.cat-scene svg,
+.cat-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Code panel — light, readable (≥19px) */
+.cat-code-panel {
+  background: #ffffff;
+  border: 1.5px solid var(--cat-line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--cat-shadow);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.cat-code-line {
+  font-size: clamp(19px, 1.45vw, 22px);
+  line-height: 1.55;
+  color: var(--cat-navy);
+  font-weight: 650;
+  padding: 4px 10px;
+  border-radius: 8px;
+  white-space: pre;
+}
+.cat-code-line.is-current {
+  background: rgba(217, 119, 6, 0.14);
+  color: var(--cat-active);
+  box-shadow: inset 3px 0 0 var(--cat-active);
+}
+
+/* Linked list / stack / queue / tree helpers */
+.cat-ll-node { transform-box: fill-box; }
+.cat-stack-cell,
+.cat-queue-cell,
+.cat-tree-node {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ── Concept-native motion (catm-*) ──
+   State-change animations — not fade-in as primary teaching motion. */
+
+@keyframes catm-allocate {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.08); }
+  55% { transform: scale(0.96); }
+  70% { transform: scale(1.03); }
+}
+@keyframes catm-shift {
+  0%, 12% { transform: translateX(0); }
+  45%, 55% { transform: translateX(28px); }
+  88%, 100% { transform: translateX(0); }
+}
+@keyframes catm-insert {
+  0%, 15% { transform: translateY(-28px) scale(0.85); opacity: 0.35; }
+  40% { transform: translateY(0) scale(1.06); opacity: 1; }
+  55%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes catm-delete {
+  0%, 20% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(0.92) translateY(6px); opacity: 0.45; }
+  70%, 100% { transform: scale(0.85); opacity: 0.2; }
+}
+@keyframes catm-push {
+  0%, 10% { transform: translateY(-40px); opacity: 0.4; }
+  35% { transform: translateY(4px); opacity: 1; }
+  50%, 100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes catm-pop {
+  0%, 15% { transform: translateY(0); opacity: 1; }
+  45% { transform: translateY(-36px); opacity: 0.35; }
+  70%, 100% { transform: translateY(-8px); opacity: 0.55; }
+}
+@keyframes catm-enqueue {
+  0%, 12% { transform: translateX(40px); opacity: 0.35; }
+  40% { transform: translateX(-4px); opacity: 1; }
+  55%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes catm-dequeue {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  45% { transform: translateX(-48px); opacity: 0.3; }
+  70%, 100% { transform: translateX(-12px); opacity: 0.5; }
+}
+@keyframes catm-wrap {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(18deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(4deg); }
+}
+@keyframes catm-pointer {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -24; }
+}
+@keyframes catm-rewire {
+  0%, 20% { stroke-dashoffset: 40; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 0.85; }
+}
+@keyframes catm-traverse {
+  0%, 100% { stroke-dashoffset: 0; }
+  50% { stroke-dashoffset: -36; }
+}
+@keyframes catm-search {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(20px); }
+  75% { transform: translateX(10px); }
+}
+@keyframes catm-swap {
+  0%, 100% { transform: translate(0, 0); }
+  35% { transform: translate(14px, -10px); }
+  70% { transform: translate(-14px, 10px); }
+}
+@keyframes catm-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.62; }
+}
+@keyframes catm-wave {
+  0%, 100% { transform: scale(1); }
+  40% { transform: scale(1.07); }
+  70% { transform: scale(1.02); }
+}
+@keyframes catm-descend {
+  0%, 10% { transform: translate(0, -24px); opacity: 0.5; }
+  45% { transform: translate(36px, 40px); opacity: 1; }
+  70% { transform: translate(72px, 90px); opacity: 1; }
+  100% { transform: translate(72px, 90px); opacity: 0.85; }
+}
+@keyframes catm-return {
+  0%, 15% { transform: translate(40px, 60px); opacity: 0.6; }
+  55% { transform: translate(10px, 10px); opacity: 1; }
+  100% { transform: translate(0, 0); opacity: 1; }
+}
+
+.catm-allocate {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-allocate 2.4s ease-in-out infinite;
+}
+.catm-shift {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-shift 2.8s ease-in-out infinite;
+}
+.catm-insert {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-insert 2.6s ease-out infinite;
+}
+.catm-delete {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-delete 2.8s ease-in-out infinite;
+}
+.catm-push {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-push 2.4s ease-out infinite;
+}
+.catm-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-pop 2.4s ease-in infinite;
+}
+.catm-enqueue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-enqueue 2.5s ease-out infinite;
+}
+.catm-dequeue {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-dequeue 2.5s ease-in infinite;
+}
+.catm-wrap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-wrap 3s ease-in-out infinite;
+}
+.catm-pointer {
+  stroke-dasharray: 10 8;
+  animation: catm-pointer 1.4s linear infinite;
+}
+.catm-rewire {
+  stroke-dasharray: 12 10;
+  animation: catm-rewire 2.2s ease-in-out infinite;
+}
+.catm-traverse {
+  stroke-dasharray: 10 8;
+  animation: catm-traverse 1.6s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.catm-search {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-search 2.6s ease-in-out infinite;
+}
+.catm-swap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-swap 2.4s ease-in-out infinite;
+}
+.catm-pulse {
+  animation: catm-pulse 1.9s ease-in-out infinite;
+}
+.catm-wave {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-wave 2.2s ease-in-out infinite;
+}
+.catm-descend {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-descend 3.2s ease-in-out infinite;
+}
+.catm-return {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: catm-return 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .catm-allocate, .catm-shift, .catm-insert, .catm-delete,
+  .catm-push, .catm-pop, .catm-enqueue, .catm-dequeue,
+  .catm-wrap, .catm-pointer, .catm-rewire, .catm-traverse,
+  .catm-search, .catm-swap, .catm-pulse, .catm-wave,
+  .catm-descend, .catm-return {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Kit components ── */
+.cat-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 750;
+  color: var(--cat-navy);
+}
+.cat-flow i { color: var(--cat-module); font-style: normal; font-weight: 900; }
+
+.cat-algo-steps {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 6px;
+  font-size: clamp(15px, 1.15vw, 19px);
+  line-height: 1.4;
+}
+.cat-algo-steps li::marker { color: var(--cat-module); font-weight: 800; }
+
+.cat-complexity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--cat-line);
+  border-radius: 14px;
+  padding: 12px;
+}
+.cat-complexity > div {
+  display: grid;
+  gap: 2px;
+  text-align: center;
+}
+.cat-complexity span {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--cat-muted);
+}
+/* 1BMATEE301 cost cells hold a sentence ("one constraint per dependent source"),
+   not a big-O token, so they read at body size rather than display size. */
+.cat-complexity strong {
+  font-size: clamp(13px, 1.02vw, 16px);
+  line-height: 1.28;
+  font-weight: 750;
+  color: var(--cat-data);
+}
+.cat-complexity > p {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--cat-muted);
+}
+
+.cat-code-panel span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--cat-module);
+  margin-bottom: 8px;
+  font-family: system-ui, sans-serif;
+}
+.cat-code-panel pre {
+  margin: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.cat-code-panel code {
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.45;
+  color: var(--cat-navy);
+  font-weight: 650;
+}
+
+.cat-dryrun {
+  display: grid;
+  gap: 8px;
+}
+.cat-dryrun section {
+  background: #fff;
+  border: 1px solid var(--cat-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+.cat-dryrun span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--cat-module);
+}
+.cat-dryrun p { margin: 4px 0 0; font-size: 15px; }
+.cat-dryrun ol {
+  margin: 4px 0 0;
+  padding-left: 1.15em;
+  font-size: 14px;
+  display: grid;
+  gap: 3px;
+}
+
+.cat-term-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.cat-term-chips span {
+  background: var(--cat-sky);
+  color: var(--cat-data);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.cat-roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+.cat-roadmap article {
+  background: #fff;
+  border: 1px solid var(--cat-line);
+  border-radius: 12px;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+}
+.cat-roadmap b { color: var(--cat-module); font-size: 12px; }
+.cat-roadmap strong { font-size: 14px; line-height: 1.25; }
+
+.cat-checkpoint-sheet {
+  display: grid;
+  gap: 7px;
+}
+.cat-checkpoint-sheet article {
+  display: grid;
+  grid-template-columns: minmax(104px, 0.72fr) auto 1.85fr;
+  gap: 10px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--cat-line);
+  border-radius: 12px;
+  padding: 7px 12px;
+}
+.cat-checkpoint-sheet code {
+  font-size: clamp(16px, 1.2vw, 21px);
+  font-weight: 800;
+  color: var(--cat-data);
+}
+.cat-checkpoint-sheet span { font-size: 12.5px; line-height: 1.25; color: var(--cat-muted); }
+
+.cat-syllabus-audit {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+.cat-syllabus-audit article {
+  background: #fff;
+  border: 1px solid var(--cat-line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.cat-syllabus-audit strong { font-size: 14px; }
+.cat-syllabus-audit em {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--cat-ok);
+}
+
+.cat-practice-list {
+  margin: 0;
+  padding-left: 1.2em;
+  display: grid;
+  gap: 10px;
+  font-size: clamp(15px, 1.15vw, 18px);
+}
+.cat-practice-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.cat-practice-list em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--cat-active);
+  white-space: nowrap;
+}
+
+.cat-review-map {
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 16px;
+  padding: 12px;
+}
+.cat-review-map h3 {
+  margin: 0;
+  font-size: clamp(22px, 2vw, 32px);
+  color: var(--cat-navy);
+}
+.cat-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cat-review-topics span {
+  background: #fff;
+  border: 1.5px solid var(--cat-line);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* ── Instructional motion (classroom-paced) ── */
+@keyframes catm-flow-node {
+  0%, 100% { opacity: 0.55; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-4px); }
+}
+@keyframes catm-flow-arrow {
+  0% { stroke-dashoffset: 24; opacity: 0.4; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.4; }
+}
+@keyframes catm-feedback {
+  0% { stroke-dashoffset: 40; opacity: 0.45; }
+  50% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -40; opacity: 0.45; }
+}
+@keyframes catm-waterfall {
+  0% { opacity: 0; transform: translate(-12px, -18px); }
+  30%, 100% { opacity: 1; transform: translate(0, 0); }
+}
+@keyframes catm-cost-curve {
+  0% { stroke-dasharray: 0 800; }
+  100% { stroke-dasharray: 800 0; }
+}
+@keyframes catm-cost-dot {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+@keyframes catm-grow {
+  0% { opacity: 0; transform: scaleX(0.55); transform-origin: center; }
+  45%, 100% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes catm-spiral {
+  0% { opacity: 0.15; }
+  40% { opacity: 1; }
+  100% { opacity: 0.55; }
+}
+@keyframes catm-concurrent {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+@keyframes catm-up-line {
+  0% { stroke-dasharray: 0 1200; }
+  100% { stroke-dasharray: 1200 0; }
+}
+@keyframes catm-orbit {
+  0%, 100% { opacity: 0.65; }
+  50% { opacity: 1; }
+}
+@keyframes catm-token {
+  0% { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateY(-170px) rotate(-360deg); }
+}
+@keyframes catm-backlog {
+  0% { transform: translateX(0); }
+  35% { transform: translateX(210px); }
+  70% { transform: translateX(420px); }
+  100% { transform: translateX(630px); }
+}
+@keyframes catm-xp-step {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+}
+@keyframes catm-bar {
+  0% { transform: scaleX(0.2); transform-origin: left center; opacity: 0.4; }
+  50%, 100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes catm-gate {
+  0%, 100% { opacity: 0.7; }
+  40% { opacity: 1; }
+}
+@keyframes catm-fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  40%, 100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes catm-pulse-soft {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.catm-flow-node { animation: catm-flow-node 3.2s ease-in-out infinite; }
+.catm-flow-arrow { stroke-dasharray: 10 8; animation: catm-flow-arrow 2.8s linear infinite; }
+.catm-feedback { stroke-dasharray: 10 8; animation: catm-feedback 3.6s linear infinite; }
+.catm-waterfall { animation: catm-waterfall 3.5s ease-out infinite; }
+.catm-cost-curve { animation: catm-cost-curve 4s ease-out infinite; }
+.catm-cost-dot { animation: catm-cost-dot 2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.catm-grow { animation: catm-grow 3.8s ease-out infinite; }
+.catm-spiral { animation: catm-spiral 3.2s ease-in-out infinite; }
+.catm-concurrent { animation: catm-concurrent 2.8s ease-in-out infinite; }
+.catm-up-line { animation: catm-up-line 4.5s ease-out infinite; }
+.catm-orbit { animation: catm-orbit 2.6s ease-in-out infinite; }
+.catm-token { animation: catm-token 12s linear infinite; transform-box: fill-box; transform-origin: 450px 260px; }
+.catm-backlog-card { animation: catm-backlog 10s ease-in-out infinite; }
+.catm-xp-step { animation: catm-xp-step 3s ease-in-out infinite; }
+.catm-bar { animation: catm-bar 3.4s ease-out infinite; }
+.catm-gate { animation: catm-gate 2.8s ease-in-out infinite; }
+.catm-fade-in { animation: catm-fade-in 2.4s ease-out both; }
+.catm-pulse { animation: catm-pulse-soft 2.4s ease-in-out infinite; }
+.catm-step { animation: catm-pulse-soft 2.8s ease-in-out infinite; }
+.catm-actor { animation: catm-pulse-soft 3s ease-in-out infinite; }
+.catm-usecase-step { animation: catm-flow-node 2.8s ease-in-out infinite; }
+.catm-system-box { animation: catm-pulse-soft 2.6s ease-in-out infinite; }
+.catm-risk-cell { animation: catm-pulse-soft 3.2s ease-in-out infinite; }
+.catm-risk-dot { animation: catm-cost-dot 1.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.catm-delay-0 { animation-delay: 0s; }
+.catm-delay-1 { animation-delay: 0.35s; }
+.catm-delay-2 { animation-delay: 0.7s; }
+.catm-delay-3 { animation-delay: 1.05s; }
+.catm-delay-4 { animation-delay: 1.4s; }
+
+/* ── Complex Analysis, Transforms and Optimization instructional motion ──
+   Every animation below shows a circuit mechanism: current marching, a phasor
+   turning, a transient decaying, a pole moving. Decoration is not the job. */
+@keyframes catm-current {
+  0% { stroke-dashoffset: 36; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes catm-current-rev {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 36; }
+}
+@keyframes catm-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes catm-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes catm-draw {
+  0% { stroke-dashoffset: 900; }
+  55%, 100% { stroke-dashoffset: 0; }
+}
+@keyframes catm-sweep-x {
+  0% { transform: translateX(0); opacity: 0.25; }
+  12% { opacity: 1; }
+  100% { transform: translateX(var(--catm-sweep, 620px)); opacity: 0.9; }
+}
+@keyframes catm-switch {
+  0%, 35% { transform: rotate(-32deg); }
+  55%, 100% { transform: rotate(0deg); }
+}
+@keyframes catm-decay-dot {
+  0% { transform: translate(0, 0); opacity: 0.4; }
+  10% { opacity: 1; }
+  100% { transform: translate(var(--catm-dx, 560px), var(--catm-dy, 210px)); opacity: 0.9; }
+}
+@keyframes catm-ring {
+  0%, 100% { transform: translateY(0); }
+  18% { transform: translateY(-46px); }
+  36% { transform: translateY(32px); }
+  54% { transform: translateY(-19px); }
+  72% { transform: translateY(11px); }
+  86% { transform: translateY(-5px); }
+}
+@keyframes catm-merge-l {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(118px); opacity: 0.35; }
+}
+@keyframes catm-merge-r {
+  0%, 15% { transform: translateX(0); opacity: 1; }
+  60%, 100% { transform: translateX(-118px); opacity: 0.35; }
+}
+@keyframes catm-collapse {
+  0%, 25% { transform: scale(1); opacity: 1; }
+  70%, 100% { transform: scale(0.42); opacity: 0.18; }
+}
+@keyframes catm-emerge {
+  0%, 35% { transform: scale(0.55); opacity: 0; }
+  80%, 100% { transform: scale(1); opacity: 1; }
+}
+@keyframes catm-slide-in {
+  0% { transform: translateX(-34px); opacity: 0; }
+  45%, 100% { transform: translateX(0); opacity: 1; }
+}
+@keyframes catm-pole-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(var(--catm-px, -70px), 0); }
+}
+@keyframes catm-needle {
+  0%, 100% { transform: rotate(-58deg); }
+  50% { transform: rotate(52deg); }
+}
+@keyframes catm-wave-shift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-180px); }
+}
+@keyframes catm-cell-in {
+  0% { opacity: 0; transform: translateY(9px) scale(0.94); }
+  45%, 100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes catm-charge {
+  /* Floor stays high enough that pulsing LABELS remain readable. */
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+@keyframes catm-flux {
+  0%, 100% { transform: scale(0.94); opacity: 0.72; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+@keyframes catm-probe {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(var(--catm-probe, 96px)); }
+}
+@keyframes catm-flip {
+  0%, 20% { transform: scaleX(1); }
+  45%, 100% { transform: scaleX(-1); }
+}
+
+.catm-current { stroke-dasharray: 9 9; animation: catm-current 1.1s linear infinite; }
+.catm-current-slow { stroke-dasharray: 9 9; animation: catm-current 2.2s linear infinite; }
+.catm-current-rev { stroke-dasharray: 9 9; animation: catm-current-rev 1.4s linear infinite; }
+.catm-spin { animation: catm-spin 4.4s linear infinite; transform-box: fill-box; }
+.catm-spin-slow { animation: catm-spin-slow 6s linear infinite; transform-box: fill-box; }
+.catm-draw { stroke-dasharray: 900; animation: catm-draw 4s ease-out infinite; }
+.catm-sweep-x { animation: catm-sweep-x 3.6s linear infinite; }
+.catm-switch { animation: catm-switch 3.4s ease-in-out infinite; transform-box: fill-box; }
+.catm-decay-dot { animation: catm-decay-dot 3.8s ease-in infinite; transform-box: fill-box; }
+.catm-ring { animation: catm-ring 3.6s ease-in-out infinite; transform-box: fill-box; }
+.catm-merge-l { animation: catm-merge-l 3.8s ease-in-out infinite; transform-box: fill-box; }
+.catm-merge-r { animation: catm-merge-r 3.8s ease-in-out infinite; transform-box: fill-box; }
+.catm-collapse { animation: catm-collapse 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+/* Reveals play ONCE and hold. Looping them would leave labelled steps and
+   formulas fading in and out under the reader — legibility beats motion. */
+.catm-emerge { animation: catm-emerge 1.2s ease-out both; transform-box: fill-box; transform-origin: center; }
+.catm-slide-in { animation: catm-slide-in 0.9s ease-out both; transform-box: fill-box; }
+.catm-pole-drift { animation: catm-pole-drift 4.4s ease-in-out infinite; transform-box: fill-box; }
+.catm-needle { animation: catm-needle 3.4s ease-in-out infinite; transform-box: fill-box; }
+.catm-wave-shift { animation: catm-wave-shift 2.4s linear infinite; }
+.catm-cell-in { animation: catm-cell-in 0.9s ease-out both; transform-box: fill-box; }
+.catm-charge { animation: catm-charge 2.2s ease-in-out infinite; }
+.catm-flux { animation: catm-flux 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.catm-probe { animation: catm-probe 3.2s ease-in-out infinite; transform-box: fill-box; }
+.catm-flip { animation: catm-flip 4.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+
+.catm-delay-5 { animation-delay: 1.75s; }
+.catm-delay-6 { animation-delay: 2.1s; }
+.catm-delay-7 { animation-delay: 2.45s; }
+
+
+.cat-scene, .cat-showcase-scene { width: 100%; height: 100%; min-height: 0; }
+.cat-svg { width: 100%; height: 100%; display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .complex-analysis-transforms-optimization-deck [class*="catm-"] {
+    animation: none !important;
+  }
+}
+
+/* Dense algorithm slides (real algo steps + dry-run trace) must fit the
+   algo-board left column at 1280×720. Tighten only in that composition. */
+.cat-algo-board .cat-algo-steps { gap: 4px; font-size: clamp(14px, 1.02vw, 17px); line-height: 1.3; }
+.cat-algo-board .cat-dryrun { gap: 5px; }
+.cat-algo-board .cat-dryrun section { padding: 6px 11px; }
+.cat-algo-board .cat-dryrun ol { gap: 2px; font-size: 13.5px; }
+.cat-algo-board .cat-dryrun p { font-size: 14px; }
+.cat-algo-board .cat-lead { font-size: clamp(16px, 1.25vw, 20px); }
+
+/* ── 1BMATEE301-specific kit pieces (no Computer Graphics counterpart) ── */
+
+/* Textbook provenance carried from Phase 1. Units whose prescribed book was
+   not supplied render a chapter with no page range — that is intentional. */
+.cat-book-cite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--cat-muted);
+}
+.cat-book-cite b {
+  background: var(--cat-sky);
+  color: var(--cat-data);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.cat-book-cite span { font-style: normal; }
+.cat-book-cite em {
+  font-style: normal;
+  background: rgba(21, 128, 61, 0.1);
+  color: var(--cat-ok);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-weight: 800;
+}
+.cat-book-cite i {
+  font-style: normal;
+  border: 1px solid var(--cat-line);
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+
+.cat-quiz-card {
+  background: #fff;
+  border: 1px solid var(--cat-line);
+  border-left: 4px solid var(--cat-data);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: var(--cat-shadow);
+}
+.cat-quiz-card + .cat-quiz-card { margin-top: 8px; }
+.cat-quiz-card strong {
+  display: block;
+  font-size: 15.5px;
+  line-height: 1.3;
+  color: var(--cat-navy);
+}
+.cat-quiz-card ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 10px;
+  margin: 8px 0 0;
+  padding: 0 0 0 18px;
+  font-size: 13.5px;
+  font-weight: 650;
+}
+.cat-quiz-card li.is-correct {
+  color: var(--cat-ok);
+  font-weight: 800;
+}
+.cat-quiz-card li.is-correct::marker { color: var(--cat-ok); }
+.cat-quiz-card p {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--cat-muted);
+}
+
+/* Showcase beats hand the whole stage to one mechanism. */
+.cat-showcase-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Eight checkpoint rows must fit one 1280x720 stage above the footer band.
+   Sized against the longest 1BMATEE301 topic ("Sources of electrical energy:
+   independent and dependent") wrapping to two lines. !important so it beats
+   the platform legibility layer, which loads after this sheet. */
+.cat-stage.cat-fill .cat-checkpoint-sheet { gap: 6px !important; }
+.cat-stage.cat-fill .cat-checkpoint-sheet article {
+  grid-template-columns: minmax(180px, 1fr) auto 1.6fr !important;
+  gap: 10px !important;
+  padding: 6px 11px !important;
+}
+.cat-stage.cat-fill .cat-checkpoint-sheet strong {
+  font-size: 14.5px !important;
+  line-height: 1.2 !important;
+}
+.cat-stage.cat-fill .cat-checkpoint-sheet code { font-size: 13px !important; }
+.cat-stage.cat-fill .cat-checkpoint-sheet span { font-size: 12px !important; line-height: 1.24 !important; }
+
+/* Worked-step panel: body shrinks and the citation sits in a footer so a long
+   step loses type size rather than its last lines to `overflow: hidden`. */
+.cat-code-panel {
+  display: flex;
+  flex-direction: column;
+}
+.cat-code-panel pre {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.cat-code-panel.is-dense code {
+  font-size: clamp(13px, 1.05vw, 16px);
+  line-height: 1.34;
+}
+.cat-code-panel small {
+  display: block;
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--cat-line);
+  font-family: system-ui, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: var(--cat-muted);
+}

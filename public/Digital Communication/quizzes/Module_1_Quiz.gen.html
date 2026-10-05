@@ -1,0 +1,478 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BEC503 Module 1 Quiz</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 10.5pt; color: #12203A; line-height: 1.45; }
+h1 { font-size: 19pt; margin: 0 0 4pt; color: #12203A; }
+h2 { font-size: 13.5pt; margin: 16pt 0 5pt; padding-bottom: 3pt; border-bottom: 1.5pt solid #0F6FC6; color: #0F6FC6; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 11pt 0 3pt; color: #12203A; page-break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 8pt 0 2pt; color: #5A6478; page-break-after: avoid; }
+p { margin: 4pt 0; }
+ul, ol { margin: 4pt 0 4pt 16pt; padding: 0; }
+li { margin: 2pt 0; page-break-inside: avoid; }
+hr { border: 0; border-top: 0.75pt solid #D7DEE8; margin: 10pt 0; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; background: #F1F5FA; padding: 0 2pt; border-radius: 2pt; }
+pre { font-family: Consolas, monospace; font-size: 9pt; background: #F1F5FA; border-left: 2.5pt solid #0F6FC6; padding: 6pt 8pt; margin: 5pt 0; white-space: pre-wrap; page-break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0; font-size: 9.5pt; }
+th { background: #0F6FC6; color: #fff; text-align: left; padding: 4pt 5pt; font-weight: 600; }
+td { border: 0.5pt solid #D7DEE8; padding: 4pt 5pt; vertical-align: top; }
+tr { page-break-inside: avoid; }
+tbody tr:nth-child(even) td { background: #F7FAFD; }
+strong { color: #12203A; }
+.tag { font-family: Consolas, monospace; font-size: 9pt; color: #C2410C; }
+</style></head><body>
+<h1>BEC503 Digital Communication — Module 1 Quiz</h1>
+<p><strong>Bandpass Signals to Equivalent Lowpass and Signalling over AWGN Channels</strong></p>
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>
+<tr><td>Subject code</td><td>BEC503</td></tr>
+<tr><td>Module</td><td>1 — Bandpass Signals to Equivalent Lowpass and Signalling over AWGN Channels</td></tr>
+<tr><td>Duration</td><td>45 minutes</td></tr>
+<tr><td>Maximum marks</td><td>50 (Part A 20 + Part B 30)</td></tr>
+<tr><td>Attempts allowed</td><td>1</td></tr>
+<tr><td>Passing marks</td><td>20</td></tr>
+<tr><td>Textbook</td><td>Simon Haykin, Digital Communication Systems, 1st ed., 2014</td></tr>
+</tbody></table>
+<h2>Instructions</h2>
+<ul>
+<li>Part A carries 20 one-mark multiple choice questions. Exactly one option is correct.</li>
+<li>Part B carries 13 short questions totalling 30 marks.</li>
+<li>Give all error probabilities in terms of the Q function; numerical evaluation is not required.</li>
+<li>State energies in joules and power spectral densities as two-sided unless the question says otherwise.</li>
+<li>Non-programmable calculators are permitted. No textbooks or notes.</li>
+</ul>
+<h2>Course outcome and Bloom coverage</h2>
+<table><thead><tr><th>Band</th><th>Questions</th><th>Share</th><th>Target</th></tr></thead><tbody>
+<tr><td>L1–L2 Remember / Understand</td><td>7</td><td>21%</td><td>~30%</td></tr>
+<tr><td>L3–L4 Apply / Analyse</td><td>26</td><td>79%</td><td>~45%</td></tr>
+<tr><td>L5–L6 Evaluate / Create</td><td>0</td><td>0%</td><td>~25%</td></tr>
+</tbody></table>
+<p>Course outcome spread: CO1: 33. Total questions: 33.</p>
+<hr/>
+<h2>Part A — Multiple choice (20 × 1 mark = 20 marks)</h2>
+<p><strong>A1.</strong> The Hilbert transform multiplies the spectrum of a signal by which factor?  <code>[CO1 | L1 | 1 mark | easy | Ch.2, pp.42-45]</code></p>
+<ul>
+<li>(A) -j sgn(f)</li>
+<li>(B) +j sgn(f)</li>
+<li>(C) sgn(f)</li>
+<li>(D) j only for f &gt; 0</li>
+</ul>
+<p><strong>A2.</strong> What is the magnitude response |H(f)| of an ideal Hilbert transformer?  <code>[CO1 | L2 | 1 mark | medium | Ch.2, pp.42-45]</code></p>
+<ul>
+<li>(A) 1 for all f</li>
+<li>(B) 0 for f &lt; 0</li>
+<li>(C) f for all f</li>
+<li>(D) 1/(pi f)</li>
+</ul>
+<p><strong>A3.</strong> The Hilbert transform of cos(2 pi f0 t) is  <code>[CO1 | L2 | 1 mark | easy | Ch.2, pp.42-45]</code></p>
+<ul>
+<li>(A) sin(2 pi f0 t)</li>
+<li>(B) -sin(2 pi f0 t)</li>
+<li>(C) cos(2 pi f0 t)</li>
+<li>(D) -cos(2 pi f0 t)</li>
+</ul>
+<p><strong>A4.</strong> Applying the Hilbert transform twice to g(t) returns  <code>[CO1 | L3 | 1 mark | medium | Ch.2, pp.42-45]</code></p>
+<ul>
+<li>(A) -g(t)</li>
+<li>(B) g(t)</li>
+<li>(C) j g(t)</li>
+<li>(D) zero</li>
+</ul>
+<p><strong>A5.</strong> The spectrum of the pre-envelope g_plus(t) for f &gt; 0 equals  <code>[CO1 | L2 | 1 mark | medium | Ch.2, pp.45-47]</code></p>
+<ul>
+<li>(A) 2 G(f)</li>
+<li>(B) G(f)</li>
+<li>(C) G(f)/2</li>
+<li>(D) 0</li>
+</ul>
+<p><strong>A6.</strong> Why must the pre-envelope of a real signal be complex?  <code>[CO1 | L4 | 1 mark | hard | Ch.2, pp.45-47]</code></p>
+<ul>
+<li>(A) A one-sided spectrum cannot satisfy the conjugate symmetry that real signals require</li>
+<li>(B) Because the Hilbert transform is complex</li>
+<li>(C) Because the carrier frequency is complex</li>
+<li>(D) It need not be; it is real whenever g(t) is real</li>
+</ul>
+<p><strong>A7.</strong> The complex envelope is obtained from the pre-envelope by multiplying by  <code>[CO1 | L2 | 1 mark | medium | Ch.2, pp.47-49]</code></p>
+<ul>
+<li>(A) exp(-j 2 pi fc t)</li>
+<li>(B) exp(+j 2 pi fc t)</li>
+<li>(C) cos(2 pi fc t)</li>
+<li>(D) 2 cos(2 pi fc t)</li>
+</ul>
+<p><strong>A8.</strong> For the canonical representation g(t) = gI cos(2 pi fc t) - gQ sin(2 pi fc t), the natural envelope is  <code>[CO1 | L3 | 1 mark | medium | Ch.2, pp.49-52]</code></p>
+<ul>
+<li>(A) sqrt(gI^2 + gQ^2)</li>
+<li>(B) gI + gQ</li>
+<li>(C) |gI| + |gQ|</li>
+<li>(D) max(gI, gQ)</li>
+</ul>
+<p><strong>A9.</strong> What sign precedes the quadrature term in the canonical bandpass representation?  <code>[CO1 | L3 | 1 mark | hard | Ch.2, pp.49-52]</code></p>
+<ul>
+<li>(A) Minus</li>
+<li>(B) Plus</li>
+<li>(C) Either, they are equivalent</li>
+<li>(D) It depends on the carrier frequency</li>
+</ul>
+<p><strong>A10.</strong> In the AWGN model, N0/2 denotes  <code>[CO1 | L2 | 1 mark | medium | Ch.7, pp.323-324]</code></p>
+<ul>
+<li>(A) the two-sided power spectral density of the noise</li>
+<li>(B) half the total noise power</li>
+<li>(C) the noise variance per symbol</li>
+<li>(D) the one-sided power spectral density</li>
+</ul>
+<p><strong>A11.</strong> Which of these is NOT an assumption of the AWGN channel model?  <code>[CO1 | L4 | 1 mark | hard | Ch.7, pp.323-324]</code></p>
+<ul>
+<li>(A) The noise is independent of the signal</li>
+<li>(B) The noise samples are uncorrelated</li>
+<li>(C) The noise is Gaussian distributed</li>
+<li>(D) The noise power is finite over all frequencies</li>
+</ul>
+<p><strong>A12.</strong> For M signals spanning an N-dimensional space, which relation always holds?  <code>[CO1 | L3 | 1 mark | medium | Ch.7, pp.324-332]</code></p>
+<ul>
+<li>(A) N &lt;= M</li>
+<li>(B) N = M</li>
+<li>(C) N &gt;= M</li>
+<li>(D) N = M - 1</li>
+</ul>
+<p><strong>A13.</strong> In the Gram-Schmidt procedure, a zero residual for signal s_i means  <code>[CO1 | L4 | 1 mark | hard | Ch.7, pp.324-332]</code></p>
+<ul>
+<li>(A) s_i is a linear combination of the previous signals and adds no dimension</li>
+<li>(B) s_i has zero energy</li>
+<li>(C) the procedure has failed</li>
+<li>(D) s_i is orthogonal to all previous signals</li>
+</ul>
+<p><strong>A14.</strong> The variance of each noise projection w_j onto an orthonormal basis function is  <code>[CO1 | L3 | 1 mark | medium | Ch.7, pp.332-337]</code></p>
+<ul>
+<li>(A) N0/2</li>
+<li>(B) N0</li>
+<li>(C) N0/4</li>
+<li>(D) It depends on which basis function</li>
+</ul>
+<p><strong>A15.</strong> The theorem of irrelevance justifies  <code>[CO1 | L4 | 1 mark | hard | Ch.7, pp.332-337]</code></p>
+<ul>
+<li>(A) discarding the component of x(t) outside the signal space</li>
+<li>(B) ignoring the noise entirely</li>
+<li>(C) using a suboptimal receiver to save cost</li>
+<li>(D) sampling below the Nyquist rate</li>
+</ul>
+<p><strong>A16.</strong> With equally likely signals and AWGN, the maximum likelihood rule is equivalent to  <code>[CO1 | L3 | 1 mark | easy | Ch.7, pp.337-344]</code></p>
+<ul>
+<li>(A) choosing the signal at minimum Euclidean distance from the observation</li>
+<li>(B) choosing the signal of largest energy</li>
+<li>(C) choosing the signal of smallest energy</li>
+<li>(D) choosing at random among all M</li>
+</ul>
+<p><strong>A17.</strong> The impulse response of a filter matched to phi(t) over [0,T] is  <code>[CO1 | L2 | 1 mark | medium | Ch.7, pp.337-344]</code></p>
+<ul>
+<li>(A) phi(T - t)</li>
+<li>(B) phi(t)</li>
+<li>(C) phi(t - T)</li>
+<li>(D) -phi(t)</li>
+</ul>
+<p><strong>A18.</strong> The maximum output SNR of a matched filter for a pulse of energy E is  <code>[CO1 | L3 | 1 mark | medium | Ch.7, pp.337-344]</code></p>
+<ul>
+<li>(A) 2E/N0</li>
+<li>(B) E/N0</li>
+<li>(C) E/(2 N0)</li>
+<li>(D) It depends on the pulse shape</li>
+</ul>
+<p><strong>A19.</strong> A correlator and a matched filter produce the same value  <code>[CO1 | L4 | 1 mark | hard | Ch.7, pp.337-344]</code></p>
+<ul>
+<li>(A) only at the sampling instant t = T</li>
+<li>(B) at every instant</li>
+<li>(C) never</li>
+<li>(D) only for rectangular pulses</li>
+</ul>
+<p><strong>A20.</strong> Failing to reset the integrate-and-dump at each symbol boundary causes  <code>[CO1 | L4 | 1 mark | medium | Ch.7, pp.337-344]</code></p>
+<ul>
+<li>(A) accumulation across symbols, so each observation contains earlier symbols</li>
+<li>(B) a fixed 3 dB SNR loss</li>
+<li>(C) a carrier phase error</li>
+<li>(D) no effect if the symbols are equally likely</li>
+</ul>
+<hr/>
+<h2>Part B — Descriptive (13 questions, 30 marks)</h2>
+<p><strong>B1.</strong> Explain why a bandpass signal is replaced by its complex lowpass equivalent, and state what is gained and what is lost.  <code>[CO1 | L3 | 3 marks | Ch.2, pp.42-45]</code></p>
+<p><strong>B2.</strong> Define the Hilbert transform and prove that it does not change the energy of a signal.  <code>[CO1 | L3 | 3 marks | Ch.2, pp.42-45]</code></p>
+<p><strong>B3.</strong> Show how the pre-envelope produces a one-sided spectrum, and explain why the result must be complex.  <code>[CO1 | L4 | 3 marks | Ch.2, pp.45-47]</code></p>
+<p><strong>B4.</strong> Write the canonical representation of a bandpass signal and explain why the in-phase and quadrature channels do not interfere.  <code>[CO1 | L3 | 3 marks | Ch.2, pp.49-52]</code></p>
+<p><strong>B5.</strong> State the three assumptions in the name "additive white Gaussian noise" and give a real channel that violates each.  <code>[CO1 | L4 | 2 marks | Ch.7, pp.323-324]</code></p>
+<p><strong>B6.</strong> Explain what the Gram-Schmidt procedure computes and what a zero residual signifies.  <code>[CO1 | L3 | 2 marks | Ch.7, pp.324-332]</code></p>
+<p><strong>B7.</strong> A binary scheme uses s1(t) = +sqrt(E) phi(t) and s2(t) = -sqrt(E) phi(t). Give N, the two signal vectors, and d_min.  <code>[CO1 | L3 | 2 marks | Ch.7, pp.324-332]</code></p>
+<p><strong>B8.</strong> Explain why the noise projections onto an orthonormal basis are independent and identically distributed.  <code>[CO1 | L4 | 2 marks | Ch.7, pp.332-337]</code></p>
+<p><strong>B9.</strong> State the theorem of irrelevance and explain why it fails for coloured noise.  <code>[CO1 | L4 | 2 marks | Ch.7, pp.332-337]</code></p>
+<p><strong>B10.</strong> Derive, in outline, why maximum likelihood detection in AWGN reduces to minimum distance.  <code>[CO1 | L4 | 2 marks | Ch.7, pp.337-344]</code></p>
+<p><strong>B11.</strong> Describe the correlation receiver and state the one implementation detail that most commonly breaks it.  <code>[CO1 | L3 | 2 marks | Ch.7, pp.337-344]</code></p>
+<p><strong>B12.</strong> Show that a matched filter and a correlator give the same output at t = T.  <code>[CO1 | L4 | 2 marks | Ch.7, pp.337-344]</code></p>
+<p><strong>B13.</strong> The peak SNR of a matched filter is 2E/N0 and does not depend on pulse shape. Explain why that is a useful result.  <code>[CO1 | L4 | 2 marks | Ch.7, pp.337-344]</code></p>
+<hr/>
+<h2>Answer key — Part A</h2>
+<table><thead><tr><th>Q</th><th>Answer</th><th>CO</th><th>Bloom</th><th>Reference</th></tr></thead><tbody>
+<tr><td>A1</td><td>A</td><td>CO1</td><td>L1</td><td>Ch.2, pp.42-45</td></tr>
+<tr><td>A2</td><td>A</td><td>CO1</td><td>L2</td><td>Ch.2, pp.42-45</td></tr>
+<tr><td>A3</td><td>A</td><td>CO1</td><td>L2</td><td>Ch.2, pp.42-45</td></tr>
+<tr><td>A4</td><td>A</td><td>CO1</td><td>L3</td><td>Ch.2, pp.42-45</td></tr>
+<tr><td>A5</td><td>A</td><td>CO1</td><td>L2</td><td>Ch.2, pp.45-47</td></tr>
+<tr><td>A6</td><td>A</td><td>CO1</td><td>L4</td><td>Ch.2, pp.45-47</td></tr>
+<tr><td>A7</td><td>A</td><td>CO1</td><td>L2</td><td>Ch.2, pp.47-49</td></tr>
+<tr><td>A8</td><td>A</td><td>CO1</td><td>L3</td><td>Ch.2, pp.49-52</td></tr>
+<tr><td>A9</td><td>A</td><td>CO1</td><td>L3</td><td>Ch.2, pp.49-52</td></tr>
+<tr><td>A10</td><td>A</td><td>CO1</td><td>L2</td><td>Ch.7, pp.323-324</td></tr>
+<tr><td>A11</td><td>D</td><td>CO1</td><td>L4</td><td>Ch.7, pp.323-324</td></tr>
+<tr><td>A12</td><td>A</td><td>CO1</td><td>L3</td><td>Ch.7, pp.324-332</td></tr>
+<tr><td>A13</td><td>A</td><td>CO1</td><td>L4</td><td>Ch.7, pp.324-332</td></tr>
+<tr><td>A14</td><td>A</td><td>CO1</td><td>L3</td><td>Ch.7, pp.332-337</td></tr>
+<tr><td>A15</td><td>A</td><td>CO1</td><td>L4</td><td>Ch.7, pp.332-337</td></tr>
+<tr><td>A16</td><td>A</td><td>CO1</td><td>L3</td><td>Ch.7, pp.337-344</td></tr>
+<tr><td>A17</td><td>A</td><td>CO1</td><td>L2</td><td>Ch.7, pp.337-344</td></tr>
+<tr><td>A18</td><td>A</td><td>CO1</td><td>L3</td><td>Ch.7, pp.337-344</td></tr>
+<tr><td>A19</td><td>A</td><td>CO1</td><td>L4</td><td>Ch.7, pp.337-344</td></tr>
+<tr><td>A20</td><td>A</td><td>CO1</td><td>L4</td><td>Ch.7, pp.337-344</td></tr>
+</tbody></table>
+<h2>Part A — why each option is right or wrong</h2>
+<p><strong>A1.</strong> Correct answer: (A) -j sgn(f)</p>
+<ul>
+<li>(A) Correct - this gives -90 degrees for positive frequencies and +90 degrees for negative ones.</li>
+<li>(B) Wrong - this reverses the sign of the phase shift and would build the wrong pre-envelope.</li>
+<li>(C) Wrong - a real multiplier changes magnitude sign, not phase, and cannot produce a 90-degree shift.</li>
+<li>(D) Wrong - the transform must act on negative frequencies too, otherwise the result is not real-input consistent.</li>
+</ul>
+<p><strong>A2.</strong> Correct answer: (A) 1 for all f</p>
+<ul>
+<li>(A) Correct - it is an all-pass phase shifter; no frequency is attenuated.</li>
+<li>(B) Wrong - that describes the pre-envelope operation, which is the Hilbert transform combined with the original.</li>
+<li>(C) Wrong - that is a differentiator, which does change magnitude with frequency.</li>
+<li>(D) Wrong - 1/(pi t) is the time-domain kernel, not the frequency response.</li>
+</ul>
+<p><strong>A3.</strong> Correct answer: (A) sin(2 pi f0 t)</p>
+<ul>
+<li>(A) Correct - a -90 degree shift turns cosine into sine.</li>
+<li>(B) Wrong - that is the result of shifting by +90 degrees instead.</li>
+<li>(C) Wrong - the transform is not the identity; something must change.</li>
+<li>(D) Wrong - that is the result of applying the transform twice.</li>
+</ul>
+<p><strong>A4.</strong> Correct answer: (A) -g(t)</p>
+<ul>
+<li>(A) Correct - (-j sgn f) squared is -1 for every non-zero frequency.</li>
+<li>(B) Wrong - that would require the transform to be its own inverse, which it is not.</li>
+<li>(C) Wrong - the double transform of a real signal is real, so no j can survive.</li>
+<li>(D) Wrong - no energy is lost; only the sign changes.</li>
+</ul>
+<p><strong>A5.</strong> Correct answer: (A) 2 G(f)</p>
+<ul>
+<li>(A) Correct - the positive half is doubled while the negative half cancels.</li>
+<li>(B) Wrong - that would leave the total energy unchanged, but the construction concentrates it on one side.</li>
+<li>(C) Wrong - halving is the reverse of what the addition of j times the Hilbert transform does.</li>
+<li>(D) Wrong - the positive half is the half that survives; it is the negative half that vanishes.</li>
+</ul>
+<p><strong>A6.</strong> Correct answer: (A) A one-sided spectrum cannot satisfy the conjugate symmetry that real signals require</p>
+<ul>
+<li>(A) Correct - real signals have G(-f) = G*(f), which forces content at negative frequencies.</li>
+<li>(B) Wrong - the Hilbert transform of a real signal is itself real; the j is added explicitly.</li>
+<li>(C) Wrong - fc is an ordinary real frequency.</li>
+<li>(D) Wrong - the pre-envelope is complex by construction whenever the negative half is removed.</li>
+</ul>
+<p><strong>A7.</strong> Correct answer: (A) exp(-j 2 pi fc t)</p>
+<ul>
+<li>(A) Correct - this translates the spectrum down to baseband.</li>
+<li>(B) Wrong - the positive exponent shifts the spectrum up to 2fc instead of down to zero.</li>
+<li>(C) Wrong - a real cosine creates two images rather than a clean translation.</li>
+<li>(D) Wrong - same problem: a real multiplier produces sum and difference terms.</li>
+</ul>
+<p><strong>A8.</strong> Correct answer: (A) sqrt(gI^2 + gQ^2)</p>
+<ul>
+<li>(A) Correct - the envelope is the magnitude of the complex envelope.</li>
+<li>(B) Wrong - a plain sum ignores that the two components are on orthogonal axes.</li>
+<li>(C) Wrong - the sum of absolute values is a common approximation but is not the envelope.</li>
+<li>(D) Wrong - taking the larger component underestimates the magnitude by up to 41%.</li>
+</ul>
+<p><strong>A9.</strong> Correct answer: (A) Minus</p>
+<ul>
+<li>(A) Correct - it follows from taking the real part of the product of two complex quantities.</li>
+<li>(B) Wrong - a plus sign corresponds to the conjugate envelope and inverts the quadrature axis.</li>
+<li>(C) Wrong - the sign flips the Q axis, which is not a harmless convention change.</li>
+<li>(D) Wrong - the sign comes from the algebra of Re{(gI + j gQ)(cos + j sin)}, not from fc.</li>
+</ul>
+<p><strong>A10.</strong> Correct answer: (A) the two-sided power spectral density of the noise</p>
+<ul>
+<li>(A) Correct - N0 is the one-sided density and N0/2 the two-sided one.</li>
+<li>(B) Wrong - total power over infinite bandwidth is unbounded; N0/2 is a density.</li>
+<li>(C) Wrong - the variance per projection happens to equal N0/2, but the symbol has N dimensions.</li>
+<li>(D) Wrong - the one-sided density is N0, without the factor of two.</li>
+</ul>
+<p><strong>A11.</strong> Correct answer: (D) The noise power is finite over all frequencies</p>
+<ul>
+<li>(A) Wrong - additivity is exactly one of the three assumptions.</li>
+<li>(B) Wrong - whiteness means precisely that samples are uncorrelated.</li>
+<li>(C) Wrong - the Gaussian assumption is the third of the three.</li>
+<li>(D) Correct - a flat density over infinite bandwidth implies infinite total power; the model is deliberately idealised.</li>
+</ul>
+<p><strong>A12.</strong> Correct answer: (A) N &lt;= M</p>
+<ul>
+<li>(A) Correct - the dimension can never exceed the number of signals and is often smaller.</li>
+<li>(B) Wrong - QPSK has M = 4 and N = 2, so equality is not general.</li>
+<li>(C) Wrong - you cannot span more dimensions than you have signals.</li>
+<li>(D) Wrong - there is no fixed offset; BPSK has M = 2 and N = 1, but QPSK has M = 4 and N = 2.</li>
+</ul>
+<p><strong>A13.</strong> Correct answer: (A) s_i is a linear combination of the previous signals and adds no dimension</p>
+<ul>
+<li>(A) Correct - nothing new remains after subtracting the projections, so no new basis function is created.</li>
+<li>(B) Wrong - a signal with plenty of energy can still be fully represented by earlier ones.</li>
+<li>(C) Wrong - it is the normal way the algorithm discovers that N &lt; M.</li>
+<li>(D) Wrong - an orthogonal signal gives a residual equal to itself, which is the opposite case.</li>
+</ul>
+<p><strong>A14.</strong> Correct answer: (A) N0/2</p>
+<ul>
+<li>(A) Correct - every axis sees the same variance, which is what makes the noise cloud spherical.</li>
+<li>(B) Wrong - that is the one-sided density, not the projection variance.</li>
+<li>(C) Wrong - no fourth appears anywhere in the derivation.</li>
+<li>(D) Wrong - orthonormality makes the variance identical on every axis, which is exactly the point.</li>
+</ul>
+<p><strong>A15.</strong> Correct answer: (A) discarding the component of x(t) outside the signal space</p>
+<ul>
+<li>(A) Correct - that component is independent of the signal, so it cannot inform the decision.</li>
+<li>(B) Wrong - the noise inside the signal space is very much retained and dominates performance.</li>
+<li>(C) Wrong - the point is that discarding costs nothing; the receiver stays optimal.</li>
+<li>(D) Wrong - the theorem concerns the signal space, not the sampling rate.</li>
+</ul>
+<p><strong>A16.</strong> Correct answer: (A) choosing the signal at minimum Euclidean distance from the observation</p>
+<ul>
+<li>(A) Correct - the Gaussian likelihood decreases monotonically with squared distance.</li>
+<li>(B) Wrong - energy enters only through the -E_i/2 bias in the correlation form, never as a sole criterion.</li>
+<li>(C) Wrong - same objection; energy alone tells you nothing about which signal was sent.</li>
+<li>(D) Wrong - that discards the observation entirely and gives error probability (M-1)/M.</li>
+</ul>
+<p><strong>A17.</strong> Correct answer: (A) phi(T - t)</p>
+<ul>
+<li>(A) Correct - time reversal about T/2 is what converts convolution into correlation.</li>
+<li>(B) Wrong - without reversal the convolution does not compute a correlation.</li>
+<li>(C) Wrong - this delays without reversing, so the output does not peak at T.</li>
+<li>(D) Wrong - negating changes the sign of the output, not the correlation property.</li>
+</ul>
+<p><strong>A18.</strong> Correct answer: (A) 2E/N0</p>
+<ul>
+<li>(A) Correct - and remarkably it depends on energy alone, not on shape.</li>
+<li>(B) Wrong - the factor of two comes from the two-sided density N0/2 in the denominator.</li>
+<li>(C) Wrong - this is off by a factor of four from the correct result.</li>
+<li>(D) Wrong - shape independence is the striking part of the matched-filter result.</li>
+</ul>
+<p><strong>A19.</strong> Correct answer: (A) only at the sampling instant t = T</p>
+<ul>
+<li>(A) Correct - their outputs differ throughout the interval and coincide exactly at T.</li>
+<li>(B) Wrong - the integrator ramps while the filter output follows a different trajectory.</li>
+<li>(C) Wrong - they agree exactly at t = T, which is the only instant that is sampled.</li>
+<li>(D) Wrong - the equivalence at t = T holds for any pulse shape.</li>
+</ul>
+<p><strong>A20.</strong> Correct answer: (A) accumulation across symbols, so each observation contains earlier symbols</p>
+<ul>
+<li>(A) Correct - the observation drifts and the constellation smears into a diagonal blur.</li>
+<li>(B) Wrong - the degradation is unbounded and grows with the number of symbols, not a fixed 3 dB.</li>
+<li>(C) Wrong - phase error is a separate impairment with a different signature.</li>
+<li>(D) Wrong - the accumulation happens regardless of the symbol statistics.</li>
+</ul>
+<hr/>
+<h2>Part B — model answers and marking scheme</h2>
+<h3>B1 (3 marks) — CO1, L3, Ch.2, pp.42-45</h3>
+<p><strong>Question.</strong> Explain why a bandpass signal is replaced by its complex lowpass equivalent, and state what is gained and what is lost.</p>
+<p><strong>Model answer.</strong> A bandpass signal has content only in a band of width 2W around fc, and the carrier carries no information. Working with the bandpass waveform forces a sampling rate above 2(fc + W), set by where the signal sits rather than by how much information it carries. The complex lowpass equivalent occupies -W to +W and needs only a rate above 2W, a reduction by roughly fc/W, which for a 2 GHz carrier and 1 MHz message is about 1200 times. Nothing is lost: the mapping is exactly invertible through g(t) = Re{g-tilde(t) exp(j 2 pi fc t)}. The only cost is that the equivalent is complex, so two real sequences are stored instead of one.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct statement that the carrier carries no information and the sampling rate falls to 2W</td><td>2</td></tr>
+<tr><td>Correct statement that the mapping is exact and invertible, with the complex-valued cost noted</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B2 (3 marks) — CO1, L3, Ch.2, pp.42-45</h3>
+<p><strong>Question.</strong> Define the Hilbert transform and prove that it does not change the energy of a signal.</p>
+<p><strong>Model answer.</strong> The Hilbert transform is convolution with 1/(pi t), equivalently multiplication of the spectrum by -j sgn(f). Since |-j sgn(f)| = 1 for all f except f = 0, the amplitude spectrum satisfies |G-hat(f)| = |G(f)| everywhere. By Parseval, the energy is the integral of |G(f)|^2 over all f, and since the two amplitude spectra are identical the two energies are identical. Only the phase has changed, by -90 degrees at positive frequencies and +90 degrees at negative ones, which is why the transform is described as an all-pass phase shifter rather than a filter.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct definition in both time and frequency domains</td><td>1</td></tr>
+<tr><td>Correct energy argument via unit magnitude and Parseval</td><td>2</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B3 (3 marks) — CO1, L4, Ch.2, pp.45-47</h3>
+<p><strong>Question.</strong> Show how the pre-envelope produces a one-sided spectrum, and explain why the result must be complex.</p>
+<p><strong>Model answer.</strong> The pre-envelope is g_plus(t) = g(t) + j g-hat(t), whose transform is G(f) + j(-j sgn(f))G(f) = G(f)(1 + sgn(f)). For f &gt; 0 this is 2G(f); for f &lt; 0 the bracket is zero and the spectrum vanishes. The negative-frequency half has been cancelled by destructive addition and the positive half doubled. It must be complex because a real signal has a conjugate-symmetric spectrum, G(-f) = G*(f), so any real signal with content at +f necessarily has content at -f. A signal whose spectrum is identically zero for f &lt; 0 therefore cannot be real.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct algebra showing G(f)(1 + sgn f)</td><td>2</td></tr>
+<tr><td>Correct conjugate-symmetry argument for why it must be complex</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B4 (3 marks) — CO1, L3, Ch.2, pp.49-52</h3>
+<p><strong>Question.</strong> Write the canonical representation of a bandpass signal and explain why the in-phase and quadrature channels do not interfere.</p>
+<p><strong>Model answer.</strong> The canonical form is g(t) = gI(t) cos(2 pi fc t) - gQ(t) sin(2 pi fc t), where gI and gQ are real lowpass signals band-limited to W. The two carriers cos and sin are orthogonal over an interval containing a whole number of carrier cycles, so the integral of their product is zero. A receiver that multiplies by cos and lowpass filters therefore recovers gI with no contribution from the gQ branch, and multiplying by -sin recovers gQ. This is what allows one band to carry two independent streams. In practice, gain and phase mismatch between the two paths breaks the orthogonality and leaks one channel into the other, which is I/Q imbalance.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct canonical expression including the minus sign</td><td>1</td></tr>
+<tr><td>Correct orthogonality argument for non-interference</td><td>1</td></tr>
+<tr><td>Practical note on I/Q imbalance</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>3</strong></td></tr>
+</tbody></table>
+<h3>B5 (2 marks) — CO1, L4, Ch.7, pp.323-324</h3>
+<p><strong>Question.</strong> State the three assumptions in the name "additive white Gaussian noise" and give a real channel that violates each.</p>
+<p><strong>Model answer.</strong> Additive means the received signal is s(t) + w(t) with noise independent of the signal; co-channel interference violates this because the disturbance depends on other users transmitting. White means the power spectral density is flat, so samples are uncorrelated; noise after a band-limiting amplifier is coloured and violates it. Gaussian means the amplitude distribution is normal by the central limit theorem; impulsive noise from switching machinery has heavy tails and violates it. Every error probability derived in this module inherits all three assumptions, so applying them to a fading or interference-limited link gives optimistic answers.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>All three assumptions correctly named and defined</td><td>1</td></tr>
+<tr><td>A valid violating channel for each</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B6 (2 marks) — CO1, L3, Ch.7, pp.324-332</h3>
+<p><strong>Question.</strong> Explain what the Gram-Schmidt procedure computes and what a zero residual signifies.</p>
+<p><strong>Model answer.</strong> It constructs an orthonormal basis for the space spanned by a set of signals. The first basis function is the first signal normalised. For each later signal, its projections onto all existing basis functions are subtracted, leaving a residual orthogonal to everything already built, and that residual is normalised to become the next basis function. A zero residual means the signal lay entirely within the span of its predecessors, so it contributes no new dimension and is skipped. This is precisely how the procedure discovers that the dimension N is smaller than the number of signals M.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct description of the subtract-and-normalise step</td><td>1</td></tr>
+<tr><td>Correct interpretation of a zero residual as linear dependence</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B7 (2 marks) — CO1, L3, Ch.7, pp.324-332</h3>
+<p><strong>Question.</strong> A binary scheme uses s1(t) = +sqrt(E) phi(t) and s2(t) = -sqrt(E) phi(t). Give N, the two signal vectors, and d_min.</p>
+<p><strong>Model answer.</strong> Both signals are scalar multiples of the same basis function, so the space they span is one-dimensional and N = 1. The vectors are the scalars s1 = +sqrt(E) and s2 = -sqrt(E), each of energy E. The minimum distance is |s1 - s2| = 2 sqrt(E). This is the largest separation two signals of energy E can achieve in any dimension, which is why binary antipodal signalling is optimal for M = 2 and why no binary scheme beats BPSK on an AWGN channel.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct N and both signal vectors</td><td>1</td></tr>
+<tr><td>Correct d_min with the optimality remark</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B8 (2 marks) — CO1, L4, Ch.7, pp.332-337</h3>
+<p><strong>Question.</strong> Explain why the noise projections onto an orthonormal basis are independent and identically distributed.</p>
+<p><strong>Model answer.</strong> Each projection w_j is a linear functional of a Gaussian process, so the w_j are jointly Gaussian. Their covariance is E[w_j w_k] = (N0/2) times the integral of phi_j(t) phi_k(t) dt, which is N0/2 when j = k and zero otherwise, because the basis is orthonormal and the noise is white with autocorrelation (N0/2) delta(tau). Zero covariance between jointly Gaussian variables implies independence, so the projections are independent, each of variance N0/2. The equal variance on every axis is what makes the noise cloud spherical and the optimum decision rule nearest-neighbour rather than a weighted distance.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct covariance computation using orthonormality and whiteness</td><td>1</td></tr>
+<tr><td>Correct step from uncorrelated to independent for Gaussians, and the spherical-cloud consequence</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B9 (2 marks) — CO1, L4, Ch.7, pp.332-337</h3>
+<p><strong>Question.</strong> State the theorem of irrelevance and explain why it fails for coloured noise.</p>
+<p><strong>Model answer.</strong> The theorem states that the part of the received waveform lying outside the span of the signal basis is statistically independent of both the transmitted signal and the observation vector, so it cannot improve any decision and may be discarded without loss. The observation vector is therefore a sufficient statistic. The proof rests on whiteness: with white noise, orthogonality of the retained and discarded components implies zero correlation and hence independence. With coloured noise the discarded component is correlated with the retained one, so it carries information about the noise actually present in the decision variables, and a receiver that ignores it is suboptimal. The remedy is to whiten the received waveform first.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct statement of the theorem and the sufficient-statistic conclusion</td><td>1</td></tr>
+<tr><td>Correct explanation of the failure under coloured noise and the whitening remedy</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B10 (2 marks) — CO1, L4, Ch.7, pp.337-344</h3>
+<p><strong>Question.</strong> Derive, in outline, why maximum likelihood detection in AWGN reduces to minimum distance.</p>
+<p><strong>Model answer.</strong> With equally likely signals the MAP rule reduces to maximising p(x | s_i). For AWGN the observation vector is Gaussian with mean s_i and covariance (N0/2)I, so p(x | s_i) is proportional to exp(-||x - s_i||^2 / N0). The exponential is monotonically decreasing in ||x - s_i||^2, so maximising the likelihood is identical to minimising the squared Euclidean distance. Expanding the square and dropping the term ||x||^2, which is common to all i, gives the equivalent correlation form: maximise x . s_i - E_i/2. The bias term matters whenever the signal energies differ.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct Gaussian likelihood and the monotonicity argument</td><td>1</td></tr>
+<tr><td>Correct correlation form including the -E_i/2 bias</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B11 (2 marks) — CO1, L3, Ch.7, pp.337-344</h3>
+<p><strong>Question.</strong> Describe the correlation receiver and state the one implementation detail that most commonly breaks it.</p>
+<p><strong>Model answer.</strong> The correlation receiver has N parallel branches. Each multiplies the received waveform by one basis function and integrates the product over the symbol interval [0,T], and the integrator output is sampled at t = T to give one component of the observation vector. The detail that most commonly breaks it is the dump: the integrator must be reset to zero at every symbol boundary. Without the reset, each observation accumulates contributions from all previous symbols, the decision variables drift without bound and the constellation smears. The second requirement is that the boundary itself must be known, which is why symbol synchronisation precedes detection.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct description of multiply, integrate over T, sample at T</td><td>1</td></tr>
+<tr><td>Correct identification of the integrator reset and its consequence</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B12 (2 marks) — CO1, L4, Ch.7, pp.337-344</h3>
+<p><strong>Question.</strong> Show that a matched filter and a correlator give the same output at t = T.</p>
+<p><strong>Model answer.</strong> The matched filter has impulse response h(t) = phi(T - t). Its output is the convolution y(t) = integral x(tau) h(t - tau) dtau. Substituting h and evaluating at t = T gives y(T) = integral x(tau) phi(T - (T - tau)) dtau = integral over [0,T] of x(tau) phi(tau) dtau, which is exactly the correlator output. The equivalence holds only at t = T; at other instants the two structures produce different values, which is why the sampling instant is critical and why the time reversal in h(t) cannot be omitted.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct substitution showing the convolution reduces to the correlation integral at t = T</td><td>1</td></tr>
+<tr><td>Correct statement that equivalence holds only at t = T</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+<h3>B13 (2 marks) — CO1, L4, Ch.7, pp.337-344</h3>
+<p><strong>Question.</strong> The peak SNR of a matched filter is 2E/N0 and does not depend on pulse shape. Explain why that is a useful result.</p>
+<p><strong>Model answer.</strong> It means the detection performance of a matched-filter receiver is set entirely by the energy delivered per symbol and the noise density, not by how that energy is distributed in time or frequency. A designer is therefore free to choose the pulse shape on other grounds — bandwidth occupancy, intersymbol interference, peak-to-average ratio — without paying any penalty in SNR at the sampling instant. It also gives a hard benchmark: no linear filter can do better than 2E/N0, so any receiver falling short of it has an implementation loss that can be quantified and hunted down.</p>
+<table><thead><tr><th>Point required</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Correct statement that shape is free and only energy matters</td><td>1</td></tr>
+<tr><td>Correct use of the result as a design benchmark or implementation-loss measure</td><td>1</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>2</strong></td></tr>
+</tbody></table>
+</body></html>

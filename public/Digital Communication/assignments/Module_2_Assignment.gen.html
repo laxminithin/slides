@@ -1,0 +1,81 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BEC503 Module 2 Assignment</title><style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 10.5pt; color: #12203A; line-height: 1.45; }
+h1 { font-size: 19pt; margin: 0 0 4pt; color: #12203A; }
+h2 { font-size: 13.5pt; margin: 16pt 0 5pt; padding-bottom: 3pt; border-bottom: 1.5pt solid #0F6FC6; color: #0F6FC6; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 11pt 0 3pt; color: #12203A; page-break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 8pt 0 2pt; color: #5A6478; page-break-after: avoid; }
+p { margin: 4pt 0; }
+ul, ol { margin: 4pt 0 4pt 16pt; padding: 0; }
+li { margin: 2pt 0; page-break-inside: avoid; }
+hr { border: 0; border-top: 0.75pt solid #D7DEE8; margin: 10pt 0; }
+code { font-family: Consolas, monospace; font-size: 9.5pt; background: #F1F5FA; padding: 0 2pt; border-radius: 2pt; }
+pre { font-family: Consolas, monospace; font-size: 9pt; background: #F1F5FA; border-left: 2.5pt solid #0F6FC6; padding: 6pt 8pt; margin: 5pt 0; white-space: pre-wrap; page-break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0; font-size: 9.5pt; }
+th { background: #0F6FC6; color: #fff; text-align: left; padding: 4pt 5pt; font-weight: 600; }
+td { border: 0.5pt solid #D7DEE8; padding: 4pt 5pt; vertical-align: top; }
+tr { page-break-inside: avoid; }
+tbody tr:nth-child(even) td { background: #F7FAFD; }
+strong { color: #12203A; }
+.tag { font-family: Consolas, monospace; font-size: 9pt; color: #C2410C; }
+</style></head><body>
+<h1>BEC503 Digital Communication — Assignment 2 — Modulation schemes and their error performance</h1>
+<p><strong>Module 2: Digital Modulation Techniques</strong></p>
+<table><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>
+<tr><td>Maximum marks</td><td>20</td></tr>
+<tr><td>Weightage</td><td>10% of CIE</td></tr>
+<tr><td>Issue date</td><td>&lt;&lt;TBD&gt;&gt;</td></tr>
+<tr><td>Due date</td><td>&lt;&lt;TBD&gt;&gt;</td></tr>
+<tr><td>Items</td><td>8 problems + 3 theory questions</td></tr>
+<tr><td>CO / Bloom coverage</td><td>CO2: 11 · L1–L2 0, L3–L4 7, L5–L6 4</td></tr>
+</tbody></table>
+<h2>Objective</h2>
+<p>Derive rather than memorise the error probability of each scheme, and defend a modulation choice against a stated set of link constraints.</p>
+<h2>Learning outcomes</h2>
+<ul>
+<li>Student will be able to draw the constellation of any scheme in this module and compute its minimum distance in terms of energy per bit.</li>
+<li>Student will be able to derive error probabilities from geometry rather than quoting formulae.</li>
+<li>Student will be able to quantify the penalty of noncoherent and differentially coherent detection.</li>
+<li>Student will be able to select a modulation scheme given bandwidth, power, phase stability and amplifier constraints.</li>
+</ul>
+<hr/>
+<h2>Part A — Problems (17 marks)</h2>
+<p><strong>P1.</strong> Draw the constellations of BPSK, QPSK, 8-PSK and 16-QAM to a common scale at equal average energy E. Tabulate the minimum distance of each as a multiple of sqrt(E) and as a multiple of sqrt(Eb), and explain why the two orderings differ.  <code>[CO2 | L4 | 3 marks]</code></p>
+<p><strong>P2.</strong> Derive the bit error probability of coherent BPSK starting from the Gaussian density of the noise projection. State every assumption used and identify which one fails if the channel is fading.  <code>[CO2 | L4 | 3 marks]</code></p>
+<p><strong>P3.</strong> For 16-QAM at Eb/N0 = 15 dB, compute the symbol error probability and the bit error probability under Gray mapping. Then compute the required Eb/N0 for 16-PSK to reach the same bit error rate and state the difference in decibels.  <code>[CO2 | L4 | 3 marks]</code></p>
+<p><strong>P4.</strong> A BFSK system uses Tb = 200 microseconds. Compute the minimum frequency separation for coherent and for noncoherent orthogonality, and the resulting occupied bandwidth in each case. Comment on which cost dominates at this bit rate.  <code>[CO2 | L3 | 2 marks]</code></p>
+<p><strong>P5.</strong> Differentially encode the bit sequence 1 0 1 1 0 0 1 with an initial reference phase of 0 degrees. Introduce a single symbol error at position 4 and show precisely which decoded bits are corrupted and why.  <code>[CO2 | L4 | 2 marks]</code></p>
+<p><strong>P6.</strong> Plot, by hand or by computation, the bit error rate against Eb/N0 from 0 to 15 dB for BPSK, coherent BFSK, noncoherent BFSK and DPSK on one set of semi-logarithmic axes. Mark the required Eb/N0 for each at Pb = 1e-5 and annotate the gaps in decibels.  <code>[CO2 | L5 | 1 marks]</code></p>
+<p><strong>P7.</strong> A satellite downlink offers 36 MHz of bandwidth, needs 60 Mbit/s and has a received Eb/N0 of 12.5 dB into a travelling-wave-tube amplifier that must run saturated. Recommend a modulation scheme, show that it meets both constraints, and state what would have to change for 64-QAM to become viable.  <code>[CO2 | L5 | 2 marks]</code></p>
+<p><strong>P8.</strong> Explain, with a sketch of the constellation, what a carrier phase error of 15 degrees does to a QPSK receiver, and compute the resulting increase in bit error rate at Eb/N0 = 10 dB.  <code>[CO2 | L5 | 1 marks]</code></p>
+<h2>Part B — Theory (3 marks)</h2>
+<p><strong>T1.</strong> Argue whether the 3 dB penalty of orthogonal signalling relative to antipodal signalling is a property of FSK specifically or of orthogonality in general. Support your answer with a scheme other than FSK.  <code>[CO2 | L4 | 1 marks]</code></p>
+<p><strong>T2.</strong> Modern systems increasingly use high-order QAM despite the amplifier back-off. Identify what changed in the technology to make that trade favourable, and what would reverse it.  <code>[CO2 | L5 | 1 marks]</code></p>
+<p><strong>T3.</strong> Gray mapping leaves the constellation geometry untouched yet improves the bit error rate. Explain why this is not a free lunch in disguise, and identify the regime where its benefit disappears.  <code>[CO2 | L4 | 1 marks]</code></p>
+<hr/>
+<h2>Submission guidelines</h2>
+<ul>
+<li>Format: PDF, single file</li>
+<li>File name: <code>&lt;USN&gt;_BEC503_Assignment2.pdf</code></li>
+<li>Channel: LMS upload</li>
+<li>Late policy: 10% per day, nothing after 5 days</li>
+<li>Every numerical answer must carry units and a stated reference direction.</li>
+</ul>
+<h2>Assessment rubric</h2>
+<table><thead><tr><th>Criterion</th><th>Weight</th><th>Excellent</th><th>Good</th><th>Satisfactory</th><th>Needs improvement</th></tr></thead><tbody>
+<tr><td>Correctness of derivations</td><td>8</td><td>Every error probability derived from geometry with assumptions stated.</td><td>Derivations correct with minor gaps.</td><td>Formulae quoted correctly but derivations thin.</td><td>Formulae quoted incorrectly or not at all.</td></tr>
+<tr><td>Numerical accuracy and dB handling</td><td>5</td><td>All conversions between linear and dB correct; Eb and E never confused.</td><td>One slip that does not change the conclusion.</td><td>Several dB errors or per-bit versus per-symbol confusion.</td><td>Numbers unreliable throughout.</td></tr>
+<tr><td>Constellation and BER diagrams</td><td>4</td><td>Constellations to scale, BER curves correctly positioned relative to each other.</td><td>Diagrams correct but not to scale.</td><td>Diagrams present with errors in spacing or ordering.</td><td>Diagrams missing or wrong.</td></tr>
+<tr><td>Engineering judgement in scheme selection</td><td>3</td><td>Selection defended against all four constraints with margin quantified.</td><td>Selection defended against most constraints.</td><td>Selection stated with partial justification.</td><td>Selection unjustified.</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>20</strong></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
+<h2>Course outcome attainment</h2>
+<table><thead><tr><th>Course outcome</th><th>Marks carried</th></tr></thead><tbody>
+<tr><td>CO2</td><td>18</td></tr>
+<tr><td>CO1</td><td>2</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>20</strong></td></tr>
+</tbody></table>
+<h2>Academic integrity</h2>
+<p>Individual submission. Identical submissions score zero for both parties.</p>
+</body></html>
